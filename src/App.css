@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #f01b23 !important;
+}
+
+/* Slider buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  padding: 0 22px;
+  background-color: #f01b23;
+  /* background-color: transparent; */
+  border-radius: 20px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: white;
+  font-size: 15px !important;
+}
+
+.arrow-dropdown-selected-car {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: -10px;
+  right: 0;
+  margin: 0 auto;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+}
+
+.product_image {
+  transition: all 0.5s ease-in;
+  --webkit-transition: all 0.5s ease-in-out;
+}
+
+.product_image:hover {
+  transform: scale(1.1);
+  --webkit-transform: scale(1.1);
+}
+
+/* Pagination css */
+.paginationButtons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.paginationButtons > li{
+  margin-left: 10px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+.activePage{
+  background-color: #f01b23;
+  color: #fff;
+  border: none !important;
+}
+
+.disabledPage, .disabledPage > a{
+  cursor: not-allowed;
+  opacity: 0.6;
+}
