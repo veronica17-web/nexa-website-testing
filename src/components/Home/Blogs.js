@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { blogs } from "../../constants";
 
 function Blogs() {
@@ -14,7 +15,7 @@ function Blogs() {
         Nexa Dealer. Saboo Nexa is a place which is created to inspire the new
         world of enhanced driving experience.
       </p>
-      <div className="grid lg:grid-cols-2 gap-4 pt-7">
+      {/* <div className="grid lg:grid-cols-2 gap-4 pt-7">
         {blogs.map((item, index) => (
           <div className="grid sm:grid-cols-2 gap-4 sm:px-0 px-5" key={index}>
             <div>
@@ -33,6 +34,132 @@ function Blogs() {
             </div>
           </div>
         ))}
+      </div> */}
+      <div className="grid lg:grid-cols-3 gap-2 justify-center sm:ml-4 p-10">
+        <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <div href="#">
+            <img
+              class="rounded-t-lg"
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gallary/baleno_launch/4.webp"
+              alt=""
+            />
+          </div>
+          <div class="p-5">
+            <div href="#">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Launch of Grand Vitara 2022
+              </h5>
+            </div>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Here is the biggest surprise of 2022 from Maruti Suzuki.
+            </p>
+
+            <p className="text-xs pb-2 text-gray-500">18 Aug 2022</p>
+            <div
+              href="#"
+              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Gallery
+              <svg
+                aria-hidden="true"
+                class="ml-2 -mr-1 w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <div href="#">
+            <img
+              class="rounded-t-lg"
+              src="https://assets.thehansindia.com/hansindia-bucket/1384_car.jpg"
+              alt=""
+            />
+          </div>
+          <div class="p-5">
+            <div href="#">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Maruti opens its premium dealerships, Nexa in Hyderabad
+              </h5>
+            </div>
+            <p className="text-xs pb-2 text-gray-500">1 Aug 2015</p>
+            {/* <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              The new edition to the brand’s latest philosophy was started by
+              dealers Varun Motors and RKS Saboo at Banjara Hills and Jubilee
+              Hills, respectively.
+            </p> */}
+            <a
+              href={
+                "https://www.thehansindia.com/posts/index/Auto-/2015-08-01/Maruti-opens-its-premium-dealerships-Nexa-in-Hyderabad/167139?infinitescroll=1"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Read More
+              <svg
+                aria-hidden="true"
+                class="ml-2 -mr-1 w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <Link to="#">
+            <img
+              class="rounded-t-lg"
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/blog/Maruti-Suzuki-SCross-Launch.webp"
+              alt=""
+            />
+          </Link>
+          <div class="p-5">
+            <div href="#">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Nexa Experience: Some Inspiring Recent Affairs
+              </h5>
+            </div>
+            <p className="text-xs pb-7 text-gray-500">
+              Looking back at all the recently curated premium experiences.
+            </p>
+
+            <Link
+              to="/gallery"
+              class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Stay Tuned
+              <svg
+                aria-hidden="true"
+                class="ml-2 -mr-1 w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

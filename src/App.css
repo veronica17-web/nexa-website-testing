@@ -4,6 +4,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;600;700&display=swap");
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -71,20 +73,21 @@ body {
   list-style: none;
 }
 
-.paginationButtons > li{
+.paginationButtons>li {
   margin-left: 10px;
   border: 1px solid #000;
   border-radius: 6px;
   padding: 5px 10px;
 }
 
-.activePage{
+.activePage {
   background-color: #f01b23;
   color: #fff;
   border: none !important;
 }
 
-.disabledPage, .disabledPage > a{
+.disabledPage,
+.disabledPage>a {
   cursor: not-allowed;
   opacity: 0.6;
 }

@@ -9,6 +9,7 @@ import MobileSlider from "../../components/Home/MobileSlider";
 import Helmet from "react-helmet";
 import Header from "../../components/Header/Header";
 
+
 const width = window.innerWidth;
 
 function Home() {

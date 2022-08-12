@@ -33,10 +33,10 @@ export const mobileSliders = [
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/banners/grand_vitara_mobile.webp",
     alt: "Grand Vitara",
   },
-  {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/banners/mobile_monsoon.webp",
-    alt: "banner-4",
-  },
+  // {
+  //   img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/banners/mobile_monsoon.webp",
+  //   alt: "banner-4",
+  // },
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/xl6_mobile_banner.webp",
     alt: "banner-1",
@@ -245,7 +245,7 @@ export const products = [
 export const offer_products = [
   {
     name: "ignis",
-    price: "44000",
+    price: "49000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp",
     explore: "/nexa-ignis-on-road-price-in-hyderabad",
