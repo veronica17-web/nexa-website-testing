@@ -7,40 +7,76 @@ import { Link } from "react-router-dom";
 
 const gallery = [
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/grand-vitara-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-1.JPG",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-lumbini-launch/IMG_2897-1.webp",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/grand-vitara-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-2.JPG",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-lumbini-launch/IMG_2934-2.webp",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/grand-vitara-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-3.JPG",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-lumbini-launch/IMG_2943-3.webp",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/grand-vitara-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-4.JPG",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-lumbini-launch/IMG_2947-4.webp",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/grand-vitara-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-5.JPG",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-lumbini-launch/IMG_2957-5.webp",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/grand-vitara-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-6.JPG",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-lumbini-launch/IMG_2975-6.webp",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/grand-vitara-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-7.JPG",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-lumbini-launch/IMG_2983-7.webp",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/grand-vitara-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-8.JPG",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-lumbini-launch/IMG_3015-8.webp",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/grand-vitara-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-9.JPG",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-lumbini-launch/Vartha-9.webp",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/grand-vitara-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-10.JPG",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-lumbini-launch/Minuguru+paper-10.webp",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/grand-vitara-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-11.JPG",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-lumbini-launch/Ninadam+paper-11.webp",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/grand-vitara-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-12.JPG",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-lumbini-launch/Disha-12.webp",
+  },
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-jublee-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-1.webp",
+  },
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-jublee-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-2.webp",
+  },
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-jublee-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-3.webp",
+  },
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-jublee-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-4.webp",
+  },
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-jublee-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-5.webp",
+  },
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-jublee-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-6.webp",
+  },
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-jublee-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-7.webp",
+  },
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-jublee-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-8.webp",
+  },
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-jublee-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-9.webp",
+  },
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-jublee-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-10.webp",
+  },
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-jublee-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-11.webp",
+  },
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/nexa-jublee-launch/Grand+Vitara+Launch+-+Nexa+Jubilee-12.webp",
   },
 
   {

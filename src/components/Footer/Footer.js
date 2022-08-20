@@ -20,6 +20,10 @@ const navigation = {
     { name: "Maruti Ciaz", to: "/nexa-ciaz-on-road-price-in-hyderabad" },
     { name: "Maruti Baleno", to: "/new-maruti-baleno-price-in-hyderabad" },
     { name: "Maruti Ignis", to: "/nexa-ignis-on-road-price-in-hyderabad" },
+    {
+      name: "Maruti Grand Vitara",
+      to: "/grand-vitara-brezza-price-in-hyderabad",
+    },
   ],
   corporate: [
     { name: "About", to: "/about" },
