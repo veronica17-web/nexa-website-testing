@@ -18,15 +18,15 @@ function Scross() {
       <Header />
       <Helmet>
         <title>
-          Nexa Scross Petrol On-Road Price & Mileage in Hyderabad | Saboo Nexa
+          Nexa Scross Petrol Price & Mileage in Hyderabad | Saboo Nexa
         </title>
         <meta
           name="title"
-          content="Nexa Scross Petrol On-Road Price & Mileage in Hyderabad | Saboo Nexa"
+          content="Nexa Scross Petrol Price & Mileage in Hyderabad | Saboo Nexa"
         />
         <meta
           name="description"
-          content="Nexa Scross 2022 petrol on-road price starts at Rs. 8.80 lakh. Offers on Maruti Scross, visit us to know more information about Maruti Suzuki Scross features, specifications, mileage, colors & images call us – 9848898488."
+          content="Scross Petrol On-Road Price in Hyderabad.Nexa Scross Petrol Price Starts at Rs. 8.95 lakh. For More info about Maruti Suzuki Scross Features, Specifications, Mileage, Colors & Images Call us – 9848898488"
         />
         <meta
           name="keywords"

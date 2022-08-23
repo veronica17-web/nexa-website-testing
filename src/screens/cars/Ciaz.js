@@ -10,19 +10,18 @@ function Ciaz() {
   const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
-    <Header />
+      <Header />
       <Helmet>
         <title>
-          Nexa Ciaz Car On-Road Price, Mileage, Specifications & Offers | Saboo
-          Nexa
+          Nexa Ciaz Car Price, Mileage, Specifications & Offers | Saboo Nexa
         </title>
         <meta
           name="title"
-          content="Nexa Ciaz Car On-Road Price, Mileage, Specifications & Offers | Saboo Nexa"
+          content="Nexa Ciaz Car Price, Mileage, Specifications & Offers | Saboo Nexa"
         />
         <meta
           name="description"
-          content="Nexa Ciaz 2022 car price starts at 8.87 lakh, mileage of 26.8 km/l. Get Nexa Ciaz specifications & features. Best offers on Ciaz car, low EMI, low down-payment. Call now 9848898488"
+          content="Nexa Ciaz Car Price Starts at 8.99 lakh, Mileage of 26.8 km/l. Get Nexa Ciaz Specifications & Features. Best Offers on Ciaz Car, Low EMI, Low Down-Payment. Call now 9848898488"
         />
         <meta
           name="keywords"

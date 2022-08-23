@@ -68,16 +68,14 @@ function Finance() {
     <>
       <Header />
       <Helmet>
-        <title>
-          Maruti Suzuki Nexa Car Finance with Low Interest | Saboo Nexa
-        </title>
+        <title>Maruti Suzuki Car Finance with Low Interest | Saboo Nexa</title>
         <meta
           name="title"
-          content="Maruti Suzuki Nexa Car Finance with Low Interest | Saboo Nexa"
+          content="Maruti Suzuki Car Finance with Low Interest | Saboo Nexa"
         />
         <meta
           name="description"
-          content="Maruti Finance provides the best finance deals on new Maruti cars, Nexa cars & pre-owned car loans. Get quick car loan, special offers, quick approval, low-interest rates & low EMI."
+          content="Maruti Finance provides the best finance deals on New & Pre-Owned Car Loans. Get Quick Car Loan, Special offers, Quick Approval, Low-Interest Rates & Low EMI."
         />
         <meta name="keywords" content="Maruti Suzuki Nexa Car Finance" />
         <meta name="author" content="Broaddcast" />

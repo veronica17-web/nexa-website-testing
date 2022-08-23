@@ -48,15 +48,15 @@ function Insurance() {
       <Header />
       <Helmet>
         <title>
-          Maruti Car Insurance Price, Offers & Renewal Details | Saboo Nexa
+          Maruti Car Insurance price, Offers & Renewal Details | Saboo Nexa
         </title>
         <meta
           name="title"
-          content="Maruti Car Insurance Price, Offers & Renewal Details | Saboo Nexa"
+          content="Maruti Car Insurance price, Offers & Renewal Details | Saboo Nexa"
         />
         <meta
           name="description"
-          content="Maruti car insurance premium details, renewals & offers. Get cashless settlement on Maruti Insurance. Visit nearest Saboo Nexa showroom today. Call us 98488 98488."
+          content="Maruti Car Insurance Premium Details, Renewals & Offers. Get cashless settlement on Maruti Insurance. Visit nearest Saboo Nexa showroom today."
         />
         <meta name="keywords" content="Maruti Car Insurance" />
         <meta name="author" content="Broaddcast" />
@@ -101,7 +101,9 @@ function Insurance() {
         alt="inusrance banner"
       />
       <div className="shadow sm:px-0 px-4">
-        <p className="mx-auto container py-4"><Link to='/'>Home</Link> / Insurance</p>
+        <p className="mx-auto container py-4">
+          <Link to="/">Home</Link> / Insurance
+        </p>
       </div>
       <div className="container mx-auto py-16 px-5">
         <form
@@ -215,11 +217,7 @@ function Insurance() {
           <button
             className="bg-black text-white rounded py-2.5 px-5"
             type="submit"
-            disabled={
-              pattern.test(phone) && phone.length === 10
-                ? false
-                : true 
-            }
+            disabled={pattern.test(phone) && phone.length === 10 ? false : true}
             onClick={handleSubmit}
           >
             {loader ? (

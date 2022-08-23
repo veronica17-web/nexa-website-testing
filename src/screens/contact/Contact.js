@@ -7,7 +7,6 @@ import Header from "../../components/Header/Header";
 import { Link } from "react-router-dom";
 
 function Contact() {
-
   const [phone, setPhone] = useState("");
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== "" && phone.length === 10) {
@@ -18,19 +17,18 @@ function Contact() {
     }
   }
 
-
   return (
     <>
-    <Header />
+      <Header />
       <Helmet>
-        <title>Contact us for Sales, Feedback or Complaints | Saboo Nexa</title>
+        <title>Contact us for Sales, Feedback or Complaint | SabooNexa</title>
         <meta
           name="title"
-          content="Contact us for Sales, Feedback or Complaints | Saboo Nexa"
+          content="Contact us for Sales, Feedback or Complaint | SabooNexa"
         />
         <meta
           name="description"
-          content="Contact your nearest Saboo Nexa showroom for any Maruti Suzuki Nexa vehicle enquiry. For queries about any of the NEXA cars feedback or complaints contact us on 9848898488. Write to us at info@saboomaruti.in."
+          content="Contact your nearest Saboo Nexa showroom for any Maruti Suzuki Nexa Vehicle Enquiry. For queries about any of the NEXA cars feedback or complaints contact us on 9848898488. Write to us at info@saboomaruti.in."
         />
         <meta
           name="keywords"
@@ -78,7 +76,9 @@ function Contact() {
         </p>
       </div>
       <div className="shadow sm:px-0 px-4">
-        <p className="mx-auto container py-4"><Link to='/'>Home</Link> / Contact us</p>
+        <p className="mx-auto container py-4">
+          <Link to="/">Home</Link> / Contact us
+        </p>
       </div>
 
       <div className="max-w-7xl mx-auto py-20 px-5 md:px-0">
@@ -286,8 +286,8 @@ function Contact() {
                             className="border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500"
                             type="text"
                             id="Phone"
-                            minLength='10'
-                            maxLength='10'
+                            minLength="10"
+                            maxLength="10"
                             required
                             name="Phone"
                             value={phone}
@@ -422,8 +422,8 @@ function Contact() {
                             id="Mobile"
                             required
                             name="Mobile"
-                            maxLength='10'
-                            minLength='10'
+                            maxLength="10"
+                            minLength="10"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
                           />
@@ -697,11 +697,31 @@ function Contact() {
                     method="POST"
                     acceptCharset="UTF-8"
                   >
-                    <input type='text' style={{ display: 'none' }} name='xnQsjsdp' value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'></input>
-                                    <input type='hidden' name='zc_gad' id='zc_gad' value=''/>
-                                    <input type='text' style={{ display: 'none' }} name='xmIwtLD' value='3e4c511e1bfac462fb9ac158b261b0d39c8d0928434d0301542c33e4d29c0a4d'></input>
-                                    <input type='text' style={{ display: 'none' }} name='actionType' value='TGVhZHM='/>
-                                    <input type='text' style={{ display: 'none' }} name='returnURL' value='https://www.saboonexa.in/thank-you'/>
+                    <input
+                      type="text"
+                      style={{ display: "none" }}
+                      name="xnQsjsdp"
+                      value="5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b"
+                    ></input>
+                    <input type="hidden" name="zc_gad" id="zc_gad" value="" />
+                    <input
+                      type="text"
+                      style={{ display: "none" }}
+                      name="xmIwtLD"
+                      value="3e4c511e1bfac462fb9ac158b261b0d39c8d0928434d0301542c33e4d29c0a4d"
+                    ></input>
+                    <input
+                      type="text"
+                      style={{ display: "none" }}
+                      name="actionType"
+                      value="TGVhZHM="
+                    />
+                    <input
+                      type="text"
+                      style={{ display: "none" }}
+                      name="returnURL"
+                      value="https://www.saboonexa.in/thank-you"
+                    />
 
                     <div className="space-y-4">
                       <div className="grid md:grid-cols-2 gap-3">
@@ -712,7 +732,8 @@ function Contact() {
                           <input
                             className="border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500"
                             type="text"
-                            id='Last Name' name='Last Name'
+                            id="Last Name"
+                            name="Last Name"
                           />
                         </div>
                         <div>
@@ -722,7 +743,9 @@ function Contact() {
                           <input
                             className="border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500"
                             type="text"
-                            ftype='email' id='Email' name='Email'
+                            ftype="email"
+                            id="Email"
+                            name="Email"
                           />
                         </div>
                         <div>
@@ -732,9 +755,10 @@ function Contact() {
                           <input
                             className="border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500"
                             type="text"
-                            id='Phone' name='Phone'
-                            minLength='10'
-                            maxLength='10'
+                            id="Phone"
+                            name="Phone"
+                            minLength="10"
+                            maxLength="10"
                             required
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
@@ -746,7 +770,8 @@ function Contact() {
                             Outlet
                           </label>
                           <select
-                            id='LEADCF23' name='LEADCF23'
+                            id="LEADCF23"
+                            name="LEADCF23"
                             className="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
                           >
                             <option>Select Outlet</option>
@@ -764,7 +789,8 @@ function Contact() {
                         <textarea
                           className="border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500"
                           type="text"
-                          id='Description' name='Description'
+                          id="Description"
+                          name="Description"
                         ></textarea>
                       </div>
 
@@ -774,7 +800,7 @@ function Contact() {
                           <input
                             type="radio"
                             id="poor"
-                            value='1'
+                            value="1"
                             name="Rating"
                           />
                           <label htmlFor="poor">Poor</label>

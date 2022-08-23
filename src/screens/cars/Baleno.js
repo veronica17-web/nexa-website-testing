@@ -22,7 +22,7 @@ function Baleno() {
         />
         <meta
           name="description"
-          content="New Nexa Baleno 2022 price in Hyderabad. Maruti Baleno on Road price starts from ₹ 6.35* Lakh. Maruti Baleno is now available with 1.2litre DualJet, Dual VVT, BS6 engine with Smart Hybrid tech. Visit your nearest Saboo Nexa showroom for Nexa Baleno offers & discounts. Call now."
+          content="Nexa New Baleno On- Road Price in Hyderabad. Maruti Baleno 2022 On Road Price Starts from ₹ 6.49* Lakh. Maruti Baleno is Now Available with Head up Display, Equipped With 6 Airbags, Hill Hold Assist, Speed Alert System. Visit Your Nearest Saboo Nexa Showroom for Nexa Baleno Offers & Discounts. Call now."
         />
         <meta
           name="keywords"

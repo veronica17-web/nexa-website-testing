@@ -9,15 +9,15 @@ function About() {
       <Header />
       <Helmet>
         <title>
-          Best Maruti Suzuki Dealer in Hyderabad & Secundrabad | Saboo Nexa
+          Maruti Suzuki Car Dealer in Hyderabad & Secunderabad |Saboo Nexa
         </title>
         <meta
           name="title"
-          content="Best Maruti Suzuki Dealer in Hyderabad & Secundrabad | Saboo Nexa"
+          content="Maruti Suzuki Car Dealer in Hyderabad & Secunderabad |Saboo Nexa"
         />
         <meta
           name="description"
-          content="SABOO Maruti is Hyderabad’s leading automobile dealership and has been driving growth in domains of automobile sales and service over the last four decades. We are extensively spread across the city with four sales outlets, seven workshops, one commercial outlet and two premium car outlets NEXA."
+          content="Saboo Nexa is an Authorized Maruti Suzuki Dealer in Hyderabad. Visit Our Nearest Branch to get the Best Offers, Low Down-payment & Low EMI Options on New Maruti Nexa Cars. Call us - 98488 98488"
         />
         <meta
           name="keywords"
@@ -57,7 +57,9 @@ function About() {
         />
       </Helmet>
       <div className="shadow sm:px-0 px-4">
-        <p className="mx-auto container py-4"><Link to='/'>Home</Link> / About</p>
+        <p className="mx-auto container py-4">
+          <Link to="/">Home</Link> / About
+        </p>
       </div>
       <h1 className="text-center text-3xl py-8 font-bold">ABOUT US</h1>
       <div className="container mx-auto py-16">

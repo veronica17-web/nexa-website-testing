@@ -351,15 +351,16 @@ function Gallery() {
       <Header />
       <Helmet>
         <title>
-          Maruti Suzuki Nexa Showroom in Hyderabad | Maruti Suzuki Nexa Workshop
+          Maruti Suzuki Nexa Showroom Images in Hyderabad | Maruti Suzuki Nexa
+          Workshop Images
         </title>
         <meta
           name="title"
-          content="Maruti Suzuki Nexa Showroom in Hyderabad | Maruti Suzuki Nexa Workshop"
+          content="Maruti Suzuki Nexa Showroom Images in Hyderabad | Maruti Suzuki Nexa Workshop Images "
         />
         <meta
           name="description"
-          content="Saboo Nexa authorized Maruti Suzuki Nexa dealer in Secunderabad & Hyderabad. Visit our website for latest showroom updates, New Maruti car images & car service updates."
+          content="Saboo Nexa authorized Maruti Suzuki Nexa Dealer in Secunderabad & Hyderabad. View latest Showroom, Maruti new car & Workshop images of Saboo Maruti."
         />
         <meta name="keywords" content="Maruti Suzuki Nexa Showrrom" />
         <meta name="author" content="Broaddcast" />

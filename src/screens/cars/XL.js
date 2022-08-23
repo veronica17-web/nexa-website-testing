@@ -20,15 +20,15 @@ function XL() {
       <Header />
       <Helmet>
         <title>
-          Nexa XL6 on Road Price in Hyderabad | Maruti XL6 Offers & Discounts
+          Nexa XL6 Price in Hyderabad | Maruti XL6 On Road Price in Hyderabad
         </title>
         <meta
           name="title"
-          content="Nexa XL6 on Road Price in Hyderabad | Maruti XL6 Offers & Discounts"
+          content="Nexa XL6 Price in Hyderabad | Maruti XL6 On Road Price in Hyderabad"
         />
         <meta
           name="description"
-          content="Nexa XL6 2022 price in Hyderabad. Maruti Suzuki XL6 on road price starts at ₹ 10.14* lakh. For more details about XL6 features, specifications, mileage, colors and images visit our site or call us 98488 98488"
+          content="Nexa XL6 On-Road Price in Hyderabad. Maruti Suzuki XL6 On road Price starts at ₹ 11.29 lakh. For more details about XL6 features, specifications, mileage, colors and images visit our site or call us 98488 98488"
         />
         <meta
           name="keywords"

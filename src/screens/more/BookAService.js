@@ -59,15 +59,15 @@ function BookAService() {
       <Header />
       <Helmet>
         <title>
-          Authorized Nexa Car Service Center Near Me | Maruti Car Service Center
+          Maruti Nexa Car Service in Hyderabad | Nexa Service Center Near Me
         </title>
         <meta
           name="title"
-          content="Authorized Nexa Car Service Center Near Me | Maruti Car Service Center"
+          content="Maruti Nexa Car Service in Hyderabad | Nexa Service Center Near Me"
         />
         <meta
           name="description"
-          content="Get best offers on your Maruti car service, Free pick up and dropping facility available at Saboo RKS Nexa authorized service centers for more details 9848898488"
+          content="Book Your Maruti Suzuki Nexa Car Service Online. Nexa Car Service Center Near Me.  Free Pickup & Drop Facility Available, Same Day Delivery, Genuine Spare Parts, Quality Service, Low Maintenance & Instant Assistance on Car Repair."
         />
         <meta
           name="keywords"
@@ -117,7 +117,7 @@ function BookAService() {
       /> */}
       <div className="shadow sm:px-0 px-4">
         <p className="mx-auto container py-4">
-          <Link to='/'>Home</Link> / Book Online Maruti Nexa Car Service
+          <Link to="/">Home</Link> / Book Online Maruti Nexa Car Service
         </p>
       </div>
 

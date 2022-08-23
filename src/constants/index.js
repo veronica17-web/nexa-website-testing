@@ -1,6 +1,10 @@
 //same for home screen and offers screen
 export const sliders = [
   {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-comingsoon.webp",
+    alt: "nexa-hafeezpet-coming-soon",
+  },
+  {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/saboo-nexa-august-banner.png",
     alt: "saboo-nexa-august-banner",
   },
@@ -25,6 +29,10 @@ export const sliders = [
 
 //same for home screen and offers screen
 export const mobileSliders = [
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-mobile.webp",
+    alt: "hafeezpet-banner",
+  },
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/saboo-nexa-mobile.png",
     alt: "august-banner",

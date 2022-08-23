@@ -21,7 +21,7 @@ function Ignis() {
         />
         <meta
           name="description"
-          content="Get latest offers on Maruti Ignis 2022. Price starts from Rs.5.25* lakh, mileage of 24.3 Km/l & available in 4 variants. Call now for Nexa Ignis On-road price."
+          content="Get latest offers on Maruti Ignis.Mruti Ignis On Road Price in Hyderabad. Price starts from Rs.5.35* lakh, Mileage of 24.3 Km/l & available in 4 variants. Call now for Nexa Ignis On Road price."
         />
         <meta
           name="keywords"
@@ -361,7 +361,7 @@ function Ignis() {
       </div>
       <Variant />
       <ImageViewer />
-      <OnRoadPrice title={"Ignis"}/>
+      <OnRoadPrice title={"Ignis"} />
       <Features />
       <ImageOptions />
     </>

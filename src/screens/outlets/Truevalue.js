@@ -13,15 +13,15 @@ function Truevalue() {
       <Header />
       <Helmet>
         <title>
-          Maruti Suzuki Nexa truevalue in Hyderabad & Secundrabad | Saboo Nexa
+          Maruti Suzuki Authorised True Value Car Showroom in Hyderabad
         </title>
         <meta
           name="title"
-          content="Maruti Suzuki Nexa truevalue in Hyderabad & Secundrabad | Saboo Nexa"
+          content="Maruti Suzuki Authorised True Value Car Showroom in Hyderabad"
         />
         <meta
           name="description"
-          content="Saboo nexa is a leading Maruti Suzuki car dealer in Hyderabad & Secundrabad Telangana. Nexa jubliee Adress 1-65/5, KKR Square, Kavuri Hills, Madhapur, Jubilee hills, Opp - Bantia Furnitures, Hyderabad, Telangana - 500033"
+          content="Maruti Suzuki True Value is the best place to buy certified pre-owned cars. SABOO RKS is an Authorised True Value dealer in Hyderabad. For more details call us - 9848898488"
         />
         <meta
           name="keywords"
@@ -35,7 +35,9 @@ function Truevalue() {
         alt="finance banner"
       />
       <div className="shadow sm:px-0 px-4">
-        <p className="mx-auto container py-4"><Link to="/">Home</Link> / Truevalue</p>
+        <p className="mx-auto container py-4">
+          <Link to="/">Home</Link> / Truevalue
+        </p>
       </div>
       <p className="text-3xl uppercase pt-16 text-center font-bold">
         Truevalue
