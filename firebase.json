@@ -40,7 +40,7 @@
       },
       {
         "source": "/book-a-test-drive",
-        "destination": "/",
+        "destination": "/contact-us",
         "type": 301
       },
       {
@@ -71,6 +71,57 @@
       {
         "source": "/contact-us.php",
         "destination": "/contact-us",
+        "type": 301
+      },
+      {
+        "source": "/index.php",
+        "destination": "/",
+        "type": 301
+      },
+
+      {
+        "source": "/testimonials.php",
+        "destination": "/testimonials",
+        "type": 301
+      },
+      {
+        "source": "/book-a-test-drive/?mode=grid",
+        "destination": "/contact-us",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-baleno.html",
+        "destination": "/new-maruti-baleno-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/book-online-maruti-nexa-car-service",
+        "destination": "/maruti-nexa-car-service-center-near-me",
+        "type": 301
+      },
+      {
+        "source": "/book-a-test-drive.php",
+        "destination": "/contact-us",
+        "type": 301
+      },
+      {
+        "source": "/privacy-policy/",
+        "destination": "/terms-and-condition",
+        "type": 301
+      },
+      {
+        "source": "/terms-and-conditions/?mode=grid",
+        "destination": "/terms-and-condition",
+        "type": 301
+      },
+      {
+        "source": "/nexa-ignis-on-road-price-in-hyderabad.php",
+        "destination": "/nexa-ignis-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/nexa-ignis-on-road-price-in-hyderabad.php",
+        "destination": "/nexa-ignis-on-road-price-in-hyderabad",
         "type": 301
       }
     ],
