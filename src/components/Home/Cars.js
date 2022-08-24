@@ -16,7 +16,7 @@ function Cars() {
             What's happening at NEXA
           </p>
           <p className="text-lg font-light">
-            Saboo RKS is the leading Nexa dealer in hyderabad. Built with
+            Saboo RKS is the leading Nexa dealer in Hyderabad. Built with
             innovations that stand out with a whole new world of enhanced
             driving experience.
           </p>
