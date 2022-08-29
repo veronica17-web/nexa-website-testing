@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Header from "./components/Header/Header";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BsArrowDown } from "react-icons/bs";
@@ -11,9 +11,14 @@ import "swiper/css/navigation";
 import { products } from "./constants";
 import { addToCompare } from "./redux/compareSlice";
 import { useSelector } from "react-redux";
+import { Autoplay, Navigation } from "swiper";
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
 function Compare() {
   const dispatch = useDispatch();
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
+
   const handleToCompare = (item) => {
     dispatch(addToCompare(item));
   };
@@ -26,6 +31,15 @@ function Compare() {
       <p className="text-2xl my-16 text-center font-semibold">Compare Cars</p>
       <div className="container mx-auto">
         <Swiper
+          navigation={{
+            nextEl: navigationNextRef.current,
+            prevEl: navigationPrevRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = navigationPrevRef.current;
+            swiper.params.navigation.nextEl = navigationNextRef.current;
+          }}
+          modules={[Navigation, Autoplay]}
           slidesPerView={1}
           loop={true}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
@@ -103,6 +117,18 @@ function Compare() {
               </div>
             </SwiperSlide>
           ))}
+          <div
+            ref={navigationPrevRef}
+            className="absolute left-3 top-1/2 z-10 bg-gray-400 rounded-full p-3 cursor-pointer"
+          >
+            <GrFormPrevious />
+          </div>
+          <div
+            ref={navigationNextRef}
+            className="absolute right-3 top-1/2 z-10 bg-gray-400 rounded-full p-3 cursor-pointer"
+          >
+            <GrFormNext />
+          </div>
         </Swiper>
 
         <div className="overflow-x-auto relative shadow-md sm:rounded-lg border border-gray-200 mt-10 p-10">
