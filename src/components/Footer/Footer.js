@@ -180,7 +180,7 @@ function Footer() {
                   <BsYoutube />
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/saboo-rks-motor-pvt-ltd/"
+                  href="https://www.linkedin.com/company/rks-nexa/?viewAsMember=true"
                   target="_blank"
                   rel="noreferrer"
                 >

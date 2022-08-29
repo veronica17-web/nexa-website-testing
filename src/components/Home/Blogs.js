@@ -55,8 +55,8 @@ function Blogs() {
             </p>
 
             <p className="text-xs pb-2 text-gray-500">18 Aug 2022</p>
-            <div
-              href="#"
+            <a
+              href="/gallery"
               class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Gallery
@@ -73,7 +73,7 @@ function Blogs() {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </div>
+            </a>
           </div>
         </div>
         <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
