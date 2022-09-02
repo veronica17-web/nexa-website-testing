@@ -419,40 +419,29 @@ export const workshops = [
 export const truevalue = [
   {
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.912830268301!2d78.47780351435487!3d17.51167410381909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9aa8da34b78f%3A0x757d88157ab9a254!2sMaruti%20Suzuki%20True%20Value%20-%20RKS%20Motor!5e0!3m2!1sen!2sin!4v1607577423561!5m2!1sen!2sin",
-    title: "True Value - Kompally",
+    title: "Saboo True Value - Kompally",
     address:
-      "Sy No.42, Pet-Basheerabad, Quthbullapur,Hyderabad, Telangana, 500055",
-  },
-  {
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.090945562908!2d78.47059131435347!3d17.407422606809995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb975f1b5a0757%3A0x6b4ce67c8463b551!2sShapoorji%20Towers!5e0!3m2!1sen!2sin!4v1607323191499!5m2!1sen!2sin",
-    title: "RKS Motor - Kukatpally",
-    address:
-      "5-5-33/19, Near Metro Cash N Carry , Kukatpally ,Hyderabad, Telangana, 500 072",
-  },
-  {
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.716827758187!2d78.56821331435435!3d17.47326240492314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9c7c4829c807%3A0xe33d0f61aa143664!2sMaruti%20Suzuki%20Car%20Dealer%20-%20RKS%20Motor!5e0!3m2!1sen!2sin!4v1607576877015!5m2!1sen!2sin",
-    title: "RKS Motor - Kushaiguda",
-    address:
-      "1-10-1/285/1, Opp.Old Vegetable Market, ECIL X Road , Kushaiguda ,Hyderabad, Telangana, 500 062",
-  },
-  {
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.081235138512!2d78.48540665791738!3d17.45193615575579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a72a843d403%3A0xd11fa91defdbce1b!2sMaruti%20Suzuki%20Car%20Dealer%20-%20RKS%20Motor!5e0!3m2!1sen!2sin!4v1607576948512!5m2!1sen!2sin",
-    title: "RKS Motor - Secunderabad",
-    address:
-      "#207-A, Balamrai Check Post, Bowenpally, Tadbund ,Hyderabad, Telangana, 500 003",
+      "RKS Motor, Sy No.42, Pet-Basheerabad, Quthbullapur,Hyderabad, Telangana, 500055",
   },
 
   {
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.090945562908!2d78.47059131435347!3d17.407422606809995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb975f1b5a0757%3A0x6b4ce67c8463b551!2sShapoorji%20Towers!5e0!3m2!1sen!2sin!4v1607323191499!5m2!1sen!2sin",
-    title: "RKS Motor - Malakpet",
+    map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15222.867846709534!2d78.570397!3d17.473256!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x821143e99dbc4c67!2sSaboo%20RKS%20Motor%20-%20Maruti%20Suzuki%20Car%20Dealer%20(True%20Value%2C%20Kushaiguda%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1662100353082!5m2!1sen!2sin",
+    title: "Saboo True Value - Kushaiguda",
     address:
-      "16-11-19/S/C/2 Salem Nagar Colony, Malakpet ,Hyderabad, Telangana, 500036",
+      "RKS Motor, 1-10-1/285/1, Opp.Old Vegetable Market, ECIL X Road , Kushaiguda ,Hyderabad, Telangana, 500 062",
+  },
+
+  {
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.799630887325!2d78.5114619!3d17.373372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb985019d8de25%3A0x1ce78cbd36879558!2sSaboo%20RKS%20Motor%20-%20Maruti%20Suzuki%20Car%20Dealer%20(True%20Value%2C%20Malakpet%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1662100173479!5m2!1sen!2sin",
+    title: "Saboo True Value - Malakpet",
+    address:
+      "RKS Motor, 16-11-19/S/C/2 Salem Nagar Colony, Malakpet ,Hyderabad, Telangana, 500036",
   },
   {
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7433656557864!2d78.45519981435372!3d17.424099406332694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb974b6feb9ea5%3A0x1e0a3e3dabcb8701!2sMaruti%20Suzuki%20Car%20Dealer%20-%20RKS%20Motor!5e0!3m2!1sen!2sin!4v1607577363887!5m2!1sen!2sin",
-    title: "RKS Motor - Somajiguda",
+    map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30453.94782709998!2d78.457389!3d17.424094!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0c00b1605899f18!2sSaboo%20RKS%20Motor%20-%20Maruti%20Suzuki%20Car%20Dealer%20(True%20Value%2C%20Somajiguda%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1662100475521!5m2!1sen!2sin",
+    title: "Saboo True Value - Somajiguda",
     address:
-      "6-3-905, Saboo Towers Raj Bhavan Road , Somajiguda- Beside Yashoda Hospital ,Hyderabad, Telangana, 500082",
+      "RKS Motor, 6-3-905, Saboo Towers Raj Bhavan Road , Somajiguda- Beside Yashoda Hospital ,Hyderabad, Telangana, 500082",
   },
 ];
 

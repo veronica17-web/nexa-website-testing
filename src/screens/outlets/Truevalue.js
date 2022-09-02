@@ -40,7 +40,7 @@ function Truevalue() {
         </p>
       </div>
       <p className="text-3xl uppercase pt-16 text-center font-bold">
-        Truevalue
+        True value
       </p>
       <div className="container mx-auto py-16">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 px-5 md:px-0">
