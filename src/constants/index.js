@@ -1,13 +1,14 @@
 //same for home screen and offers screen
 export const sliders = [
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-comingsoon.webp",
-    alt: "nexa-hafeezpet-coming-soon",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-september-banner.webp",
+    alt: "nexa-september-banner",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/saboo-nexa-august-banner.png",
-    alt: "saboo-nexa-august-banner",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-new-banner.webp",
+    alt: "nexa-hafeezpet-new-banner",
   },
+
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/banners/grand_vitara.webp",
     alt: "New Grand Vitara",
@@ -30,13 +31,14 @@ export const sliders = [
 //same for home screen and offers screen
 export const mobileSliders = [
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-mobile.webp",
-    alt: "hafeezpet-banner",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-september-mobile-banner.webp",
+    alt: "september-banner",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/saboo-nexa-mobile.png",
-    alt: "august-banner",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-new-banner-mobile.webp",
+    alt: "hafeezpet-new-banner",
   },
+
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/banners/grand_vitara_mobile.webp",
     alt: "Grand Vitara",
