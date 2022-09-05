@@ -35,7 +35,7 @@ export const mobileSliders = [
     alt: "september-banner",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-new-banner-mobile.webp",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/hafeezpet-new-banner.webp",
     alt: "hafeezpet-new-banner",
   },
 
@@ -266,13 +266,6 @@ export const offer_products = [
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-ciaz.webp",
     explore: "/nexa-ciaz-on-road-price-in-hyderabad",
-  },
-  {
-    name: "S-Cross",
-    price: "60000",
-    logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Nexa-Scross-Logo.webp",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-scross.webp",
-    explore: "/nexa-scross-petrol-on-road-price-in-hyderabad",
   },
 ];
 

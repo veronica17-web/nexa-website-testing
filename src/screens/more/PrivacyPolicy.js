@@ -7,7 +7,7 @@ function PrivacyPolicy() {
     <>
       <Header />
       <img
-        src={require("../../assets/privacy_banner.webp")}
+        src={require("../../assets/privacy-policy-banner-nexa.webp")}
         className="w-full"
         alt=""
       />
