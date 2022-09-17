@@ -9,7 +9,6 @@ import MobileSlider from "../../components/Home/MobileSlider";
 import Helmet from "react-helmet";
 import Header from "../../components/Header/Header";
 
-
 const width = window.innerWidth;
 
 function Home() {
@@ -17,16 +16,14 @@ function Home() {
     <>
       <Header />
       <Helmet>
-        <title>
-          Maruti Suzuki Nexa Showroom, Car Finance, Maruti Insurance |SabooNexa
-        </title>
+        <title>Best Nexa Dealers in Hyderabad | Nexa Hyderabad</title>
         <meta
           name="title"
-          content="Maruti Suzuki Nexa Showroom, Car Finance, Maruti Insurance |SabooNexa "
+          content="Best Nexa Dealers in Hyderabad | Nexa Hyderabad"
         />
         <meta
           name="description"
-          content="RKS Motor is one of the most trusted Nexa dealers in Hyderabad & Secunderabad. New Nexa car models Maruti Baleno, Maruti Baleno RS, Nexa Ignis, Nexa Scross, Maruti Ciaz & Nexa XL6."
+          content="Saboo Nexa one of the best authorized Nexa dealers in Hyderabad.  Visit your nearest Saboo Nexa Hyderabad showroom to get best offers. Call now 98488 98488"
         />
         <meta
           name="keywords"

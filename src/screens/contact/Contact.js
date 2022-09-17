@@ -300,7 +300,7 @@ function Contact() {
                             Comments
                           </label>
                           <textarea
-                            className="border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500"
+                            className="border h-5 outline-none px-1 rounded-md w-full focus:ring-red-500 focus:border-red-500"
                             type="text"
                             name="comment"
                           ></textarea>

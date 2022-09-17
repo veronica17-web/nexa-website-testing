@@ -85,6 +85,10 @@ const navigation = {
       name: "Finance",
       to: "/maruti-car-finance",
     },
+    {
+      name: "Corporate",
+      to: "/corporate",
+    },
   ],
 
   outlets: [

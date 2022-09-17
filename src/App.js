@@ -39,6 +39,7 @@ import GrandVitara from "./screens/cars/GrandVitara";
 // import Compare from "./screens/Compare";
 
 import Compare from "./Compare";
+import Corporate from "./screens/services/Corporate";
 
 axios.defaults.baseURL = "https://saboogroups.com/admin/api/";
 
@@ -397,6 +398,7 @@ function App() {
 
         {/* <Route path="/compare" element={<Compare />} /> */}
         <Route path="/compare" element={<Compare />} />
+        <Route path="/corporate" element={<Corporate />} />
 
         <Route
           path="/grand-vitara-brezza-price-in-hyderabad"
