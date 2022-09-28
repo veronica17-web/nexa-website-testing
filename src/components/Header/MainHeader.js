@@ -1,136 +1,136 @@
-import { Fragment, useState } from "react";
-import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon, ChevronDownIcon } from "@heroicons/react/outline";
-import { Link } from "react-router-dom";
+import { Fragment, useState } from 'react';
+import { Dialog, Popover, Tab, Transition } from '@headlessui/react';
+import { MenuIcon, XIcon, ChevronDownIcon } from '@heroicons/react/outline';
+import { Link } from 'react-router-dom';
 
 const navigation = {
   categories: [
     {
-      id: "vehicles",
-      name: "Vehicles",
+      id: 'vehicles',
+      name: 'Vehicles',
       featured: [
         {
-          name: "Create Inspire.",
+          name: 'Create Inspire.',
           brand_logo:
-            "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/grand_vitara.webp",
-          href: "/grand-vitara-brezza-price-in-hyderabad",
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp',
+          href: '/grand-vitara-brezza-price-in-hyderabad',
           imageSrc:
-            "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/rangeman_celestial_blue.webp",
-          imageAlt: "GrandVitara",
-          // price: "11,29,000",
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/new167x87.webp',
+          imageAlt: 'GrandVitara',
+          price: '10,45,000',
         },
         {
-          name: "Created to Inspire Indulgence.",
+          name: 'Created to Inspire Indulgence.',
           brand_logo:
-            "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Logo-XL6.webp",
-          href: "/nexa-xl6-on-road-price-in-hyderabad",
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Logo-XL6.webp',
+          href: '/nexa-xl6-on-road-price-in-hyderabad',
           imageSrc:
-            "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/Hover_menu_XL6.webp",
-          imageAlt: "XL6",
-          price: "11,29,000",
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/Hover_menu_XL6.webp',
+          imageAlt: 'XL6',
+          price: '11,29,000',
         },
         {
-          name: "Created to Inspire Sophistication & Power.",
+          name: 'Created to Inspire Sophistication & Power.',
           brand_logo:
-            "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Nexa-Scross-Logo.webp",
-          href: "/nexa-scross-petrol-on-road-price-in-hyderabad",
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Nexa-Scross-Logo.webp',
+          href: '/nexa-scross-petrol-on-road-price-in-hyderabad',
           imageSrc:
-            "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Nexa-SCross-Car.webp",
-          imageAlt: "SCross",
-          price: "8,95,000",
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Nexa-SCross-Car.webp',
+          imageAlt: 'SCross',
+          price: '8,95,000',
         },
         {
-          name: "Created to Inspire Elegance.",
+          name: 'Created to Inspire Elegance.',
           brand_logo:
-            "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp",
-          href: "/nexa-ciaz-on-road-price-in-hyderabad",
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp',
+          href: '/nexa-ciaz-on-road-price-in-hyderabad',
           imageSrc:
-            "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-Car.webp",
-          imageAlt: "Ciaz",
-          price: "8,99,500",
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-Car.webp',
+          imageAlt: 'Ciaz',
+          price: '8,99,500',
         },
         {
-          name: "Created to Inspire The Bold and Intelligent.",
+          name: 'Created to Inspire The Bold and Intelligent.',
           brand_logo:
-            "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png",
-          href: "/new-maruti-baleno-price-in-hyderabad",
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png',
+          href: '/new-maruti-baleno-price-in-hyderabad',
           imageSrc:
-            "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/new_agebaleno.png",
-          imageAlt: "Baleno",
-          price: "6,49,000",
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/new_agebaleno.png',
+          imageAlt: 'Baleno',
+          price: '6,49,000',
         },
         {
-          name: "Created to Inspire The Toughness in You.",
+          name: 'Created to Inspire The Toughness in You.',
           brand_logo:
-            "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp",
-          href: "/nexa-ignis-on-road-price-in-hyderabad",
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',
+          href: '/nexa-ignis-on-road-price-in-hyderabad',
           imageSrc:
-            "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ignis-Car.webp",
-          imageAlt: "Ignis",
-          price: "5,35,000",
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ignis-Car.webp',
+          imageAlt: 'Ignis',
+          price: '5,35,000',
         },
       ],
     },
   ],
   pages: [
-    { name: "Home", to: "/" },
-    { name: "About us", to: "/about" },
+    { name: 'Home', to: '/' },
+    { name: 'About us', to: '/about' },
   ],
   servicepages: [
     {
-      name: "Insurance",
-      to: "/maruti-car-insurance",
+      name: 'Insurance',
+      to: '/maruti-car-insurance',
     },
     {
-      name: "Finance",
-      to: "/maruti-car-finance",
+      name: 'Finance',
+      to: '/maruti-car-finance',
     },
     {
-      name: "Corporate",
-      to: "/corporate",
+      name: 'Corporate',
+      to: '/corporate',
     },
   ],
 
   outlets: [
     {
-      name: "Showrooms",
-      to: "/maruti-nexa-showroom-outlets-in-hyderabad",
+      name: 'Showrooms',
+      to: '/maruti-nexa-showroom-outlets-in-hyderabad',
     },
     {
-      name: "Workshop",
-      to: "/maruti-nexa-workshop-outlets-in-hyderabad",
+      name: 'Workshop',
+      to: '/maruti-nexa-workshop-outlets-in-hyderabad',
     },
     {
-      name: "Truevalue",
-      to: "/maruti-nexa-truevalue-outlets-in-hyderabad",
+      name: 'Truevalue',
+      to: '/maruti-nexa-truevalue-outlets-in-hyderabad',
     },
   ],
   more: [
     {
-      name: "Testimonials",
-      to: "/testimonials",
+      name: 'Testimonials',
+      to: '/testimonials',
     },
     {
-      name: "Awards",
-      to: "/awards",
+      name: 'Awards',
+      to: '/awards',
     },
     {
-      name: "Gallery",
-      to: "/gallery",
+      name: 'Gallery',
+      to: '/gallery',
     },
     {
-      name: "Accessories",
-      to: "/accessories",
+      name: 'Accessories',
+      to: '/accessories',
     },
     {
-      name: "Compare",
-      to: "/compare",
+      name: 'Compare',
+      to: '/compare',
     },
   ],
 };
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 function MainHeader() {
@@ -142,67 +142,67 @@ function MainHeader() {
       setNavbar(false);
     }
   };
-  window.addEventListener("scroll", fixedNavbar);
+  window.addEventListener('scroll', fixedNavbar);
   const [open, setOpen] = useState(false);
   return (
-    <div className={navbar ? "bg-black px-0" : "bg-black px-3"}>
+    <div className={navbar ? 'bg-black px-0' : 'bg-black px-3'}>
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog
-          as="div"
-          className="fixed inset-0 flex z-40 lg:hidden"
+          as='div'
+          className='fixed inset-0 flex z-40 lg:hidden'
           onClose={setOpen}
         >
           <Transition.Child
             as={Fragment}
-            enter="transition-opacity ease-linear duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition-opacity ease-linear duration-300"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
+            enter='transition-opacity ease-linear duration-300'
+            enterFrom='opacity-0'
+            enterTo='opacity-100'
+            leave='transition-opacity ease-linear duration-300'
+            leaveFrom='opacity-100'
+            leaveTo='opacity-0'
           >
-            <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-25" />
+            <Dialog.Overlay className='fixed inset-0 bg-black bg-opacity-25' />
           </Transition.Child>
 
           <Transition.Child
             as={Fragment}
-            enter="transition ease-in-out duration-300 transform"
-            enterFrom="-translate-x-full"
-            enterTo="translate-x-0"
-            leave="transition ease-in-out duration-300 transform"
-            leaveFrom="translate-x-0"
-            leaveTo="-translate-x-full"
+            enter='transition ease-in-out duration-300 transform'
+            enterFrom='-translate-x-full'
+            enterTo='translate-x-0'
+            leave='transition ease-in-out duration-300 transform'
+            leaveFrom='translate-x-0'
+            leaveTo='-translate-x-full'
           >
-            <div className="relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">
-              <div className="px-4 pt-5 pb-2 flex">
+            <div className='relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto'>
+              <div className='px-4 pt-5 pb-2 flex'>
                 <button
-                  type="button"
-                  className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
+                  type='button'
+                  className='-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400'
                   onClick={() => setOpen(false)}
                 >
-                  <span className="sr-only">Close menu</span>
-                  <XIcon className="h-6 w-6" aria-hidden="true" />
+                  <span className='sr-only'>Close menu</span>
+                  <XIcon className='h-6 w-6' aria-hidden='true' />
                 </button>
               </div>
 
               {/* Links */}
               <Tab.Group
-                as="div"
-                className="mt-2"
+                as='div'
+                className='mt-2'
                 onClick={() => setOpen(false)}
               >
-                <div className="border-b border-gray-200">
-                  <Tab.List className="-mb-px flex px-4 space-x-8">
+                <div className='border-b border-gray-200'>
+                  <Tab.List className='-mb-px flex px-4 space-x-8'>
                     {navigation.categories.map((category) => (
                       <Tab
                         key={category.name}
                         className={({ selected }) =>
                           classNames(
                             selected
-                              ? "text-[#f01b28] border-[#f01b28]"
-                              : "text-gray-900 border-transparent",
-                            "flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium"
+                              ? 'text-[#f01b28] border-[#f01b28]'
+                              : 'text-gray-900 border-transparent',
+                            'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium'
                           )
                         }
                       >
@@ -215,28 +215,28 @@ function MainHeader() {
                   {navigation.categories.map((category) => (
                     <Tab.Panel
                       key={category.name}
-                      className="pt-10 pb-8 px-4 space-y-10"
+                      className='pt-10 pb-8 px-4 space-y-10'
                     >
-                      <div className="grid grid-cols-2 gap-x-4">
+                      <div className='grid grid-cols-2 gap-x-4'>
                         {category.featured.map((item) => (
                           <div
                             key={item.name}
-                            className="group relative text-sm font-semibold"
+                            className='group relative text-sm font-semibold'
                           >
                             <Link to={item.href}>
-                              <div className="flex justify-center pb-2">
+                              <div className='flex justify-center pb-2'>
                                 <img
                                   src={item.brand_logo}
                                   alt={item.imageAlt}
-                                  className="object-center object-cover"
+                                  className='object-center object-cover'
                                 />
                               </div>
 
-                              <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden group-hover:opacity-75 mb-2">
+                              <div className='aspect-w-1 aspect-h-1 rounded-lg overflow-hidden group-hover:opacity-75 mb-2'>
                                 <img
                                   src={item.imageSrc}
                                   alt={item.imageAlt}
-                                  className="object-center object-cover"
+                                  className='object-center object-cover'
                                 />
                               </div>
                             </Link>
@@ -249,36 +249,36 @@ function MainHeader() {
               </Tab.Group>
 
               <div
-                className="border-t border-gray-200 py-6 px-4 space-y-6"
+                className='border-t border-gray-200 py-6 px-4 space-y-6'
                 onClick={() => setOpen(false)}
               >
                 {navigation.pages.map((page) => (
-                  <div key={page.name} className="flow-root">
+                  <div key={page.name} className='flow-root'>
                     <Link
                       to={page.to}
-                      className="-m-2 p-2 block font-medium text-gray-900"
+                      className='-m-2 p-2 block font-medium text-gray-900'
                     >
                       {page.name}
                     </Link>
                   </div>
                 ))}
                 <Link
-                  to="/contact-us"
-                  className="-m-2 p-2 block font-medium text-gray-900"
+                  to='/contact-us'
+                  className='-m-2 p-2 block font-medium text-gray-900'
                 >
                   Contact
                 </Link>
               </div>
 
               <div
-                className="border-t border-gray-200 py-6 px-4 space-y-6"
+                className='border-t border-gray-200 py-6 px-4 space-y-6'
                 onClick={() => setOpen(false)}
               >
                 {navigation.servicepages.map((page) => (
-                  <div key={page.name} className="flow-root">
+                  <div key={page.name} className='flow-root'>
                     <Link
                       to={page.to}
-                      className="-m-2 p-2 block font-medium text-gray-900"
+                      className='-m-2 p-2 block font-medium text-gray-900'
                     >
                       {page.name}
                     </Link>
@@ -287,14 +287,14 @@ function MainHeader() {
               </div>
 
               <div
-                className="border-t border-gray-200 py-6 px-4 space-y-6"
+                className='border-t border-gray-200 py-6 px-4 space-y-6'
                 onClick={() => setOpen(false)}
               >
                 {navigation.outlets.map((page) => (
-                  <div key={page.name} className="flow-root">
+                  <div key={page.name} className='flow-root'>
                     <Link
                       to={page.to}
-                      className="-m-2 p-2 block font-medium text-gray-900"
+                      className='-m-2 p-2 block font-medium text-gray-900'
                     >
                       {page.name}
                     </Link>
@@ -303,14 +303,14 @@ function MainHeader() {
               </div>
 
               <div
-                className="border-t border-gray-200 py-6 px-4 space-y-6"
+                className='border-t border-gray-200 py-6 px-4 space-y-6'
                 onClick={() => setOpen(false)}
               >
                 {navigation.more.map((page) => (
-                  <div key={page.name} className="flow-root">
+                  <div key={page.name} className='flow-root'>
                     <Link
                       to={page.to}
-                      className="-m-2 p-2 block font-medium text-gray-900"
+                      className='-m-2 p-2 block font-medium text-gray-900'
                     >
                       {page.name}
                     </Link>
@@ -326,65 +326,65 @@ function MainHeader() {
       <div
         className={
           navbar
-            ? "fixed top-0 z-20 w-full px-0 shadow-2xl drop-shadow-2xl"
-            : ""
+            ? 'fixed top-0 z-20 w-full px-0 shadow-2xl drop-shadow-2xl'
+            : ''
         }
       >
-        <header className="relative bg-black">
-          <nav aria-label="Top" className="container mx-auto ">
-            <div className="border-gray-200">
-              <div className="h-16 flex items-center">
+        <header className='relative bg-black'>
+          <nav aria-label='Top' className='container mx-auto '>
+            <div className='border-gray-200'>
+              <div className='h-16 flex items-center'>
                 {/* Logo */}
-                <div className="mr-auto flex lg:ml-0 ml-2">
-                  <Link to="/">
+                <div className='mr-auto flex lg:ml-0 ml-2'>
+                  <Link to='/'>
                     <img
-                      className="h-12 w-auto"
-                      src={require("../../assets/logo.webp")}
-                      alt="logo"
+                      className='h-12 w-auto'
+                      src={require('../../assets/logo.webp')}
+                      alt='logo'
                     />
                   </Link>
                 </div>
 
                 <button
-                  type="button"
-                  className="p-2 rounded-md text-gray-200 lg:hidden"
+                  type='button'
+                  className='p-2 rounded-md text-gray-200 lg:hidden'
                   onClick={() => setOpen(true)}
                 >
-                  <span className="sr-only">Open menu</span>
-                  <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                  <span className='sr-only'>Open menu</span>
+                  <MenuIcon className='h-6 w-6' aria-hidden='true' />
                 </button>
 
                 {/* Flyout menus */}
-                <Popover.Group className="hidden ml-auto lg:block lg:self-stretch">
-                  <div className="h-full flex space-x-8">
+                <Popover.Group className='hidden ml-auto lg:block lg:self-stretch'>
+                  <div className='h-full flex space-x-8'>
                     {navigation.pages.map((page) => (
                       <Link
                         key={page.name}
                         to={page.to}
-                        className="flex items-center text-sm font-medium text-gray-200 hover:text-gray-400"
+                        className='flex items-center text-sm font-medium text-gray-200 hover:text-gray-400'
                       >
                         {page.name}
                       </Link>
                     ))}
 
                     {navigation.categories.map((category) => (
-                      <Popover key={category.name} className="flex">
+                      <Popover key={category.name} className='flex'>
                         {({ open }) => (
                           <>
-                            <div className="relative flex">
+                            <div className='relative flex'>
                               <Popover.Button
                                 className={classNames(
                                   open
-                                    ? "border-red-600 text-red-600"
-                                    : "border-transparent text-gray-200 hover:text-gray-400",
-                                  "relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px outline-none focus:outline-none"
+                                    ? 'border-red-600 text-red-600'
+                                    : 'border-transparent text-gray-200 hover:text-gray-400',
+                                  'relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px outline-none focus:outline-none'
                                 )}
                               >
                                 {category.name}
                                 <ChevronDownIcon
                                   className={classNames(
-                                    open ? "text-red-600" : "text-gray-200",
-                                    "ml-1 h-4 w-4 group-hover:text-gray-200"
+                                    open ? 'text-red-600' : 'text-gray-200',
+                                    'ml-1 h-4 w-4 group-hover:text-gray-200'
                                   )}
                                 />
                               </Popover.Button>
@@ -392,56 +392,55 @@ function MainHeader() {
 
                             <Transition
                               as={Fragment}
-                              enter="transition ease-out duration-200"
-                              enterFrom="opacity-0"
-                              enterTo="opacity-100"
-                              leave="transition ease-in duration-150"
-                              leaveFrom="opacity-100"
-                              leaveTo="opacity-0"
+                              enter='transition ease-out duration-200'
+                              enterFrom='opacity-0'
+                              enterTo='opacity-100'
+                              leave='transition ease-in duration-150'
+                              leaveFrom='opacity-100'
+                              leaveTo='opacity-0'
                             >
-                              <Popover.Panel className="absolute top-full inset-x-0 text-sm text-gray-500 shadow z-10">
+                              <Popover.Panel className='absolute top-full inset-x-0 text-sm text-gray-500 shadow z-10'>
                                 <div
-                                  className="absolute inset-0 top-1/2 bg-white "
-                                  aria-hidden="true"
+                                  className='absolute inset-0 top-1/2 bg-white '
+                                  aria-hidden='true'
                                 />
 
-                                <div className="relative bg-white">
-                                  <div className="container mx-auto px-8">
-                                    <div className="grid grid-cols-6 gap-4 gap-x-8 py-6">
+                                <div className='relative bg-white'>
+                                  <div className='container mx-auto px-8'>
+                                    <div className='grid grid-cols-6 gap-4 gap-x-8 py-6'>
                                       {category.featured.map((item) => (
                                         <div
                                           key={item.name}
-                                          className="group relative text-base sm:text-sm"
+                                          className='group relative text-base sm:text-sm'
                                         >
-                                          <div className="flex justify-center my-4">
+                                          <div className='flex justify-center my-4'>
                                             <img
                                               src={item.brand_logo}
                                               alt={item.imageAlt}
-                                              className="object-center object-cover h-5"
+                                              className='object-center object-cover h-5'
                                             />
                                           </div>
-                                          <div className="aspect-w-1 aspect-h-1 rounded-lg p-5 bg-gray-100 overflow-hidden group-hover:opacity-75">
+                                          <div className='aspect-w-1 aspect-h-1 rounded-lg p-5 bg-gray-100 overflow-hidden group-hover:opacity-75'>
                                             <img
                                               src={item.imageSrc}
                                               alt={item.imageAlt}
-                                              className="object-center object-cover mx-auto"
+                                              className='object-center object-cover mx-auto'
                                             />
                                           </div>
                                           <Link
                                             to={item.href}
-                                            className="mt-6 block font-medium text-gray-900"
+                                            className='mt-6 block font-medium text-gray-900'
                                           >
                                             <span
-                                              className="absolute z-10 inset-0"
-                                              aria-hidden="true"
+                                              className='absolute z-10 inset-0'
+                                              aria-hidden='true'
                                             />
                                             {item.name}
                                           </Link>
                                           <p
-                                            aria-hidden="true"
-                                            className="mt-1"
+                                            aria-hidden='true'
+                                            className='mt-1'
                                           >
-                                            Ex-Showroom:{" "}
                                             <span>
                                               <b>₹ {item.price}*</b>
                                             </span>
@@ -458,23 +457,23 @@ function MainHeader() {
                       </Popover>
                     ))}
 
-                    <Popover className="flex">
+                    <Popover className='flex'>
                       {({ open }) => (
                         <>
-                          <div className="relative flex">
+                          <div className='relative flex'>
                             <Popover.Button
                               className={classNames(
                                 open
-                                  ? "border-red-600 text-red-600"
-                                  : "border-transparent text-gray-200 hover:text-gray-400",
-                                "relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px outline-none focus:outline-none"
+                                  ? 'border-red-600 text-red-600'
+                                  : 'border-transparent text-gray-200 hover:text-gray-400',
+                                'relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px outline-none focus:outline-none'
                               )}
                             >
                               Services
                               <ChevronDownIcon
                                 className={classNames(
-                                  open ? "text-red-600" : "text-gray-200",
-                                  "ml-1 h-4 w-4 group-hover:text-gray-200"
+                                  open ? 'text-red-600' : 'text-gray-200',
+                                  'ml-1 h-4 w-4 group-hover:text-gray-200'
                                 )}
                               />
                             </Popover.Button>
@@ -482,21 +481,21 @@ function MainHeader() {
 
                           <Transition
                             as={Fragment}
-                            enter="transition ease-out duration-200"
-                            enterFrom="opacity-0"
-                            enterTo="opacity-100"
-                            leave="transition ease-in duration-150"
-                            leaveFrom="opacity-100"
-                            leaveTo="opacity-0"
+                            enter='transition ease-out duration-200'
+                            enterFrom='opacity-0'
+                            enterTo='opacity-100'
+                            leave='transition ease-in duration-150'
+                            leaveFrom='opacity-100'
+                            leaveTo='opacity-0'
                           >
-                            <Popover.Panel className="absolute top-full -ml-6 text-sm text-gray-500 shadow rounded overflow-hidden w-full max-w-[130px]">
+                            <Popover.Panel className='absolute top-full -ml-6 text-sm text-gray-500 shadow rounded overflow-hidden w-full max-w-[130px]'>
                               <div
-                                className="absolute inset-0 top-1/2 bg-white"
-                                aria-hidden="true"
+                                className='absolute inset-0 top-1/2 bg-white'
+                                aria-hidden='true'
                               />
                               {navigation.servicepages.map((item, index) => (
                                 <Link to={item.to} key={index}>
-                                  <p className="relative p-3 hover:bg-gray-100 bg-white z-10">
+                                  <p className='relative p-3 hover:bg-gray-100 bg-white z-10'>
                                     {item.name}
                                   </p>
                                 </Link>
@@ -507,23 +506,23 @@ function MainHeader() {
                       )}
                     </Popover>
 
-                    <Popover className="flex">
+                    <Popover className='flex'>
                       {({ open }) => (
                         <>
-                          <div className="relative flex">
+                          <div className='relative flex'>
                             <Popover.Button
                               className={classNames(
                                 open
-                                  ? "border-red-600 text-red-600"
-                                  : "border-transparent text-gray-200 hover:text-gray-400",
-                                "relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px outline-none focus:outline-none"
+                                  ? 'border-red-600 text-red-600'
+                                  : 'border-transparent text-gray-200 hover:text-gray-400',
+                                'relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px outline-none focus:outline-none'
                               )}
                             >
                               Outlets
                               <ChevronDownIcon
                                 className={classNames(
-                                  open ? "text-red-600" : "text-gray-200",
-                                  "ml-1 h-4 w-4 group-hover:text-gray-200"
+                                  open ? 'text-red-600' : 'text-gray-200',
+                                  'ml-1 h-4 w-4 group-hover:text-gray-200'
                                 )}
                               />
                             </Popover.Button>
@@ -531,21 +530,21 @@ function MainHeader() {
 
                           <Transition
                             as={Fragment}
-                            enter="transition ease-out duration-200"
-                            enterFrom="opacity-0"
-                            enterTo="opacity-100"
-                            leave="transition ease-in duration-150"
-                            leaveFrom="opacity-100"
-                            leaveTo="opacity-0"
+                            enter='transition ease-out duration-200'
+                            enterFrom='opacity-0'
+                            enterTo='opacity-100'
+                            leave='transition ease-in duration-150'
+                            leaveFrom='opacity-100'
+                            leaveTo='opacity-0'
                           >
-                            <Popover.Panel className="absolute top-full -ml-6 text-sm text-gray-500 shadow rounded overflow-hidden w-full max-w-[120px]">
+                            <Popover.Panel className='absolute top-full -ml-6 text-sm text-gray-500 shadow rounded overflow-hidden w-full max-w-[120px]'>
                               <div
-                                className="absolute inset-0 top-1/2 bg-white"
-                                aria-hidden="true"
+                                className='absolute inset-0 top-1/2 bg-white'
+                                aria-hidden='true'
                               />
                               {navigation.outlets.map((item, index) => (
                                 <Link to={item.to} key={index}>
-                                  <div className="relative p-3 hover:bg-gray-100 bg-white z-10">
+                                  <div className='relative p-3 hover:bg-gray-100 bg-white z-10'>
                                     {item.name}
                                   </div>
                                 </Link>
@@ -556,23 +555,23 @@ function MainHeader() {
                       )}
                     </Popover>
 
-                    <Popover className="flex">
+                    <Popover className='flex'>
                       {({ open }) => (
                         <>
-                          <div className="relative flex">
+                          <div className='relative flex'>
                             <Popover.Button
                               className={classNames(
                                 open
-                                  ? "border-red-600 text-red-600"
-                                  : "border-transparent text-gray-200 hover:text-gray-400",
-                                "relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px outline-none focus:outline-none"
+                                  ? 'border-red-600 text-red-600'
+                                  : 'border-transparent text-gray-200 hover:text-gray-400',
+                                'relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px outline-none focus:outline-none'
                               )}
                             >
                               More
                               <ChevronDownIcon
                                 className={classNames(
-                                  open ? "text-red-600" : "text-gray-200",
-                                  "ml-1 h-4 w-4 group-hover:text-gray-200"
+                                  open ? 'text-red-600' : 'text-gray-200',
+                                  'ml-1 h-4 w-4 group-hover:text-gray-200'
                                 )}
                               />
                             </Popover.Button>
@@ -580,21 +579,21 @@ function MainHeader() {
 
                           <Transition
                             as={Fragment}
-                            enter="transition ease-out duration-200"
-                            enterFrom="opacity-0"
-                            enterTo="opacity-100"
-                            leave="transition ease-in duration-150"
-                            leaveFrom="opacity-100"
-                            leaveTo="opacity-0"
+                            enter='transition ease-out duration-200'
+                            enterFrom='opacity-0'
+                            enterTo='opacity-100'
+                            leave='transition ease-in duration-150'
+                            leaveFrom='opacity-100'
+                            leaveTo='opacity-0'
                           >
-                            <Popover.Panel className="absolute top-full -ml-6 w-full max-w-[120px] text-sm text-gray-500 shadow rounded overflow-hidden">
+                            <Popover.Panel className='absolute top-full -ml-6 w-full max-w-[120px] text-sm text-gray-500 shadow rounded overflow-hidden'>
                               <div
-                                className="absolute inset-0 top-1/2 bg-white"
-                                aria-hidden="true"
+                                className='absolute inset-0 top-1/2 bg-white'
+                                aria-hidden='true'
                               />
                               {navigation.more.map((item, index) => (
                                 <Link to={item.to} key={index}>
-                                  <p className="relative p-3 hover:bg-gray-100 bg-white z-10">
+                                  <p className='relative p-3 hover:bg-gray-100 bg-white z-10'>
                                     {item.name}
                                   </p>
                                 </Link>
@@ -606,8 +605,8 @@ function MainHeader() {
                     </Popover>
 
                     <Link
-                      to="/contact-us"
-                      className="flex items-center text-sm font-medium text-gray-200 hover:text-gray-400"
+                      to='/contact-us'
+                      className='flex items-center text-sm font-medium text-gray-200 hover:text-gray-400'
                     >
                       Contact
                     </Link>

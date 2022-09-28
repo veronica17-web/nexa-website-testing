@@ -1,6 +1,6 @@
-import React from "react";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 // import {
 //   BsFacebook,
 //   BsTwitter,
@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 //   BsInstagram,
 // } from "react-icons/bs";
 // import { ImLinkedin } from "react-icons/im";
-import MainHeader from "./MainHeader";
+import MainHeader from './MainHeader';
 
 function Header() {
   return (
@@ -22,8 +22,8 @@ function Header() {
 
 const TopHeader = () => {
   return (
-    <div className="container py-3 mx-auto block space-y-3 sm:flex items-center justify-between ">
-      <div className="flex items-center space-x-4 justify-center">
+    <div className='container py-3 mx-auto block space-y-3 sm:flex items-center justify-between '>
+      <div className='flex items-center space-x-4 justify-center'>
         {/* <a
           href="https://www.facebook.com/saboorksnexa/"
           target="_blank"
@@ -68,29 +68,31 @@ const TopHeader = () => {
         </a> */}
         {/* <div className="flex items-center justify-center space-x-2"> */}
         <Link
-          to="/offers"
-          className="uppercase bg-black text-white px-3 py-1.5 rounded shadow-sm text-sm"
+          to='/offers'
+          className='uppercase bg-black text-white px-3 py-1.5 rounded shadow-sm text-sm'
         >
           Offers
         </Link>
         <Link
-          to="/maruti-nexa-car-service-center-near-me"
-          className="uppercase bg-black text-white px-3 py-1.5 rounded shadow-sm text-sm"
+          to='/maruti-nexa-car-service-center-near-me'
+          className='uppercase bg-black text-white px-3 py-1.5 rounded shadow-sm text-sm'
         >
           book a Service
         </Link>
         {/* </div> */}
       </div>
-      <div className="space-x-3 lg:flex items-center">
-        <div className="flex items-center justify-center space-x-5">
-          <div className="flex items-center space-x-1">
-            <FaEnvelope />
-            <a href="mailto:info@saboomaruti.in">info@saboomaruti.in</a>
+      <div className='space-x-3 lg:flex items-center'>
+        <div className='flex items-center justify-center space-x-5'>
+          <div className='flex items-center space-x-1'>
+            <a href='mailto:info@saboomaruti.in'>
+              <FaEnvelope />
+            </a>
           </div>
-          <div className="border text-black h-5 hidden lg:flex space-y-4"></div>
-          <div className="flex items-center space-x-1 justify-center sm:justify-start">
-            <FaPhoneAlt size={12} />
-            <a href="tel:9848898488">+91 98488 98488</a>
+          <div className='border text-black h-5 hidden lg:flex space-y-4'></div>
+          <div className='flex items-center space-x-1 justify-center sm:justify-start'>
+            <a href='tel:9848898488'>
+              <FaPhoneAlt size={12} />
+            </a>
           </div>
         </div>
       </div>
