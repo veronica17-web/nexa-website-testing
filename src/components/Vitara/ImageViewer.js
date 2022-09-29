@@ -95,18 +95,18 @@ const Exterior = () => {
           navigation={true}
           thumbs={{ swiper: thumbsSwiper }}
           modules={[FreeMode, Navigation, Thumbs]}
-          className='mySwiper2'
+          className='mySwiper2 rounded'
         >
           <SwiperSlide>
             <img
               className='w-full'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior-small/756-300-ext-01.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/1.webp'
               alt='Fog-Light'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior-small/756-300-ext-02.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/2.webp'
               alt='roof-end-spoiler'
               className='w-full'
             />
@@ -114,22 +114,43 @@ const Exterior = () => {
           <SwiperSlide>
             <img
               className='w-full'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior-small/756-300-ext-03.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/3.webp'
               alt='ORVM'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               className='w-full'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior-small/756-300-ext-04.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/4.webp'
               alt='UV-cut-glass'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               className='w-full'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior-small/756-300-ext-05.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/5.webp'
               alt='UV-cut-glass'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              className='w-full'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/6.webp'
+              alt='Fog-Light'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/7.webp'
+              alt='roof-end-spoiler'
+              className='w-full'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              className='w-full'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/8.webp'
+              alt='ORVM'
             />
           </SwiperSlide>
         </Swiper>
@@ -147,33 +168,53 @@ const Exterior = () => {
           <SwiperSlide>
             <img
               className='w-full'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior-small/756-300-ext-01.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/1.webp'
               alt='Fog-Light'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior-small/756-300-ext-02.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/2.webp'
               alt='Exteriors-Side-Mirror'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               className='w-full'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior-small/756-300-ext-03.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/3.webp'
               alt='ORVM'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior-small/756-300-ext-04.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/4.webp'
               alt='UV-cut-glass'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior-small/756-300-ext-05.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/5.webp'
               alt='UV-cut-glass'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              className='w-full'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/6.webp'
+              alt='Fog-Light'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/7.webp'
+              alt='Exteriors-Side-Mirror'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              className='w-full'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/8.webp'
+              alt='ORVM'
             />
           </SwiperSlide>
         </Swiper>
@@ -197,13 +238,13 @@ const Interior = () => {
           <SwiperSlide>
             <img
               className='w-full'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/756-300-int-01.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/9.webp'
               alt='Fog-Light'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/756-300-int-02.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/10.webp'
               alt='roof-end-spoiler'
               className='w-full'
             />
@@ -211,28 +252,63 @@ const Interior = () => {
           <SwiperSlide>
             <img
               className='w-full'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/756-300-int-03.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/11.webp'
               alt='ORVM'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               className='w-full'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/756-300-int-04.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/12.webp'
               alt='UV-cut-glass'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               className='w-full'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/756-300-int-05.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/13.webp'
               alt='UV-cut-glass'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               className='w-full'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/756-300-int-06.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/14.webp'
+              alt='UV-cut-glass'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              className='w-full'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/15.webp'
+              alt='UV-cut-glass'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              className='w-full'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/16.webp'
+              alt='UV-cut-glass'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              className='w-full'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/17.webp'
+              alt='UV-cut-glass'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              className='w-full'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/18.webp'
+              alt='UV-cut-glass'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              className='w-full'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/19.webp'
               alt='UV-cut-glass'
             />
           </SwiperSlide>
@@ -251,38 +327,68 @@ const Interior = () => {
           <SwiperSlide>
             <img
               className='w-full'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/756-300-int-01.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/9.webp'
               alt='Fog-Light'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/756-300-int-02.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/10.webp'
               alt='Exteriors-Side-Mirror'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               className='w-full'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/756-300-int-03.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/11.webp'
               alt='ORVM'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/756-300-int-04.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/12.webp'
               alt='UV-cut-glass'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/756-300-int-05.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/13.webp'
               alt='UV-cut-glass'
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/756-300-int-06.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/14.webp'
+              alt='UV-cut-glass'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/15.webp'
+              alt='UV-cut-glass'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/16.webp'
+              alt='UV-cut-glass'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/17.webp'
+              alt='UV-cut-glass'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/18.webp'
+              alt='UV-cut-glass'
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/19.webp'
               alt='UV-cut-glass'
             />
           </SwiperSlide>

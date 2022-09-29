@@ -7,6 +7,7 @@ import Header from '../../components/Header/Header';
 import ImageViewer from '../../components/Vitara/ImageViewer';
 import Helmet from 'react-helmet';
 import Features from '../../components/Vitara/Features';
+import Carousel from '../../components/carousel/Carousel';
 
 function GrandVitara() {
   const [tabsColors, setTabsColors] = useState(1);
@@ -69,8 +70,8 @@ function GrandVitara() {
       <VariantPlayer />
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/vitara-color-banner.webp')] bg-cover bg-no-repeat">
         <div className='max-w-6xl mx-auto'>
-          <div className='grid sm:grid-cols-2 lg:grid-cols-3'>
-            <div className='my-auto mx-auto'>
+          <div className='grid sm:grid-cols-2 lg:grid-cols-2'>
+            <div className='my-auto mx-5 pt-10 pr-[30]'>
               <img
                 src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/grand_vitara/grand-vitara-logo.webp'
                 className='p-2'
@@ -374,7 +375,10 @@ function GrandVitara() {
         </div>
       </div>
       <Variant />
-      <ImageViewer />
+
+      <Carousel />
+
+      {/* <ImageViewer /> */}
       <OnRoadPrice title={'Grand Vitara'} />
       <Features />
       {/* <ImageOptions /> */}
