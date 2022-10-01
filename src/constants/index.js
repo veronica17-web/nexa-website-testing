@@ -62,11 +62,11 @@ export const bookAservice = [
 
 export const products = [
   {
-    id: 1,
+    id: 2,
     name: 'Grand Vitara',
-    price: null,
+    price: '1045000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/rangeman_celestial_blue.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/new-vitara-thumbnail.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/grand_vitara.pdf',
     explore: '/grand-vitara-brezza-price-in-hyderabad',
@@ -89,8 +89,9 @@ export const products = [
     rearSuspension: 'Torsion Beam',
     seating: '5',
   },
+
   {
-    id: 2,
+    id: 1,
     name: 'ignis',
     price: '535000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',

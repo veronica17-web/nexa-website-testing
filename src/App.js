@@ -367,11 +367,9 @@ function App() {
           path='/nexa-ignis-on-road-price-in-hyderabad'
           element={<Ignis />}
         />
-
         {/* services */}
         <Route path='/maruti-car-insurance' element={<Insurance />} />
         <Route path='/maruti-car-finance' element={<Finance />} />
-
         {/* outlets */}
         <Route
           path='/maruti-nexa-showroom-outlets-in-hyderabad'
@@ -385,7 +383,6 @@ function App() {
           path='/maruti-nexa-truevalue-outlets-in-hyderabad'
           element={<Truevalue />}
         />
-
         {/* more screen */}
         <Route path='/testimonials' element={<Testimonial />} />
         <Route path='/awards' element={<Awards />} />
@@ -398,16 +395,13 @@ function App() {
         />
         <Route path='/thank-you' element={<Thankyou />} />
         <Route path='/terms-and-condition' element={<PrivacyPolicy />} />
-
         {/* <Route path="/compare" element={<Compare />} /> */}
         <Route path='/compare' element={<Compare />} />
         <Route path='/corporate' element={<Corporate />} />
-
         <Route
           path='/grand-vitara-brezza-price-in-hyderabad'
           element={<GrandVitara />}
         />
-
         {/* Contact */}
         <Route path='/contact-us' element={<Contact />} />
         {/* PageNotFound */}

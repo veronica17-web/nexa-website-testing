@@ -16,7 +16,7 @@ const Carousel = () => {
         >
           <p className=''>Rules with revolutionary technology</p>
           <p className='hfont'>
-            <a href='/' className=' md-10 font-bold text-l text-white'>
+            <a href='/vitaraih' className=' md-10 font-bold text-l text-white'>
               Intelligent Hybrid Electric ϟ
             </a>
           </p>
