@@ -7,7 +7,7 @@ import Header from '../../components/Header/Header';
 import ImageViewer from '../../components/Vitara/ImageViewer';
 import Helmet from 'react-helmet';
 import Features from '../../components/Vitara/Features';
-import Carousel from '../../components/carousel/Carousel';
+import Carousel from '../../components/Vitara/Extras/Carousel';
 
 function GrandVitara() {
   const [tabsColors, setTabsColors] = useState(1);

@@ -1,4 +1,4 @@
-import Header from '../Header/Header';
+import Header from '../../../components/Header/Header';
 import { Link } from 'react-router-dom';
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -7,15 +7,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import './styles.css';
+import '../Extras/styles.css';
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from 'swiper';
-import Blogs from '../Home/Blogs';
-import Carousel from './Carousel';
-import TabNavigation from '../Vitara/Tabnavigation/TabNavigation';
 
-const VitaraIHE = () => {
+import Carousel from '../Extras/Carousel';
+import TabNavigation from '../Extras/TabNavigation';
+
+const VitaraAT = () => {
   return (
     <>
       <Header />
@@ -86,7 +86,7 @@ function IntelligentElectric() {
   return (
     <div className='container mx-auto py-16 space-y-4'>
       <p className='font-bold text-4xl text-center'>
-        The Grand Vitara with Intelligent Electric Hybrid
+        The Grand Vitara with 6-Speed Automatic Transmission
       </p>
       <p className=' text-center tracking-wider font-bold'>
         Rule the city streets
@@ -112,22 +112,33 @@ function IntelligentElectric() {
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
           allowfullscreen
         ></iframe>
+
+        <iframe
+          width='1110'
+          height='600'
+          src='https://www.youtube.com/embed/63IME4Vu2DI'
+          title='Maruti Suzuki| Smart Hybrid Technology'
+          frameborder='0'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+          allowfullscreen
+        ></iframe>
       </div>
       <br></br>
       <br></br>
       <br></br>
       <div>
         <h1 className=' text-center tracking-wider font-bold'>
-          Intelligent Electric Hybrid System
+          The Grand Vitara with 6-Speed Automatic Transmission
         </h1>
 
         <p className='max-w-[900px] text-gray-600 text-center mx-auto font-light text-xl'>
-          The advanced electric hybrid system from Maruti Suzuki is a full
-          hybrid technology that can drive on battery power, alone and operate
-          in fuel efficient, zero emissions mode. The Intelligent Electric
-          Hybrid can seamlessly switch between pure electric, petrol mode &#38;
-          harness the power of both, depending on the driving situation. A
-          revolutionary solution that lets you rule the city streets
+          Get in. Drive. Relax. Feel the road fade away as you effortlessly
+          cruise and bask in the glory of the majestic views. This is the
+          experience of driving the Advanced Grand Vitara with the 6-Speed
+          Automatic Transmission. It has steering-mounted Paddle Shifters that
+          make every drive more exciting and engaging. Smooth to drive. Fast to
+          accelerate. The perfect way to tackle city traffic and to cruise over
+          highways.
         </p>
       </div>
       <TabNavigation />
@@ -135,4 +146,4 @@ function IntelligentElectric() {
   );
 }
 
-export default VitaraIHE;
+export default VitaraAT;

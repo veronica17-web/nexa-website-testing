@@ -5,9 +5,9 @@ export const TabSelector = ({
   children,
   onClick,
 }: {
-  isActive: boolean,
-  children: React.ReactNode,
-  onClick: () => void,
+  isActive: boolean;
+  children: React.ReactNode;
+  onClick: () => void;
 }) => (
   <button
     className={`mr-8 group inline-flex items-center px-2 py-4 border-b-2 font-medium text-sm leading-5 cursor-pointer whitespace-nowrap ${

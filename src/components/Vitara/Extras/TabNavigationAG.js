@@ -13,7 +13,7 @@ import 'swiper/css/thumbs';
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper';
 
-function TabNavigation() {
+function TabNavigationAG() {
   return (
     <>
       <Tab.Group>
@@ -26,7 +26,7 @@ function TabNavigation() {
                   : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
-              Electric Drive
+              Auto Mode
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -35,7 +35,7 @@ function TabNavigation() {
                   : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
-              Hybrid Drive
+              Sport Mode
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -44,7 +44,7 @@ function TabNavigation() {
                   : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
-              Engine Drive
+              Snow Mode
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -53,7 +53,7 @@ function TabNavigation() {
                   : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
-              Regenerative Braking
+              Lock Mode
             </Tab>
           </Tab.List>
         </div>
@@ -63,24 +63,24 @@ function TabNavigation() {
 
             {/* exterior */}
             <Tab.Panel>
-              <ElectricDrive />
+              <AutoMode />
             </Tab.Panel>
 
             {/* interior */}
             <Tab.Panel>
-              <ElectricDrive />
+              <SportMode />
               {/* <HyrbridDrive /> */}
             </Tab.Panel>
 
             {/* color */}
             <Tab.Panel>
-              <ElectricDrive />
+              <SnowMode />
               {/* <EngineDrive /> */}
             </Tab.Panel>
 
             <Tab.Panel>
               {/* <RegenerativeBraking /> */}
-              <ElectricDrive />
+              <LockMode />
             </Tab.Panel>
           </Tab.Panels>
         </div>
@@ -89,7 +89,7 @@ function TabNavigation() {
   );
 }
 
-const ElectricDrive = () => {
+const AutoMode = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
@@ -119,7 +119,7 @@ const ElectricDrive = () => {
   );
 };
 
-const HyrbridDrive = () => {
+const SportMode = () => {
   const [interiorSwiper, setInteriorSwiper] = useState(null);
   return (
     <>
@@ -301,7 +301,7 @@ const HyrbridDrive = () => {
   );
 };
 
-const EngineDrive = () => {
+const SnowMode = () => {
   const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
@@ -544,7 +544,7 @@ const EngineDrive = () => {
     </>
   );
 };
-const RegenerativeBraking = () => {
+const LockMode = () => {
   const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
@@ -788,4 +788,4 @@ const RegenerativeBraking = () => {
   );
 };
 
-export default TabNavigation;
+export default TabNavigationAG;

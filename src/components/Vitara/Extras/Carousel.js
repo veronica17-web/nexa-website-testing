@@ -20,7 +20,7 @@ const Carousel = () => {
               Intelligent Hybrid Electric ϟ
             </a>
           </p>
-          <Link to='/'>
+          <Link to='vitaraih'>
             <FaDoorOpen size='50px' />
           </Link>
         </Panel>
@@ -30,7 +30,7 @@ const Carousel = () => {
         >
           <p>Rules with a firm grip</p>
           <p>
-            <a href='/' className='font-bold text-l text-white'>
+            <a href='/vitaraag' className='font-bold text-l text-white'>
               All Grip
             </a>
           </p>
@@ -44,11 +44,11 @@ const Carousel = () => {
         >
           <p>Rules with utmost comfort</p>
           <p>
-            <a href='/' className='font-bold text-l text-white'>
+            <a href='/vitaraat' className='font-bold text-l text-white'>
               6 Speed Automatic
             </a>
           </p>
-          <Link to='/'>
+          <Link to='/vitaraag'>
             <FaDoorOpen size='50px' />
           </Link>
         </Panel>
@@ -58,11 +58,11 @@ const Carousel = () => {
         >
           <p>Rules with a powerful persona</p>
           <p>
-            <a href='/' className='font-bold text-l text-white'>
+            <a href='/vitaramt' className='font-bold text-l text-white'>
               5 Speed Manual
             </a>
           </p>
-          <Link to='/'>
+          <Link to='/vitaramt'>
             <FaDoorOpen size='50px' />
           </Link>
         </Panel>

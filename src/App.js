@@ -40,8 +40,11 @@ import GrandVitara from './screens/cars/GrandVitara';
 
 import Compare from './Compare';
 import Corporate from './screens/services/Corporate';
-import Carousel from './components/carousel/Carousel';
-import VitaraIHE from './components/carousel/VitaraIHE';
+import Carousel from './components/Vitara/Extras/Carousel';
+import VitaraIHE from './components/Vitara/Versions/VitaraIHE';
+import VitaraAG from './components/Vitara/Versions/VitaraAG';
+import VitaraAT from './components/Vitara/Versions/VitaraAT';
+import VitaraMT from './components/Vitara/Versions/VitaraMT';
 
 axios.defaults.baseURL = 'https://saboogroups.com/admin/api/';
 
@@ -349,6 +352,9 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/vitaratest' element={<Carousel />} />
         <Route path='/vitaraih' element={<VitaraIHE />} />
+        <Route path='/vitaraag' element={<VitaraAG />} />
+        <Route path='/vitaraat' element={<VitaraAT />} />
+        <Route path='/vitaramt' element={<VitaraMT />} />
         {/* Vehicles */}
         <Route path='/nexa-xl6-on-road-price-in-hyderabad' element={<XL />} />
         <Route
