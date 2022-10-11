@@ -34,7 +34,7 @@ const Carousel = () => {
               All Grip
             </a>
           </p>
-          <Link to='/'>
+          <Link to='/vitaraag'>
             <FaDoorOpen size='50px' />
           </Link>
         </Panel>

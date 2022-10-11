@@ -148,7 +148,7 @@ function OnRoadPrice({ title }) {
               >
                 <option>Select Model</option>
                 <option value='Grand Vitara'>Grand Vitara</option>
-                <option value='S-Cross'>S-Cross</option>
+               
                 <option value='Ciaz'>Ciaz</option>
                 <option value='Baleno'>Baleno</option>
                 <option value='Ignis'>Ignis</option>

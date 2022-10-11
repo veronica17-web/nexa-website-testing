@@ -13,7 +13,7 @@ import '../Extras/styles.css';
 import { Autoplay, Navigation, Pagination } from 'swiper';
 
 import Carousel from '../Extras/Carousel';
-import TabNavigation from '../Extras/TabNavigation';
+import TabNavigationMT from '../Extras/TabNavigationMT';
 
 const VitaraAT = () => {
   return (
@@ -55,25 +55,28 @@ const VitaraAT = () => {
           className='mySwiper'
         >
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/9.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-8+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/10.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-7+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/11.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-6+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/12.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-19+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/13.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-15+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/14.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-14+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/15.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-13+webp.webp' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-12+webp.webp' />
           </SwiperSlide>
         </Swiper>
         <IntelligentElectric />
@@ -106,16 +109,6 @@ function IntelligentElectric() {
         <iframe
           width='1110'
           height='600'
-          src='https://www.youtube.com/embed/evDoKmxJJPc'
-          title='How does Intelligent Electric Hybrid work?'
-          frameborder='0'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          allowfullscreen
-        ></iframe>
-
-        <iframe
-          width='1110'
-          height='600'
           src='https://www.youtube.com/embed/63IME4Vu2DI'
           title='Maruti Suzuki| Smart Hybrid Technology'
           frameborder='0'
@@ -141,7 +134,7 @@ function IntelligentElectric() {
           highways.
         </p>
       </div>
-      <TabNavigation />
+      <TabNavigationMT />
     </div>
   );
 }

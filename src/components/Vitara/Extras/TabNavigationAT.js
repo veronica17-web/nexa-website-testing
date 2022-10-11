@@ -13,7 +13,7 @@ import 'swiper/css/thumbs';
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper';
 
-function TabNavigationAG() {
+function TabNavigationAT() {
   return (
     <>
       <Tab.Group>
@@ -26,7 +26,7 @@ function TabNavigationAG() {
                   : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
-              Auto Mode
+              Idle Start Stop
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -35,7 +35,7 @@ function TabNavigationAG() {
                   : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
-              Sport Mode
+              Torque Assist
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -44,7 +44,7 @@ function TabNavigationAG() {
                   : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
-              Snow Mode
+              Brake Energy Regeneration
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -53,7 +53,7 @@ function TabNavigationAG() {
                   : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
-              Lock Mode
+              Advance Dual Battery System
             </Tab>
           </Tab.List>
         </div>
@@ -93,10 +93,10 @@ const AutoMode = () => {
   const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
-      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Auto.webp')] py-5 bg-cover bg-no-repeat">
+      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Auto.webp')] bg-cover bg-no-repeat">
         <div className='max-w-6xl mx-auto'>
-          <div className='grid sm:grid-cols-2 lg:grid-cols-2'>
-            <div className='my-auto mx-5 font-light text-center pt-1 pr-[30]'>
+          <div className='grid sm:grid-cols-1 lg:grid-cols-1'>
+            <div className='my-auto mx-5 font-light text-center pt-10 pr-[30]'>
               <p>
                 The vehicle uses 2-wheel drive by default to prioritize fuel
                 efficiency. On encountering a low traction situation, the
@@ -107,12 +107,12 @@ const AutoMode = () => {
             </div>
             <div className='col-span-2'>
               <>
-                <div className='ml-auto mr-1 mt-24 py-20'>
+                <div className='ml-auto mr-1 mt-24'>
                   {/* CELESTIAL BLUE */}
                   <img
                     src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/GV-Car-915378+(2).webp'
                     alt='CELESTIAL BLUE'
-                    className='mx-auto my-20 py-20'
+                    className={tabsColors === 1 ? 'flex mx-auto' : 'hidden'}
                   />
                 </div>
               </>
@@ -128,10 +128,10 @@ const SportMode = () => {
   const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
-      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Sport.webp')] py-10 bg-cover bg-no-repeat">
+      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Lock.webp')] bg-cover bg-no-repeat">
         <div className='max-w-6xl mx-auto'>
           <div className='grid sm:grid-cols-1 lg:grid-cols-1'>
-            <div className='my-auto mx-5 font-light text-center pt-1 pr-[30]'>
+            <div className='my-auto mx-5 font-light text-center pt-10 pr-[30]'>
               <p>
                 The engine provides a sportier performance, while the Control
                 Unit anticipates the vehicle motion with the help of the
@@ -141,12 +141,12 @@ const SportMode = () => {
             </div>
             <div className='col-span-2'>
               <>
-                <div className='ml-auto mr-5 mt-20 py-20'>
+                <div className='ml-auto mr-1 mt-24'>
                   {/* CELESTIAL BLUE */}
                   <img
                     src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/GV-Car-915378+(2).webp'
                     alt='CELESTIAL BLUE'
-                    className='mx-auto my-10'
+                    className={tabsColors === 1 ? 'flex mx-auto' : 'hidden'}
                   />
                 </div>
               </>
@@ -162,10 +162,10 @@ const SnowMode = () => {
   const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
-      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Snow.webp')] py-10 bg-cover bg-no-repeat">
+      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Snow.webp')] bg-cover bg-no-repeat">
         <div className='max-w-6xl mx-auto'>
           <div className='grid sm:grid-cols-1 lg:grid-cols-1'>
-            <div className='my-auto mx-5 font-light text-center pt-1 pr-[30]'>
+            <div className='my-auto mx-5 font-light text-center pt-10 pr-[30]'>
               <p>
                 The vehicle pre-dominantly uses 4-wheel drive to allocate
                 optimal drive power to all four wheels to support stable
@@ -175,12 +175,12 @@ const SnowMode = () => {
             </div>
             <div className='col-span-2'>
               <>
-                <div className='ml-auto mr-1 mt-24 py-20'>
+                <div className='ml-auto mr-1 mt-24'>
                   {/* CELESTIAL BLUE */}
                   <img
                     src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/GV-Car-915378+(2).webp'
                     alt='CELESTIAL BLUE'
-                    className='mx-auto my-10'
+                    className={tabsColors === 1 ? 'flex mx-auto' : 'hidden'}
                   />
                 </div>
               </>
@@ -195,10 +195,10 @@ const LockMode = () => {
   const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
-      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Lock.webp')] py-10 bg-cover bg-no-repeat">
+      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Lock.webp')] bg-cover bg-no-repeat">
         <div className='max-w-6xl mx-auto'>
           <div className='grid sm:grid-cols-1 lg:grid-cols-1'>
-            <div className='my-auto mx-5 font-light text-center pt-1 pr-[30]'>
+            <div className='my-auto mx-5 font-light text-center pt-10 pr-[30]'>
               <p>
                 Optimal for driving over slippery or rough roads. The torque is
                 fed to the rear wheels even before throttle input is applied.
@@ -209,12 +209,12 @@ const LockMode = () => {
             </div>
             <div className='col-span-2'>
               <>
-                <div className='ml-auto mr-1 mt-24 py-20'>
+                <div className='ml-auto mr-1 mt-24'>
                   {/* CELESTIAL BLUE */}
                   <img
                     src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/GV-Car-915378+(2).webp'
                     alt='CELESTIAL BLUE'
-                    className='mx-auto my-10'
+                    className={tabsColors === 1 ? 'flex mx-auto' : 'hidden'}
                   />
                 </div>
               </>
@@ -226,4 +226,4 @@ const LockMode = () => {
   );
 };
 
-export default TabNavigationAG;
+export default TabNavigationAT;

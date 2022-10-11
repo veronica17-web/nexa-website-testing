@@ -29,16 +29,7 @@ const navigation = {
           imageAlt: 'XL6',
           price: '11,29,000',
         },
-        {
-          name: 'Created to Inspire Sophistication & Power.',
-          brand_logo:
-            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Nexa-Scross-Logo.webp',
-          href: '/nexa-scross-petrol-on-road-price-in-hyderabad',
-          imageSrc:
-            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Nexa-SCross-Car.webp',
-          imageAlt: 'SCross',
-          price: '8,95,000',
-        },
+
         {
           name: 'Created to Inspire Elegance.',
           brand_logo:
@@ -135,6 +126,7 @@ function classNames(...classes) {
 
 function MainHeader() {
   const [navbar, setNavbar] = useState(false);
+  const [open, setOpen] = useState(false);
   const fixedNavbar = () => {
     if (window.scrollY >= 100) {
       setNavbar(true);
@@ -143,7 +135,7 @@ function MainHeader() {
     }
   };
   window.addEventListener('scroll', fixedNavbar);
-  const [open, setOpen] = useState(false);
+
   return (
     <div className={navbar ? 'bg-black px-0' : 'bg-black px-3'}>
       {/* Mobile menu */}

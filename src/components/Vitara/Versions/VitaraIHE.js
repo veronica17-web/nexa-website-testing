@@ -55,25 +55,37 @@ const VitaraIHE = () => {
           className='mySwiper'
         >
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/9.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/intelligent-hybrid-electric/Ambient+Lighting+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/10.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/intelligent-hybrid-electric/Digital+Instrument+Cluster+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/11.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/intelligent-hybrid-electric/EV+Mode+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/12.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/intelligent-hybrid-electric/Head+Up+Display+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/13.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/intelligent-hybrid-electric/Panoramic+Sunroof+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/14.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/intelligent-hybrid-electric/Ventilated+Seats+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/15.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/intelligent-hybrid-electric/Wireless+Charger+webp.webp' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/intelligent-hybrid-electric/DRLs+webp+(1).webp' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/intelligent-hybrid-electric/LED+Tail+Lamps+webp+(1).webp' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/intelligent-hybrid-electric/Projector+Headlamps+webp+(2).webp' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/intelligent-hybrid-electric/R17+Dual+Tone+Precision+Cut+Alloy+Wheels+webp+(1).webp' />
           </SwiperSlide>
         </Swiper>
         <IntelligentElectric />
@@ -102,11 +114,10 @@ function IntelligentElectric() {
       <p className=' text-center tracking-wider font-bold'>
         How Intelligent Electric Hybrid Works?
       </p>
-      <div className='flex justify-center'>
+      <div className='flex justify-center sm:p-2'>
         <iframe
-          width='1110'
-          height='600'
-          src='https://www.youtube.com/embed/evDoKmxJJPc'
+          className='w-full aspect-video'
+          src='https://www.youtube.com/embed/evDoKmxJJPc?controls=0'
           title='How does Intelligent Electric Hybrid work?'
           frameborder='0'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'

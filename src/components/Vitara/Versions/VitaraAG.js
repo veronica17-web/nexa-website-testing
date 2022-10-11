@@ -14,6 +14,7 @@ import { Autoplay, Navigation, Pagination } from 'swiper';
 
 import Carousel from '../Extras/Carousel';
 import TabNavigationAG from '../Extras/TabNavigationAG';
+import TabNavigationAGFeatures from '../Extras/TabNavigationAGFeatures';
 
 const VitaraAG = () => {
   return (
@@ -55,25 +56,28 @@ const VitaraAG = () => {
           className='mySwiper'
         >
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/9.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/Drive+Mode+Selector+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/10.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/Panoramic+Sunroof+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/11.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/Black+_+Bordeaux+Dual+Tone+Interiors+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/12.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/SmartPlay+Pro+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/13.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/Projector+Headlamps+webp+(2).webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/14.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/LED+Tail+Lamps+webp+(1).webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/15.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/R+17+Dual+Tone+Precision+Cut+Alloy+Wheels+webp.webp' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/DRLs+webp+(1).webp' />
           </SwiperSlide>
         </Swiper>
         <IntelligentElectric />
@@ -134,6 +138,7 @@ function IntelligentElectric() {
         </p>
       </div> */}
       <TabNavigationAG />
+      <TabNavigationAGFeatures />
     </div>
   );
 }

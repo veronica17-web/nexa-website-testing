@@ -46,7 +46,7 @@ const Testimonials = () => {
         by a real person, reflecting their real-life experience.
       </p>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-2'>
-        <div className='shadow-lg py-8 border'>
+        <div className='shadow-lg rounded-md py-8 border'>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/icons/Saboo-Nexa-Profile-Icon.webp'
             alt='profile icon'
@@ -69,7 +69,7 @@ const Testimonials = () => {
             Good Work!!!!!. "
           </p>
         </div>
-        <div className='shadow-lg py-8 border'>
+        <div className='shadow-lg rounded-md py-8 border'>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/icons/Saboo-Nexa-Profile-Icon.webp'
             alt='profile icon'
@@ -91,7 +91,7 @@ const Testimonials = () => {
             you for all the hospitality and service. Regards, Srirag Reddy. E "
           </p>
         </div>
-        <div className='shadow-lg py-8 border'>
+        <div className='shadow-lg rounded-md py-8 border'>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/icons/Saboo-Nexa-Profile-Icon.webp'
             alt='profile icon'
@@ -134,7 +134,7 @@ const Outlets = () => {
         hotspots of Hyderabad
       </p>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 '>
-        <div className='bg-gray-900 text-gray-100 p-10 space-y-2'>
+        <div className='bg-gray-900 text-gray-100 p-10 space-y-2 rounded-md shadow-2xl'>
           <p>Nexa Lumbini</p>
           <p>
             5-9-22/1/B, Shapoorji Towers, Shapoorwadi, Adarsh Nagar, Hyderabad,
@@ -155,7 +155,7 @@ const Outlets = () => {
             </a>
           </div>
         </div>
-        <div className='bg-gray-900 text-gray-100 p-10 space-y-2'>
+        <div className='bg-gray-900 text-gray-100 p-10 space-y-2 rounded-md shadow-2xl'>
           <p>Nexa Jubilee</p>
           <p>
             1-65/5, 6,15 & 16 KKR Square, Phase I Kavuri Hills Madhapur, Post,

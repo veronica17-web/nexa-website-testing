@@ -1,6 +1,10 @@
 //same for home screen and offers screen
 export const sliders = [
   {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-diwali.webp',
+    alt: 'new-diwali-banner',
+  },
+  {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-new-banner.webp',
     alt: 'nexa-hafeezpet-new-banner',
   },
@@ -26,6 +30,10 @@ export const sliders = [
 
 //same for home screen and offers screen
 export const mobileSliders = [
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-diwali-mobile.webp',
+    alt: 'diwali-new-banner',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/hafeezpet-new-banner.webp',
     alt: 'hafeezpet-new-banner',
@@ -174,36 +182,9 @@ export const products = [
     rearSuspension: 'Torsion Beam',
     seating: '5',
   },
+
   {
     id: 5,
-    name: 'S-Cross',
-    price: '895000',
-    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Nexa-Scross-Logo.webp',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-scross.webp',
-    brouchure:
-      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/Maruti-Suzuki-S-cross-Broucher.pdf',
-    explore: '/nexa-scross-petrol-on-road-price-in-hyderabad',
-    engineType: 'K15B SMART HYBRID',
-    fuelType: 'PETROL',
-    displacement: '1462 cc',
-    power: '77 @ 6000',
-    torque: '138 @ 4400 ',
-    fuelTank: '48 L',
-    mileage: '18.55 (MT) / 18.43 (AT)',
-    tranmission: '5 MT / 4 AT',
-    length: '4300',
-    width: '1785',
-    height: '1595',
-    wheelbase: '2600',
-    turningRadius: '5.5',
-    frontBrake: 'Ventilated Disc',
-    rearBrake: 'Solid Disc',
-    frontSuspension: 'MacPherson Strut with Coil Spring',
-    rearSuspension: 'MacPherson Strut with Coil Spring',
-    seating: '5',
-  },
-  {
-    id: 6,
     name: 'XL6',
     price: '1129000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Logo-XL6.webp',
@@ -244,16 +225,32 @@ export const products = [
 export const offer_products = [
   {
     name: 'ignis',
-    price: '49000',
+    price: '₹ 49000 /-',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp',
     explore: '/nexa-ignis-on-road-price-in-hyderabad',
   },
   {
     name: 'Ciaz',
-    price: '30000',
+    price: '₹ 40000 /-',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-ciaz.webp',
+    explore: '/nexa-ciaz-on-road-price-in-hyderabad',
+  },
+  {
+    name: 'Baleno',
+    emi: '1899*/L',
+    price: 'Low Cost EMI',
+    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/baleno_new.png',
+    explore: '/nexa-ciaz-on-road-price-in-hyderabad',
+  },
+  {
+    name: 'Grand Vitara',
+    emi: '2099*/L',
+    price: 'Low Cost EMI',
+    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/new-vitara-thumbnail.webp',
     explore: '/nexa-ciaz-on-road-price-in-hyderabad',
   },
 ];

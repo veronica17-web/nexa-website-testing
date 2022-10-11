@@ -13,9 +13,9 @@ import 'swiper/css/thumbs';
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper';
 
-function TabNavigationIH() {
+function TabNavigationMT() {
   return (
-    <>
+    <div className='ml-2'>
       <Tab.Group>
         <div className='flex items-center justify-center py-8'>
           <Tab.List className='space-x-1'>
@@ -26,7 +26,7 @@ function TabNavigationIH() {
                   : 'bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
-              Electric Drive
+              Idle Start Stop
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -35,7 +35,7 @@ function TabNavigationIH() {
                   : 'bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
-              Hybrid Drive
+              Torque Assist
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -44,7 +44,7 @@ function TabNavigationIH() {
                   : 'bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
-              Engine Drive
+              Brake Energy Regeneration
             </Tab>
             <Tab
               className={({ selected }) =>
@@ -53,7 +53,7 @@ function TabNavigationIH() {
                   : 'bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
-              Regenerative Braking
+              Advanced Dual Battery
             </Tab>
           </Tab.List>
         </div>
@@ -63,50 +63,49 @@ function TabNavigationIH() {
 
             {/* exterior */}
             <Tab.Panel>
-              <ElectricDrive />
+              <IdleStartStop />
             </Tab.Panel>
 
             {/* interior */}
             <Tab.Panel>
-              <HybridDrive />
+              <TorqueAssist />
               {/* <HyrbridDrive /> */}
             </Tab.Panel>
 
             {/* color */}
             <Tab.Panel>
-              <EngineDrive />
+              <BrakeEnergyRegeneration />
               {/* <EngineDrive /> */}
             </Tab.Panel>
 
             <Tab.Panel>
-              <RegenerativeBraking />
+              {/* <RegenerativeBraking /> */}
+              <AdvancedDualBattery />
             </Tab.Panel>
           </Tab.Panels>
         </div>
       </Tab.Group>
-    </>
+    </div>
   );
 }
 
-const ElectricDrive = () => {
+const IdleStartStop = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
           <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
-            <video class='w-screen' autoplay='autoplay' loop>
-              <source
-                class='w-30 h-30'
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/ieh-1.mp4'
-                type='video/mp4'
-              />
-            </video>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
+              className='w-full mb-8'
+              alt='dashboard'
+            />
 
             <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-center'>
-              For low speed cruising, the energy stored in the battery pack is
-              utilized to power the electric motor. A truly Electric Drive that
-              provides you with immediate acceleration.
+              The Belt driven ISG ensures a quick and silent engine restart as
+              soon as the clutch is pressed. It uses the energy stored from the
+              Advanced Dual Battery System.
             </p>
           </div>
         </div>
@@ -115,26 +114,22 @@ const ElectricDrive = () => {
   );
 };
 
-const HybridDrive = () => {
+const TorqueAssist = () => {
   const [interiorSwiper, setInteriorSwiper] = useState(null);
   return (
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
           <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
-            <video class='w-screen' autoplay='autoplay' loop>
-              <source
-                class='w-30 h-30'
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/ieh-1.mp4'
-                type='video/mp4'
-              />
-            </video>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
+              className='w-full mb-8'
+              alt='dashboard'
+            />
 
             <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-center'>
-              A drive that gives you optimum performance and spontaneous
-              acceleration using the power of both, the petrol engine and the
-              battery pack. The combined power output provides for a powerful
-              drive.
+              It assists engine power during acceleration using the energy
+              stored in the Advanced Dual Battery System.
             </p>
           </div>
         </div>
@@ -143,24 +138,22 @@ const HybridDrive = () => {
   );
 };
 
-const EngineDrive = () => {
+const BrakeEnergyRegeneration = () => {
   const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
           <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
-            <video class='w-screen' autoplay='autoplay' loop>
-              <source
-                class='w-30 h-30'
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/ieh-1.mp4'
-                type='video/mp4'
-              />
-            </video>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
+              className='w-full mb-8'
+              alt='dashboard'
+            />
 
             <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-center'>
-              An engine drive leverages the IC engine to help you cruise through
-              your journeys while also charging the battery at the same time.
+              The ISG converts the energy from braking and stores it in the
+              Advanced Dual Battery System.
             </p>
           </div>
         </div>
@@ -168,24 +161,24 @@ const EngineDrive = () => {
     </>
   );
 };
-const RegenerativeBraking = () => {
+const AdvancedDualBattery = () => {
   const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
           <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
-            <video class='w-screen' autoplay='autoplay' loop>
-              <source
-                class='w-30 h-30'
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/ieh-1.mp4'
-                type='video/mp4'
-              />
-            </video>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
+              className='w-full mb-8'
+              alt='dashboard'
+            />
 
             <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-center'>
-              A smart solution that maximizes energy efficiency by leveraging
-              regenerative braking to recharge the Li-ion battery.
+              The Advanced Dual Battery System (Li-ion and Lead Acid) stores the
+              energy generated while braking and provides power to the ISG that
+              assists during acceleration. It results in a powerful and fuel
+              efficient drive.
             </p>
           </div>
         </div>
@@ -194,4 +187,4 @@ const RegenerativeBraking = () => {
   );
 };
 
-export default TabNavigationIH;
+export default TabNavigationMT;

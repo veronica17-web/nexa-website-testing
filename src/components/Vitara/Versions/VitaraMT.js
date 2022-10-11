@@ -14,6 +14,7 @@ import { Autoplay, Navigation, Pagination } from 'swiper';
 
 import Carousel from '../Extras/Carousel';
 import TabNavigation from '../Extras/TabNavigation';
+import TabNavigationMT from '../Extras/TabNavigationMT';
 
 const VitaraMT = () => {
   return (
@@ -55,82 +56,87 @@ const VitaraMT = () => {
           className='mySwiper'
         >
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/9.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Front+Sliding+Armrest+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/10.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Power+Button+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/11.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Rear+AC+Vents+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/12.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Boot+Space+webp.webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/13.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/Projector+Headlamps+webp+(1).webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/14.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/LED+Tail+Lamps+webp+(1).webp' />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/interior/15.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/R17+Dual+Tone+Precision+Cut+Alloy+Wheels+webp+(1).webp' />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/DRLs+webp+(1).webp' />
           </SwiperSlide>
         </Swiper>
-        <IntelligentElectric />
+        <ManualTransmission />
       </div>
     </>
   );
 };
 
-function IntelligentElectric() {
+function ManualTransmission() {
   return (
     <div className='container mx-auto py-16 space-y-4'>
       <p className='font-bold text-4xl text-center'>
         The Grand Vitara with Manual Transmission
       </p>
       <p className=' text-center tracking-wider font-bold'>
-        Rule the city streets
+        Rule with a powerful persona
       </p>
       <p className='bg-black h-1 w-60 mx-auto'></p>
       <p className='max-w-[900px] text-gray-600 text-center mx-auto font-light text-xl'>
-        A new breed of SUVs has arrived and it’s here to rule every road it
-        drives on, efficiently. This is the Advanced Grand Vitara with the
-        revolutionary Intelligent Electric Hybrid System.
+        Get behind the steering wheel and take the power in your hands. Because
+        there’s more than one way to exert your dominance and rule every road.
+        Super-efficient and power-packed, the Advanced Grand Vitara with Manual
+        Transmission makes cruising in the city an exhilarating experience. Feel
+        the thrill as you shift the gears and take on the turns with ease.
       </p>
       <br></br>
       <br></br>
       <p className=' text-center tracking-wider font-bold'>
-        How Intelligent Electric Hybrid Works?
+        How 5-Speed Manual Transmission Works?
       </p>
-      <div className='flex justify-center'>
+      <div className='flex justify-center sm:p-2'>
         <iframe
-          width='1110'
-          height='600'
-          src='https://www.youtube.com/embed/evDoKmxJJPc'
+          className='w-full aspect-video'
+          src='https://www.youtube.com/embed/63IME4Vu2DI?controls=0'
           title='How does Intelligent Electric Hybrid work?'
           frameborder='0'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
           allowfullscreen
         ></iframe>
       </div>
+
       <br></br>
       <br></br>
       <br></br>
       <div>
         <h1 className=' text-center tracking-wider font-bold'>
-          Intelligent Electric Hybrid System
+          Progressive Smart Hybrid Technology
         </h1>
 
         <p className='max-w-[900px] text-gray-600 text-center mx-auto font-light text-xl'>
-          The advanced electric hybrid system from Maruti Suzuki is a full
-          hybrid technology that can drive on battery power, alone and operate
-          in fuel efficient, zero emissions mode. The Intelligent Electric
-          Hybrid can seamlessly switch between pure electric, petrol mode &#38;
-          harness the power of both, depending on the driving situation. A
-          revolutionary solution that lets you rule the city streets
+          The Grand Vitara is engineered for better performance and a refined
+          driving experience with the Next Generation 1.5L K Series Engine with
+          The Progressive Smart Hybrid Technology. It’s integrated starter
+          generator, paired with a Li-ion and Lead Acid Battery, helps in
+          regenerating braking energy and provides torque assist to the engine
+          during acceleration.
         </p>
       </div>
-      <TabNavigation />
+      <TabNavigationMT />
     </div>
   );
 }
