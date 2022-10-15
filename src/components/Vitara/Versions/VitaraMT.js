@@ -2,7 +2,7 @@ import Header from '../../Header/Header';
 import { Link } from 'react-router-dom';
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import Helmet from 'react-helmet';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -20,7 +20,56 @@ const VitaraMT = () => {
   return (
     <>
       <Header />
-
+      <Helmet>
+        <title>Nexa Grand Vitara 5 Speed manual Transmissions Price</title>
+        <meta
+          name='title'
+          content='Nexa Grand Vitara 5 Speed manual Transmissions Price'
+        />
+        <meta
+          name='description'
+          content='Nexa Grand Vitara 5 Speed Manual Price Starts at 10.45Lac*. Maruti Suzuki Grand Vitara available in transmission options: Manual, Automatic (TC) and Automatic (CVT). For more info, call now 9848898488.'
+        />
+        {/* <meta
+          name="keywords"
+          content="Nexa Ciaz car price, Offers on Nexa Ciaz, Maruti Ciaz mileage, Ciaz Specifications, Nexa ciaz petrol price, Maruti ciaz on road price, Maruti ciaz variants, ciaz images, ciaz mileage, Nexa ciaz price in hyderabad, Maruti ciaz price in hyderabad, ciaz price in hyderabad, ciaz onroad price in hyderabad, offers on ciaz, ciaz offers 2022, new ciaz price, new ciaz price in hyderabad, new ciaz 2022 price, new ciaz 2022 onroad price, ciaz petrol price in hyderabad, ciaz 2022 petrol price in hyderabad"
+        />
+        <meta name="author" content="Broaddcast" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.saboonexa.in/the-new-maruti-ciaz/"
+        />
+        <meta
+          property="og:title"
+          content="Nexa Ciaz Car on Road Price & Offers in Hyderabad| Saboo Nexa"
+        />
+        <meta
+          property="og:description"
+          content="Nexa Ciaz 2022 car price starts at 8.87 lakh, mileage of 26.8 km/l. Get Nexa Ciaz specifications & features. Best offers on Ciaz car, low EMI, low down-payment. Call now 9848898488"
+        />
+        <meta
+          property="og:image"
+          content="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/Ciaz.jpg"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://www.saboonexa.in/the-new-maruti-ciaz/"
+        />
+        <meta
+          property="twitter:title"
+          content="Nexa Ciaz Car on Road Price & Offers in Hyderabad| Saboo Nexa"
+        />
+        <meta
+          property="twitter:description"
+          content="Nexa Ciaz 2022 car price starts at 8.87 lakh, mileage of 26.8 km/l. Get Nexa Ciaz specifications & features. Best offers on Ciaz car, low EMI, low down-payment. Call now 9848898488"
+        />
+        <meta
+          property="twitter:image"
+          content="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/Ciaz.jpg"
+        /> */}
+      </Helmet>
       <div className='container mx-auto py-16 space-y-4 rounded'>
         {/* <Carousel /> */}
         <Swiper

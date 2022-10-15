@@ -8,7 +8,7 @@ import { FaDoorOpen } from 'react-icons/fa';
 
 const Carousel = () => {
   return (
-    <div className='App m-2 shadow-2xl rounded-lg'>
+    <div className='App m-2 shadow-2xl scale-100 rounded-lg'>
       <FullpageAccordion>
         <Panel
           itemId='0'
@@ -16,11 +16,14 @@ const Carousel = () => {
         >
           <p className=''>Rules with revolutionary technology</p>
           <p className='hfont'>
-            <a href='/vitaraih' className=' md-10 font-bold text-l text-white'>
+            <a
+              href='/grand-vitara-features-intelligent-electric-hybrid'
+              className=' md-10 font-bold text-l text-white'
+            >
               Intelligent Hybrid Electric ϟ
             </a>
           </p>
-          <Link to='vitaraih'>
+          <Link to='/grand-vitara-features-intelligent-electric-hybrid'>
             <FaDoorOpen size='50px' />
           </Link>
         </Panel>
@@ -30,11 +33,14 @@ const Carousel = () => {
         >
           <p>Rules with a firm grip</p>
           <p>
-            <a href='/vitaraag' className='font-bold text-l text-white'>
+            <a
+              href='/grand-vitara-allgrip'
+              className='hfont font-bold text-l text-white'
+            >
               All Grip
             </a>
           </p>
-          <Link to='/vitaraag'>
+          <Link to='/grand-vitara-allgrip'>
             <FaDoorOpen size='50px' />
           </Link>
         </Panel>
@@ -44,11 +50,14 @@ const Carousel = () => {
         >
           <p>Rules with utmost comfort</p>
           <p>
-            <a href='/vitaraat' className='font-bold text-l text-white'>
+            <a
+              href='/grand-vitara-6-speed-automatic-transmission-price'
+              className='hfont font-bold text-l text-white'
+            >
               6 Speed Automatic
             </a>
           </p>
-          <Link to='/vitaraag'>
+          <Link to='/grand-vitara-6-speed-automatic-transmission-price'>
             <FaDoorOpen size='50px' />
           </Link>
         </Panel>
@@ -58,11 +67,14 @@ const Carousel = () => {
         >
           <p>Rules with a powerful persona</p>
           <p>
-            <a href='/vitaramt' className='font-bold text-l text-white'>
+            <a
+              href='/grand-vitara-5-speed-manual-transmission-price'
+              className='hfont font-bold text-l text-white'
+            >
               5 Speed Manual
             </a>
           </p>
-          <Link to='/vitaramt'>
+          <Link to='/grand-vitara-5-speed-manual-transmission-price'>
             <FaDoorOpen size='50px' />
           </Link>
         </Panel>

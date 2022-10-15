@@ -23,7 +23,7 @@ function TabNavigationAGFeatures() {
               className={({ selected }) =>
                 selected
                   ? 'bg-black text-gray-200 px-4 py-2 rounded shadow outline-none'
-                  : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
+                  : 'bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
               4WD Control
@@ -32,7 +32,7 @@ function TabNavigationAGFeatures() {
               className={({ selected }) =>
                 selected
                   ? 'bg-black text-gray-200 px-4 py-2 rounded shadow outline-none'
-                  : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
+                  : 'bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
               Synergetic Vehicle Dynamics Control
@@ -41,7 +41,7 @@ function TabNavigationAGFeatures() {
               className={({ selected }) =>
                 selected
                   ? 'bg-black text-gray-200 px-4 py-2 rounded shadow outline-none'
-                  : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
+                  : 'bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
               ESP
@@ -50,7 +50,7 @@ function TabNavigationAGFeatures() {
               className={({ selected }) =>
                 selected
                   ? 'bg-black text-gray-200 px-4 py-2 rounded shadow outline-none'
-                  : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
+                  : 'bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
               Powertrain Control
@@ -63,24 +63,24 @@ function TabNavigationAGFeatures() {
 
             {/* exterior */}
             <Tab.Panel>
-              <AutoMode />
+              <FourWheelDrive />
             </Tab.Panel>
 
             {/* interior */}
             <Tab.Panel>
-              <SportMode />
+              <SVDControl />
               {/* <HyrbridDrive /> */}
             </Tab.Panel>
 
             {/* color */}
             <Tab.Panel>
-              <SnowMode />
+              <ESP />
               {/* <EngineDrive /> */}
             </Tab.Panel>
 
             <Tab.Panel>
               {/* <RegenerativeBraking /> */}
-              <LockMode />
+              <PowerTrainControl />
             </Tab.Panel>
           </Tab.Panels>
         </div>
@@ -89,97 +89,106 @@ function TabNavigationAGFeatures() {
   );
 }
 
-const AutoMode = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+const FourWheelDrive = () => {
+  const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
-      <div class='flex flex-wrap bg-white justify-center'>
-        <div className='grid grid-cols-2 gap-4'>
-          <div>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp' />
+      <div className='container mx-auto'>
+        <div className='bg-white dark:bg-gray-900'>
+          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Technology_AllGrip+(1).webp'
+              className='w-full mb-8'
+              alt='dashboard'
+            />
+
+            <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-left'>
+              The 4WD Control allocates torque to the rear wheels after
+              detecting front wheel slippage. It also offers feedback and
+              feed-forward control that anticipates slippage based on the road
+              surface, throttle opening position and steering angles, and
+              allocates the torque to rear wheels before any slippage occurs.
+            </p>
           </div>
-          <div className='grid grid-rows-3 grid-flow-col gap-4'>
-            <div className='invisible py-4 '>01</div>
-            <p className='py-1 font-light text-xl'>
+        </div>
+      </div>
+    </>
+  );
+};
+
+const SVDControl = () => {
+  const [tabsColors, setTabsColors] = useState(1);
+  return (
+    <>
+      <div className='container mx-auto'>
+        <div className='bg-white dark:bg-gray-900'>
+          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Technology_AllGrip+(1).webp'
+              className='w-full mb-8'
+              alt='dashboard'
+            />
+
+            <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-left'>
+              Synergetic Vehicle Dynamics Control stabilizes your drive by
+              monitoring conditions through a steering angle sensor, yaw rate
+              sensor and other systems. It properly allocates steering assist
+              torque and front & rear wheel torque to suppress vehicle from
+              skidding before the ESP intervenes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+const ESP = () => {
+  const [tabsColors, setTabsColors] = useState(1);
+  return (
+    <>
+      <div className='container mx-auto'>
+        <div className='bg-white dark:bg-gray-900'>
+          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Technology_AllGrip+(1).webp'
+              className='w-full mb-8'
+              alt='dashboard'
+            />
+
+            <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-left'>
+              To enhance your driving experience, the powertrain is controlled
+              when you are in Sport Mode. It modifies the throttle-torque
+              performance in the low to medium engine speed range.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+const PowerTrainControl = () => {
+  const [tabsColors, setTabsColors] = useState(1);
+  return (
+    <>
+      <div className='container mx-auto'>
+        <div className='bg-white dark:bg-gray-900'>
+          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Technology_AllGrip+(1).webp'
+              className='w-full mb-8'
+              alt='dashboard'
+            />
+
+            <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-left'>
               The Advanced Dual Battery System (Li-ion and Lead Acid) stores the
               energy generated while braking and provides power to the ISG that
               assists during acceleration. It results in a powerful and fuel
               efficient drive.
             </p>
-            <div class='invisible py-4 '>03</div>
           </div>
         </div>
       </div>
     </>
   );
 };
-
-const SportMode = () => {
-  const [interiorSwiper, setInteriorSwiper] = useState(null);
-  return (
-    <>
-      <div class='flex flex-wrap bg-white justify-center'>
-        <div className='grid grid-cols-2 gap-4'>
-          <div>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp' />
-          </div>
-          <div className='grid grid-rows-3 grid-flow-col gap-4'>
-            <div className='invisible py-4 '>01</div>
-            <p className='py-1 font-light text-xl'>
-              It assists engine power during acceleration using the energy
-              stored in the Advanced Dual Battery System.
-            </p>
-            <div class='invisible py-4 '>03</div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-const SnowMode = () => {
-  const [tabsColors, setTabsColors] = useState(1);
-  return (
-    <>
-      <div class='flex flex-wrap bg-white justify-center'>
-        <div className='grid grid-cols-2 gap-4'>
-          <div>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp' />
-          </div>
-          <div className='grid grid-rows-3 grid-flow-col gap-4'>
-            <div className='invisible py-4 '>01</div>
-            <p className='py-1 font-light text-xl'>
-              The ISG converts the energy from braking and stores it in the
-              Advanced Dual Battery System.
-            </p>
-            <div class='invisible py-4 '>03</div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-const LockMode = () => {
-  const [tabsColors, setTabsColors] = useState(1);
-  return (
-    <>
-      <div class='flex flex-wrap bg-white justify-center'>
-        <div className='grid grid-cols-2 gap-4'>
-          <div>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp' />
-          </div>
-          <div className='grid grid-rows-3 grid-flow-col gap-4'>
-            <div className='invisible py-4 '>01</div>
-            <p className='py-1 font-light text-xl'>
-              The ISG converts the energy from braking and stores it in the
-              Advanced Dual Battery System.
-            </p>
-            <div class='invisible py-4 '>03</div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
 export default TabNavigationAGFeatures;

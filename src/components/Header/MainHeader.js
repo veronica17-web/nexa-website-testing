@@ -13,7 +13,7 @@ const navigation = {
           name: 'Create Inspire.',
           brand_logo:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp',
-          href: '/grand-vitara-brezza-price-in-hyderabad',
+          href: '/grand-vitara-on-road-price-in-hyderabad',
           imageSrc:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/new167x87.webp',
           imageAlt: 'GrandVitara',

@@ -8,6 +8,9 @@ import ImageViewer from '../../components/Vitara/ImageViewer';
 import Helmet from 'react-helmet';
 import Features from '../../components/Vitara/Features';
 import Carousel from '../../components/Vitara/Extras/Carousel';
+import MobileCarousel from '../../components/Vitara/Extras/MobileCarousel';
+
+const width = window.innerWidth;
 
 function GrandVitara() {
   const [tabsColors, setTabsColors] = useState(1);
@@ -16,8 +19,7 @@ function GrandVitara() {
       <Header />
       <Helmet>
         <title>
-          Maruti Suzuki Grand Vitara On Road Price in Hyderabad | Offers on
-          Grand Vitara
+          Nexa Grand Vitara On Road Price| Maruti Suzuki Grand Vitara Offers
         </title>
         <meta
           name='title'
@@ -25,7 +27,7 @@ function GrandVitara() {
         />
         <meta
           name='description'
-          content='Maruti Suzuki Grand Vitara On Road Price in Hyderabad.  Nexa Grand Vitara A New Breed of SUV from Nexa, with Premium Features, Like Panoramic Sunroof, Alloy Wheels, Digital Multi Information Display, Head Up Display, For More Informatio on Grand Vitara. Call Now'
+          content='Maruti Suzuki Nexa Grand Vitara On Road Price in Hyderabad. Grand Vitara Price Starts at 10.45Lac*. Nexa Vitara Comes with Panoramic Sunroof, 6- Air bags, 6-Speed Automatic Transmission. For More Info & Offers Visit Nearest Saboo Nexa Showroom Today or Call Us 9848898488.'
         />
         {/* <meta
           name="keywords"
@@ -376,7 +378,7 @@ function GrandVitara() {
       </div>
       <Variant />
 
-      <Carousel />
+      {width > 425 ? <Carousel /> : <MobileCarousel />}
 
       {/* <ImageViewer /> */}
       <OnRoadPrice title={'Grand Vitara'} />

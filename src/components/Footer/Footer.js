@@ -19,7 +19,7 @@ const navigation = {
     { name: 'Maruti Ignis', to: '/nexa-ignis-on-road-price-in-hyderabad' },
     {
       name: 'Maruti Grand Vitara',
-      to: '/grand-vitara-brezza-price-in-hyderabad',
+      to: '/grand-vitara-on-road-price-in-hyderabad',
     },
   ],
   corporate: [

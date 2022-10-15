@@ -23,7 +23,7 @@ function TabNavigationAG() {
               className={({ selected }) =>
                 selected
                   ? 'bg-black text-gray-200 px-4 py-2 rounded shadow outline-none'
-                  : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
+                  : 'bg-gray-300 text-black hover:bg-black font-light font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
               Auto Mode
@@ -32,7 +32,7 @@ function TabNavigationAG() {
               className={({ selected }) =>
                 selected
                   ? 'bg-black text-gray-200 px-4 py-2 rounded shadow outline-none'
-                  : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
+                  : 'bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
               Sport Mode
@@ -41,7 +41,7 @@ function TabNavigationAG() {
               className={({ selected }) =>
                 selected
                   ? 'bg-black text-gray-200 px-4 py-2 rounded shadow outline-none'
-                  : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
+                  : 'bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
               Snow Mode
@@ -50,7 +50,7 @@ function TabNavigationAG() {
               className={({ selected }) =>
                 selected
                   ? 'bg-black text-gray-200 px-4 py-2 rounded shadow outline-none'
-                  : 'bg-gray-300 text-black hover:bg-black hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
+                  : 'bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
               Lock Mode
@@ -95,7 +95,7 @@ const AutoMode = () => {
     <>
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Auto.webp')] py-5 bg-cover bg-no-repeat">
         <div className='max-w-6xl mx-auto'>
-          <div className='grid sm:grid-cols-2 lg:grid-cols-2'>
+          <div className='grid sm:grid-cols-1 lg:grid-cols-1'>
             <div className='my-auto mx-5 font-light text-center pt-1 pr-[30]'>
               <p>
                 The vehicle uses 2-wheel drive by default to prioritize fuel
@@ -112,7 +112,7 @@ const AutoMode = () => {
                   <img
                     src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/GV-Car-915378+(2).webp'
                     alt='CELESTIAL BLUE'
-                    className='mx-auto my-20 py-20'
+                    className='mx-auto my-10 pt-20'
                   />
                 </div>
               </>
@@ -146,7 +146,7 @@ const SportMode = () => {
                   <img
                     src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/GV-Car-915378+(2).webp'
                     alt='CELESTIAL BLUE'
-                    className='mx-auto my-10'
+                    className='mx-auto my-10 pt-20'
                   />
                 </div>
               </>
@@ -163,7 +163,7 @@ const SnowMode = () => {
   return (
     <>
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Snow.webp')] py-10 bg-cover bg-no-repeat">
-        <div className='max-w-6xl mx-auto'>
+        <div className='max-w-8xl mx-auto'>
           <div className='grid sm:grid-cols-1 lg:grid-cols-1'>
             <div className='my-auto mx-5 font-light text-center pt-1 pr-[30]'>
               <p>
@@ -175,12 +175,12 @@ const SnowMode = () => {
             </div>
             <div className='col-span-2'>
               <>
-                <div className='ml-auto mr-1 mt-24 py-20'>
+                <div className='ml-auto mr-1 mt-24 pt-20'>
                   {/* CELESTIAL BLUE */}
                   <img
                     src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/GV-Car-915378+(2).webp'
                     alt='CELESTIAL BLUE'
-                    className='mx-auto my-10'
+                    className='mx-auto my-10 pt-20'
                   />
                 </div>
               </>
@@ -214,7 +214,7 @@ const LockMode = () => {
                   <img
                     src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/GV-Car-915378+(2).webp'
                     alt='CELESTIAL BLUE'
-                    className='mx-auto my-10'
+                    className='mx-auto my-10 pt-20'
                   />
                 </div>
               </>

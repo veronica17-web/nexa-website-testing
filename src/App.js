@@ -45,6 +45,7 @@ import VitaraIHE from './components/Vitara/Versions/VitaraIHE';
 import VitaraAG from './components/Vitara/Versions/VitaraAG';
 import VitaraAT from './components/Vitara/Versions/VitaraAT';
 import VitaraMT from './components/Vitara/Versions/VitaraMT';
+import MobileCarousel from './components/Vitara/Extras/MobileCarousel';
 
 axios.defaults.baseURL = 'https://saboogroups.com/admin/api/';
 
@@ -351,10 +352,20 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/vitaratest' element={<Carousel />} />
-        <Route path='/vitaraih' element={<VitaraIHE />} />
-        <Route path='/vitaraag' element={<VitaraAG />} />
-        <Route path='/vitaraat' element={<VitaraAT />} />
-        <Route path='/vitaramt' element={<VitaraMT />} />
+        <Route path='/mobilecarousel' element={<MobileCarousel />} />
+        <Route
+          path='/grand-vitara-features-intelligent-electric-hybrid'
+          element={<VitaraIHE />}
+        />
+        <Route path='/grand-vitara-allgrip' element={<VitaraAG />} />
+        <Route
+          path='/grand-vitara-6-speed-automatic-transmission-price'
+          element={<VitaraAT />}
+        />
+        <Route
+          path='/grand-vitara-5-speed-manual-transmission-price'
+          element={<VitaraMT />}
+        />
         {/* Vehicles */}
         <Route path='/nexa-xl6-on-road-price-in-hyderabad' element={<XL />} />
         <Route
@@ -405,7 +416,7 @@ function App() {
         <Route path='/compare' element={<Compare />} />
         <Route path='/corporate' element={<Corporate />} />
         <Route
-          path='/grand-vitara-brezza-price-in-hyderabad'
+          path='/grand-vitara-on-road-price-in-hyderabad'
           element={<GrandVitara />}
         />
         {/* Contact */}

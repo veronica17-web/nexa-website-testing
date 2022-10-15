@@ -77,7 +77,7 @@ export const products = [
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/new-vitara-thumbnail.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/grand_vitara.pdf',
-    explore: '/grand-vitara-brezza-price-in-hyderabad',
+    explore: '/grand-vitara-on-road-price-in-hyderabad',
     engineType: 'SMART HYBRID / ELECTRIC HYBRID',
     fuelType: 'PETROL',
     displacement: '1462 cc',
