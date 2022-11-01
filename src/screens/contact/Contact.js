@@ -272,7 +272,7 @@ function Contact() {
                           >
                             <option>Select Model</option>
                             <option>Grand Vitara</option>
-                            <option>S-Cross</option>
+
                             <option>Ciaz</option>
                             <option>Baleno</option>
                             <option>Ignis</option>
