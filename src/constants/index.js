@@ -1,8 +1,8 @@
 //same for home screen and offers screen
 export const sliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-diwali.webp',
-    alt: 'new-diwali-banner',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-web-banner-nov-1.webp',
+    alt: 'new-nov-scng-banner',
   },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-new-banner.webp',
@@ -31,8 +31,8 @@ export const sliders = [
 //same for home screen and offers screen
 export const mobileSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-diwali-mobile.webp',
-    alt: 'diwali-new-banner',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-mobile-banner-nov1.webp',
+    alt: 'new-nov-scng-mobile-banner',
   },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/hafeezpet-new-banner.webp',
@@ -239,8 +239,8 @@ export const offer_products = [
   },
   {
     name: 'Baleno',
-    emi: '1899*/L',
-    price: 'Low Cost EMI',
+    // emi: '10000*/L',
+    price: '₹ 10000 /-',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/baleno_new.png',
     explore: '/nexa-ciaz-on-road-price-in-hyderabad',
