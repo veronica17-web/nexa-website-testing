@@ -1,6 +1,10 @@
 //same for home screen and offers screen
 export const sliders = [
   {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-dec-offer-web.webp',
+    alt: 'dec-banner',
+  },
+  {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-web-banner-nov-1.webp',
     alt: 'new-nov-scng-banner',
   },
@@ -30,6 +34,10 @@ export const sliders = [
 
 //same for home screen and offers screen
 export const mobileSliders = [
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-dec-offer-mobile.webp',
+  //   alt: 'dec-offer-mobile-banner',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-mobile-banner-nov1.webp',
     alt: 'new-nov-scng-mobile-banner',
@@ -225,14 +233,14 @@ export const products = [
 export const offer_products = [
   {
     name: 'ignis',
-    price: '₹ 49000 /-',
+    price: '₹ 54,000 /-',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp',
     explore: '/nexa-ignis-on-road-price-in-hyderabad',
   },
   {
     name: 'Ciaz',
-    price: '₹ 40000 /-',
+    price: '₹ 50,000 /-',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-ciaz.webp',
     explore: '/nexa-ciaz-on-road-price-in-hyderabad',
@@ -240,7 +248,7 @@ export const offer_products = [
   {
     name: 'Baleno',
     // emi: '10000*/L',
-    price: '₹ 10000 /-',
+    price: '₹ 30,000 /-',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/baleno_new.png',
     explore: '/nexa-ciaz-on-road-price-in-hyderabad',
@@ -340,6 +348,12 @@ export const showrooms = [
 ];
 
 export const workshops = [
+  {
+    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30456.041901874192!2d78.46977010669302!3d17.41153628537443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb992fc2460627%3A0x6eec84cd9e149fab!2sSaboo%20RKS%20Maruti%20Suzuki%20car%20dealer!5e0!3m2!1sen!2sin',
+    title: 'RKS Motor - Moosarambagh',
+    address:
+      '5-5-33/19, Near Metro Cash N Carry , Kukatpally ,Hyderabad, Telangana, 500 072',
+  },
   {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60886.10991855269!2d78.36972618672837!3d17.489275247252888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91ec0162f43d%3A0x3288c6fe4358cf48!2sKukatpally%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1607576787176!5m2!1sen!2sin',
     title: 'RKS Motor - Kukatpally',

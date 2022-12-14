@@ -117,6 +117,10 @@ const navigation = {
       name: 'Compare',
       to: '/compare',
     },
+    {
+      name: 'Metaverse',
+      to: '/compare',
+    },
   ],
 };
 
@@ -602,6 +606,18 @@ function MainHeader() {
                     >
                       Contact
                     </Link>
+
+                    <li className='menu-item pt-6'>
+                      <a
+                        href='https://www.spatial.io/s/Saboo-RKS-N-E-X-A-6322f4f7955236000112849b?share=3965153526388753240'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        <span className='text-yellow-300 hover:text-red-600'>
+                          Metaverse
+                        </span>
+                      </a>
+                    </li>
                   </div>
                 </Popover.Group>
               </div>

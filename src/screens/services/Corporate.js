@@ -56,7 +56,7 @@ const Corporate = () => {
               type='text'
               style={{ display: 'none' }}
               name='returnURL'
-              value='https://www.saboonexa.in/thank-you'
+              value='https://www.saboonexa.in/thank-you?email=Email'
             />
             <input
               type='text'

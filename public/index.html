@@ -124,6 +124,17 @@
       });
     </script>
 
+    <!--script to retrieve email variable-->
+    <script>
+      dataLayer.push({
+        event: 'form_submit_enhance',
+        enhanced_conversion_data: {
+          email: 'Email',
+          phone_number: 'yourPhoneVariable',
+        },
+      });
+    </script>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org/",

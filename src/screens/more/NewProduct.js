@@ -54,7 +54,7 @@ function NewProduct() {
             type='text'
             style={{ display: 'none' }}
             name='returnURL'
-            value='https://www.saboonexa.in/thank-you'
+            value='https://www.saboonexa.in/thank-you?email=Email'
           />
 
           <div className='grid lg:grid-cols-4 sm:grid-cols-2 gap-3'>

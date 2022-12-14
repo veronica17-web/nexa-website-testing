@@ -161,7 +161,7 @@ function Finance() {
               type='text'
               style={{ display: 'none' }}
               name='returnURL'
-              value='https://www.saboonexa.in/thank-you'
+              value='https://www.saboonexa.in/thank-you?email=Email'
             />
             <div className='space-y-4'>
               <p className='uppercase font-bold text-md'>contact details :</p>
