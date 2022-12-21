@@ -419,6 +419,10 @@ function App() {
           path='/grand-vitara-on-road-price-in-hyderabad'
           element={<GrandVitara />}
         />
+        <Route
+          path='/grand-vitara-brezza-price-in-hyderabad'
+          element={<GrandVitara />}
+        />
         {/* Contact */}
         <Route path='/contact-us' element={<Contact />} />
         {/* PageNotFound */}

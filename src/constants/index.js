@@ -34,10 +34,10 @@ export const sliders = [
 
 //same for home screen and offers screen
 export const mobileSliders = [
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-dec-offer-mobile.webp',
-  //   alt: 'dec-offer-mobile-banner',
-  // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-new-dec-mobile-banner.webp',
+    alt: 'dec-offer-mobile-banner',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-mobile-banner-nov1.webp',
     alt: 'new-nov-scng-mobile-banner',
@@ -71,7 +71,7 @@ export const mobileSliders = [
 
 export const bookAservice = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Saboo-Nexa-Service-banner1.png',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/dec-service-banner-2022.webp',
     alt: 'banner-2',
   },
 ];
