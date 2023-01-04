@@ -61,7 +61,7 @@ function Home() {
           content='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/index.jpg'
         />
       </Helmet>
-      <Confetti />
+
       {width > 425 ? <Slider /> : <MobileSlider />}
       <CarEnquiry />
       <Cars />

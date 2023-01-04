@@ -1,9 +1,9 @@
 //same for home screen and offers screen
 export const sliders = [
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-dec-offer-web.webp',
-    alt: 'dec-banner',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-dec-offer-web.webp',
+  //   alt: 'dec-banner',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-web-banner-nov-1.webp',
     alt: 'new-nov-scng-banner',
@@ -78,7 +78,25 @@ export const bookAservice = [
 
 export const products = [
   {
+    id: 1,
+    name: 'Baleno CNG',
+    price: '828000',
+    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/cng/baleno-cng-thubnail.webp',
+    brouchure: '/',
+    explore: '/',
+  },
+  {
     id: 2,
+    name: 'XL6 CNG',
+    price: '1224000',
+    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Logo-XL6.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/cng/xl6-cng-thumbnail.webp',
+    brouchure: '/',
+    explore: '/',
+  },
+  {
+    id: 1,
     name: 'Grand Vitara',
     price: '1045000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp',
@@ -107,7 +125,7 @@ export const products = [
   },
 
   {
-    id: 1,
+    id: 2,
     name: 'ignis',
     price: '535000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',
