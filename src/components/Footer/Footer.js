@@ -21,12 +21,20 @@ const navigation = {
       name: 'Maruti Grand Vitara',
       to: '/grand-vitara-on-road-price-in-hyderabad',
     },
+    {
+      name: 'Maruti FRONX',
+      to: '/maruti-fronx-price-in-hyderabad',
+    },
+    {
+      name: 'Maruti Jimny',
+      to: '/maruti-jimny-price-in-hyderabad',
+    },
   ],
   corporate: [
     { name: 'About', to: '/about' },
     { name: 'Contact Us', to: '/contact-us' },
     { name: 'Book a service', to: '/maruti-nexa-car-service-center-near-me' },
-    { name: 'Terms and Conditions', to: '/' },
+    { name: 'Terms and Conditions', to: '/terms-and-condition' },
     { name: "FAQ's", to: '/' },
     { name: 'Annual Report', to: '/' },
     { name: 'CSR Policy', to: '/' },

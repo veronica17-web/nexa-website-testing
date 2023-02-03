@@ -147,8 +147,9 @@ function OnRoadPrice({ title }) {
                 className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
               >
                 <option>Select Model</option>
+                <option value='Fronx'>Fronx</option>
+                <option value='Jimny'>Jimny</option>
                 <option value='Grand Vitara'>Grand Vitara</option>
-
                 <option value='Ciaz'>Ciaz</option>
                 <option value='Baleno'>Baleno</option>
                 <option value='Ignis'>Ignis</option>

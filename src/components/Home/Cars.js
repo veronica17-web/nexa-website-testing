@@ -79,7 +79,7 @@ const VehicleProducts = () => {
                   <div className='flex items-center font-semibold'>
                     <BsArrowDown />
                     <a href={item.brouchure} target='_blank' rel='noreferrer'>
-                      Download
+                      Brochure
                     </a>
                   </div>
                 </div>

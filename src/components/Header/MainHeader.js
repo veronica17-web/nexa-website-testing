@@ -10,6 +10,26 @@ const navigation = {
       name: 'Vehicles',
       featured: [
         {
+          name: 'Created to Inspire Style and Performance.',
+          brand_logo:
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/Flash_header_Menu_logo.webp',
+          href: '/maruti-fronx-price-in-hyderabad',
+          imageSrc:
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/HeaderMenu-167x87.webp',
+          imageAlt: 'Suzuki Fronx',
+          price: 'Coming Soon',
+        },
+        {
+          name: 'Functional Beauty Crafted for Purity of Function.',
+          brand_logo:
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/120x30+black.webp',
+          href: '/maruti-jimny-price-in-hyderabad',
+          imageSrc:
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/167x87-Ar_Vk_Jimny_Side+3-4th+Limbo+Shot_V1.webp',
+          imageAlt: 'Suzuki Jimny',
+          price: 'Coming Soon',
+        },
+        {
           name: 'Create Inspire.',
           brand_logo:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp',
@@ -17,7 +37,7 @@ const navigation = {
           imageSrc:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/new167x87.webp',
           imageAlt: 'GrandVitara',
-          price: '10,45,000',
+          price: ' ₹ 10,45,000*',
         },
         {
           name: 'Created to Inspire Indulgence.',
@@ -27,7 +47,7 @@ const navigation = {
           imageSrc:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/Hover_menu_XL6.webp',
           imageAlt: 'XL6',
-          price: '11,29,000',
+          price: '₹ 11,29,000*',
         },
 
         {
@@ -38,7 +58,7 @@ const navigation = {
           imageSrc:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-Car.webp',
           imageAlt: 'Ciaz',
-          price: '8,99,500',
+          price: ' ₹ 8,99,500*',
         },
         {
           name: 'Created to Inspire The Bold and Intelligent.',
@@ -48,7 +68,7 @@ const navigation = {
           imageSrc:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/new_agebaleno.png',
           imageAlt: 'Baleno',
-          price: '6,49,000',
+          price: '₹ 6,49,000*',
         },
         {
           name: 'Created to Inspire The Toughness in You.',
@@ -58,7 +78,7 @@ const navigation = {
           imageSrc:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ignis-Car.webp',
           imageAlt: 'Ignis',
-          price: '5,35,000',
+          price: '₹ 5,35,000*',
         },
       ],
     },
@@ -438,7 +458,7 @@ function MainHeader() {
                                             className='mt-1'
                                           >
                                             <span>
-                                              <b>₹ {item.price}*</b>
+                                              <b> {item.price}</b>
                                             </span>
                                           </p>
                                         </div>

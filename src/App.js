@@ -36,6 +36,8 @@ import { CgSpinner } from 'react-icons/cg';
 import PrivacyPolicy from './screens/more/PrivacyPolicy';
 // import NewProduct from "./screens/more/NewProduct";
 import GrandVitara from './screens/cars/GrandVitara';
+import Fronx from './screens/cars/Fronx';
+import Jimny from './screens/cars/Jimny';
 // import Compare from "./screens/Compare";
 
 import Compare from './Compare';
@@ -419,10 +421,8 @@ function App() {
           path='/grand-vitara-on-road-price-in-hyderabad'
           element={<GrandVitara />}
         />
-        <Route
-          path='/grand-vitara-brezza-price-in-hyderabad'
-          element={<GrandVitara />}
-        />
+        <Route path='/maruti-fronx-price-in-hyderabad' element={<Fronx />} />
+        <Route path='/maruti-jimny-price-in-hyderabad' element={<Jimny />} />
         {/* Contact */}
         <Route path='/contact-us' element={<Contact />} />
         {/* PageNotFound */}

@@ -1,9 +1,17 @@
 //same for home screen and offers screen
 export const sliders = [
   // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-dec-offer-web.webp',
-  //   alt: 'dec-banner',
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-republic-day-banner-2023.webp',
+  //   alt: 'nexa-republic-day-banner-jan-2023',
   // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-banner.webp',
+    alt: 'jimny-banner',
+  },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/fronx-web-banner.webp',
+    alt: 'fronx-banner',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-web-banner-nov-1.webp',
     alt: 'new-nov-scng-banner',
@@ -34,9 +42,17 @@ export const sliders = [
 
 //same for home screen and offers screen
 export const mobileSliders = [
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-republic+day-banner-2023-mobile.webp',
+  //   alt: 'nexa-republicday-jan-2023-mobile',
+  // },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-new-dec-mobile-banner.webp',
-    alt: 'dec-offer-mobile-banner',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-mobilr.webp',
+    alt: 'jimny-mobile-banner',
+  },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/fronx-mobile-banner.webp',
+    alt: 'fronx-mobile-banner',
   },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-mobile-banner-nov1.webp',
@@ -71,7 +87,7 @@ export const mobileSliders = [
 
 export const bookAservice = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/dec-service-banner-2022.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-banner.webp',
     alt: 'banner-2',
   },
 ];
@@ -79,28 +95,66 @@ export const bookAservice = [
 export const products = [
   {
     id: 1,
-    name: 'Baleno CNG',
-    price: '828000',
-    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/cng/baleno-cng-thubnail.webp',
-    brouchure: '/',
-    explore: '/',
+    name: 'Fronx',
+    price: '',
+    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/Flash_header_Menu_logo.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/HomepageTileSection-370x252.webp',
+    brouchure:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/FRONX+Brochure.pdf',
+    explore: '/maruti-fronx-price-in-hyderabad',
+    engineType: 'SMART HYBRID / ELECTRIC HYBRID',
+    fuelType: 'PETROL',
+    displacement: '1462 cc',
+    power: '75.8 @ 6000 / 68 kW @ 5500 rpm',
+    torque: '136.8 @ 4400 / 122 Nm @ 4400 - 4800',
+    fuelTank: '45 L',
+    mileage: '21.11 (MT), 20.58 (AT), 19.38 (AllGrip MT), 27.97 (e-CVT)',
+    tranmission: '5MT/ 6AT / e-CVT',
+    length: '4345',
+    width: '1795',
+    height: '1645',
+    wheelbase: '2600',
+    turningRadius: '5.4',
+    frontBrake: 'Ventilated Disc',
+    rearBrake: 'Solid Disc',
+    frontSuspension: 'MacPherson Strut',
+    rearSuspension: 'Torsion Beam',
+    seating: '5',
   },
   {
     id: 2,
-    name: 'XL6 CNG',
-    price: '1224000',
-    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Logo-XL6.webp',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/cng/xl6-cng-thumbnail.webp',
-    brouchure: '/',
-    explore: '/',
+    name: 'Jimny',
+    price: '',
+    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/120x30+black.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimmy-370x252-withbg.webp',
+    brouchure:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimny+Brochure.pdf',
+    explore: '/maruti-jimny-price-in-hyderabad',
+    engineType: 'SMART HYBRID / ELECTRIC HYBRID',
+    fuelType: 'PETROL',
+    displacement: '1462 cc',
+    power: '75.8 @ 6000 / 68 kW @ 5500 rpm',
+    torque: '136.8 @ 4400 / 122 Nm @ 4400 - 4800',
+    fuelTank: '45 L',
+    mileage: '21.11 (MT), 20.58 (AT), 19.38 (AllGrip MT), 27.97 (e-CVT)',
+    tranmission: '5MT/ 6AT / e-CVT',
+    length: '4345',
+    width: '1795',
+    height: '1645',
+    wheelbase: '2600',
+    turningRadius: '5.4',
+    frontBrake: 'Ventilated Disc',
+    rearBrake: 'Solid Disc',
+    frontSuspension: 'MacPherson Strut',
+    rearSuspension: 'Torsion Beam',
+    seating: '5',
   },
   {
-    id: 1,
+    id: 3,
     name: 'Grand Vitara',
     price: '1045000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/new-vitara-thumbnail.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/Grand-Vitara-CNG.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/grand_vitara.pdf',
     explore: '/grand-vitara-on-road-price-in-hyderabad',
@@ -125,7 +179,7 @@ export const products = [
   },
 
   {
-    id: 2,
+    id: 4,
     name: 'ignis',
     price: '535000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',
@@ -153,11 +207,11 @@ export const products = [
     seating: '5',
   },
   {
-    id: 3,
+    id: 5,
     name: 'baleno',
     price: '649000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/baleno_new.png',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/cng/baleno-cng-thubnail.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/The_New_Age_Baleno_Brochure.pdf',
     explore: '/new-maruti-baleno-price-in-hyderabad',
@@ -181,7 +235,7 @@ export const products = [
     seating: '5',
   },
   {
-    id: 4,
+    id: 6,
     name: 'Ciaz',
     price: '899500',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp',
@@ -210,11 +264,11 @@ export const products = [
   },
 
   {
-    id: 5,
+    id: 7,
     name: 'XL6',
     price: '1129000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Logo-XL6.webp',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/new-xl6.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/cng/xl6-cng-thumbnail.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/THE+ALL-NEW+XL6+Brochure.pdf',
     explore: '/nexa-xl6-on-road-price-in-hyderabad',
@@ -251,34 +305,34 @@ export const products = [
 export const offer_products = [
   {
     name: 'ignis',
-    price: '₹ 54,000 /-',
+    price: '₹ 35,000 /-',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp',
     explore: '/nexa-ignis-on-road-price-in-hyderabad',
   },
   {
     name: 'Ciaz',
-    price: '₹ 50,000 /-',
+    price: '₹ 30,000 /-',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-ciaz.webp',
     explore: '/nexa-ciaz-on-road-price-in-hyderabad',
   },
-  {
-    name: 'Baleno',
-    // emi: '10000*/L',
-    price: '₹ 30,000 /-',
-    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/baleno_new.png',
-    explore: '/nexa-ciaz-on-road-price-in-hyderabad',
-  },
-  {
-    name: 'Grand Vitara',
-    emi: '2099*/L',
-    price: 'Low Cost EMI',
-    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/new-vitara-thumbnail.webp',
-    explore: '/nexa-ciaz-on-road-price-in-hyderabad',
-  },
+  // {
+  //   name: 'Baleno',
+  //   // emi: '10000*/L',
+  //   price: '₹ 30,000 /-',
+  //   logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png',
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/baleno_new.png',
+  //   explore: '/nexa-ciaz-on-road-price-in-hyderabad',
+  // },
+  // {
+  //   name: 'Grand Vitara',
+  //   emi: '2099*/L',
+  //   price: 'Low Cost EMI',
+  //   logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp',
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/Grand-Vitara-CNG.webp',
+  //   explore: '/nexa-ciaz-on-road-price-in-hyderabad',
+  // },
 ];
 
 export const blogs = [
@@ -370,7 +424,7 @@ export const workshops = [
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30456.041901874192!2d78.46977010669302!3d17.41153628537443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb992fc2460627%3A0x6eec84cd9e149fab!2sSaboo%20RKS%20Maruti%20Suzuki%20car%20dealer!5e0!3m2!1sen!2sin',
     title: 'RKS Motor - Moosarambagh',
     address:
-      '5-5-33/19, Near Metro Cash N Carry , Kukatpally ,Hyderabad, Telangana, 500 072',
+      'Golnaka Bridge, Afzal Nagar, Malakpet Extension, Old Malakpet, Hyderabad, Telangana 500 036',
   },
   {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60886.10991855269!2d78.36972618672837!3d17.489275247252888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91ec0162f43d%3A0x3288c6fe4358cf48!2sKukatpally%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1607576787176!5m2!1sen!2sin',

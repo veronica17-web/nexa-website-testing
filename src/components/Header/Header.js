@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 // import { ImLinkedin } from "react-icons/im";
 import MainHeader from './MainHeader';
 
-function Header() {
+function Header() { 
   return (
     <>
       <TopHeader />

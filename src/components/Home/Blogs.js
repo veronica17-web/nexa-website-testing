@@ -40,25 +40,26 @@ function Blogs() {
           <div href='#'>
             <img
               class='rounded-t-lg'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/press-release/racha-ravi-new-car.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/auto-expo-blogpost.webp'
               alt=''
             />
           </div>
           <div class='p-5'>
             <div href='#'>
               <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                కొత్త కారు కొనుగోలుతో రచ్చరచ్చ చేసిన నటుడు రచ్చ రవి
+                Auto Expo 2023: Maruti Suzuki Fronx (Baleno Cross), Jimny 5-door
+                revealed
               </h5>
             </div>
-            <p className='text-xs pb-2 text-gray-500'>8 Oct 2022</p>
-            <p class='mb-3 tracking-normal font-normal text-gray-700 dark:text-gray-400'>
-              నటుడు రచ్చ రవి కొనుగోలు చేసిన మారుతి సుజుకి యొక్క కొత్త గ్రాండ్
-              విటారా కు సంబంధించిన ఫోటోలు మరియు వీడియోలు సోషల్ మీడియాలో చక్కర్లు
-              కొడుతున్నాయి.
+            <p className='text-xs pb-2 text-gray-500'>12 Jan 2023</p>
+            <p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+              India's biggest automaker Maruti Suzuki just revealed the much
+              anticipated Maruti Jimny 5-door and Fronx in the 2023 Auto Expo.
             </p>
+
             <a
               href={
-                'https://telugu.drivespark.com/four-wheelers/2022/racha-ravi-busy-new-maruti-grand-vitara-car-details-021068.html'
+                'https://timesofindia.indiatimes.com/auto/cars/auto-expo-2023-live-updates-day-2-motor-show-india-jan-12-2023-greater-noida-cars-bikes-vehicles/liveblog/96924968.cms'
               }
               target='_blank'
               rel='noopener noreferrer'
@@ -85,29 +86,32 @@ function Blogs() {
           <div href='#'>
             <img
               class='rounded-t-lg'
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/press-release/gv-opening.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/press-release/racha-ravi-new-car.webp'
               alt=''
             />
           </div>
           <div class='p-5'>
             <div href='#'>
               <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                Launch of Grand Vitara 2022
+                కొత్త కారు కొనుగోలుతో రచ్చరచ్చ చేసిన నటుడు రచ్చ రవి
               </h5>
             </div>
-            <p className='text-xs pb-2 text-gray-500'>18 Aug 2022</p>
-            <p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
-              Here is the biggest surprise of 2022 from Maruti Suzuki.
+            <p className='text-xs pb-2 text-gray-500'>8 Oct 2022</p>
+            <p class='mb-3 tracking-normal font-normal text-gray-700 dark:text-gray-400'>
+              నటుడు రచ్చ రవి కొనుగోలు చేసిన మారుతి సుజుకి యొక్క కొత్త గ్రాండ్
+              విటారా కు సంబంధించిన ఫోటోలు మరియు వీడియోలు సోషల్ మీడియాలో చక్కర్లు
+              కొడుతున్నాయి.
             </p>
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
             <a
-              href='/gallery'
+              href={
+                'https://telugu.drivespark.com/four-wheelers/2022/racha-ravi-busy-new-maruti-grand-vitara-car-details-021068.html'
+              }
+              target='_blank'
+              rel='noopener noreferrer'
               class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
             >
-              Gallery
+              Read More
               <svg
                 aria-hidden='true'
                 class='ml-2 -mr-1 w-4 h-4'
@@ -145,7 +149,7 @@ function Blogs() {
             <br></br>
             <br></br>
             <br></br>
-
+            <br></br>
             <Link
               to='/gallery'
               class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'

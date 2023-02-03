@@ -117,7 +117,7 @@ function BookAService() {
       /> */}
       <div className='shadow sm:px-0 px-4'>
         <p className='mx-auto container py-4'>
-          <Link to='/'>Home</Link> / Book Online Maruti Nexa Car Service
+          <Link to='/'>Home</Link> / Book Online Maruti Car Service
         </p>
       </div>
 
@@ -242,7 +242,8 @@ function BookAService() {
             </div> */}
             <div>
               <label className='block text-sm font-medium text-gray-700'>
-                Pickup Required <span className='text-red-600'>*</span>
+                Select Your Service Center{' '}
+                <span className='text-red-600'>*</span>
               </label>
               <select
                 id='LEADCF22'
@@ -250,9 +251,11 @@ function BookAService() {
                 onChange={(e) => setPickup(e.target.value)}
                 className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
               >
-                <option>Select Option</option>
-                <option>Yes</option>
-                <option>No</option>
+                <option>Select Outlet</option>
+
+                <option value='Nexa Service - Lumbini'>Nexa Lumbini</option>
+                <option value='Nexa Service - Jubilee'>Nexa Jubilee</option>
+                <option value='Nexa Service - Kompallly'>Nexa Kompally</option>
               </select>
             </div>
           </div>
