@@ -369,7 +369,7 @@ function Ignis() {
 }
 
 const Variant = () => {
-  const [price, setPrice] = useState("5,35,000");
+  const [price, setPrice] = useState("5,55,000");
   return (
     <div className="bg-black py-8">
       <div className="container mx-auto">
@@ -382,17 +382,17 @@ const Variant = () => {
               onChange={(e) => setPrice(e.target.value)}
               className="block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
             >
-              <option value="5,35,000">IGNIS SIGMA</option>
-              <option value="5,99,000">IGNIS DELTA</option>
-              <option value="6,47,000">IGNIS ZETA(M)</option>
-              <option value="6,61,000">IGNIS ZETA(D)</option>
-              <option value="7,22,000">IGNIS ALPHA(M)</option>
-              <option value="7,36,000">IGNIS ALPHA(D)</option>
-              <option value="6,49,000">IGNIS AMT DELTA</option>
-              <option value="6,97,000">IGNIS AMT ZETA(M)</option>
-              <option value="7,11,000">IGNIS AMT ZETA(D)</option>
-              <option value="7,72,000">IGNIS AMT ALPHA(M)</option>
-              <option value="7,86,000">IGNIS AMT ALPHA(D)</option>
+              <option value="5,55,000">IGNIS SIGMA</option>
+              <option value="6,09,000">IGNIS DELTA</option>
+              <option value="6,67,000">IGNIS ZETA(M)</option>
+              <option value="6,81,000">IGNIS ZETA(D)</option>
+              <option value="7,32,000">IGNIS ALPHA(M)</option>
+              <option value="7,46,000">IGNIS ALPHA(D)</option>
+              <option value="6,64,000">IGNIS AMT DELTA</option>
+              <option value="7,22,000">IGNIS AMT ZETA(M)</option>
+              <option value="7,36,000">IGNIS AMT ZETA(D)</option>
+              <option value="7,87,000">IGNIS AMT ALPHA(M)</option>
+              <option value="8,01,000">IGNIS AMT ALPHA(D)</option>
             </select>
           </div>
           <div className="text-center text-gray-200">

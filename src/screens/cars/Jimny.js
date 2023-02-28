@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+import Helmet from 'react-helmet';
 import { Autoplay, Navigation, Pagination } from 'swiper';
 import OnRoadPrice from '../../components/utils/OnRoadPrice';
 import { MdOutlineFileDownload } from 'react-icons/md';
@@ -19,11 +20,27 @@ const Jimny = () => {
   return (
     <>
       <Header />
+      <Helmet>
+        <Helmet>
+          <title>
+            Maruti Suzuki Jimny On-Road Price in Hyderabad | Saboo NEXA
+          </title>
+          <meta
+            name='title'
+            content='Maruti Suzuki Jimny On-Road Price in Hyderabad | Saboo NEXA'
+          />
+          <meta
+            name='description'
+            content='Discover the on-road price of Maruti Suzuki Jimny in Hyderabad for a convenient car ownership experience. Visit your nearesh Saboo Nexa dealer for test drive,  Jimny offers and more information. Call now for Maruti Suzuki Jimny on road price in Hyderabad'
+          />
+       
+        </Helmet>
+      </Helmet>
       <VariantPlayer />
       <JimnyInteriorAndOther />
       <OnRoadPrice />
-      {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
-      <Carousel />
+      {width > 425 ? <Carousel /> : <MobileCarousel />}
+      {/* <Carousel /> */}
     </>
   );
 };
@@ -47,6 +64,15 @@ function JimnyInteriorAndOther() {
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/colors/jimmy-color-bg.webp')] bg-cover bg-no-repeat">
         <div className='max-w-1xl mx-auto'>
           <div className='grid sm:grid-cols-2 lg:grid-cols-2'>
+            <a
+              href='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimny+Brochure_Saboo+RKS.3fe320502cb6720e78de.pdf'
+              className='m-3 p-3 bg-black text-gray-200 flex items-center max-w-[200px] ml-3 rounded'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <MdOutlineFileDownload size={10} />
+              &nbsp;Download Brochure
+            </a>
             <div className='col-span-2'>
               <>
                 <div className='ml-auto mr-1 mt-24'>

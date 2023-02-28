@@ -177,7 +177,7 @@ function OnRoadPrice({ title }) {
             </label>
           </div>
 
-          <p className='text-gray-200'>
+          <p className='text-gray-200 text-xs'>
             <span className='font-semibold'>Disclaimer :</span> I agree that by
             clicking the ‘Submit’ button below, I am explicitly soliciting a
             call / Message from Saboo Maruti (RKS Motor Pvt. Ltd) or its

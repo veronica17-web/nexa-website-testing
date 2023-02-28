@@ -32,8 +32,9 @@ const navigation = {
   ],
   corporate: [
     { name: 'About', to: '/about' },
+    { name: 'Careers', to: '/' },
     { name: 'Contact Us', to: '/contact-us' },
-    { name: 'Book a service', to: '/maruti-nexa-car-service-center-near-me' },
+    { name: 'Book a service', to: '/book-online-maruti-nexa-car-service/' },
     { name: 'Terms and Conditions', to: '/terms-and-condition' },
     { name: "FAQ's", to: '/' },
     { name: 'Annual Report', to: '/' },

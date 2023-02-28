@@ -1,33 +1,33 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ServiceFinanceInsu() {
   return (
-    <div className="mx-auto container space-y-5 px-5 lg:px-0">
-      <Link to="/">
+    <div className='mx-auto container space-y-5 px-5 lg:px-0'>
+      <Link to='/'>
         <img
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Saboo-Nexa-Service-Center.webp"
-          alt="service center"
-          className="max-w-full w-full"
+          src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/home-page-banners/Service+Desktop.webp'
+          alt='service center'
+          className='max-w-full w-full'
         />
       </Link>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className='grid grid-cols-2 gap-4'>
         <div>
-          <Link to="/">
+          <Link to='/'>
             <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Saboo-RKS-Nexa-Car-Finance.webp"
-              alt="Finance"
-              className="max-w-full w-full"
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/home-page-banners/Insurance+Desktop.webp'
+              alt='insurance'
+              className='max-w-full w-full'
             />
           </Link>
         </div>
         <div>
-          <Link to="/">
+          <Link to='/'>
             <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Saboo-RKS-Nexa-Car-Insurance.webp"
-              alt="Finance"
-              className="max-w-full w-full"
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/home-page-banners/Finance+Desktop.webp'
+              alt='Finance'
+              className='max-w-full w-full'
             />
           </Link>
         </div>

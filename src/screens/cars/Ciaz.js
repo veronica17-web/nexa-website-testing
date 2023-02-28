@@ -329,7 +329,7 @@ function Ciaz() {
   );
 }
 const Variant = () => {
-  const [price, setPrice] = useState('8,99,500');
+  const [price, setPrice] = useState('9,19,500');
   return (
     <div className='bg-black py-8'>
       <div className='container mx-auto'>
@@ -342,18 +342,18 @@ const Variant = () => {
               onChange={(e) => setPrice(e.target.value)}
               className='block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
             >
-              <option value='8,99,500'>CIAZ SMART HYBRID SIGMA</option>
-              <option value='9,63,500'>CIAZ SMART HYBRID DELTA</option>
-              <option value='9,99,000'>CIAZ SMART HYBRID ZETA</option>
-              <option value='10,78,500'>CIAZ SMART HYBRID ALPHA</option>
-              <option value='10,89,500'>CIAZ SMART HYBRID CIAZ S</option>
-              <option value='10,83,500'>
+              <option value='9,19,500'>CIAZ SMART HYBRID SIGMA</option>
+              <option value='9,83,500'>CIAZ SMART HYBRID DELTA</option>
+              <option value='10,19,000'>CIAZ SMART HYBRID ZETA</option>
+              <option value='10,98,500'>CIAZ SMART HYBRID ALPHA</option>
+              <option value='11,09,500'>CIAZ SMART HYBRID CIAZ S</option>
+              <option value='11,03,500'>
                 CIAZ SMART HYBRID AUTOMATIC DELTA
               </option>
-              <option value='11,19,000'>
+              <option value='11,39,000'>
                 CIAZ SMART HYBRID AUTOMATIC ZETA
               </option>
-              <option value='11,98,500'>
+              <option value='12,18,500'>
                 CIAZ SMART HYBRID AUTOMATIC ALPHA
               </option>
             </select>

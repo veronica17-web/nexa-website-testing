@@ -407,9 +407,10 @@ function App() {
         <Route path='/awards' element={<Awards />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/accessories' element={<Accessories />} />
+        <Route path='/nexa-car-offers-in-hyderabad' element={<Offers />} />
         <Route path='/offers' element={<Offers />} />
         <Route
-          path='/maruti-nexa-car-service-center-near-me'
+          path='/book-online-maruti-nexa-car-service/'
           element={<BookAService />}
         />
         <Route path='/thank-you' element={<Thankyou />} />

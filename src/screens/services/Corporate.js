@@ -3,6 +3,7 @@ import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import Header from '../../components/Header/Header';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from 'react-helmet';
 
 const Corporate = () => {
   const notify = () => toast('your email client will be opened');
@@ -18,6 +19,17 @@ const Corporate = () => {
   return (
     <div>
       <Header />
+      <Helmet>
+        <title>RKS Motor | Maruti Suzuki Showrooms in Hyderabad</title>
+        <meta
+          name='title'
+          content='RKS Motor | Maruti Suzuki Showrooms in Hyderabad'
+        />
+        <meta
+          name='description'
+          content='Saboo Nexa sells hatchbacks, sedans, MUVs and SUVs in Hyderabad through its ARENA and NEXA channels, certified pre-owned cars through TRUE VALUE, and commercial vehicles through its Maruti Suzuki Commercial channel. For more info Visit www.saboonexa.in.'
+        />
+      </Helmet>
       <ToastContainer />
       <div className='grid grid-cols-1 md:grid-cols-1 gap-4 container mx-auto my-5'>
         <div className='bg-white border shadow-md rounded p-5 mx-5'>

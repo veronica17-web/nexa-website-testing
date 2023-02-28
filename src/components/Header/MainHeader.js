@@ -118,6 +118,10 @@ const navigation = {
   ],
   more: [
     {
+      name: 'Careers',
+      to: '/',
+    },
+    {
       name: 'Testimonials',
       to: '/testimonials',
     },

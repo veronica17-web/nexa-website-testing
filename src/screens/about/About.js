@@ -9,15 +9,15 @@ function About() {
       <Header />
       <Helmet>
         <title>
-          Maruti Suzuki Car Dealer in Hyderabad & Secunderabad |Saboo Nexa
+          Best Maruti Suzuki Dealer in Hyderabad & Secundrabad | Saboo Nexa
         </title>
         <meta
           name='title'
-          content='Maruti Suzuki Car Dealer in Hyderabad & Secunderabad |Saboo Nexa'
+          content='Best Maruti Suzuki Dealer in Hyderabad & Secundrabad | Saboo Nexa'
         />
         <meta
           name='description'
-          content='Saboo Nexa is an Authorized Maruti Suzuki Dealer in Hyderabad. Visit Our Nearest Branch to get the Best Offers, Low Down-payment & Low EMI Options on New Maruti Nexa Cars. Call us - 98488 98488'
+          content='SABOO Maruti is Hyderabad’s leading automobile dealership and has been driving growth in domains of automobile sales and service over the last four decades. We are extensively spread across the city with four sales outlets, seven workshops, one commercial outlet and two premium car outlets NEXA.'
         />
         <meta
           name='keywords'

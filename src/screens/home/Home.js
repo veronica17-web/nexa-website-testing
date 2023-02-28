@@ -10,6 +10,7 @@ import Helmet from 'react-helmet';
 import Header from '../../components/Header/Header';
 //confetti
 import Confetti from 'react-confetti';
+import MobileCarousel from '../../components/Home/Mobile Carousel/MobileCarouselforHomePage';
 
 const width = window.innerWidth;
 
@@ -66,7 +67,8 @@ function Home() {
       <CarEnquiry />
       <Cars />
       <Blogs />
-      <ServiceFinanceInsu />
+      {width > 425 ? <ServiceFinanceInsu /> : <MobileCarousel />}
+
       <NewsLetter />
     </>
   );

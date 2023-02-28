@@ -68,13 +68,13 @@ const TopHeader = () => {
         </a> */}
         {/* <div className="flex items-center justify-center space-x-2"> */}
         <Link
-          to='/offers'
+          to='/nexa-car-offers-in-hyderabad'
           className='uppercase bg-black text-white px-3 py-1.5 rounded shadow-sm text-sm'
         >
           Offers
         </Link>
         <Link
-          to='/maruti-nexa-car-service-center-near-me'
+          to='/book-online-maruti-nexa-car-service/'
           className='uppercase bg-black text-white px-3 py-1.5 rounded shadow-sm text-sm'
         >
           book a Service
