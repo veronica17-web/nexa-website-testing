@@ -23,7 +23,7 @@ function TabNavigationIH() {
               className={({ selected }) =>
                 selected
                   ? 'bg-black text-gray-200 px-4 py-2 rounded shadow outline-none'
-                  : 'bg-gray-300 text-black hover:bg-black font-light font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
+                  : 'bg-gray-300 text-black hover:bg-black font-light  hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
               }
             >
               Electric Drive

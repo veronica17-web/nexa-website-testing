@@ -63,7 +63,7 @@ function Home() {
         />
       </Helmet>
 
-      {width > 425 ? <Slider /> : <MobileSlider />}
+      {width > 425 ? <VideoSlider /> : <MobileSlider />}
       <CarEnquiry />
       <Cars />
       <Blogs />
@@ -73,5 +73,22 @@ function Home() {
     </>
   );
 }
+
+export const VideoSlider = () => {
+  return (
+    <div>
+      {' '}
+      <div className=''>
+        <video class='w-screen' autoplay='autoplay' loop muted>
+          <source
+            class='w-30 h-30'
+            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/video/Saboo+Nexa+Banner_2.mp4'
+            type='video/mp4'
+          />
+        </video>
+      </div>
+    </div>
+  );
+};
 
 export default Home;

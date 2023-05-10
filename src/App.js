@@ -48,6 +48,11 @@ import VitaraAG from './components/Vitara/Versions/VitaraAG';
 import VitaraAT from './components/Vitara/Versions/VitaraAT';
 import VitaraMT from './components/Vitara/Versions/VitaraMT';
 import MobileCarousel from './components/Vitara/Extras/MobileCarousel';
+import BlogPage from './components/Home/BlogPage';
+import NexaCNG from './screens/more/CNG/NexaCNG';
+import GrandVitaraCNG from './screens/more/CNG/GrandVitaraCNG';
+import BalenoCNG from './screens/more/CNG/BalenoCNG';
+import XL6CNG from './screens/more/CNG/XL6CNG';
 
 axios.defaults.baseURL = 'https://saboogroups.com/admin/api/';
 
@@ -394,6 +399,8 @@ function App() {
           path='/maruti-nexa-showroom-outlets-in-hyderabad'
           element={<Showrooms />}
         />
+        <Route path='/maruti-nexa-latest-news' element={<BlogPage />} />
+
         <Route
           path='/maruti-nexa-workshop-outlets-in-hyderabad'
           element={<Workshops />}
@@ -404,6 +411,7 @@ function App() {
         />
         {/* more screen */}
         <Route path='/testimonials' element={<Testimonial />} />
+        <Route path='/cng' element={<NexaCNG />} />
         <Route path='/awards' element={<Awards />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/accessories' element={<Accessories />} />
@@ -421,6 +429,18 @@ function App() {
         <Route
           path='/grand-vitara-on-road-price-in-hyderabad'
           element={<GrandVitara />}
+        />
+        <Route
+          path='/grand-vitara-cng'
+          element={<GrandVitaraCNG />}
+        />
+        <Route
+          path='/baleno-cng'
+          element={<BalenoCNG/>}
+        />
+        <Route
+          path='/xl6-cng'
+          element={<XL6CNG/>}
         />
         <Route path='/maruti-fronx-price-in-hyderabad' element={<Fronx />} />
         <Route path='/maruti-jimny-price-in-hyderabad' element={<Jimny />} />

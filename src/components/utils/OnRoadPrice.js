@@ -150,10 +150,13 @@ function OnRoadPrice({ title }) {
                 <option value='Fronx'>Fronx</option>
                 <option value='Jimny'>Jimny</option>
                 <option value='Grand Vitara'>Grand Vitara</option>
+                <option value='Grand Vitara CNG'>Grand Vitara CNG</option>
                 <option value='Ciaz'>Ciaz</option>
                 <option value='Baleno'>Baleno</option>
+                <option value='Baleno CNG'>Baleno CNG</option>
                 <option value='Ignis'>Ignis</option>
                 <option value='XL6'>XL6</option>
+                <option value='XL6 CNG'>XL6 CNG</option>
               </select>
             </div>
             <div>

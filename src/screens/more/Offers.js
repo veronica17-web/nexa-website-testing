@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import Slider from '../../components/Home/Slider';
 import MobileSlider from '../../components/Home/MobileSlider';
-import  Helmet  from 'react-helmet';
+import Helmet from 'react-helmet';
 
 import { offer_products } from '../../constants';
 import { Link } from 'react-router-dom';
@@ -32,11 +32,9 @@ function Offers() {
   ];
   return (
     <>
-    <Helmet>
+      <Helmet>
         <Helmet>
-          <title>
-          Nexa Car Offers in Hyderabad | Saboo NEXA
-          </title>
+          <title>Nexa Car Offers in Hyderabad | Saboo NEXA</title>
           <meta
             name='title'
             content='Nexa Car Offers in Hyderabad | Saboo NEXA'
@@ -142,7 +140,7 @@ const OfferProducts = () => {
                 </Link>
                 <Link
                   to='/terms-and-condition'
-                  className=' rounded text-black text-center font-bold uppercase py-2'
+                  className=' rounded text-black text-center font-bold uppercase py-2 text-xs'
                 >
                   *legal disclaimer
                 </Link>

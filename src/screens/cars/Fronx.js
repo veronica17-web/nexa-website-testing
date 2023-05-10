@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from 'react-router-dom';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Helmet from 'react-helmet';
-import { Autoplay, Navigation, Pagination } from 'swiper';
+// import { Autoplay, Navigation, Pagination } from 'swiper';
 import OnRoadPrice from '../../components/utils/OnRoadPrice';
 import { MdOutlineFileDownload } from 'react-icons/md';
-import Carousel from '../../components/Fronx/Extras/Carousel';
+// import Carousel from '../../components/Fronx/Extras/Carousel';
 import MobileCarousel from '../../components/Fronx/Extras/MobileCarousel';
 
 const width = window.innerWidth;
@@ -68,10 +69,74 @@ const Fronx = () => {
           content='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/XL6.jpg'
         /> */}
       </Helmet>
-      <VariantPlayer />
+      {width > 425 ? <VariantPlayer /> : <MobileVariantPlayer />}
+      {/* <VariantPlayer /> */}
+
       <FronxInteriorAndOther />
-      <OnRoadPrice />
-      {width > 425 ? <Carousel /> : <MobileCarousel />}
+      <OnRoadPrice title={'FRONX'} />
+      {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
+      <div className='hidden sm:block'>
+        <div className='flex h-[60vh] bg-white gap-1 px-4 pt-1'>
+          <div className="w-1/5 duration-500 rounded-lg border hover:w-2/3  bg-no-repeat bg-cover bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-10C_Engine.webp')] ">
+            <div className='flex flex-col justify-end h-full p-4 text-white '>
+              <img
+                src='https://nexaprod2.azureedge.net/-/media/feature/nexawebsitecarbrand/flash/performance/boosterjet-logo-png.png?modified=20230423101830'
+                alt=''
+                className=' w-40'
+                srcset=''
+              />
+              <span className='font-semibold text-lg'>
+                1.0L TURBO BOOSTERJET ENGINE
+              </span>
+              <span className='font-thin tracking-wider'>
+                Perfect fusion of power and innovation, it accelerates from 0 to
+                60 in just 5.3 seconds.
+              </span>
+            </div>
+          </div>
+          <div className="w-1/5 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-12k_Engine.webp')] ">
+            <div className='flex flex-col justify-end h-full p-4 text-white '>
+              <span className='font-semibold text-lg'>
+                ADVANCED 1.2L K-SERIES DUAL JET, DUAL VVT ENGINE
+              </span>
+              <span className='font-thin tracking-wider'>
+                Forged for new age performance.
+              </span>
+            </div>
+          </div>
+          <div className="w-1/5 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-Smart_Hybird.webp')] ">
+            <div className='flex flex-col justify-end h-full p-4 text-white '>
+              <span className='font-semibold text-lg'>
+                SMART HYBRID TECHNOLOGY
+              </span>
+              <span className='font-thin tracking-wider'>
+                Where smartness and efficiency take shape.
+              </span>
+            </div>
+          </div>
+          <div className="w-1/5 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AGS.webp')] ">
+            <div className='flex flex-col justify-end h-full p-4 text-white '>
+              <span className='font-semibold text-lg'>
+                6-SPEED AUTOMATIC TRANSMISSION WITH PADDLE SHIFTERS
+              </span>
+              <span className='font-thin tracking-wider'>
+                Go through the gears in a new way.
+              </span>
+            </div>
+          </div>
+          <div className="w-1/5 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AMT.webp')] ">
+            <div className='flex flex-col justify-end h-full p-4 text-white '>
+              <span className='font-semibold text-lg'>AUTO GEAR SHIFT</span>
+              <span className='font-thin tracking-wider'>
+                Shaped for comfort and convenience.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className=' sm:hidden'>
+        <MobileCarousel />
+      </div>
     </>
   );
 };
@@ -92,6 +157,7 @@ function FronxInteriorAndOther() {
         is uniquely craftedto satisfy the modren sensibilities of NEXA
         customers.
       </p>
+      <Variant />
 
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/colors/flesh-color-bg.webp')] bg-cover bg-no-repeat">
         <div className='max-w-4xl mx-auto'>
@@ -398,16 +464,93 @@ function FronxInteriorAndOther() {
   );
 }
 
+const Variant = () => {
+  const [price, setPrice] = useState('7,46,500');
+  return (
+    <div className='bg-black py-8'>
+      <div className='container mx-auto'>
+        <div className='grid md:grid-cols-3 md:space-y-0 space-y-3'>
+          <div className='space-y-3 mx-auto md:mx-0'>
+            <p className='uppercase text-gray-300'>select car Variant</p>
+            <select
+              name='model'
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              className='block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
+            >
+              <option value='7,46,500'>SIGMA 5MT</option>
+              <option value='8,32,500'>DELTA 5MT</option>
+              <option value='8,87,500'>DELTA AGS</option>
+              <option value='8,72,500'>DELTA+ 5MT</option>
+              <option value='9,27,500'>DELTA+ AGS</option>
+
+              <option value='9,72,500'>DELTA+ 5MT (SMART HYBRID)</option>
+              <option value='10,55,500'>ZETA 5MT (SMART HYBRID) </option>
+              <option value='12,05,500'>ZETA 6AT (SMART HYBRID)</option>
+              <option value='11,47,500'>ALPHA 5MT (SMART HYBRID)</option>
+              <option value='12,97,500'>ALPHA 6AT (SMART HYBRID)</option>
+              <option value='11,63,500'>ALPHA DT MT (SMART HYBRID)</option>
+              <option value='13,13,500'>ALPHA DT AT (SMART HYBRID)</option>
+            </select>
+          </div>
+          <div className='text-center text-gray-200'>
+            <p className='text-2xl font-bold'>₹ {price}*</p>
+            <p className='tracking-wide text-xl'>Ex-Showroom Price</p>
+            <p className='uppercase text-gray-400 font-bold'>Hyderabad</p>
+            <div className='text-red-200 text-xs font-light'>
+              <sup>*</sup>Alpha+ & Zeta+ are applicable only for Direct
+              Injection engine with Smart Hybrid
+            </div>
+          </div>
+          <div className='mx-auto'>
+            <p className='text-gray-100 mb-6 text-center'>
+              You might have pre-approved loan offers
+            </p>
+            <Link
+              to='/maruti-car-finance'
+              className='py-2 px-4 bg-white rounded shadow uppercase tracking-wide'
+            >
+              Check for loan offers
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const VariantPlayer = () => {
   return (
     <div className=''>
-      <video class='w-screen' autoplay='autoplay' loop>
+      <img
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-banner.webp'
+        alt=''
+      />
+      {/* <video class='w-screen' autoplay='autoplay' loop>
         <source
           class='w-30 h-30'
           src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/video/NEXA+FRONX++05SEC++110123+C2C+MUTE.mp4'
           type='video/mp4'
         />
-      </video>
+      </video> */}
+    </div>
+  );
+};
+
+const MobileVariantPlayer = () => {
+  return (
+    <div className=''>
+      <img
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner-without-book-now.webp'
+        alt=''
+      />
+      {/* <video class='w-screen' autoplay='autoplay' loop>
+        <source
+          class='w-30 h-30'
+          src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/video/NEXA+FRONX++05SEC++110123+C2C+MUTE.mp4'
+          type='video/mp4'
+        />
+      </video> */}
     </div>
   );
 };

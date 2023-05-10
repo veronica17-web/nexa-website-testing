@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -8,13 +8,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import Helmet from 'react-helmet';
-import { Autoplay, Navigation, Pagination } from 'swiper';
+// import { Autoplay, Navigation, Pagination } from 'swiper';
 import OnRoadPrice from '../../components/utils/OnRoadPrice';
 import { MdOutlineFileDownload } from 'react-icons/md';
-import Carousel from '../../components/Jimny/Extras/Carousel';
+// import Carousel from '../../components/Jimny/Extras/Carousel';
 import MobileCarousel from '../../components/Jimny/Extras/MobileCarousel';
 
-const width = window.innerWidth;
+// const width = window.innerWidth;
 
 const Jimny = () => {
   return (
@@ -39,7 +39,56 @@ const Jimny = () => {
       <VariantPlayer />
       <JimnyInteriorAndOther />
       <OnRoadPrice />
-      {width > 425 ? <Carousel /> : <MobileCarousel />}
+      {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
+      <div className='hidden sm:block'>
+        <div className='flex h-[60vh] bg-white gap-1 px-2 pt-1'>
+          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3  bg-no-repeat bg-cover bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/1-811x629-AR_SN_JIMNY_HILL+DESCENT+CONTROL+SHOT_V1+copy.webp')] ">
+            <div className='flex flex-col justify-end h-full p-4 text-white '>
+              
+              <span className='font-semibold text-lg'>
+              HILL HOLD ASSIST
+              </span>
+              <span className='font-thin tracking-wider'>
+              Climb like a mountain goat on the steepest roads
+              </span>
+            </div>
+          </div>
+          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/2-811x629-AR_SN_JIMNY_HILL+DESCENT+CONTROL+SHOT_V1.webp')] ">
+            <div className='flex flex-col justify-end h-full p-4 text-white '>
+              <span className='font-semibold text-lg'>
+              HILL DESCENT CONTROL
+              </span>
+              <span className='font-thin tracking-wider'>
+              Take control with the push of a button
+              </span>
+            </div>
+          </div>
+          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/3-Jimmy-811x629-1.webp')] ">
+            <div className='flex flex-col justify-end h-full p-4 text-white '>
+              <span className='font-semibold text-lg'>
+              BRAKE LSD
+              </span>
+              <span className='font-thin tracking-wider'>
+              Be the unstoppable force on the most stubborn terrain
+              </span>
+            </div>
+          </div>
+          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/4-811x629-AR_AB_BP_JIMNY_6_AIRBAG_SHOT_03_04.webp')] ">
+            <div className='flex flex-col justify-end h-full p-4 text-white '>
+              <span className='font-semibold text-lg'>
+              6 AIRBAGS
+              </span>
+              <span className='font-thin tracking-wider'>
+              The thrill of the ride is only possible with safety on your side
+              </span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div className='sm:hidden'>
+      <MobileCarousel />
+      </div>
       {/* <Carousel /> */}
     </>
   );

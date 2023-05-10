@@ -32,19 +32,19 @@ function NewsLetter() {
 const Testimonials = () => {
   return (
     <div className='container mx-auto py-16 space-y-4'>
-      <p className='uppercase font-bold text-4xl text-center'>Testimonials</p>
+      <p className='uppercase font-bold text-5xl text-center'>Testimonials</p>
       <p className='uppercase text-center tracking-wider font-bold'>
-        <span className='text-2xl'>W</span>hat{' '}
-        <span className='text-2xl'>O</span>ur{' '}
-        <span className='text-2xl'>C</span>ustomers{' '}
-        <span className='text-2xl'>S</span>ay
+        <span className='text-xl'>W</span>hat <span className='text-xl'>O</span>
+        ur <span className='text-xl'>C</span>ustomers{' '}
+        <span className='text-xl'>S</span>ay
       </p>
       <p className='bg-black h-1 w-40 mx-auto'></p>
       <p className='max-w-[940px] text-gray-600 text-center mx-auto text-lg'>
-        We Believe that transparency and integrity are important. at saboo RKS
-        We employ a sophisticated process to ensure that every review is written
-        by a real person, reflecting their real-life experience.
+        At Saboo RKS, we have implemented an advanced process that guarantees
+        all reviews are authored by genuine individuals, accurately reflecting
+        their real-life experiences.
       </p>
+      {/* <p>We believe that transparency and integrity are important.</p> */}
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-2'>
         <div className='shadow-lg rounded-md py-8 border'>
           <img
@@ -123,19 +123,20 @@ const Outlets = () => {
   return (
     <div className='container mx-auto py-16 space-y-4 px-5 sm:px-0'>
       <p className='uppercase font-bold text-4xl text-center'>Outlets</p>
-      <p className='uppercase text-center tracking-wider font-bold'>
+      {/* <p className='uppercase text-center tracking-wider font-bold'>
         <span className='text-2xl'>W</span>hat happening at{' '}
         <span className='text-2xl'>S</span>aboo{' '}
         <span className='text-2xl'>NEXA</span>
-      </p>
+      </p> */}
       <p className='bg-black h-1 w-60 mx-auto'></p>
       <p className='max-w-[940px] text-gray-600 text-center mx-auto text-lg'>
-        To provide you with the best Nexa Experience we are located in 2 major
-        hotspots of Hyderabad
+        To ensure that you receive the ultimate Nexa experience, we have
+        strategically positioned ourselves in three prominent hotspots
+        throughout Hyderabad
       </p>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 '>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-4 '>
         <div className='bg-gray-900 text-gray-100 p-10 space-y-2 rounded-md shadow-2xl'>
-          <p>Nexa Lumbini</p>
+          <p className='text-2xl'>Nexa Lumbini</p>
           <p>
             5-9-22/1/B, Shapoorji Towers, Shapoorwadi, Adarsh Nagar, Hyderabad,
             Telangana 500004.
@@ -144,7 +145,10 @@ const Outlets = () => {
             <a href='tel:9848898488' className='flex items-center'>
               <RiPhoneFill className='mr-2' /> +91 98488 98488
             </a>
-            <a href='mailto:info@saboomaruti.in' className='flex items-center'>
+            <a
+              href='mailto:info@saboomaruti.in'
+              className='flex items-center italic'
+            >
               <FaEnvelope className='mr-2' /> info@saboomaruti.in
             </a>
             <a
@@ -156,7 +160,7 @@ const Outlets = () => {
           </div>
         </div>
         <div className='bg-gray-900 text-gray-100 p-10 space-y-2 rounded-md shadow-2xl'>
-          <p>Nexa Jubilee</p>
+          <p className='text-2xl'>Nexa Jubilee</p>
           <p>
             1-65/5, 6,15 & 16 KKR Square, Phase I Kavuri Hills Madhapur, Post,
             Jubilee Hills, Hyderabad, Telangana 500033.
@@ -165,11 +169,40 @@ const Outlets = () => {
             <a href='tel:9848898488' className='flex items-center'>
               <RiPhoneFill className='mr-2' /> +91 98488 98488
             </a>
-            <a href='mailto:info@saboomaruti.in' className='flex items-center'>
+            <a
+              href='mailto:info@saboomaruti.in'
+              className='flex items-center italic'
+            >
               <FaEnvelope className='mr-2' /> info@saboomaruti.in
             </a>
             <a
               href='https://www.google.com/maps/place/NEXA/@17.439431,78.398485,14z/data=!4m5!3m4!1s0x0:0x1cb759ff5f828d3!8m2!3d17.4394309!4d78.398485?hl=en'
+              className='flex items-center'
+            >
+              <FaArrowRight className='mr-2' /> Direction
+            </a>
+          </div>
+        </div>
+        <div className='bg-gray-900 text-gray-100 p-10 space-y-2 rounded-md shadow-2xl'>
+          <p className='text-2xl'>Nexa Hafeezpet</p>
+          <p>
+            Gachibowli - Miyapur Rd, Janapriya Nagar, Hafeezpet, Hyderabad,
+            Telangana 500049
+          </p>
+          <br></br>
+
+          <div className='flex flex-col space-y-2'>
+            <a href='tel:9848898488' className='flex items-center'>
+              <RiPhoneFill className='mr-2' /> +91 98488 98488
+            </a>
+            <a
+              href='mailto:info@saboomaruti.in'
+              className='flex items-center italic'
+            >
+              <FaEnvelope className='mr-2' /> info@saboomaruti.in
+            </a>
+            <a
+              href='https://goo.gl/maps/N7JdtNdtcUhvM6X48'
               className='flex items-center'
             >
               <FaArrowRight className='mr-2' /> Direction

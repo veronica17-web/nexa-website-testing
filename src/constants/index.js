@@ -1,6 +1,10 @@
 //same for home screen and offers screen
 export const sliders = [
   {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-banner.webp',
+    alt: 'holi-banner-march-2023',
+  },
+  {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/website+Maruti+Suzuki+Service+Workshop+Hafeezpet.webp',
     alt: 'NEW HAFEEZPET BANNER 2023',
   },
@@ -16,10 +20,10 @@ export const sliders = [
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-web-banner-nov-1.webp',
     alt: 'new-nov-scng-banner',
   },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-new-banner.webp',
-    alt: 'nexa-hafeezpet-new-banner',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-new-banner.webp',
+  //   alt: 'nexa-hafeezpet-new-banner',
+  // },
 
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/new-nexa-web-banner.webp',
@@ -42,6 +46,10 @@ export const sliders = [
 
 //same for home screen and offers screen
 export const mobileSliders = [
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner.webp',
+    alt: 'NEW fronx mobile banner',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Mobile+Maruti+Suzuki+Service+Workshop+Hafeezpet.webp',
     alt: 'NEW-HAFEEZPET BANNER 2023',
@@ -87,13 +95,17 @@ export const mobileSliders = [
 
 export const bookAservice = [
   {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Maruti+Suzuki+Nexa+Summer+Service.webp',
+    alt: 'april 2023 service banner',
+  },
+  {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/website+Maruti+Suzuki+Service+Workshop+Hafeezpet.webp',
     alt: 'NEW HAFEEZPET BANNER',
   },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-banner.webp',
-    alt: 'banner-2',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-banner.webp',
+  //   alt: 'banner-2',
+  // },
 ];
 
 export const products = [
@@ -158,7 +170,7 @@ export const products = [
     name: 'Grand Vitara',
     price: '1045000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/Grand-Vitara-CNG.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/thumbnails/gt-thumbnail-cng.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/grand_vitara.pdf',
     explore: '/grand-vitara-on-road-price-in-hyderabad',
@@ -310,39 +322,40 @@ export const offer_products = [
   {
     name: 'Baleno (2023)',
     // emi: '10000*/L',
-    price: '₹ 5,000 /-',
+    price: '₹ 20,000 /-',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/baleno_new.png',
     explore: '/nexa-ciaz-on-road-price-in-hyderabad',
   },
   {
-    name: 'ignis (2023)',
-    price: '₹ 45,000 /-',
+    name: 'ignis',
+    price: '₹ 49,000 /-',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp',
     explore: '/nexa-ignis-on-road-price-in-hyderabad',
   },
+  // {
+  //   name: 'ignis (AGS)',
+  //   price: '₹ 34,000 /-',
+  //   logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp',
+  //   explore: '/nexa-ignis-on-road-price-in-hyderabad',
+  // },
   {
-    name: 'Ciaz (2023)',
-    price: '₹ 40,000 /-',
+    name: 'Ciaz',
+    price: '₹ 38,000 /-',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-ciaz.webp',
     explore: '/nexa-ciaz-on-road-price-in-hyderabad',
   },
-  {
-    name: 'ignis (2022)',
-    price: '₹ 55,000 /-',
-    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp',
-    explore: '/nexa-ignis-on-road-price-in-hyderabad',
-  },
-  {
-    name: 'Ciaz (2022)',
-    price: '₹ 1,00,000 /-',
-    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-ciaz.webp',
-    explore: '/nexa-ciaz-on-road-price-in-hyderabad',
-  },
+
+  // {
+  //   name: 'Ciaz (2022)',
+  //   price: '₹ 1,00,000 /-',
+  //   logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp',
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-ciaz.webp',
+  //   explore: '/nexa-ciaz-on-road-price-in-hyderabad',
+  // },
   // {
   //   name: 'Grand Vitara',
   //   emi: '2099*/L',

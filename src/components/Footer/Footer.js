@@ -48,15 +48,15 @@ const navigation = {
   ],
   outlets: [
     {
-      name: 'View all Showrooms',
+      name: 'Showrooms',
       to: '/maruti-nexa-showroom-outlets-in-hyderabad',
     },
     {
-      name: 'View all Workshops',
+      name: 'Workshops',
       to: '/maruti-nexa-workshop-outlets-in-hyderabad',
     },
     {
-      name: 'View all Truevalue',
+      name: 'Truevalue',
       to: '/maruti-nexa-truevalue-outlets-in-hyderabad',
     },
   ],

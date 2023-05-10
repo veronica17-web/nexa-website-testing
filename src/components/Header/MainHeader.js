@@ -17,7 +17,7 @@ const navigation = {
           imageSrc:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/HeaderMenu-167x87.webp',
           imageAlt: 'Suzuki Fronx',
-          price: 'Coming Soon',
+          price: '₹ 7,46,500*',
         },
         {
           name: 'Functional Beauty Crafted for Purity of Function.',
@@ -85,7 +85,7 @@ const navigation = {
   ],
   pages: [
     { name: 'Home', to: '/' },
-    { name: 'About us', to: '/about' },
+    { name: 'About Us', to: '/about' },
   ],
   servicepages: [
     {
@@ -118,6 +118,11 @@ const navigation = {
   ],
   more: [
     {
+      name: 'CNG',
+      to: '/cng',
+    },
+    
+    {
       name: 'Careers',
       to: '/',
     },
@@ -142,8 +147,8 @@ const navigation = {
       to: '/compare',
     },
     {
-      name: 'Metaverse',
-      to: '/compare',
+      name: 'Blog',
+      to: '/maruti-nexa-latest-news',
     },
   ],
 };
@@ -227,6 +232,7 @@ function MainHeader() {
                         }
                       >
                         {category.name}
+                      
                       </Tab>
                     ))}
                   </Tab.List>

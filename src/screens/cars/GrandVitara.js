@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import OnRoadPrice from '../../components/utils/OnRoadPrice';
 import { MdOutlineFileDownload } from 'react-icons/md';
 import Header from '../../components/Header/Header';
-import ImageViewer from '../../components/Vitara/ImageViewer';
+// import ImageViewer from '../../components/Vitara/ImageViewer';
 import Helmet from 'react-helmet';
 import Features from '../../components/Vitara/Features';
-import Carousel from '../../components/Vitara/Extras/Carousel';
+// import Carousel from '../../components/Vitara/Extras/Carousel';
 import MobileCarousel from '../../components/Vitara/Extras/MobileCarousel';
 
-const width = window.innerWidth;
+// const width = window.innerWidth;
 
 function GrandVitara() {
   const [tabsColors, setTabsColors] = useState(1);
@@ -378,7 +378,80 @@ function GrandVitara() {
       </div>
       <Variant />
 
-      {width > 425 ? <Carousel /> : <MobileCarousel />}
+      {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
+      <div className='hidden sm:block'>
+        <div className='flex h-[60vh] bg-white gap-1 px-2 my-1'>
+          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3  bg-no-repeat bg-cover bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-27-IEH.webp')] ">
+            <div className='flex flex-col justify-end h-full p-4 text-white '>
+              <span className='font-semibold text-lg'>
+                INTELLIGENT ELECTRIC HYBRID
+              </span>
+              <span className='font-thin tracking-wider mb-2'>
+                Rules with revolutionary technology
+              </span>
+              <div>
+                <Link to='/grand-vitara-features-intelligent-electric-hybrid'>
+                <button className='text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white'>
+                    KNOW MORE
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-26-Allgrip.webp')] ">
+            <div className='flex flex-col justify-end h-full p-4 text-white '>
+              <span className='font-semibold text-lg'>ALLGRIP</span>
+              <span className='font-thin tracking-wider mb-2'>
+                Rules with a firm grip
+              </span>
+              <div>
+                <Link to='/grand-vitara-allgrip'>
+                <button className='text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white'>
+                    KNOW MORE
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-32-AT.webp')] ">
+            <div className='flex flex-col justify-end h-full p-4 text-white '>
+              <span className='font-semibold text-lg'>
+                6-SPEED AUTOMATIC TRANSMISSION
+              </span>
+              <span className='font-thin tracking-wider mb-2'>
+                Rules with utmost comfort
+              </span>
+              <div>
+                <Link to='/grand-vitara-6-speed-automatic-transmission-price'>
+                <button className='text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white'>
+                    KNOW MORE
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-33-MT.webp')] ">
+            <div className='flex flex-col justify-end h-full p-4 text-white '>
+              <span className='font-semibold text-lg'>
+                5-SPEED MANUAL TRANSMISSION
+              </span>
+              <span className='font-thin tracking-wider mb-2'>
+                Rules with a powerful persona
+              </span>
+              <div>
+                <Link to='/grand-vitara-5-speed-manual-transmission-price'>
+                  <button className='text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white'>
+                    KNOW MORE
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='sm:hidden'>
+        <MobileCarousel />
+      </div>
 
       {/* <ImageViewer /> */}
       <OnRoadPrice title={'Grand Vitara'} />
@@ -479,84 +552,84 @@ const Variant = () => {
   );
 };
 
-const ImageOptions = () => {
-  return (
-    <div className='container mx-auto px-5 md:px-0'>
-      <div className='grid shadow-lg sm:grid-cols-2 p-8 '>
-        <div>
-          <img
-            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/vitara-exterior-1.webp'
-            alt='saboo-nexa-ignis-exterior-front-grill'
-            className='w-full'
-          />
-        </div>
-        <div className='my-auto mx-auto space-y-3 p-8'>
-          <p className='text-3xl font-bold '>Sporty Rear</p>
-          <p className='h-1 w-20 bg-black rounded-full '></p>
-          <p>
-            The New Ignis is equipped with a Striking Rear Spoiler and Roof
-            Rails, which enhances the Sporty Look.
-          </p>
-        </div>
-      </div>
+// const ImageOptions = () => {
+//   return (
+//     <div className='container mx-auto px-5 md:px-0'>
+//       <div className='grid shadow-lg sm:grid-cols-2 p-8 '>
+//         <div>
+//           <img
+//             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/vitara-exterior-1.webp'
+//             alt='saboo-nexa-ignis-exterior-front-grill'
+//             className='w-full'
+//           />
+//         </div>
+//         <div className='my-auto mx-auto space-y-3 p-8'>
+//           <p className='text-3xl font-bold '>Sporty Rear</p>
+//           <p className='h-1 w-20 bg-black rounded-full '></p>
+//           <p>
+//             The New Ignis is equipped with a Striking Rear Spoiler and Roof
+//             Rails, which enhances the Sporty Look.
+//           </p>
+//         </div>
+//       </div>
 
-      <div className='grid shadow-lg sm:grid-cols-2 p-8'>
-        <div className='my-auto mx-auto space-y-3 p-5'>
-          <p className='text-3xl font-bold'>Imposing Chrome Grille</p>
-          <p className='h-1 w-20 bg-black rounded-full '></p>
-          <p>
-            Taking the tough look up a notch, the New Ignis is equipped with an
-            Imposing Chrome Grille which leaves a lasting impression.
-          </p>
-        </div>
-        <div>
-          <img
-            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/exterior/saboo-nexa-ignis-exterior-back.webp'
-            alt='saboo-nexa-ignis-exterior-back'
-            className='w-full'
-          />
-        </div>
-      </div>
+//       <div className='grid shadow-lg sm:grid-cols-2 p-8'>
+//         <div className='my-auto mx-auto space-y-3 p-5'>
+//           <p className='text-3xl font-bold'>Imposing Chrome Grille</p>
+//           <p className='h-1 w-20 bg-black rounded-full '></p>
+//           <p>
+//             Taking the tough look up a notch, the New Ignis is equipped with an
+//             Imposing Chrome Grille which leaves a lasting impression.
+//           </p>
+//         </div>
+//         <div>
+//           <img
+//             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/exterior/saboo-nexa-ignis-exterior-back.webp'
+//             alt='saboo-nexa-ignis-exterior-back'
+//             className='w-full'
+//           />
+//         </div>
+//       </div>
 
-      <div className='grid shadow-lg sm:grid-cols-2 p-8'>
-        <div>
-          <img
-            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/exterior/saboo-nexa-ignis-exterior-side-shot.webp'
-            alt='saboo-nexa-ignis-exterior-side-shot'
-            className='w-full'
-          />
-        </div>
-        <div className='my-auto mx-auto space-y-3 p-8'>
-          <p className='text-3xl font-bold'>High SUV-like Stance</p>
-          <p className='h-1 w-20 bg-black rounded-full '></p>
-          <p>
-            The New Ignis has a high SUV-like Stance which makes it easier to
-            get in and off, coupled with a higher seating that allows a great
-            road visibility.
-          </p>
-        </div>
-      </div>
+//       <div className='grid shadow-lg sm:grid-cols-2 p-8'>
+//         <div>
+//           <img
+//             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/exterior/saboo-nexa-ignis-exterior-side-shot.webp'
+//             alt='saboo-nexa-ignis-exterior-side-shot'
+//             className='w-full'
+//           />
+//         </div>
+//         <div className='my-auto mx-auto space-y-3 p-8'>
+//           <p className='text-3xl font-bold'>High SUV-like Stance</p>
+//           <p className='h-1 w-20 bg-black rounded-full '></p>
+//           <p>
+//             The New Ignis has a high SUV-like Stance which makes it easier to
+//             get in and off, coupled with a higher seating that allows a great
+//             road visibility.
+//           </p>
+//         </div>
+//       </div>
 
-      <div className='grid shadow-lg sm:grid-cols-2 p-8'>
-        <div className='my-auto mx-auto space-y-3'>
-          <p className='text-3xl font-bold'>Toughened Exterior</p>
-          <p className='h-1 w-20 bg-black rounded-full '></p>
-          <p>
-            Adding to the toughness, the New Ignis comes with stunning 15”
-            All-Black Alloy Wheels, All-Around Cladding and Sturdy New Front &
-            Rear Skid Plates.
-          </p>
-        </div>
-        <div>
-          <img
-            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/exterior/saboo-nexa-ignis-exterior-Toughened.webp'
-            alt='saboo-nexa-ignis-exterior-Toughened'
-            className='w-full'
-          />
-        </div>
-      </div>
-    </div>
-  );
-};
+//       <div className='grid shadow-lg sm:grid-cols-2 p-8'>
+//         <div className='my-auto mx-auto space-y-3'>
+//           <p className='text-3xl font-bold'>Toughened Exterior</p>
+//           <p className='h-1 w-20 bg-black rounded-full '></p>
+//           <p>
+//             Adding to the toughness, the New Ignis comes with stunning 15”
+//             All-Black Alloy Wheels, All-Around Cladding and Sturdy New Front &
+//             Rear Skid Plates.
+//           </p>
+//         </div>
+//         <div>
+//           <img
+//             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/exterior/saboo-nexa-ignis-exterior-Toughened.webp'
+//             alt='saboo-nexa-ignis-exterior-Toughened'
+//             className='w-full'
+//           />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 export default GrandVitara;

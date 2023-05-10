@@ -36,6 +36,7 @@ import { CgSpinner } from "react-icons/cg";
 import PrivacyPolicy from "./screens/more/PrivacyPolicy";
 import NexaJubilee from "./screens/more/NexaJubilee";
 import NexaLumbini from "./screens/more/NexaLumbini";
+import NexaCNG from "./screens/more/NexaCNG";
 
 function App2() {
   const [open, setOpen] = useState(false);
@@ -303,6 +304,7 @@ function App2() {
 
         {/* more screen */}
         <Route path="/testimonials" element={<Testimonial />} />
+        <Route path="/cng" element={<NexaCNG />} />
         <Route path="/awards" element={<Awards />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/accessories" element={<Accessories />} />

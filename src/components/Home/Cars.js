@@ -16,9 +16,9 @@ function Cars() {
             What's happening at NEXA
           </p>
           <p className='text-lg font-light'>
-            Saboo RKS is the leading Nexa dealer in Hyderabad. Built with
-            innovations that stand out with a whole new world of enhanced
-            driving experience.
+            Saboo RKS, the premier Nexa dealer in Hyderabad, prides itself on
+            innovative solutions that revolutionize the driving experience,
+            bringing you a world of unparalleled excellence on the road.
           </p>
         </div>
         <div>
@@ -74,7 +74,7 @@ const VehicleProducts = () => {
             </div>
             <div className='flex-auto bg-white'>
               <div>
-                <div className='flex items-center justify-between p-5 '>
+                <div className='flex items-center justify-between p-5 rounded'>
                   <img src={item.logo} className='w-32' alt={item.name} />
                   <div className='flex items-center font-semibold'>
                     <BsArrowDown />
@@ -83,16 +83,16 @@ const VehicleProducts = () => {
                     </a>
                   </div>
                 </div>
-                <div className='flex items-center justify-center space-x-3 pb-5'>
+                <div className='flex items-center justify-center space-x-3 pb-5 '>
                   <Link
                     to={item.explore}
-                    className='bg-black hover:bg-white hover:border-black hover:border hover:text-black duration-300 ease-in text-white p-2 text-sm uppercase w-full max-w-[44%] text-center'
+                    className='bg-black hover:bg-white hover:border-black hover:border hover:text-black duration-300 ease-in text-white p-2 text-sm uppercase w-full max-w-[44%] text-center rounded'
                   >
                     Explore
                   </Link>
                   <button
                     onClick={() => setOpen(true)}
-                    className='border border-black  p-2 max-w-[44%] w-full text-center text-sm uppercase'
+                    className='border border-black  p-2 max-w-[44%] w-full text-center text-sm uppercase rounded animate-pulse'
                   >
                     Book Now
                   </button>
@@ -101,6 +101,13 @@ const VehicleProducts = () => {
             </div>
           </div>
         ))}
+        <div className='sm:col-span-2'>
+          <img
+            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/sabo-nexa-tile-banner.webp'
+            className='lg:mx-auto  lg:h-[400px] lg:w-full'
+            alt='banner'
+          />
+        </div>
       </div>
       <EnquiryPopup
         open={open}
