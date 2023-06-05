@@ -6,7 +6,7 @@ function ServiceFinanceInsu() {
     <div className='mx-auto container space-y-5 px-5 lg:px-0'>
       <Link to='/'>
         <img
-          src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/home-page-banners/Service+Desktop.webp'
+          src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp'
           alt='service center'
           className='max-w-full w-full'
         />

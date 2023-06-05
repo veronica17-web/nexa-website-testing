@@ -51,8 +51,8 @@ export const mobileSliders = [
     alt: 'NEW fronx mobile banner',
   },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Mobile+Maruti+Suzuki+Service+Workshop+Hafeezpet.webp',
-    alt: 'NEW-HAFEEZPET BANNER 2023',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Nexa+Service+mobile+banner.webp',
+    alt: 'NEW BANNER april 2023',
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-mobilr.webp',

@@ -18,7 +18,7 @@ const BlogPage = () => {
         </p>
       </div>
       <div className='p-4'>
-        <p className='text-center text-red-600 font-bold text-2xl'>
+        <p className='text-center text-red-600 font-bold text-4xl'>
           News and Social Media Articles
         </p>
         <p className='text-center mt-2 mb-14'>
@@ -33,7 +33,7 @@ const BlogPage = () => {
             >
               <img src={blog.img} alt={blog.id} />
               <div className='p-5'>
-                <p className='text-blue-700 font-semibold uppercase'>
+                <p className='text-blue-700 font-semibold uppercase mb-4 tracking-wide'>
                   {blog.title}
                 </p>
                 <a

@@ -49,7 +49,7 @@ const MobileCarouselforHomePage = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/book-online-maruti-nexa-car-service/'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/homepage-mobile-carousel/Service+Mobile+800x800.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Nexa+Service+mobile+Hafeezpet.webp' />
             </Link>
             <figcaption class='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>

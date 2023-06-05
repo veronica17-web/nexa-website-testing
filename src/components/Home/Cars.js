@@ -103,7 +103,7 @@ const VehicleProducts = () => {
         ))}
         <div className='sm:col-span-2'>
           <img
-            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/sabo-nexa-tile-banner.webp'
+            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+banner.webp'
             className='lg:mx-auto  lg:h-[400px] lg:w-full'
             alt='banner'
           />

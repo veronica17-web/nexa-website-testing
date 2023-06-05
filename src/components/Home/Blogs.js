@@ -17,7 +17,10 @@ function Blogs() {
         {/* <p>Saboo Nexa is a place which is created to inspire
           the new world of enhanced driving experience.</p> */}
         <br></br>
-        <Link to='/' className='text-center text-blue-900'>
+        <Link
+          to='/maruti-nexa-latest-news'
+          className='text-center text-blue-900'
+        >
           <p>Read More</p>
         </Link>
         {/* <div className="grid lg:grid-cols-2 gap-4 pt-7">
@@ -42,28 +45,122 @@ function Blogs() {
       </div> */}
         <div className='grid lg:grid-cols-3 gap-2 justify-center sm:ml-4 p-10'>
           <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+            <div href='#'>
+              <img
+                class='rounded-t-lg'
+                src='https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230522015734_Jimny.jpg&w=700&q=90&c=1'
+                alt=''
+              />
+            </div>
+            <div class='p-5'>
+              <div href='#'>
+                <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+                  Maruti Suzuki Jimny launch on June 7
+                </h5>
+              </div>
+              <p className='text-xs pb-2 text-gray-500'>22 May 2023</p>
+              <p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+                India will be the first market where the 5-door Jimny will go on
+                sale, and will also be exported from here.
+              </p>
+              <br></br>
+              <br></br>
+              <a
+                href={
+                  'https://www.autocarindia.com/car-news/maruti-suzuki-jimny-launch-on-june-7-428242'
+                }
+                target='_blank'
+                rel='noopener noreferrer'
+                class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              >
+                Read More
+                <svg
+                  aria-hidden='true'
+                  class='ml-2 -mr-1 w-4 h-4'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    fill-rule='evenodd'
+                    d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
+                    clip-rule='evenodd'
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+            <div href='#'>
+              <img
+                class='rounded-t-lg'
+                src='https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230521121524_Jimny_5_door.jpg&w=700&q=90&c=1'
+                alt=''
+              />
+            </div>
+            <div class='p-5'>
+              <div href='#'>
+                <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+                  Maruti Suzuki Jimny 5-door fuel efficiency figures revealed
+                </h5>
+              </div>
+              <p className='text-xs pb-2 text-gray-500'>21 May 2023</p>
+              <p class='mb-3 tracking-normal font-normal text-gray-700 dark:text-gray-400'>
+                Ahead of its launch in June, the Maruti Suzuki Jimny has amassed
+                around 30,000 bookings.
+              </p>
+              <br></br>
+              <br></br>
+              <br></br>
+
+              <a
+                href={
+                  'https://www.autocarindia.com/car-news/maruti-suzuki-jimny-5-door-fuel-efficiency-figures-revealed-428235'
+                }
+                target='_blank'
+                rel='noopener noreferrer'
+                class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              >
+                Read More
+                <svg
+                  aria-hidden='true'
+                  class='ml-2 -mr-1 w-4 h-4'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    fill-rule='evenodd'
+                    d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
+                    clip-rule='evenodd'
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
             <Link to='#'>
               <img
                 class='rounded-t-lg'
-                src='https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230427114925_Untitled.png&w=700&q=90&c=1'
+                src='https://cdni.autocarindia.com/ExtraImages/20200103120157_Shashank-Srivastava-Maruti-.jpg'
                 alt=''
               />
             </Link>
             <div class='p-5'>
               <div href='#'>
                 <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                  Maruti Suzuki confirms premium MPV; launch by July 2023
+                  Looking forward to becoming number one: Shashank Srivastava
                 </h5>
               </div>
-              <p className='text-xs pb-2 text-gray-500'>27 Apr 2023</p>
-              <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
-                The all-new Maruti MPV will be based on the Toyota Innova
-                Hycross; will sit at the top of the model range.
+              <p className='text-xs pb-2 text-gray-500'>22 May 2023</p>
+              <p className='mb-3 font-normal italic text-gray-700 dark:text-gray-400'>
+                "So, while we have the Brezza, but we also have the Fronx now
+                which is for the urban, sophisticated..."
               </p>
               <br></br>
 
               <a
-                href='https://www.autocarindia.com/car-news/maruti-suzuki-confirms-premium-mpv-india-launch-by-july-2022-428004'
+                href='https://economictimes.indiatimes.com/markets/expert-view/looking-forward-to-becoming-number-one-and-dominating-the-suv-space-shashank-srivastava-maruti-suzuki/articleshow/100412215.cms'
                 target='_blank'
                 class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
               >
@@ -84,102 +181,6 @@ function Blogs() {
               </a>
             </div>
           </div>
-          <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
-            <div href='#'>
-              <img
-                class='rounded-t-lg'
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimmy-370x252-withbg.webp'
-                alt=''
-              />
-            </div>
-            <div class='p-5'>
-              <div href='#'>
-                <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                  Maruti Suzuki to expand its portfolio with new SUVs and
-                  facelifts.
-                </h5>
-              </div>
-              <p className='text-xs pb-2 text-gray-500'>28 Apr 2023</p>
-              <p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
-                Maruti Suzuki is set to make a major impact in the Indian market
-                with plans to introduce new SUV models and updated versions of
-                existing vehicles over the next two years.
-              </p>
-              <br></br>
-
-              <a
-                href={
-                  'https://www.livemint.com/auto-news/maruti-suzuki-to-expand-its-portfolio-with-new-suvs-and-facelifts-here-are-expected-launches-in-india-by-2023-2024-11682653616200.html'
-                }
-                target='_blank'
-                rel='noopener noreferrer'
-                class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-              >
-                Read More
-                <svg
-                  aria-hidden='true'
-                  class='ml-2 -mr-1 w-4 h-4'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    fill-rule='evenodd'
-                    d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-                    clip-rule='evenodd'
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
-            <div href='#'>
-              <img
-                class='rounded-t-lg'
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/press-release/racha-ravi-new-car.webp'
-                alt=''
-              />
-            </div>
-            <div class='p-5'>
-              <div href='#'>
-                <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                  కొత్త కారు కొనుగోలుతో రచ్చరచ్చ చేసిన నటుడు రచ్చ రవి
-                </h5>
-              </div>
-              <p className='text-xs pb-2 text-gray-500'>8 Oct 2022</p>
-              <p class='mb-3 tracking-normal font-normal text-gray-700 dark:text-gray-400'>
-                నటుడు రచ్చ రవి కొనుగోలు చేసిన మారుతి సుజుకి యొక్క కొత్త గ్రాండ్
-                విటారా కు సంబంధించిన ఫోటోలు మరియు వీడియోలు సోషల్ మీడియాలో
-                చక్కర్లు కొడుతున్నాయి.
-              </p>
-              <br></br>
-
-              <a
-                href={
-                  'https://telugu.drivespark.com/four-wheelers/2022/racha-ravi-busy-new-maruti-grand-vitara-car-details-021068.html'
-                }
-                target='_blank'
-                rel='noopener noreferrer'
-                class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-              >
-                Read More
-                <svg
-                  aria-hidden='true'
-                  class='ml-2 -mr-1 w-4 h-4'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    fill-rule='evenodd'
-                    d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-                    clip-rule='evenodd'
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
           {/* <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
           <Link to='#'>
             <img
