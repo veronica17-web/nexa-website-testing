@@ -27,7 +27,7 @@ const navigation = {
           imageSrc:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/167x87-Ar_Vk_Jimny_Side+3-4th+Limbo+Shot_V1.webp',
           imageAlt: 'Suzuki Jimny',
-          price: 'Coming Soon',
+          price: '₹ 12,74,000*',
         },
         {
           name: 'Create Inspire.',

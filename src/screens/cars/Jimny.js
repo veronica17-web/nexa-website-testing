@@ -6,6 +6,7 @@ import Header from '../../components/Header/Header';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { Link } from 'react-router-dom';
 
 import Helmet from 'react-helmet';
 // import { Autoplay, Navigation, Pagination } from 'swiper';
@@ -33,61 +34,54 @@ const Jimny = () => {
             name='description'
             content='Discover the on-road price of Maruti Suzuki Jimny in Hyderabad for a convenient car ownership experience. Visit your nearesh Saboo Nexa dealer for test drive,  Jimny offers and more information. Call now for Maruti Suzuki Jimny on road price in Hyderabad'
           />
-       
         </Helmet>
       </Helmet>
       <VariantPlayer />
+
       <JimnyInteriorAndOther />
+
       <OnRoadPrice />
       {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
       <div className='hidden sm:block'>
         <div className='flex h-[60vh] bg-white gap-1 px-2 pt-1'>
           <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3  bg-no-repeat bg-cover bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/1-811x629-AR_SN_JIMNY_HILL+DESCENT+CONTROL+SHOT_V1+copy.webp')] ">
             <div className='flex flex-col justify-end h-full p-4 text-white '>
-              
-              <span className='font-semibold text-lg'>
-              HILL HOLD ASSIST
-              </span>
+              <span className='font-semibold text-lg'>HILL HOLD ASSIST</span>
               <span className='font-thin tracking-wider'>
-              Climb like a mountain goat on the steepest roads
+                Climb like a mountain goat on the steepest roads
               </span>
             </div>
           </div>
           <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/2-811x629-AR_SN_JIMNY_HILL+DESCENT+CONTROL+SHOT_V1.webp')] ">
             <div className='flex flex-col justify-end h-full p-4 text-white '>
               <span className='font-semibold text-lg'>
-              HILL DESCENT CONTROL
+                HILL DESCENT CONTROL
               </span>
               <span className='font-thin tracking-wider'>
-              Take control with the push of a button
+                Take control with the push of a button
               </span>
             </div>
           </div>
           <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/3-Jimmy-811x629-1.webp')] ">
             <div className='flex flex-col justify-end h-full p-4 text-white '>
-              <span className='font-semibold text-lg'>
-              BRAKE LSD
-              </span>
+              <span className='font-semibold text-lg'>BRAKE LSD</span>
               <span className='font-thin tracking-wider'>
-              Be the unstoppable force on the most stubborn terrain
+                Be the unstoppable force on the most stubborn terrain
               </span>
             </div>
           </div>
           <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/4-811x629-AR_AB_BP_JIMNY_6_AIRBAG_SHOT_03_04.webp')] ">
             <div className='flex flex-col justify-end h-full p-4 text-white '>
-              <span className='font-semibold text-lg'>
-              6 AIRBAGS
-              </span>
+              <span className='font-semibold text-lg'>6 AIRBAGS</span>
               <span className='font-thin tracking-wider'>
-              The thrill of the ride is only possible with safety on your side
+                The thrill of the ride is only possible with safety on your side
               </span>
             </div>
           </div>
-          
         </div>
       </div>
       <div className='sm:hidden'>
-      <MobileCarousel />
+        <MobileCarousel />
       </div>
       {/* <Carousel /> */}
     </>
@@ -109,7 +103,7 @@ function JimnyInteriorAndOther() {
         survived the worst. Only getting tougher with experience as it's
         teacher.
       </p>
-
+      <Variant />
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/colors/jimmy-color-bg.webp')] bg-cover bg-no-repeat">
         <div className='max-w-1xl mx-auto'>
           <div className='grid sm:grid-cols-2 lg:grid-cols-2'>
@@ -352,6 +346,54 @@ function JimnyInteriorAndOther() {
     </div>
   );
 }
+
+const Variant = () => {
+  const [price, setPrice] = useState('12,74,000');
+  return (
+    <div className='bg-black py-8'>
+      <div className='container mx-auto'>
+        <div className='grid md:grid-cols-3 md:space-y-0 space-y-3'>
+          <div className='space-y-3 mx-auto md:mx-0'>
+            <p className='uppercase text-gray-300'>select car Variant</p>
+            <select
+              name='model'
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              className='block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
+            >
+              <option value='12,74,000'>ZETA 5MT</option>
+              <option value='13,69,000'>ALPHA 5MT</option>
+              <option value='13,85,000'>ALPHA 5MT (DT)</option>
+              <option value='13,94,000'>ZETA 4AT</option>
+              <option value='14,89,000'>ALPHA 4AT</option>
+              <option value='15,05,000'>ALPHA 4AT (DT)</option>
+            </select>
+          </div>
+          <div className='text-center text-gray-200'>
+            <p className='text-2xl font-bold'>₹ {price}*</p>
+            <p className='tracking-wide text-xl'>Ex-Showroom Price</p>
+            <p className='uppercase text-gray-400 font-bold'>Hyderabad</p>
+            <div className='text-red-200 text-xs font-light'>
+              <sup>*</sup>Alpha+ & Zeta+ are applicable only for Direct
+              Injection engine with Smart Hybrid
+            </div>
+          </div>
+          <div className='mx-auto'>
+            <p className='text-gray-100 mb-6 text-center'>
+              You might have pre-approved loan offers
+            </p>
+            <Link
+              to='/maruti-car-finance'
+              className='py-2 px-4 bg-white rounded shadow uppercase tracking-wide'
+            >
+              Check for loan offers
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const VariantPlayer = () => {
   return (

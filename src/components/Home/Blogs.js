@@ -45,6 +45,49 @@ function Blogs() {
       </div> */}
         <div className='grid lg:grid-cols-3 gap-2 justify-center sm:ml-4 p-10'>
           <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+            <Link to='#'>
+              <img
+                class='rounded-t-lg'
+                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/4.webp'
+                alt=''
+              />
+            </Link>
+            <div class='p-5'>
+              <div href='/gallery'>
+                <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+                  Grand Launch of Suzuki Jimny at our Nexa Lumbini
+                </h5>
+              </div>
+              <p className='text-xs pb-2 text-gray-500'>26 May 2023</p>
+              <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+                Get ready to be awestruck as you witness the perfect blend of
+                innovation, design, and cutting-edge technology.
+              </p>
+              <br></br>
+
+              <a
+                href='/gallery'
+                target='_blank'
+                class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              >
+                Read More
+                <svg
+                  aria-hidden='true'
+                  class='ml-2 -mr-1 w-4 h-4'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    fill-rule='evenodd'
+                    d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
+                    clip-rule='evenodd'
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
             <div href='#'>
               <img
                 class='rounded-t-lg'
@@ -58,7 +101,7 @@ function Blogs() {
                   Maruti Suzuki Jimny launch on June 7
                 </h5>
               </div>
-              <p className='text-xs pb-2 text-gray-500'>22 May 2023</p>
+              <p className='text-xs pb-2 text-gray-500'>09 May 2023</p>
               <p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
                 India will be the first market where the 5-door Jimny will go on
                 sale, and will also be exported from here.
@@ -138,49 +181,7 @@ function Blogs() {
               </a>
             </div>
           </div>
-          <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
-            <Link to='#'>
-              <img
-                class='rounded-t-lg'
-                src='https://cdni.autocarindia.com/ExtraImages/20200103120157_Shashank-Srivastava-Maruti-.jpg'
-                alt=''
-              />
-            </Link>
-            <div class='p-5'>
-              <div href='#'>
-                <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                  Looking forward to becoming number one: Shashank Srivastava
-                </h5>
-              </div>
-              <p className='text-xs pb-2 text-gray-500'>22 May 2023</p>
-              <p className='mb-3 font-normal italic text-gray-700 dark:text-gray-400'>
-                "So, while we have the Brezza, but we also have the Fronx now
-                which is for the urban, sophisticated..."
-              </p>
-              <br></br>
 
-              <a
-                href='https://economictimes.indiatimes.com/markets/expert-view/looking-forward-to-becoming-number-one-and-dominating-the-suv-space-shashank-srivastava-maruti-suzuki/articleshow/100412215.cms'
-                target='_blank'
-                class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-              >
-                Read More
-                <svg
-                  aria-hidden='true'
-                  class='ml-2 -mr-1 w-4 h-4'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    fill-rule='evenodd'
-                    d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-                    clip-rule='evenodd'
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
           {/* <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
           <Link to='#'>
             <img

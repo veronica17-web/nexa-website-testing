@@ -9,6 +9,14 @@ const blogsData = [
   },
   {
     id: 2,
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/4.webp',
+    title: 'Grand Launch of Suzuki Jimny at our Nexa Lumbini',
+    subTitle: `Don't miss the opportunity to feast your eyes on these extraordinary masterpieces!`,
+    href: '/gallery',
+    desc: `"Step into the world of automotive excellence and explore our captivating gallery of new car unveilings. Get ready to be awestruck as you witness the perfect blend of innovation, design, and cutting-edge technology."`,
+  },
+  {
+    id: 3,
     img: 'https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230522015734_Jimny.jpg&w=700&q=90&c=1',
     title: 'Maruti Suzuki Jimny launch on June 7',
     subTitle:
@@ -17,7 +25,7 @@ const blogsData = [
     desc: 'One of the most-awaited new launches this year, the Jimny will join the growing segment of lifestyle off-roaders alongside the Mahindra Thar and Force Gurkha.',
   },
   {
-    id: 3,
+    id: 4,
     img: 'https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230521121524_Jimny_5_door.jpg&w=700&q=90&c=1',
     title: 'Maruti Suzuki Jimny 5-door fuel efficiency figures revealed',
     subTitle:
@@ -25,14 +33,7 @@ const blogsData = [
     href: 'https://www.autocarindia.com/car-news/maruti-suzuki-jimny-5-door-fuel-efficiency-figures-revealed-428235',
     desc: 'While many details of the new Jimny 5-door were announced then, its fuel efficiency figures were not shared.',
   },
-  {
-    id: 4,
-    img: 'https://cdni.autocarindia.com/ExtraImages/20200103120157_Shashank-Srivastava-Maruti-.jpg',
-    title: 'Looking forward to becoming number one: Shashank Srivastava',
-    subTitle: `"So, while we have the Brezza, but we also have the Fronx now which is for the urban, sophisticated..."`,
-    href: 'https://www.autocarindia.com/car-news/maruti-suzuki-jimny-5-door-production-to-commence-in-april-427467',
-    desc: `"The compact SUV, we find as it has become larger. Last year it was almost 8,60,000 or so volumes."`,
-  },
+
   // {
   //   id: 5,
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/blogScreen/5.webp',

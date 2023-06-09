@@ -94,10 +94,10 @@ export const mobileSliders = [
 ];
 
 export const bookAservice = [
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Maruti+Suzuki+Nexa+Summer+Service.webp',
-    alt: 'april 2023 service banner',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Maruti+Suzuki+Nexa+Summer+Service.webp',
+  //   alt: 'april 2023 service banner',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/website+Maruti+Suzuki+Service+Workshop+Hafeezpet.webp',
     alt: 'NEW HAFEEZPET BANNER',
@@ -329,7 +329,14 @@ export const offer_products = [
   },
   {
     name: 'ignis',
-    price: '₹ 49,000 /-',
+    price: '₹ 59,000 /-',
+    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp',
+    explore: '/nexa-ignis-on-road-price-in-hyderabad',
+  },
+  {
+    name: 'ignis',
+    price: '₹ 68,600 /-',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp',
     explore: '/nexa-ignis-on-road-price-in-hyderabad',
