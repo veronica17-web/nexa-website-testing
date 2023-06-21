@@ -1,11 +1,46 @@
 import React, { useState } from 'react';
-import { toast } from 'react-toastify';
+import Header from '../../components/Header/Header';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
+
+import { toast } from 'react-toastify';
+
 import axios from 'axios';
 import { CgSpinner } from 'react-icons/cg';
-import EnquiryPopup from '../utils/EnquiryPopup';
 
-function CarEnquiry() {
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import Helmet from 'react-helmet';
+// import { Autoplay, Navigation, Pagination } from 'swiper';
+import OnRoadPrice from '../../components/utils/OnRoadPrice';
+import { MdOutlineFileDownload } from 'react-icons/md';
+// import Carousel from '../../components/Fronx/Extras/Carousel';
+import MobileCarousel from '../../components/Fronx/Extras/MobileCarousel';
+
+const width = window.innerWidth;
+
+const Invicto = () => {
+  return (
+    <>
+      <Header />
+      <Helmet>
+        <title>Maruti Suzuki's New Invicto | Saboo NEXA</title>
+        <meta name='title' content='Maruti Suzuki New Invicto | Saboo NEXA' />
+        <meta
+          name='description'
+          content='Get the latest on-road price of Maruti Suzuki Fronx in Hyderabad and enjoy a smooth car ownership experience. For more information about Nexa Fronx visit your nearest Saboo Nexa dealership today.'
+        />
+      </Helmet>
+      {width > 425 ? <WebBanner /> : <MobileWebBanner />}
+
+      <InvictoCarEnquiry />
+    </>
+  );
+};
+
+function InvictoCarEnquiry() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -47,7 +82,9 @@ function CarEnquiry() {
     <>
       <div className='py-6 bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Saboo-RKS-Nexa-Price-Banner.webp)]'>
         <div className='container mx-auto space-y-3 lg:px-0 px-5'>
-          <h3 className='text-xl font-semibold text-white'>Car Enquiry</h3>
+          <h3 className='text-xl font-semibold text-white'>
+            Register Now To Know More About Invicto
+          </h3>
           <form
             action={
               pattern.test(phone) && phone.length === 10
@@ -148,13 +185,6 @@ function CarEnquiry() {
                 >
                   <option>Select Model</option>
                   <option value='INVICTO'>Invicto</option>
-                  <option value='Fronx'>Fronx</option>
-                  <option value='Jimny'>Jimny</option>
-                  <option value='Grand Vitara'>Grand Vitara</option>
-                  <option value='Ciaz'>Ciaz</option>
-                  <option value='Baleno'>Baleno</option>
-                  <option value='Ignis'>Ignis</option>
-                  <option value='XL6'>XL6</option>
                 </select>
               </>
               <>
@@ -180,77 +210,44 @@ function CarEnquiry() {
           </form>
         </div>
       </div>
-      <BuyerOptions />
     </>
   );
 }
 
-const BuyerOptions = () => {
-  const [open, setOpen] = useState(false);
-  const [phone, setPhone] = useState('');
+const WebBanner = () => {
   return (
-    <>
-      <div className='container mx-auto py-16'>
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-3 lg:px-0  px-5'>
-          <button onClick={() => setOpen(true)}>
-            <div className='bg-white drop-shadow-lg hover:shadow-lg rounded space-y-3 py-3 w-full max-w-[350px] mx-auto mb-4 '>
-              <img
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/Saboo-Nexa-Car-Test-Drive.webp'
-                alt='1'
-                className='mx-auto h-16'
-              />
-              <p className='uppercase font-bold text-center text-sm text-gray-700'>
-                book a test drive
-              </p>
-            </div>
-          </button>
-          <Link to='/maruti-nexa-showroom-outlets-in-hyderabad'>
-            <div className='bg-white drop-shadow-lg hover:shadow-lg rounded space-y-3 py-3 w-full max-w-[350px] mx-auto mb-4 '>
-              <img
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/Saboo-Nexa-Showroom-Locate.webp'
-                alt='1'
-                className='mx-auto h-16'
-              />
-              <p className='uppercase font-bold text-center text-sm text-gray-700'>
-                locate a showroom
-              </p>
-            </div>
-          </Link>
-          <button onClick={() => setOpen(true)}>
-            <div className='bg-white drop-shadow-lg hover:shadow-lg rounded space-y-3 py-3 w-full max-w-[350px] mx-auto mb-4 '>
-              <img
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/Saboo-Nexa-Book-Showroom-Visit.webp'
-                alt='1'
-                className='mx-auto h-16'
-              />
-              <p className='uppercase font-bold text-center text-sm text-gray-700'>
-                book a showroom visit
-              </p>
-            </div>
-          </button>
-          <Link to='/maruti-car-insurance'>
-            <div className='bg-white drop-shadow-lg hover:shadow-lg rounded space-y-3 py-3 w-full max-w-[350px] mx-auto mb-4 '>
-              <img
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/Saboo-Nexa-Ebook.webp'
-                alt='1'
-                className='mx-auto h-16'
-              />
-              <p className='uppercase font-bold text-center text-sm text-gray-700'>
-                insurance renewal
-              </p>
-            </div>
-          </Link>
-        </div>
-      </div>
-      <EnquiryPopup
-        open={open}
-        setOpen={setOpen}
-        phone={phone}
-        setPhone={setPhone}
-        title={'book a test drive / showroom visit'}
+    <div className=''>
+    <img
+      src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Website+Saboo+RKS+Nexa+Invicto+Banner.webp'
+      alt=''
+    />
+    {/* <video class='w-screen' autoplay='autoplay' loop>
+      <source
+        class='w-30 h-30'
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/video/NEXA+FRONX++05SEC++110123+C2C+MUTE.mp4'
+        type='video/mp4'
       />
-    </>
+    </video> */}
+  </div>
   );
 };
 
-export default CarEnquiry;
+const MobileWebBanner = () => {
+  return (
+    <div className=''>
+      <img
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Website+Mobile+Saboo+RKS+Nexa+Invicto+Banner.webp'
+        alt=''
+      />
+      {/* <video class='w-screen' autoplay='autoplay' loop>
+      <source
+        class='w-30 h-30'
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/video/NEXA+FRONX++05SEC++110123+C2C+MUTE.mp4'
+        type='video/mp4'
+      />
+    </video> */}
+    </div>
+  );
+};
+
+export default Invicto;

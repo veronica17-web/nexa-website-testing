@@ -391,7 +391,7 @@ function XL() {
 }
 
 const Variant = () => {
-  const [price, setPrice] = useState('11,41,000');
+  const [price, setPrice] = useState('11,56,000');
   return (
     <div className='bg-black py-8'>
       <div className='container mx-auto'>
@@ -404,15 +404,15 @@ const Variant = () => {
               onChange={(e) => setPrice(e.target.value)}
               className='block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
             >
-              <option value='11,41,000'>XL6 ZETA</option>
-              <option value='12,41,000'>XL6 ALPHA</option>
-              <option value='13,01,000'>XL6 ALPHA+</option>
-              <option value='13,17,000'>XL6 ALPHA+ (D)</option>
-              <option value='12,91,000'>XL6 ZETA AUTOMATIC</option>
-              <option value='13,91,000'>XL6 ALPHA AUTOMATIC</option>
-              <option value='14,51,000'>XL6 ALPHA+ AUTOMATIC</option>
-              <option value='14,67,000'>XL6 ALPHA+ (D) AUTOMATIC</option>
-              <option value='12,36,000'>XL6 CNG MT</option>
+             <option value='11,56,000'>ZETA</option>
+                          <option value='12,56,000'>ALPHA</option>
+                          <option value='13,16,000'>ALPHA+</option>
+                          <option value='13,32,000'>ALPHA+ (D)</option>
+                          <option value='12,51,000'>ZETA CNG</option>
+                          <option value='13,06,000'>ZETA AT</option>
+                          <option value='14,06,000'>ALPHA AT</option>
+                          <option value='14,66,000'>ALPHA+ AT</option>
+                          <option value='14,82,000'>ALPHA+ AT (D)</option>
             </select>
           </div>
           <div className='text-center text-gray-200'>

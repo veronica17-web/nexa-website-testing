@@ -101,13 +101,13 @@ const VehicleProducts = () => {
             </div>
           </div>
         ))}
-        <div className='sm:col-span-2'>
+        {/* <div className='sm:col-span-2'>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+banner.webp'
             className='lg:mx-auto  lg:h-[400px] lg:w-full'
             alt='banner'
           />
-        </div>
+        </div> */}
       </div>
       <EnquiryPopup
         open={open}

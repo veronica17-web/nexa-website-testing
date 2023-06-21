@@ -64,6 +64,7 @@ function Blogs() {
                 innovation, design, and cutting-edge technology.
               </p>
               <br></br>
+              <br></br>
 
               <a
                 href='/gallery'
@@ -91,26 +92,26 @@ function Blogs() {
             <div href='#'>
               <img
                 class='rounded-t-lg'
-                src='https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230522015734_Jimny.jpg&w=700&q=90&c=1'
+                src='https://media.zigcdn.com/media/content/2023/Jun/6481e4f32d325_720x540_720x540.jpg'
                 alt=''
               />
             </div>
             <div class='p-5'>
               <div href='#'>
                 <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                  Maruti Suzuki Jimny launch on June 7
+                  Here’s When Maruti Invicto’s Price Will Be Announced In India
                 </h5>
               </div>
-              <p className='text-xs pb-2 text-gray-500'>09 May 2023</p>
+              <p className='text-xs pb-2 text-gray-500'>14 Jun 2023</p>
               <p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
-                India will be the first market where the 5-door Jimny will go on
-                sale, and will also be exported from here.
+                It will be the first Toyota model to be rebadged as a Maruti
+                Suzuki on our shores
               </p>
               <br></br>
               <br></br>
               <a
                 href={
-                  'https://www.autocarindia.com/car-news/maruti-suzuki-jimny-launch-on-june-7-428242'
+                  'https://www.zigwheels.com/news-features/general-news/heres-when-maruti-invictos-price-will-be-announced-in-india/50090/'
                 }
                 target='_blank'
                 rel='noopener noreferrer'
@@ -144,21 +145,20 @@ function Blogs() {
             <div class='p-5'>
               <div href='#'>
                 <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                  Maruti Suzuki Jimny 5-door fuel efficiency figures revealed
+                  Maruti Suzuki Jimny gets more bookings after price
+                  announcement
                 </h5>
               </div>
-              <p className='text-xs pb-2 text-gray-500'>21 May 2023</p>
+              <p className='text-xs pb-2 text-gray-500'>14 Jun 2023</p>
               <p class='mb-3 tracking-normal font-normal text-gray-700 dark:text-gray-400'>
-                Ahead of its launch in June, the Maruti Suzuki Jimny has amassed
-                around 30,000 bookings.
+                Maruti Suzuki Jimny received more than 31,000 bookings since the
+                brand started accepting them back in January 2023.
               </p>
-              <br></br>
-              <br></br>
               <br></br>
 
               <a
                 href={
-                  'https://www.autocarindia.com/car-news/maruti-suzuki-jimny-5-door-fuel-efficiency-figures-revealed-428235'
+                  'https://www.cartoq.com/maruti-suzuki-jimny-gets-more-bookings-after-price-announcement/'
                 }
                 target='_blank'
                 rel='noopener noreferrer'

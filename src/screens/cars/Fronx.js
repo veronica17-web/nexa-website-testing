@@ -478,19 +478,33 @@ const Variant = () => {
               onChange={(e) => setPrice(e.target.value)}
               className='block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
             >
-              <option value='7,46,500'>SIGMA 5MT</option>
-              <option value='8,32,500'>DELTA 5MT</option>
-              <option value='8,87,500'>DELTA AGS</option>
-              <option value='8,72,500'>DELTA+ 5MT</option>
-              <option value='9,27,500'>DELTA+ AGS</option>
+           <option value='7,46,500'>SIGMA</option>
+                              <option value='8,32,500'>DELTA</option>
+                              <option value='8,72,500'>DELTA+</option>
+                              <option value='8,87,500'>DELTA AGS</option>
+                              <option value='9,27,500'>DELTA+ AGS</option>
 
-              <option value='9,72,500'>DELTA+ 5MT (SMART HYBRID)</option>
-              <option value='10,55,500'>ZETA 5MT (SMART HYBRID) </option>
-              <option value='12,05,500'>ZETA 6AT (SMART HYBRID)</option>
-              <option value='11,47,500'>ALPHA 5MT (SMART HYBRID)</option>
-              <option value='12,97,500'>ALPHA 6AT (SMART HYBRID)</option>
-              <option value='11,63,500'>ALPHA DT MT (SMART HYBRID)</option>
-              <option value='13,13,500'>ALPHA DT AT (SMART HYBRID)</option>
+                              <option value='9,72,500'>
+                                DELTA+ MT (SMART HYBRID)
+                              </option>
+                              <option value='10,55,500'>
+                                ZETA MT (SMART HYBRID){' '}
+                              </option>
+                              <option value='11,47,500'>
+                                ALPHA(M) MT (SMART HYBRID)
+                              </option>
+                              <option value='11,63,500'>
+                                ALPHA(D) MT (SMART HYBRID)
+                              </option>
+                              <option value='12,05,500'>
+                                ZETA AT (SMART HYBRID)
+                              </option>
+                              <option value='12,97,500'>
+                                ALPHA(M) (SMART HYBRID)
+                              </option>
+                              <option value='13,13,500'>
+                                ALPHA(D) AT (SMART HYBRID)
+                              </option>
             </select>
           </div>
           <div className='text-center text-gray-200'>

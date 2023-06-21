@@ -361,12 +361,12 @@ const Variant = () => {
               onChange={(e) => setPrice(e.target.value)}
               className='block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
             >
-              <option value='12,74,000'>ZETA 5MT</option>
-              <option value='13,69,000'>ALPHA 5MT</option>
-              <option value='13,85,000'>ALPHA 5MT (DT)</option>
-              <option value='13,94,000'>ZETA 4AT</option>
-              <option value='14,89,000'>ALPHA 4AT</option>
-              <option value='15,05,000'>ALPHA 4AT (DT)</option>
+               <option value='12,74,000'>ZETA</option>
+                          <option value='13,69,000'>ALPHA(M)</option>
+                          <option value='13,85,000'>ALPHA(D)</option>
+                          <option value='13,94,000'>ZETA 4AT</option>
+                          <option value='14,89,000'>ALPHA(M) 4AT</option>
+                          <option value='15,05,000'>ALPHA(D) 4AT</option>
             </select>
           </div>
           <div className='text-center text-gray-200'>
@@ -401,7 +401,7 @@ const VariantPlayer = () => {
       <video class='w-screen' autoplay='autoplay' loop>
         <source
           class='w-30 h-30'
-          src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/video/JIMNY+1.mp4'
+          src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/video/The+Jimny+is+here+to+rule+_+%23NeverTurnBack.mp4'
           type='video/mp4'
         />
       </video>

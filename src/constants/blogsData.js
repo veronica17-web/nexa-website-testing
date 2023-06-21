@@ -17,21 +17,21 @@ const blogsData = [
   },
   {
     id: 3,
-    img: 'https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230522015734_Jimny.jpg&w=700&q=90&c=1',
-    title: 'Maruti Suzuki Jimny launch on June 7',
+    img: 'https://media.zigcdn.com/media/content/2023/Jun/6481e4f32d325_720x540_720x540.jpg',
+    title: 'Here’s When Maruti Invicto’s Price Will Be Announced In India',
     subTitle:
-      'India will be the first market where the 5-door Jimny will go on sale, and will also be exported from here.',
-    href: 'https://www.autocarindia.com/car-news/maruti-suzuki-jimny-launch-on-june-7-428242',
-    desc: 'One of the most-awaited new launches this year, the Jimny will join the growing segment of lifestyle off-roaders alongside the Mahindra Thar and Force Gurkha.',
+      'It will be the first Toyota model to be rebadged as a Maruti Suzuki on our shores',
+    href: 'https://www.zigwheels.com/news-features/general-news/heres-when-maruti-invictos-price-will-be-announced-in-india/50090/',
+    desc: 'Maruti Suzuki has confirmed that the Invicto premium MPV will be launched in India on July 05. The Invicto is nothing but a rebadged version of the Innova Hycross and is the first Toyota model to be rebadged as a Maruti Suzuki on our shores.',
   },
   {
     id: 4,
     img: 'https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230521121524_Jimny_5_door.jpg&w=700&q=90&c=1',
-    title: 'Maruti Suzuki Jimny 5-door fuel efficiency figures revealed',
+    title: 'Maruti Suzuki Jimny gets more bookings after price announcement',
     subTitle:
-      'Ahead of its launch in June, the Maruti Suzuki Jimny has amassed around 30,000 bookings.',
-    href: 'https://www.autocarindia.com/car-news/maruti-suzuki-jimny-5-door-fuel-efficiency-figures-revealed-428235',
-    desc: 'While many details of the new Jimny 5-door were announced then, its fuel efficiency figures were not shared.',
+      'Maruti Suzuki Jimny received more than 31,000 bookings since the brand started accepting them back in January 2023.',
+    href: 'https://www.cartoq.com/maruti-suzuki-jimny-gets-more-bookings-after-price-announcement/',
+    desc: 'Maruti Suzuki Jimny received more than 31,000 bookings since the brand started accepting them back in January 2023. While there are murmurs of Jimny being an overpriced product, Maruti Suzuki India’s Senior Executive Officer for Marketing and Sales says that there has been a jump in the number of bookings since the price announcement on June 7.',
   },
 
   // {

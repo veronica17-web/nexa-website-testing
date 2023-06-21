@@ -1,13 +1,9 @@
 //same for home screen and offers screen
 export const sliders = [
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-banner.webp',
-    alt: 'holi-banner-march-2023',
-  },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/website+Maruti+Suzuki+Service+Workshop+Hafeezpet.webp',
-    alt: 'NEW HAFEEZPET BANNER 2023',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/website+Maruti+Suzuki+Service+Workshop+Hafeezpet.webp',
+  //   alt: 'NEW HAFEEZPET BANNER 2023',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-banner.webp',
     alt: 'jimny-banner',
@@ -46,6 +42,10 @@ export const sliders = [
 
 //same for home screen and offers screen
 export const mobileSliders = [
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Website+Mobile+Saboo+RKS+Nexa+Invicto+Banner.webp',
+    alt: 'invicto mobile banner',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner.webp',
     alt: 'NEW fronx mobile banner',
@@ -99,7 +99,7 @@ export const bookAservice = [
   //   alt: 'april 2023 service banner',
   // },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/website+Maruti+Suzuki+Service+Workshop+Hafeezpet.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp',
     alt: 'NEW HAFEEZPET BANNER',
   },
   // {
@@ -111,10 +111,37 @@ export const bookAservice = [
 export const products = [
   {
     id: 1,
-    name: 'Fronx',
+    name: 'fronx',
     price: '',
+    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/D23+logo+without+outline+Black_125x35.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Maruti_YDA_Website_Coming-Soon_370x252+C.webp',
+    // brouchure: '',
+    explore: '/maruti-suzuki-new-invicto',
+    engineType: 'SMART HYBRID / ELECTRIC HYBRID',
+    fuelType: 'PETROL',
+    displacement: '1462 cc',
+    power: '75.8 @ 6000 / 68 kW @ 5500 rpm',
+    torque: '136.8 @ 4400 / 122 Nm @ 4400 - 4800',
+    fuelTank: '45 L',
+    mileage: '21.11 (MT), 20.58 (AT), 19.38 (AllGrip MT), 27.97 (e-CVT)',
+    tranmission: '5MT/ 6AT / e-CVT',
+    length: '4345',
+    width: '1795',
+    height: '1645',
+    wheelbase: '2600',
+    turningRadius: '5.4',
+    frontBrake: 'Ventilated Disc',
+    rearBrake: 'Solid Disc',
+    frontSuspension: 'MacPherson Strut',
+    rearSuspension: 'Torsion Beam',
+    seating: '5',
+  },
+  {
+    id: 2,
+    name: 'Fronx',
+    price: '746500',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/Flash_header_Menu_logo.webp',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/HomepageTileSection-370x252.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/fronx.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/FRONX+Brochure.pdf',
     explore: '/maruti-fronx-price-in-hyderabad',
@@ -138,11 +165,11 @@ export const products = [
     seating: '5',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Jimny',
-    price: '',
+    price: '1274000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/120x30+black.webp',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimmy-370x252-withbg.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/jimny.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimny+Brochure.pdf',
     explore: '/maruti-jimny-price-in-hyderabad',
@@ -166,7 +193,7 @@ export const products = [
     seating: '5',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Grand Vitara',
     price: '1045000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp',
@@ -195,7 +222,7 @@ export const products = [
   },
 
   {
-    id: 4,
+    id: 5,
     name: 'ignis',
     price: '535000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',
@@ -223,7 +250,7 @@ export const products = [
     seating: '5',
   },
   {
-    id: 5,
+    id: 6,
     name: 'baleno',
     price: '649000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png',
@@ -251,7 +278,7 @@ export const products = [
     seating: '5',
   },
   {
-    id: 6,
+    id: 7,
     name: 'Ciaz',
     price: '899500',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp',
@@ -280,7 +307,7 @@ export const products = [
   },
 
   {
-    id: 7,
+    id: 8,
     name: 'XL6',
     price: '1129000',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Logo-XL6.webp',

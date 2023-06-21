@@ -297,7 +297,7 @@ function Baleno() {
 }
 
 const Variant = () => {
-  const [price, setPrice] = useState('6,56,000');
+  const [price, setPrice] = useState('6,61,000');
   return (
     <div className='bg-black py-8'>
       <div className='container mx-auto'>
@@ -310,15 +310,15 @@ const Variant = () => {
               onChange={(e) => setPrice(e.target.value)}
               className='block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
             >
-              <option value='6,56,000'>BALENO SIGMA PETROL </option>
-              <option value='7,40,000'>BALENO DELTA PETROL</option>
-              <option value='7,95,000'>BALENO DELTA PETROL AGS</option>
-              <option value='8,33,000'>BALENO ZETA PETROL</option>
-              <option value='8,88,000'>BALENO ZETA PETROL AGS</option>
-              <option value='9,28,000'>BALENO ALPHA PETROL</option>
-              <option value='9,83,000'>BALENO ALPHA PETROL AGS</option>
-              <option value='8,30,000'>BALENO CNG MT DELTA</option>
-              <option value='9,23,000'>BALENO CNG MT ZETA</option>
+              <option value='6,61,000'>SIGMA </option>
+                          <option value='7,45,000'>DELTA</option>
+                          <option value='8,38,000'>ZETA</option>
+                          <option value='9,33,000'>ALPHA </option>
+                          <option value='8,35,000'>DELTA CNG</option>
+                          <option value='9,28,000'>ZETA CNG</option>
+                          <option value='8,00,000'>DELTA AT</option>
+                          <option value='8,90,000'>ZETA AT</option>
+                          <option value='9,88,000'> ALPHA AT</option>
             </select>
           </div>
           <div className='text-center text-gray-200'>

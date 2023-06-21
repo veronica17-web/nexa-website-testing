@@ -147,13 +147,14 @@ function EnquiryPopup({ open, phone, setPhone, setOpen, title }) {
                           className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
                         >
                           <option>Select Model</option>
+                          <option value='INVICTO'>Invicto</option>
                           <option value='Fronx'>Fronx</option>
                           <option value='Jimny'>Jimny</option>
-                          <option>Grand Vitara</option>
-                          <option>Ciaz</option>
-                          <option>Baleno</option>
-                          <option>Ignis</option>
-                          <option>XL6</option>
+                          <option value="Grand Vitara">Grand Vitara</option>
+                          <option value="Ciaz">Ciaz</option>
+                          <option value="Baleno">Baleno</option>
+                          <option value="Ignis">Ignis</option>
+                          <option value="XL6">XL6</option>
                         </select>
                       </div>
 

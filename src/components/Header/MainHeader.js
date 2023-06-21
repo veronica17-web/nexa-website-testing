@@ -10,6 +10,16 @@ const navigation = {
       name: 'Vehicles',
       featured: [
         {
+          name: 'COMING SOON',
+          brand_logo:
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Invicto+Logo-header.webp',
+          href: '/maruti-suzuki-new-invicto',
+          imageSrc:
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Maruti_YDA_Website_Coming-Soon_370x252+C.webp',
+          imageAlt: 'Suzuki Fronx',
+          // price: '₹ 7,46,500*',
+        },
+        {
           name: 'Created to Inspire Style and Performance.',
           brand_logo:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/Flash_header_Menu_logo.webp',
@@ -121,7 +131,7 @@ const navigation = {
       name: 'CNG',
       to: '/cng',
     },
-    
+
     {
       name: 'Careers',
       to: '/',
@@ -232,7 +242,6 @@ function MainHeader() {
                         }
                       >
                         {category.name}
-                      
                       </Tab>
                     ))}
                   </Tab.List>

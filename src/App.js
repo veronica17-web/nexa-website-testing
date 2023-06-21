@@ -53,6 +53,8 @@ import NexaCNG from './screens/more/CNG/NexaCNG';
 import GrandVitaraCNG from './screens/more/CNG/GrandVitaraCNG';
 import BalenoCNG from './screens/more/CNG/BalenoCNG';
 import XL6CNG from './screens/more/CNG/XL6CNG';
+import NexaPriceList from './screens/more/NexaPriceList';
+import Invicto from './screens/cars/Invicto';
 
 axios.defaults.baseURL = 'https://saboogroups.com/admin/api/';
 
@@ -417,6 +419,7 @@ function App() {
         <Route path='/accessories' element={<Accessories />} />
         <Route path='/nexa-car-offers-in-hyderabad' element={<Offers />} />
         <Route path='/offers' element={<Offers />} />
+        <Route path='/pricelist' element={<NexaPriceList />} />
         <Route
           path='/book-online-maruti-nexa-car-service/'
           element={<BookAService />}
@@ -431,17 +434,12 @@ function App() {
           element={<GrandVitara />}
         />
         <Route
-          path='/grand-vitara-cng'
-          element={<GrandVitaraCNG />}
+          path='/maruti-suzuki-new-invicto'
+          element={<Invicto />}
         />
-        <Route
-          path='/baleno-cng'
-          element={<BalenoCNG/>}
-        />
-        <Route
-          path='/xl6-cng'
-          element={<XL6CNG/>}
-        />
+        <Route path='/grand-vitara-cng' element={<GrandVitaraCNG />} />
+        <Route path='/baleno-cng' element={<BalenoCNG />} />
+        <Route path='/xl6-cng' element={<XL6CNG />} />
         <Route path='/maruti-fronx-price-in-hyderabad' element={<Fronx />} />
         <Route path='/maruti-jimny-price-in-hyderabad' element={<Jimny />} />
         {/* Contact */}

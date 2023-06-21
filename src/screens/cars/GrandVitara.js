@@ -476,7 +476,7 @@ const VariantPlayer = () => {
 };
 
 const Variant = () => {
-  const [price, setPrice] = useState('10,45,000');
+  const [price, setPrice] = useState('10,70,000');
   return (
     <div className='bg-black py-8'>
       <div className='container mx-auto'>
@@ -489,41 +489,23 @@ const Variant = () => {
               onChange={(e) => setPrice(e.target.value)}
               className='block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
             >
-              <option value='10,45,000'>SIGMA MT (Smart Hybrid)</option>
-              <option value='11,90,000'>DELTA MT (Smart Hybrid)</option>
-              <option value='13,40,000'>DELTA AT (Smart Hybrid)</option>
-              <option value='13,89,000'>ZETA / ZETA+ MT (Smart Hybrid)</option>
-              <option value='15,39,000'>ZETA / ZETA+ AT (Smart Hybrid)</option>
-              <option value='17,99  ,000'>
-                ZETA / ZETA+ AT (Intelligent Electric Hybrid eCVT)
-              </option>
-              <option value='18,15,000'>
-                ZETA / ZETA+ AT (Intelligent Electric Hybrid eCVT) Dual Tone
-              </option>
-              <option value='15,39,000'>
-                ALPHA / ALPHA+ MT (Smart Hybrid)
-              </option>
-              <option value='15,55,000'>
-                ALPHA / ALPHA+ MT (Smart Hybrid) Dual Tone
-              </option>
-              <option value='16,89,000'>
-                ALPHA / ALPHA+ AT (Smart Hybrid)
-              </option>
-              <option value='17,05,000'>
-                ALPHA / ALPHA+ AT (Smart Hybrid) Dual Tone
-              </option>
-              <option value='16,89,000'>
-                ALPHA / ALPHA+(Suzuki All Grip Select MT)
-              </option>
-              <option value='17,05,000'>
-                ALPHA / ALPHA+ (Suzuki All Grip Select MT) Dual Tone
-              </option>
-              <option value='19,49,000'>
-                ALPHA / ALPHA+ (Intelligent Electric Hybrid eCVT)
-              </option>
-              <option value='19,65,000'>
-                ALPHA / ALPHA+ (Intelligent Electric Hybrid eCVT) Dual Tone
-              </option>
+            <option value='10,70,000'>SIGMA</option>
+                          <option value='12,10,000'>DELTA</option>
+                          <option value='13,91,000'>ZETA</option>
+                          <option value='15,41,000'>ALPHA</option>
+                          <option value='15,57,000'>ALPHA (DT)</option>
+                          <option value='13,60,000'>DELTA AT</option>
+                          <option value='15,41,000'>ZETA AT</option>
+                          <option value='16,91,000'>ALPHA AT</option>
+                          <option value='17,07,000'>ALPHA AT (DT)</option>
+                          <option value='16,91,000'>ALPHA AWD AG</option>
+                          <option value='17,07,000'>ALPHA AWD AG (DT)</option>
+                          <option value='18,29,000'>ZETA+ ECVT</option>
+                          <option value='18,45,000'>ZETA+ ECVT (DT)</option>
+                          <option value='19,79,000'>ALPHA+ ECVT</option>
+                          <option value='19,95,000'>ALPHA ECVT (DT)</option>
+                          <option value='13,05,000'>DELTA CNG</option>
+                          <option value='14,86,000'>ZETA CNG</option>
             </select>
           </div>
           <div className='text-center text-gray-200'>
