@@ -33,11 +33,7 @@
         "destination": "/new-maruti-baleno-price-in-hyderabad",
         "type": 301
       },
-      {
-        "source": "/maruti-nexa-car-service-center-near-me.php",
-        "destination": "/maruti-nexa-workshop-outlets-in-hyderabad",
-        "type": 301
-      },
+
       {
         "source": "/book-a-test-drive",
         "destination": "/contact-us",
@@ -95,10 +91,11 @@
         "type": 301
       },
       {
-        "source": "/book-online-maruti-nexa-car-service",
-        "destination": "/maruti-nexa-car-service-center-near-me",
+        "source": "/maruti-nexa-car-service-center-near-me",
+        "destination": "/book-online-maruti-nexa-car-service",
         "type": 301
       },
+
       {
         "source": "/book-a-test-drive.php",
         "destination": "/contact-us",

@@ -197,8 +197,8 @@ function Insurance() {
           <p className='text-gray-700'>
             <span className='text-black font-bold'>Disclaimer</span>: I agree
             that by clicking the ‘Submit’ button below, I am explicitly
-            soliciting a call / message from Saboo Maruti (RKS Motor Pvt. Ltd)
-            or its representatives on my ‘Mobile’
+            soliciting a call / message from Saboo RKS Motor Pvt. Ltd or its
+            representatives on my ‘Mobile’
           </p>
           <div className='flex items-start'>
             <input

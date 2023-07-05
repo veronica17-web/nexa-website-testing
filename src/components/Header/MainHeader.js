@@ -10,14 +10,14 @@ const navigation = {
       name: 'Vehicles',
       featured: [
         {
-          name: 'COMING SOON',
+          name: 'Created to…..in order to maintain uniformity',
           brand_logo:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Invicto+Logo-header.webp',
           href: '/maruti-suzuki-new-invicto',
           imageSrc:
-            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Maruti_YDA_Website_Coming-Soon_370x252+C.webp',
-          imageAlt: 'Suzuki Fronx',
-          // price: '₹ 7,46,500*',
+            'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-thumbnail.webp',
+          imageAlt: 'Suzuki invicto',
+          price: '₹ 24,79,000*',
         },
         {
           name: 'Created to Inspire Style and Performance.',

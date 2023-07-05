@@ -26,11 +26,16 @@ const Invicto = () => {
     <>
       <Header />
       <Helmet>
-        <title>Maruti Suzuki's New Invicto | Saboo NEXA</title>
-        <meta name='title' content='Maruti Suzuki New Invicto | Saboo NEXA' />
+        <title>
+          Maruti Suzuki Invicto On-Road Price in Hyderabad | Saboo NEXA
+        </title>
+        <meta
+          name='title'
+          content='Maruti Suzuki Invicto On-Road Price in Hyderabad | Saboo NEXA'
+        />
         <meta
           name='description'
-          content='Get the latest on-road price of Maruti Suzuki Fronx in Hyderabad and enjoy a smooth car ownership experience. For more information about Nexa Fronx visit your nearest Saboo Nexa dealership today.'
+          content='Get the latest on-road price of Maruti Suzuki  Invicto in Hyderabad and enjoy a smooth car Buying experience. For more information about Nexa Invicto visit your nearest Saboo Nexa dealership today.'
         />
       </Helmet>
       {width > 425 ? <WebBanner /> : <MobileWebBanner />}
@@ -217,18 +222,18 @@ function InvictoCarEnquiry() {
 const WebBanner = () => {
   return (
     <div className=''>
-    <img
-      src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Website+Saboo+RKS+Nexa+Invicto+Banner.webp'
-      alt=''
-    />
-    {/* <video class='w-screen' autoplay='autoplay' loop>
+      <img
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Website+Saboo+RKS+Nexa+Invicto+Banner.webp'
+        alt=''
+      />
+      {/* <video class='w-screen' autoplay='autoplay' loop>
       <source
         class='w-30 h-30'
         src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/video/NEXA+FRONX++05SEC++110123+C2C+MUTE.mp4'
         type='video/mp4'
       />
     </video> */}
-  </div>
+    </div>
   );
 };
 

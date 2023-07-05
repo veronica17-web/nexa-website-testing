@@ -19,15 +19,17 @@ function GrandVitara() {
       <Header />
       <Helmet>
         <title>
-          Nexa Grand Vitara On Road Price| Maruti Suzuki Grand Vitara Offers
+          Maruti New Suzuki Grand Vitara On Road Price in Secunderabad,
+          Hyderabad & 2022 Offers
         </title>
         <meta
           name='title'
-          content='Nexa Grand Vitara Car On-Road Price, Mileage, Specifications & Offers | Saboo Nexa'
+          content=' Maruti New Suzuki Grand Vitara On Road Price in Secunderabad,
+          Hyderabad & 2022 Offers'
         />
         <meta
           name='description'
-          content='Maruti Suzuki Nexa Grand Vitara On Road Price in Hyderabad. Grand Vitara Price Starts at 10.45Lac*. Nexa Vitara Comes with Panoramic Sunroof, 6- Air bags, 6-Speed Automatic Transmission. For More Info & Offers Visit Nearest Saboo Nexa Showroom Today or Call Us 9848898488.'
+          content='Maruti Suzuki Grand Vitara in Secunderabad & Hyderabad. Best price & offers on Maruti Vitara at Saboo Nexa. Finance facility also available at the dealership. Please visit your nearest Showroom for best deals. Maruti Suzuki Vitara Most selling SUV. It’s available in 9 exciting colours, 3 models LXI, VXI, ZXI with 1.5L BS6 Petrol Engine Option. Visit our nearest Saboo Maruti branch to get offers or call us 9848898488.'
         />
         {/* <meta
           name="keywords"
@@ -391,7 +393,7 @@ function GrandVitara() {
               </span>
               <div>
                 <Link to='/grand-vitara-features-intelligent-electric-hybrid'>
-                <button className='text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white'>
+                  <button className='text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white'>
                     KNOW MORE
                   </button>
                 </Link>
@@ -406,7 +408,7 @@ function GrandVitara() {
               </span>
               <div>
                 <Link to='/grand-vitara-allgrip'>
-                <button className='text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white'>
+                  <button className='text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white'>
                     KNOW MORE
                   </button>
                 </Link>
@@ -423,7 +425,7 @@ function GrandVitara() {
               </span>
               <div>
                 <Link to='/grand-vitara-6-speed-automatic-transmission-price'>
-                <button className='text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white'>
+                  <button className='text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white'>
                     KNOW MORE
                   </button>
                 </Link>
@@ -489,23 +491,23 @@ const Variant = () => {
               onChange={(e) => setPrice(e.target.value)}
               className='block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
             >
-            <option value='10,70,000'>SIGMA</option>
-                          <option value='12,10,000'>DELTA</option>
-                          <option value='13,91,000'>ZETA</option>
-                          <option value='15,41,000'>ALPHA</option>
-                          <option value='15,57,000'>ALPHA (DT)</option>
-                          <option value='13,60,000'>DELTA AT</option>
-                          <option value='15,41,000'>ZETA AT</option>
-                          <option value='16,91,000'>ALPHA AT</option>
-                          <option value='17,07,000'>ALPHA AT (DT)</option>
-                          <option value='16,91,000'>ALPHA AWD AG</option>
-                          <option value='17,07,000'>ALPHA AWD AG (DT)</option>
-                          <option value='18,29,000'>ZETA+ ECVT</option>
-                          <option value='18,45,000'>ZETA+ ECVT (DT)</option>
-                          <option value='19,79,000'>ALPHA+ ECVT</option>
-                          <option value='19,95,000'>ALPHA ECVT (DT)</option>
-                          <option value='13,05,000'>DELTA CNG</option>
-                          <option value='14,86,000'>ZETA CNG</option>
+              <option value='10,70,000'>SIGMA</option>
+              <option value='12,10,000'>DELTA</option>
+              <option value='13,91,000'>ZETA</option>
+              <option value='15,41,000'>ALPHA</option>
+              <option value='15,57,000'>ALPHA (DT)</option>
+              <option value='13,60,000'>DELTA AT</option>
+              <option value='15,41,000'>ZETA AT</option>
+              <option value='16,91,000'>ALPHA AT</option>
+              <option value='17,07,000'>ALPHA AT (DT)</option>
+              <option value='16,91,000'>ALPHA AWD AG</option>
+              <option value='17,07,000'>ALPHA AWD AG (DT)</option>
+              <option value='18,29,000'>ZETA+ ECVT</option>
+              <option value='18,45,000'>ZETA+ ECVT (DT)</option>
+              <option value='19,79,000'>ALPHA+ ECVT</option>
+              <option value='19,95,000'>ALPHA ECVT (DT)</option>
+              <option value='13,05,000'>DELTA CNG</option>
+              <option value='14,86,000'>ZETA CNG</option>
             </select>
           </div>
           <div className='text-center text-gray-200'>

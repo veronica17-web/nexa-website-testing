@@ -17,21 +17,22 @@ const blogsData = [
   },
   {
     id: 3,
-    img: 'https://media.zigcdn.com/media/content/2023/Jun/6481e4f32d325_720x540_720x540.jpg',
-    title: 'Here’s When Maruti Invicto’s Price Will Be Announced In India',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-blog-thumbnail.webp',
+    title:
+      'Maruti Suzuki Invicto To Launch Tomorrow: 5 Things You Need To Know',
     subTitle:
-      'It will be the first Toyota model to be rebadged as a Maruti Suzuki on our shores',
-    href: 'https://www.zigwheels.com/news-features/general-news/heres-when-maruti-invictos-price-will-be-announced-in-india/50090/',
-    desc: 'Maruti Suzuki has confirmed that the Invicto premium MPV will be launched in India on July 05. The Invicto is nothing but a rebadged version of the Innova Hycross and is the first Toyota model to be rebadged as a Maruti Suzuki on our shores.',
+      'The Maruti Suzuki Invicto is finally set to be launched tomorrow on our shores.',
+    href: 'https://www.zigwheels.com/news-features/general-news/maruti-suzuki-invicto-to-launch-tomorrow-5-things-you-need-to-know/50286/',
+    desc: 'It will be the first Toyota-made vehicle to be sold with a Maruti Suzuki badge in India. Thanks to recent teasers and spy shots, we have some insights into what to expect from this upcoming MPV.',
   },
   {
     id: 4,
-    img: 'https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230521121524_Jimny_5_door.jpg&w=700&q=90&c=1',
-    title: 'Maruti Suzuki Jimny gets more bookings after price announcement',
+    img: 'https://media.zigcdn.com/media/content/2023/Jun/6481e4f32d325_720x540_720x540.jpg',
+    title: 'Invicto to get Panaromic Sunroof',
     subTitle:
-      'Maruti Suzuki Jimny received more than 31,000 bookings since the brand started accepting them back in January 2023.',
-    href: 'https://www.cartoq.com/maruti-suzuki-jimny-gets-more-bookings-after-price-announcement/',
-    desc: 'Maruti Suzuki Jimny received more than 31,000 bookings since the brand started accepting them back in January 2023. While there are murmurs of Jimny being an overpriced product, Maruti Suzuki India’s Senior Executive Officer for Marketing and Sales says that there has been a jump in the number of bookings since the price announcement on June 7.',
+      'Ahead of the July 5 unveiling of its Invicto multi-purpose vehicle (MPV), Maruti Suzuki has released a fresh teaser promoting the car.',
+    href: 'https://www.hindustantimes.com/car-bike/its-confirmed-maruti-suzukis-invicto-to-get-panoramic-sunroof-feature-101688330377970.html',
+    desc: 'Ahead of the July 5 unveiling of its Invicto multi-purpose vehicle (MPV), Maruti Suzuki has released a fresh teaser promoting the car. The teaser reveals, among other things, a feature that is present in only one other Maruti Suzuki car.',
   },
 
   // {

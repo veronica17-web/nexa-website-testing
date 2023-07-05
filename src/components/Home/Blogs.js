@@ -92,26 +92,27 @@ function Blogs() {
             <div href='#'>
               <img
                 class='rounded-t-lg'
-                src='https://media.zigcdn.com/media/content/2023/Jun/6481e4f32d325_720x540_720x540.jpg'
+                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-blog-thumbnail.webp'
                 alt=''
               />
             </div>
             <div class='p-5'>
               <div href='#'>
                 <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                  Here’s When Maruti Invicto’s Price Will Be Announced In India
+                  Maruti Suzuki Invicto To Launch Tomorrow: 5 Things You Need To
+                  Know
                 </h5>
               </div>
-              <p className='text-xs pb-2 text-gray-500'>14 Jun 2023</p>
+              <p className='text-xs pb-2 text-gray-500'>4 Jul 2023</p>
               <p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
-                It will be the first Toyota model to be rebadged as a Maruti
-                Suzuki on our shores
+                The Maruti Suzuki Invicto is finally set to be launched tomorrow
+                on our shores.
               </p>
               <br></br>
-              <br></br>
+
               <a
                 href={
-                  'https://www.zigwheels.com/news-features/general-news/heres-when-maruti-invictos-price-will-be-announced-in-india/50090/'
+                  'https://www.zigwheels.com/news-features/general-news/maruti-suzuki-invicto-to-launch-tomorrow-5-things-you-need-to-know/50286/'
                 }
                 target='_blank'
                 rel='noopener noreferrer'
@@ -138,27 +139,27 @@ function Blogs() {
             <div href='#'>
               <img
                 class='rounded-t-lg'
-                src='https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230521121524_Jimny_5_door.jpg&w=700&q=90&c=1'
+                src='https://media.zigcdn.com/media/content/2023/Jun/6481e4f32d325_720x540_720x540.jpg'
                 alt=''
               />
             </div>
             <div class='p-5'>
               <div href='#'>
                 <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                  Maruti Suzuki Jimny gets more bookings after price
-                  announcement
+                  Invicto to get Panaromic Sunroof
                 </h5>
               </div>
-              <p className='text-xs pb-2 text-gray-500'>14 Jun 2023</p>
+              <p className='text-xs pb-2 text-gray-500'>3 Jul 2023</p>
               <p class='mb-3 tracking-normal font-normal text-gray-700 dark:text-gray-400'>
-                Maruti Suzuki Jimny received more than 31,000 bookings since the
-                brand started accepting them back in January 2023.
+                Ahead of the July 5 unveiling of its Invicto multi-purpose
+                vehicle (MPV), Maruti Suzuki has released a fresh teaser
+                promoting the car.
               </p>
               <br></br>
-
+              <br></br>
               <a
                 href={
-                  'https://www.cartoq.com/maruti-suzuki-jimny-gets-more-bookings-after-price-announcement/'
+                  'https://www.hindustantimes.com/car-bike/its-confirmed-maruti-suzukis-invicto-to-get-panoramic-sunroof-feature-101688330377970.html'
                 }
                 target='_blank'
                 rel='noopener noreferrer'

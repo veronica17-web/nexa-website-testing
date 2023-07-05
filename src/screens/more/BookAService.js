@@ -256,6 +256,7 @@ function BookAService() {
                 <option value='Nexa Service - Lumbini'>Nexa Lumbini</option>
                 <option value='Nexa Service - Jubilee'>Nexa Jubilee</option>
                 <option value='Nexa Service - Kompallly'>Nexa Kompally</option>
+                <option value='Nexa Service - Hafeezpet'>Nexa Hafeezpet</option>
               </select>
             </div>
           </div>
