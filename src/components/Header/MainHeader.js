@@ -10,7 +10,7 @@ const navigation = {
       name: 'Vehicles',
       featured: [
         {
-          name: 'Created to…..in order to maintain uniformity',
+          name: 'Created to Inspire the Extraordinary',
           brand_logo:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Invicto+Logo-header.webp',
           href: '/maruti-suzuki-new-invicto',

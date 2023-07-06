@@ -17,22 +17,21 @@ const blogsData = [
   },
   {
     id: 3,
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-blog-thumbnail.webp',
-    title:
-      'Maruti Suzuki Invicto To Launch Tomorrow: 5 Things You Need To Know',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/blog-6-jul.webp',
+    title: 'Maruti Suzuki Invicto launched: All You Need to Know',
     subTitle:
-      'The Maruti Suzuki Invicto is finally set to be launched tomorrow on our shores.',
-    href: 'https://www.zigwheels.com/news-features/general-news/maruti-suzuki-invicto-to-launch-tomorrow-5-things-you-need-to-know/50286/',
-    desc: 'It will be the first Toyota-made vehicle to be sold with a Maruti Suzuki badge in India. Thanks to recent teasers and spy shots, we have some insights into what to expect from this upcoming MPV.',
+      'The newest offering from the Toyota and Suzuki collaboration, the Invicto, is the rebadged version of the Hycross.',
+    href: 'https://www.carwale.com/news/maruti-suzuki-invicto-launch-all-you-need-to-know/',
+    desc: 'Undoubtedly, the Invicto is the most expensive Maruti to date. Its available across two variants, with the introductory prices starting at Rs. 24.79 lakh for the Zeta Plus trim and the Alpha Plus trim goes up to Rs. 28.42 lakh, ex-showroom.',
   },
   {
     id: 4,
-    img: 'https://media.zigcdn.com/media/content/2023/Jun/6481e4f32d325_720x540_720x540.jpg',
-    title: 'Invicto to get Panaromic Sunroof',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/blog-invicto-2.webp',
+    title: 'Maruti Suzuki Invicto MPV launched at Rs 24.79 lakh',
     subTitle:
-      'Ahead of the July 5 unveiling of its Invicto multi-purpose vehicle (MPV), Maruti Suzuki has released a fresh teaser promoting the car.',
-    href: 'https://www.hindustantimes.com/car-bike/its-confirmed-maruti-suzukis-invicto-to-get-panoramic-sunroof-feature-101688330377970.html',
-    desc: 'Ahead of the July 5 unveiling of its Invicto multi-purpose vehicle (MPV), Maruti Suzuki has released a fresh teaser promoting the car. The teaser reveals, among other things, a feature that is present in only one other Maruti Suzuki car.',
+      'The Invicto is a re-badged version of the Innova Hycross. It is available in 7-seater or 8-seater configurations.',
+    href: 'https://www.team-bhp.com/news/maruti-suzuki-invicto-mpv-launched-rs-2479-lakh',
+    desc: 'While the overall design of the Invicto is similar to the Innova Hycross, Maruti has made a few changes to help differentiate it from the Toyota. The Invicto gets a different hexagonal grille and tweaked LED headlamps.',
   },
 
   // {

@@ -29,6 +29,10 @@ const navigation = {
       name: 'Maruti Jimny',
       to: '/maruti-jimny-price-in-hyderabad',
     },
+    {
+      name: 'Maruti Invicto',
+      to: '/maruti-suzuki-new-invicto',
+    },
   ],
   corporate: [
     { name: 'About', to: '/about' },

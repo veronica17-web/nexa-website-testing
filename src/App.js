@@ -55,6 +55,7 @@ import BalenoCNG from './screens/more/CNG/BalenoCNG';
 import XL6CNG from './screens/more/CNG/XL6CNG';
 import NexaPriceList from './screens/more/NexaPriceList';
 import Invicto from './screens/cars/Invicto';
+import Service24x7 from './screens/services/Service24x7';
 
 axios.defaults.baseURL = 'https://saboogroups.com/admin/api/';
 
@@ -396,6 +397,7 @@ function App() {
         {/* services */}
         <Route path='/maruti-car-insurance' element={<Insurance />} />
         <Route path='/maruti-car-finance' element={<Finance />} />
+        <Route path='/maruti-service' element={<Service24x7 />} />
         {/* outlets */}
         <Route
           path='/maruti-nexa-showroom-outlets-in-hyderabad'
@@ -433,10 +435,7 @@ function App() {
           path='/grand-vitara-on-road-price-in-hyderabad'
           element={<GrandVitara />}
         />
-        <Route
-          path='/maruti-suzuki-new-invicto'
-          element={<Invicto />}
-        />
+        <Route path='/maruti-suzuki-new-invicto' element={<Invicto />} />
         <Route path='/grand-vitara-cng' element={<GrandVitaraCNG />} />
         <Route path='/baleno-cng' element={<BalenoCNG />} />
         <Route path='/xl6-cng' element={<XL6CNG />} />

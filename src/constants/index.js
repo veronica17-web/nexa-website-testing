@@ -116,7 +116,7 @@ export const products = [
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/D23+logo+without+outline+Black_125x35.webp',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-main-thubmnail-no-bg.webp',
     brouchure:
-      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Invicto+Brochure_Invicto+pdf.pdf',
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Saboo+RKS_Invicto.pdf',
     explore: '/maruti-suzuki-new-invicto',
     engineType: '',
     fuelType: '',
@@ -362,13 +362,7 @@ export const offer_products = [
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp',
     explore: '/nexa-ignis-on-road-price-in-hyderabad',
   },
-  {
-    name: 'ignis',
-    price: '₹ 68,600 /-',
-    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp',
-    explore: '/nexa-ignis-on-road-price-in-hyderabad',
-  },
+
   // {
   //   name: 'ignis (AGS)',
   //   price: '₹ 34,000 /-',
@@ -378,7 +372,7 @@ export const offer_products = [
   // },
   {
     name: 'Ciaz',
-    price: '₹ 38,000 /-',
+    price: '₹ 48,000 /-',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-ciaz.webp',
     explore: '/nexa-ciaz-on-road-price-in-hyderabad',
