@@ -31,7 +31,7 @@ const navigation = {
     },
     {
       name: 'Maruti Invicto',
-      to: '/maruti-suzuki-new-invicto',
+      to: '/maruti-invicto-price-in-hyderabad',
     },
   ],
   corporate: [

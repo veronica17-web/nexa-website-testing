@@ -65,6 +65,8 @@ function Blogs() {
               </p>
               <br></br>
               <br></br>
+              <br></br>
+              <br></br>
 
               <a
                 href='/gallery'
@@ -92,26 +94,29 @@ function Blogs() {
             <div href='#'>
               <img
                 class='rounded-t-lg'
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/blog-6-jul.webp'
+                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/grand-vitara-blogpost-19-jul.webp'
                 alt=''
               />
             </div>
             <div class='p-5'>
               <div href='#'>
                 <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                  Maruti Suzuki Invicto launched: All You Need to Know
+                  Maruti Suzuki Grand Vitara Hybrid Will Alert Pedestrians, But
+                  There’s A Catch!
                 </h5>
               </div>
-              <p className='text-xs pb-2 text-gray-500'>5 Jul 2023</p>
+              <p className='text-xs pb-2 text-gray-500'>18 Jul 2023</p>
               <p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
-                The newest offering from the Toyota and Suzuki collaboration,
-                the Invicto, is the rebadged version of the Hycross.
+                It emits a low-level sound, alerting pedestrians while being
+                driven in EV-only mode.
               </p>
               <br></br>
               <br></br>
+              <br></br>
+
               <a
                 href={
-                  'https://www.carwale.com/news/maruti-suzuki-invicto-launch-all-you-need-to-know/'
+                  'https://www.zigwheels.com/news-features/hybrid-vehicle-news/maruti-suzuki-grand-vitara-hybrid-will-alert-pedestrians-but-theres-a-catch/50447/#leadform'
                 }
                 target='_blank'
                 rel='noopener noreferrer'
@@ -138,26 +143,28 @@ function Blogs() {
             <div href='#'>
               <img
                 class='rounded-t-lg'
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/blog-invicto-2.webp'
+                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/grand-vitara-blogpost-2-19july.webp'
                 alt=''
               />
             </div>
             <div class='p-5'>
               <div href='#'>
                 <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                  Maruti Suzuki Invicto MPV launched at Rs 24.79 lakh
+                  Maruti Grand Vitara Hybrid SUV price hiked. Check how much
+                  more one needs to pay
                 </h5>
               </div>
-              <p className='text-xs pb-2 text-gray-500'>5 Jul 2023</p>
+              <p className='text-xs pb-2 text-gray-500'>18 Jul 2023</p>
               <p class='mb-3 tracking-normal font-normal text-gray-700 dark:text-gray-400'>
-                The Invicto is a re-badged version of the Innova Hycross. It is
-                available in 7-seater or 8-seater configurations.
+                Maruti Suzuki has increased the price of its flagship compact
+                SUV Grand Vitara from Monday, July 17.
               </p>
               <br></br>
               <br></br>
+
               <a
                 href={
-                  'https://www.team-bhp.com/news/maruti-suzuki-invicto-mpv-launched-rs-2479-lakh'
+                  'https://auto.hindustantimes.com/auto/cars/maruti-suzuki-grand-vitara-hybrid-suv-price-hiked-after-addition-of-this-new-safety-feature-41689648973634.html'
                 }
                 target='_blank'
                 rel='noopener noreferrer'

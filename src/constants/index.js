@@ -1,9 +1,9 @@
 //same for home screen and offers screen
 export const sliders = [
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/website+Maruti+Suzuki+Service+Workshop+Hafeezpet.webp',
-  //   alt: 'NEW HAFEEZPET BANNER 2023',
-  // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-offers+banner.webp',
+    alt: 'NEW HAFEEZPET BANNER 2023',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-banner.webp',
     alt: 'jimny-banner',
@@ -43,8 +43,12 @@ export const sliders = [
 //same for home screen and offers screen
 export const mobileSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Website+Mobile+Saboo+RKS+Nexa+Invicto+Banner.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-mobile-banner.webp',
     alt: 'invicto mobile banner',
+  },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Mobile++Maruti+Suzuki+Service+June+Offers+Saboo+RKS+Motor.psd.webp',
+    alt: 'NEW sesrvice banner',
   },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner.webp',
@@ -99,9 +103,13 @@ export const bookAservice = [
   //   alt: 'april 2023 service banner',
   // },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp',
-    alt: 'NEW HAFEEZPET BANNER',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Service+June+Offers+Saboo+RKS+Motor.webp',
+    alt: 'NEW service BANNER',
   },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp',
+  //   alt: 'NEW HAFEEZPET BANNER',
+  // },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-banner.webp',
   //   alt: 'banner-2',
@@ -117,7 +125,7 @@ export const products = [
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-main-thubmnail-no-bg.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Saboo+RKS_Invicto.pdf',
-    explore: '/maruti-suzuki-new-invicto',
+    explore: '/',
     engineType: '',
     fuelType: '',
     displacement: '',
@@ -142,7 +150,7 @@ export const products = [
     name: 'Fronx',
     price: '746500',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/Flash_header_Menu_logo.webp',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/fronx.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/fronx-cng-thumbnail.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/FRONX+Brochure.pdf',
     explore: '/maruti-fronx-price-in-hyderabad',

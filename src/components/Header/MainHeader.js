@@ -10,10 +10,10 @@ const navigation = {
       name: 'Vehicles',
       featured: [
         {
-          name: 'Created to Inspire the Extraordinary',
+          name: 'Created to…..in order to maintain uniformity',
           brand_logo:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Invicto+Logo-header.webp',
-          href: '/maruti-suzuki-new-invicto',
+          href: '/maruti-invicto-price-in-hyderabad',
           imageSrc:
             'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-thumbnail.webp',
           imageAlt: 'Suzuki invicto',
@@ -441,30 +441,30 @@ function MainHeader() {
                                 />
 
                                 <div className='relative bg-white'>
-                                  <div className='container mx-auto px-8'>
-                                    <div className='grid grid-cols-6 gap-4 gap-x-8 py-6'>
+                                  <div className='container mx-auto px-8 '>
+                                    <div className='grid grid-cols-4 gap-4  py-6'>
                                       {category.featured.map((item) => (
                                         <div
                                           key={item.name}
-                                          className='group relative text-base sm:text-sm'
+                                          className='group relative text-base sm:text-sm hover:bg-gradient-to-tr from-white via-stone-200 to-white p-2 rounded-lg'
                                         >
-                                          <div className='flex justify-center my-4'>
-                                            <img
-                                              src={item.brand_logo}
-                                              alt={item.imageAlt}
-                                              className='object-center object-cover h-5'
-                                            />
-                                          </div>
-                                          <div className='aspect-w-1 aspect-h-1 rounded-lg p-5 bg-gray-100 overflow-hidden group-hover:opacity-75'>
+                                          <div className='aspect-w-1 aspect-h-1 rounded-lg p-3  overflow-hidden group-hover:scale-110 '>
                                             <img
                                               src={item.imageSrc}
                                               alt={item.imageAlt}
-                                              className='object-center object-cover mx-auto'
+                                              className='object-center object-cover mx-auto '
+                                            />
+                                          </div>
+                                          <div className='flex justify-center my-2'>
+                                            <img
+                                              src={item.brand_logo}
+                                              alt={item.imageAlt}
+                                              className='object-center object-cover h-8'
                                             />
                                           </div>
                                           <Link
                                             to={item.href}
-                                            className='mt-6 block font-medium text-gray-900'
+                                            className='mt-6 text-center block font-medium text-gray-900'
                                           >
                                             <span
                                               className='absolute z-10 inset-0'
@@ -474,7 +474,7 @@ function MainHeader() {
                                           </Link>
                                           <p
                                             aria-hidden='true'
-                                            className='mt-1'
+                                            className='mt-1 text-center text-gray-900 '
                                           >
                                             <span>
                                               <b> {item.price}</b>

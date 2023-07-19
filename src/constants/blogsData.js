@@ -17,21 +17,23 @@ const blogsData = [
   },
   {
     id: 3,
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/blog-6-jul.webp',
-    title: 'Maruti Suzuki Invicto launched: All You Need to Know',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/grand-vitara-blogpost-19-jul.webp',
+    title:
+      'Maruti Suzuki Grand Vitara Hybrid Will Alert Pedestrians, But There’s A Catch!',
     subTitle:
-      'The newest offering from the Toyota and Suzuki collaboration, the Invicto, is the rebadged version of the Hycross.',
-    href: 'https://www.carwale.com/news/maruti-suzuki-invicto-launch-all-you-need-to-know/',
-    desc: 'Undoubtedly, the Invicto is the most expensive Maruti to date. Its available across two variants, with the introductory prices starting at Rs. 24.79 lakh for the Zeta Plus trim and the Alpha Plus trim goes up to Rs. 28.42 lakh, ex-showroom.',
+      'It emits a low-level sound, alerting pedestrians while being driven in EV-only mode',
+    href: 'https://www.zigwheels.com/news-features/hybrid-vehicle-news/maruti-suzuki-grand-vitara-hybrid-will-alert-pedestrians-but-theres-a-catch/50447/#leadform',
+    desc: 'Maruti Suzuki has introduced a new safety feature in the strong-hybrid variants of the Grand Vitara. Called the  ‘Acoustic Vehicle Alerting System’, it emits a low alert sound that can be heard up to five feet away, to denote that the vehicle is approaching them.',
   },
   {
     id: 4,
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/blog-invicto-2.webp',
-    title: 'Maruti Suzuki Invicto MPV launched at Rs 24.79 lakh',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/grand-vitara-blogpost-2-19july.webp',
+    title:
+      'Maruti Grand Vitara Hybrid SUV price hiked. Check how much more one needs to pay.',
     subTitle:
-      'The Invicto is a re-badged version of the Innova Hycross. It is available in 7-seater or 8-seater configurations.',
-    href: 'https://www.team-bhp.com/news/maruti-suzuki-invicto-mpv-launched-rs-2479-lakh',
-    desc: 'While the overall design of the Invicto is similar to the Innova Hycross, Maruti has made a few changes to help differentiate it from the Toyota. The Invicto gets a different hexagonal grille and tweaked LED headlamps.',
+      'Maruti Suzuki has increased the price of its flagship compact SUV Grand Vitara from Monday, July 17.',
+    href: 'https://auto.hindustantimes.com/auto/cars/maruti-suzuki-grand-vitara-hybrid-suv-price-hiked-after-addition-of-this-new-safety-feature-41689648973634.html',
+    desc: 'Maruti Suzuki, in a regulatory filing on Monday, said that the AVAS for the Intelligent Electric Hybrid Variants of the Grand Vitara will cost another 4000/- on the existing ex-showroom price. ',
   },
 
   // {

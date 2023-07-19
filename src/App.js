@@ -435,7 +435,10 @@ function App() {
           path='/grand-vitara-on-road-price-in-hyderabad'
           element={<GrandVitara />}
         />
-        <Route path='/maruti-suzuki-new-invicto' element={<Invicto />} />
+        <Route
+          path='/maruti-invicto-price-in-hyderabad'
+          element={<Invicto />}
+        />
         <Route path='/grand-vitara-cng' element={<GrandVitaraCNG />} />
         <Route path='/baleno-cng' element={<BalenoCNG />} />
         <Route path='/xl6-cng' element={<XL6CNG />} />

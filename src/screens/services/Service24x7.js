@@ -126,108 +126,124 @@ function Service24x7() {
       <ArticlewithImage />
       <FeatureService />
 
-      <div className='container mx-auto py-16 px-5 lg:px-0'>
-        <form
-          action={
-            pattern.test(phone) && phone.length === 10
-              ? 'https://crm.zoho.in/crm/WebToLeadForm'
-              : '#'
-          }
-          name='WebToLeads54158000001051288'
-          method={method}
-          acceptCharset='UTF-8'
-        >
-          <input
-            type='text'
-            style={{ display: 'none' }}
-            name='xnQsjsdp'
-            value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'
-          />
-          <input type='hidden' name='zc_gad' id='zc_gad' value='' />
-          <input
-            type='text'
-            style={{ display: 'none' }}
-            name='xmIwtLD'
-            value='3e4c511e1bfac462fb9ac158b261b0d3a1f7118a5052416c6735cee16458265f'
-          />
-          <input
-            type='text'
-            style={{ display: 'none' }}
-            name='actionType'
-            value='TGVhZHM='
-          />
-          <input
-            type='text'
-            style={{ display: 'none' }}
-            name='returnURL'
-            value='https://www.saboonexa.in/thank-you?email=Email'
-          />
-          <input
-            type='text'
-            style={{ display: 'none' }}
-            id='ldeskuid'
-            name='ldeskuid'
-          />
-          <input
-            type='text'
-            style={{ display: 'none' }}
-            id='LDTuvid'
-            name='LDTuvid'
-          />
-          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-3'>
-            <div>
-              <label className='block text-sm font-medium text-gray-700'>
-                Name <span className='text-red-600'>*</span>
-              </label>
-              <input
-                className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                type='text'
-                id='Last_Name'
-                name='Last Name'
-                required
-                onChange={(e) => setName(e.target.value)}
-              />
+      <div className=''>
+        <div className='container mx-auto py-16 px-5 lg:px-0'>
+          <section class='bg-white dark:bg-gray-900'>
+            <div class=''>
+              <h2 class='mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white'>
+                Contact Us
+              </h2>
+              <p class='mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl'>
+                We are your trusted destination for round-the-clock vehicle
+                repairs and maintenance. Our dedicated team of skilled
+                technicians is available 24 hours a day, 7 days a week to
+                provide exceptional service for all your automotive needs
+              </p>
             </div>
-            <div>
-              <label className='block text-sm font-medium text-gray-700'>
-                Email
-              </label>
-              <input
-                className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                type='text'
-                ftype='email'
-                id='Email'
-                name='Email'
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div>
-              <label className='block text-sm font-medium text-gray-700'>
-                Phone <span className='text-red-600'>*</span>
-              </label>
-              <input
-                className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                type='text'
-                minLength='10'
-                maxLength='10'
-                required
-                id='Mobile'
-                name='Mobile'
-                value={phone}
-                onChange={(e) =>
-                  setPhone(
-                    e.target.value.replace(/[^1-9]/g, '') &&
-                      e.target.value.replace(/ /g, '')
-                  )
-                }
-              />
-              {!pattern.test(phone) && phone.length === 10 ? (
-                <small className='text-red-500'>phone number is invalid</small>
-              ) : (
-                ''
-              )}
-            </div>
-            {/* <div>
+          </section>
+          <form
+            action={
+              pattern.test(phone) && phone.length === 10
+                ? 'https://crm.zoho.in/crm/WebToLeadForm'
+                : '#'
+            }
+            name='WebToLeads54158000001051288'
+            method={method}
+            acceptCharset='UTF-8'
+          >
+            <input
+              type='text'
+              style={{ display: 'none' }}
+              name='xnQsjsdp'
+              value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'
+            />
+            <input type='hidden' name='zc_gad' id='zc_gad' value='' />
+            <input
+              type='text'
+              style={{ display: 'none' }}
+              name='xmIwtLD'
+              value='3e4c511e1bfac462fb9ac158b261b0d3a1f7118a5052416c6735cee16458265f'
+            />
+            <input
+              type='text'
+              style={{ display: 'none' }}
+              name='actionType'
+              value='TGVhZHM='
+            />
+            <input
+              type='text'
+              style={{ display: 'none' }}
+              name='returnURL'
+              value='https://www.saboonexa.in/thank-you?email=Email'
+            />
+            <input
+              type='text'
+              style={{ display: 'none' }}
+              id='ldeskuid'
+              name='ldeskuid'
+            />
+            <input
+              type='text'
+              style={{ display: 'none' }}
+              id='LDTuvid'
+              name='LDTuvid'
+            />
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-3'>
+              <div>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Name <span className='text-red-600'>*</span>
+                </label>
+                <input
+                  className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
+                  type='text'
+                  id='Last_Name'
+                  name='Last Name'
+                  required
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Email
+                </label>
+                <input
+                  className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
+                  type='text'
+                  ftype='email'
+                  id='Email'
+                  name='Email'
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Phone <span className='text-red-600'>*</span>
+                </label>
+                <input
+                  className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
+                  type='text'
+                  minLength='10'
+                  maxLength='10'
+                  required
+                  id='Mobile'
+                  name='Mobile'
+                  value={phone}
+                  onChange={(e) =>
+                    setPhone(
+                      e.target.value.replace(/[^1-9]/g, '') &&
+                        e.target.value.replace(/ /g, '')
+                    )
+                  }
+                />
+                {!pattern.test(phone) && phone.length === 10 ? (
+                  <small className='text-red-500'>
+                    phone number is invalid
+                  </small>
+                ) : (
+                  ''
+                )}
+              </div>
+              {/* <div>
               <label className="block text-sm font-medium text-gray-700">
                 Model
               </label>
@@ -245,66 +261,125 @@ function Service24x7() {
                 <option>XL6</option>
               </select>
             </div> */}
-            <div>
-              <label className='block text-sm font-medium text-gray-700'>
-                Select Your Service Center{' '}
-                <span className='text-red-600'>*</span>
-              </label>
-              <select
-                id='LEADCF22'
-                name='LEADCF22'
-                onChange={(e) => setPickup(e.target.value)}
-                className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
-              >
-                <option>Select Outlet</option>
+              <div>
+                <label className='block text-sm font-medium text-gray-700'>
+                  Select Your Service Center{' '}
+                  <span className='text-red-600'>*</span>
+                </label>
+                <select
+                  id='LEADCF22'
+                  name='LEADCF22'
+                  onChange={(e) => setPickup(e.target.value)}
+                  className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
+                >
+                  <option>Select Outlet</option>
 
-                <option value='Nexa Service - Hafeezpet'>Nexa Hafeezpet</option>
-              </select>
-            </div>
-          </div>
-          <div className='flex items-start py-4'>
-            <input
-              id='disclaimer'
-              name='disclaimer'
-              type='checkbox'
-              className='h-4 w-4 rounded'
-              required
-            />
-            <div className='ml-2 text-sm'>
-              <label htmlFor='disclaimer' className='font-medium text-gray-700'>
-                <span className='text-black font-bold'>Disclaimer</span>: I
-                agree that by clicking the ‘Submit’ button below, I am
-                explicitly soliciting a call / message from Saboo Maruti (RKS
-                Motor Pvt. Ltd) or its representatives on my ‘Mobile’
-              </label>
-            </div>
-          </div>
-          <button
-            className='bg-black text-white rounded py-2.5 px-5'
-            type='submit'
-            disabled={
-              pattern.test(phone) && phone.length === 10
-                ? false
-                : true && loader
-                ? true
-                : false
-            }
-            onClick={handleSubmit}
-          >
-            {loader ? (
-              <div className='flex items-center justify-center'>
-                <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
-                Loading
+                  <option value='Nexa Service - Hafeezpet'>
+                    Nexa Hafeezpet
+                  </option>
+                </select>
               </div>
-            ) : (
-              'Book A Service'
-            )}
-          </button>
-        </form>
+            </div>
+            <div className='flex items-start py-4'>
+              <input
+                id='disclaimer'
+                name='disclaimer'
+                type='checkbox'
+                className='h-4 w-4 rounded'
+                required
+              />
+              <div className='ml-2 text-sm'>
+                <label
+                  htmlFor='disclaimer'
+                  className='font-medium text-gray-700'
+                >
+                  <span className='text-black font-bold'>Disclaimer</span>: I
+                  agree that by clicking the ‘Submit’ button below, I am
+                  explicitly soliciting a call / message from Saboo Maruti (RKS
+                  Motor Pvt. Ltd) or its representatives on my ‘Mobile’
+                </label>
+              </div>
+            </div>
+            <button
+              className='bg-black text-white rounded py-2.5 px-5'
+              type='submit'
+              disabled={
+                pattern.test(phone) && phone.length === 10
+                  ? false
+                  : true && loader
+                  ? true
+                  : false
+              }
+              onClick={handleSubmit}
+            >
+              {loader ? (
+                <div className='flex items-center justify-center'>
+                  <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
+                  Loading
+                </div>
+              ) : (
+                'Book A Service'
+              )}
+            </button>
+          </form>
+        </div>
       </div>
     </>
   );
 }
+
+const ContactForm = () => {
+  const [name, setName] = useState();
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState();
+  // const [model, setModel] = useState();
+  const [pickup, setPickup] = useState();
+  const [method, setMethod] = useState('');
+
+  const [loader, setLoader] = useState(false);
+
+  const pattern = /^[6-9][0-9]{6,9}$/;
+  if (phone !== '' && phone.length === 10) {
+    if (!pattern.test(phone)) {
+      toast.error('Enter valid phone number', {
+        theme: 'colored',
+      });
+    }
+  }
+
+  function handleSubmit() {
+    setLoader(true);
+    try {
+      axios.post('https://saboogroups.com/admin/api/book-a-service', {
+        name: name,
+        phone: phone,
+        email: email,
+        // model: model,
+        pickup: pickup,
+      });
+      setMethod('POST');
+      setLoader(false);
+    } catch (error) {
+      toast.error('Something went wrong!');
+      setLoader(false);
+    }
+  }
+  return (
+    <>
+      <section class='bg-white dark:bg-gray-900'>
+        <div class='py-8 lg:py-16 px-4 mx-auto max-w-screen-md'>
+          <h2 class='mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white'>
+            Contact Us
+          </h2>
+          <p class='mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl'>
+            Got a technical issue? Want to send feedback about a beta feature?
+            Need details about our Business plan? Let us know.
+          </p>
+        </div>
+      </section>
+    </>
+  );
+};
 
 function Slider() {
   return (
@@ -588,7 +663,159 @@ function EnquiryPopup({ open, phone, setPhone, setOpen, title }) {
 export const FeatureService = () => {
   return (
     <>
-      <section class='text-gray-600 body-font'>
+      <section class='bg-white dark:bg-gray-900'>
+        <div class='container px-6 py-10 mx-auto'>
+          <h1 class='text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white'>
+            explore our <br></br> 24x7 Services
+          </h1>
+
+          <div class='mt-2'>
+            <span class='inline-block w-40 h-1 bg-blue-500 rounded-full'></span>
+            <span class='inline-block w-3 h-1 ml-1 bg-blue-500 rounded-full'></span>
+            <span class='inline-block w-1 h-1 ml-1 bg-blue-500 rounded-full'></span>
+          </div>
+
+          <div class='mt-8 xl:mt-12 lg:flex lg:items-center'>
+            <div class='grid w-full grid-cols-1 gap-8 lg:w-1/2 xl:gap-16 md:grid-cols-2'>
+              <div class='space-y-3'>
+                <span class='inline-block p-3 text-blue-500 bg-blue-100 rounded-xl dark:text-white dark:bg-blue-500'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='w-6 h-6'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
+                    />
+                  </svg>
+                </span>
+
+                <h1 class='text-xl font-semibold text-gray-700 capitalize dark:text-white'>
+                  Emergency roadside assistance
+                </h1>
+
+                <p class='text-gray-500 dark:text-gray-300'>
+                  This service provides immediate help in case of breakdowns,
+                  accidents, flat tires, dead batteries, or other unexpected car
+                  issues. It may include services like jump-starting the car,
+                  towing, fuel delivery, lockout assistance, and tire
+                  replacement.
+                </p>
+              </div>
+
+              <div class='space-y-3'>
+                <span class='inline-block p-3 text-blue-500 bg-blue-100 rounded-xl dark:text-white dark:bg-blue-500'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='w-6 h-6'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z'
+                    />
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z'
+                    />
+                  </svg>
+                </span>
+
+                <h1 class='text-xl font-semibold text-gray-700 capitalize dark:text-white'>
+                  Vehicle maintenance and repairs
+                </h1>
+
+                <p class='text-gray-500 dark:text-gray-300'>
+                  24x7 car care services may offer on-call or on-site mechanics
+                  who can perform basic repairs, routine maintenance tasks, and
+                  diagnostic checks. This can include oil changes, filter
+                  replacements, battery checks, brake repairs, and minor fixes.
+                </p>
+              </div>
+
+              <div class='space-y-3'>
+                <span class='inline-block p-3 text-blue-500 bg-blue-100 rounded-xl dark:text-white dark:bg-blue-500'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='w-6 h-6'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z'
+                    />
+                  </svg>
+                </span>
+
+                <h1 class='text-xl font-semibold text-gray-700 capitalize dark:text-white'>
+                  Mobile car washing and detailing
+                </h1>
+
+                <p class='text-gray-500 dark:text-gray-300'>
+                  Some car care services provide mobile car wash and detailing
+                  services, allowing customers to have their vehicles cleaned
+                  and maintained at their preferred location, even during late
+                  hours.
+                </p>
+              </div>
+
+              <div class='space-y-3'>
+                <span class='inline-block p-3 text-blue-500 bg-blue-100 rounded-xl dark:text-white dark:bg-blue-500'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='w-6 h-6'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z'
+                    />
+                  </svg>
+                </span>
+
+                <h1 class='text-xl font-semibold text-gray-700 capitalize dark:text-white'>
+                  24x7 customer support
+                </h1>
+
+                <p class='text-gray-500 dark:text-gray-300'>
+                  Car care services with a 24x7 operating model often have a
+                  dedicated customer support helpline that can assist with
+                  inquiries, scheduling appointments, and coordinating services
+                  at any time of the day.
+                </p>
+              </div>
+            </div>
+
+            <div class='hidden lg:flex lg:w-1/2 lg:justify-center'>
+              <img
+                class='w-[28rem] h-[28rem] flex-shrink-0 object-cover xl:w-[34rem] xl:h-[34rem] rounded-full'
+                src='https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+                alt=''
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <section class='text-gray-600 body-font'>
         <div class='container px-5 py-10 mx-auto'>
           <div class='flex flex-col text-center w-full mb-20'>
             <h1 class='sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900'>
@@ -683,7 +910,7 @@ export const FeatureService = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
