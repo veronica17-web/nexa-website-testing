@@ -422,6 +422,7 @@ function App() {
         <Route path='/nexa-car-offers-in-hyderabad' element={<Offers />} />
         <Route path='/offers' element={<Offers />} />
         <Route path='/pricelist' element={<NexaPriceList />} />
+
         <Route
           path='/book-online-maruti-nexa-car-service/'
           element={<BookAService />}

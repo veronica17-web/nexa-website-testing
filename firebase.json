@@ -14,6 +14,11 @@
         "type": 301
       },
       {
+        "source": "/maruti-suzuki-new-invicto",
+        "destination": "/maruti-invicto-price-in-hyderabad",
+        "type": 301
+      },
+      {
         "source": "/accessories.php",
         "destination": "/accessories",
         "type": 301

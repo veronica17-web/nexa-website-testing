@@ -70,7 +70,7 @@ function Footer() {
   return (
     <>
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Saboo-Nexa-Footer-Banner-wtih-Cars.webp'
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Saboo-RKS-Nexa-Footer.webp'
         className='w-full mw-full'
         alt='footer'
       />

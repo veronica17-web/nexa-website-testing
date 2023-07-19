@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+
 import { CgSpinner } from 'react-icons/cg';
 import EnquiryPopup from '../utils/EnquiryPopup';
 
-function CarEnquiry() {
+function CarEnquiries() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -14,29 +15,61 @@ function CarEnquiry() {
   const [method, setMethod] = useState();
   const [loader, setLoader] = useState(false);
 
-  function handleSubmit() {
-    setLoader(true);
+  // Use useEffect to execute the API calls when the form is submitted
+  useEffect(() => {
+    if (loader) {
+      handleAPICalls();
+    }
+  }, [loader]);
+
+  function handleAPICalls() {
+    const api1 = axios.post('https://saboogroups.com/admin/api/enquiry', {
+      name: name,
+      email: email,
+      phone: phone,
+      model: model,
+    });
+
+    const api2 = axios.get(
+      `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+    );
+
+    // Use axios.all() or axios.spread() to handle multiple API calls
     axios
-      .post('https://saboogroups.com/admin/api/enquiry', {
-        name: name,
-        email: email,
-        phone: phone,
-        model: model,
-      })
-      .then((res) => {
-        setMethod('POST');
-        toast.success('Enquiry sent successfully');
-      })
-      .catch((err) => {
+      .all([api1, api2])
+      .then(
+        axios.spread((response1, response2) => {
+          // Handle the responses from both APIs here
+          console.log('API1 Response:', response1.data);
+          console.log('API2 Response:', response2.data);
+          // You can update state or perform other actions as needed
+          setMethod('POST');
+          toast.success('Enquiry sent successfully');
+        })
+      )
+      .catch((error) => {
         setLoader(false);
         toast.error('Something went wrong!');
-        console.log(err);
+        console.error(error);
+      })
+      .finally(() => {
+        setLoader(false);
       });
-    setLoader(false);
   }
 
+  // ... Rest of your code ...
 
-
+  function handleSubmit(event) {
+    event.preventDefault();
+    setLoader(true);
+  }
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
@@ -165,9 +198,7 @@ function CarEnquiry() {
                   disabled={
                     pattern.test(phone) && phone.length === 10 ? false : true
                   }
-                  onClick={
-                    handleSubmit
-                  }
+                  onClick={handleSubmit}
                   className='w-full h-10 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
                 >
                   {loader ? (
@@ -184,77 +215,8 @@ function CarEnquiry() {
           </form>
         </div>
       </div>
-      <BuyerOptions />
     </>
   );
 }
 
-const BuyerOptions = () => {
-  const [open, setOpen] = useState(false);
-  const [phone, setPhone] = useState('');
-  return (
-    <>
-      <div className='container mx-auto py-16'>
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-3 lg:px-0  px-5'>
-          <button onClick={() => setOpen(true)}>
-            <div className='bg-white drop-shadow-lg hover:shadow-lg rounded space-y-3 py-3 w-full max-w-[350px] mx-auto mb-4 '>
-              <img
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/Saboo-Nexa-Car-Test-Drive.webp'
-                alt='1'
-                className='mx-auto h-16'
-              />
-              <p className='uppercase font-bold text-center text-sm text-gray-700'>
-                book a test drive
-              </p>
-            </div>
-          </button>
-          <Link to='/maruti-nexa-showroom-outlets-in-hyderabad'>
-            <div className='bg-white drop-shadow-lg hover:shadow-lg rounded space-y-3 py-3 w-full max-w-[350px] mx-auto mb-4 '>
-              <img
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/Saboo-Nexa-Showroom-Locate.webp'
-                alt='1'
-                className='mx-auto h-16'
-              />
-              <p className='uppercase font-bold text-center text-sm text-gray-700'>
-                locate a showroom
-              </p>
-            </div>
-          </Link>
-          <button onClick={() => setOpen(true)}>
-            <div className='bg-white drop-shadow-lg hover:shadow-lg rounded space-y-3 py-3 w-full max-w-[350px] mx-auto mb-4 '>
-              <img
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/Saboo-Nexa-Book-Showroom-Visit.webp'
-                alt='1'
-                className='mx-auto h-16'
-              />
-              <p className='uppercase font-bold text-center text-sm text-gray-700'>
-                book a showroom visit
-              </p>
-            </div>
-          </button>
-          <Link to='/maruti-car-insurance'>
-            <div className='bg-white drop-shadow-lg hover:shadow-lg rounded space-y-3 py-3 w-full max-w-[350px] mx-auto mb-4 '>
-              <img
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/Saboo-Nexa-Ebook.webp'
-                alt='1'
-                className='mx-auto h-16'
-              />
-              <p className='uppercase font-bold text-center text-sm text-gray-700'>
-                insurance renewal
-              </p>
-            </div>
-          </Link>
-        </div>
-      </div>
-      <EnquiryPopup
-        open={open}
-        setOpen={setOpen}
-        phone={phone}
-        setPhone={setPhone}
-        title={'book a test drive / showroom visit'}
-      />
-    </>
-  );
-};
-
-export default CarEnquiry;
+export default CarEnquiries;

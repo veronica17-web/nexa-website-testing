@@ -125,7 +125,7 @@ export const products = [
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-main-thubmnail-no-bg.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Saboo+RKS_Invicto.pdf',
-    explore: '/',
+    explore: '/maruti-invicto-price-in-hyderabad',
     engineType: '',
     fuelType: '',
     displacement: '',

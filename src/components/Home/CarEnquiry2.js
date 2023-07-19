@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+
 import { CgSpinner } from 'react-icons/cg';
 import EnquiryPopup from '../utils/EnquiryPopup';
 
-function CarEnquiry() {
+function CarEnquiry2() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [model, setModel] = useState('');
-
   const [method, setMethod] = useState();
   const [loader, setLoader] = useState(false);
 
   function handleSubmit() {
     setLoader(true);
+
+    // First API call
     axios
       .post('https://saboogroups.com/admin/api/enquiry', {
         name: name,
@@ -32,10 +34,31 @@ function CarEnquiry() {
         toast.error('Something went wrong!');
         console.log(err);
       });
-    setLoader(false);
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoader(false);
+      });
   }
-
-
 
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {
@@ -165,9 +188,7 @@ function CarEnquiry() {
                   disabled={
                     pattern.test(phone) && phone.length === 10 ? false : true
                   }
-                  onClick={
-                    handleSubmit
-                  }
+                  onClick={handleSubmit}
                   className='w-full h-10 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
                 >
                   {loader ? (
@@ -184,77 +205,8 @@ function CarEnquiry() {
           </form>
         </div>
       </div>
-      <BuyerOptions />
     </>
   );
 }
 
-const BuyerOptions = () => {
-  const [open, setOpen] = useState(false);
-  const [phone, setPhone] = useState('');
-  return (
-    <>
-      <div className='container mx-auto py-16'>
-        <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-3 lg:px-0  px-5'>
-          <button onClick={() => setOpen(true)}>
-            <div className='bg-white drop-shadow-lg hover:shadow-lg rounded space-y-3 py-3 w-full max-w-[350px] mx-auto mb-4 '>
-              <img
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/Saboo-Nexa-Car-Test-Drive.webp'
-                alt='1'
-                className='mx-auto h-16'
-              />
-              <p className='uppercase font-bold text-center text-sm text-gray-700'>
-                book a test drive
-              </p>
-            </div>
-          </button>
-          <Link to='/maruti-nexa-showroom-outlets-in-hyderabad'>
-            <div className='bg-white drop-shadow-lg hover:shadow-lg rounded space-y-3 py-3 w-full max-w-[350px] mx-auto mb-4 '>
-              <img
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/Saboo-Nexa-Showroom-Locate.webp'
-                alt='1'
-                className='mx-auto h-16'
-              />
-              <p className='uppercase font-bold text-center text-sm text-gray-700'>
-                locate a showroom
-              </p>
-            </div>
-          </Link>
-          <button onClick={() => setOpen(true)}>
-            <div className='bg-white drop-shadow-lg hover:shadow-lg rounded space-y-3 py-3 w-full max-w-[350px] mx-auto mb-4 '>
-              <img
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/Saboo-Nexa-Book-Showroom-Visit.webp'
-                alt='1'
-                className='mx-auto h-16'
-              />
-              <p className='uppercase font-bold text-center text-sm text-gray-700'>
-                book a showroom visit
-              </p>
-            </div>
-          </button>
-          <Link to='/maruti-car-insurance'>
-            <div className='bg-white drop-shadow-lg hover:shadow-lg rounded space-y-3 py-3 w-full max-w-[350px] mx-auto mb-4 '>
-              <img
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/Saboo-Nexa-Ebook.webp'
-                alt='1'
-                className='mx-auto h-16'
-              />
-              <p className='uppercase font-bold text-center text-sm text-gray-700'>
-                insurance renewal
-              </p>
-            </div>
-          </Link>
-        </div>
-      </div>
-      <EnquiryPopup
-        open={open}
-        setOpen={setOpen}
-        phone={phone}
-        setPhone={setPhone}
-        title={'book a test drive / showroom visit'}
-      />
-    </>
-  );
-};
-
-export default CarEnquiry;
+export default CarEnquiry2;

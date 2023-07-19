@@ -5,9 +5,63 @@ import { FaCar } from 'react-icons/fa';
 import Helmet from 'react-helmet';
 import Header from '../../components/Header/Header';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { CgSpinner } from 'react-icons/cg';
 
 function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [model, setModel] = useState('');
+  const [method, setMethod] = useState();
+  const [loader, setLoader] = useState(false);
+
+  function handleSubmit() {
+    setLoader(true);
+
+    // First API call
+    axios
+      .post('https://saboogroups.com/admin/api/enquiry', {
+        name: name,
+        email: email,
+        phone: phone,
+        model: model,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      });
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
+
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
@@ -182,7 +236,7 @@ function Contact() {
                   <form
                     action='https://crm.zoho.in/crm/WebToLeadForm'
                     name='WebToLeads54158000000752015'
-                    method='POST'
+                    method={method}
                     acceptCharset='UTF-8'
                   >
                     <input
@@ -233,10 +287,14 @@ function Contact() {
                             type='text'
                             id='Last_Name'
                             name='Last Name'
+                            onChange={(e) => setName(e.target.value)}
                           />
                         </div>
                         <div>
-                          <label className='block text-sm font-medium text-gray-700'>
+                          <label
+                            className='block text-sm font-medium text-gray-700'
+                            onChange={(e) => setEmail(e.target.value)}
+                          >
                             Email
                           </label>
                           <input
@@ -268,17 +326,18 @@ function Contact() {
                           <select
                             id='LEADCF6'
                             name='LEADCF6'
+                            onChange={(e) => setModel(e.target.value)}
                             className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
                           >
                             <option>Select Model</option>
                             <option value='INVICTO'>Invicto</option>
                             <option value='Fronx'>Fronx</option>
                             <option value='Jimny'>Jimny</option>
-                            <option value="Grand Vitara">Grand Vitara</option>
-                          <option value="Ciaz">Ciaz</option>
-                          <option value="Baleno">Baleno</option>
-                          <option value="Ignis">Ignis</option>
-                          <option value="XL6">XL6</option>
+                            <option value='Grand Vitara'>Grand Vitara</option>
+                            <option value='Ciaz'>Ciaz</option>
+                            <option value='Baleno'>Baleno</option>
+                            <option value='Ignis'>Ignis</option>
+                            <option value='XL6'>XL6</option>
                           </select>
                         </div>
                         <div>
@@ -294,7 +353,12 @@ function Contact() {
                             required
                             name='Phone'
                             value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
+                            onChange={(e) =>
+                              setPhone(
+                                e.target.value.replace(/[^1-9 ]/g, '') &&
+                                  e.target.value.replace(/ /g, '')
+                              )
+                            }
                           />
                         </div>
                         <div>
@@ -335,8 +399,21 @@ function Contact() {
                       <button
                         className='bg-black text-white rounded py-2.5 px-10'
                         type='submit'
+                        disabled={
+                          pattern.test(phone) && phone.length === 10
+                            ? false
+                            : true
+                        }
+                        onClick={handleSubmit}
                       >
-                        Submit
+                         {loader ? (
+                    <div className='flex items-center justify-center'>
+                      <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
+                      Loading
+                    </div>
+                  ) : (
+                    'Submit'
+                  )}
                       </button>
                     </div>
                   </form>
@@ -461,11 +538,11 @@ function Contact() {
                             <option value='INVICTO'>Invicto</option>
                             <option value='Fronx'>Fronx</option>
                             <option value='Jimny'>Jimny</option>
-                            <option value="Grand Vitara">Grand Vitara</option>
-                          <option value="Ciaz">Ciaz</option>
-                          <option value="Baleno">Baleno</option>
-                          <option value="Ignis">Ignis</option>
-                          <option value="XL6">XL6</option>
+                            <option value='Grand Vitara'>Grand Vitara</option>
+                            <option value='Ciaz'>Ciaz</option>
+                            <option value='Baleno'>Baleno</option>
+                            <option value='Ignis'>Ignis</option>
+                            <option value='XL6'>XL6</option>
                           </select>
                         </div>
                         <div>
