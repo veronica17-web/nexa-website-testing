@@ -196,6 +196,7 @@ function OnRoadPrice({ title }) {
                 <option value='Nexa Lumbini'>Nexa Lumbini</option>
                 <option value='Nexa Kompally'>Nexa Kompally</option>
                 <option value='Nexa Jubilee'>Nexa Jubilee</option>
+                <option value='Nexa Hafeezpet'>Nexa Hafeezpet</option>
               </select>
             </div>
           </div>

@@ -4,10 +4,65 @@ import Header from '../../components/Header/Header';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from 'react-helmet';
+import axios from 'axios';
+import { CgSpinner } from 'react-icons/cg';
 
 const Corporate = () => {
   const notify = () => toast('your email client will be opened');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  // const [model, setModel] = useState('');
+  // const [outlet, setOutlet] = useState('');
+  const [method, setMethod] = useState();
+  const [loader, setLoader] = useState(false);
+
+  function handleSubmit() {
+    setLoader(true);
+
+    // First API call
+    axios
+      .post('https://saboogroups.com/admin/api/enquiry', {
+        name: name,
+        email: email,
+        phone: phone,
+        // model: model,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      });
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
+
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
@@ -42,7 +97,7 @@ const Corporate = () => {
           <form
             action='https://crm.zoho.in/crm/WebToLeadForm'
             name='WebToLeads54158000000752015'
-            method='POST'
+            method={method}
             acceptCharset='UTF-8'
           >
             <input
@@ -106,6 +161,7 @@ const Corporate = () => {
                     type='text'
                     id='Last_Name'
                     name='Last Name'
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
                 <div>
@@ -117,6 +173,7 @@ const Corporate = () => {
                     type='text'
                     id='Email'
                     name='Email'
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
 
@@ -133,7 +190,12 @@ const Corporate = () => {
                     required
                     name='Phone'
                     value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
+                    onChange={(e) =>
+                      setPhone(
+                        e.target.value.replace(/[^1-9]/g, '') &&
+                          e.target.value.replace(/ /g, '')
+                      )
+                    }
                   />
                 </div>
                 <div>
@@ -176,11 +238,29 @@ const Corporate = () => {
                 </div>
               </div>
               <button
+                type='submit'
+                onClick={handleSubmit}
+                disabled={
+                  pattern.test(phone) && phone.length === 10 ? false : true
+                }
+                className='bg-black text-white rounded py-2.5 px-10'
+              >
+                {loader ? (
+                  <div className='flex items-center justify-center'>
+                    <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
+                    Loading
+                  </div>
+                ) : (
+                  'Submit'
+                )}
+              </button>
+
+              {/* <button
                 className='bg-black text-white rounded py-2.5 px-10'
                 type='submit'
               >
                 Submit
-              </button>
+              </button> */}
             </div>
           </form>
         </div>

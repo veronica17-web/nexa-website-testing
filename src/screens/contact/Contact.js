@@ -13,6 +13,7 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [model, setModel] = useState('');
+  const [message, setMessage] = useState('');
   const [method, setMethod] = useState();
   const [loader, setLoader] = useState(false);
 
@@ -21,11 +22,12 @@ function Contact() {
 
     // First API call
     axios
-      .post('https://saboogroups.com/admin/api/enquiry', {
+      .post('https://saboogroups.com/admin/api/contact-us', {
         name: name,
         email: email,
         phone: phone,
         model: model,
+        message: message,
       })
       .then((res) => {
         setMethod('POST');
@@ -302,6 +304,7 @@ function Contact() {
                             type='text'
                             id='Email'
                             name='Email'
+                            onChange={(e) => setEmail(e.target.value)}
                           />
                         </div>
                         <div>
@@ -317,6 +320,7 @@ function Contact() {
                             <option>Jubilee</option>
                             <option>Lumbini</option>
                             <option>Kompally</option>
+                            <option>Hafeezpet</option>
                           </select>
                         </div>
                         <div>
@@ -368,7 +372,9 @@ function Contact() {
                           <textarea
                             className='border h-5 outline-none px-1 rounded-md w-full focus:ring-red-500 focus:border-red-500'
                             type='text'
-                            name='comment'
+                            id='message'
+                            name='message'
+                            onChange={(e) => setMessage(e.target.value)}
                           ></textarea>
                         </div>
                       </div>
@@ -406,14 +412,14 @@ function Contact() {
                         }
                         onClick={handleSubmit}
                       >
-                         {loader ? (
-                    <div className='flex items-center justify-center'>
-                      <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
-                      Loading
-                    </div>
-                  ) : (
-                    'Submit'
-                  )}
+                        {loader ? (
+                          <div className='flex items-center justify-center'>
+                            <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
+                            Loading
+                          </div>
+                        ) : (
+                          'Submit'
+                        )}
                       </button>
                     </div>
                   </form>
