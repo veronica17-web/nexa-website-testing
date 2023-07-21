@@ -23,7 +23,7 @@ function Insurance() {
     }
   }
 
- function handleSubmit() {
+  function handleSubmit() {
     setLoader(true);
 
     // First API call
@@ -32,7 +32,6 @@ function Insurance() {
         name: name,
         email: email,
         phone: phone,
-        
       })
       .then((res) => {
         setMethod('POST');

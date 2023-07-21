@@ -24,22 +24,67 @@ function Finance() {
 
   function handleSubmit() {
     setLoader(true);
+
+    // First API call
     axios
       .post('https://saboogroups.com/admin/api/finance', {
         name: name,
-        phone: phone,
         email: email,
+        phone: phone,
       })
       .then((res) => {
         setMethod('POST');
-        setLoader(false);
+        toast.success('Enquiry sent successfully');
       })
       .catch((err) => {
-        toast.error('Something went wrong!');
         setLoader(false);
+        toast.error('Something went wrong!');
         console.log(err);
       });
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoader(false);
+      });
   }
+
+  // function handleSubmit() {
+  //   setLoader(true);
+  //   axios
+  //     .post('https://saboogroups.com/admin/api/finance', {
+  //       name: name,
+  //       phone: phone,
+  //       email: email,
+  //     })
+  //     .then((res) => {
+  //       setMethod('POST');
+  //       setLoader(false);
+  //     })
+  //     .catch((err) => {
+  //       toast.error('Something went wrong!');
+  //       setLoader(false);
+  //       console.log(err);
+  //     });
+  // }
 
   const [loanAmount, setLoanAmount] = useState('');
   const [loanTerm, setLoanTerm] = useState('');

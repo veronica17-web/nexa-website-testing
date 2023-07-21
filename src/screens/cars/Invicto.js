@@ -134,6 +134,8 @@ function InvictoCarEnquiry() {
 
   function handleSubmit() {
     setLoader(true);
+
+    // First API callledu 
     axios
       .post('https://saboogroups.com/admin/api/enquiry', {
         name: name,
@@ -150,7 +152,30 @@ function InvictoCarEnquiry() {
         toast.error('Something went wrong!');
         console.log(err);
       });
-    setLoader(false);
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoader(false);
+      });
   }
 
   const pattern = /^[6-9][0-9]{6,9}$/;
@@ -308,6 +333,8 @@ function InvictoCarEnquiry2() {
 
   function handleSubmit() {
     setLoader(true);
+
+    // First API call
     axios
       .post('https://saboogroups.com/admin/api/enquiry', {
         name: name,
@@ -324,7 +351,30 @@ function InvictoCarEnquiry2() {
         toast.error('Something went wrong!');
         console.log(err);
       });
-    setLoader(false);
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoader(false);
+      });
   }
 
   const pattern = /^[6-9][0-9]{6,9}$/;
