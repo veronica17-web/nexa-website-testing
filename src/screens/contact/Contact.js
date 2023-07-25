@@ -307,6 +307,37 @@ function Contact() {
                             onChange={(e) => setEmail(e.target.value)}
                           />
                         </div>
+                        <div style={{ display: 'none' }}>
+                          <label className='block text-sm font-medium text-gray-700'>
+                            Service Type
+                          </label>
+                          <select
+                            id='LEADCF6'
+                            name='LEADCF6'
+                            className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
+                          >
+                            <option>24x7 service</option>
+                            <option>Paid Service</option>
+                          </select>
+                        </div>
+
+                        {/* <div className='zcwf_row' style={{ display: 'none' }}>
+                          <div className='zcwf_col_lab'>
+                            <label htmlFor='LEADCF6'>Car Model</label>
+                          </div>
+                          <div className='zcwf_col_fld'>
+                            <select
+                              className='zcwf_col_fld_slt'
+                              id='LEADCF6'
+                              name='LEADCF6'
+                            >
+                              <option defaultValue value='SABOO NEXA Popup'>
+                                Contact Us Page
+                              </option>
+                            </select>
+                            <div className='zcwf_col_help'></div>
+                          </div>
+                        </div> */}
                         <div>
                           <label className='block text-sm font-medium text-gray-700'>
                             Outlet
