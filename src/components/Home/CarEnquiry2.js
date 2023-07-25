@@ -13,6 +13,7 @@ function CarEnquiry2() {
   const [model, setModel] = useState('');
   const [method, setMethod] = useState();
   const [loader, setLoader] = useState(false);
+  const [outlet, setOutlet] = useState('');
 
   function handleSubmit() {
     setLoader(true);
@@ -24,6 +25,7 @@ function CarEnquiry2() {
         email: email,
         phone: phone,
         model: model,
+        outlet: outlet,
       })
       .then((res) => {
         setMethod('POST');
