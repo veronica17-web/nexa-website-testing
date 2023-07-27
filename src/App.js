@@ -63,6 +63,10 @@ function App() {
   const [open, setOpen] = useState(false);
 
   const [loading, setLoading] = useState(false);
+  const location = useLocation();
+
+  const isAdminRoute = (location.pathname  === '/maruti-service'  );
+
 
   useEffect(() => {
     const getIp = async () => {
@@ -473,7 +477,7 @@ function App() {
         {/* PageNotFound */}
         <Route path='*' element={<PageNotFound />} />
       </Routes>
-      <Footer />
+      {!isAdminRoute && (<Footer />)}
     </>
   );
 }
