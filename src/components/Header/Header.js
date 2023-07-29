@@ -80,7 +80,7 @@ const TopHeader = () => {
           book a Service
         </Link>
         <Link
-          to='/maruti-service'
+          to='/maruti-suzuki-24/7-service-in-hyderabad'
           className='uppercase animate-shake bg-red-600   text-white px-3 py-1.5 rounded shadow-sm text-xs sm:text-sm'
         >
           24/7 Service

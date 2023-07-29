@@ -11,7 +11,7 @@ function Cars() {
     <div className='container mx-auto px-5 lg:px-0 md:px-3'>
       <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-2'>
         <div className='space-y-3'>
-          <p className='uppercase font-bold text-4xl'>nexa cars</p>
+          <p className='uppercase font-bold text-4xl mt-4'>nexa cars</p>
           <p className='uppercase font-bold text-md tracking-wider'>
             What's happening at NEXA
           </p>

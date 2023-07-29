@@ -135,7 +135,7 @@ function InvictoCarEnquiry() {
   function handleSubmit() {
     setLoader(true);
 
-    // First API callledu 
+    // First API callledu
     axios
       .post('https://saboogroups.com/admin/api/enquiry', {
         name: name,
@@ -520,10 +520,11 @@ function InvictoCarEnquiry2() {
               </button>
             </div>
             <div className='mt-6 container text-xs text-gray-600'>
-              <span className='font-semibold'>*Disclaimer:</span> I agree that
-              by clicking the ‘Submit’ button , I am explicitly soliciting a
-              call and message via whatsapp or any other medium from Saboo RKS
-              motors on my ‘Mobile’.
+              <span className='font-semibold'>*Disclaimer:</span> By clicking
+              'Submit,' you acknowledge that you have agreed to our Terms of
+              Service and Privacy Policy and hereby give consent to be contacted
+              by Saboo Maruti (RKS Motor Pvt. Ltd) or its representatives on
+              your 'Mobile'.
             </div>
           </form>
         </div>

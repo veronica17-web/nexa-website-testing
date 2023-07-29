@@ -87,15 +87,15 @@ function Service24x7() {
     <>
       <Helmet>
         <title>
-          Maruti Nexa Car Service in Hyderabad | Nexa Service Center Near Me
+          Maruti Suzuki 24/7 Car Service Center in India | Saboo NEXA
         </title>
         <meta
           name='title'
-          content='Maruti Nexa Car Service in Hyderabad | Nexa Service Center Near Me'
+          content='Maruti Suzuki 24/7 Car Service Center in India | Saboo NEXA'
         />
         <meta
           name='description'
-          content='Book Your Maruti Suzuki Nexa Car Service Online. Nexa Car Service Center Near Me.  Free Pickup & Drop Facility Available, Same Day Delivery, Genuine Spare Parts, Quality Service, Low Maintenance & Instant Assistance on Car Repair.'
+          content="Welcome to our 24/7 Maruti Suzuki Service Center, where your car's maintenance and repair needs are taken care of round the clock. We understand that your car is an essential part of your life, and unexpected issues can arise at any time. That's why our service center operates 24 hours a day, 7 days a week, to ensure that you receive prompt assistance whenever you need it."
         />
         <meta
           name='keywords'
@@ -483,14 +483,14 @@ function Service24x7() {
                   <br />
                   <br />
                   <a href='#contact2'>
-                    <button className=' bg-black px-4 py-3 mt-4 border rounded-xl text-xl'>
+                    <button className=' bg-black px-4 py-3 mt-4 border rounded-xl text-xl hover:bg-[#494949]'>
                       BOOK YOUR CAR SERVICE NOW
                     </button>
                   </a>
                 </div>
               </div>
             </div>
-            <div className='md:w-1/2 flex justify-center lg:justify-start md:pl-28 '>
+            <div className='md:w-1/2 flex justify-center lg:justify-start lg:pl-10 xl:pl-28 '>
               <div>
                 <div className='rounded-[4rem]  border border-gray-800 bg-black overflow-hidden h-[24rem] w-[24rem] lg:h-[26rem] lg:w-[26rem] object-cover  '></div>
 
@@ -515,7 +515,7 @@ function Service24x7() {
                 </div>
 
                 <a href='#contact2'>
-                  <button className=' bg-black px-4 py-3 mt-4 border rounded-xl text-md mb-3'>
+                  <button className=' bg-black px-4 py-3 mt-4 border rounded-xl text-md mb-3 hover:bg-[#494949]'>
                     BOOK YOUR CAR SERVICE NOW
                   </button>
                 </a>
@@ -596,7 +596,7 @@ function Service24x7() {
               </div> */}
               <div className='rounded-[2rem] bg-black overflow-hidden border-[0.5px] border-gray-100 mb-10 -mt-[43vh]  ml-[1rem] h-[40vh] w-[40vh] object-cover flex items-center '>
                 <div className='mx-6'>
-                  <div className=' animate-pulse' style={{ fontSize: '2rem' }}>
+                  <div className='' style={{ fontSize: '2rem' }}>
                     &#8223;
                   </div>
                   <div className='font-serif '>
@@ -604,10 +604,7 @@ function Service24x7() {
                     with efficiency and a lot of patience. I recommend them very
                     much for a trust worthy and efficient service.
                   </div>
-                  <div
-                    className=' rotate-180 animate-pulse'
-                    style={{ fontSize: '2rem' }}
-                  >
+                  <div className=' rotate-180 ' style={{ fontSize: '2rem' }}>
                     &#8223;
                   </div>
                   <div className='flex justify-center font-serif mt-2 italic text-xl'>
@@ -688,10 +685,34 @@ function Service24x7() {
                     </div>
                     <div className='flex items-center'>
                       <label
+                        htmlFor='Phone'
+                        className='font-serif pr-2 md:text-xl whitespace-nowrap'
+                      >
+                        Phone:
+                      </label>
+                      <input
+                        className='border-b border-white h-10 outline-none  w-full placeholder:text-lg  placeholder:text-gray-400 font-sans bg-[#1a1a1a] '
+                        // placeholder='Mobile'
+                        value={phone}
+                        id='Phone'
+                        name='Phone'
+                        required
+                        minLength='10'
+                        maxLength='10'
+                        onChange={(e) =>
+                          setPhone(
+                            e.target.value.replace(/[^1-9 ]/g, '') &&
+                              e.target.value.replace(/ /g, '')
+                          )
+                        }
+                      />
+                    </div>
+                    <div className='flex items-center'>
+                      <label
                         htmlFor='Email'
                         className='font-serif pr-2 md:text-xl whitespace-nowrap'
                       >
-                        Email ID:
+                        Email:
                       </label>
                       <input
                         className='border-b border-white h-10 outline-none  w-full placeholder:text-lg  placeholder:text-gray-400 font-sans bg-[#1a1a1a] '
@@ -771,31 +792,8 @@ function Service24x7() {
                         </option>
                       </select>
                     </div>
-                    <div className='flex items-center'>
-                      <label
-                        htmlFor='Phone'
-                        className='font-serif pr-2 md:text-xl whitespace-nowrap'
-                      >
-                        Phone:
-                      </label>
-                      <input
-                        className='border-b border-white h-10 outline-none  w-full placeholder:text-lg  placeholder:text-gray-400 font-sans bg-[#1a1a1a] '
-                        // placeholder='Mobile'
-                        value={phone}
-                        id='Phone'
-                        name='Phone'
-                        required
-                        minLength='10'
-                        maxLength='10'
-                        onChange={(e) =>
-                          setPhone(
-                            e.target.value.replace(/[^1-9 ]/g, '') &&
-                              e.target.value.replace(/ /g, '')
-                          )
-                        }
-                      />
-                    </div>
-                    <div className='flex items-center md:col-span-2 mb-4' >
+
+                    <div className='flex items-center md:col-span-2 mb-4'>
                       <label className='font-serif pr-2 md:text-xl whitespace-nowrap'>
                         Message:
                       </label>
@@ -810,13 +808,7 @@ function Service24x7() {
                     </div>
                   </div>
 
-                  {/* <p className='text-gray-300 text-xs'>
-                    <span className='text-gray-400 font-bold'>Disclaimer</span>:
-                    I agree that by clicking the ‘Submit’ button below, I am
-                    explicitly soliciting a call / message from Saboo Maruti
-                    (RKS Motor Pvt. Ltd) or its representatives on my ‘Mobile’
-                  </p>
-                  <div className='flex items-start'>
+                  {/* <div className='flex items-start'>
                     <input
                       id='disclaimer'
                       name='disclaimer'
@@ -828,10 +820,19 @@ function Service24x7() {
                         htmlFor='disclaimer'
                         className='font-medium text-gray-100'
                       >
-                        Please Agree with following Disclaimer
+                        * I accept the{' '}
+                        <Link to='/terms-and-condition'>
+                          {' '}
+                          terms & conditions.
+                        </Link>
                       </label>
                     </div>
                   </div> */}
+                  <p className='text-gray-300 text-xs'>
+                    <span className='text-gray-400 font-bold'>Disclaimer</span>:
+                    By clicking 'Submit,' you acknowledge that you have agreed
+                    to our Terms and Conditions.
+                  </p>
                   {/* <button
                     className='bg-black text-white rounded py-2.5 px-10'
                     type='submit'
@@ -855,12 +856,12 @@ function Service24x7() {
                       pattern.test(phone) && phone.length === 10 ? false : true
                     }
                     onClick={handleSubmit}
-                    class='group relative md:col-span-2  w-min flex   whitespace-nowrap mx-auto shadow-lg overflow-hidden bg-black text-md rounded-2xl font-semibold  mb-4  px-5 py-3 border border-gray-500 cursor-pointer text-xl'
+                    class='group relative md:col-span-2  w-min flex   whitespace-nowrap mx-auto shadow-lg overflow-hidden bg-black hover:bg-[#494949] text-md rounded-2xl font-semibold  mb-4  px-5 py-3 border border-gray-500 cursor-pointer text-xl'
                   >
                     {loader ? (
                       <div className='flex items-center justify-center '>
                         <CgSpinner className='animate-spin   text-white ' />
-                        Loading
+                        Booking
                       </div>
                     ) : (
                       'BOOK NOW'
@@ -873,20 +874,20 @@ function Service24x7() {
         </section>
 
         <section className='bg-[#1b1b1b]'>
-          <div className='grid lg:grid-cols-2 container mx-auto pt-8 px-1'>
-            <div className='col-span-1'>
-              <div className='flex '>
+          <div className='grid lg:grid-cols-2 container mx-auto pt-8 px-1 '>
+            <div className='col-span-1 px-2'>
+              <div className='flex  object-cover'>
                 <img
                   src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/rks+logo3.png'
                   alt=''
                   srcset=''
-                  className='w-[35%]'
+                  className='h-10 md:h-16'
                 />
                 <img
                   src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Asset+10.png'
                   alt=''
                   srcset=''
-                  className='w-[50%]'
+                  className='h-10 md:h-16'
                 />
               </div>
               <div className='py-2 my-2 font-serif'>
@@ -897,9 +898,9 @@ function Service24x7() {
                 issues while on the road.
               </div>
               <div className=''>
-                <a className='hover:opacity-75' href='tel:+91 9848365247'>
-                  <button className='px-4 py-2 bg-black border rounded-md mb-4 '>
-                    +(91) 9848 365 247
+                <a className='' href='tel:+91 9553595536'>
+                  <button className='px-4 py-2 bg-black border rounded-md mb-4 hover:bg-[#494949] '>
+                    +(91) 95535 95536
                   </button>
                 </a>
                 <br />
@@ -909,32 +910,56 @@ function Service24x7() {
                 >
                   24-7SERVICE@SABOO
                 </a> */}
-                <button className='px-4 py-2 bg-black border rounded-md  mb-4'>
-                  24-7SERVICE@SABOO
+                <button className='px-4 py-2 bg-black border rounded-md  mb-4 hover:bg-[#494949]'>
+                  info@saboomaruti.in
                 </button>
               </div>
             </div>
             <div className='col-span-1 font-seri flex gap-4 lg:mx-auto flex-col md:flex-row px-2 justify-around w-full'>
               <div className='font-serif'>
-                <div className='mb-2 text-3xl font-serif'>Outlets</div>
-                <Link to='/maruti-nexa-showroom-outlets-in-hyderabad'>
-                  <div className='pb-2 font-serif hover:text-red-500'>
-                    Showrooms
+                <div className='mb-2 text-2xl font-serif'>Nexa Cars</div>
+                <Link to='/nexa-xl6-on-road-price-in-hyderabad'>
+                  <div className='pb-2 font-serif hover:text-red-500 '>XL6</div>
+                </Link>
+                <Link to='/nexa-ciaz-on-road-price-in-hyderabad'>
+                  <div className='pb-2 font-serif hover:text-red-500 '>
+                    Ciaz
                   </div>
                 </Link>
-                <Link to='/maruti-nexa-workshop-outlets-in-hyderabad'>
-                  <div className='pb-2 font-serif hover:text-red-500'>
-                    Workshops
+                <Link to='/new-maruti-baleno-price-in-hyderabad'>
+                  <div className='pb-2 font-serif hover:text-red-500 '>
+                    Baleno
                   </div>
                 </Link>
-                <Link to='/maruti-nexa-truevalue-outlets-in-hyderabad'>
-                  <div className='pb-2 font-serif hover:text-red-500'>
-                    True Value
+                <Link to='/nexa-ignis-on-road-price-in-hyderabad'>
+                  <div className='pb-2 font-serif hover:text-red-500 '>
+                    Ignis
+                  </div>
+                </Link>
+                <Link to='/grand-vitara-on-road-price-in-hyderabad'>
+                  <div className='pb-2 font-serif hover:text-red-500 '>
+                    Grand Vitara
+                  </div>
+                </Link>
+                <Link to='/maruti-fronx-price-in-hyderabad'>
+                  <div className='pb-2 font-serif hover:text-red-500 '>
+                    Fronx
+                  </div>
+                </Link>
+                <Link to='/maruti-jimny-price-in-hyderabad'>
+                  <div className='pb-2 font-serif hover:text-red-500 '>
+                    Jimny
+                  </div>
+                </Link>
+                <Link to='/maruti-invicto-price-in-hyderabad'>
+                  <div className='pb-2 font-serif hover:text-red-500 '>
+                    Invicto
                   </div>
                 </Link>
               </div>
+
               <div className='font-serif'>
-                <div className='mb-2 text-3xl font-serif'>Corporate</div>
+                <div className='mb-2 text-2xl font-serif'>Corporate</div>
                 <Link to='/about'>
                   <div className='pb-2 font-serif hover:text-red-500 '>
                     About
@@ -977,54 +1002,31 @@ function Service24x7() {
                 </Link>
               </div>
               <div className='font-serif'>
-                <div className='mb-2 text-3xl font-serif'>Nexa Cars</div>
-                <Link to='/nexa-xl6-on-road-price-in-hyderabad'>
-                  <div className='pb-2 font-serif hover:text-red-500 '>XL6</div>
-                </Link>
-                <Link to='/nexa-ciaz-on-road-price-in-hyderabad'>
-                  <div className='pb-2 font-serif hover:text-red-500 '>
-                    Ciaz
+                <div className='mb-2 text-2xl font-serif'>Outlets</div>
+                <Link to='/maruti-nexa-showroom-outlets-in-hyderabad'>
+                  <div className='pb-2 font-serif hover:text-red-500'>
+                    Showrooms
                   </div>
                 </Link>
-                <Link to='/new-maruti-baleno-price-in-hyderabad'>
-                  <div className='pb-2 font-serif hover:text-red-500 '>
-                    Baleno
+                <Link to='/maruti-nexa-workshop-outlets-in-hyderabad'>
+                  <div className='pb-2 font-serif hover:text-red-500'>
+                    Workshops
                   </div>
                 </Link>
-                <Link to='/nexa-ignis-on-road-price-in-hyderabad'>
-                  <div className='pb-2 font-serif hover:text-red-500 '>
-                    Ignis
-                  </div>
-                </Link>
-                <Link to='/grand-vitara-on-road-price-in-hyderabad'>
-                  <div className='pb-2 font-serif hover:text-red-500 '>
-                    Grand Vitara
-                  </div>
-                </Link>
-                <Link to='/maruti-fronx-price-in-hyderabad'>
-                  <div className='pb-2 font-serif hover:text-red-500 '>
-                    Fronx
-                  </div>
-                </Link>
-                <Link to='/maruti-jimny-price-in-hyderabad'>
-                  <div className='pb-2 font-serif hover:text-red-500 '>
-                    Jimny
-                  </div>
-                </Link>
-                <Link to='/maruti-invicto-price-in-hyderabad'>
-                  <div className='pb-2 font-serif hover:text-red-500 '>
-                    Invicto
+                <Link to='/maruti-nexa-truevalue-outlets-in-hyderabad'>
+                  <div className='pb-2 font-serif hover:text-red-500'>
+                    True Value
                   </div>
                 </Link>
               </div>
             </div>
 
-            <div className=' flex flex-wrap lg:gap-2 md:justify-between text-sm mt-8 pb-2 text-gray-300'>
+            <div className='lg:col-span-2  flex flex-wrap gap-2 lg:gap-2 md:justify-around text-xs mt-8 lg:mt-20 pb-2 text-gray-300'>
               <div className='font-serif'>Terms & Conditions</div>
+              <div className='font-serif'>Privacy Policy</div>
               <div className='font-serif'>
                 ©2023 All Rights Reserved by RKS Motor Pvt Ltd.
               </div>
-              <div className='font-serif'>Privacy Policy</div>
             </div>
           </div>
         </section>

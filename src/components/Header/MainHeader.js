@@ -160,6 +160,10 @@ const navigation = {
       name: 'Blog',
       to: '/maruti-nexa-latest-news',
     },
+    {
+      name: '24/7 Service',
+      to: '/maruti-suzuki-24/7-service-in-hyderabad',
+    },
   ],
 };
 
@@ -392,15 +396,26 @@ function MainHeader() {
                 {/* Flyout menus */}
                 <Popover.Group className='hidden ml-auto lg:block lg:self-stretch'>
                   <div className='h-full flex space-x-8'>
-                    {navigation.pages.map((page) => (
+                    {/* {navigation.pages.map((page) => ( */}
+
+                    {navbar ? (
                       <Link
-                        key={page.name}
-                        to={page.to}
+                        to='/maruti-suzuki-24/7-service-in-hyderabad'
                         className='flex items-center text-sm font-medium text-gray-200 hover:text-gray-400'
                       >
-                        {page.name}
+                        24/7 Service
                       </Link>
-                    ))}
+                    ) : (
+                      <Link
+                        key='Home'
+                        to='/'
+                        className='flex items-center text-sm font-medium text-gray-200 hover:text-gray-400'
+                      >
+                        Home
+                      </Link>
+                    )}
+
+                    {/* ))} */}
 
                     {navigation.categories.map((category) => (
                       <Popover key={category.name} className='flex'>
@@ -638,7 +653,13 @@ function MainHeader() {
                         </>
                       )}
                     </Popover>
-
+                    <Link
+                      key='About'
+                      to='/about'
+                      className='flex items-center text-sm font-medium text-gray-200 hover:text-gray-400'
+                    >
+                      About Us
+                    </Link>
                     <Link
                       to='/contact-us'
                       className='flex items-center text-sm font-medium text-gray-200 hover:text-gray-400'

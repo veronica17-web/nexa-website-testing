@@ -2,23 +2,20 @@ import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
 import { CgSpinner } from 'react-icons/cg';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
-
 const ModalService = ({ visible, onClose }) => {
   const handleOnClose = (e) => {
     if (e.target.id === 'container') onClose();
   };
-
   const [name, setName] = useState();
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState();
   // const [model, setModel] = useState();
   const [method, setMethod] = useState('');
-
   const [loader, setLoader] = useState(false);
   const [model, setModel] = useState('');
   const [message, setMessage] = useState('');
-
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
@@ -27,32 +24,30 @@ const ModalService = ({ visible, onClose }) => {
       });
     }
   }
-
   function handleSubmit() {
     setLoader(true);
-     // First API call
-     axios
-     .post('https://saboogroups.com/admin/api/contact-us', {
-       name: name,
-       email: email,
-       phone: phone,
-       model: model,
-       message: message,
-     })
-     .then((res) => {
-       setMethod('POST');
-       toast.success('Enquiry sent successfully');
-     })
-     .catch((err) => {
-       setLoader(false);
-       toast.error('Something went wrong!');
-       console.log(err);
-     });
-
-   // Second API call
-   axios
-     .get(
-       `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+    // First API call
+    axios
+      .post('https://saboogroups.com/admin/api/contact-us', {
+        name: name,
+        email: email,
+        phone: phone,
+        model: model,
+        message: message,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      });
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
      Our Sales consultant will contact you shortly.
      
      Regards
@@ -60,20 +55,19 @@ const ModalService = ({ visible, onClose }) => {
      98488 98488
      www.saboomaruti.in
      www.saboonexa.in&type=1&template_id=1407168967467983613`
-     )
-     .then((res) => {
-       console.log('SMS API Response:', res.data);
-       // Handle the response from the SMS API if needed
-     })
-     .catch((err) => {
-       console.error('Error sending SMS:', err);
-       // Handle errors from the SMS API if needed
-     })
-     .finally(() => {
-       setLoader(false);
-     });
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoader(false);
+      });
   }
-
   if (!visible) return null;
   return (
     <div
@@ -82,9 +76,9 @@ const ModalService = ({ visible, onClose }) => {
       className='fixed  inset-0 flex items-center justify-center bg-black bg-opacity-60 backdrop-blur-sm'
     >
       <div className='  p-1  '>
-        <div className='py-6 -mt-20 mx-1'>
-          <div className='container mx-auto space-y-3 lg:px-5 px-1 bg-[#1a1a1a] rounded-[2rem]  py-6'>
-            <div className='text-center  text-2xl lg:text-4xl py-4 font-serif tracking-wide'>
+        <div className='py-6 -mt-20 mx-1 '>
+          <div className='container mx-auto space-y-3 lg:px-5 px-1 sm:px-2 bg-[#1a1a1a] rounded-[2rem]  py-6'>
+            <div className='text-center  text-2xl lg:text-4xl py-4 font-serif tracking-wide '>
               Book a Service Appointment
             </div>
             <form
@@ -149,21 +143,6 @@ const ModalService = ({ visible, onClose }) => {
 
                 <div className='flex items-center'>
                   <label
-                    htmlFor='Email'
-                    className='font-serif pr-2 md:text-xl whitespace-nowrap'
-                  >
-                    Email ID:
-                  </label>
-                  <input
-                    className='border-b border-white h-10 outline-none  w-full placeholder:text-lg  placeholder:text-gray-400 font-sans bg-[#1a1a1a] '
-                    // placeholder='Name'
-                    id='Email'
-                    name='Email'
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
-                <div className='flex items-center'>
-                  <label
                     htmlFor='Phone'
                     className='font-serif pr-2 md:text-xl whitespace-nowrap'
                   >
@@ -184,6 +163,21 @@ const ModalService = ({ visible, onClose }) => {
                           e.target.value.replace(/ /g, '')
                       )
                     }
+                  />
+                </div>
+                <div className='flex items-center'>
+                  <label
+                    htmlFor='Email'
+                    className='font-serif pr-2 md:text-xl whitespace-nowrap'
+                  >
+                    Email:
+                  </label>
+                  <input
+                    className='border-b border-white h-10 outline-none  w-full placeholder:text-lg  placeholder:text-gray-400 font-sans bg-[#1a1a1a] '
+                    // placeholder='Name'
+                    id='Email'
+                    name='Email'
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className='flex items-center'>
@@ -220,15 +214,41 @@ const ModalService = ({ visible, onClose }) => {
                     onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
-
+                {/* <div className='flex items-start'>
+                    <input
+                      id='disclaimer'
+                      name='disclaimer'
+                      type='checkbox'
+                      className='h-4 w-4 rounded'
+                    />
+                    <div className='lg:ml-2 text-sm'>
+                      <label
+                        htmlFor='disclaimer'
+                        className='font-medium text-gray-100'
+                      >
+                        * I accept the <Link to='/terms-and-condition'> terms & conditions.</Link> 
+                      </label>
+                    </div>
+                  </div> */}
+                <p className='text-gray-300 text-xs'>
+                  <span className='text-gray-400 font-bold'>Disclaimer</span>:
+                  By clicking 'Submit,' you acknowledge that you have agreed to
+                  our Terms and Conditions.
+                </p>
                 <div className='flex justify-center md:col-span-2 gap-4'>
+                  <button
+                    onClick={onClose}
+                    class='group relative md:col-span-2 md:hidden  w-full text-md whitespace-nowrap mx-auto shadow-lg overflow-hidden bg-black text-md rounded-2xl font-semibold  mb-4 px-5 py-3 border border-gray-500 cursor-pointer md:text-xl'
+                  >
+                    CANCEL
+                  </button>
                   <button
                     type='submit'
                     disabled={
                       pattern.test(phone) && phone.length === 10 ? false : true
                     }
                     onClick={handleSubmit}
-                    class='group relative md:col-span-2  w-full  whitespace-nowrap mx-auto shadow-lg overflow-hidden bg-black text-md rounded-2xl font-semibold  mb-4 px-5 py-3 border border-gray-500 cursor-pointer text-xl'
+                    class='group relative md:col-span-2  w-full  whitespace-nowrap mx-auto shadow-lg overflow-hidden bg-black hover:bg-[#494949] text-md rounded-2xl font-semibold  mb-4 px-5 py-3 border border-gray-500 cursor-pointer  md:text-xl'
                   >
                     {loader ? (
                       <div className='flex items-center justify-center'>
@@ -239,12 +259,6 @@ const ModalService = ({ visible, onClose }) => {
                       'BOOK NOW'
                     )}
                   </button>
-                  <button
-                    onClick={onClose}
-                    class='group relative md:col-span-2  w-full  whitespace-nowrap mx-auto shadow-lg overflow-hidden bg-black text-md rounded-2xl font-semibold  mb-4 px-5 py-3 border border-gray-500 cursor-pointer text-xl'
-                  >
-                    Cancel
-                  </button>
                 </div>
               </div>
             </form>
@@ -254,5 +268,4 @@ const ModalService = ({ visible, onClose }) => {
     </div>
   );
 };
-
 export default ModalService;

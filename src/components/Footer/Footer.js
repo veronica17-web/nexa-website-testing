@@ -50,6 +50,11 @@ const navigation = {
     { name: 'Insurance', to: '/maruti-car-insurance' },
     // { name: "Corporate & Institutional Sales", to: "/" },
   ],
+
+  service: [
+    // { name: "Nexa Extended Warranty", to: "/" },
+    { name: '24/7 Service', to: '/maruti-suzuki-24/7-service-in-hyderabad' },
+  ],
   outlets: [
     {
       name: 'Showrooms',
@@ -141,6 +146,19 @@ function Footer() {
               <p>Finance & Insurance</p>
               <div className='flex flex-col space-y-3'>
                 {navigation.financeInsurance.map((item, index) => (
+                  <div
+                    className='flex border-b pb-2 border-gray-700 items-center text-gray-400 hover:text-gray-200'
+                    key={index}
+                  >
+                    <RiArrowRightSLine />
+                    <Link to={item.to}>{item.name}</Link>
+                  </div>
+                ))}
+              </div>
+
+              <p>Service</p>
+              <div className='flex flex-col space-y-3'>
+                {navigation.service.map((item, index) => (
                   <div
                     className='flex border-b pb-2 border-gray-700 items-center text-gray-400 hover:text-gray-200'
                     key={index}

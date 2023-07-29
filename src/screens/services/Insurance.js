@@ -242,28 +242,10 @@ function Insurance() {
             </div>
 
             <p className='text-gray-700'>
-              <span className='text-black font-bold'>Disclaimer</span>: I agree
-              that by clicking the ‘Submit’ button below, I am explicitly
-              soliciting a call / message from Saboo Maruti (RKS Motor Pvt. Ltd)
-              or its representatives on my ‘Mobile’
+              <span className='text-black font-bold'>Disclaimer</span>: By
+              clicking 'Submit,' you acknowledge that you have agreed to our
+              Terms and Conditions.
             </p>
-            <div className='flex items-start'>
-              <input
-                id='disclaimer'
-                name='disclaimer'
-                type='checkbox'
-                className='h-4 w-4 rounded'
-                required
-              />
-              <div className='ml-2 text-sm'>
-                <label
-                  htmlFor='disclaimer'
-                  className='font-medium text-gray-700'
-                >
-                  Please Agree with following Disclaimer
-                </label>
-              </div>
-            </div>
 
             <button
               className='bg-black text-white rounded py-2.5 px-5'

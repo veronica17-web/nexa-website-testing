@@ -200,18 +200,11 @@ function OnRoadPrice({ title }) {
               </select>
             </div>
           </div>
-          <div className='flex items-center space-x-1'>
-            <input id='comments' name='comments' type='checkbox' required />
-            <label htmlFor='comments' className='font-medium text-gray-200'>
-              Please agree the following disclaimer
-            </label>
-          </div>
 
           <p className='text-gray-200 text-xs'>
-            <span className='font-semibold'>Disclaimer :</span> I agree that by
-            clicking the ‘Submit’ button below, I am explicitly soliciting a
-            call / Message from Saboo RKS Motor Pvt. Ltd or its Representatives
-            on my ‘Mobile’
+            <span className='font-semibold'>Disclaimer :</span> By clicking
+            'Submit,' you acknowledge that you have agreed to our Terms and
+            Conditions.
           </p>
           <button
             type='submit'

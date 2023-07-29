@@ -65,8 +65,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
 
-  const isAdminRoute = (location.pathname  === '/maruti-service'  );
-
+  const isAdminRoute = location.pathname === '/maruti-suzuki-24/7-service-in-hyderabad';
 
   useEffect(() => {
     const getIp = async () => {
@@ -119,7 +118,7 @@ function App() {
           toast.error('Something went wrong');
           setLoading(false);
         });
-        axios
+      axios
         .get(
           `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${number}&msg=Thank you for showing interest in Maruti Suzuki.
         Our Sales consultant will contact you shortly.
@@ -424,7 +423,7 @@ function App() {
         {/* services */}
         <Route path='/maruti-car-insurance' element={<Insurance />} />
         <Route path='/maruti-car-finance' element={<Finance />} />
-        <Route path='/maruti-service' element={<Service24x7 />} />
+        <Route path='/maruti-suzuki-24/7-service-in-hyderabad' element={<Service24x7 />} />
         {/* outlets */}
         <Route
           path='/maruti-nexa-showroom-outlets-in-hyderabad'
@@ -477,7 +476,7 @@ function App() {
         {/* PageNotFound */}
         <Route path='*' element={<PageNotFound />} />
       </Routes>
-      {!isAdminRoute && (<Footer />)}
+      {!isAdminRoute && <Footer />}
     </>
   );
 }

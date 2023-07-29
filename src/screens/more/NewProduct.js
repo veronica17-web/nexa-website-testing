@@ -112,12 +112,11 @@ function NewProduct() {
             </div>
           </div>
           <p className='text-gray-700'>
-            <span className='text-black font-bold'>Disclaimer</span>: I agree
-            that by clicking the ‘Submit’ button below, I am explicitly
-            soliciting a call / message from Saboo Maruti (RKS Motor Pvt. Ltd)
-            or its representatives on my ‘Mobile’
+            <span className='text-black font-bold'>Disclaimer</span>: By
+            clicking 'Submit,' you acknowledge that you have agreed to our Terms
+            and Conditions.
           </p>
-          <div className='flex items-start'>
+          {/* <div className='flex items-start'>
             <input
               id='disclaimer'
               name='disclaimer'
@@ -130,7 +129,7 @@ function NewProduct() {
                 Please Agree with Following Disclaimer
               </label>
             </div>
-          </div>
+          </div> */}
           <button
             className='bg-black text-white rounded py-2.5 px-5'
             type='submit'
