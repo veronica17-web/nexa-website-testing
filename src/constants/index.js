@@ -103,7 +103,7 @@ export const bookAservice = [
   //   alt: 'april 2023 service banner',
   // },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Service+June+Offers+Saboo+RKS+Motor.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Nexa+Service+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
     alt: 'NEW service BANNER',
   },
   // {
