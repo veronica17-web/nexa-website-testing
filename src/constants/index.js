@@ -1,7 +1,7 @@
 //same for home screen and offers screen
 export const sliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-offers+banner.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Maruti+Suzuki+Nexa+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
     alt: 'NEW HAFEEZPET BANNER 2023',
   },
   {
@@ -47,8 +47,8 @@ export const mobileSliders = [
     alt: 'invicto mobile banner',
   },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Mobile++Maruti+Suzuki+Service+June+Offers+Saboo+RKS+Motor.psd.webp',
-    alt: 'NEW sesrvice banner',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Mobile+Maruti+Suzuki+Nexa+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
+    alt: 'NEW service banner',
   },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner.webp',
