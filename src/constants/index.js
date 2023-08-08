@@ -43,13 +43,18 @@ export const sliders = [
 //same for home screen and offers screen
 export const mobileSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-mobile-banner.webp',
-    alt: 'invicto mobile banner',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Mobile+Maruti+Suzuki+Nexa+Service+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
+    alt: 'august mobile banner',
   },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Mobile+Maruti+Suzuki+Nexa+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
     alt: 'NEW service banner',
   },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-mobile-banner.webp',
+    alt: 'invicto mobile banner',
+  },
+
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner.webp',
     alt: 'NEW fronx mobile banner',
@@ -102,6 +107,10 @@ export const bookAservice = [
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Maruti+Suzuki+Nexa+Summer+Service.webp',
   //   alt: 'april 2023 service banner',
   // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Freedom+Service+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
+    alt: 'NEW service august BANNER',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Nexa+Service+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
     alt: 'NEW service BANNER',
@@ -501,16 +510,16 @@ export const workshops = [
       'Golnaka Bridge, Afzal Nagar, Malakpet Extension, Old Malakpet, Hyderabad, Telangana 500 036',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60886.10991855269!2d78.36972618672837!3d17.489275247252888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91ec0162f43d%3A0x3288c6fe4358cf48!2sKukatpally%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1607576787176!5m2!1sen!2sin',
+    map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30443.238569868874!2d78.4028189!3d17.4881785!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91ae48fe6963%3A0xbbc59173810f4bd8!2sSaboo%20RKS%20Motor!5e0!3m2!1sen!2sin!4v1691403118242!5m2!1sen!2sin',
     title: 'RKS Motor - Kukatpally',
     address:
-      '5-5-33/19, Near Metro Cash N Carry , Kukatpally ,Hyderabad, Telangana, 500 072',
+      '5-5-33/19, Near Metro Cash N Carry, Kukatpally, Hyderabad, Telangana, 500 072',
   },
   {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.716827758187!2d78.56821331435435!3d17.47326240492314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9c7c4829c807%3A0xe33d0f61aa143664!2sMaruti%20Suzuki%20Car%20Dealer%20-%20RKS%20Motor!5e0!3m2!1sen!2sin!4v1607576877015!5m2!1sen!2sin',
     title: 'RKS Motor - Kushaiguda',
     address:
-      '1-10-1/285/1, Opp.Old Vegetable Market, ECIL X Road , Kushaiguda ,Hyderabad, Telangana, 500 062',
+      '1-10-1/285/1, Opp.Old Vegetable Market, ECIL X Road, Kushaiguda, Hyderabad, Telangana, 500 062',
   },
   {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.081235138512!2d78.48540665791738!3d17.45193615575579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a72a843d403%3A0xd11fa91defdbce1b!2sMaruti%20Suzuki%20Car%20Dealer%20-%20RKS%20Motor!5e0!3m2!1sen!2sin!4v1607576948512!5m2!1sen!2sin',
@@ -529,13 +538,13 @@ export const workshops = [
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.427956502239!2d78.47269531435332!3d17.39123810727281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976366ed87d9%3A0x7cb0979b572d6610!2sMaruti%20Suzuki%20Service%20Center%20-%20RKS%20Motor!5e0!3m2!1sen!2sin!4v1607577251264!5m2!1sen!2sin',
     title: 'RKS Motor - Nampally',
     address:
-      '11-6-190, Public Garden Road, Nampally,Hyderabad, Telangana, 500039',
+      '11-6-190, Public Garden Road, Nampally, Hyderabad, Telangana, 500039',
   },
   {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.2779992135106!2d78.55207721435339!3d17.39844140706683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb993aa2e01cc1%3A0x533d4356086d5aba!2sMaruti%20Suzuki%20Service%20Center%20-%20RKS%20Motor!5e0!3m2!1sen!2sin!4v1607577317423!5m2!1sen!2sin',
     title: 'RKS Motor - Uppal',
     address:
-      'B-4/A, Industrial Development Area, Uppal,Hyderabad, Telangana, 500039',
+      'B-4/A, Industrial Development Area, Uppal, Hyderabad, Telangana, 500039',
   },
   {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7433656557864!2d78.45519981435372!3d17.424099406332694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb974b6feb9ea5%3A0x1e0a3e3dabcb8701!2sMaruti%20Suzuki%20Car%20Dealer%20-%20RKS%20Motor!5e0!3m2!1sen!2sin!4v1607577363887!5m2!1sen!2sin',
