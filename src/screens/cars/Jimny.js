@@ -76,7 +76,7 @@ const Jimny = () => {
 
       <JimnyInteriorAndOther />
 
-      <OnRoadPrice />
+      <OnRoadPrice title={"Ignis"}/>
       {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
       <div className='hidden sm:block'>
         <div className='flex h-[60vh] bg-white gap-1 px-2 pt-1'>
