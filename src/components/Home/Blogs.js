@@ -23,53 +23,34 @@ function Blogs() {
         >
           <p>Read More</p>
         </Link>
-        {/* <div className="grid lg:grid-cols-2 gap-4 pt-7">
-        {blogs.map((item, index) => (
-          <div className="grid sm:grid-cols-2 gap-4 sm:px-0 px-5" key={index}>
-            <div>
-              <img src={item.img} alt="" />
-            </div>
-            <div>
-              <a
-                href={item.href}
-                target="_blank"
-                rel="noreferrer"
-                className="text-lg font-bold uppercase "
-              >
-                {item.title}
-              </a>
-              <p>{item.text}</p>
-            </div>
-          </div>
-        ))}
-      </div> */}
+
         <div className='grid lg:grid-cols-3 gap-2 justify-center sm:ml-4 p-10'>
+          {/* first thumbnail begin */}
           <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
-            <Link to='#'>
+            <div to=''>
               <img
                 class='rounded-t-lg'
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/4.webp'
+                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/1-upload.webp'
                 alt=''
               />
-            </Link>
+            </div>
             <div class='p-5'>
-              <div href='/gallery'>
+              <div href='https://www.deccanchronicle.com/business/autos/210623/maruti-suzuki-jimny-hits-hyderabad-roads.html'>
                 <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                  Grand Launch of Suzuki Jimny at our Nexa Lumbini
+                  Maruti Suzuki Jimny hits Hyderabad roads
                 </h5>
               </div>
-              <p className='text-xs pb-2 text-gray-500'>26 May 2023</p>
+              <p className='text-xs pb-2 text-gray-500'>21 Jun 2023</p>
               <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
-                Get ready to be awestruck as you witness the perfect blend of
-                innovation, design, and cutting-edge technology.
+                The first batch of the iconic SUV from Maruti Suzuki, the Jimny
+                was delivered to customers in Hyderabad here at NEXA Lumbini,
+                RKS Motors on Wednesday.
               </p>
-              <br></br>
-              <br></br>
               <br></br>
               <br></br>
 
               <a
-                href='/gallery'
+                href='https://www.deccanchronicle.com/business/autos/210623/maruti-suzuki-jimny-hits-hyderabad-roads.html'
                 target='_blank'
                 class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
               >
@@ -90,25 +71,26 @@ function Blogs() {
               </a>
             </div>
           </div>
+
+          {/* second thumbnail begin */}
           <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
             <div href='#'>
               <img
                 class='rounded-t-lg'
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/grand-vitara-blogpost-19-jul.webp'
+                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/2-upload+ama.webp'
                 alt=''
               />
             </div>
             <div class='p-5'>
               <div href='#'>
                 <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                  Maruti Suzuki Grand Vitara Hybrid Will Alert Pedestrians, But
-                  There’s A Catch!
+                  Maruti Suzuki delivers Jimny to customers
                 </h5>
               </div>
-              <p className='text-xs pb-2 text-gray-500'>18 Jul 2023</p>
+              <p className='text-xs pb-2 text-gray-500'>22 Jun 2023</p>
               <p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
-                It emits a low-level sound, alerting pedestrians while being
-                driven in EV-only mode.
+                Maruti Suzuki has delivered Jimny SUV to customers at Nexa
+                Lumbini, RKS Motor, Hyderabad on Wednesday.
               </p>
               <br></br>
               <br></br>
@@ -116,7 +98,7 @@ function Blogs() {
 
               <a
                 href={
-                  'https://www.zigwheels.com/news-features/hybrid-vehicle-news/maruti-suzuki-grand-vitara-hybrid-will-alert-pedestrians-but-theres-a-catch/50447/#leadform'
+                  'https://www.thehansindia.com/business/maruti-suzuki-delivers-jimny-to-customers-804645'
                 }
                 target='_blank'
                 rel='noopener noreferrer'
@@ -139,32 +121,35 @@ function Blogs() {
               </a>
             </div>
           </div>
+
+          {/* third thumbnail begin */}
           <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
             <div href='#'>
               <img
                 class='rounded-t-lg'
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/grand-vitara-blogpost-2-19july.webp'
+                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/3-upload-aws.webp'
                 alt=''
               />
             </div>
             <div class='p-5'>
               <div href='#'>
                 <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
-                  Maruti Grand Vitara Hybrid SUV price hiked. Check how much
-                  more one needs to pay
+                  आरकेएस मोटर्स पर मारुति सुजुकी ने ग्राहकों को सौंपी पहली
+                  जिम्नी एसयूवी
                 </h5>
               </div>
-              <p className='text-xs pb-2 text-gray-500'>18 Jul 2023</p>
+              <p className='text-xs pb-2 text-gray-500'>21 Jun 2023</p>
               <p class='mb-3 tracking-normal font-normal text-gray-700 dark:text-gray-400'>
-                Maruti Suzuki has increased the price of its flagship compact
-                SUV Grand Vitara from Monday, July 17.
+                मारुति सुजुकी की एसयूवी जिम्नी की चाभी सौंपते आईटी विभाग के
+                प्रधान सचिव जयेश रंजन। साथ में नेक्सा लुम्बिनी, आरकेएस मोटर्स
+                अध्यक्ष एवं प्रबंध निदेशक विनय साबू व अन्य।
               </p>
               <br></br>
               <br></br>
 
               <a
                 href={
-                  'https://auto.hindustantimes.com/auto/cars/maruti-suzuki-grand-vitara-hybrid-suv-price-hiked-after-addition-of-this-new-safety-feature-41689648973634.html'
+                  'http://webmilap.com//articlepage.php?articleid=HINDIMIL_HIN_20230622_3_18&width=226px&edition=Hindi%20Milap&curpage=3'
                 }
                 target='_blank'
                 rel='noopener noreferrer'

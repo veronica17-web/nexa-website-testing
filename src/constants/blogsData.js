@@ -1,6 +1,66 @@
 const blogsData = [
   {
     id: 1,
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/full-blog-section/Nexa_0000_telanganatoday.webp',
+    title: 'Maruti Suzuki’s iconic SUV, The Jimny hits Hyderabad roads',
+    subTitle: 'Telangana Today',
+    href: 'https://telanganatoday.com/maruti-suzukis-iconic-suv-the-jimny-hits-hyderabad-roads',
+    desc: 'The keys were handed over to customers by Jayesh Ranjan and Vinay Saboo, Chairman & Managing Director in the presence of senior officials from Maruti Suzuki.',
+  },
+  {
+    id: 2,
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/full-blog-section/Nexa_0001_dc.webp',
+    title: 'Maruti Suzuki Jimny hits Hyderabad roads',
+    subTitle: `Deccan Chronicle`,
+    href: 'https://www.deccanchronicle.com/business/autos/210623/maruti-suzuki-jimny-hits-hyderabad-roads.html',
+    desc: `The first batch of the iconic SUV from Maruti Suzuki, the Jimny was delivered to customers in Hyderabad here at NEXA Lumbini, RKS Motors on Wednesday. Principal Secretary for ITE&C, Jayesh Ranjan, IAS, was the chief guest at the delivery ceremony.`,
+  },
+  {
+    id: 3,
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/full-blog-section/Nexa_0002_hindimilap.webp',
+    title:
+      'आरकेएस मोटर्स पर मारुति सुजुकी ने ग्राहकों को सौंपी पहली जिम्नी एसयूवी',
+    subTitle: 'Hindi Milap',
+    href: 'http://webmilap.com/articlepage.php?articleid=HINDIMIL_HIN_20230622_3_18&width=226px&edition=Hindi%20Milap&curpage=3',
+    desc: 'मारुति सुजुकी की एसयूवी जिम्नी की चाभी सौंपते आईटी विभाग के प्रधान सचिव जयेश रंजन। साथ में नेक्सा लुम्बिनी, आरकेएस मोटर्स अध्यक्ष एवं प्रबंध निदेशक विनय साबू व अन्य।',
+  },
+  {
+    id: 4,
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/full-blog-section/Nexa_0003_v6velugu.webp',
+    title: 'హైదరాబాద్ కస్టమర్ల చేతికి జిమ్ని',
+    subTitle: 'V6 Telugu',
+    href: 'https://epaper.v6velugu.com/c/72746567',
+    desc: 'మారుతి సుజుకి ఇటీవల విడుదల చేసిన జిమ్ని హైదరాబాద్ మార్కెట్ లోకి ప్రేవేశించింది. సెక్రెటేరియేట్  సమీపం లోని నెక్సా షోరూం నుంచి డెలివరీలు మొదలయ్యాయి. ',
+  },
+  {
+    id: 5,
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/full-blog-section/Nexa_0003_v6velugu.webp',
+    title:
+      'హైదరాబాద్ లో అందుబాటు లోకి మారుతి సుజుకి ఐకానిక్ ఎస్ యు వీ, ది జిమ్ని',
+    subTitle: 'Surya',
+    href: 'https://www.suryaepaper.com/clip/120388',
+    desc: 'మారుతి సుజుకి నుండి హైదరాబాద్ యొక్క మొదటి బ్యాచ్ ఐకానిక్ ఎస్ యు వీ, ది జిమ్ని బుధవారం నెక్సా లుంబిని, ఆర్ కె ఎస్ మోటార్ ప్రైవేట్ లిమిటెడ్ లో సంతోషకరమైన కస్టమర్లకు డెలివరీ చేయబడింది.',
+  },
+  {
+    id: 6,
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/full-blog-section/Nexa_0003_v6velugu.webp',
+    title:
+      'హైదరాబాద్ లో అందుబాటు లోకి మారుతి సుజుకి ఐకానిక్ ఎస్ యు వీ, ది జిమ్ని',
+    subTitle: `Andhra Prabha`,
+    href: 'https://epaper.prabhanews.com/article/Hyderabad?OrgId=226e25ddf97&eid=19&imageview=1&standalone=1&device=desktop',
+    desc: `మారుతి సుజుకి నుండి హైదరాబాద్ యొక్క మొదటి బ్యాచ్ ఐకానిక్ ఎస్ యు వీ, ది జిమ్ని బుధవారం నెక్సా లుంబిని, ఆర్ కె ఎస్ మోటార్ ప్రైవేట్ లిమిటెడ్ లో సంతోషకరమైన కస్టమర్లకు డెలివరీ చేయబడింది. `,
+  },
+  {
+    id: 7,
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/full-blog-section/Nexa_0006_thehansindia.webp',
+    title: 'Maruti Suzuki delivers Jimny to customers',
+    subTitle: 'The Hans India',
+    href: 'https://www.thehansindia.com/business/maruti-suzuki-delivers-jimny-to-customers-804645',
+    desc: 'Maruti Suzuki has delivered Jimny SUV to customers at Nexa Lumbini, RKS Motor, Hyderabad on Wednesday.',
+  },
+  // old articles begin here
+  {
+    id: 8,
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/blogScreen/1.webp',
     title: 'From Luna to Maruti - How Vinay Saboo built his business',
     subTitle: 'Interview for HYBIZTV',
@@ -8,7 +68,7 @@ const blogsData = [
     desc: 'Today, RKS Saboo has 4 Arena, 2 Nexa showrooms and 7 workshops spread across the twin cities of Hyderabad and Secunderabad.',
   },
   {
-    id: 2,
+    id: 9,
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/4.webp',
     title: 'Grand Launch of Suzuki Jimny at our Nexa Lumbini',
     subTitle: `Don't miss the opportunity to feast your eyes on these extraordinary masterpieces!`,
@@ -16,7 +76,7 @@ const blogsData = [
     desc: `"Step into the world of automotive excellence and explore our captivating gallery of new car unveilings. Get ready to be awestruck as you witness the perfect blend of innovation, design, and cutting-edge technology."`,
   },
   {
-    id: 3,
+    id: 10,
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/grand-vitara-blogpost-19-jul.webp',
     title:
       'Maruti Suzuki Grand Vitara Hybrid Will Alert Pedestrians, But There’s A Catch!',
@@ -26,7 +86,7 @@ const blogsData = [
     desc: 'Maruti Suzuki has introduced a new safety feature in the strong-hybrid variants of the Grand Vitara. Called the  ‘Acoustic Vehicle Alerting System’, it emits a low alert sound that can be heard up to five feet away, to denote that the vehicle is approaching them.',
   },
   {
-    id: 4,
+    id: 11,
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/grand-vitara-blogpost-2-19july.webp',
     title:
       'Maruti Grand Vitara Hybrid SUV price hiked. Check how much more one needs to pay.',

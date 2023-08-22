@@ -7,11 +7,11 @@ const BlogPage = () => {
   return (
     <>
       <Header />
-      <img
+      {/* <img
         src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-all-cars-banner.webp'
         className='max-w-full w-full'
         alt='inusrance banner'
-      />
+      /> */}
       <div className='shadow sm:px-0 px-4'>
         <p className='mx-auto container py-4'>
           <Link to='/'>Home</Link> / Blog
