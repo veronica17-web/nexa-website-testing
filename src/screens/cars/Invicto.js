@@ -27,7 +27,7 @@ import {
 } from 'react-icons/md';
 // import Carousel from '../../components/Fronx/Extras/Carousel';
 
-import { Autoplay, EffectCoverflow, EffectCreative } from 'swiper';
+import { Autoplay, EffectCoverflow } from 'swiper';
 
 // const width = window.innerWidth;
 
@@ -178,7 +178,9 @@ function InvictoCarEnquiry() {
       });
   }
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
       toast.error('Enter valid phone number', {
@@ -258,7 +260,13 @@ function InvictoCarEnquiry() {
                   name='Email'
                   onChange={(e) => setEmail(e.target.value)}
                 />
+                {email.length > 0 && !emailPattern.test(email) ? (
+                  <small className='text-red-500'>Invalid email address</small>
+                ) : (
+                  ''
+                )}
               </div>
+
               <div>
                 <input
                   className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
@@ -276,9 +284,13 @@ function InvictoCarEnquiry() {
                     )
                   }
                 />
-                {!pattern.test(phone) && phone.length === 10 ? (
+                {phone.length > 0 && phone.length < 10 ? (
                   <small className='text-red-500'>
-                    phone number is invalid
+                    Phone number must be 10 digits
+                  </small>
+                ) : !pattern.test(phone) && phone.length === 10 ? (
+                  <small className='text-red-500'>
+                    Phone number is invalid
                   </small>
                 ) : (
                   ''
@@ -377,7 +389,9 @@ function InvictoCarEnquiry2() {
       });
   }
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
       toast.error('Enter valid phone number', {
@@ -452,13 +466,19 @@ function InvictoCarEnquiry2() {
               </div>
               <div>
                 <input
-                  className='border-b border-black h-10 outline-none px-3  w-full placeholder:text-lg  placeholder:text-gray-400 font-sans '
+                  className='border-b border-black h-10 outline-none px-3  w-full placeholder:text-lg  placeholder:text-gray-400 font-sans  '
                   placeholder='Email'
                   id='Email'
                   name='Email'
                   onChange={(e) => setEmail(e.target.value)}
                 />
+                {email.length > 0 && !emailPattern.test(email) ? (
+                  <small className='text-red-500'>Invalid email address</small>
+                ) : (
+                  ''
+                )}
               </div>
+
               <div>
                 <input
                   className='border-b border-black h-10 outline-none px-3  w-full placeholder:text-lg  placeholder:text-gray-400 font-sans  '
@@ -476,9 +496,13 @@ function InvictoCarEnquiry2() {
                     )
                   }
                 />
-                {!pattern.test(phone) && phone.length === 10 ? (
+                {phone.length > 0 && phone.length < 10 ? (
                   <small className='text-red-500'>
-                    phone number is invalid
+                    Phone number must be 10 digits
+                  </small>
+                ) : !pattern.test(phone) && phone.length === 10 ? (
+                  <small className='text-red-500'>
+                    Phone number is invalid
                   </small>
                 ) : (
                   ''

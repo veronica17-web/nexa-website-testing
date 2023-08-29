@@ -1,6 +1,6 @@
 import React from 'react';
-import Slider from '../../components/Home/Slider';
-import CarEnquiry from '../../components/Home/CarEnquiry';
+// import Slider from '../../components/Home/Slider';
+// import CarEnquiry from '../../components/Home/CarEnquiry';
 import Cars from '../../components/Home/Cars';
 import Blogs from '../../components/Home/Blogs';
 import ServiceFinanceInsu from '../../components/Home/ServiceFinanceInsu';
@@ -9,9 +9,9 @@ import MobileSlider from '../../components/Home/MobileSlider';
 import Helmet from 'react-helmet';
 import Header from '../../components/Header/Header';
 //confetti
-import Confetti from 'react-confetti';
+// import Confetti from 'react-confetti';
 import MobileCarousel from '../../components/Home/Mobile Carousel/MobileCarouselforHomePage';
-import CarEnquiries from '../../components/Home/CarEnquiries';
+
 import CarEnquiry2 from '../../components/Home/CarEnquiry2';
 
 const width = window.innerWidth;

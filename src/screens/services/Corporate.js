@@ -8,7 +8,7 @@ import axios from 'axios';
 import { CgSpinner } from 'react-icons/cg';
 
 const Corporate = () => {
-  const notify = () => toast('your email client will be opened');
+  // const notify = () => toast('your email client will be opened');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -63,7 +63,9 @@ const Corporate = () => {
       });
   }
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
       toast.error('Enter valid phone number', {
@@ -170,33 +172,52 @@ const Corporate = () => {
                   </label>
                   <input
                     className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                    type='text'
+                    placeholder='Email'
                     id='Email'
                     name='Email'
                     onChange={(e) => setEmail(e.target.value)}
                   />
+                  {email.length > 0 && !emailPattern.test(email) ? (
+                    <small className='text-red-500'>
+                      Invalid email address
+                    </small>
+                  ) : (
+                    ''
+                  )}
                 </div>
 
                 <div>
                   <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>
                     Phone
                   </label>
+
                   <input
                     className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                    type='text'
+                    placeholder='Mobile'
+                    value={phone}
                     id='Phone'
+                    name='Phone'
+                    required
                     minLength='10'
                     maxLength='10'
-                    required
-                    name='Phone'
-                    value={phone}
                     onChange={(e) =>
                       setPhone(
-                        e.target.value.replace(/[^1-9]/g, '') &&
+                        e.target.value.replace(/[^1-9 ]/g, '') &&
                           e.target.value.replace(/ /g, '')
                       )
                     }
                   />
+                  {phone.length > 0 && phone.length < 10 ? (
+                    <small className='text-red-500'>
+                      Phone number must be 10 digits
+                    </small>
+                  ) : !pattern.test(phone) && phone.length === 10 ? (
+                    <small className='text-red-500'>
+                      Phone number is invalid
+                    </small>
+                  ) : (
+                    ''
+                  )}
                 </div>
                 <div>
                   <label
@@ -221,22 +242,7 @@ const Corporate = () => {
                 explicitly soliciting a call / message from Saboo Maruti (RKS
                 Motor Pvt. Ltd) or its representatives on my ‘Mobile’
               </p>
-              <div className='flex items-start'>
-                <input
-                  id='disclaimer'
-                  name='disclaimer'
-                  type='checkbox'
-                  className='h-4 w-4 rounded'
-                />
-                <div className='ml-2 text-sm'>
-                  <label
-                    htmlFor='disclaimer'
-                    className='font-medium text-gray-700'
-                  >
-                    Please Agree with following Disclaimer
-                  </label>
-                </div>
-              </div>
+
               <button
                 type='submit'
                 onClick={handleSubmit}

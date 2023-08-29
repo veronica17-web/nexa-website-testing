@@ -64,7 +64,9 @@ function Contact() {
       });
   }
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
       toast.error('Enter valid phone number', {
@@ -301,11 +303,18 @@ function Contact() {
                           </label>
                           <input
                             className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                            type='text'
+                            placeholder='Email'
                             id='Email'
                             name='Email'
                             onChange={(e) => setEmail(e.target.value)}
                           />
+                          {email.length > 0 && !emailPattern.test(email) ? (
+                            <small className='text-red-500'>
+                              Invalid email address
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
                         <div style={{ display: 'none' }}>
                           <label className='block text-sm font-medium text-gray-700'>
@@ -381,13 +390,13 @@ function Contact() {
                           </label>
                           <input
                             className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                            type='text'
+                            placeholder='Mobile'
+                            value={phone}
                             id='Phone'
+                            name='Phone'
+                            required
                             minLength='10'
                             maxLength='10'
-                            required
-                            name='Phone'
-                            value={phone}
                             onChange={(e) =>
                               setPhone(
                                 e.target.value.replace(/[^1-9 ]/g, '') &&
@@ -395,7 +404,35 @@ function Contact() {
                               )
                             }
                           />
+                          {phone.length > 0 && phone.length < 10 ? (
+                            <small className='text-red-500'>
+                              Phone number must be 10 digits
+                            </small>
+                          ) : !pattern.test(phone) && phone.length === 10 ? (
+                            <small className='text-red-500'>
+                              Phone number is invalid
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
+                        <div>
+                          <input
+                            className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
+                            placeholder='Email'
+                            id='Email'
+                            name='Email'
+                            onChange={(e) => setEmail(e.target.value)}
+                          />
+                          {email.length > 0 && !emailPattern.test(email) ? (
+                            <small className='text-red-500'>
+                              Invalid email address
+                            </small>
+                          ) : (
+                            ''
+                          )}
+                        </div>
+
                         <div>
                           <label className='block text-sm font-medium text-gray-700'>
                             Comments
@@ -455,12 +492,10 @@ function Contact() {
                 </Tab.Panel>
 
                 {/* Service Booking */}
-         
 
                 {/* Complaints */}
-         
+
                 {/* Feedback */}
-  
               </Tab.Panels>
             </div>
           </Tab.Group>

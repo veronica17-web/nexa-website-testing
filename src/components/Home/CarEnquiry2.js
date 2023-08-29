@@ -1,10 +1,10 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { toast } from 'react-toastify';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import { CgSpinner } from 'react-icons/cg';
-import EnquiryPopup from '../utils/EnquiryPopup';
+// import EnquiryPopup from '../utils/EnquiryPopup';
 
 function CarEnquiry2() {
   const [name, setName] = useState('');
@@ -13,7 +13,6 @@ function CarEnquiry2() {
   const [model, setModel] = useState('');
   const [method, setMethod] = useState();
   const [loader, setLoader] = useState(false);
-  const [outlet, setOutlet] = useState('');
 
   function handleSubmit() {
     setLoader(true);
@@ -25,7 +24,6 @@ function CarEnquiry2() {
         email: email,
         phone: phone,
         model: model,
-        outlet: outlet,
       })
       .then((res) => {
         setMethod('POST');
@@ -62,14 +60,17 @@ function CarEnquiry2() {
       });
   }
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
-      toast.error('Enter valid phone number', {
+      toast.error('Enter a valid 10-digit phone number', {
         theme: 'colored',
       });
     }
   }
+
   return (
     <>
       <div className='py-6 bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Saboo-RKS-Nexa-Price-Banner.webp)]'>
@@ -140,7 +141,13 @@ function CarEnquiry2() {
                   name='Email'
                   onChange={(e) => setEmail(e.target.value)}
                 />
+                {email.length > 0 && !emailPattern.test(email) ? (
+                  <small className='text-red-500'>Invalid email address</small>
+                ) : (
+                  ''
+                )}
               </div>
+
               <div>
                 <input
                   className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
@@ -158,14 +165,19 @@ function CarEnquiry2() {
                     )
                   }
                 />
-                {!pattern.test(phone) && phone.length === 10 ? (
+                {phone.length > 0 && phone.length < 10 ? (
                   <small className='text-red-500'>
-                    phone number is invalid
+                    Phone number must be 10 digits
+                  </small>
+                ) : !pattern.test(phone) && phone.length === 10 ? (
+                  <small className='text-red-500'>
+                    Phone number is invalid
                   </small>
                 ) : (
                   ''
                 )}
               </div>
+
               <>
                 <select
                   id='LEADCF6'

@@ -35,9 +35,9 @@ function CarEnquiry() {
     setLoader(false);
   }
 
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-
-  const pattern = /^[6-9][0-9]{6,9}$/;
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
       toast.error('Enter valid phone number', {
@@ -115,7 +115,13 @@ function CarEnquiry() {
                   name='Email'
                   onChange={(e) => setEmail(e.target.value)}
                 />
+                {email.length > 0 && !emailPattern.test(email) ? (
+                  <small className='text-red-500'>Invalid email address</small>
+                ) : (
+                  ''
+                )}
               </div>
+
               <div>
                 <input
                   className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
@@ -133,9 +139,13 @@ function CarEnquiry() {
                     )
                   }
                 />
-                {!pattern.test(phone) && phone.length === 10 ? (
+                {phone.length > 0 && phone.length < 10 ? (
                   <small className='text-red-500'>
-                    phone number is invalid
+                    Phone number must be 10 digits
+                  </small>
+                ) : !pattern.test(phone) && phone.length === 10 ? (
+                  <small className='text-red-500'>
+                    Phone number is invalid
                   </small>
                 ) : (
                   ''
@@ -165,9 +175,7 @@ function CarEnquiry() {
                   disabled={
                     pattern.test(phone) && phone.length === 10 ? false : true
                   }
-                  onClick={
-                    handleSubmit
-                  }
+                  onClick={handleSubmit}
                   className='w-full h-10 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
                 >
                   {loader ? (

@@ -64,7 +64,9 @@ function Contact() {
       });
   }
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
       toast.error('Enter valid phone number', {
@@ -224,13 +226,22 @@ function Contact() {
                           >
                             Email
                           </label>
-                          <input
-                            className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                            type='text'
-                            id='Email'
-                            name='Email'
-                            onChange={(e) => setEmail(e.target.value)}
-                          />
+                          <div>
+                            <input
+                              className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
+                              placeholder='Enter your email'
+                              id='Email'
+                              name='Email'
+                              onChange={(e) => setEmail(e.target.value)}
+                            />
+                            {email.length > 0 && !emailPattern.test(email) ? (
+                              <small className='text-red-500'>
+                                Invalid email address
+                              </small>
+                            ) : (
+                              ''
+                            )}
+                          </div>
                         </div>
                         <div style={{ display: 'none' }}>
                           <label className='block text-sm font-medium text-gray-700'>
@@ -306,13 +317,13 @@ function Contact() {
                           </label>
                           <input
                             className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                            type='text'
+                            placeholder='Enter your phone number'
+                            value={phone}
                             id='Phone'
+                            name='Phone'
+                            required
                             minLength='10'
                             maxLength='10'
-                            required
-                            name='Phone'
-                            value={phone}
                             onChange={(e) =>
                               setPhone(
                                 e.target.value.replace(/[^1-9 ]/g, '') &&
@@ -320,16 +331,29 @@ function Contact() {
                               )
                             }
                           />
+                          {phone.length > 0 && phone.length < 10 ? (
+                            <small className='text-red-500'>
+                              Phone number must be 10 digits
+                            </small>
+                          ) : !pattern.test(phone) && phone.length === 10 ? (
+                            <small className='text-red-500'>
+                              Phone number is invalid
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
+
                         <div>
                           <label className='block text-sm font-medium text-gray-700'>
                             Comments
                           </label>
                           <textarea
-                            className='border h-5 outline-none px-1 rounded-md w-full focus:ring-red-500 focus:border-red-500'
+                            className='border h-10 outline-none px-1 rounded-md w-full focus:ring-red-500 focus:border-red-500'
                             type='text'
                             id='message'
                             name='message'
+                            placeholder='Enter your message'
                             onChange={(e) => setMessage(e.target.value)}
                           ></textarea>
                         </div>
@@ -435,6 +459,7 @@ function Contact() {
                           </label>
                           <input
                             className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
+                            placeholder='Enter your name'
                             type='text'
                             id='Last_Name'
                             name='Last Name'
@@ -446,10 +471,18 @@ function Contact() {
                           </label>
                           <input
                             className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                            type='text'
+                            placeholder='Email'
                             id='Email'
                             name='Email'
+                            onChange={(e) => setEmail(e.target.value)}
                           />
+                          {email.length > 0 && !emailPattern.test(email) ? (
+                            <small className='text-red-500'>
+                              Invalid email address
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
 
                         <div>
@@ -458,16 +491,33 @@ function Contact() {
                           </label>
                           <input
                             className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                            type='text'
-                            id='Mobile'
-                            required
-                            name='Mobile'
-                            maxLength='10'
-                            minLength='10'
+                            placeholder='Enter your phone number'
                             value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
+                            id='Phone'
+                            name='Phone'
+                            required
+                            minLength='10'
+                            maxLength='10'
+                            onChange={(e) =>
+                              setPhone(
+                                e.target.value.replace(/[^1-9 ]/g, '') &&
+                                  e.target.value.replace(/ /g, '')
+                              )
+                            }
                           />
+                          {phone.length > 0 && phone.length < 10 ? (
+                            <small className='text-red-500'>
+                              Phone number must be 10 digits
+                            </small>
+                          ) : !pattern.test(phone) && phone.length === 10 ? (
+                            <small className='text-red-500'>
+                              Phone number is invalid
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
+                        <div></div>
                         <div>
                           <label className='block text-sm font-medium text-gray-700'>
                             Customer Address
@@ -630,11 +680,18 @@ function Contact() {
                           </label>
                           <input
                             className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                            type='text'
-                            ftype='email'
+                            placeholder='Email'
                             id='Email'
                             name='Email'
+                            onChange={(e) => setEmail(e.target.value)}
                           />
+                          {email.length > 0 && !emailPattern.test(email) ? (
+                            <small className='text-red-500'>
+                              Invalid email address
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
                         <div>
                           <label className='block text-sm font-medium text-gray-700'>
@@ -674,16 +731,33 @@ function Contact() {
                           </label>
                           <input
                             className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                            type='text'
+                            placeholder='Enter your mobile number'
+                            value={phone}
                             id='Phone'
-                            required
                             name='Phone'
+                            required
                             minLength='10'
                             maxLength='10'
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
+                            onChange={(e) =>
+                              setPhone(
+                                e.target.value.replace(/[^1-9 ]/g, '') &&
+                                  e.target.value.replace(/ /g, '')
+                              )
+                            }
                           />
+                          {phone.length > 0 && phone.length < 10 ? (
+                            <small className='text-red-500'>
+                              Phone number must be 10 digits
+                            </small>
+                          ) : !pattern.test(phone) && phone.length === 10 ? (
+                            <small className='text-red-500'>
+                              Phone number is invalid
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
+
                         <div>
                           <label className='block text-sm font-medium text-gray-700'>
                             Comments
@@ -781,11 +855,18 @@ function Contact() {
                           </label>
                           <input
                             className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                            type='text'
-                            ftype='email'
+                            placeholder='Email'
                             id='Email'
                             name='Email'
+                            onChange={(e) => setEmail(e.target.value)}
                           />
+                          {email.length > 0 && !emailPattern.test(email) ? (
+                            <small className='text-red-500'>
+                              Invalid email address
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
                         <div>
                           <label className='block text-sm font-medium text-gray-700'>
@@ -793,15 +874,31 @@ function Contact() {
                           </label>
                           <input
                             className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                            type='text'
+                            placeholder='Enter your mobile number'
+                            value={phone}
                             id='Phone'
                             name='Phone'
+                            required
                             minLength='10'
                             maxLength='10'
-                            required
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
+                            onChange={(e) =>
+                              setPhone(
+                                e.target.value.replace(/[^1-9 ]/g, '') &&
+                                  e.target.value.replace(/ /g, '')
+                              )
+                            }
                           />
+                          {phone.length > 0 && phone.length < 10 ? (
+                            <small className='text-red-500'>
+                              Phone number must be 10 digits
+                            </small>
+                          ) : !pattern.test(phone) && phone.length === 10 ? (
+                            <small className='text-red-500'>
+                              Phone number is invalid
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
 
                         <div>

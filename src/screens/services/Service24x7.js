@@ -26,7 +26,9 @@ function Service24x7() {
 
   const [showMyModal, setShowMyModal] = useState(false);
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
       toast.error('Enter valid phone number', {
@@ -690,9 +692,9 @@ function Service24x7() {
                       >
                         Phone:
                       </label>
+
                       <input
                         className='border-b border-white h-10 outline-none  w-full placeholder:text-lg  placeholder:text-gray-400 font-sans bg-[#1a1a1a] '
-                        // placeholder='Mobile'
                         value={phone}
                         id='Phone'
                         name='Phone'
@@ -706,7 +708,19 @@ function Service24x7() {
                           )
                         }
                       />
+                      {phone.length > 0 && phone.length < 10 ? (
+                        <small className='text-red-500'>
+                          Phone number must be 10 digits
+                        </small>
+                      ) : !pattern.test(phone) && phone.length === 10 ? (
+                        <small className='text-red-500'>
+                          Phone number is invalid
+                        </small>
+                      ) : (
+                        ''
+                      )}
                     </div>
+
                     <div className='flex items-center'>
                       <label
                         htmlFor='Email'

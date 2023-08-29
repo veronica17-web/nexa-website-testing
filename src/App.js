@@ -65,7 +65,8 @@ function App() {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
 
-  const isAdminRoute = location.pathname === '/maruti-suzuki-24/7-service-in-hyderabad';
+  const isAdminRoute =
+    location.pathname === '/maruti-suzuki-24/7-service-in-hyderabad';
 
   useEffect(() => {
     const getIp = async () => {
@@ -144,7 +145,7 @@ function App() {
       setLoading(false);
     }
 
-    const pattern = /^[6-9][0-9]{6,9}$/;
+    const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
     if (number !== '' && number.length === 10) {
       if (!pattern.test(number)) {
         sessionStorage.setItem('popup', 'false');
@@ -328,7 +329,20 @@ function App() {
                           </a>
                         </div>
 
-                        <div className='flex items-center space-x-2 mb-5'>
+                        <div className='mt-6 container text-xs text-gray-600 mb-4'>
+                          <span className='font-semibold'>*Disclaimer:</span> By
+                          clicking 'Submit,' you acknowledge that you have
+                          agreed to our{' '}
+                          <Link
+                            to='/terms-and-condition'
+                            className='text-blue-600'
+                          >
+                            Privacy Policy and Terms of Service
+                          </Link>
+                          .
+                        </div>
+
+                        {/* <div className='flex items-center space-x-2 mb-5'>
                           <input
                             id='comments'
                             name='comments'
@@ -346,7 +360,7 @@ function App() {
                             </Link>
                             .
                           </label>
-                        </div>
+                        </div> */}
 
                         <button
                           type='submit'
@@ -423,7 +437,10 @@ function App() {
         {/* services */}
         <Route path='/maruti-car-insurance' element={<Insurance />} />
         <Route path='/maruti-car-finance' element={<Finance />} />
-        <Route path='/maruti-suzuki-24/7-service-in-hyderabad' element={<Service24x7 />} />
+        <Route
+          path='/maruti-suzuki-24/7-service-in-hyderabad'
+          element={<Service24x7 />}
+        />
         {/* outlets */}
         <Route
           path='/maruti-nexa-showroom-outlets-in-hyderabad'

@@ -27,7 +27,9 @@ function BookAService() {
 
   const [loader, setLoader] = useState(false);
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
       toast.error('Enter valid phone number', {
@@ -202,26 +204,31 @@ function BookAService() {
               </label>
               <input
                 className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                type='text'
+                placeholder='Mobile'
+                value={phone}
+                id='Phone'
+                name='Phone'
+                required
                 minLength='10'
                 maxLength='10'
-                required
-                id='Mobile'
-                name='Mobile'
-                value={phone}
                 onChange={(e) =>
                   setPhone(
-                    e.target.value.replace(/[^1-9]/g, '') &&
+                    e.target.value.replace(/[^1-9 ]/g, '') &&
                       e.target.value.replace(/ /g, '')
                   )
                 }
               />
-              {!pattern.test(phone) && phone.length === 10 ? (
-                <small className='text-red-500'>phone number is invalid</small>
+              {phone.length > 0 && phone.length < 10 ? (
+                <small className='text-red-500'>
+                  Phone number must be 10 digits
+                </small>
+              ) : !pattern.test(phone) && phone.length === 10 ? (
+                <small className='text-red-500'>Phone number is invalid</small>
               ) : (
                 ''
               )}
             </div>
+            <div></div>
             {/* <div>
               <label className="block text-sm font-medium text-gray-700">
                 Model
