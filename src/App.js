@@ -418,10 +418,10 @@ function App() {
         />
         {/* Vehicles */}
         <Route path='/nexa-xl6-on-road-price-in-hyderabad' element={<XL />} />
-        <Route
+        {/* <Route
           path='/nexa-scross-petrol-on-road-price-in-hyderabad'
           element={<Scross />}
-        />
+        /> */}
         <Route
           path='/nexa-ciaz-on-road-price-in-hyderabad'
           element={<Ciaz />}

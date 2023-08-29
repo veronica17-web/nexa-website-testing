@@ -979,11 +979,11 @@ function Service24x7() {
                     About
                   </div>
                 </Link>
-                <Link to='/'>
+                {/* <Link to='/'>
                   <div className='pb-2 font-serif hover:text-red-500 '>
                     Careers
                   </div>
-                </Link>
+                </Link> */}
                 <Link to='/contact-us'>
                   <div className='pb-2 font-serif hover:text-red-500 '>
                     Contact Us

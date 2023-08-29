@@ -198,7 +198,12 @@
       },
       {
         "source": "/maruti-scross-petrol-2/",
-        "destination": "/nexa-scross-petrol-on-road-price-in-hyderabad",
+        "destination": "/contact-us",
+        "type": 301
+      },
+      {
+        "source": "/nexa-scross-petrol-on-road-price-in-hyderabad",
+        "destination": "/contact-us",
         "type": 301
       },
       {
