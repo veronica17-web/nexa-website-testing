@@ -1,8 +1,8 @@
 //same for home screen and offers screen
 export const sliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Maruti+Suzuki+Nexa+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
-    alt: 'NEW HAFEEZPET BANNER 2023',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Maruti+Suzuki+Nexa+Teachers+Day+September+Offers+Saboo+RKS+Motor.webp',
+    alt: 'sep-01 2023',
   },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-banner.webp',
@@ -43,12 +43,8 @@ export const sliders = [
 //same for home screen and offers screen
 export const mobileSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Mobile+Maruti+Suzuki+Nexa+Service+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
-    alt: 'august mobile banner',
-  },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Mobile+Maruti+Suzuki+Nexa+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
-    alt: 'NEW service banner',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Mobile+Maruti+Suzuki+Nexa+Teachers+Day+September+Saboo+RKS+Motor.webp',
+    alt: 'sep-01 mobile banner',
   },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-mobile-banner.webp',
@@ -111,14 +107,14 @@ export const bookAservice = [
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Freedom+Service+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
   //   alt: 'NEW service august BANNER',
   // },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Nexa+Service+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
-    alt: 'NEW service BANNER',
-  },
   // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp',
-  //   alt: 'NEW HAFEEZPET BANNER',
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Nexa+Service+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
+  //   alt: 'NEW service BANNER',
   // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp',
+    alt: 'NEW HAFEEZPET BANNER',
+  },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-banner.webp',
   //   alt: 'banner-2',
