@@ -15,7 +15,7 @@ import Truevalue from './screens/outlets/Truevalue';
 import Insurance from './screens/services/Insurance';
 import Finance from './screens/services/Finance';
 import Baleno from './screens/cars/Baleno';
-import Scross from './screens/cars/Scross';
+// import Scross from './screens/cars/Scross';
 import Ciaz from './screens/cars/Ciaz';
 import Ignis from './screens/cars/Ignis';
 import Offers from './screens/more/Offers';
@@ -403,20 +403,9 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/vitaratest' element={<Carousel />} />
         <Route path='/mobilecarousel' element={<MobileCarousel />} />
-        <Route
-          path='/grand-vitara-features-intelligent-electric-hybrid'
-          element={<VitaraIHE />}
-        />
-        <Route path='/grand-vitara-allgrip' element={<VitaraAG />} />
-        <Route
-          path='/grand-vitara-6-speed-automatic-transmission-price'
-          element={<VitaraAT />}
-        />
-        <Route
-          path='/grand-vitara-5-speed-manual-transmission-price'
-          element={<VitaraMT />}
-        />
+
         {/* Vehicles */}
+
         <Route path='/nexa-xl6-on-road-price-in-hyderabad' element={<XL />} />
         {/* <Route
           path='/nexa-scross-petrol-on-road-price-in-hyderabad'
@@ -434,6 +423,30 @@ function App() {
           path='/nexa-ignis-on-road-price-in-hyderabad'
           element={<Ignis />}
         />
+
+        <Route
+          path='/grand-vitara-on-road-price-in-hyderabad'
+          element={<GrandVitara />}
+        />
+        <Route
+          path='/grand-vitara-features-intelligent-electric-hybrid'
+          element={<VitaraIHE />}
+        />
+        <Route path='/grand-vitara-allgrip' element={<VitaraAG />} />
+        <Route
+          path='/grand-vitara-6-speed-automatic-transmission-price'
+          element={<VitaraAT />}
+        />
+        <Route
+          path='/grand-vitara-5-speed-manual-transmission-price'
+          element={<VitaraMT />}
+        />
+        <Route
+          path='/maruti-invicto-price-in-hyderabad'
+          element={<Invicto />}
+        />
+        <Route path='/maruti-fronx-price-in-hyderabad' element={<Fronx />} />
+        <Route path='/maruti-jimny-price-in-hyderabad' element={<Jimny />} />
         {/* services */}
         <Route path='/maruti-car-insurance' element={<Insurance />} />
         <Route path='/maruti-car-finance' element={<Finance />} />
@@ -475,19 +488,12 @@ function App() {
         {/* <Route path="/compare" element={<Compare />} /> */}
         <Route path='/compare' element={<Compare />} />
         <Route path='/corporate' element={<Corporate />} />
-        <Route
-          path='/grand-vitara-on-road-price-in-hyderabad'
-          element={<GrandVitara />}
-        />
-        <Route
-          path='/maruti-invicto-price-in-hyderabad'
-          element={<Invicto />}
-        />
+        {/* CNG Cars */}
+
         <Route path='/grand-vitara-cng' element={<GrandVitaraCNG />} />
         <Route path='/baleno-cng' element={<BalenoCNG />} />
         <Route path='/xl6-cng' element={<XL6CNG />} />
-        <Route path='/maruti-fronx-price-in-hyderabad' element={<Fronx />} />
-        <Route path='/maruti-jimny-price-in-hyderabad' element={<Jimny />} />
+
         {/* Contact */}
         <Route path='/contact-us' element={<Contact />} />
         {/* PageNotFound */}
