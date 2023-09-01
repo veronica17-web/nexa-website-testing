@@ -168,7 +168,7 @@ function IntelligentElectric() {
       <div className='flex justify-center sm:p-2'>
         <iframe
           className='w-full aspect-video'
-          src='https://www.youtube.com/embed/evDoKmxJJPc?controls=0'
+          src='https://www.youtube.com/embed/evDoKmxJJPc?controls=0&rel=0'
           title='How does Intelligent Electric Hybrid work?'
           frameborder='0'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'

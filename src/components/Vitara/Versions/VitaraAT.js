@@ -157,13 +157,12 @@ function IntelligentElectric() {
       </p>
       <div className='flex justify-center'>
         <iframe
-          width='1110'
-          height='600'
-          src='https://www.youtube.com/embed/63IME4Vu2DI'
-          title='Maruti Suzuki| Smart Hybrid Technology'
-          frameborder='0'
+          className='w-full aspect-video'
+          src='https://www.youtube.com/embed/63IME4Vu2DI?controls=0&rel=0'
+          title='Maruti Suzuki | Smart Hybrid Technology'
+          frameBorder='0'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
       <br></br>
