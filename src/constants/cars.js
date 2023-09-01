@@ -724,7 +724,7 @@ export const baleno = {
     },
     {
       specs: "FUEL-EFFICIENCY (km/l)",
-      data: "21.01(MT),19.56(CVT)",
+      data: "21.01(MT), 19.56(CVT)",
     },
     {
       specs: "FUEL TANK CAPACITY (l)",

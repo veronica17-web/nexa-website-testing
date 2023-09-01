@@ -387,7 +387,6 @@ function Gallery() {
 
   return (
     <>
-      <Header />
       <Helmet>
         <title>
           Maruti Suzuki Nexa Showroom Images in Hyderabad | Maruti Suzuki Nexa
@@ -443,6 +442,8 @@ function Gallery() {
         <meta name='twitter:creator' content='@rksnexa' />
         <meta name='twitter:site' content='@rksnexa' />
       </Helmet>
+      <Header />
+      <div className='bg-black h-[4.1rem] md:hidden'></div>
       <img
         src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/banners/Saboo-Maruti-Suzuki-Nexa-Gallery-Banner.png'
         className='max-w-full w-full'

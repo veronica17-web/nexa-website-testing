@@ -1,53 +1,52 @@
-import React from 'react';
+import React from "react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import 'swiper/css/effect-fade';
-import Slider from '../../components/Home/Slider';
-import MobileSlider from '../../components/Home/MobileSlider';
-import Helmet from 'react-helmet';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/effect-fade";
+import Slider from "../../components/Home/Slider";
+import MobileSlider from "../../components/Home/MobileSlider";
+import Helmet from "react-helmet";
 
-import { offer_products } from '../../constants';
-import { Link } from 'react-router-dom';
-import Header from '../../components/Header/Header';
+import { offer_products } from "../../constants";
+import { Link } from "react-router-dom";
+import Header from "../../components/Header/Header";
 
-const width = window.innerWidth;
+// const width = window.innerWidth;
 
 function Offers() {
   const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
   return (
     <>
       <Helmet>
-        <Helmet>
-          <title>Nexa Car Offers in Hyderabad | Saboo NEXA</title>
-          <meta
-            name='title'
-            content='Nexa Car Offers in Hyderabad | Saboo NEXA'
-          />
-          <meta
-            name='description'
-            content='Get the best offers on new Maruti Suzuki Nexa cars. Visit your nearest Maruti Suzuki Nexa showromm for more Nexa car offers. Lowest price gurantiee. call now'
-          />
-          {/* <meta
+        <title>Nexa Car Offers in Hyderabad | Saboo NEXA</title>
+        <meta
+          name="title"
+          content="Nexa Car Offers in Hyderabad | Saboo NEXA"
+        />
+        <meta
+          name="description"
+          content="Get the best offers on new Maruti Suzuki Nexa cars. Visit your nearest Maruti Suzuki Nexa showromm for more Nexa car offers. Lowest price gurantiee. call now"
+        />
+        {/* <meta
           name='keywords'
           content='XL6 on road price, XL6 mileage, XL6 offers & disconuts,xl6 on road price, Maruti xl6 offers, xl6 mileage,Nexa xl6 petrol price, Maruti xl6 on road price, Maruti xl6 variants, xl6 images, xl6 mileage, Nexa xl6 price in hyderabad, Maruti xl6 price in hyderabad, xl6 price in hyderabad, xl6 onroad price in hyderabad, offers on xl6, xl6 offers 2022, new xl6 price, new xl6 price in hyderabad, new xl6 2022 price, new xl6 2022 onroad price, xl6 petrol price in hyderabad, xl6 2022 petrol price in hyderabad'
         /> */}
-          {/* <meta name='author' content='Broaddcast' />
+        {/* <meta name='author' content='Broaddcast' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://www.saboonexa.in/the-xl6/' />
         <meta
@@ -58,7 +57,7 @@ function Offers() {
           property='og:description'
           content='Get the latest on-road price of Maruti Suzuki Fronx in Hyderabad and enjoy a smooth car ownership experience. For more information about Nexa Fronx visit your nearest Saboo Nexa dealership today. '
         /> */}
-          {/* <meta
+        {/* <meta
           property='og:image'
           content='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/XL6.jpg'
         />
@@ -79,13 +78,19 @@ function Offers() {
           property='twitter:image'
           content='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/XL6.jpg'
         /> */}
-        </Helmet>
       </Helmet>
-      <Header />
-      {width > 425 ? <Slider /> : <MobileSlider />}
 
-      <div className='text-center py-10 space-y-3'>
-        <p className='font-bold lg:text-3xl sm:text-xl'>
+      <Header  />
+      {/* {width > 425 ? <Slider /> : <MobileSlider />} */}
+      <div className="bg-black h-16 lg:h-20"></div>
+      <div className="bg-black h-0.5 lg:h-1"></div>
+      <section>
+        <div className="hidden sm:block"><Slider /> </div>
+        <div className="sm:hidden"><MobileSlider /></div>
+      </section>
+
+      <div className="text-center py-10 space-y-3">
+        <p className="font-bold lg:text-3xl sm:text-xl">
           SAVE WITH SABOO NEXA OFFERS IN HYDERABAD INDIA
         </p>
         <p>
@@ -93,7 +98,7 @@ function Offers() {
           exciting offers before prices go up
         </p>
         <p>
-          Limited period offers for the models 2022 and 2023, till the end of{' '}
+          Limited period offers for the models 2022 and 2023, till the end of{" "}
           {months[new Date().getMonth()]} {new Date().getFullYear()}.
         </p>
       </div>
@@ -104,43 +109,43 @@ function Offers() {
 
 const OfferProducts = () => {
   return (
-    <div className='grid sm:grid-cols-2 lg:grid-cols-3 px-5 sm:px-0 gap-4 container mx-auto pb-5'>
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 px-5 sm:px-0 gap-4 container mx-auto pb-5">
       {offer_products.map((item) => (
         <div
-          className='flex flex-col bg-[#eee] rounded shadow-lg border relative overflow-hidden'
+          className="flex flex-col bg-[#eee] rounded shadow-lg border relative overflow-hidden"
           key={item.name}
         >
-          <p className='absolute top-3 -right-7 uppercase text-sm text-center text-white rotate-45 bg-[#ec1b23] py-1 w-28'>
+          <p className="absolute top-3 -right-7 uppercase text-sm text-center text-white rotate-45 bg-[#ec1b23] py-1 w-28">
             Offer
           </p>
 
-          <div className=' flex-auto'>
-            {' '}
-            <img src={item.img} alt={item.name} className='mx-auto' />
+          <div className=" flex-auto">
+            {" "}
+            <img src={item.img} alt={item.name} className="mx-auto" />
           </div>
-          <div className='flex-auto bg-white'>
+          <div className="flex-auto bg-white">
             <div>
-              <div className='flex items-center justify-between p-5 '>
+              <div className="flex items-center justify-between p-5 ">
                 <img src={item.logo} alt={item.name} />
-                <p className='uppercase font-bold'>
-                  Save up to <br />{' '}
-                  <span className='text-red-500'>
+                <p className="uppercase font-bold">
+                  Save up to <br />{" "}
+                  <span className="text-red-500">
                     {item.price}
                     {/* ₹ {Intl.NumberFormat('en-IN').format(item.price)}* */}
                   </span>
-                  <div className='text-xs font-thin'>{item.emi}</div>
+                  <div className="text-xs font-thin">{item.emi}</div>
                 </p>
               </div>
-              <div className='flex flex-col w-full px-5'>
+              <div className="flex flex-col w-full px-5">
                 <Link
                   to={item.explore}
-                  className='bg-black rounded text-white text-center font-bold uppercase py-2'
+                  className="bg-black rounded text-white text-center font-bold uppercase py-2"
                 >
                   View More Details
                 </Link>
                 <Link
-                  to='/terms-and-condition'
-                  className=' rounded text-black text-center font-bold uppercase py-2 text-xs'
+                  to="/terms-and-condition"
+                  className=" rounded text-black text-center font-bold uppercase py-2 text-xs"
                 >
                   *legal disclaimer
                 </Link>

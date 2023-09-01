@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import Header from '../../components/Header/Header';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { Helmet } from 'react-helmet';
-import axios from 'axios';
-import { CgSpinner } from 'react-icons/cg';
+import React, { useState } from "react";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import Header from "../../components/Header/Header";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet";
+import axios from "axios";
+import { CgSpinner } from "react-icons/cg";
 
 const Corporate = () => {
-  // const notify = () => toast('your email client will be opened');
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  // const notify = () => toast("your email client will be opened");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   // const [model, setModel] = useState('');
   // const [outlet, setOutlet] = useState('');
   const [method, setMethod] = useState();
@@ -75,28 +75,29 @@ const Corporate = () => {
   }
   return (
     <div>
-      <Header />
+      <Header col={true} />
       <Helmet>
         <title>RKS Motor | Maruti Suzuki Showrooms in Hyderabad</title>
         <meta
-          name='title'
-          content='RKS Motor | Maruti Suzuki Showrooms in Hyderabad'
+          name="title"
+          content="RKS Motor | Maruti Suzuki Showrooms in Hyderabad"
         />
         <meta
-          name='description'
-          content='Saboo Nexa sells hatchbacks, sedans, MUVs and SUVs in Hyderabad through its ARENA and NEXA channels, certified pre-owned cars through TRUE VALUE, and commercial vehicles through its Maruti Suzuki Commercial channel. For more info Visit www.saboonexa.in.'
+          name="description"
+          content="Saboo Nexa sells hatchbacks, sedans, MUVs and SUVs in Hyderabad through its ARENA and NEXA channels, certified pre-owned cars through TRUE VALUE, and commercial vehicles through its Maruti Suzuki Commercial channel. For more info Visit www.saboonexa.in."
         />
       </Helmet>
       <ToastContainer />
-      <div className='grid grid-cols-1 md:grid-cols-1 gap-4 container mx-auto my-5'>
-        <div className='bg-white border shadow-md rounded p-5 mx-5'>
-          <p className='font-bold text-xl'>Corporate Form</p>
-          <p className='text-sm mb-5'>
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-4 container mx-auto mb-5">
+        <div className="bg-white   rounded pt-16 lg:pt-20 px-5 pb-5 mx-5">
+          <div className="text-center uppercase font-medium text-2xl sm:text-3xl md:text-4xl ">
+            Corporate Form
+          </div>
+          <div className="text-center mt-4 mb-5">
             Please fill out the form and we'll get back to you right away !
-          </p>
-
-          <br></br>
-          <form
+          </div>
+        <br></br>
+        <form
             action='https://crm.zoho.in/crm/WebToLeadForm'
             name='WebToLeads54158000000752015'
             method={method}
@@ -278,19 +279,19 @@ const Corporate = () => {
             Email: <span className="font-bold">lumbini.corp@saboonexa.in</span>
           </p>
         </div> */}
-        <div className='flex flex-col pd-2 md:flex-row m-3 justify-center mb-2 space-2'>
+        <div className="flex flex-col pd-2 md:flex-row m-3 justify-center mb-2 space-2">
           <a
-            href='tel:9948152000'
-            className='bg-black rounded flex items-center m-2 text-white px-4 py-1.5'
+            href="tel:9948152000"
+            className="bg-black rounded flex items-center m-2 text-white px-4 py-1.5"
           >
-            <FaPhoneAlt className='mr-2' size={15} />
+            <FaPhoneAlt className="mr-2" size={15} />
             99481 52000
           </a>
           <a
-            href='mailto:lumbini.corp@saboonexa.in'
-            className='bg-black rounded flex items-center m-2 text-white px-4 py-1.5'
+            href="mailto:lumbini.corp@saboonexa.in"
+            className="bg-black rounded flex items-center m-2 text-white px-4 py-1.5"
           >
-            <FaEnvelope className='mr-2' size={15} />
+            <FaEnvelope className="mr-2" size={15} />
             lumbini.corp@saboonexa.in
           </a>
         </div>

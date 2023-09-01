@@ -1,8 +1,8 @@
 import { Tab } from '@headlessui/react';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+// import { Link } from 'react-router-dom';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper';
+// import { FreeMode, Navigation, Thumbs } from 'swiper';
 
 function TabNavigationAGFeatures() {
   return (
@@ -90,12 +90,12 @@ function TabNavigationAGFeatures() {
 }
 
 const FourWheelDrive = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Technology_AllGrip+(1).webp'
               className='w-full mb-8'
@@ -117,12 +117,12 @@ const FourWheelDrive = () => {
 };
 
 const SVDControl = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Technology_AllGrip+(1).webp'
               className='w-full mb-8'
@@ -143,12 +143,12 @@ const SVDControl = () => {
   );
 };
 const ESP = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Technology_AllGrip+(1).webp'
               className='w-full mb-8'
@@ -167,12 +167,12 @@ const ESP = () => {
   );
 };
 const PowerTrainControl = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Technology_AllGrip+(1).webp'
               className='w-full mb-8'

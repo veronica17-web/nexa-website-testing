@@ -78,13 +78,13 @@ const GrandVitaraCNG = () => {
           src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/GV-cng-banner-desktop.webp'
           className='w-full object-cover hidden md:block '
           alt='SCNG Banner'
-          srcset=''
+          srcSet=''
         />
         <img
           src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/GV-cng-banner-mobile.webp'
           className='w-full md:hidden block '
           alt='SCNG Banner'
-          srcset=''
+          srcSet=''
         />
       </div> */}
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/GV-cng-banner-mobile.webp')] sm:bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/GV-cng-banner-desktop.webp')]  bg-cover bg-no-repeat md:h-[40vh] lg:h-[60vh] h-[60vh]">

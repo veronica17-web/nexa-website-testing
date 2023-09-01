@@ -95,7 +95,7 @@ const IdleStartStop = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
               className='w-full mb-8'
@@ -120,7 +120,7 @@ const TorqueAssist = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
               className='w-full mb-8'
@@ -144,7 +144,7 @@ const BrakeEnergyRegeneration = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
               className='w-full mb-8'
@@ -167,7 +167,7 @@ const AdvancedDualBattery = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
               className='w-full mb-8'

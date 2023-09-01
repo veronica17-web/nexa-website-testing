@@ -1,5 +1,6 @@
 import { Tab } from "@headlessui/react";
 import React, { useState } from "react";
+import { Tb360View, TbView360 } from "react-icons/tb";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,6 +14,7 @@ import "swiper/css/thumbs";
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import View360 from "../utils/View360";
+import { GiReturnArrow } from "react-icons/gi";
 
 function ImageViewer() {
   return (
@@ -62,13 +64,25 @@ function ImageViewer() {
           <Tab.Panels>
             {/* Baleno 360° view  */}
             <Tab.Panel>
-              <View360
-                path={
-                  "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/new_baleno"
-                }
-                count={34}
-                format={"webp"}
-              />
+              <div className="relative">
+                <View360
+                  path={
+                    "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/new_baleno"
+                  }
+                  count={34}
+                  format={"webp"}
+                />
+                <div className="text-white absolute top-10 left-10 flex flex-col items-center ">
+                  <TbView360 className="text-2xl lg:text-5xl animate-pulse" />
+                   <Tb360View className="text-xl lg:text-4xl" />
+                </div>
+                 <div className="text-white absolute top-1/2 left-10 lg:left-20 flex flex-col items-center ">
+                <GiReturnArrow className="text-2xl lg:text-5xl animate-pulse rotate-180" /> 
+                </div>
+                <div className="text-white absolute top-1/2 right-10 lg:right-20 flex flex-col items-center ">
+                <GiReturnArrow className="text-2xl lg:text-5xl animate-pulse" />
+                </div>
+              </div>
             </Tab.Panel>
 
             {/* exterior */}

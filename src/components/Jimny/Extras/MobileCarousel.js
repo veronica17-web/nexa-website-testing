@@ -1,12 +1,12 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Link, Route, Routes, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../Extras/styles.css';
-import Helmet from 'react-helmet';
+// import Helmet from 'react-helmet';
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from 'swiper';
@@ -49,9 +49,9 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/grand-vitara-features-intelligent-electric-hybrid'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/1-811x629-AR_SN_JIMNY_HILL+DESCENT+CONTROL+SHOT_V1+copy.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/1-811x629-AR_SN_JIMNY_HILL+DESCENT+CONTROL+SHOT_V1+copy.webp' alt='' />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
                 <p>HILL HOLD ASSIST</p>
               </div>
@@ -64,9 +64,9 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/grand-vitara-allgrip'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/2-811x629-AR_SN_JIMNY_HILL+DESCENT+CONTROL+SHOT_V1.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/2-811x629-AR_SN_JIMNY_HILL+DESCENT+CONTROL+SHOT_V1.webp' alt='' />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
                 <p>HILL DESCENT CONTROL</p>
               </div>
@@ -79,9 +79,9 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/grand-vitara-5-speed-manual-transmission-price'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/3-Jimmy-811x629-1.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/3-Jimmy-811x629-1.webp' alt='' />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl md-20'>
                 <p>BRAKE LSD</p>
               </div>
@@ -94,9 +94,9 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/grand-vitara-on-road-price-in-hyderabad'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/4-811x629-AR_AB_BP_JIMNY_6_AIRBAG_SHOT_03_04.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/4-811x629-AR_AB_BP_JIMNY_6_AIRBAG_SHOT_03_04.webp' alt='' />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
                 <p>6 AIR BAGS</p>
               </div>

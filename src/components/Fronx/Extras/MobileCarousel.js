@@ -1,12 +1,12 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Link, Route, Routes, useLocation } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../Extras/styles.css';
-import Helmet from 'react-helmet';
+// import Helmet from 'react-helmet';
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from 'swiper';
@@ -49,9 +49,9 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-10C_Engine.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-10C_Engine.webp' alt="" />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
                 <p>1.0L TURBO BOOSTERJET ENGINE</p>
               </div>
@@ -64,9 +64,9 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-12k_Engine.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-12k_Engine.webp' alt="" />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
                 <p>ADVANCED 1.2L K-SERIES DUAL JET, DUAL VVT ENGINE</p>
               </div>
@@ -79,9 +79,9 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-Smart_Hybird.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-Smart_Hybird.webp' alt="" />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl md-20'>
                 <p>SMART HYBRID TECHNOLOGY</p>
               </div>
@@ -94,9 +94,9 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AGS.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AGS.webp' alt="" />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
                 <p>6-SPEED AUTOMATIC TRANSMISSION WITH PADDLE SHIFTERS</p>
               </div>
@@ -109,9 +109,9 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AMT.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AMT.webp' alt="" />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
                 <p>AUTO GEAR SHIFT</p>
               </div>

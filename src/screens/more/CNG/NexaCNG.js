@@ -104,7 +104,7 @@ const NexaCNG = () => {
   const [phone, setPhone] = useState('');
   return (
     <>
-      <Header />
+      <Header col={true} />
       <Helmet>
         <title>
           Nexa CNG On Road Price| Maruti Suzuki CNG Offers
@@ -162,13 +162,13 @@ const NexaCNG = () => {
           src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/Cng-banner-desktop.webp'
           className='w-full object-cover hidden md:block '
           alt='SCNG Banner'
-          srcset=''
+          srcSet=''
         />
         <img
           src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/Cng-banner-mobile.webp'
           className='w-full md:hidden block '
           alt='SCNG Banner'
-          srcset=''
+          srcSet=''
         />
       </div>
       <div className='text-center  my-8 container mx-auto '>

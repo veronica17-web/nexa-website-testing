@@ -10,7 +10,6 @@ function Baleno() {
   const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
-      <Header />
       <Helmet>
         <title>
           New Nexa Baleno Price in Hyderabad | Maruti Baleno 2022 Price, Offers
@@ -64,7 +63,8 @@ function Baleno() {
           content='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/Baleno.jpg'
         />
       </Helmet>
-      <div className='bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/Baleno_Banner_Blue.webp)] bg-cover bg-no-repeat bg-center'>
+      <Header />
+      <div className='bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/Baleno_Banner_Blue.webp)] bg-cover bg-no-repeat bg-center pt-20 overflow-hidden '>
         <div className='container mx-auto'>
           <div className='grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 py-16 lg:py-0'>
             <div className='my-auto mx-auto space-y-5 px-8 sm:px-0'>
@@ -345,8 +345,8 @@ const Variant = () => {
 
 const ImageOptions = () => {
   return (
-    <div className='container mx-auto px-5 md:px-0'>
-      <div className='grid shadow-lg sm:grid-cols-2 p-8 '>
+    <div className='container mx-auto px-2 md:px-0'>
+       <div className='grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 '>
         <div>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-1177x751-exterior-liquid-flow.webp'
@@ -354,8 +354,8 @@ const ImageOptions = () => {
             className='w-full'
           />
         </div>
-        <div className='my-auto mx-auto space-y-3 p-8'>
-          <p className='text-3xl font-bold '>Enhanced Liquid Flow Design</p>
+        <div className='my-auto mx-auto space-y-3 py-2 md:p-8'>
+          <p className='text-3xl  font-medium '>Enhanced Liquid Flow Design</p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
           <p>
             The New Age Baleno is a sight to behold. Carrying forward the Liquid
@@ -367,9 +367,9 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className='grid shadow-lg sm:grid-cols-2 p-8'>
-        <div className='my-auto mx-auto space-y-3 p-5'>
-          <p className='text-3xl font-bold'>NEXWave Grille</p>
+       <div className='grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 '>
+        <div className='my-auto mx-auto space-y-3 p-2'>
+          <p className='text-3xl  font-medium'>NEXWave Grille</p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
           <p>
             The signature NEXWave Grille is the first thing you see when you
@@ -388,7 +388,7 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className='grid shadow-lg sm:grid-cols-2 p-8'>
+       <div className='grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 '>
         <div>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-751x379-alloy-wheels.webp'
@@ -396,8 +396,8 @@ const ImageOptions = () => {
             className='w-full'
           />
         </div>
-        <div className='my-auto mx-auto space-y-3 p-8'>
-          <p className='text-3xl font-bold'>
+        <div className='my-auto mx-auto space-y-3 p-2'>
+          <p className='text-3xl  font-medium'>
             16-Inch Precision Cut Alloy Wheels
           </p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
@@ -410,9 +410,9 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className='grid shadow-lg sm:grid-cols-2 p-8'>
-        <div className='my-auto mx-auto space-y-3'>
-          <p className='text-3xl font-bold'>Interior Design</p>
+       <div className='grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 '>
+        <div className='my-auto mx-auto space-y-3 p-2'>
+          <p className='text-3xl  font-medium'>Interior Design</p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
           <p>
             The New Age Baleno is more than just good looks. It is comfort
@@ -431,7 +431,7 @@ const ImageOptions = () => {
           />
         </div>
       </div>
-      <div className='grid shadow-lg sm:grid-cols-2 p-8'>
+      <div className='grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 '>
         <div>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-749x751-LED-DRLs.webp'
@@ -439,8 +439,8 @@ const ImageOptions = () => {
             className='w-full'
           />
         </div>
-        <div className='my-auto mx-auto space-y-3 p-8'>
-          <p className='text-3xl font-bold'>
+        <div className='my-auto mx-auto space-y-3 p-2 md:p-8'>
+          <p className='text-3xl  font-medium'>
             NEXTre' LED Rear Combination Lights
           </p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
@@ -452,9 +452,9 @@ const ImageOptions = () => {
           </p>
         </div>
       </div>
-      <div className='grid shadow-lg sm:grid-cols-2 p-8'>
-        <div className='my-auto mx-auto space-y-3'>
-          <p className='text-3xl font-bold'>
+      <div className='grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 '>
+        <div className='my-auto mx-auto space-y-3 p-2'>
+          <p className='text-3xl  font-medium'>
             LED Projector Headlamps With NEXTre’ LED DRLs
           </p>
           <p className='h-1 w-20 bg-black rounded-full '></p>

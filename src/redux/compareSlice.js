@@ -40,6 +40,6 @@ const compareSlice = createSlice({
   },
 });
 
-export const { addToCompare } = compareSlice.actions;
+export const { addToCompare, removeFromCompare } = compareSlice.actions;
 
 export default compareSlice.reducer;

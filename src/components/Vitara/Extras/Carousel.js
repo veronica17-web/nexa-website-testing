@@ -1,9 +1,9 @@
 import React from 'react';
-import { render } from 'react-dom';
+// import { render } from 'react-dom';
 import { FullpageAccordion, Panel } from 'react-fullpage-accordion';
 import 'react-fullpage-accordion/dist/react-fullpage-accordion.css';
 import './styles.css';
-import { Link, Route, Routes, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaDoorOpen } from 'react-icons/fa';
 
 const Carousel = () => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NexaPriceList = () => {
   const [price, setPrice] = useState('7,46,500');
@@ -11,84 +12,86 @@ const NexaPriceList = () => {
   const [ignisprice, setignisPrice] = useState('5,84,000');
 
   return (
-    <div class='header'>
-      <nav class='bg-white py-2 md:py-4 bg-black'>
-        <div class='container px-2 mx-auto md:flex md:items-center'>
-          <div class='flex justify-between items-center'>
-            <a href='#' class='font-bold text-xl text-indigo-600'>
-              {' '}
+    <div className='header'>
+      <nav className=' py-2 md:py-4 bg-black'>
+        <div className='container px-2 mx-auto md:flex md:items-center'>
+          <div className='flex justify-between items-center'>
+          
+            <Link to="/">
+            
               <img
                 className='h-12 w-auto'
                 src={require('../../assets/logo.webp')}
                 alt='logo'
               />
-            </a>
+            </Link>
+           
             {/* <button
-                class='border border-solid border-gray-600 px-3 py-1 rounded text-gray-600 opacity-50 hover:opacity-75 md:hidden'
+                className='border border-solid border-gray-600 px-3 py-1 rounded text-gray-600 opacity-50 hover:opacity-75 md:hidden'
                 id='navbar-toggle'
               >
-                <i class='fas fa-bars'></i>
+                <i className='fas fa-bars'></i>
               </button> */}
           </div>
 
           <div
-            class='hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0'
+            className='hidden text-white text-lg md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0'
             id='navbar-collapse'
           >
-            <a href='#' class='p-2 lg:px-4 md:mx-2 text-xl text-white rounded'>
+            
               Price List
-            </a>
+            
           </div>
         </div>
       </nav>
 
-      <div class=' py-6 md:py-12'>
-        <div class='container mx-auto px-4 sm:px-8'>
-          <div class='py-2'>
+      <div className=' py-6 md:py-12'>
+        <div className='container mx-auto px-4 sm:px-8'>
+          <div className='py-2'>
             {/* <div>
-              <h2 class='text-2xl font-semibold leading-tight'>Arena</h2>
+              <h2 className='text-2xl font-semibold leading-tight'>Arena</h2>
             </div> */}
-            <div class='lg-mx-2 sm:-mx-8 px-4 sm:px-8 py-2 overflow-x-auto'>
-              <div class='inline-block min-w-full shadow-md rounded-lg overflow-hidden'>
-                <table class='min-w-full leading-normal'>
+            <div className='lg-mx-2 sm:-mx-8 px-4 sm:px-8 py-2 overflow-x-auto'>
+              <div className='inline-block min-w-full shadow-md rounded-lg overflow-hidden'>
+                <table className='min-w-full leading-normal'>
                   <thead>
                     <tr>
-                      <th class='px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider'>
+                      <th className='px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider'>
                         Model
                       </th>
-                      {/* <th class='px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider'>
+                      {/* <th className='px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider'>
                         Fuel / Transmission
                       </th> */}
-                      <th class='px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider'>
+                      <th className='px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider'>
                         Variant
                       </th>
-                      <th class='px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider'>
+                      <th className='px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider'>
                         Ex Showroom Price ₹
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <div class='flex'>
-                          {/* <div class='flex-shrink-0 w-10 h-10'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <div className='flex'>
+                          {/* <div className='flex-shrink-0 w-10 h-10'>
                             <img
-                              class='w-full h-full rounded-full'
+                              className='w-full h-full rounded-full'
                               src='https://imgd.aeplcdn.com/1280x720/cw/ec/39013/Maruti-Suzuki-Alto-Right-Front-Three-Quarter-154833.jpg?wm=0&q=75'
                               alt=''
                             />
                           </div> */}
-                          <div class='ml-3'>
+                          <div className='ml-3'>
                             <div className='lg:text-lg sm:text-sm'>Fronx</div>
                           </div>
                         </div>
                       </td>
-                      {/* <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <p class='text-gray-900 whitespace-no-wrap'>$20,000</p>
-                        <p class='text-gray-600 whitespace-no-wrap'>USD</p>
+                      {/* <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <p className='text-gray-900 whitespace-no-wrap'>$20,000</p>
+                        <p className='text-gray-600 whitespace-no-wrap'>USD</p>
                       </td> */}
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <p class='text-gray-900 whitespace-no-wrap'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <p className='text-gray-900 whitespace-no-wrap'>
                           <div className='space-y-3 mx-auto md:mx-0'>
                             <select
                               name='model'
@@ -127,11 +130,11 @@ const NexaPriceList = () => {
                           </div>
                         </p>
                       </td>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <span class='relative inline-block px-3 py-1 font-semibold leading-tight'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <span className='relative inline-block px-3 py-1 font-semibold leading-tight'>
                           <span
                             aria-hidden
-                            class='absolute inset-0 opacity-50 rounded-full'
+                            className='absolute inset-0 opacity-50 rounded-full'
                           ></span>
                           <div className='py-2 lg:text-lg sm:text-sm'>
                             {price}
@@ -140,25 +143,25 @@ const NexaPriceList = () => {
                       </td>
                     </tr>
                     <tr>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <div class='flex'>
-                          {/* <div class='flex-shrink-0 w-10 h-10'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <div className='flex'>
+                          {/* <div className='flex-shrink-0 w-10 h-10'>
                             <img
-                              class='w-full h-full rounded-full'
+                              className='w-full h-full rounded-full'
                               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-k10.webp'
                               alt=''
                             />
                           </div> */}
-                          <div class='ml-3'>
+                          <div className='ml-3'>
                             <div className='lg:text-lg sm:text-sm'>Jimny</div>
                           </div>
                         </div>
                       </td>
-                      {/* <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <p class='text-gray-900 whitespace-no-wrap'>$214,000</p>
-                        <p class='text-gray-600 whitespace-no-wrap'>USD</p>
+                      {/* <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <p className='text-gray-900 whitespace-no-wrap'>$214,000</p>
+                        <p className='text-gray-600 whitespace-no-wrap'>USD</p>
                       </td> */}
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
                         <select
                           name='model'
                           value={jimnyprice}
@@ -173,40 +176,40 @@ const NexaPriceList = () => {
                           <option value='15,05,000'>ALPHA(D) 4AT</option>
                         </select>
                       </td>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <span class='relative inline-block px-3 py-1 font-semibold leading-tight'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <span className='relative inline-block px-3 py-1 font-semibold leading-tight'>
                           <span
                             aria-hidden
-                            class='absolute inset-0 opacity-50 rounded-full'
+                            className='absolute inset-0 opacity-50 rounded-full'
                           ></span>
-                          <span class='relative lg:text-lg sm:text-sm'>
+                          <span className='relative lg:text-lg sm:text-sm'>
                             {jimnyprice}
                           </span>
                         </span>
                       </td>
                     </tr>
                     <tr>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <div class='flex'>
-                          {/* <div class='flex-shrink-0 w-10 h-10'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <div className='flex'>
+                          {/* <div className='flex-shrink-0 w-10 h-10'>
                             <img
-                              class='w-full h-full rounded-full'
+                              className='w-full h-full rounded-full'
                               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-spresso.webp'
                               alt=''
                             />
                           </div> */}
-                          <div class='ml-3'>
+                          <div className='ml-3'>
                             <div className='lg:text-lg sm:text-sm'>
                               Grand Vitara
                             </div>
                           </div>
                         </div>
                       </td>
-                      {/* <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <p class='text-gray-900 whitespace-no-wrap'>$214,000</p>
-                        <p class='text-gray-600 whitespace-no-wrap'>USD</p>
+                      {/* <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <p className='text-gray-900 whitespace-no-wrap'>$214,000</p>
+                        <p className='text-gray-600 whitespace-no-wrap'>USD</p>
                       </td> */}
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
                         <select
                           name='model'
                           value={vitaraprice}
@@ -232,38 +235,38 @@ const NexaPriceList = () => {
                           <option value='14,86,000'>ZETA CNG</option>
                         </select>
                       </td>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <span class='relative inline-block px-3 py-1 font-semibold leading-tight'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <span className='relative inline-block px-3 py-1 font-semibold leading-tight'>
                           <span
                             aria-hidden
-                            class='absolute inset-0  opacity-50 rounded-full'
+                            className='absolute inset-0  opacity-50 rounded-full'
                           ></span>
-                          <span class='relative lg:text-lg sm:text-sm'>
+                          <span className='relative lg:text-lg sm:text-sm'>
                             {vitaraprice}
                           </span>
                         </span>
                       </td>
                     </tr>
                     <tr>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <div class='flex'>
-                          {/* <div class='flex-shrink-0 w-10 h-10'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <div className='flex'>
+                          {/* <div className='flex-shrink-0 w-10 h-10'>
                             <img
-                              class='w-full h-full rounded-full'
+                              className='w-full h-full rounded-full'
                               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-celerio.webp'
                               alt=''
                             />
                           </div> */}
-                          <div class='ml-3'>
+                          <div className='ml-3'>
                             <div className='lg:text-lg sm:text-sm'>XL6</div>
                           </div>
                         </div>
                       </td>
-                      {/* <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <p class='text-gray-900 whitespace-no-wrap'>$214,000</p>
-                        <p class='text-gray-600 whitespace-no-wrap'>USD</p>
+                      {/* <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <p className='text-gray-900 whitespace-no-wrap'>$214,000</p>
+                        <p className='text-gray-600 whitespace-no-wrap'>USD</p>
                       </td> */}
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
                         <select
                           name='model'
                           value={xl6price}
@@ -281,38 +284,38 @@ const NexaPriceList = () => {
                           <option value='14,82,000'>ALPHA+ AT (D)</option>
                         </select>
                       </td>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <span class='relative inline-block px-3 py-1 font-semibold leading-tight'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <span className='relative inline-block px-3 py-1 font-semibold leading-tight'>
                           <span
                             aria-hidden
-                            class='absolute inset-0  opacity-50 rounded-full'
+                            className='absolute inset-0  opacity-50 rounded-full'
                           ></span>
-                          <span class='relative lg:text-lg sm:text-sm'>
+                          <span className='relative lg:text-lg sm:text-sm'>
                             {xl6price}
                           </span>
                         </span>
                       </td>
                     </tr>
                     <tr>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <div class='flex'>
-                          {/* <div class='flex-shrink-0 w-10 h-10'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <div className='flex'>
+                          {/* <div className='flex-shrink-0 w-10 h-10'>
                             <img
-                              class='w-full h-full rounded-full'
+                              className='w-full h-full rounded-full'
                               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-wagonr.webp'
                               alt=''
                             />
                           </div> */}
-                          <div class='ml-3'>
+                          <div className='ml-3'>
                             <div className='lg:text-lg sm:text-sm'>Ciaz</div>
                           </div>
                         </div>
                       </td>
-                      {/* <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <p class='text-gray-900 whitespace-no-wrap'>$214,000</p>
-                        <p class='text-gray-600 whitespace-no-wrap'>USD</p>
+                      {/* <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <p className='text-gray-900 whitespace-no-wrap'>$214,000</p>
+                        <p className='text-gray-600 whitespace-no-wrap'>USD</p>
                       </td> */}
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
                         <select
                           name='model'
                           value={ciazprice}
@@ -330,38 +333,38 @@ const NexaPriceList = () => {
                           <option value='12,45,000'>ALPHA (D) AT</option>
                         </select>
                       </td>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <span class='relative inline-block px-3 py-1 font-semibold  leading-tight'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <span className='relative inline-block px-3 py-1 font-semibold  leading-tight'>
                           <span
                             aria-hidden
-                            class='absolute inset-0  opacity-50 rounded-full'
+                            className='absolute inset-0  opacity-50 rounded-full'
                           ></span>
-                          <span class='relative lg:text-lg sm:text-sm'>
+                          <span className='relative lg:text-lg sm:text-sm'>
                             {ciazprice}
                           </span>
                         </span>
                       </td>
                     </tr>
                     <tr>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <div class='flex'>
-                          {/* <div class='flex-shrink-0 w-10 h-10'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <div className='flex'>
+                          {/* <div className='flex-shrink-0 w-10 h-10'>
                             <img
-                              class='w-full h-full rounded-full'
+                              className='w-full h-full rounded-full'
                               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-swift.webp'
                               alt=''
                             />
                           </div> */}
-                          <div class='ml-3'>
+                          <div className='ml-3'>
                             <div className='lg:text-lg sm:text-sm'>Baleno</div>
                           </div>
                         </div>
                       </td>
-                      {/* <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <p class='text-gray-900 whitespace-no-wrap'>$214,000</p>
-                        <p class='text-gray-600 whitespace-no-wrap'>USD</p>
+                      {/* <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <p className='text-gray-900 whitespace-no-wrap'>$214,000</p>
+                        <p className='text-gray-600 whitespace-no-wrap'>USD</p>
                       </td> */}
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
                         <select
                           name='model'
                           value={balenoprice}
@@ -379,38 +382,38 @@ const NexaPriceList = () => {
                           <option value='9,88,000'> ALPHA AT</option>
                         </select>
                       </td>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <span class='relative inline-block px-3 py-1 font-semibold  leading-tight'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <span className='relative inline-block px-3 py-1 font-semibold  leading-tight'>
                           <span
                             aria-hidden
-                            class='absolute inset-0  opacity-50 rounded-full'
+                            className='absolute inset-0  opacity-50 rounded-full'
                           ></span>
-                          <span class='relative lg:text-lg sm:text-sm'>
+                          <span className='relative lg:text-lg sm:text-sm'>
                             {balenoprice}
                           </span>
                         </span>
                       </td>
                     </tr>
                     <tr>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <div class='flex'>
-                          {/* <div class='flex-shrink-0 w-10 h-10'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <div className='flex'>
+                          {/* <div className='flex-shrink-0 w-10 h-10'>
                             <img
-                              class='w-full h-full rounded-full'
+                              className='w-full h-full rounded-full'
                               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-dzire.webp'
                               alt=''
                             />
                           </div> */}
-                          <div class='ml-3'>
+                          <div className='ml-3'>
                             <div className='lg:text-lg sm:text-sm'>Ignis</div>
                           </div>
                         </div>
                       </td>
-                      {/* <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <p class='text-gray-900 whitespace-no-wrap'>$214,000</p>
-                        <p class='text-gray-600 whitespace-no-wrap'>USD</p>
+                      {/* <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <p className='text-gray-900 whitespace-no-wrap'>$214,000</p>
+                        <p className='text-gray-600 whitespace-no-wrap'>USD</p>
                       </td> */}
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
                         <select
                           name='model'
                           value={ignisprice}
@@ -431,13 +434,13 @@ const NexaPriceList = () => {
                           <option value='8,30,000'>ALPHA AGS (D)</option>
                         </select>
                       </td>
-                      <td class='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-                        <span class='relative inline-block px-3 py-1 font-semibold leading-tight'>
+                      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+                        <span className='relative inline-block px-3 py-1 font-semibold leading-tight'>
                           <span
                             aria-hidden
-                            class='absolute inset-0  opacity-50 rounded-full'
+                            className='absolute inset-0  opacity-50 rounded-full'
                           ></span>
-                          <span class='relative lg:text-lg sm:text-sm'>
+                          <span className='relative lg:text-lg sm:text-sm'>
                             {ignisprice}
                           </span>
                         </span>

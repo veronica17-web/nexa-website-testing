@@ -51,7 +51,7 @@ const MobileCarouselforHomePage = () => {
             <Link to='/book-online-maruti-nexa-car-service/'>
               <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Nexa+Service+mobile+Hafeezpet.webp' />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
                 <p>SERVICE</p>
               </div>
@@ -66,7 +66,7 @@ const MobileCarouselforHomePage = () => {
             <Link to='/maruti-car-insurance'>
               <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/homepage-mobile-carousel/Insurance+Mobile+800x800.webp' />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
                 <p>INSURANCE</p>
               </div>
@@ -81,7 +81,7 @@ const MobileCarouselforHomePage = () => {
             <Link to='/maruti-car-finance'>
               <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/homepage-mobile-carousel/Finance+Mobile+800x800.webp' />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl md-20'>
                 <p>FINANCE</p>
               </div>
@@ -96,7 +96,7 @@ const MobileCarouselforHomePage = () => {
             <Link to='/accessories'>
               <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/homepage-mobile-carousel/Accessories+Mobile+800x800.webp' />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
                 <p>ACCESSORIES</p>
               </div>

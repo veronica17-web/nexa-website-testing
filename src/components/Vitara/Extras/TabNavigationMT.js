@@ -1,8 +1,8 @@
 import { Tab } from '@headlessui/react';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+// import { Link } from 'react-router-dom';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper';
+// import { FreeMode, Navigation, Thumbs } from 'swiper';
 
 function TabNavigationMT() {
   return (
@@ -90,12 +90,12 @@ function TabNavigationMT() {
 }
 
 const IdleStartStop = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  // const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
               className='w-full mb-8'
@@ -115,12 +115,12 @@ const IdleStartStop = () => {
 };
 
 const TorqueAssist = () => {
-  const [interiorSwiper, setInteriorSwiper] = useState(null);
+  // const [interiorSwiper, setInteriorSwiper] = useState(null);
   return (
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
               className='w-full mb-8'
@@ -139,12 +139,12 @@ const TorqueAssist = () => {
 };
 
 const BrakeEnergyRegeneration = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
               className='w-full mb-8'
@@ -162,12 +162,12 @@ const BrakeEnergyRegeneration = () => {
   );
 };
 const AdvancedDualBattery = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
               className='w-full mb-8'

@@ -5,7 +5,6 @@ import { FaEnvelope } from "react-icons/fa";
 import { IoIosPricetags } from "react-icons/io";
 import Helmet from "react-helmet";
 import Header from "../../components/Header/Header";
-import { Link } from "react-router-dom";
 
 function Showrooms() {
   return (
@@ -29,15 +28,16 @@ function Showrooms() {
         />
         <meta name="author" content="Broaddcast" />
       </Helmet>
+      <div className="h-16 lg:h-20 bg-black"></div>
       <img
         src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/banners/Saboo-Nexa-Outlet.webp"
-        className="max-w-full w-full"
+        className="max-w-full w-full "
         alt="finance banner"
       />
-      <div className="shadow sm:px-0 px-4">
+      {/* <div className="shadow sm:px-0 px-4">
         <p className="mx-auto container py-4"><Link to='/'>Home</Link> / Showroom</p>
-      </div>
-      <p className="text-3xl uppercase pt-16 text-center font-bold">Showroom</p>
+      </div> */}
+      <p className=" text-2xl sm:text-3xl md:text-4xl uppercase pt-10 text-center font-medium ">Showroom</p>
       <div className="container mx-auto py-16">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 px-5 md:px-0">
           {showrooms.map((item, index) => (

@@ -79,11 +79,11 @@ const PrformanceMeetsSustainability = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1  py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1  py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/Technology_AllGrip+webp.webp'
               alt=''
-              srcset=''
+              srcSet=''
             />
             <div className='flex flex-col justify-between'>
               <p className='p-2 sm:pb-14 text-black md:text-md 2xl:text-lg font-light dark:text-black tracking-wide text-left'>
@@ -118,11 +118,11 @@ const SaferAndSensible = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1  py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1  py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/Technology_AllGrip+webp.webp'
               alt=''
-              srcset=''
+              srcSet=''
             />
             <div>
               <p className='p-2 sm:pb-14 text-black md:text-md 2xl:text-lg font-light dark:text-black tracking-wide text-left'>
@@ -158,11 +158,11 @@ const ConvenienceWithCare = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='gap-1 py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/Technology_AllGrip+webp.webp'
               alt=''
-              srcset=''
+              srcSet=''
             />
             <div>
               <p className='p-2 sm:pb-14 text-black md:text-md 2xl:text-lg font-light dark:text-black tracking-wide text-left'>

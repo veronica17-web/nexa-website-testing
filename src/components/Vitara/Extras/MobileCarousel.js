@@ -1,12 +1,13 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Link, Route, Routes, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+// import { Link, Route, Routes, useLocation } from 'react-router-dom';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../Extras/styles.css';
-import Helmet from 'react-helmet';
+// import Helmet from 'react-helmet';
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from 'swiper';
@@ -49,9 +50,9 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/grand-vitara-features-intelligent-electric-hybrid'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-27-IEH.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-27-IEH.webp' alt='' />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
                 <p>INTELLIGENT ELECTRIC HYBRID</p>
               </div>
@@ -64,9 +65,9 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/grand-vitara-allgrip'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-26-Allgrip.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-26-Allgrip.webp' alt='' />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
                 <p>ALLGRIP</p>
               </div>
@@ -79,9 +80,9 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/grand-vitara-5-speed-manual-transmission-price'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-32-AT.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-32-AT.webp' alt='' />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl md-20'>
                 <p>6-SPEED AUTOMATIC</p>
               </div>
@@ -94,9 +95,9 @@ const MobileCarousel = () => {
         <SwiperSlide>
           <figure className='relative cursor-pointer'>
             <Link to='/grand-vitara-on-road-price-in-hyderabad'>
-              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-33-MT.webp' />
+              <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-33-MT.webp' alt='' />
             </Link>
-            <figcaption class='absolute text-lg -mt-16 text-white px-4'>
+            <figcaption className='absolute text-lg -mt-16 text-white px-4'>
               <div className='text-xl'>
                 <p>5-SPEED MANUAL</p>
               </div>

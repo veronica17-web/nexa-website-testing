@@ -16,7 +16,6 @@ import { Link } from 'react-router-dom';
 function Accessories() {
   return (
     <>
-      <Header />
       <Helmet>
         <title>
           Nexa Genuine Accessories & Spare Parts in Hyderabad | Saboo NEXA
@@ -30,6 +29,8 @@ function Accessories() {
           content='Nexa Genuine Accessories & Spare Parts in Hyderabad. Saboo Nexa sell all kind of genuine accessories & spare parts for Maruti Suzuki Nexa cars . Call now 9848898488 for Nexa spare parts.'
         />
       </Helmet>
+      <Header col={true} />
+      <div className='bg-white h-[4.1rem] md:hidden'></div>
       <Swiper
         spaceBetween={30}
         autoplay={{

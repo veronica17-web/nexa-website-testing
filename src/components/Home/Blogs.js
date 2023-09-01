@@ -26,17 +26,17 @@ function Blogs() {
 
         <div className='grid lg:grid-cols-3 gap-2 justify-center sm:ml-4 p-10'>
           {/* first thumbnail begin */}
-          <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+          <div className='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
             <div to=''>
               <img
-                class='rounded-t-lg'
+                className='rounded-t-lg'
                 src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/1-upload.webp'
                 alt=''
               />
             </div>
-            <div class='p-5'>
+            <div className='p-5'>
               <div href='https://www.deccanchronicle.com/business/autos/210623/maruti-suzuki-jimny-hits-hyderabad-roads.html'>
-                <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+                <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
                   Maruti Suzuki Jimny hits Hyderabad roads
                 </h5>
               </div>
@@ -52,12 +52,12 @@ function Blogs() {
               <a
                 href='https://www.deccanchronicle.com/business/autos/210623/maruti-suzuki-jimny-hits-hyderabad-roads.html'
                 target='_blank'
-                class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+                className='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
               >
                 Read More
                 <svg
                   aria-hidden='true'
-                  class='ml-2 -mr-1 w-4 h-4'
+                  className='ml-2 -mr-1 w-4 h-4'
                   fill='currentColor'
                   viewBox='0 0 20 20'
                   xmlns='http://www.w3.org/2000/svg'
@@ -73,22 +73,22 @@ function Blogs() {
           </div>
 
           {/* second thumbnail begin */}
-          <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+          <div className='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
             <div href='#'>
               <img
-                class='rounded-t-lg'
+                className='rounded-t-lg'
                 src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/2-upload+ama.webp'
                 alt=''
               />
             </div>
-            <div class='p-5'>
+            <div className='p-5'>
               <div href='#'>
-                <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+                <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
                   Maruti Suzuki delivers Jimny to customers
                 </h5>
               </div>
               <p className='text-xs pb-2 text-gray-500'>22 Jun 2023</p>
-              <p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+              <p className='mb-3 font-normal text-gray-700 dark:text-gray-400'>
                 Maruti Suzuki has delivered Jimny SUV to customers at Nexa
                 Lumbini, RKS Motor, Hyderabad on Wednesday.
               </p>
@@ -102,12 +102,12 @@ function Blogs() {
                 }
                 target='_blank'
                 rel='noopener noreferrer'
-                class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+                className='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
               >
                 Read More
                 <svg
                   aria-hidden='true'
-                  class='ml-2 -mr-1 w-4 h-4'
+                  className='ml-2 -mr-1 w-4 h-4'
                   fill='currentColor'
                   viewBox='0 0 20 20'
                   xmlns='http://www.w3.org/2000/svg'
@@ -123,23 +123,23 @@ function Blogs() {
           </div>
 
           {/* third thumbnail begin */}
-          <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+          <div className='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
             <div href='#'>
               <img
-                class='rounded-t-lg'
+                className='rounded-t-lg'
                 src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/3-upload-aws.webp'
                 alt=''
               />
             </div>
-            <div class='p-5'>
+            <div className='p-5'>
               <div href='#'>
-                <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+                <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
                   आरकेएस मोटर्स पर मारुति सुजुकी ने ग्राहकों को सौंपी पहली
                   जिम्नी एसयूवी
                 </h5>
               </div>
               <p className='text-xs pb-2 text-gray-500'>21 Jun 2023</p>
-              <p class='mb-3 tracking-normal font-normal text-gray-700 dark:text-gray-400'>
+              <p className='mb-3 tracking-normal font-normal text-gray-700 dark:text-gray-400'>
                 मारुति सुजुकी की एसयूवी जिम्नी की चाभी सौंपते आईटी विभाग के
                 प्रधान सचिव जयेश रंजन। साथ में नेक्सा लुम्बिनी, आरकेएस मोटर्स
                 अध्यक्ष एवं प्रबंध निदेशक विनय साबू व अन्य।
@@ -153,12 +153,12 @@ function Blogs() {
                 }
                 target='_blank'
                 rel='noopener noreferrer'
-                class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+                className='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
               >
                 Read More
                 <svg
                   aria-hidden='true'
-                  class='ml-2 -mr-1 w-4 h-4'
+                  className='ml-2 -mr-1 w-4 h-4'
                   fill='currentColor'
                   viewBox='0 0 20 20'
                   xmlns='http://www.w3.org/2000/svg'
@@ -173,17 +173,17 @@ function Blogs() {
             </div>
           </div>
 
-          {/* <div class='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
+          {/* <div className='max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700'>
           <Link to='#'>
             <img
-              class='rounded-t-lg'
+              className='rounded-t-lg'
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/blog/Maruti-Suzuki-SCross-Launch.webp'
               alt=''
             />
           </Link>
-          <div class='p-5'>
+          <div className='p-5'>
             <div href='#'>
-              <h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+              <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
                 Nexa Experience: Some Inspiring Recent Affairs
               </h5>
             </div>
@@ -196,12 +196,12 @@ function Blogs() {
             <br></br>
             <Link
               to='/gallery'
-              class='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              className='inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
             >
               Stay Tuned
               <svg
                 aria-hidden='true'
-                class='ml-2 -mr-1 w-4 h-4'
+                className='ml-2 -mr-1 w-4 h-4'
                 fill='currentColor'
                 viewBox='0 0 20 20'
                 xmlns='http://www.w3.org/2000/svg'

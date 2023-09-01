@@ -84,7 +84,7 @@ function Footer() {
         <div className='container mx-auto'>
           <div className='grid lg:grid-cols-6 md:grid-cols-2 grid-cols-1 gap-6'>
             <div className='lg:col-span-2 md:col-span-2 sm:col-span-1'>
-              <img src={require('../../assets/logo.webp')} alt='deva' />
+              <img src={require('../../assets/logo.webp')} alt='deva' className='h-10 lg:h-12' />
               <div className='grid grid-rows-2 gap-4'>
                 <p className='mt-3 text-gray-300 font-light'>
                   Saboo RKS is Hyderabad’s leading automobile dealership and has

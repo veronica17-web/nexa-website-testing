@@ -65,8 +65,8 @@ function App() {
   const [loading, setLoading] = useState(false);
   const location = useLocation();
 
-  const isAdminRoute =
-    location.pathname === '/maruti-suzuki-24/7-service-in-hyderabad';
+  const isAdminRoute = location.pathname === '/maruti-suzuki-24/7-service-in-hyderabad';
+
 
   useEffect(() => {
     const getIp = async () => {

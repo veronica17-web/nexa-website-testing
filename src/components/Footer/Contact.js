@@ -304,6 +304,7 @@ function Contact() {
                           <input
                             className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
                             placeholder='Email'
+                            type='email'
                             id='Email'
                             name='Email'
                             onChange={(e) => setEmail(e.target.value)}

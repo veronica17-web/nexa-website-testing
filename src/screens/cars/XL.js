@@ -67,7 +67,7 @@ function XL() {
           content='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/XL6.jpg'
         />
       </Helmet>
-      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-Background-Banners/XL6-Banner.webp')] bg-cover bg-no-repeat">
+      <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-Background-Banners/XL6-Banner.webp')] bg-cover bg-no-repeat pt-20">
         <div className='max-w-6xl mx-auto'>
           <div className='grid sm:grid-cols-2 lg:grid-cols-3'>
             <div className='my-auto mx-auto'>
@@ -439,7 +439,7 @@ const Variant = () => {
 
 const ImageOptions = () => {
   return (
-    <div className='max-w-6xl mx-auto px-5 md:px-0'>
+    <div className='max-w-6xl mx-auto px-2 md:px-0'>
       <div className='grid sm:grid-cols-2'>
         <div>
           <img
@@ -448,8 +448,8 @@ const ImageOptions = () => {
             className='w-full'
           />
         </div>
-        <div className='my-auto mx-auto px-8 space-y-3'>
-          <p className='text-3xl font-bold'>
+        <div className='my-auto mx-auto px-2 lg:px-8 space-y-3'>
+          <p className='text-3xl font-medium'>
             Bold Front Grille With Sweeping X-Bar Element
           </p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
@@ -460,9 +460,9 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className='grid mt-2 sm:grid-cols-2'>
-        <div className='my-auto mx-auto space-y-3 p-5'>
-          <p className='text-3xl font-bold'>
+      <div className='grid mt-2 sm:grid-cols-2 px-2 lg:px-8'>
+        <div className='my-auto mx-auto space-y-3 pb-2'>
+          <p className='text-3xl font-medium'>
             Quad Chamber LED Reflector Headlamps
           </p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
@@ -480,7 +480,7 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className='grid mt-2 sm:grid-cols-2'>
+      <div className='grid mt-2 sm:grid-cols-2 px-2 lg:px-8'>
         <div>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/imageOptions/LED-tail-Lamps.webp'
@@ -488,8 +488,8 @@ const ImageOptions = () => {
             className='w-full'
           />
         </div>
-        <div className='my-auto mx-auto space-y-3 px-8'>
-          <p className='text-3xl font-bold'>
+        <div className='my-auto mx-auto space-y-3 '>
+          <p className='text-3xl font-medium'>
             Smoky Grey LED Tail Lamps With Light Guide
           </p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
@@ -501,9 +501,9 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className='grid mt-2 sm:grid-cols-2'>
-        <div className='my-auto mx-auto px-8 space-y-3'>
-          <p className='text-3xl font-bold'>
+      <div className='grid mt-2 sm:grid-cols-2 px-2 lg:px-8'>
+        <div className='my-auto mx-auto  space-y-3'>
+          <p className='text-3xl font-medium'>
             Dashboard With Premium Stone Finish
           </p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
@@ -522,7 +522,7 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className='grid mt-2 sm:grid-cols-2'>
+      <div className='grid mt-2 sm:grid-cols-2 px-2 lg:px-8'>
         <div>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/imageOptions/ALLOY.webp'
@@ -530,8 +530,8 @@ const ImageOptions = () => {
             className='w-full'
           />
         </div>
-        <div className='my-auto mx-auto space-y-3 px-8'>
-          <p className='text-3xl font-bold'>
+        <div className='my-auto mx-auto space-y-3 '>
+          <p className='text-3xl font-medium'>
             Dual-Tone Machined Finish R16 Alloy Wheels
           </p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
@@ -542,9 +542,9 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className='grid mt-2 sm:grid-cols-2'>
-        <div className='my-auto mx-auto px-8 space-y-3'>
-          <p className='text-3xl font-bold'>Back Door Spoiler</p>
+      <div className='grid mt-2 sm:grid-cols-2 px-2 lg:px-8'>
+        <div className='my-auto mx-auto  space-y-3 pb-2'>
+          <p className='text-3xl font-medium'>Back Door Spoiler</p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
           <p>Leave a lasting impression with a wide and accentuated look.</p>
         </div>

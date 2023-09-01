@@ -6,7 +6,6 @@ import Header from "../../components/Header/Header";
 function Awards() {
   return (
     <>
-      <Header />
       <Helmet>
         <title>Awards & Achievements | Nexa Car Dealers in Hyderabad</title>
         <meta
@@ -48,6 +47,8 @@ function Awards() {
           content="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/About-us.webp"
         />
       </Helmet>
+      <Header />
+      <div className='bg-black h-[4.1rem] md:hidden'></div>
       <img
         src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/maruti-suzuki-awards.webp"
         className="max-w-full w-full"

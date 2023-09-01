@@ -10,7 +10,6 @@ function Ciaz() {
   const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
-      <Header />
       <Helmet>
         <title>
           Nexa Ciaz Car Price, Mileage, Specifications & Offers | Saboo Nexa
@@ -63,7 +62,8 @@ function Ciaz() {
           content='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/Ciaz.jpg'
         />
       </Helmet>
-      <div className='bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-Background-Banners/Saboo-RKS-Nexa-Ciaz-Car-Background.webp)] bg-cover bg-no-repeat'>
+      <Header col={true} />
+      <div className='bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-Background-Banners/Saboo-RKS-Nexa-Ciaz-Car-Background.webp)] bg-cover bg-no-repeat pt-20 lg:pt-32'>
         <div className='container mx-auto'>
           <div className='grid sm:grid-cols-2'>
             <div className='my-auto mx-auto py-8'>
@@ -377,8 +377,8 @@ const Variant = () => {
 
 const ImageOptions = () => {
   return (
-    <div className='container mx-auto px-5 md:px-0'>
-      <div className='grid shadow-lg sm:grid-cols-2 p-8 '>
+    <div className='container mx-auto '>
+      <div className='grid shadow-lg sm:grid-cols-2 p-2 lg:p-8 '>
         <div>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ciaz/exterior/key-visual-ciaz1-e1561609099843.webp'
@@ -386,8 +386,8 @@ const ImageOptions = () => {
             className='w-full'
           />
         </div>
-        <div className='my-auto mx-auto space-y-3 p-8'>
-          <p className='text-3xl font-bold '>Design</p>
+        <div className='my-auto mx-auto space-y-3  lg:p-8'>
+          <p className='text-3xl font-medium '>Design</p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
           <p>
             Thoughtfully crafted and exquisitely designed, the New Ciaz captures
@@ -398,16 +398,16 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className='grid shadow-lg sm:grid-cols-2 p-8'>
-        <div className='my-auto mx-auto space-y-3 p-5'>
-          <p className='text-3xl font-bold'>LED Projector Auto Headlamps</p>
+      <div className='grid shadow-lg sm:grid-cols-2 p-2 lg:p-8'>
+        <div className='my-auto mx-auto space-y-3 py-2'>
+          <p className='text-3xl font-medium'>LED Projector Auto Headlamps</p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
           <p>
             The LED Projector auto headlamps with DRLs captivate at first
             glance.
           </p>
         </div>
-        <div>
+        <div className='pb-2'>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ciaz/exterior/headlamps-e1561608366238.webp'
             alt='headlamps-e1561608366238'
@@ -416,7 +416,7 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className='grid shadow-lg sm:grid-cols-2 p-8'>
+      <div className='grid shadow-lg sm:grid-cols-2 p-2 mt-3 lg:p-8'>
         <div>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ciaz/exterior/Saboo-Nexa-Ciaz-Exterior-Back-Lamp.webp'
@@ -424,20 +424,20 @@ const ImageOptions = () => {
             className='w-full'
           />
         </div>
-        <div className='my-auto mx-auto space-y-3 p-8'>
-          <p className='text-3xl font-bold'>LED Tail Lamps</p>
+        <div className='my-auto mx-auto space-y-3 py-3 lg:p-8 '>
+          <p className='text-3xl font-medium'>LED Tail Lamps</p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
           <p>Gracefully designed Tail Lamps make heads turn on the streets.</p>
         </div>
       </div>
 
-      <div className='grid shadow-lg sm:grid-cols-2 p-8'>
-        <div className='my-auto mx-auto space-y-3'>
-          <p className='text-3xl font-bold'>Luxurious Interiors</p>
+      <div className='grid shadow-lg sm:grid-cols-2 p-2 lg:p-8 mt-3'>
+        <div className='my-auto mx-auto space-y-3 pb-3'>
+          <p className='text-3xl font-medium'>Luxurious Interiors</p>
           <p className='h-1 w-20 bg-black rounded-full '></p>
           <p>Step inside and breathe in the most spacious cabin.</p>
         </div>
-        <div>
+        <div className='pb-2'>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ciaz/interior/Saboo-Nexa-Ciaz-Spacious-Interiors.webp'
             alt='Saboo-Nexa-Ciaz-Spacious-Interiors'

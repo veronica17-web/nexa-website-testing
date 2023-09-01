@@ -1,9 +1,9 @@
 import { Tab } from '@headlessui/react';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+// import { Link } from 'react-router-dom';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { MdOutlineFileDownload } from 'react-icons/md';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { MdOutlineFileDownload } from 'react-icons/md';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper';
+// import { FreeMode, Navigation, Thumbs } from 'swiper';
 
 function TabNavigationAG() {
   return (
@@ -90,7 +90,7 @@ function TabNavigationAG() {
 }
 
 const AutoMode = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Auto.webp')] py-5 bg-cover bg-no-repeat">
@@ -125,7 +125,7 @@ const AutoMode = () => {
 };
 
 const SportMode = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Sport.webp')] py-10 bg-cover bg-no-repeat">
@@ -159,7 +159,7 @@ const SportMode = () => {
 };
 
 const SnowMode = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Snow.webp')] py-10 bg-cover bg-no-repeat">
@@ -192,7 +192,7 @@ const SnowMode = () => {
   );
 };
 const LockMode = () => {
-  const [tabsColors, setTabsColors] = useState(1);
+  // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/all-grip/tabs/Lock.webp')] py-10 bg-cover bg-no-repeat">

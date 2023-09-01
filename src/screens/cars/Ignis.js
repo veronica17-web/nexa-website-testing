@@ -12,7 +12,6 @@ function Ignis() {
   const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
-      <Header />
       <Helmet>
         <title>Nexa Ignis Price & Offers in Hyderabad | Saboo Nexa</title>
         <meta
@@ -63,7 +62,8 @@ function Ignis() {
           content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
         />
       </Helmet>
-      <div className="bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-Background-Banners/Saboo-RKS-Nexa-Ignis-Car-Background.webp)] bg-center w-full bg-cover bg-no-repeat">
+      <Header />
+      <div className="bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-Background-Banners/Saboo-RKS-Nexa-Ignis-Car-Background.webp)] bg-center w-full bg-cover bg-no-repeat pt-20  lg:pt-36">
         <div className="container mx-auto">
           <div className="grid sm:grid-cols-2">
             <div className="my-auto mx-auto">
@@ -382,18 +382,18 @@ const Variant = () => {
               onChange={(e) => setPrice(e.target.value)}
               className="block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
             >
-              <option value='5,84,000'>SIGMA</option>
-                          <option value='6,38,000'>DELTA</option>
-                          <option value='6,96,000'>ZETA</option>
-                          <option value='7,10,000'>ZETA(D)</option>
-                          <option value='7,61,000'>ALPHA</option>
-                          <option value='7,75,000'>ALPHA(D)</option>
-                          <option value='6,93,000'>DELTA AGS (M)</option>
-                          <option value='7,51,000'>ZETA AGS (M)</option>
-                          <option value='8,16,000'>ALPHA AGS (M)</option>
-                          <option value='7,65,000'>ZETA AGS (D)</option>
+              <option value="5,84,000">SIGMA</option>
+              <option value="6,38,000">DELTA</option>
+              <option value="6,96,000">ZETA</option>
+              <option value="7,10,000">ZETA(D)</option>
+              <option value="7,61,000">ALPHA</option>
+              <option value="7,75,000">ALPHA(D)</option>
+              <option value="6,93,000">DELTA AGS (M)</option>
+              <option value="7,51,000">ZETA AGS (M)</option>
+              <option value="8,16,000">ALPHA AGS (M)</option>
+              <option value="7,65,000">ZETA AGS (D)</option>
 
-                          <option value='8,30,000'>ALPHA AGS (D)</option>
+              <option value="8,30,000">ALPHA AGS (D)</option>
             </select>
           </div>
           <div className="text-center text-gray-200">
@@ -420,8 +420,8 @@ const Variant = () => {
 
 const ImageOptions = () => {
   return (
-    <div className="container mx-auto px-5 md:px-0">
-      <div className="grid shadow-lg sm:grid-cols-2 p-8 ">
+    <div className="container mx-auto ">
+      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
         <div>
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/exterior/saboo-nexa-ignis-exterior-front-grill.webp"
@@ -429,8 +429,8 @@ const ImageOptions = () => {
             className="w-full"
           />
         </div>
-        <div className="my-auto mx-auto space-y-3 p-8">
-          <p className="text-3xl font-bold ">Sporty Rear</p>
+        <div className="my-auto mx-auto space-y-3 lg:px-8">
+          <p className="text-3xl font-medium ">Sporty Rear</p>
           <p className="h-1 w-20 bg-black rounded-full "></p>
           <p>
             The New Ignis is equipped with a Striking Rear Spoiler and Roof
@@ -439,9 +439,9 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className="grid shadow-lg sm:grid-cols-2 p-8">
-        <div className="my-auto mx-auto space-y-3 p-5">
-          <p className="text-3xl font-bold">Imposing Chrome Grille</p>
+      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
+        <div className="my-auto mx-auto space-y-3 lg:px-8">
+          <p className="text-3xl font-medium">Imposing Chrome Grille</p>
           <p className="h-1 w-20 bg-black rounded-full "></p>
           <p>
             Taking the tough look up a notch, the New Ignis is equipped with an
@@ -457,7 +457,7 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className="grid shadow-lg sm:grid-cols-2 p-8">
+      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
         <div>
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/exterior/saboo-nexa-ignis-exterior-side-shot.webp"
@@ -465,8 +465,8 @@ const ImageOptions = () => {
             className="w-full"
           />
         </div>
-        <div className="my-auto mx-auto space-y-3 p-8">
-          <p className="text-3xl font-bold">High SUV-like Stance</p>
+        <div className="my-auto mx-auto space-y-3 lg:px-8">
+          <p className="text-3xl font-medium">High SUV-like Stance</p>
           <p className="h-1 w-20 bg-black rounded-full "></p>
           <p>
             The New Ignis has a high SUV-like Stance which makes it easier to
@@ -476,9 +476,9 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className="grid shadow-lg sm:grid-cols-2 p-8">
-        <div className="my-auto mx-auto space-y-3">
-          <p className="text-3xl font-bold">Toughened Exterior</p>
+      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
+        <div className="my-auto mx-auto space-y-3 ">
+          <p className="text-3xl font-medium">Toughened Exterior</p>
           <p className="h-1 w-20 bg-black rounded-full "></p>
           <p>
             Adding to the toughness, the New Ignis comes with stunning 15”

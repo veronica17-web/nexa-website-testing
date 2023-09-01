@@ -4,7 +4,7 @@ import { ignis } from "../../constants/cars";
 
 function Features() {
   return (
-    <div className="max-w-7xl mx-auto py-20 px-5 md:px-0">
+    <div className="max-w-7xl mx-auto py-6 lg:py-16  ">
       <div className="grid md:grid-cols-4 md:space-x-4 lg:space-x-1 gap-4">
         <Tab.Group>
           <div className="col-span-1">

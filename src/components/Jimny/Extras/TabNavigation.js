@@ -94,10 +94,10 @@ const ElectricDrive = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
-            <video class='w-screen' autoplay='autoplay' loop>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+            <video className='w-screen' autoplay='autoplay' loop>
               <source
-                class='w-30 h-30'
+                className='w-30 h-30'
                 src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/ieh-1.mp4'
                 type='video/mp4'
               />
@@ -121,10 +121,10 @@ const HybridDrive = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
-            <video class='w-screen' autoplay='autoplay' loop>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+            <video className='w-screen' autoplay='autoplay' loop>
               <source
-                class='w-30 h-30'
+                className='w-30 h-30'
                 src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/ieh-1.mp4'
                 type='video/mp4'
               />
@@ -149,10 +149,10 @@ const EngineDrive = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
-            <video class='w-screen' autoplay='autoplay' loop>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+            <video className='w-screen' autoplay='autoplay' loop>
               <source
-                class='w-30 h-30'
+                className='w-30 h-30'
                 src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/ieh-1.mp4'
                 type='video/mp4'
               />
@@ -174,10 +174,10 @@ const RegenerativeBraking = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div class='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
-            <video class='w-screen' autoplay='autoplay' loop>
+          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+            <video className='w-screen' autoplay='autoplay' loop>
               <source
-                class='w-30 h-30'
+                className='w-30 h-30'
                 src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/ieh-1.mp4'
                 type='video/mp4'
               />
