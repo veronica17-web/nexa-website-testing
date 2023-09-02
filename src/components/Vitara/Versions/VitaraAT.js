@@ -1,6 +1,5 @@
 import Header from '../../../components/Header/Header';
-import { Link } from 'react-router-dom';
-import React, { useRef, useState } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Helmet from 'react-helmet';
 
@@ -13,13 +12,12 @@ import '../Extras/styles.css';
 // import required modules
 import { Autoplay, Navigation, Pagination } from 'swiper';
 
-import Carousel from '../Extras/Carousel';
+// import Carousel from '../Extras/Carousel'; alt=""
 import TabNavigationMT from '../Extras/TabNavigationMT';
 
 const VitaraAT = () => {
   return (
     <>
-      <Header />
       <Helmet>
         <title>Nexa Grand Vitara 6 Speed Automtic Transmissions Price </title>
         <meta
@@ -70,6 +68,7 @@ const VitaraAT = () => {
           content="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/Ciaz.jpg"
         /> */}
       </Helmet>
+      <Header col={true} />
       <div className='container mx-auto py-16 space-y-4 rounded'>
         {/* <Carousel /> */}
         <Swiper
@@ -105,28 +104,28 @@ const VitaraAT = () => {
           className='mySwiper'
         >
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-8+webp.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-8+webp.webp' alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-7+webp.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-7+webp.webp' alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-6+webp.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-6+webp.webp' alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-19+webp.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-19+webp.webp' alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-15+webp.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-15+webp.webp' alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-14+webp.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-14+webp.webp' alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-13+webp.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-13+webp.webp' alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-12+webp.webp' />
+            <img src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/automatic-transmission/GV_811x629-12+webp.webp' alt="" />
           </SwiperSlide>
         </Swiper>
         <IntelligentElectric />

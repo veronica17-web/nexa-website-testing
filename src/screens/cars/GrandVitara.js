@@ -484,61 +484,50 @@ const VariantPlayer = () => {
       >
         <source
           class="w-30 h-30"
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/END+SHOT+GRAND+VITARA_1_2+mp4.mp4"
+          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/Grand+vitara.webm"
           type="video/mp4"
         />
       </video>
-      <div className="absolute bottom-40 lg:top-[36%] left-[3%] lg:left-[5%] text-white ">
-        {/* <div
-          data-aos="fade-right"
-          data-aos-delay="200"
-          data-aos-duration="500"
-          className="text-2xl lg:text-4xl"
-        >
-          THE ADVANCED
-        </div>
-        <div
-          data-aos="fade-right"
-          data-aos-delay="400"
-          data-aos-duration="500"
-          className="text-5xl lg:text-8xl font-serif pb-1 uppercase"
-        >
-          GRAND VITARA
-        </div>
-        <div
-          data-aos="fade-right"
-          data-aos-delay="600"
-          data-aos-duration="1000"
-          className="text-2xl lg:text-5xl mb-2 lg:mb-4 uppercase"
-        >
-          RULE EVERY ROAD
-        </div> */}
-        {/* <Link to="/maruti-invicto-price-in-hyderabad">
-            <button
+      <div className="absolute bottom-40 lg:bottom-24 left-[3%] lg:left-[5%] text-white ">
+            <div
               data-aos="fade-right"
-              data-aos-delay="800"
-              data-aos-duration="1000"
-              className="border border-white px-4 py-2 lg:px-8 text-white uppercase"
-              onClick={() => setOpen(true)}
+              data-aos-delay="200"
+              data-aos-duration="500"
+              className="text-2xl lg:text-4xl"
             >
-              Discover More
-            </button>
-          </Link> */}
-        <a
-          href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/grand_vitara.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button
-            data-aos="fade-right"
-            data-aos-delay="800"
-            data-aos-duration="1000"
-            className="border border-white px-4 py-2 lg:px-8 text-white uppercase"
-          >
-            BROCHURE
-          </button>
-        </a>
-      </div>
+             THE ADVANCED
+            </div>
+            <div
+              data-aos="fade-right"
+              data-aos-delay="400"
+              data-aos-duration="500"
+              className="pb-1 font-serif text-5xl uppercase lg:text-8xl"
+            >
+           GRAND VITARA
+            </div>
+            <div
+              data-aos="fade-right"
+              data-aos-delay="600"
+              data-aos-duration="1000"
+              className="mb-2 text-2xl uppercase lg:text-5xl lg:mb-4"
+            >
+              THE LEAGUE OF EXTRAORDINARY
+            </div>
+            <a
+              href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/grand_vitara.pdff"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button
+                data-aos="fade-right"
+                data-aos-delay="800"
+                data-aos-duration="1000"
+                className="px-4 py-2 uppercase border hover:text-white hover:bg-black hover:border-black lg:px-8"
+              >
+                BROCHURE
+              </button>
+            </a>
+          </div>
     </div>
   );
 };

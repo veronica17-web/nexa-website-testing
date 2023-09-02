@@ -449,7 +449,7 @@ const VariantPlayer = () => {
       >
         <source
           class="w-30 h-30"
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/video/JIMNY+1.mp4"
+          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/video/jimny_banner.webm"
           // src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/video/The+Jimny+is+here+to+rule+_+%23NeverTurnBack.mp4"
           type="video/mp4"
         />

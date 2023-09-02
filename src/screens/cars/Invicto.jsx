@@ -36,8 +36,6 @@ import { useEffect } from "react";
 // import { CarEnq } from "../home/Home";
 import { Link } from "react-router-dom";
 
-// const width = window.innerWidth;
-
 const Invicto = () => {
   useEffect(() => {
     // AOS.init();
@@ -61,7 +59,6 @@ const Invicto = () => {
         />
       </Helmet>
       <Header />
-      {/* {width > 425 ? <WebBanner /> : <MobileWebBanner />} */}
       <div className="relative">
         <div className="top-0 left-0 w-full h-screen ">
           <video
@@ -169,9 +166,7 @@ const Invicto = () => {
       <div className="">
         <TabNavigationInvictio />
       </div>
-      
 
-     
       {/* Benefits of Intelligent Electric Hybrid */}
       <Benefits />
 
@@ -442,10 +437,10 @@ function InvictoCarEnquiry2() {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
-  if (phone !== '' && phone.length === 10) {
+  if (phone !== "" && phone.length === 10) {
     if (!pattern.test(phone)) {
-      toast.error('Enter valid phone number', {
-        theme: 'colored',
+      toast.error("Enter valid phone number", {
+        theme: "colored",
       });
     }
   }
@@ -453,7 +448,7 @@ function InvictoCarEnquiry2() {
     <>
       <div className="pt-8 pb-20 md:pb-28 ">
         <div className="container px-5 mx-auto space-y-3 lg:px-0">
-          <div className="pt-4 pb-4 text-3xl text-center uppercase sm:text-4xl md:text-5xl lg:pt-8">
+        <div className="pt-2 pb-6 text-3xl text-center uppercase lg:pb-8 sm:text-4xl md:text-5xl">
             Book Your Invicto Now
           </div>
           <form
@@ -522,10 +517,10 @@ function InvictoCarEnquiry2() {
                   name="Email"
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                 {email.length > 0 && !emailPattern.test(email) ? (
-                  <small className='text-red-500'>Invalid email address</small>
+                {email.length > 0 && !emailPattern.test(email) ? (
+                  <small className="text-red-500">Invalid email address</small>
                 ) : (
-                  ''
+                  ""
                 )}
               </div>
               <div>
@@ -540,21 +535,21 @@ function InvictoCarEnquiry2() {
                   maxLength="10"
                   onChange={(e) =>
                     setPhone(
-                      e.target.value.replace(/[^1-9 ]/g, '') &&
-                        e.target.value.replace(/ /g, '')
+                      e.target.value.replace(/[^1-9 ]/g, "") &&
+                        e.target.value.replace(/ /g, "")
                     )
                   }
                 />
                 {phone.length > 0 && phone.length < 10 ? (
-                  <small className='text-red-500'>
+                  <small className="text-red-500">
                     Phone number must be 10 digits
                   </small>
                 ) : !pattern.test(phone) && phone.length === 10 ? (
-                  <small className='text-red-500'>
+                  <small className="text-red-500">
                     Phone number is invalid
                   </small>
                 ) : (
-                  ''
+                  ""
                 )}
               </div>
               <>
@@ -2027,17 +2022,17 @@ export const CarEnq2 = ({ title }) => {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
-  if (phone !== '' && phone.length === 10) {
+  if (phone !== "" && phone.length === 10) {
     if (!pattern.test(phone)) {
-      toast.error('Enter valid phone number', {
-        theme: 'colored',
+      toast.error("Enter valid phone number", {
+        theme: "colored",
       });
     }
   }
   return (
     <div className=" bg-black">
       <div className="container px-5 pt-8 mx-auto space-y-3 lg:px-0 ">
-        <div className="pt-4 pb-8 text-center uppercase tex4t-3xl sm:text-4xl md:text-5xl text-white">
+      <div className="pt-2 pb-6 text-3xl text-center uppercase lg:pb-8 sm:text-4xl md:text-5xl text-white">
           {title}
         </div>
         <form
@@ -2114,21 +2109,19 @@ export const CarEnq2 = ({ title }) => {
                 maxLength="10"
                 onChange={(e) =>
                   setPhone(
-                    e.target.value.replace(/[^1-9 ]/g, '') &&
-                      e.target.value.replace(/ /g, '')
+                    e.target.value.replace(/[^1-9 ]/g, "") &&
+                      e.target.value.replace(/ /g, "")
                   )
                 }
               />
               {phone.length > 0 && phone.length < 10 ? (
-                <small className='text-red-500'>
+                <small className="text-red-500">
                   Phone number must be 10 digits
                 </small>
               ) : !pattern.test(phone) && phone.length === 10 ? (
-                <small className='text-red-500'>
-                  Phone number is invalid
-                </small>
+                <small className="text-red-500">Phone number is invalid</small>
               ) : (
-                ''
+                ""
               )}
             </div>
             <div>
@@ -2142,10 +2135,10 @@ export const CarEnq2 = ({ title }) => {
                 onChange={(e) => setEmail(e.target.value)}
               />
               {email.length > 0 && !emailPattern.test(email) ? (
-                  <small className='text-red-500'>Invalid email address</small>
-                ) : (
-                  ''
-                )}
+                <small className="text-red-500">Invalid email address</small>
+              ) : (
+                ""
+              )}
             </div>
 
             <select
@@ -2187,7 +2180,7 @@ export const CarEnq2 = ({ title }) => {
 
             <button
               type="submit"
-              className=" border-gray-500 bg-gray-500 px-6 py-2.5 md:col-span-2 border text-white  duration-200 rounded-xl hover:border-gray-400"
+              className=" border-gray-500 bg-white px-6 py-2.5 md:col-span-2 border hover:text-white hover:bg-black rounded-xl hover:border-gray-400 "
             >
               {loader ? (
                 <div className="flex items-center justify-center">

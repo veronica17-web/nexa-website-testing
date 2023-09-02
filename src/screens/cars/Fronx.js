@@ -528,7 +528,7 @@ const VariantPlayer = () => {
   return (
     <div className="top-0 left-0 w-full h-screen relative  ">
       <video
-        className="w-full h-full object-cover hidden sm:block "
+        className="w-full h-full object-cover  "
         autoplay="autoplay"
         loop
         muted
@@ -536,15 +536,15 @@ const VariantPlayer = () => {
       >
         <source
           class="w-30 h-30"
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/video/Fronx_banner.mp4"
+          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/video/fronx_banner.webm"
           type="video/mp4"
         />
       </video>
-      <img
+      {/* <img
         src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner-without-book-now.webp"
         alt=""
         className="h-screen w-full sm:hidden"
-      />
+      /> */}
       <div className="absolute bottom-40 lg:bottom-24 left-[3%] lg:left-[5%] text-white ">
         <div
           data-aos="fade-right"

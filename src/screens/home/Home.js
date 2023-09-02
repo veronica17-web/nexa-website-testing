@@ -8,8 +8,6 @@ import { toast } from "react-toastify";
 import { CgSpinner } from "react-icons/cg";
 import axios from "axios";
 import { products } from "../../constants";
-import { BsArrowDown } from "react-icons/bs";
-import { BiRupee } from "react-icons/bi";
 import { RiStarFill } from "react-icons/ri";
 // import { RiStarFill, RiStarHalfFill } from "react-icons/ri";
 // import { RiStarFill, RiStarHalfFill, RiPhoneFill } from "react-icons/ri";
@@ -30,7 +28,6 @@ import "swiper/css/navigation";
 import Range from "./Range";
 
 function Home() {
-
   useEffect(() => {
     // AOS.init();
     AOS.init({ once: true });
@@ -138,7 +135,7 @@ export const HomeVideo = () => {
           <div
             data-aos="fade-right"
             data-aos-delay="600"
-            data-aos-duration="1000"
+            data-aos-duration="500"
             className="mb-2 text-2xl lg:text-5xl lg:mb-4 "
           >
             THE LEAGUE OF EXTRAORDINARY
@@ -147,7 +144,7 @@ export const HomeVideo = () => {
             <button
               data-aos="fade-right"
               data-aos-delay="800"
-              data-aos-duration="1000"
+              data-aos-duration="500"
               className="px-4 py-2 text-white uppercase border border-white hover:bg-black hover:border-black lg:px-8"
             >
               Discover More
@@ -229,10 +226,10 @@ export const CarEnq = ({ title }) => {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
-  if (phone !== '' && phone.length === 10) {
+  if (phone !== "" && phone.length === 10) {
     if (!pattern.test(phone)) {
-      toast.error('Enter valid phone number', {
-        theme: 'colored',
+      toast.error("Enter valid phone number", {
+        theme: "colored",
       });
     }
   }
@@ -316,21 +313,19 @@ export const CarEnq = ({ title }) => {
                 maxLength="10"
                 onChange={(e) =>
                   setPhone(
-                    e.target.value.replace(/[^1-9 ]/g, '') &&
-                      e.target.value.replace(/ /g, '')
+                    e.target.value.replace(/[^1-9 ]/g, "") &&
+                      e.target.value.replace(/ /g, "")
                   )
                 }
               />
               {phone.length > 0 && phone.length < 10 ? (
-                <small className='text-red-500'>
+                <small className="text-red-500">
                   Phone number must be 10 digits
                 </small>
               ) : !pattern.test(phone) && phone.length === 10 ? (
-                <small className='text-red-500'>
-                  Phone number is invalid
-                </small>
+                <small className="text-red-500">Phone number is invalid</small>
               ) : (
-                ''
+                ""
               )}
             </div>
             <div>
@@ -343,11 +338,11 @@ export const CarEnq = ({ title }) => {
                 required
                 onChange={(e) => setEmail(e.target.value)}
               />
-               {email.length > 0 && !emailPattern.test(email) ? (
-                  <small className='text-red-500'>Invalid email address</small>
-                ) : (
-                  ''
-                )}
+              {email.length > 0 && !emailPattern.test(email) ? (
+                <small className="text-red-500">Invalid email address</small>
+              ) : (
+                ""
+              )}
             </div>
 
             <select
@@ -460,20 +455,9 @@ const VehicleProducts = () => {
             className="relative flex flex-col overflow-hidden border-t border-l border-gray-100 shadow-lg shadow-gray-200 hover:shadow-gray-300"
             key={item.id}
           >
-            {/* <div
-              className="absolute left-0 z-10 p-2 ml-5 bg-white rounded-full cursor-pointer top-2"
-              // onClick={() => setCompareItems([...compareItems, item.name])}
-              onClick={() => handleCompare(item.name)}
-            >
-              <IoShuffleSharp size={22} />
-            </div> */}
-
             {item.price && (
               <div className="absolute top-3 right-5 ">
-                <p className="flex items-center font-medium">
-                  <BiRupee />
-                  {item.price}*
-                </p>
+                <p className="flex items-center font-medium">₹ {item.price}*</p>
                 <div className="text-sm font-light">ex-showroom</div>
               </div>
             )}
@@ -481,7 +465,7 @@ const VehicleProducts = () => {
             <div
               data-aos="zoom-in"
               data-aos-delay="0"
-              data-aos-duration="1000"
+              data-aos-duration="500"
               className="flex-auto overflow-hidden"
             >
               <Link to={item.explore}>
@@ -492,37 +476,34 @@ const VehicleProducts = () => {
                 />
               </Link>
             </div>
-            <div
-              // data-aos="zoom-in"
-              // data-aos-delay=""
-              // data-aos-duration="1000"
-              className="flex-auto bg-transparent "
-            >
-              <div>
-                <div className="flex items-center justify-between p-5 rounded">
-                  <img src={item.logo} className="w-32" alt={item.name} />
-                  <div className="flex items-center font-semibold">
-                    <BsArrowDown />
-                    <a href={item.brouchure} target="_blank" rel="noreferrer">
-                      Brochure
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center gap-4 pb-5 mx-4">
-                  <Link
-                    to={item.explore}
-                    className="w-full p-2 text-sm text-center uppercase border border-gray-800 rounded "
-                  >
-                    Explore
-                  </Link>
-                  <button
-                    onClick={() => setOpen(true)}
-                    className="w-full p-2 text-sm text-center text-white uppercase duration-300 ease-in bg-black border border-black rounded hover:bg-white hover:text-black"
-                  >
-                    Book Now
-                  </button>
-                </div>
+
+            <div className="flex items-center justify-between p-5 rounded">
+              <img src={item.logo} className="w-32" alt={item.name} />
+              <div className="flex items-center font-semibold">
+                &darr;
+                <a
+                  href={item.brouchure}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="pl-1"
+                >
+                  Brochure
+                </a>
               </div>
+            </div>
+            <div className="flex items-center justify-center gap-4 pb-5 mx-4">
+              <Link
+                to={item.explore}
+                className="w-full p-2 text-sm text-center uppercase border border-gray-800 rounded "
+              >
+                Explore
+              </Link>
+              <button
+                onClick={() => setOpen(true)}
+                className="w-full p-2 text-sm text-center text-white uppercase duration-300 ease-in bg-black border border-black rounded hover:bg-white hover:text-black"
+              >
+                Book Now
+              </button>
             </div>
           </div>
         ))}
@@ -557,7 +538,7 @@ const SerFinInsur = () => {
               className="w-full max-w-full overflow-hidden shadow-lg rounded-3xl shadow-gray-500"
               data-aos="zoom-in"
               data-aos-delay="0"
-              data-aos-duration="1000"
+              data-aos-duration="500"
             />
           </Link>
         </div>
@@ -566,7 +547,7 @@ const SerFinInsur = () => {
           <div
             data-aos="zoom-in"
             data-aos-delay="0"
-            data-aos-duration="1000"
+            data-aos-duration="500"
             className=""
           >
             <Link to="/maruti-car-insurance">
@@ -580,7 +561,7 @@ const SerFinInsur = () => {
           <div
             data-aos="zoom-in"
             data-aos-delay="0"
-            data-aos-duration="1000"
+            data-aos-duration="500"
             className=""
           >
             <Link to="/maruti-car-finance">
@@ -707,7 +688,7 @@ const SerFinInsur = () => {
       <section
         data-aos="zoom-in"
         data-aos-delay="0"
-        data-aos-duration="1000"
+        data-aos-duration="500"
         className="container relative py-2 mx-auto group"
       >
         <Link to="/maruti-suzuki-24/7-service-in-hyderabad ">
@@ -759,7 +740,7 @@ const News = () => {
             className="object-cover w-full max-h-screen overflow-hidden bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200"
             data-aos="zoom-in"
             data-aos-delay="0"
-            data-aos-duration="1000"
+            data-aos-duration="500"
           />
         </Link>
         {/* </div> */}
@@ -791,7 +772,7 @@ const News = () => {
         <div
           data-aos="zoom-in"
           data-aos-delay="0"
-          data-aos-duration="1000"
+          data-aos-duration="500"
           className=" lg:w-1/2"
         >
           <img
@@ -841,7 +822,7 @@ const News = () => {
         <div
           data-aos="zoom-in"
           data-aos-delay="0"
-          data-aos-duration="1000"
+          data-aos-duration="500"
           className=" lg:w-1/2"
         >
           <img
@@ -917,7 +898,7 @@ const Testimonials = () => {
         <div
           data-aos="zoom-in"
           data-aos-delay="0"
-          data-aos-duration="1000"
+          data-aos-duration="500"
           className="shadow-lg shadow-gray-500 rounded-3xl  bg-[#000000f4] "
         >
           <Link to="/testimonials">
@@ -955,7 +936,7 @@ const Testimonials = () => {
         <div
           data-aos="zoom-in"
           data-aos-delay="0"
-          data-aos-duration="1000"
+          data-aos-duration="500"
           className="shadow-lg shadow-gray-500 rounded-3xl bg-[#000000f4] "
         >
           <Link to="/testimonials">
@@ -993,7 +974,7 @@ const Testimonials = () => {
         <div
           data-aos="zoom-in"
           data-aos-delay="0"
-          data-aos-duration="1000"
+          data-aos-duration="500"
           className="shadow-lg shadow-gray-500 rounded-3xl bg-[#000000f4] "
         >
           <Link to="/testimonials">
@@ -1046,7 +1027,7 @@ const Outlets = () => {
         <div
           data-aos="zoom-in"
           data-aos-delay="0"
-          data-aos-duration="1000"
+          data-aos-duration="500"
           className=" w-full  px-4 text-left py-6 hover:text-white shadow-xl shadow-[#b0b0b0] group duration-500 border-t rounded-3xl relative overflow-hidden"
         >
           <div className="bg-black h-32 w-36 duration-500 group-hover:h-[200%] group-hover:w-[200%] group-hover:-top-56 group-hover:-right-56 rounded-full absolute -top-20 -right-20 -z-10"></div>
@@ -1073,7 +1054,7 @@ const Outlets = () => {
         <div
           data-aos="zoom-in"
           data-aos-delay="0"
-          data-aos-duration="1000"
+          data-aos-duration="500"
           className=" w-full  px-4 text-left py-6 hover:text-white shadow-xl shadow-[#b0b0b0] group duration-500 border-t rounded-3xl relative overflow-hidden"
         >
           <div className="bg-black h-32 w-36 duration-500 group-hover:h-[200%] group-hover:w-[200%] group-hover:-top-56 group-hover:-right-56 rounded-full absolute -top-20 -right-20 -z-10"></div>
@@ -1100,7 +1081,7 @@ const Outlets = () => {
         <div
           data-aos="zoom-in"
           data-aos-delay="0"
-          data-aos-duration="1000"
+          data-aos-duration="500"
           className=" w-full  px-4 text-left py-6 hover:text-white shadow-xl shadow-[#b0b0b0] group duration-500 border-t rounded-3xl relative overflow-hidden"
         >
           <div className="bg-black h-32 w-36 duration-500 group-hover:h-[200%] group-hover:w-[200%] group-hover:-top-56 group-hover:-right-56 rounded-full absolute -top-20 -right-20 -z-10"></div>

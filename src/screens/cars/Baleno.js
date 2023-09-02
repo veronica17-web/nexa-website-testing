@@ -6,7 +6,15 @@ import Features from '../../components/BALENO/Features';
 import { MdOutlineFileDownload } from 'react-icons/md';
 import Helmet from 'react-helmet';
 import Header from '../../components/Header/Header';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 function Baleno() {
+  useEffect(() => {
+    // AOS.init();
+    AOS.init({ once: true });
+  }, []);
+
   const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
@@ -64,6 +72,65 @@ function Baleno() {
         />
       </Helmet>
       <Header />
+      <div className="relative">
+        <div className="top-0 left-0 w-full h-screen ">
+          <video
+            className="object-cover w-full h-full "
+            preload="metadata"
+            loop
+            autoPlay
+            playsInline
+            muted
+            poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/new_baleno/1.webp"
+          >
+            <source
+              // class='w-30 h-30'
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/baleno/Baleno.webm"
+              type="video/mp4"
+            />
+          </video>
+          <div className="absolute bottom-40 lg:bottom-24 left-[3%] lg:left-[5%] text-white ">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="200"
+              data-aos-duration="500"
+              className="text-2xl lg:text-4xl"
+            >
+              THE NEW AGE
+            </div>
+            <div
+              data-aos="fade-right"
+              data-aos-delay="400"
+              data-aos-duration="500"
+              className="pb-1 font-serif text-5xl uppercase lg:text-8xl"
+            >
+              BALENO
+            </div>
+            <div
+              data-aos="fade-right"
+              data-aos-delay="600"
+              data-aos-duration="1000"
+              className="mb-2 text-2xl uppercase lg:text-5xl lg:mb-4"
+            >
+              TECH GOES BOLD
+            </div>
+            <a
+              href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/The_New_Age_Baleno_Brochure.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button
+                data-aos="fade-right"
+                data-aos-delay="800"
+                data-aos-duration="1000"
+                className="px-4 py-2 uppercase border hover:text-white hover:bg-black hover:border-black lg:px-8"
+              >
+                BROCHURE
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
       <div className='bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/Baleno_Banner_Blue.webp)] bg-cover bg-no-repeat bg-center pt-20 overflow-hidden '>
         <div className='container mx-auto'>
           <div className='grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 py-16 lg:py-0'>
