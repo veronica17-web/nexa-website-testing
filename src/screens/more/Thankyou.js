@@ -8,7 +8,6 @@ import Header from "../../components/Header/Header";
 function Thankyou() {
   return (
     <>
-    <Header />
       <Helmet>
         <meta
           name="title"
@@ -21,8 +20,9 @@ function Thankyou() {
         <meta name="keywords" content="Nexa Showrooms in Hyderabad" />
         <meta name="author" content="Broaddcast" />
       </Helmet>
+      <Header col={true} />
 
-        <div className="py-16">
+      <div className="py-16">
         <h1 className="flex justify-center text-green-700 text-9xl">
           <ImCheckmark />
         </h1>
@@ -34,7 +34,7 @@ function Thankyou() {
         <Link to="/" className="flex items-center justify-center py-8">
           <BsArrowRight /> &nbsp;Back to Home
         </Link>
-        </div>
+      </div>
     </>
   );
 }

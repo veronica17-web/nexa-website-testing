@@ -11,6 +11,7 @@ const Range = () => {
   const navigationNextRef = useRef(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0); // Initialize with the first slide
   const [but, setBut] = useState(false);
+  const [pause, setPause] = useState(false);
 
   const videoRef1 = useRef(null);
   const videoRef2 = useRef(null);
@@ -163,7 +164,7 @@ const Range = () => {
       videoRef7,
       videoRef8,
     ];
-  
+
     const playAllVideos = () => {
       videoRefs.forEach((ref) => {
         if (ref.current) {
@@ -171,14 +172,26 @@ const Range = () => {
         }
       });
     };
-  
+
     if (!but) playAllVideos();
   }, [activeSlideIndex, but]);
-  
+
+  useEffect(() => {
+    // When activeSlideIndex changes, set pause to true
+    setPause(true);
+
+    // Use setTimeout to set pause to false after 2 seconds
+    const timer = setTimeout(() => {
+      setPause(false);
+    }, 2000);
+
+    // Clean up the timer when the component unmounts or activeSlideIndex changes again
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [activeSlideIndex]);
 
   const timeoutIdRef = useRef(null);
-
-
 
   useEffect(() => {
     if (timeoutIdRef.current) {
@@ -201,8 +214,10 @@ const Range = () => {
 
     // Check if the last slide is reached
     if (swiper.realIndex === 7) {
-      
     }
+  };
+  const handleContextMenu = (e) => {
+    e.preventDefault(); // Prevent the context menu from appearing
   };
 
   return (
@@ -214,13 +229,14 @@ const Range = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
+        onContextMenu={handleContextMenu}
       >
         <div className="duration-1000">
           <div className=" container pt-6 md:pt-20 text-white mx-auto text-center  uppercase text-2xl sm:text-4xl md:text-5xl px-4 py-2">
             An extraordinary model range
           </div>
 
-          <div className="text-center  md:pt-10  flex justify-center -mb-8 md:-mb-2  ">
+          <div className="text-center  md:pt-10  flex justify-center -mb-8 md:-mb-2 h-12 md:h-24 ">
             <img
               src={NexaData[activeSlideIndex].logo}
               alt=""
@@ -310,7 +326,7 @@ const Range = () => {
                     src={car.video}
                     ref={car.videoRef}
                     muted
-                    className={`slider_car ${
+                    className={`slider_car bg-transparent ${
                       !but ? "opacity-100" : "opacity-0"
                     } `}
                   ></video>
@@ -321,7 +337,7 @@ const Range = () => {
                     autoPlay
                     loop
                     muted
-                    className={`slider_car absolute inset-x-0 top-0 ${
+                    className={`slider_car absolute inset-x-0 top-0 bg-transparent ${
                       but ? "opacity-100" : "opacity-0"
                     } `}
                   ></video>
@@ -334,7 +350,7 @@ const Range = () => {
             ref={navigationPrevRef}
             id="playButton"
             className={`absolute left-2 sm:left-10 lg:top-[100px]  md:top-[11.5rem] top-[5.8rem] z-10 duration-500 bg-gray-200 opacity-50 hover:opacity-100 rounded-full p-1.5 sm:p-3 cursor-pointer ${
-              activeSlideIndex === 0 ? "hidden" : "block"
+              pause || activeSlideIndex === 0 ? "hidden" : "block"
             } `}
             onClick={() => setBut(true)}
           >
@@ -342,9 +358,9 @@ const Range = () => {
           </div>
 
           <div
-            ref={navigationNextRef}
+             ref={ navigationNextRef}
             className={`absolute right-2 sm:right-10 lg:top-[100px]  md:top-[11.5rem] top-[5.8rem]  z-10 duration-500 bg-gray-200 opacity-50 hover:opacity-100 rounded-full p-1.5 sm:p-3 cursor-pointer  ${
-              activeSlideIndex === 7 ? "hidden" : "block"
+              pause || activeSlideIndex === 7  ? "hidden" : "block"
             }`}
           >
             <GrFormNext className="lg:text-3xl" />

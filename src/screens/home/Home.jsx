@@ -9,6 +9,8 @@ import { CgSpinner } from "react-icons/cg";
 import axios from "axios";
 import { products } from "../../constants";
 import { RiStarFill } from "react-icons/ri";
+import { PiSteeringWheelThin } from "react-icons/pi";
+
 // import { RiStarFill, RiStarHalfFill } from "react-icons/ri";
 // import { RiStarFill, RiStarHalfFill, RiPhoneFill } from "react-icons/ri";
 // import { FaEnvelope, FaArrowRight } from "react-icons/fa";
@@ -34,7 +36,7 @@ function Home() {
   }, []);
 
   return (
-    <>
+    <div className="relative">
       <Header />
       <Helmet>
         <title>Best Nexa Dealers in Hyderabad | Nexa Hyderabad</title>
@@ -82,14 +84,16 @@ function Home() {
       </Helmet>
       <HomeVideo />
       <CarEnq title="NEXA CAR ENQUIRY" />
+
       <Range />
-      <NexaCars />
+      <Navigate />
+      <VehicleProducts />
 
       <SerFinInsur />
       <News />
       <Outlets />
       <Testimonials />
-    </>
+    </div>
   );
 }
 
@@ -169,7 +173,7 @@ export const CarEnq = ({ title }) => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [model, setModel] = useState("");
-  const [method, setMethod] = useState();
+  const [method, setMethod] = useState("");
   const [loader, setLoader] = useState(false);
 
   function handleSubmit(event) {
@@ -353,7 +357,7 @@ export const CarEnq = ({ title }) => {
               className="block w-full h-10 px-2 py-2 font-sans bg-white border-b border-black shadow-sm focus:outline-none sm:text-sm md:text-lg placeholder:text-lg placeholder:text-gray-600 "
             >
               {/* <option defaultChecked>Select Model</option> */}
-              <option value="" disabled>
+              <option value="" className="">
                 Model
               </option>
               <option value="Invicto" className="">
@@ -410,35 +414,83 @@ export const CarEnq = ({ title }) => {
   );
 };
 
-const NexaCars = () => {
+const Navigate = () => {
+  const [open, setOpen] = useState(false);
+  const [phone, setPhone] = useState("");
   return (
-    <div className="container px-5 mx-auto lg:pt-4 md:px-3 lg:px-0">
-      <div className="grid grid-cols-1 gap-2 mb-4 lg:grid-cols-2">
-        <div className="space-y-3">
-          {/* <p className='font-bold tracking-wider uppercase text-md'>
-            What's happening at NEXA
-          </p> */}
-          <div className="mb-2 text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl">
-            nexa cars
+    <div className="container px-5 mx-auto lg:pt-4 md:px-3 lg:px-0 uppercase border py-2 mb-10 mt-16 justify-between items-start text-center hidden md:flex cursor-pointer">
+      <div className=" border-r w-1/5  py-4 hover:font-medium group">
+        <Link to="/maruti-nexa-showroom-outlets-in-hyderabad">
+          <div className="flex flex-col gap-2 justify-center items-center px-1">
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/location.webp"
+              alt=""
+              srcset=""
+              className="h-8 lg:h-10"
+            />
+            <div>Locate a Showroom</div>
           </div>
-          <div className="mb-4 text-2xl text-left uppercase">
-            WHAT'S HAPPENING AT NEXA
-          </div>
-          <p className="text-lg font-light text-justify">
-            Saboo RKS, the premier Nexa dealer in Hyderabad, prides itself on
-            innovative solutions that revolutionize the driving experience,
-            bringing you a world of unparalleled excellence on the road.
-          </p>
-        </div>
-        <div className="flex justify-center ">
-          <img
-            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-all-cars-banner.webp"
-            // src={require("../../assets/nexa-all-cars-banner.png")}
-            alt="vehicle_banner"
-          />
+        </Link>
+      </div>
+
+      <div
+        className="border-r w-1/5  py-4 hover:font-medium group"
+        onClick={() => setOpen(true)}
+      >
+        <div className="flex flex-col gap-2 justify-center items-center px-1">
+          <PiSteeringWheelThin className="text-3xl lg:text-4xl " />
+          <div>Book a test drive</div>
         </div>
       </div>
-      <VehicleProducts />
+      <div
+        className="border-r w-1/5  py-4 hover:font-medium group"
+        onClick={() => setOpen(true)}
+      >
+        <div className="flex flex-col gap-2 justify-center items-center px-1">
+          <img
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/showroom.webp"
+            alt=""
+            srcset=""
+            className="h-8 lg:h-10"
+          />
+          <div className=""> Book a showroom visit</div>
+        </div>
+      </div>
+
+      <div
+        className="border-r w-1/5  py-4 hover:font-medium group"
+        onClick={() => setOpen(true)}
+      >
+        <div className="flex flex-col gap-2 justify-center items-center px-1">
+          <img
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/mechanical.webp"
+            alt=""
+            srcset=""
+            className="h-8 lg:h-10"
+          />
+          <div>Book a service</div>
+        </div>
+      </div>
+      <div className=" w-1/5  py-4 hover:font-medium group">
+        <Link to="/maruti-car-insurance">
+          <div className="flex flex-col gap-2 justify-center items-center px-1">
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/car-insurance.webp"
+              alt=""
+              srcset=""
+              className="h-8 lg:h-10"
+            />
+            <div>Insurance</div>
+          </div>
+        </Link>
+      </div>
+      <EnquiryPopup
+        open={open}
+        setOpen={setOpen}
+        phone={phone}
+        setPhone={setPhone}
+        title={"Book Now"}
+      />
     </div>
   );
 };
@@ -448,7 +500,7 @@ const VehicleProducts = () => {
   const [phone, setPhone] = useState("");
 
   return (
-    <>
+    <div className="container px-5 mx-auto lg:pt-4 md:px-3 lg:px-0">
       <div className="grid gap-4 pb-5 overflow-hidden sm:grid-cols-2 lg:grid-cols-3">
         {products.map((item) => (
           <div
@@ -522,7 +574,7 @@ const VehicleProducts = () => {
         setPhone={setPhone}
         title={"Book Now"}
       />
-    </>
+    </div>
   );
 };
 
@@ -1009,7 +1061,7 @@ const Testimonials = () => {
   );
 };
 
-const Outlets = () => {
+export const Outlets = () => {
   return (
     <div className="container px-2 py-10 mx-auto lg:px-0 ">
       <div className="text-5xl font-medium text-right uppercase md:text-6xl">

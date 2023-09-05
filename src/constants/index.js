@@ -4,14 +4,14 @@ export const sliders = [
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Maruti+Suzuki+Nexa+Teachers+Day+September+Offers+Saboo+RKS+Motor.webp',
     alt: 'sep-01 2023',
   },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-banner.webp',
-    alt: 'jimny-banner',
-  },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/fronx-web-banner.webp',
-    alt: 'fronx-banner',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-banner.webp',
+  //   alt: 'jimny-banner',
+  // },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/fronx-web-banner.webp',
+  //   alt: 'fronx-banner',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-web-banner-nov-1.webp',
     alt: 'new-nov-scng-banner',
@@ -857,25 +857,35 @@ export const truevalue = [
 
 export const accsliders = [
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/nexa-accessories/Saboo-Maruti-Suzuk-Nexa-Accessories.webp",
-    alt: "banner-1",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/INVICTO-Banner_Desktop.webp",
+    alt: "invicto banner",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Saboo-RKS-Nexa-Maruti-Suzuki-genuine-accessories-seat-covers.jpg",
-    alt: "banner-2",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Jimny+_Desktop_1500x470.webp",
+    alt: "jimny banner",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Saboo-RKS-Maruti-Suzuki-Nexa-Car-Cabin-Protective-Partition.jpg",
-    alt: "banner-3",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Fronx+webp.webp",
+    alt: "fronx banner",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Saboo-RKS-Maruti-Suzuki-Nexa-Disposable-Spectacles.jpg",
-    alt: "banner-4",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/GrandVitara_Desktop_1500x470.webp",
+    alt: "grand vitara banner",
   },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Saboo-RKS-Maruti-Suzuki-Nexa-Face-Visor.jpg",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/XL6-Launch_Desktop.webp",
+    alt: "xl-6 banner",
+  },
+  {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/NEXA+Kit+Desktop+banner+-+1500+x+470.webp",
     alt: "banner-5",
   },
+  // {
+  //   img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/nexa-accessories/Saboo-Maruti-Suzuk-Nexa-Accessories.webp",
+  //   alt: "banner-7",
+  // },
+  // {
+ 
 ];
 
 export const accgal = [

@@ -56,6 +56,7 @@ import XL6CNG from './screens/more/CNG/XL6CNG';
 import NexaPriceList from './screens/more/NexaPriceList';
 import Invicto from './screens/cars/Invicto';
 import Service24x7 from './screens/services/Service24x7';
+import CallButton from './components/Footer/CallButton';
 
 axios.defaults.baseURL = 'https://saboogroups.com/admin/api/';
 
@@ -499,6 +500,7 @@ function App() {
         {/* PageNotFound */}
         <Route path='*' element={<PageNotFound />} />
       </Routes>
+      <CallButton/>
       {!isAdminRoute && <Footer />}
     </>
   );

@@ -41,7 +41,6 @@ module.exports = {
           " 90%": { width: "18ch" },
           " 100%": { width: "19ch" },
         },
-       
         cursor: {
           "0%": { opacity: "0" },
           " 30%": { opacity: "1" },
