@@ -18,7 +18,7 @@ const CallButton = () => {
           <div className="text-sm">Showroom</div>
         </Link>
       </div>
-      <Link to="/maruti-suzuki-24/7-service-in-hyderabad">
+      <Link to="/book-online-maruti-nexa-car-service/">
         <div className="flex flex-col justify-between items-center cursor-pointer">
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/mechanical-white.webp"
@@ -35,11 +35,8 @@ const CallButton = () => {
           <div className="text-sm">Test Drive</div>
         </div>
       </Link> */}
-      
-        <div className="">
-          
-        </div>
-    
+
+      <div ></div>
     </div>
   );
 };

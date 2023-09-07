@@ -3,7 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { toast } from "react-toastify";
 import axios from "axios";
 
-function EnquiryPopup({ open, setOpen, title }) {
+function ShowRoom({ open, setOpen, title }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -45,11 +45,11 @@ function EnquiryPopup({ open, setOpen, title }) {
       www.saboonexa.in&type=1&template_id=1407168967467983613`
       )
       .then((res) => {
-        console.log('SMS API Response:', res.data);
+        console.log("SMS API Response:", res.data);
         // Handle the response from the SMS API if needed
       })
       .catch((err) => {
-        console.error('Error sending SMS:', err);
+        console.error("Error sending SMS:", err);
         // Handle errors from the SMS API if needed
       })
       .finally(() => {
@@ -184,12 +184,12 @@ function EnquiryPopup({ open, setOpen, title }) {
                           required
                           onChange={(e) => setEmail(e.target.value)}
                         />
-                         {email.length > 0 && !emailPattern.test(email) ? (
-                          <small className='text-red-500'>
+                        {email.length > 0 && !emailPattern.test(email) ? (
+                          <small className="text-red-500">
                             Invalid email address
                           </small>
                         ) : (
-                          ''
+                          ""
                         )}
                       </div>
 
@@ -208,21 +208,21 @@ function EnquiryPopup({ open, setOpen, title }) {
                           value={phone}
                           onChange={(e) =>
                             setPhone(
-                              e.target.value.replace(/[^1-9 ]/g, '') &&
-                                e.target.value.replace(/ /g, '')
+                              e.target.value.replace(/[^1-9 ]/g, "") &&
+                                e.target.value.replace(/ /g, "")
                             )
                           }
                         />
                         {phone.length > 0 && phone.length < 10 ? (
-                          <small className='text-red-500'>
+                          <small className="text-red-500">
                             Phone number must be 10 digits
                           </small>
                         ) : !pattern.test(phone) && phone.length === 10 ? (
-                          <small className='text-red-500'>
+                          <small className="text-red-500">
                             Phone number is invalid
                           </small>
                         ) : (
-                          ''
+                          ""
                         )}
                       </div>
 
@@ -238,16 +238,20 @@ function EnquiryPopup({ open, setOpen, title }) {
                           className="block w-full py-3 px-3 border-b border-black   shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 text-gray-600"
                         >
                           <option value="" disabled selected>
-                            Select Model
+                            Select Showroom
                           </option>
-                          <option value="INVICTO">Invicto</option>
-                          <option value="Fronx">Fronx</option>
-                          <option value="Jimny">Jimny</option>
-                          <option value="Grand Vitara">Grand Vitara</option>
-                          <option value="Ciaz">Ciaz</option>
-                          <option value="Baleno">Baleno</option>
-                          <option value="Ignis">Ignis</option>
-                          <option value="XL6">XL6</option>
+                          <option value="Showroom Visit Jubilee">
+                            Nexa Jubilee
+                          </option>
+                          <option value="Showroom Visit Lumbini">
+                            Nexa Lumbini
+                          </option>
+                          <option value="Showroom Visit Hafeezpet">
+                            Nexa Hafeezpet
+                          </option>
+                          <option value="Showroom Visit Kompally">
+                            Nexa Kompally
+                          </option>
                         </select>
                       </div>
 
@@ -264,7 +268,11 @@ function EnquiryPopup({ open, setOpen, title }) {
                           className="w-1/2 inline-flex justify-center items-center border border-transparent shadow-sm  py-2.5 bg-black text-base  text-white hover:bg-white hover:border hover:border-black hover:text-black duration-300 sm:text-sm rounded-md "
                         >
                           {loader ? (
-                            <div className={`flex items-center justify-center ${loader && "cursor-wait"} `}>
+                            <div
+                              className={`flex items-center justify-center ${
+                                loader && "cursor-wait"
+                              } `}
+                            >
                               SUBMITTING
                             </div>
                           ) : (
@@ -289,4 +297,5 @@ function EnquiryPopup({ open, setOpen, title }) {
   );
 }
 
-export default EnquiryPopup;
+export default ShowRoom;
+

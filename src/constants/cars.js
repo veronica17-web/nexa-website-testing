@@ -138,6 +138,111 @@ export const xl6 = {
     },
   ],
 };
+export const fronx = {
+  engine: [
+    {
+      specs: "Engine Type",
+      data: "1.2L Dual Jet, Dual VVT",
+    },
+
+    {
+      specs: "Max Power",
+      data: "66 kW@6000rpm or 89.73 PS@6000rpm (Petrol) 57 kW@6000rpm*** or 77.5 Ps @6000 rpm (CNG)",
+    },
+    {
+      specs: "Max Torque (Nm@rpm)",
+      data: "113@4 400 (Petrol) 98.5@4 300 (CNG)***",
+    },
+    {
+      specs: "Fuel-Efficiency",
+      data: "28.51(MT) km/kg",
+    },
+    {
+      specs: "Fuel Tank Capacity (L)",
+      data: "Petrol: 37 CNG: 55L (Water Equivalent)",
+    },
+  ],
+  transmission: [
+    {
+      body: "Transmission",
+      data: "5 MT ",
+    },
+  ],
+  dimensions: [
+    {
+      body: "Length (mm)",
+      data: "3995",
+    },
+    {
+      body: "Width (mm)",
+      data: "1765",
+    },
+    {
+      body: "Height (unladen) (mm)",
+      data: "1550",
+    },
+    {
+      body: "WheelBase (mm)",
+      data: "2520",
+    },
+    {
+      body: "Boot Space (L)*",
+      data: "308",
+    },
+    {
+      body: "Turning Radius (m)",
+      data: "4.9",
+    },
+  ],
+  weight: [
+    {
+      body: "Kerb Weight (kg)",
+      data: "1050kg - 1060kg",
+    },
+    {
+      body: "Gross Vehicle Weight (kg)",
+      data: "1480",
+    },
+  ],
+  brakes: [
+    {
+      body: "Front Brakes",
+      data: "Disc",
+    },
+    {
+      body: "Rear Brakes",
+      data: "Drum",
+    },
+  ],
+  suspension: [
+    {
+      body: "Front Suspension",
+      data: "MacPherson Strut",
+    },
+    {
+      body: "Rear Suspension",
+      data: "Torsion Beam",
+    },
+  ],
+  tyre: [
+    {
+      body: "Tyre Size##",
+      data: "195/60 R16",
+    },
+  ],
+  fuel: [
+    {
+      body: "Fuel Tank Capacity (L)",
+      data: "45",
+    },
+  ],
+  seating: [
+    {
+      body: "Seating Capacity (L)",
+      data: "5",
+    },
+  ],
+};
 
 export const grand_vitara = {
   engine: [

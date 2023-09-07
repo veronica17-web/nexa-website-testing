@@ -28,6 +28,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Range from "./Range";
+import ShowRoom from "../../components/utils/ShowRoom";
+import TestDrive from "../../components/utils/TestDrive";
 
 function Home() {
   useEffect(() => {
@@ -416,9 +418,11 @@ export const CarEnq = ({ title }) => {
 
 const Navigate = () => {
   const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
   const [phone, setPhone] = useState("");
   return (
-    <div className="container px-5 mx-auto lg:pt-4 md:px-3 lg:px-0 uppercase border py-2 mb-10 mt-16 justify-between items-start text-center hidden md:flex cursor-pointer">
+    <div className="container px-5 mx-auto lg:pt-4 md:px-3 lg:px-0 uppercase border py-2 mb-10 mt-16 justify-between items-start text-center hidden md:flex cursor-pointer shadow-lg shadow-gray-400">
       <div className=" border-r w-1/5  py-4 hover:font-medium group">
         <Link to="/maruti-nexa-showroom-outlets-in-hyderabad">
           <div className="flex flex-col gap-2 justify-center items-center px-1">
@@ -435,7 +439,7 @@ const Navigate = () => {
 
       <div
         className="border-r w-1/5  py-4 hover:font-medium group"
-        onClick={() => setOpen(true)}
+        onClick={() => setOpen3(true)}
       >
         <div className="flex flex-col gap-2 justify-center items-center px-1">
           <PiSteeringWheelThin className="text-3xl lg:text-4xl " />
@@ -444,7 +448,7 @@ const Navigate = () => {
       </div>
       <div
         className="border-r w-1/5  py-4 hover:font-medium group"
-        onClick={() => setOpen(true)}
+        onClick={() => setOpen2(true)}
       >
         <div className="flex flex-col gap-2 justify-center items-center px-1">
           <img
@@ -489,7 +493,21 @@ const Navigate = () => {
         setOpen={setOpen}
         phone={phone}
         setPhone={setPhone}
-        title={"Book Now"}
+        title={"Book A SERVICE"}
+      />
+      <ShowRoom
+        open={open2}
+        setOpen={setOpen2}
+        phone={phone}
+        setPhone={setPhone}
+        title={"Showroom Visit"}
+      />
+      <TestDrive
+        open={open3}
+        setOpen={setOpen3}
+        phone={phone}
+        setPhone={setPhone}
+        title={"Test Drive"}
       />
     </div>
   );
