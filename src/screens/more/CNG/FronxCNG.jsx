@@ -37,7 +37,7 @@ const FronxCNG = () => {
         />
         <meta
           name="keywords"
-          content="XL6 CNG on road price, XL6 CNG mileage, XL6 CNG offers & disconuts,XL6 CNG on road price, Maruti XL6 CNG offers, XL6 CNG mileage,Nexa XL6 CNG petrol price, Maruti XL6 CNG on road price, Maruti XL6 CNG variants, XL6 CNG images, XL6 CNG mileage, Nexa XL6 CNG price in hyderabad, Maruti XL6 CNG price in hyderabad, XL6 CNG price in hyderabad, XL6 CNG onroad price in hyderabad, offers on XL6 CNG, XL6 CNG offers 2022, new XL6 CNG price, new XL6 CNG price in hyderabad, new XL6 CNG 2022 price, new XL6 CNG 2022 onroad price, XL6 CNG petrol price in hyderabad, XL6 CNG 2022 petrol price in hyderabad"
+          content="Fronx CNG on road price, Fronx CNG mileage, Fronx CNG offers & disconuts,Fronx CNG on road price, Maruti Fronx CNG offers, Fronx CNG mileage,Nexa Fronx CNG petrol price, Maruti Fronx CNG on road price, Maruti Fronx CNG variants, Fronx CNG images, Fronx CNG mileage, Nexa Fronx CNG price in hyderabad, Maruti Fronx CNG price in hyderabad, Fronx CNG price in hyderabad, Fronx CNG onroad price in hyderabad, offers on Fronx CNG, Fronx CNG offers 2022, new Fronx CNG price, new Fronx CNG price in hyderabad, new Fronx CNG 2022 price, new Fronx CNG 2022 onroad price, Fronx CNG price in hyderabad, Fronx CNG 2022 petrol price in hyderabad"
         />
         <meta name="author" content="Broaddcast" />
         <meta property="og:type" content="website" />

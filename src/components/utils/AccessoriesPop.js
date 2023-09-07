@@ -245,10 +245,13 @@ function AccessoriesPop({ open, setOpen, item }) {
                           className="block w-full text-sm py-3 px-3 border-b border-black   shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 text-gray-600"
                         >
                           <option value="" disabled selected>
-                            Select product
+                           Category
                           </option>
-                          <option value={item.value} >
+                          {/* <option value={item.value} >
                             {item.item}
+                          </option> */}
+                          <option value="Accessories" >
+                           Accessories
                           </option>
                         </select>
                       </div>
