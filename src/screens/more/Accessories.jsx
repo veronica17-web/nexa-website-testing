@@ -103,17 +103,18 @@ function Accessories() {
               className="relative flex flex-col justify-between overflow-hidden border border-gray-200 shadow-lg shadow-gray-200 hover:shadow-gray-300 rounded-lg hover:scale-105 duration-200"
               key={i}
             >
-              <div className="flex items-center justify-between p-4 rounded overflow-hidden">
+              <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
                 <img
                   src={item.img}
                   className="w-full rounded-lg "
                   alt={item.name}
                 />
+                 {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-wrap justify-between items-center gap-2  m-4 ">
                   <div className="text-xl">
-                    <span className="text-red-600">{i + 1}.</span> {item.item}
+                    {item.item}
                   </div>
                   <div className="text-sm">{item.code}</div>
                 </div>
@@ -143,20 +144,21 @@ function Accessories() {
         >
           {categoriess[1].data.map((item, i) => (
             <div
-              className="relative flex flex-col justify-between overflow-hidden border border-gray-200 shadow-lg shadow-gray-200 hover:shadow-gray-300 rounded-lg hover:scale-105 duration-200"
+              className="relative flex flex-col justify-between overflow-hidden border border-gray-200 shadow-lg shadow-gray-200 hover:shadow-gray-300 rounded-lg hover:scale-105 duration-200 "
               key={i}
             >
-              <div className="flex items-center justify-between p-4 rounded overflow-hidden">
+              <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
                 <img
                   src={item.img}
                   className="w-full rounded-lg "
                   alt={item.name}
                 />
+                 {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-wrap justify-between items-center gap-2  m-4 ">
                   <div className="text-xl">
-                    <span className="text-red-600">{i + 1}.</span> {item.item}
+                    {item.item}
                   </div>
                   <div className="text-sm">{item.code}</div>
                 </div>
@@ -189,17 +191,18 @@ function Accessories() {
               className="relative flex flex-col justify-between overflow-hidden border border-gray-200 shadow-lg shadow-gray-200 hover:shadow-gray-300 rounded-lg hover:scale-105 duration-200"
               key={i}
             >
-              <div className="flex items-center justify-between p-4 rounded overflow-hidden">
+              <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
                 <img
                   src={item.img}
                   className="w-full rounded-lg "
                   alt={item.name}
                 />
+                 {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-wrap justify-between items-center gap-2  m-4 ">
                   <div className="text-xl">
-                    <span className="text-red-600">{i + 1}.</span> {item.item}
+                    {item.item}
                   </div>
                   <div className="text-sm">{item.code}</div>
                 </div>
@@ -232,17 +235,18 @@ function Accessories() {
               className="relative flex flex-col justify-between overflow-hidden border border-gray-200 shadow-lg shadow-gray-200 hover:shadow-gray-300 rounded-lg hover:scale-105 duration-200"
               key={i}
             >
-              <div className="flex items-center justify-between p-4 rounded overflow-hidden">
+              <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
                 <img
                   src={item.img}
                   className="w-full rounded-lg "
                   alt={item.name}
                 />
+                 {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-wrap justify-between items-center gap-2  m-4 ">
                   <div className="text-xl">
-                    <span className="text-red-600">{i + 1}.</span> {item.item}
+                    {item.item}
                   </div>
                   <div className="text-sm">{item.code}</div>
                 </div>
@@ -275,17 +279,18 @@ function Accessories() {
               className="relative flex flex-col justify-between overflow-hidden border border-gray-200 shadow-lg shadow-gray-200 hover:shadow-gray-300 rounded-lg hover:scale-105 duration-200"
               key={i}
             >
-              <div className="flex items-center justify-between p-4 rounded overflow-hidden">
+             <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
                 <img
                   src={item.img}
                   className="w-full rounded-lg "
                   alt={item.name}
                 />
+                 {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-wrap justify-between items-center gap-2  m-4 ">
                   <div className="text-xl">
-                    <span className="text-red-600">{i + 1}.</span> {item.item}
+                    {item.item}
                   </div>
                   <div className="text-sm">{item.code}</div>
                 </div>
@@ -318,17 +323,18 @@ function Accessories() {
               className="relative flex flex-col justify-between overflow-hidden border border-gray-200 shadow-lg shadow-gray-200 hover:shadow-gray-300 rounded-lg hover:scale-105 duration-200"
               key={i}
             >
-              <div className="flex items-center justify-between p-4 rounded overflow-hidden">
+              <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
                 <img
                   src={item.img}
                   className="w-full rounded-lg "
                   alt={item.name}
                 />
+                 {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-wrap justify-between items-center gap-2  m-4 ">
                   <div className="text-xl">
-                    <span className="text-red-600">{i + 1}.</span> {item.item}
+                    {item.item}
                   </div>
                   <div className="text-sm">{item.code}</div>
                 </div>

@@ -132,10 +132,10 @@ const navigation = {
       to: "/cng",
     },
 
-    // {
-    //   name: "Careers",
-    //   to: "/",
-    // },
+    {
+      name: "Careers",
+      to: "/career",
+    },
     {
       name: "Testimonials",
       to: "/testimonials",
@@ -160,13 +160,13 @@ const navigation = {
       name: "Blog",
       to: "/maruti-nexa-latest-news",
     },
-    
   ],
   all: [
     { name: "About Us", to: "/about" },
     { name: "Accessories", to: "/accessories" },
     { name: "Awards", to: "/awards" },
     { name: "Blog", to: "/maruti-nexa-latest-news" },
+    { name: "Careers", to: "/career" },
     { name: "CNG", to: "/cng" },
     { name: "Compare", to: "/compare" },
     { name: "Contact", to: "/contact-us" },
@@ -420,7 +420,7 @@ function Header({ col }) {
                   <div key={page.name} className="flow-root px-2">
                     <Link
                       to={page.to}
-                      className="px-2 py-2 lg:py-3 block  hover:bg-black  hover:text-white rounded-md hover:px-4 duration-75"
+                      className="px-2 py-2 lg:py-2.5 block  hover:bg-black  hover:text-white rounded-md hover:px-4 duration-75"
                     >
                       {page.name}
                     </Link>

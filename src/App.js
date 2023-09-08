@@ -58,6 +58,7 @@ import Invicto from "./screens/cars/Invicto";
 import Service24x7 from "./screens/services/Service24x7";
 import CallButton from "./components/Footer/CallButton";
 import FronxCNG from "./screens/more/CNG/FronxCNG";
+import Career from "./screens/more/Career";
 
 axios.defaults.baseURL = "https://saboogroups.com/admin/api/";
 
@@ -499,6 +500,7 @@ function App() {
 
         {/* Contact */}
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/career" element={<Career />} />
         {/* PageNotFound */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>

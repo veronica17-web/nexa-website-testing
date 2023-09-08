@@ -1,0 +1,776 @@
+import React, { useState } from "react";
+import Header from "../../components/Header/Header";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import axios from "axios";
+import { Helmet } from "react-helmet";
+
+const SignupSchema = Yup.object().shape({
+  city: Yup.string().required("Information is required*"),
+  state: Yup.string().required("Information is required*"),
+  company: Yup.string().required("Information is required*"),
+  jobTitle: Yup.string().required("Information is required*"),
+  selectRole: Yup.string().required("Information is required*"),
+});
+
+// let state = [
+//   "Andaman and Nicobar Islands",
+//   "Andhra Pradesh",
+//   "Arunachal Pradesh",
+//   "Assam",
+//   "Bihar",
+//   "Chandigarh",
+//   "Chhattisgarh",
+//   "Dadra and Nagar Haveli",
+//   "Daman and Diu",
+//   "Delhi",
+//   "Goa",
+//   "Gujarat",
+//   "Haryana",
+//   "Himachal Pradesh",
+//   "Jammu and Kashmir",
+//   "Jharkhand",
+//   "Karnataka",
+//   "Kerala",
+//   "Lakshadweep",
+//   "Madhya Pradesh",
+//   "Maharashtra",
+//   "Manipur",
+//   "Meghalaya",
+//   "Mizoram",
+//   "Nagaland",
+//   "Odisha",
+//   "Puducherry",
+//   "Punjab",
+//   "Rajasthan",
+//   "Sikkim",
+//   "Tamil Nadu",
+//   "Telangana",
+//   "Tripura",
+//   "Uttar Pradesh",
+//   "Uttarakhand",
+//   "West Bengal",
+// ];
+
+const Career = ({ formValue }) => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  return (
+    <>
+     <Helmet>
+        <title>Explore job vacancies in SabooRks in Hyderabad</title>
+        <meta
+          name='title'
+          content='Maruti Suzuki Terms and Conditions | Saboo Nexa'
+        />
+        <meta
+          name='description'
+          content='Are you looking to build a rewarding and fulfilling career? [Saboo RKS] offers exciting opportunities for individuals who are passionate, motivated, and eager to grow with us. Join our team and embark on a journey where your skills and aspirations are valued, and where you can make a meaningful impact.'
+        />
+        {/* <meta
+          name="keywords"
+          content="Nexa Ciaz car price, Offers on Nexa Ciaz, Maruti Ciaz mileage, Ciaz Specifications, Nexa ciaz petrol price, Maruti ciaz on road price, Maruti ciaz variants, ciaz images, ciaz mileage, Nexa ciaz price in hyderabad, Maruti ciaz price in hyderabad, ciaz price in hyderabad, ciaz onroad price in hyderabad, offers on ciaz, ciaz offers 2022, new ciaz price, new ciaz price in hyderabad, new ciaz 2022 price, new ciaz 2022 onroad price, ciaz petrol price in hyderabad, ciaz 2022 petrol price in hyderabad"
+        />
+        <meta name="author" content="Broaddcast" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.saboonexa.in/the-new-maruti-ciaz/"
+        />
+        <meta
+          property="og:title"
+          content="Nexa Ciaz Car on Road Price & Offers in Hyderabad| Saboo Nexa"
+        />
+        <meta
+          property="og:description"
+          content="Nexa Ciaz 2022 car price starts at 8.87 lakh, mileage of 26.8 km/l. Get Nexa Ciaz specifications & features. Best offers on Ciaz car, low EMI, low down-payment. Call now 9848898488"
+        />
+        <meta
+          property="og:image"
+          content="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/Ciaz.jpg"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://www.saboonexa.in/the-new-maruti-ciaz/"
+        />
+        <meta
+          property="twitter:title"
+          content="Nexa Ciaz Car on Road Price & Offers in Hyderabad| Saboo Nexa"
+        />
+        <meta
+          property="twitter:description"
+          content="Nexa Ciaz 2022 car price starts at 8.87 lakh, mileage of 26.8 km/l. Get Nexa Ciaz specifications & features. Best offers on Ciaz car, low EMI, low down-payment. Call now 9848898488"
+        />
+        <meta
+          property="twitter:image"
+          content="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/Ciaz.jpg"
+        /> */}
+      </Helmet>
+      <Header />
+      <div className="bg-[#15151e] pt-24 pb-10 text-center text-white uppercase text-2xl sm:text-3xl md:text-4xl font-medium">
+        APPLY FOR JOB
+      </div>
+
+      <div className={` my-2 mx-auto container `}>
+        <Formik
+          initialValues={{
+            selectRole: "",
+            company: "",
+            jobTitle: "",
+            state: "",
+            city: "",
+          }}
+          validationSchema={SignupSchema}
+          onSubmit={(values, { setSubmitting }) => {
+            setLoading(true);
+            values = { ...values, ...formValue };
+            console.log(values);
+            axios
+              .post(
+                "https://procuren-backend.onrender.com/register33333",
+                values
+              )
+              // .post('http://localhost:3001/register', values)
+              .then((response) => {
+                if (response.data.status === true) {
+                  setLoading(false);
+                  // alert('Successfully signup');
+                  // history('/otpsign');
+                } else {
+                  setError(error.message);
+                  setLoading(false);
+                }
+                setSubmitting(false);
+              })
+              .catch((error) => {
+                setError(error.message);
+                setLoading(false);
+                alert(`${error.response.data.message}`);
+                setSubmitting(false);
+              });
+          }}
+        >
+          {({ isSubmitting }) => (
+            <Form className="  rounded-3xl    bg-white p-6  text-center  ">
+              {/* <div className='flex justify-center'>
+              <Link to='/'>
+                <img src={logo} alt='logo' className='mx-auto mb-8   h-20' />
+              </Link>
+            </div> */}
+              <div className="grid md:grid-cols-2 gap-1 md:gap-x-6">
+                <div className="mb-2  md:col-span-2 text-left text-xl">
+                  Biographical
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Salutation </div>
+
+                    <ErrorMessage
+                      name="selectRole"
+                      component="div"
+                      className=" -mt-5 text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    as="select"
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    name="selectRole"
+                    id="selectRole"
+                  >
+                    <option
+                      value=""
+                      className="text-sm text-gray-500"
+                      disabled
+                    ></option>
+                    <option value="Mr">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                  </Field>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">First Name* </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Last Name* </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className="  text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Email* </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className="  text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Country Code* </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className="  text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Phone* </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className="  text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+
+                <div className="mb-2 mt-4 md:col-span-2 text-left text-xl">
+                  Current Address
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">
+                      Current Flat/House/Wing/Number
+                    </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className="  text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">
+                      Current Street/Locality/Area{" "}
+                    </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className="  text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Current Landmark </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className="  text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Current Pincode </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className="  text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Current City </div>
+                    <ErrorMessage
+                      name="selectRole"
+                      component="div"
+                      className=" -mt-5 text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    as="select"
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    name="selectRole"
+                    id="selectRole"
+                  >
+                    <option
+                      value=""
+                      className="text-sm text-gray-500"
+                      disabled
+                    ></option>
+                    <option value="Mr">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                  </Field>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Current State </div>
+                    <ErrorMessage
+                      name="selectRole"
+                      component="div"
+                      className=" -mt-5 text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    as="select"
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    name="selectRole"
+                    id="selectRole"
+                  >
+                    <option
+                      value=""
+                      className="text-sm text-gray-500"
+                      disabled
+                    ></option>
+                    <option value="Mr">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                  </Field>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Current Country </div>
+                    <ErrorMessage
+                      name="selectRole"
+                      component="div"
+                      className=" -mt-5 text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    as="select"
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    name="selectRole"
+                    id="selectRole"
+                  >
+                    <option
+                      value=""
+                      className="text-sm text-gray-500"
+                      disabled
+                    ></option>
+                    <option value="Mr">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                  </Field>
+                </div>
+
+                <div className="mb-2 mt-4 md:col-span-2 text-left text-xl">
+                  Work Experince
+                </div>
+
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Company</div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Job Title</div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Job Location</div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">From Date</div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="date"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div className="md:col-span-2">
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600">Job Summary</div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    as="textarea"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div className="mb-2 md:col-span-2 mt-4 text-left text-xl">
+                  Job Application Fields
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600 text-left">
+                      Do you have a higher education/master’s degree (like MBA,
+                      MTech, MS, etc.)?
+                    </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    as="select"
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    name="selectRole"
+                    id="selectRole"
+                  >
+                    <option value="" className="text-sm text-gray-200" disabled>
+                      Please Select
+                    </option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </Field>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600 text-left">
+                      If you're employed, since how long (no. of months) have
+                      you been working in your current organization? Mention
+                      zero ("0") if you're a fresher.
+                    </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600 text-left">
+                      What was your field of education/bachelor's/master's
+                      degree?
+                    </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    as="select"
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    name="selectRole"
+                    id="selectRole"
+                  >
+                    <option value="" className="text-sm text-gray-200" disabled>
+                      Please Select
+                    </option>
+                    <option value="Engineering/Science">
+                      Engineering/Science
+                    </option>
+                    <option value="Business/Commerce">Business/Commerce</option>
+                    <option value="Economics/Mathematics">
+                      Economics/Mathematics
+                    </option>
+                  </Field>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600 text-left">
+                      If given an offer, how soon can you join ?
+                    </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="date"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600 text-left">
+                      If you have work experience (incl. internships) which of
+                      the following areas have you worked in? You can select
+                      more than one option.
+                    </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    as="select"
+                    className="mb-4 w-full rounded-lg border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    name="selectRole"
+                    id="selectRole"
+                    isMulti={true} // Add the 'multiple' attribute here
+                  >
+                    <option
+                      value=""
+                      className="text-sm text-gray-500"
+                      disabled
+                    ></option>
+                    <option value="Mr">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                  </Field>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600 text-left">
+                      When did you complete your last education degree
+                      (Bachelor's/Master's) or when do you expect to complete it
+                      if you're still a student?
+                    </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="date"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+                <div className="mb-2 mt-4 md:col-span-2 text-left text-xl">
+                  Resume
+                </div>
+                <div className=" ">
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600 text-sm">
+                      (PDF only, max 1MB)
+                    </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    type="file"
+                    className="mb-1 block w-full border rounded-lg px-2 py-1 text-lg leading-relaxed text-slate-500 file:mr-4 file:rounded-full  file:border-0  file:bg-violet-50 file:px-4 file:py-2 file:text-sm file:font-medium file:text-black hover:file:bg-violet-100 focus:border-black  "
+                    name="resume" // Provide a valid name for the file input
+                    id="resume" // Provide a valid ID for the file input
+                    placeholder="Resume"
+                    required
+                    accept=".pdf" // Allow only PDF files
+                    onChange={(event) => {
+                      const selectedFile = event.target.files[0];
+                      const fileSize = selectedFile.size / 1024; // Size in KB
+
+                      if (selectedFile && fileSize <= 1024) {
+                        // Valid file size (1MB or less)
+                        // You can also handle the file here, e.g., store it in state or display a message.
+                      } else {
+                        // File size exceeds 1MB or invalid file type
+                        event.target.value = ""; // Clear the file input
+                        // Display an error message or take appropriate action.
+                      }
+                    }}
+                  />
+                 
+                </div>
+                <div className="mb-6">
+                  <div className="flex justify-between mb-1 items-center">
+                    <div className="text-gray-600 text-left">
+                    Upload resume in your google drive and paste link below <br /><span className="text-xs text-red-500">Note: Update pdf document share setting from Restricted to anyone with the link in google drive </span>
+                    </div>
+                    <ErrorMessage
+                      name="company"
+                      component="div"
+                      className=" text-right text-sm text-red-700"
+                    />
+                  </div>
+                  <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="company"
+                    id="company"
+                    // placeholder="Company Name"
+                  />
+                </div>
+              </div>
+              <button
+                className="col-span-3 mb-6 mt-1 w-min rounded-md bg-black  px-6 py-2 font-sans text-lg font-semibold tracking-wide text-white whitespace-nowrap "
+                type="submit"
+                disabled={isSubmitting}
+              >
+                {loading ? "SUBMITTING" : "SUBMIT APPLICATION"}
+              </button>
+
+              {/* <Link to="/login">
+                Already have an account -{" "}
+                <span to="/signup" className="font-medium text-[#5c67f5]">
+                  Sign in
+                </span>
+              </Link>
+
+              <div className="-mb-3 mt-4 text-[12px] ">
+                © 2023 ProcureN. All rights reserved{" "}
+              </div> */}
+            </Form>
+          )}
+        </Formik>
+      </div>
+    </>
+  );
+};
+
+export default Career;

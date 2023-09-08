@@ -134,7 +134,7 @@ const navigation = {
 
     {
       name: 'Careers',
-      to: '/',
+      to: '/career',
     },
     {
       name: 'Testimonials',
