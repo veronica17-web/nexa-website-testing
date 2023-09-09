@@ -4,12 +4,16 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { Helmet } from "react-helmet";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const phoneRegex = /^(\+91-|\+91|0)?\d{10}$/;
 // const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,16}$/;
 const emailReg = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 // const pincodeReg = /^[1-9]{1}[0-9]{2}\\s{0, 1}[0-9]{3}$/
 const countryCodeReg = /^(\+?\d{1,3}|\d{1,4})$/
+
+
 
 const SignupSchema = Yup.object().shape({
   salutation: Yup.string().required("Information is required*"),
@@ -87,6 +91,50 @@ const SignupSchema = Yup.object().shape({
 const Career = ({ formValue }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const initialValues =  {
+    salutation: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    countryCode: "",
+    phone: "",
+    flat: "",
+    street: "",
+    landmark: "",
+    pincode: "",
+    city: "",
+    state: "",
+    country: "",
+    company: "",
+    jobTitle: "",
+    jobLocation: "",
+    fromDate: "",
+    jobSummary: "",
+    appField1: "",
+    appField2: "",
+    appField3: "",
+    appField4: "",
+    appField5: "",
+    appField6: "",
+    // resume: "",
+    resumeLink: "",
+  }
+
+  const notify = () =>
+  toast.success(
+    'Form submitted successfully.',
+    {
+      position: 'top-right',
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+    }
+  );
+
   return (
     <>
       <Helmet>
@@ -146,42 +194,15 @@ const Career = ({ formValue }) => {
 
       <div className={` my-2 mx-auto container `}>
         <Formik
-          initialValues={{
-            salutation: "",
-            firstName: "",
-            lastName: "",
-            email: "",
-            countryCode: "",
-            phone: "",
-            flat: "",
-            street: "",
-            landmark: "",
-            pincode: "",
-            city: "",
-            state: "",
-            country: "",
-            company: "",
-            jobTitle: "",
-            jobLocation: "",
-            fromDate: "",
-            jobSummary: "",
-            appField1: "",
-            appField2: "",
-            appField3: "",
-            appField4: "",
-            appField5: "",
-            appField6: "",
-            // resume: "",
-            resumeLink: "",
-          }}
+          initialValues={initialValues}
           validationSchema={SignupSchema}
-          onSubmit={(values, { setSubmitting }) => {
+          onSubmit={(values, { setSubmitting,resetForm }) => {
             setLoading(true);
             values = { ...values, ...formValue };
             console.log(values);
             axios
               .post(
-                "https://procuren-backend.onrender.com",
+                "https://saboo-careers.onrender.com/careers",
                 values
               )
               // .post('http://localhost:3001/register', values)
@@ -190,6 +211,8 @@ const Career = ({ formValue }) => {
                   setLoading(false);
                   // alert('Successfully signup');
                   // history('/otpsign');
+                  resetForm({ values: initialValues });
+                  notify()
                 } else {
                   setError(error.message);
                   setLoading(false);
@@ -211,8 +234,8 @@ const Career = ({ formValue }) => {
                 <img src={logo} alt='logo' className='mx-auto mb-8   h-20' />
               </Link>
             </div> */}
-              <div className="grid md:grid-cols-2 gap-1 md:gap-x-6">
-                <div className="mb-2  md:col-span-2 text-left text-xl">
+              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-1 md:gap-x-6">
+                <div className="mb-2  md:col-span-2 xl:col-span-3 text-left text-xl">
                   Biographical
                 </div>
                 <div>
@@ -334,7 +357,7 @@ const Career = ({ formValue }) => {
                   />
                 </div>
 
-                <div className="mb-2 mt-4 md:col-span-2 text-left text-xl">
+                <div className="mb-2 mt-4 md:col-span-2 xl:col-span-3 text-left text-xl">
                   Current Address
                 </div>
                 <div>
@@ -468,7 +491,7 @@ const Career = ({ formValue }) => {
                   />
                 </div>
 
-                <div className="mb-2 mt-4 md:col-span-2 text-left text-xl">
+                <div className="mb-2 mt-4 md:col-span-2 xl:col-span-3 text-left text-xl">
                   Work Experince
                 </div>
 
@@ -544,7 +567,7 @@ const Career = ({ formValue }) => {
                     // placeholder="Company Name"
                   />
                 </div>
-                <div className="md:col-span-2">
+                <div className="md:col-span-2 xl:col-span-3">
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">Job Summary</div>
                     <ErrorMessage
@@ -562,7 +585,7 @@ const Career = ({ formValue }) => {
                     // placeholder="Company Name"
                   />
                 </div>
-                <div className="mb-2 md:col-span-2 mt-4 text-left text-xl">
+                <div className="mb-2 md:col-span-2 xl:col-span-3 mt-4 text-left text-xl">
                   Job Application Fields
                 </div>
                 <div>
@@ -668,8 +691,7 @@ const Career = ({ formValue }) => {
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600 text-left">
                       If you have work experience (incl. internships) which of
-                      the following areas have you worked in? You can select
-                      more than one option.
+                      the  areas have you worked in? (eg. engineering, Finance, Market Research, Sales and Marketing, other)
                     </div>
                     <ErrorMessage
                       name="appField5"
@@ -677,7 +699,7 @@ const Career = ({ formValue }) => {
                       className=" text-right text-sm text-red-700"
                     />
                   </div>
-                  <Field
+                  {/* <Field
                     required
                     as="select"
                     className="mb-4 w-full rounded-lg border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
@@ -693,7 +715,15 @@ const Career = ({ formValue }) => {
                     <option value="Mr">Mr.</option>
                     <option value="Mrs.">Mrs.</option>
                     <option value="Ms.">Ms.</option>
-                  </Field>
+                  </Field> */}
+                   <Field
+                    required
+                    className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                    type="text"
+                    name="appField5"
+                    id="appField5"
+                    // placeholder="Company Name"
+                  />
                 </div>
                 <div>
                   <div className="flex justify-between mb-1 items-center">
@@ -717,7 +747,7 @@ const Career = ({ formValue }) => {
                     // placeholder="Company Name"
                   />
                 </div>
-                <div className="mb-2 mt-4 md:col-span-2 text-left text-xl">
+                <div className="mb-2 mt-4 md:col-span-2 xl:col-span-3 text-left text-xl">
                   Resume
                 </div>
                 {/* <div className=" ">
@@ -783,7 +813,7 @@ const Career = ({ formValue }) => {
               <button
                 className="col-span-3 mb-6 mt-1 w-min rounded-md bg-black  px-6 py-2 font-sans text-lg font-semibold tracking-wide text-white whitespace-nowrap "
                 type="submit"
-                disabled={isSubmitting}
+                // disabled={isSubmitting}
               >
                 {loading ? "SUBMITTING" : "SUBMIT APPLICATION"}
               </button>
@@ -801,6 +831,7 @@ const Career = ({ formValue }) => {
             </Form>
           )}
         </Formik>
+        <ToastContainer />
       </div>
     </>
   );

@@ -59,6 +59,7 @@ import Service24x7 from "./screens/services/Service24x7";
 import CallButton from "./components/Footer/CallButton";
 import FronxCNG from "./screens/more/CNG/FronxCNG";
 import Career from "./screens/more/Career";
+import Dashboard from "./screens/more/Dashboard/Dashboard";
 
 axios.defaults.baseURL = "https://saboogroups.com/admin/api/";
 
@@ -69,7 +70,7 @@ function App() {
   const location = useLocation();
 
   const isAdminRoute =
-    location.pathname === "/maruti-suzuki-24/7-service-in-hyderabad";
+    (location.pathname === "/maruti-suzuki-24/7-service-in-hyderabad" || location.pathname === "/dashboard" )
 
   useEffect(() => {
     const getIp = async () => {
@@ -501,6 +502,7 @@ function App() {
         {/* Contact */}
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/career" element={<Career />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         {/* PageNotFound */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>

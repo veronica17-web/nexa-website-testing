@@ -1,0 +1,230 @@
+import React, { useEffect, useState } from "react";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import { Box } from "@mui/material";
+import axios from "axios";
+import ExcelData from "./ExcelData";
+import { AiOutlineDownload } from "react-icons/ai";
+import * as XLSX from 'xlsx';
+
+const TodayApp = () => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        // const token = localStorage.getItem("token");
+        // if (!token) {
+        //   window.location.href = "/login";
+        //   return;
+        // }
+        setLoading(true);
+        const res = await axios.get(
+          "https://saboo-careers.onrender.com/getCareers"
+        );
+        // const res = await axios.get(
+        //   'https://saboo-careers.onrender.com/getCareers', {
+        //     headers: { Authorization: `Bearer ${token}` },
+        //   }
+        // );
+
+        setData(res.data.data);
+
+        setLoading(false);
+      } catch (err) {
+        setError(err);
+        setLoading(false);
+      }
+    }
+    fetchData();
+  }, []);
+
+  const columns = [
+    { field: "no", headerName: "Sr. No.", width: "60", sortable: false },
+
+    { field: "firstName", headerName: "first Name" },
+    { field: "lastName", headerName: "Last Name" },
+    {
+      field: "email",
+      headerName: "Email",
+      // width: '300',
+      // flex: 1.5,
+      flex: 1,
+    },
+    { field: "phone", headerName: "Phone", width: "120" },
+    { field: "jobTitle", headerName: "Job", flex: 1 },
+    { field: "company", headerName: "Company", flex: 1 },
+    { field: "resumeLink", headerName: "resume", flex: 1 ,renderCell: (params) => (
+        <a href={params.value} target="_blank" rel="noopener noreferrer">
+          {params.value}
+        </a>
+      ),},
+
+    // { field: "selectRole", headerName: "Role" },
+
+    // {
+    //   field: 'status',
+    //   headerName: 'Status',
+    //   renderCell: (params) => (
+    //     <Select
+    //       value={params.row.status}
+    //       onChange={(e) => handleStatusChange(params.row, e.target.value)}
+    //       style={{
+    //         backgroundColor:
+    //           params.row.status === 'Pending'
+    //             ? '#f5d889'
+    //             : params.row.status === 'Approved'
+    //             ? '#8db598'
+    //             : '#eb8888',
+    //         // color: 'black',
+    //         fontSize: '0.7rem',
+    //         width: '5.5rem',
+    //         height: '2rem',
+    //         marginLeft: '-.25rem',
+    //         // marginTop: '10px',
+    //         // marginBottom: '10px',
+    //         // border:"0px"
+    //       }}
+    //     >
+    //       {statusOptions.map((option) => (
+    //         <MenuItem key={option} value={option}>
+    //           {option}
+    //         </MenuItem>
+    //       ))}
+    //     </Select>
+    //   ),
+    // },
+
+    {
+      field: "Download",
+      flex: 0.5,
+      headerName: "Download",
+      sortable: false,
+      renderCell: (params) => (
+        <button
+          onClick={() => handleDownload(params.row)}
+          className="flex justify-center"
+        >
+          <AiOutlineDownload className="text-lg mx-auto w-full" />
+        </button>
+      ),
+    },
+  ];
+
+  const handleDownload = (row) => {
+    const data2 = [row]
+    const excel = async () => {
+   
+        const date = new Date();
+        try {
+          // const response = await axios.get('/api/data'); // replace with your MongoDB API endpoint
+          // const data = response.data;
+          const workbook = XLSX.utils.book_new();
+          const sheet = XLSX.utils.json_to_sheet(data2);
+          XLSX.utils.book_append_sheet(workbook, sheet, 'Data');
+          XLSX.writeFile(workbook, `${row.firstName}~${date}.xlsx`);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+   excel()
+  
+   
+  };
+
+  const rows = data.map((item, index) => ({
+    id: item._id,
+    no: index + 1,
+    ...item,
+  }));
+
+  return (
+    <div>
+      <div className="my-2 flex  h-14 justify-between overflow-hidden rounded-md bg-gray-100 shadow-lg shadow-gray-400  md:mr-4">
+        <div className="mx-auto my-auto  pr-1 text-center  font-sans text-xl  uppercase">
+          APPLICATIONS
+        </div>
+        {data.length > 0 && (
+          <div className="hidden items-center pr-2 md:visible md:flex">
+            {/* <BiRefresh
+        className='mr-3 cursor-pointer text-4xl text-[#5c67f5] duration-500 hover:rotate-180'
+        onClick={() => setSub(true)}
+      /> */}
+            {/* <button
+        onClick={handleOpen}
+        className='mx-2 rounded bg-gradient-to-tr  from-[#5c67f5] to-[#cb67ac] px-3 py-1  text-white'
+      >
+        Add Order
+      </button> */}
+
+            <ExcelData data={data} fileName="Total Application" />
+            {/* <PdfData fileName='Homepage Enquiries' bdy={bdy} wid={widths} /> */}
+          </div>
+        )}
+      </div>
+      <div className=" overflow-hidden ">
+        <Box
+          m="0 20px 0 0"
+          height="90vh"
+          sx={{
+            "& .MuiDataGrid-root": {
+              border: "none",
+            },
+            "& .MuiDataGrid-cell": {
+              border: "0.1px solid", // Add the border style for the cell
+              borderColor: "lightgray", // Set the color of the border
+              paddingBottom: "5px",
+              paddingTop: "5px",
+            },
+            "& .name-column--cell": {
+              // color: colors.greenAccent[300],
+            },
+            "& .MuiDataGrid-columnHeaders": {
+              // backgroundColor: colors.blueAccent[700],
+              background: "black",
+              borderBottom: "none",
+              color: "white",
+            },
+            "& .MuiDataGrid-virtualScroller": {
+              // backgroundColor: colors.primary[400],
+            },
+            "& .MuiDataGrid-footerContainer": {
+              // borderTop: '1 solid',
+              // backgroundColor: colors.blueAccent[700],
+            },
+            "& .MuiCheckbox-root": {
+              // color: `${colors.greenAccent[200]} !important`,
+            },
+          }}
+        >
+          {loading ? (
+            <div>Loading</div>
+          ) : error ? (
+            "Error ~ Something went wrong :)"
+          ) : (
+            <DataGrid
+              // checkboxSelection
+              getRowHeight={() => "auto"}
+              rows={rows}
+              columns={columns}
+              components={{
+                Toolbar: (props) => (
+                  <div
+                    className="custom-toolbar"
+                    style={{
+                      color: 'black', // Set the text color to black
+                    }}
+                  >
+                    <GridToolbar {...props} />
+                  </div>
+                ),
+              }}
+            />
+          )}
+        </Box>
+      </div>
+    </div>
+  );
+};
+
+export default TodayApp;
