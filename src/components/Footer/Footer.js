@@ -36,7 +36,7 @@ const navigation = {
   ],
   corporate: [
     { name: 'About', to: '/about' },
-    { name: 'Careers', to: '/career' },
+    // { name: 'Careers', to: '/career' },
     { name: 'Contact Us', to: '/contact-us' },
     { name: 'Book a service', to: '/book-online-maruti-nexa-car-service/' },
     { name: 'Terms and Conditions', to: '/terms-and-condition' },

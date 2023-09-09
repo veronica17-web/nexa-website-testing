@@ -106,7 +106,7 @@ function Accessories() {
               <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
                 <img
                   src={item.img}
-                  className="w-full rounded-lg "
+                  className="w-full h-full rounded-lg "
                   alt={item.name}
                 />
                  {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
@@ -150,7 +150,7 @@ function Accessories() {
               <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
                 <img
                   src={item.img}
-                  className="w-full rounded-lg "
+                  className="w-full h-full rounded-lg "
                   alt={item.name}
                 />
                  {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
@@ -194,7 +194,7 @@ function Accessories() {
               <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
                 <img
                   src={item.img}
-                  className="w-full rounded-lg "
+                  className="w-full h-full rounded-lg "
                   alt={item.name}
                 />
                  {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
@@ -238,7 +238,7 @@ function Accessories() {
               <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
                 <img
                   src={item.img}
-                  className="w-full rounded-lg "
+                  className="w-full h-full rounded-lg "
                   alt={item.name}
                 />
                  {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
@@ -282,7 +282,7 @@ function Accessories() {
              <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
                 <img
                   src={item.img}
-                  className="w-full rounded-lg "
+                  className="w-full h-full rounded-lg "
                   alt={item.name}
                 />
                  {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
@@ -326,7 +326,7 @@ function Accessories() {
               <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
                 <img
                   src={item.img}
-                  className="w-full rounded-lg "
+                  className="w-full h-full rounded-lg "
                   alt={item.name}
                 />
                  {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}

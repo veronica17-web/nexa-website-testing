@@ -5,12 +5,44 @@ import * as Yup from "yup";
 import axios from "axios";
 import { Helmet } from "react-helmet";
 
+const phoneRegex = /^(\+91-|\+91|0)?\d{10}$/;
+// const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,16}$/;
+const emailReg = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+// const pincodeReg = /^[1-9]{1}[0-9]{2}\\s{0, 1}[0-9]{3}$/
+const countryCodeReg = /^(\+?\d{1,3}|\d{1,4})$/
+
 const SignupSchema = Yup.object().shape({
+  salutation: Yup.string().required("Information is required*"),
+  firstName: Yup.string().required("Information is required*"),
+  lastName: Yup.string().required("Information is required*"),
+  email: Yup.string()
+    .email("Invalid email address")
+    .matches(emailReg, "mail is not valid")
+    .required("Information is required*"),
+  countryCode: Yup.string().required("Information is required*").matches(countryCodeReg, "country code is not valid"),
+  phone: Yup.string()
+    .matches(phoneRegex, "Invalid phone number")
+    .required("Information is required*"),
+  flat: Yup.string().required("Information is required*"),
+  street: Yup.string().required("Information is required*"),
+  landmark: Yup.string().required("Information is required*"),
+  pincode: Yup.string().required("Information is required*"),
   city: Yup.string().required("Information is required*"),
   state: Yup.string().required("Information is required*"),
+  country: Yup.string().required("Information is required*"),
   company: Yup.string().required("Information is required*"),
   jobTitle: Yup.string().required("Information is required*"),
-  selectRole: Yup.string().required("Information is required*"),
+  jobLocation: Yup.string().required("Information is required*"),
+  fromDate: Yup.string().required("Information is required*"),
+  jobSummary: Yup.string().required("Information is required*"),
+  appField1: Yup.string().required("Information is required*"),
+  appField2: Yup.string().required("Information is required*"),
+  appField3: Yup.string().required("Information is required*"),
+  appField4: Yup.string().required("Information is required*"),
+  appField5: Yup.string().required("Information is required*"),
+  appField6: Yup.string().required("Information is required*"),
+  // resume: Yup.string().required("Information is required*"),
+  resumeLink: Yup.string().required("Information is required*"),
 });
 
 // let state = [
@@ -57,15 +89,15 @@ const Career = ({ formValue }) => {
   const [error, setError] = useState(null);
   return (
     <>
-     <Helmet>
+      <Helmet>
         <title>Explore job vacancies in SabooRks in Hyderabad</title>
         <meta
-          name='title'
-          content='Maruti Suzuki Terms and Conditions | Saboo Nexa'
+          name="title"
+          content="Maruti Suzuki Terms and Conditions | Saboo Nexa"
         />
         <meta
-          name='description'
-          content='Are you looking to build a rewarding and fulfilling career? [Saboo RKS] offers exciting opportunities for individuals who are passionate, motivated, and eager to grow with us. Join our team and embark on a journey where your skills and aspirations are valued, and where you can make a meaningful impact.'
+          name="description"
+          content="Are you looking to build a rewarding and fulfilling career? [Saboo RKS] offers exciting opportunities for individuals who are passionate, motivated, and eager to grow with us. Join our team and embark on a journey where your skills and aspirations are valued, and where you can make a meaningful impact."
         />
         {/* <meta
           name="keywords"
@@ -109,17 +141,38 @@ const Career = ({ formValue }) => {
       </Helmet>
       <Header />
       <div className="bg-[#15151e] pt-24 pb-10 text-center text-white uppercase text-2xl sm:text-3xl md:text-4xl font-medium">
-        APPLY FOR JOB
+        Page in testing won't submit anywhere
       </div>
 
       <div className={` my-2 mx-auto container `}>
         <Formik
           initialValues={{
-            selectRole: "",
+            salutation: "",
+            firstName: "",
+            lastName: "",
+            email: "",
+            countryCode: "",
+            phone: "",
+            flat: "",
+            street: "",
+            landmark: "",
+            pincode: "",
+            city: "",
+            state: "",
+            country: "",
             company: "",
             jobTitle: "",
-            state: "",
-            city: "",
+            jobLocation: "",
+            fromDate: "",
+            jobSummary: "",
+            appField1: "",
+            appField2: "",
+            appField3: "",
+            appField4: "",
+            appField5: "",
+            appField6: "",
+            // resume: "",
+            resumeLink: "",
           }}
           validationSchema={SignupSchema}
           onSubmit={(values, { setSubmitting }) => {
@@ -128,7 +181,7 @@ const Career = ({ formValue }) => {
             console.log(values);
             axios
               .post(
-                "https://procuren-backend.onrender.com/register33333",
+                "https://procuren-backend.onrender.com",
                 values
               )
               // .post('http://localhost:3001/register', values)
@@ -167,7 +220,7 @@ const Career = ({ formValue }) => {
                     <div className="text-gray-600">Salutation </div>
 
                     <ErrorMessage
-                      name="selectRole"
+                      name="salutation"
                       component="div"
                       className=" -mt-5 text-right text-sm text-red-700"
                     />
@@ -176,8 +229,8 @@ const Career = ({ formValue }) => {
                     required
                     as="select"
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                    name="selectRole"
-                    id="selectRole"
+                    name="salutation"
+                    id="salutation"
                   >
                     <option
                       value=""
@@ -193,7 +246,7 @@ const Career = ({ formValue }) => {
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">First Name* </div>
                     <ErrorMessage
-                      name="company"
+                      name="firstName"
                       component="div"
                       className=" text-right text-sm text-red-700"
                     />
@@ -202,8 +255,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="text"
-                    name="company"
-                    id="company"
+                    name="firstName"
+                    id="firstName"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -211,7 +264,7 @@ const Career = ({ formValue }) => {
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">Last Name* </div>
                     <ErrorMessage
-                      name="company"
+                      name="lastName"
                       component="div"
                       className="  text-right text-sm text-red-700"
                     />
@@ -220,8 +273,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="text"
-                    name="company"
-                    id="company"
+                    name="lastName"
+                    id="lastName"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -229,7 +282,7 @@ const Career = ({ formValue }) => {
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">Email* </div>
                     <ErrorMessage
-                      name="company"
+                      name="email"
                       component="div"
                       className="  text-right text-sm text-red-700"
                     />
@@ -238,8 +291,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="text"
-                    name="company"
-                    id="company"
+                    name="email"
+                    id="email"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -247,7 +300,7 @@ const Career = ({ formValue }) => {
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">Country Code* </div>
                     <ErrorMessage
-                      name="company"
+                      name="countryCode"
                       component="div"
                       className="  text-right text-sm text-red-700"
                     />
@@ -256,8 +309,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="text"
-                    name="company"
-                    id="company"
+                    name="countryCode"
+                    id="countryCode"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -266,7 +319,7 @@ const Career = ({ formValue }) => {
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">Phone* </div>
                     <ErrorMessage
-                      name="company"
+                      name="phone"
                       component="div"
                       className="  text-right text-sm text-red-700"
                     />
@@ -275,8 +328,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="text"
-                    name="company"
-                    id="company"
+                    name="phone"
+                    id="phone"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -290,7 +343,7 @@ const Career = ({ formValue }) => {
                       Current Flat/House/Wing/Number
                     </div>
                     <ErrorMessage
-                      name="company"
+                      name="flat"
                       component="div"
                       className="  text-right text-sm text-red-700"
                     />
@@ -299,8 +352,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="text"
-                    name="company"
-                    id="company"
+                    name="flat"
+                    id="flat"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -310,7 +363,7 @@ const Career = ({ formValue }) => {
                       Current Street/Locality/Area{" "}
                     </div>
                     <ErrorMessage
-                      name="company"
+                      name="street"
                       component="div"
                       className="  text-right text-sm text-red-700"
                     />
@@ -319,8 +372,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="text"
-                    name="company"
-                    id="company"
+                    name="street"
+                    id="street"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -328,7 +381,7 @@ const Career = ({ formValue }) => {
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">Current Landmark </div>
                     <ErrorMessage
-                      name="company"
+                      name="landmark"
                       component="div"
                       className="  text-right text-sm text-red-700"
                     />
@@ -337,8 +390,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="text"
-                    name="company"
-                    id="company"
+                    name="landmark"
+                    id="landmark"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -346,7 +399,7 @@ const Career = ({ formValue }) => {
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">Current Pincode </div>
                     <ErrorMessage
-                      name="company"
+                      name="pincode"
                       component="div"
                       className="  text-right text-sm text-red-700"
                     />
@@ -355,8 +408,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="text"
-                    name="company"
-                    id="company"
+                    name="pincode"
+                    id="pincode"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -364,79 +417,55 @@ const Career = ({ formValue }) => {
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">Current City </div>
                     <ErrorMessage
-                      name="selectRole"
+                      name="city"
                       component="div"
                       className=" -mt-5 text-right text-sm text-red-700"
                     />
                   </div>
                   <Field
                     required
-                    as="select"
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                    name="selectRole"
-                    id="selectRole"
-                  >
-                    <option
-                      value=""
-                      className="text-sm text-gray-500"
-                      disabled
-                    ></option>
-                    <option value="Mr">Mr.</option>
-                    <option value="Mrs.">Mrs.</option>
-                    <option value="Ms.">Ms.</option>
-                  </Field>
+                    type="text"
+                    name="city"
+                    id="city"
+                    // placeholder="Company Name"
+                  />
                 </div>
                 <div>
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">Current State </div>
                     <ErrorMessage
-                      name="selectRole"
+                      name="state"
                       component="div"
                       className=" -mt-5 text-right text-sm text-red-700"
                     />
                   </div>
                   <Field
                     required
-                    as="select"
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                    name="selectRole"
-                    id="selectRole"
-                  >
-                    <option
-                      value=""
-                      className="text-sm text-gray-500"
-                      disabled
-                    ></option>
-                    <option value="Mr">Mr.</option>
-                    <option value="Mrs.">Mrs.</option>
-                    <option value="Ms.">Ms.</option>
-                  </Field>
+                    type="text"
+                    name="state"
+                    id="state"
+                    // placeholder="Company Name"
+                  />
                 </div>
                 <div>
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">Current Country </div>
                     <ErrorMessage
-                      name="selectRole"
+                      name="country"
                       component="div"
                       className=" -mt-5 text-right text-sm text-red-700"
                     />
                   </div>
                   <Field
                     required
-                    as="select"
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                    name="selectRole"
-                    id="selectRole"
-                  >
-                    <option
-                      value=""
-                      className="text-sm text-gray-500"
-                      disabled
-                    ></option>
-                    <option value="Mr">Mr.</option>
-                    <option value="Mrs.">Mrs.</option>
-                    <option value="Ms.">Ms.</option>
-                  </Field>
+                    type="text"
+                    name="country"
+                    id="country"
+                    // placeholder="Company Name"
+                  />
                 </div>
 
                 <div className="mb-2 mt-4 md:col-span-2 text-left text-xl">
@@ -465,7 +494,7 @@ const Career = ({ formValue }) => {
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">Job Title</div>
                     <ErrorMessage
-                      name="company"
+                      name="jobTitle"
                       component="div"
                       className=" text-right text-sm text-red-700"
                     />
@@ -474,8 +503,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="text"
-                    name="company"
-                    id="company"
+                    name="jobTitle"
+                    id="jobTitle"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -483,7 +512,7 @@ const Career = ({ formValue }) => {
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">Job Location</div>
                     <ErrorMessage
-                      name="company"
+                      name="jobLocation"
                       component="div"
                       className=" text-right text-sm text-red-700"
                     />
@@ -492,8 +521,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="text"
-                    name="company"
-                    id="company"
+                    name="jobLocation"
+                    id="jobLocation"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -501,7 +530,7 @@ const Career = ({ formValue }) => {
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">From Date</div>
                     <ErrorMessage
-                      name="company"
+                      name="fromDate"
                       component="div"
                       className=" text-right text-sm text-red-700"
                     />
@@ -510,8 +539,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="date"
-                    name="company"
-                    id="company"
+                    name="fromDate"
+                    id="fromDate"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -519,7 +548,7 @@ const Career = ({ formValue }) => {
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600">Job Summary</div>
                     <ErrorMessage
-                      name="company"
+                      name="jobSummary"
                       component="div"
                       className=" text-right text-sm text-red-700"
                     />
@@ -528,8 +557,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     as="textarea"
-                    name="company"
-                    id="company"
+                    name="jobSummary"
+                    id="jobSummary"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -543,7 +572,7 @@ const Career = ({ formValue }) => {
                       MTech, MS, etc.)?
                     </div>
                     <ErrorMessage
-                      name="company"
+                      name="appField1"
                       component="div"
                       className=" text-right text-sm text-red-700"
                     />
@@ -552,8 +581,8 @@ const Career = ({ formValue }) => {
                     required
                     as="select"
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                    name="selectRole"
-                    id="selectRole"
+                    name="appField1"
+                    id="appField1"
                   >
                     <option value="" className="text-sm text-gray-200" disabled>
                       Please Select
@@ -570,7 +599,7 @@ const Career = ({ formValue }) => {
                       zero ("0") if you're a fresher.
                     </div>
                     <ErrorMessage
-                      name="company"
+                      name="appField2"
                       component="div"
                       className=" text-right text-sm text-red-700"
                     />
@@ -579,8 +608,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="text"
-                    name="company"
-                    id="company"
+                    name="appField2"
+                    id="appField2"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -591,7 +620,7 @@ const Career = ({ formValue }) => {
                       degree?
                     </div>
                     <ErrorMessage
-                      name="company"
+                      name="appField3"
                       component="div"
                       className=" text-right text-sm text-red-700"
                     />
@@ -600,8 +629,8 @@ const Career = ({ formValue }) => {
                     required
                     as="select"
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                    name="selectRole"
-                    id="selectRole"
+                    name="appField3"
+                    id="appField3"
                   >
                     <option value="" className="text-sm text-gray-200" disabled>
                       Please Select
@@ -621,7 +650,7 @@ const Career = ({ formValue }) => {
                       If given an offer, how soon can you join ?
                     </div>
                     <ErrorMessage
-                      name="company"
+                      name="appField4"
                       component="div"
                       className=" text-right text-sm text-red-700"
                     />
@@ -630,8 +659,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="date"
-                    name="company"
-                    id="company"
+                    name="appField4"
+                    id="appField4"
                     // placeholder="Company Name"
                   />
                 </div>
@@ -643,7 +672,7 @@ const Career = ({ formValue }) => {
                       more than one option.
                     </div>
                     <ErrorMessage
-                      name="company"
+                      name="appField5"
                       component="div"
                       className=" text-right text-sm text-red-700"
                     />
@@ -652,8 +681,8 @@ const Career = ({ formValue }) => {
                     required
                     as="select"
                     className="mb-4 w-full rounded-lg border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                    name="selectRole"
-                    id="selectRole"
+                    name="appField5"
+                    id="appField5"
                     isMulti={true} // Add the 'multiple' attribute here
                   >
                     <option
@@ -674,7 +703,7 @@ const Career = ({ formValue }) => {
                       if you're still a student?
                     </div>
                     <ErrorMessage
-                      name="company"
+                      name="appField6"
                       component="div"
                       className=" text-right text-sm text-red-700"
                     />
@@ -683,21 +712,21 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="date"
-                    name="company"
-                    id="company"
+                    name="appField6"
+                    id="appField6"
                     // placeholder="Company Name"
                   />
                 </div>
                 <div className="mb-2 mt-4 md:col-span-2 text-left text-xl">
                   Resume
                 </div>
-                <div className=" ">
+                {/* <div className=" ">
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600 text-sm">
                       (PDF only, max 1MB)
                     </div>
                     <ErrorMessage
-                      name="company"
+                      name="resume"
                       component="div"
                       className=" text-right text-sm text-red-700"
                     />
@@ -724,15 +753,19 @@ const Career = ({ formValue }) => {
                       }
                     }}
                   />
-                 
-                </div>
+                </div> */}
                 <div className="mb-6">
                   <div className="flex justify-between mb-1 items-center">
                     <div className="text-gray-600 text-left">
-                    Upload resume in your google drive and paste link below <br /><span className="text-xs text-red-500">Note: Update pdf document share setting from Restricted to anyone with the link in google drive </span>
+                      Upload resume in your google drive and paste link below{" "}
+                      <br />
+                      <span className="text-xs text-red-500">
+                        Note: Update pdf document share setting from Restricted
+                        to anyone with the link in google drive{" "}
+                      </span>
                     </div>
                     <ErrorMessage
-                      name="company"
+                      name="resumeLink"
                       component="div"
                       className=" text-right text-sm text-red-700"
                     />
@@ -741,8 +774,8 @@ const Career = ({ formValue }) => {
                     required
                     className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                     type="text"
-                    name="company"
-                    id="company"
+                    name="resumeLink"
+                    id="resumeLink"
                     // placeholder="Company Name"
                   />
                 </div>
