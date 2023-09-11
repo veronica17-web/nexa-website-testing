@@ -132,10 +132,10 @@ const navigation = {
       to: "/cng",
     },
 
-    // {
-    //   name: "Careers",
-    //   to: "/career",
-    // },
+    {
+      name: "Careers",
+      to: "/career",
+    },
     {
       name: "Testimonials",
       to: "/testimonials",
@@ -166,7 +166,7 @@ const navigation = {
     { name: "Accessories", to: "/accessories" },
     { name: "Awards", to: "/awards" },
     { name: "Blog", to: "/maruti-nexa-latest-news" },
-    // { name: "Careers", to: "/career" },
+    { name: "Careers", to: "/career" },
     { name: "CNG", to: "/cng" },
     { name: "Compare", to: "/compare" },
     { name: "Contact", to: "/contact-us" },

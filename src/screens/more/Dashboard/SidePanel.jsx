@@ -74,7 +74,7 @@ const SidePanel = ({ open, setOpen, selectedItem, setSelectedItem, links }) => {
                         {items.subLinks.map((x, subIndex) => (
                           <li
                             key={subIndex}
-                            className={`text-md cursor-pointer group relative mx-2 mb-2 flex items-center rounded-xl py-2 xl:py-3 pl-2 pr-2 font-mono duration-75 lg:mb-4 ${
+                            className={`text-md cursor-pointer group relative mx-2 mb-2 flex items-center rounded-xl py-2 xl:py-3 px-8  font-mono duration-75 lg:mb-4 ${
                               selectedItem === x.name
                                 ? 'bg-black text-white   '
                                 : ' hover:bg-black hover:text-white'

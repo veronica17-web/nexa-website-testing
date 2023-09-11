@@ -132,10 +132,10 @@ const navigation = {
       to: '/cng',
     },
 
-    // {
-    //   name: 'Careers',
-    //   to: '/career',
-    // },
+    {
+      name: 'Careers',
+      to: '/career',
+    },
     {
       name: 'Testimonials',
       to: '/testimonials',
