@@ -448,7 +448,7 @@ function InvictoCarEnquiry2() {
     <>
       <div className="pt-8 pb-20 md:pb-28 ">
         <div className="container px-5 mx-auto space-y-3 lg:px-0">
-        <div className="pt-2 pb-6 text-3xl text-center uppercase lg:pb-8 sm:text-4xl md:text-5xl">
+          <div className="pt-2 pb-6 text-3xl text-center uppercase lg:pb-8 sm:text-4xl md:text-5xl">
             Book Your Invicto Now
           </div>
           <form
@@ -461,7 +461,6 @@ function InvictoCarEnquiry2() {
             method={method}
             acceptCharset="UTF-8"
           >
-            <div></div>
             <input
               type="text"
               style={{ display: "none" }}
@@ -1830,6 +1829,9 @@ export const CarComp = () => {
 function Col() {
   const videoRef = useRef(null);
   const [playingSegment, setPlayingSegment] = useState(0);
+  const handleContextMenu = (e) => {
+    e.preventDefault(); // Prevent the context menu from appearing
+  };
 
   const jumpToTime = (timeInSeconds, segment) => {
     if (videoRef.current) {
@@ -1888,7 +1890,7 @@ function Col() {
   ];
 
   return (
-    <div className="py-20 bg-black">
+    <div className="py-20 bg-black" onContextMenu={handleContextMenu}>
       <div className="">
         <video
           className="object-cover w-full h-full max-h-screen sm:pb-6"
@@ -1979,7 +1981,6 @@ export const CarEnq2 = ({ title }) => {
         email: email,
         phone: phone,
         model: model,
-        outlet: "",
       })
       .then((res) => {
         setMethod("POST");
@@ -1998,13 +1999,13 @@ export const CarEnq2 = ({ title }) => {
     axios
       .get(
         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
-      Our Sales consultant will contact you shortly.
-
-      Regards
-      RKS Motor Pvt. Ltd.
-      98488 98488
-      www.saboomaruti.in
-      www.saboonexa.in&type=1&template_id=1407168967467983613`
+    Our Sales consultant will contact you shortly.
+    
+    Regards
+    RKS Motor Pvt. Ltd.
+    98488 98488
+    www.saboomaruti.in
+    www.saboonexa.in&type=1&template_id=1407168967467983613`
       )
       .then((res) => {
         console.log("SMS API Response:", res.data);
@@ -2032,7 +2033,7 @@ export const CarEnq2 = ({ title }) => {
   return (
     <div className=" bg-black">
       <div className="container px-5 pt-8 mx-auto space-y-3 lg:px-0 ">
-      <div className="pt-2 pb-6 text-3xl text-center uppercase lg:pb-8 sm:text-4xl md:text-5xl text-white">
+        <div className="pt-2 pb-6 text-3xl text-center uppercase lg:pb-8 sm:text-4xl md:text-5xl text-white">
           {title}
         </div>
         <form
@@ -2046,7 +2047,6 @@ export const CarEnq2 = ({ title }) => {
           method={method}
           acceptCharset="UTF-8"
         >
-          <div></div>
           <input
             type="text"
             style={{ display: "none" }}
@@ -2149,7 +2149,7 @@ export const CarEnq2 = ({ title }) => {
               className="block w-full h-10 px-2 py-2 font-sans text-black bg-white border-b border-black shadow-sm rounded-xl focus:outline-none sm:text-sm md:text-lg placeholder:text-lg"
             >
               {/* <option defaultChecked>Select Model</option> */}
-              <option value="" disabled>
+              <option value="" className="">
                 Model
               </option>
               <option value="Invicto" className="">

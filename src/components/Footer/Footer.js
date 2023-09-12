@@ -36,7 +36,7 @@ const navigation = {
   ],
   corporate: [
     { name: 'About', to: '/about' },
-    // { name: 'Careers', to: '/' },
+    { name: 'Careers', to: '/career' },
     { name: 'Contact Us', to: '/contact-us' },
     { name: 'Book a service', to: '/book-online-maruti-nexa-car-service/' },
     { name: 'Terms and Conditions', to: '/terms-and-condition' },
@@ -235,7 +235,7 @@ function Footer() {
       </div>
 
       {/* CopyRight content */}
-      <div className='bg-black text-gray-300 py-3'>
+      <div className='bg-black text-gray-300 pt-3 pb-16 md:py-3'>
         <div className='container mx-auto lg:flex items-center md:space-y-2 lg:justify-between lg:px-0 px-5'>
           <div>
             <div className='flex items-center space-x-2 text-sm'>
@@ -266,6 +266,7 @@ function Footer() {
           </p>
         </div>
       </div>
+      
     </>
   );
 }

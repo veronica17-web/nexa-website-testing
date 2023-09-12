@@ -132,10 +132,10 @@ const navigation = {
       to: "/cng",
     },
 
-    // {
-    //   name: "Careers",
-    //   to: "/",
-    // },
+    {
+      name: "Careers",
+      to: "/career",
+    },
     {
       name: "Testimonials",
       to: "/testimonials",
@@ -160,10 +160,24 @@ const navigation = {
       name: "Blog",
       to: "/maruti-nexa-latest-news",
     },
-    // {
-    //   name: "24/7 Service",
-    //   to: "/maruti-suzuki-24/7-service-in-hyderabad",
-    // },
+  ],
+  all: [
+    { name: "About Us", to: "/about" },
+    { name: "Accessories", to: "/accessories" },
+    { name: "Awards", to: "/awards" },
+    { name: "Blog", to: "/maruti-nexa-latest-news" },
+    { name: "Careers", to: "/career" },
+    { name: "CNG", to: "/cng" },
+    { name: "Compare", to: "/compare" },
+    { name: "Contact", to: "/contact-us" },
+    { name: "Corporate", to: "/corporate" },
+    { name: "Finance", to: "/maruti-car-finance" },
+    { name: "Gallery", to: "/gallery" },
+    { name: "Insurance", to: "/maruti-car-insurance" },
+    { name: "Showrooms", to: "/maruti-nexa-showroom-outlets-in-hyderabad" },
+    { name: "Testimonials", to: "/testimonials" },
+    { name: "Truevalue", to: "/maruti-nexa-truevalue-outlets-in-hyderabad" },
+    { name: "Workshop", to: "/maruti-nexa-workshop-outlets-in-hyderabad" },
   ],
 };
 
@@ -298,15 +312,21 @@ function Header({ col }) {
                   </Tab.List>
                 </div> */}
                 <div className="flex flex-wrap gap-1 justify-center ">
-                  <button className=" bg-red-600 py-1.5 px-1.5  rounded-md text-white">
-                    Book a Service
-                  </button>
-                  <button className=" bg-red-600 py-1.5 px-1.5  rounded-md text-white">
-                    Offers
-                  </button>
-                  <button className=" bg-red-600 py-1.5 px-1.5  rounded-md text-white">
-                    24/7 Services
-                  </button>
+                  <Link to="/book-online-maruti-nexa-car-service/">
+                    <button className=" bg-red-600 py-1.5 px-1.5  rounded-md text-white">
+                      Book a Service
+                    </button>
+                  </Link>
+                  <Link to="/nexa-car-offers-in-hyderabad">
+                    <button className=" bg-red-600 py-1.5 px-1.5  rounded-md text-white">
+                      Offers
+                    </button>
+                  </Link>
+                  <Link to="/maruti-suzuki-24/7-service-in-hyderabad">
+                    <button className=" bg-red-600 py-1.5 px-1.5  rounded-md text-white">
+                      24/7 Services
+                    </button>
+                  </Link>
                 </div>
                 <Tab.Panels as={Fragment}>
                   {navigation.categories.map((category) => (
@@ -344,7 +364,7 @@ function Header({ col }) {
                   ))}
                 </Tab.Panels>
               </Tab.Group>
-              <div
+              {/* <div
                 className=" border-gray-200  "
                 onClick={() => setOpen(false)}
               >
@@ -358,8 +378,8 @@ function Header({ col }) {
                     </Link>
                   </div>
                 ))}
-              </div>
-              <div className="" onClick={() => setOpen(false)}>
+              </div> 
+               <div className="" onClick={() => setOpen(false)}>
                 {navigation.servicepages.map((page) => (
                   <div key={page.name} className="flow-root px-2">
                     <Link
@@ -370,7 +390,7 @@ function Header({ col }) {
                     </Link>
                   </div>
                 ))}
-              </div>
+              </div> 
               <div className="" onClick={() => setOpen(false)}>
                 {navigation.outlets.map((page) => (
                   <div key={page.name} className="flow-root px-2">
@@ -394,17 +414,28 @@ function Header({ col }) {
                     </Link>
                   </div>
                 ))}
+              </div>*/}
+              <div className=" " onClick={() => setOpen(false)}>
+                {navigation.all.map((page) => (
+                  <div key={page.name} className="flow-root px-2">
+                    <Link
+                      to={page.to}
+                      className="px-2 py-2 lg:py-2.5 block  hover:bg-black  hover:text-white rounded-md hover:px-4 duration-75"
+                    >
+                      {page.name}
+                    </Link>
+                  </div>
+                ))}
               </div>
               <div className="px-2">
-
-              <a
-                href="https://www.spatial.io/s/Saboo-RKS-N-E-X-A-6322f4f7955236000112849b?share=3965153526388753240"
-                className="px-2 py-2 lg:py-3 block  hover:bg-black  hover:text-white rounded-md hover:px-4 duration-75"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Metaverse
-              </a>
+                <a
+                  href="https://www.spatial.io/s/Saboo-RKS-N-E-X-A-6322f4f7955236000112849b?share=3965153526388753240"
+                  className="px-2 py-2 lg:py-3 block  hover:bg-black  hover:text-white rounded-md hover:px-4 duration-75"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Metaverse
+                </a>
               </div>
             </div>
           </Transition.Child>
@@ -466,7 +497,7 @@ function Header({ col }) {
                       <div className=" mx-1 whitespace-nowrap pb-1 flex justify-center">
                         <Link
                           className=" hover:bg-[#0c0b0b] text-white p-3 rounded-md "
-                          to="/book-online-maruti-nexa-car-service/"
+                          to="/book-online-maruti-nexa-car-service"
                         >
                           Book a service
                         </Link>
@@ -543,7 +574,9 @@ function Header({ col }) {
                       alt="logo"
                     />
                     <img
-                      className={`h-8 md:h-9 xl:h-10 ${scrollTop > 7 ? "block" : "hidden"}`}
+                      className={`h-8 md:h-9 xl:h-10 ${
+                        scrollTop > 7 ? "block" : "hidden"
+                      }`}
                       src={require("../../assets/logo.webp")}
                       alt="logo"
                     />

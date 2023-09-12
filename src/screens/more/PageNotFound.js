@@ -6,7 +6,7 @@ import Header from "../../components/Header/Header";
 function PageNotFound() {
   return (
     <>
-      <Header />
+      <Header col={true} />
       <div className="text-center py-32 text-gray-700">
         <h1 className="text-9xl font-extrabold">404</h1>
         <p className="text-3xl mt-4">Not Found</p>

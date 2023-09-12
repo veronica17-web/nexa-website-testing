@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 function PrivacyPolicy() {
   return (
     <>
-      <Header />
+      <Header col={true} />
       <Helmet>
         <title>Maruti Suzuki Terms and Conditions | Saboo Nexa</title>
         <meta

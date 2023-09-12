@@ -140,17 +140,30 @@ function Awards() {
           <Link to='/'>Home</Link> / Awards
         </p>
       </div>
+<<<<<<< HEAD
       <div className='container mx-auto py-16'>
         <div className='grid md:grid-cols-4 gap-8 md:px-0 grid-cols-2 px-5'>
           {awards.map((award, index) => (
             <div
               key={index}
               className='bg-gray-200 h-100  rounded-lg overflow-hidden'
+=======
+      <div className='container mx-auto py-8 md:py-16'>
+        <div className='grid lg:grid-cols-4 gap-8 md:px-0 grid-cols-1 sm:grid-cols-2 px-5'>
+          {awards.map((award, index) => (
+            <div
+              key={index}
+              className='bg-gray-200   rounded-lg overflow-hidden group  '
+>>>>>>> origin/main
             >
               <img
                 src={award.imageUrl}
                 alt={award.title}
+<<<<<<< HEAD
                 className='rounded-lg max-w-full h-auto mx-auto mb-4'
+=======
+                className='rounded-lg max-w-full h-auto mx-auto mb-4 group-hover:scale-105 duration-300 '
+>>>>>>> origin/main
               />
               <p className='text-center pb-3'>{award.title}</p>
             </div>
@@ -160,4 +173,8 @@ function Awards() {
     </>
   );
 }
+<<<<<<< HEAD
 export default Awards;
+=======
+export default Awards;
+>>>>>>> origin/main

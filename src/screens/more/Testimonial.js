@@ -8,7 +8,6 @@ import { RiStarFill } from "react-icons/ri";
 function Testimonial() {
   return (
     <>
-      <Header />
       <Helmet>
         <title>Client Testimonials | Saboo Nexa | RKS Motor</title>
         <meta
@@ -20,6 +19,7 @@ function Testimonial() {
           content="Read client reviews of Maruti Suzuki Baleno, Nexa Ignis, Maruti Ciaz, Nexa XL6 & Maruti SCross. Call us 98488 98488 for latest offers on Maruti Nexa cars."
         />
       </Helmet>
+      <Header />
       <div className="h-16 lg:h-20 bg-[#15151e]"></div>
 
       <div className="bg-[#15151e] pb-12 pt-6 ">

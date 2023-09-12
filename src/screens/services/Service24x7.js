@@ -139,7 +139,14 @@ function Service24x7() {
           content="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/Book-service.jpg"
         />
       </Helmet>
-      <Header />
+      <div className="md:hidden">
+
+      <Header col={true} />
+      </div>
+      <div className="hidden md:block">
+
+      <Header  />
+      </div>
       {/* <Slider /> */}
       {/* <img
         src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Saboo-Nexa-Service-banner1.png"
@@ -986,11 +993,11 @@ function Service24x7() {
                     About
                   </div>
                 </Link>
-                {/* <Link to='/'>
+                <Link to='/'>
                   <div className='pb-2 font-serif hover:text-red-500 '>
                     Careers
                   </div>
-                </Link> */}
+                </Link>
                 <Link to="/contact-us">
                   <div className="pb-2 font-serif hover:text-red-500 ">
                     Contact Us
