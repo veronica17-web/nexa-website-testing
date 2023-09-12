@@ -3,16 +3,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 import { Autoplay, Navigation } from "swiper";
 import { Link } from "react-router-dom";
-
 import "./Range.css";
-
 const Range = () => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0); // Initialize with the first slide
   const [but, setBut] = useState(false);
   const [pause, setPause] = useState(false);
-
   const videoRef1 = useRef(null);
   const videoRef2 = useRef(null);
   const videoRef3 = useRef(null);
@@ -21,7 +18,6 @@ const Range = () => {
   const videoRef6 = useRef(null);
   const videoRef7 = useRef(null);
   const videoRef8 = useRef(null);
-
   // const videoRefs = [
   //   videoRef1,
   //   videoRef2,
@@ -41,12 +37,12 @@ const Range = () => {
       img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Blue_810+x+411.webp",
       backgroundImage:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_bg_image/2.webp",
-
       video:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Invicto_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Invicto_back.webm",
-
+      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Invicto/Invicto_test_front_safari.mov",
+      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Invicto/Invicto_test_back_safari.mov",
       explore: "/maruti-invicto-price-in-hyderabad",
       videoRef: videoRef1,
     },
@@ -61,8 +57,9 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/xl6_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/xl6_back.webm",
+      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/XL6/xl6_test_final_safari.mov",
+      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/XL6/xl6_test_back_safari.mov",
       explore: "/nexa-xl6-on-road-price-in-hyderabad",
-
       videoRef: videoRef2,
     },
     {
@@ -76,7 +73,8 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Jimny_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Jimny_back.webm",
-
+      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Jimny/Jimny_test_front_safari.mov",
+      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Jimny/Jimny_test_back_safari.mov",
       explore: "/maruti-jimny-price-in-hyderabad",
       videoRef: videoRef3,
     },
@@ -91,10 +89,11 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/GV_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/GV_back.webm",
+      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/GV/GV_test_front_safari.mov",
+      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/GV/GV_test_back_safari.mov",
       explore: "/grand-vitara-on-road-price-in-hyderabad",
       videoRef: videoRef4,
     },
-
     {
       id: 5,
       name: "Fronx",
@@ -106,9 +105,9 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/fronx_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/fronx_back.webm",
-
+      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Fronx/fronx_test_front_safari.mov",
+      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Fronx/fronx_test_back_safari.mov",
       explore: "/maruti-fronx-price-in-hyderabad",
-
       videoRef: videoRef5,
     },
     {
@@ -121,6 +120,8 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/ciaz_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/ciaz_back.webm",
+      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Ciaz/ciaz_test_front_safari.mov",
+      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Ciaz/ciaz_test_back_safari.mov",
       explore: "/nexa-ciaz-on-road-price-in-hyderabad",
       videoRef: videoRef6,
     },
@@ -134,10 +135,11 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/baleno_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/baleno_back.webm",
+      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Baleno/baleno_test_front_safari.mov",
+      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Baleno/baleno_test_back_safari.mov",
       explore: "/new-maruti-baleno-price-in-hyderabad",
       videoRef: videoRef7,
     },
-
     {
       id: 8,
       name: "ignis",
@@ -148,11 +150,12 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/ignis_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/ignis_back.webm",
+      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Ignis/ignis_test_front_safari.mov",
+      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Ignis/ignis_test_back_safari.mov",
       explore: "/nexa-ignis-on-road-price-in-hyderabad",
       videoRef: videoRef8,
     },
   ];
-
   useEffect(() => {
     const videoRefs = [
       videoRef1,
@@ -164,7 +167,6 @@ const Range = () => {
       videoRef7,
       videoRef8,
     ];
-
     const playAllVideos = () => {
       videoRefs.forEach((ref) => {
         if (ref.current) {
@@ -172,27 +174,21 @@ const Range = () => {
         }
       });
     };
-
     if (!but) playAllVideos();
   }, [activeSlideIndex, but]);
-
   useEffect(() => {
     // When activeSlideIndex changes, set pause to true
     setPause(true);
-
     // Use setTimeout to set pause to false after 2 seconds
     const timer = setTimeout(() => {
       setPause(false);
     }, 2000);
-
     // Clean up the timer when the component unmounts or activeSlideIndex changes again
     return () => {
       clearTimeout(timer);
     };
   }, [activeSlideIndex]);
-
   const timeoutIdRef = useRef(null);
-
   useEffect(() => {
     if (timeoutIdRef.current) {
       clearTimeout(timeoutIdRef.current);
@@ -200,7 +196,6 @@ const Range = () => {
     timeoutIdRef.current = setTimeout(() => {
       setBut(false);
     }, 2000);
-
     // Cleanup the timeout if the component unmounts or if play changes
     return () => {
       if (timeoutIdRef.current) {
@@ -208,10 +203,8 @@ const Range = () => {
       }
     };
   }, [but]);
-
   const handleSlideChange = (swiper) => {
     setActiveSlideIndex(swiper.realIndex);
-
     // Check if the last slide is reached
     if (swiper.realIndex === 7) {
     }
@@ -219,7 +212,7 @@ const Range = () => {
   const handleContextMenu = (e) => {
     e.preventDefault(); // Prevent the context menu from appearing
   };
-
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   return (
     <>
       <div
@@ -235,7 +228,6 @@ const Range = () => {
           <div className=" container pt-6 md:pt-20 text-white mx-auto text-center  uppercase text-2xl sm:text-4xl md:text-5xl px-4 py-2">
             An extraordinary model range
           </div>
-
           <div className="text-center  md:pt-10  flex justify-center -mb-8 md:-mb-2 h-12 md:h-24 ">
             <img
               src={NexaData[activeSlideIndex].logo}
@@ -245,7 +237,6 @@ const Range = () => {
             />
           </div>
         </div>
-
         <Swiper
           speed={2000}
           slidesPerView={1}
@@ -290,62 +281,55 @@ const Range = () => {
           {NexaData.map((car) => (
             <SwiperSlide key={car.id} className="py-6">
               <Link to={car.explore} className="focus:outline-none">
-                <div className=" min-h-40  relative lg:ml-10 xl:ml-20">
-                  {/* <video
-                    // src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/Levante2-1-vp9-chrome.webm"
-                    src={car.video}
-                    loop
-                    autoPlay
-                    muted
-                    className={`slider_car  absolute inset-x-0 top-0    ${
-                      but === 1 ? "opacity-100" : "opacity-0"
-                    }
-                 `}
-                  ></video>
-                  <video
-                    // src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/Levante2-1-vp9-chrome.webm"
-                    src={car.videoBack}
-                    loop
-                    autoPlay
-                    muted
-                    className={`slider_car  absolute inset-x-0 top-0    ${
-                      but === 2 ? "opacity-100" : "opacity-0"
-                    }
-                 `}
-                  ></video>
-                  <video
-                    // src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/Levante2-1-vp9-chrome.webm"
-                    src={car.staticVideo}
-                    muted
-                    className={`slider_car   ${
-                      but === 0 ? "opacity-100" : " opacity-0"
-                    }`}
-                  ></video> */}
-                  <video
-                    // src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/Levante2-1-vp9-chrome.webm"
-                    src={car.video}
-                    ref={car.videoRef}
-                    muted
-                    className={`slider_car bg-transparent ${
-                      !but ? "opacity-100" : "opacity-0"
-                    } `}
-                  ></video>
-                  <video
-                    // src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/Levante2-1-vp9-chrome.webm"
-                    src={car.videoBack}
-                    // ref={car.videoRef}
-                    autoPlay
-                    loop
-                    muted
-                    className={`slider_car absolute inset-x-0 top-0 bg-transparent ${
-                      but ? "opacity-100" : "opacity-0"
-                    } `}
-                  ></video>
+              <div className=" min-h-40  relative lg:ml-10 xl:ml-20">
+                  {isSafari ? (
+                    // Use the Safari video source
+                    <video
+                      src={car.safariVideo}
+                      ref={car.videoRef}
+                      muted
+                      className={`slider_car bg-transparent ${
+                        !but ? "opacity-100" : "opacity-0"
+                      } `}
+                    ></video>
+                  ) : (
+                    // Use the default video source
+                    <video
+                      src={car.video}
+                      ref={car.videoRef}
+                      muted
+                      className={`slider_car bg-transparent ${
+                        !but ? "opacity-100" : "opacity-0"
+                      } `}
+                    ></video>
+                  )}
+                  {isSafari ? (
+                    // Use the Safari videoBack source
+                    <video
+                      src={car.safariVideoBack}
+                      autoPlay
+                      loop
+                      muted
+                      className={`slider_car absolute inset-x-0 top-0 bg-transparent ${
+                        but ? "opacity-100" : "opacity-0"
+                      } `}
+                    ></video>
+                  ) : (
+                    // Use the default videoBack source
+                    <video
+                      src={car.videoBack}
+                      autoPlay
+                      loop
+                      muted
+                      className={`slider_car absolute inset-x-0 top-0 bg-transparent ${
+                        but ? "opacity-100" : "opacity-0"
+                      } `}
+                    ></video>
+                  )}
                 </div>
               </Link>
             </SwiperSlide>
           ))}
-
           <div
             ref={navigationPrevRef}
             id="playButton"
@@ -356,7 +340,6 @@ const Range = () => {
           >
             <GrFormPrevious className="lg:text-3xl " />
           </div>
-
           <div
              ref={ navigationNextRef}
             className={`absolute right-2 sm:right-10 lg:top-[100px]  md:top-[11.5rem] top-[5.8rem]  z-10 duration-500 bg-gray-200 opacity-50 hover:opacity-100 rounded-full p-1.5 sm:p-3 cursor-pointer  ${
@@ -371,5 +354,4 @@ const Range = () => {
     </>
   );
 };
-
 export default Range;
