@@ -1,9 +1,9 @@
 //same for home screen and offers screen
 export const sliders = [
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Maruti+Suzuki+Nexa+Teachers+Day+September+Offers+Saboo+RKS+Motor.webp',
-    alt: 'sep-01 2023',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Maruti+Suzuki+Nexa+Teachers+Day+September+Offers+Saboo+RKS+Motor.webp',
+  //   alt: 'sep-01 2023',
+  // },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-banner.webp',
   //   alt: 'jimny-banner',
@@ -13,8 +13,12 @@ export const sliders = [
   //   alt: 'fronx-banner',
   // },
   {
+    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Maruti_Suzuki_Nexa_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp",
+    alt:"Maruti Suzuki Nexa Ganesh Chaturthi Offers"
+  },
+  {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-web-banner-nov-1.webp',
-    alt: 'new-nov-scng-banner',
+    alt: 'new-nov-scng-banner offers',
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-new-banner.webp',
@@ -23,29 +27,33 @@ export const sliders = [
 
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/new-nexa-web-banner.webp',
-    alt: 'New Grand Vitara',
+    alt: 'New Grand Vitara offers',
   },
 
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/xl6_homeBanner.webp',
-    alt: 'banner-1',
+    alt: 'New XL6 offers',
   },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_224.webp',
-    alt: 'banner-2',
+    alt: 'Baleno Offers',
   },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/banners/ignis_slider+(1).webp',
-    alt: 'banner-3',
+    alt: 'Ignis Offers',
   },
 ];
 
 //same for home screen and offers screen
 export const mobileSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Mobile+Maruti+Suzuki+Nexa+Teachers+Day+September+Saboo+RKS+Motor.webp',
-    alt: 'sep-01 mobile banner',
+    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Maruti_Suzuki_Nexa_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp",
+    alt:"Maruti Suzuki Nexa Ganesh Chaturthi Offers"
   },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Mobile+Maruti+Suzuki+Nexa+Teachers+Day+September+Saboo+RKS+Motor.webp',
+  //   alt: 'sep-01 mobile banner',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-mobile-banner.webp',
     alt: 'invicto mobile banner',

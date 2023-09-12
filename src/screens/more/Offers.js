@@ -83,8 +83,8 @@ function Offers() {
       <Header  />
       {/* {width > 425 ? <Slider /> : <MobileSlider />} */}
       <div className="bg-black h-16 lg:h-20"></div>
-      <div className="bg-black h-0.5 lg:h-1"></div>
-      <section>
+      <div className="bg-black h-1 -mb-2"></div>
+      <section className="select-none" >
         <div className="hidden sm:block"><Slider /> </div>
         <div className="sm:hidden"><MobileSlider /></div>
       </section>

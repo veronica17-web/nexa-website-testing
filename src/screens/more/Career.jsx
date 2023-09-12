@@ -36,7 +36,7 @@ const SignupSchema = Yup.object().shape({
   skills: Yup.string().required("Information is required*"),
   currentCTC: Yup.string().required("Information is required*"),
   expectedCTC: Yup.string().required("Information is required*"),
-  qualificaton: Yup.string().required("Information is required*"),
+  qualification: Yup.string().required("Information is required*"),
   resumeLink: Yup.string().required("Information is required*"),
 });
 
@@ -100,7 +100,7 @@ const Career = ({ formValue }) => {
     skills: "",
     currentCTC: "",
     expectedCTC: "",
-    qualificaton: "",
+    qualification: "",
     resumeLink: "",
   };
 
@@ -545,7 +545,7 @@ const Career = ({ formValue }) => {
                       <div className="flex justify-between mb-1 items-center">
                         <div className="text-gray-600">Highest Qualification</div>
                         <ErrorMessage
-                          name="qualificaton"
+                          name="qualification"
                           component="div"
                           className=" text-right text-sm text-red-700"
                         />
@@ -554,8 +554,8 @@ const Career = ({ formValue }) => {
                         required
                         className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                         type="text"
-                        name="qualificaton"
-                        id="qualificaton"
+                        name="qualification"
+                        id="qualification"
                         // placeholder="Company Name"
                       />
                     </div>

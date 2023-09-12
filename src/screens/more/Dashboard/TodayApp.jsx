@@ -3,12 +3,13 @@ import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { Box } from "@mui/material";
 import axios from "axios";
 import ExcelData from "./ExcelData";
-import { AiOutlineDownload } from "react-icons/ai";
-import * as XLSX from "xlsx";
-import logo from "../../../assets/logo_color.webp";
+// import { AiOutlineDownload } from "react-icons/ai";
+import { BiRefresh } from "react-icons/bi";
+// import * as XLSX from "xlsx";
+import logo from "../../../assets/logo.webp";
 import ModalView from "./ModalView";
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 
 const TodayApp = () => {
   const [loading, setLoading] = useState(false);
@@ -18,7 +19,7 @@ const TodayApp = () => {
   const [val, setVal] = useState({});
   const [sub, setSub] = useState(false);
 
-  const statusOptions = ['Pending', 'Approved', 'Rejected'];
+  const statusOptions = ["Pending", "Approved", "Rejected"];
 
   useEffect(() => {
     async function fetchData() {
@@ -50,28 +51,25 @@ const TodayApp = () => {
     fetchData();
   }, [sub]);
 
- const handleStatusChange = (row, newStatus) => {
+  const handleStatusChange = (row, newStatus) => {
     // const updatedRow = { ...row, status: newStatus };
     // Send the updated status to the backend using Axios call
 
     // .put(`/your-endpoint/${updatedRow.id}`, updatedRow)
     // const token = localStorage.getItem('token');
-   
 
-   
     // console.log(updatedRow.id);
     axios
       .put(
         `https://saboo-careers.onrender.com/updateCareers/${row.id}`,
         // `http://localhost:3001/updateclient/${row.id}`,
-        { status: newStatus },
+        { status: newStatus }
         // {
         //   headers: { Authorization: `Bearer ${token}` },
         // }
       )
       .then((response) => {
-       
-         setSub(!sub);
+        setSub(!sub);
       })
       .catch((error) => {
         // Handle errors
@@ -81,8 +79,8 @@ const TodayApp = () => {
   const columns = [
     { field: "no", headerName: "Sr. No.", width: "60", sortable: false },
 
-    { field: "date", headerName: "date", flex: 0.6 },
-    { field: "firstName", headerName: "first Name" },
+    { field: "date", headerName: "Date", flex: 0.6 },
+    { field: "firstName", headerName: "First Name" },
     { field: "lastName", headerName: "Last Name" },
     {
       field: "email",
@@ -96,7 +94,7 @@ const TodayApp = () => {
     { field: "lastCompany", headerName: "Company", flex: 1 },
     {
       field: "resumeLink",
-      headerName: "resume",
+      headerName: "Resume Link",
       flex: 1.5,
       renderCell: (params) => (
         <div
@@ -116,26 +114,26 @@ const TodayApp = () => {
     // { field: "selectRole", headerName: "Role" },
 
     {
-      field: 'status',
-      headerName: 'Status',
+      field: "status",
+      headerName: "Status",
       renderCell: (params) => (
         <Select
           value={params.row.status}
           onChange={(e) => handleStatusChange(params.row, e.target.value)}
           style={{
             backgroundColor:
-              params.row.status === 'Pending'
-                ? '#f5d889'
-                : params.row.status === 'Approved'
-                ? '#8db598'
-                : '#eb8888',
+              params.row.status === "Pending"
+                ? "#f5d889"
+                : params.row.status === "Approved"
+                ? "#8db598"
+                : "#eb8888",
             // color: 'black',
-            fontSize: '0.7rem',
-            width: '5.5rem',
-            height: '2rem',
-            marginLeft: '-.25rem',
-            // marginTop: '10px',
-            // marginBottom: '10px',
+            fontSize: "0.7rem",
+            width: "5.5rem",
+            height: "2rem",
+            marginLeft: "-.25rem",
+            marginTop: "1px",
+            marginBottom: "2px",
             // border:"0px"
           }}
         >
@@ -164,41 +162,41 @@ const TodayApp = () => {
         </button>
       ),
     },
-    {
-      field: "Download",
-      flex: 0.5,
-      headerName: "Download",
-      sortable: false,
-      renderCell: (params) => (
-        <button
-          onClick={() => handleDownload(params.row)}
-          className="flex justify-center"
-        >
-          <AiOutlineDownload className="text-lg mx-auto w-full" />
-        </button>
-      ),
-    },
+    // {
+    //   field: "Download",
+    //   flex: 0.5,
+    //   headerName: "Download",
+    //   sortable: false,
+    //   renderCell: (params) => (
+    //     <button
+    //       onClick={() => handleDownload(params.row)}
+    //       className="flex justify-center"
+    //     >
+    //       <AiOutlineDownload className="text-lg mx-auto w-full" />
+    //     </button>
+    //   ),
+    // },
   ];
 
   const handleOnClose = () => setShowMyModal(false);
 
-  const handleDownload = (row) => {
-    const data2 = [row];
-    const excel = async () => {
-      const date = new Date();
-      try {
-        // const response = await axios.get('/api/data'); // replace with your MongoDB API endpoint
-        // const data = response.data;
-        const workbook = XLSX.utils.book_new();
-        const sheet = XLSX.utils.json_to_sheet(data2);
-        XLSX.utils.book_append_sheet(workbook, sheet, "Data");
-        XLSX.writeFile(workbook, `${row.firstName}~${date}.xlsx`);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    excel();
-  };
+  // const handleDownload = (row) => {
+  //   const data2 = [row];
+  //   const excel = async () => {
+  //     const date = new Date();
+  //     try {
+  //       // const response = await axios.get('/api/data'); // replace with your MongoDB API endpoint
+  //       // const data = response.data;
+  //       const workbook = XLSX.utils.book_new();
+  //       const sheet = XLSX.utils.json_to_sheet(data2);
+  //       XLSX.utils.book_append_sheet(workbook, sheet, "Data");
+  //       XLSX.writeFile(workbook, `${row.firstName}~${date}.xlsx`);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   excel();
+  // };
 
   const rows = data.map((item, index) => ({
     id: item._id,
@@ -208,19 +206,19 @@ const TodayApp = () => {
 
   return (
     <div>
-      <div className="my-2 flex  h-14 justify-between items-center overflow-hidden rounded-md bg-gray-100 shadow-lg shadow-gray-400  md:mr-4">
+      <div className="my-2 flex  h-16 justify-between items-center overflow-hidden rounded-md bg-black shadow-lg shadow-gray-400  md:mr-4">
         <div>
-          <img src={logo} alt="logo" className="mx-auto  h-10 pl-2 " />
+          <img src={logo} alt="logo" className="mx-auto  h-9 pl-4 " />
         </div>
-        <div className="mx-auto my-auto   text-center  font-sans text-xl  uppercase">
+        <div className="mx-auto my-auto   text-center  font-sans text-xl  uppercase text-white tracking-widest">
           APPLICATIONS
         </div>
         {data.length > 0 && (
           <div className="hidden items-center  md:visible md:flex">
-            {/* <BiRefresh
-        className='mr-3 cursor-pointer text-4xl text-[#5c67f5] duration-500 hover:rotate-180'
-        onClick={() => setSub(true)}
-      /> */}
+            <BiRefresh
+              className="mr-3 cursor-pointer text-4xl  duration-500 hover:rotate-180 text-white"
+              onClick={() => setSub(true)}
+            />
             {/* <button
         onClick={handleOpen}
         className='mx-2 rounded bg-gradient-to-tr  from-[#5c67f5] to-[#cb67ac] px-3 py-1  text-white'
@@ -233,7 +231,7 @@ const TodayApp = () => {
           </div>
         )}
       </div>
-      <div className=" overflow-hidden ">
+      <div className=" overflow-hidden font-sans  ">
         <Box
           m="0 20px 0 0"
           height="90vh"
@@ -242,8 +240,8 @@ const TodayApp = () => {
               border: "none",
             },
             "& .MuiDataGrid-cell": {
-              border: "0.1px solid", // Add the border style for the cell
-              borderColor: "lightgray", // Set the color of the border
+              border: "0.1px solid",
+              borderColor: "lightgray",
               paddingBottom: "5px",
               paddingTop: "5px",
             },
@@ -251,18 +249,22 @@ const TodayApp = () => {
               // color: colors.greenAccent[300],
             },
             "& .MuiDataGrid-columnHeaders": {
-              // backgroundColor: colors.blueAccent[700],
-              background: "black",
-              borderBottom: "none",
-              color: "white",
+              background: "white",
+              border: "0.2px solid lightgray", // Add a border with light gray color
+              borderColor: "lightgray", // Set the color of the border
+              color: "black",
             },
+            // "& .MuiDataGrid-sortIcon": {
+            //   color: "white !important", // Change the color of sorting arrows
+            // },
+            // "& .MuiDataGrid-menuIcon": {
+            //   color: "white !important", // Change the color of menu options dots
+            // },
             "& .MuiDataGrid-virtualScroller": {
               // backgroundColor: colors.primary[400],
             },
             "& .MuiDataGrid-footerContainer": {
               marginRight: "100px",
-              // borderTop: '1 solid',
-              // backgroundColor: colors.blueAccent[700],
             },
             "& .MuiCheckbox-root": {
               // color: `${colors.greenAccent[200]} !important`,

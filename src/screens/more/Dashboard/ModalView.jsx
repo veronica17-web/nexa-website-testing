@@ -1,6 +1,35 @@
-import React from "react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
+import React, { useRef } from "react";
+import { AiOutlineDownload } from "react-icons/ai";
 
 const ModalView = ({ visible, onClose, values }) => {
+  const pdfRef = useRef();
+  const downloadPDF = () => {
+    const input = pdfRef.current;
+    html2canvas(input).then((canvas) => {
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF("l", "mm", "a4", true);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+      const imgX = 10;
+      // const imgX = (pdfWidth - imgHeight * ratio) / 2;
+      const imgY = 10;
+      pdf.addImage(
+        imgData,
+        "PNG",
+        imgX,
+        imgY,
+        imgWidth * ratio,
+        imgHeight * ratio
+      );
+      pdf.save(`${values.firstName}_${values.lastName}`);
+    });
+  };
+
   const handleOnClose = (e) => {
     if (e.target.id === "container") onClose();
   };
@@ -11,13 +40,18 @@ const ModalView = ({ visible, onClose, values }) => {
       onClick={handleOnClose}
       className="fixed inset-0   bg-black bg-opacity-20 p-10 "
     >
-      <div className=" container mx-auto  w-full bg-white p-5 h-[90vh] relative ">
+      <div
+        className=" container mx-auto  w-full bg-white p-5 h-[90vh] relative "
+        ref={pdfRef}
+      >
         {/* <div className=" overflow-hidden m-1  lg:w-2/3 xl:h-2/3 bg-white p-5"> */}
         <div className="text-center font-mono w-full  mb-4 mt-4 flex relative">
           <div className="text-3xl font-medium uppercase text-center w-full">
             {values.firstName} {values.lastName}{" "}
-          </div >{" "}
-          <div className="whitespace-nowrap absolute top-0 right-0">{values.date}</div>
+          </div>{" "}
+          <div className="whitespace-nowrap absolute top-0 left-0">
+            {values.date}
+          </div>
         </div>
         <div className="flex gap-4 justify-center ">
           <div>{values.email}</div> <div>{values.phone} </div>
@@ -31,8 +65,8 @@ const ModalView = ({ visible, onClose, values }) => {
               <div className="text-gray-500">First Name : </div>
               <div className="text-gray-500">Last Name : </div>
               <div className="text-gray-500">Email : </div>
-              <div className="text-gray-500">Country Code :</div>
-              <div className="text-gray-500">Phone : </div>
+              <div className="text-gray-500">Phone :</div>
+              <div className="text-gray-500">Alternate Phone : </div>
               <div className="text-gray-500 ">Address : </div>
               <div className="text-gray-500">Last Company : </div>
               <div className="text-gray-500">Job Title : </div>
@@ -63,15 +97,16 @@ const ModalView = ({ visible, onClose, values }) => {
               <div className="">{values.skills} </div>
               <div className="">{values.currentCTC} </div>
               <div className="">{values.expectedCTC} </div>
-              <div className="">{values.qualificaton} </div>
+              <div className="">{values.qualification} </div>
               <div className="">
                 <a
                   href={values.resumeLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="text-black"
                 >
                   {values.resumeLink}
-                </a>{" "}
+                </a>
               </div>
             </div>
           </div>
@@ -169,12 +204,19 @@ const ModalView = ({ visible, onClose, values }) => {
             </div>
           </div>
         </section> */}
-
-        <div
-          className="p-3 rounded-lg hover:border-red-400 cursor-pointer border w-min absolute bottom-10 right-10 select-none bg-gray-200"
-          onClick={onClose}
-        >
-          Close
+        <div className="absolute top-10 right-20 flex gap-2">
+          <div
+            className="p-3 rounded-lg hover:bg-gray-200 hover:shadow-md cursor-pointer border w-min  select-none "
+            onClick={downloadPDF}
+          >
+            <AiOutlineDownload className="text-lg mx-auto " />
+          </div>
+          <div
+            className="p-3 rounded-lg hover:border-red-400 cursor-pointer border w-min  select-none bg-gray-200"
+            onClick={onClose}
+          >
+            Close
+          </div>
         </div>
         {/* <div className="space-y-2">
           <div className="text-lg ">Biographical Information</div>
