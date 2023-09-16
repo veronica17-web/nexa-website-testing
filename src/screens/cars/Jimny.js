@@ -10,13 +10,14 @@ import { Link } from "react-router-dom";
 
 import Helmet from "react-helmet";
 // import { Autoplay, Navigation, Pagination } from 'swiper';
-import OnRoadPrice from "../../components/utils/OnRoadPrice";
+// import OnRoadPrice from "../../components/utils/OnRoadPrice";
 import { MdOutlineFileDownload } from "react-icons/md";
 // import Carousel from '../../components/Jimny/Extras/Carousel';
 import MobileCarousel from "../../components/Jimny/Extras/MobileCarousel";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { CarEnq2 } from "./Invicto";
 
 const Jimny = () => {
   useEffect(() => {
@@ -78,10 +79,11 @@ const Jimny = () => {
       
       <Header />
       <VariantPlayer />
-
+      <CarEnq2 title="BOOK YOUR JIMNY NOW" />
+      <Variant />
       <JimnyInteriorAndOther />
 
-      <OnRoadPrice title={'Jimny'} />
+      {/* <OnRoadPrice title={'Jimny'} /> */}
       {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
       <div className="hidden sm:block">
         <div className="flex h-[60vh] bg-white gap-1 px-2 pt-1">
@@ -132,8 +134,8 @@ const Jimny = () => {
 function JimnyInteriorAndOther() {
   const [tabsColors, setTabsColors] = useState(1);
   return (
-    <div className=" mx-auto py-4 space-y-4">
-      <p className="font-bold text-4xl text-center">Maruti Suzuki Jimny</p>
+    <div className=" mx-auto  space-y-4">
+      {/* <p className="font-bold text-4xl text-center">Maruti Suzuki Jimny</p>
       <p className=" text-center tracking-wider font-bold">
         A Story passed down four generations
       </p>
@@ -143,8 +145,8 @@ function JimnyInteriorAndOther() {
         Selected by the nature for the harshest conditions, it has seen and
         survived the worst. Only getting tougher with experience as it's
         teacher.
-      </p>
-      <Variant />
+      </p> */}
+     
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/colors/jimmy-color-bg.webp')] bg-cover bg-no-repeat">
         <div className="max-w-1xl mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-2">
@@ -411,9 +413,9 @@ const Variant = () => {
             </select>
           </div>
           <div className="text-center text-gray-200">
-            <p className="text-2xl font-bold">₹ {price}*</p>
-            <p className="tracking-wide text-xl">Ex-Showroom Price</p>
-            <p className="uppercase text-gray-400 font-bold">Hyderabad</p>
+            <p className="text-2xl font-medium">₹ {price}*</p>
+            <p className="tracking-wide text-xl pb-1">Ex-Showroom Price - Hyderabad</p>
+            {/* <p className="uppercase text-gray-400 font-bold">Hyderabad</p> */}
             <div className="text-red-200 text-xs font-light">
               <sup>*</sup>Alpha+ & Zeta+ are applicable only for Direct
               Injection engine with Smart Hybrid
@@ -437,22 +439,30 @@ const Variant = () => {
 };
 
 const VariantPlayer = () => {
- 
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+  // Define the video source URL based on the browser
+  const videoSource = isSafari
+    ? "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/header_video/Jimny_safari.mov"
+    : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/video/jimny_banner.webm";
+
   return (
     <div className="top-0 left-0 w-full h-screen relative bg-black ">
-      <video
-        className="w-full h-full object-cover "
-        autoplay="autoplay"
-        loop
-        muted
-        poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimny_HeaderBanner_1500x634+webp.webp"
-      >
-        <source
-          class="w-30 h-30"
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/video/jimny_banner.webm"
-          type="video/mp4"
-        />
-      </video>
+      
+       <video
+          className="object-cover w-full h-full "
+          preload="metadata"
+          poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimny_HeaderBanner_1500x634+webp.webp"
+          loop
+          autoPlay
+          playsInline
+          muted
+        >
+          <source
+            src={videoSource}
+            type={isSafari ? "video/quicktime" : "video/mp4"}
+          />
+        </video>
       <div className="absolute bottom-40 lg:bottom-24 left-[3%] lg:left-[5%] text-white ">
         <div
           data-aos="fade-right"

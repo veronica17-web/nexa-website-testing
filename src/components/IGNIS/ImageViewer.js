@@ -20,7 +20,7 @@ function ImageViewer() {
   return (
     <>
       <Tab.Group>
-        <div className="flex items-center justify-center py-8">
+        <div className="flex items-center justify-center pt-10 pb-2">
           <Tab.List className="space-x-1">
             <Tab
               className={({ selected }) =>

@@ -102,6 +102,12 @@ function Home() {
 export const HomeVideo = () => {
   const [open, setOpen] = useState(false);
   const [phone, setPhone] = useState("");
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+  // Define the video source URL based on the browser
+  const videoSource = isSafari
+    ? "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/header_video/Invicto_safari.mov"
+    : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/videos/WEBSITE+mp4.webm";
 
   return (
     <>
@@ -116,8 +122,8 @@ export const HomeVideo = () => {
           muted
         >
           <source
-            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/videos/WEBSITE+mp4.webm"
-            type="video/mp4"
+            src={videoSource}
+            type={isSafari ? "video/quicktime" : "video/mp4"}
           />
         </video>
 
@@ -788,7 +794,7 @@ const SerFinInsur = () => {
 
 const News = () => {
   return (
-    <div className="container px-2 py-6 mx-auto lg:px-0 ">
+    <div className="container px-2 pt-3 mx-auto lg:px-0 ">
       <div className="mb-3">
         <span className="overflow-hidden text-4xl md:text-5xl">NEWS</span>
         {/* <span className='text-5xl font-medium uppercase md:text-6xl'>
@@ -801,20 +807,196 @@ const News = () => {
           <div className="box-border hidden w-1 h-10 -mb-2 bg-black md:inline-block md:animate-cursor will-change-transform md:-mb-4 md:h-16"></div>
         </div>
       </div>
-      <div>
+      <div className="">
         {/* <div className='h-[80vh] object-cover'> */}
-        <Link to="/gallery">
-          <img
-            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/4.webp"
-            alt="Grand Launch of Suzuki Jimny at our Nexa Lumbini"
-            className="object-cover w-full max-h-screen overflow-hidden bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200"
-            data-aos="zoom-in"
-            data-aos-delay="0"
-            data-aos-duration="500"
-          />
-        </Link>
+        <div className="flex flex-col gap-4 mb-8 lg:flex-row ">
+          <div
+            // data-aos="zoom-in"
+            // data-aos-delay="0"
+            // data-aos-duration="500"
+            className=" lg:w-1/3 relative group"
+          >
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/1-upload.webp"
+              alt=""
+              srcSet=""
+              className="overflow-hidden bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none"
+            />
+            <div className="flex  flex-col justify-around gap-2  rounded-2xl mt-4">
+              <div className="uppercase ">
+                {/* <div className="pb-2 text-lg  lg:text-xl">21 JUN 2023</div> */}
+                <div className="pb-2 text-xl font-medium lg:text-2xl">
+                  Maruti Suzuki Jimny hits Hyderabad roads
+                </div>
+              </div>
+              <div>
+                {/* <a
+              href="https://www.autocarindia.com/car-news/maruti-suzuki-jimny-launch-on-june-7-428242"
+              className="relative inline-flex items-center justify-start px-4 py-3 overflow-hidden lg:px-6 group"
+              target="_blank"
+              rel="noreferrer"
+            > */}
+                <Link
+                  to="/maruti-nexa-latest-news"
+                  className="relative inline-flex items-center justify-start px-4 py-3 overflow-hidden lg:px-6 group"
+                >
+                  <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-black opacity-[3%]"></span>
+                  <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-black opacity-100 group-hover:-translate-x-8"></span>
+                  <span className="relative w-full text-left duration-200 ease-in-out whitespace-nowrap text-gray-600transition-colors group-hover:text-white">
+                    Read More
+                  </span>
+                  <span className="absolute inset-0 border border-gray-600"></span>
+                </Link>
+                {/* </a> */}
+              </div>
+            </div>
+          </div>
+          <div
+            // data-aos="zoom-in"
+            // data-aos-delay="0"
+            // data-aos-duration="500"
+            className=" lg:w-1/3 relative group "
+          >
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/2-upload+ama.webp"
+              alt=""
+              srcSet=""
+              className="overflow-hidden bg-black shadow-lg rounded-2xl shadow-gray-500 brightness-110 saturate-150"
+            />
+            <div className="flex  flex-col justify-around gap-2  rounded-2xl mt-4">
+              <div className="uppercase ">
+                {/* <div className="pb-2 text-lg  lg:text-xl">21 JUN 2023</div> */}
+                <div className="pb-2 text-xl font-medium lg:text-2xl">
+                  Maruti Suzuki delivers Jimny to customers
+                </div>
+              </div>
+              <div>
+                {/* <a
+              href="https://www.autocarindia.com/car-news/maruti-suzuki-jimny-launch-on-june-7-428242"
+              className="relative inline-flex items-center justify-start px-4 py-3 overflow-hidden lg:px-6 group"
+              target="_blank"
+              rel="noreferrer"
+            > */}
+                <Link
+                  to="/maruti-nexa-latest-news"
+                  className="relative inline-flex items-center justify-start px-4 py-3 overflow-hidden lg:px-6 group"
+                >
+                  <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-black opacity-[3%]"></span>
+                  <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-black opacity-100 group-hover:-translate-x-8"></span>
+                  <span className="relative w-full text-left duration-200 ease-in-out whitespace-nowrap text-gray-600transition-colors group-hover:text-white">
+                    Read More
+                  </span>
+                  <span className="absolute inset-0 border border-gray-600"></span>
+                </Link>
+                {/* </a> */}
+              </div>
+            </div>
+          </div>
+          <div
+            // data-aos="zoom-in"
+            // data-aos-delay="0"
+            // data-aos-duration="500"
+            className=" lg:w-1/3 relative group"
+          >
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/full-blog-section/Nexa_0003_v6velugu.webp"
+              alt=""
+              srcSet=""
+              className="overflow-hidden bg-black shadow-lg rounded-2xl shadow-gray-500 brightness-110 saturate-150"
+            />
+            <div className="flex  flex-col justify-around gap-2  rounded-2xl mt-4 ">
+              <div className="uppercase ">
+                {/* <div className="pb-2 text-lg  lg:text-xl">21 JUN 2023</div> */}
+                <div className="pb-2 text-xl font-medium lg:text-2xl">
+                  హైదరాబాద్ కస్టమర్ల చేతికి జిమ్మీ
+                </div>
+              </div>
+              <div>
+                {/* <a
+              href="https://www.autocarindia.com/car-news/maruti-suzuki-jimny-launch-on-june-7-428242"
+              className="relative inline-flex items-center justify-start px-4 py-3 overflow-hidden lg:px-6 group"
+              target="_blank"
+              rel="noreferrer"
+            > */}
+                <Link
+                  to="/maruti-nexa-latest-news"
+                  className="relative inline-flex items-center justify-start px-4 py-3 overflow-hidden lg:px-6 group"
+                >
+                  <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-black opacity-[3%]"></span>
+                  <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-black opacity-100 group-hover:-translate-x-8"></span>
+                  <span className="relative w-full text-left duration-200 ease-in-out whitespace-nowrap text-gray-600transition-colors group-hover:text-white">
+                    Read More
+                  </span>
+                  <span className="absolute inset-0 border border-gray-600"></span>
+                </Link>
+                {/* </a> */}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="text-5xl font-medium  uppercase md:text-6xl mb-4">
+          gallery
+        </div>
+        <div className="flex gap-4 flex-col md:flex-row  ">
+          <div className="md:w-1/3  duration-500 hover:z-10 relative group overflow-hidden rounded-2xl">
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/1.webp"
+                alt="Grand Launch of Suzuki Jimny at our Nexa Lumbini"
+                className="object-cover  overflow-hidden duration-500 bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none group-hover:scale-105"
+               
+              />
+            <Link to="/gallery">
+            <div className="hidden  absolute inset-0 group-hover:flex  flex-col justify-center items-center gap-4  text-white duration-700 bg-black bg-opacity-50 rounded-2xl">
+                {/* <div className="text-xl text-white">View More </div> */}
+                <div className="text-whtie bg-black border px-4 py-2">
+                 + View more
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="md:w-1/3  duration-500 hover:z-10 relative group overflow-hidden rounded-2xl">
+          
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/2.webp"
+                alt="Grand Launch of Suzuki Jimny at our Nexa Lumbini"
+                className="object-cover  overflow-hidden duration-500 bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none group-hover:scale-105"
+               
+                // data-aos="zoom-in"
+                // data-aos-delay="0"
+                // data-aos-duration="500"
+              />  <Link to="/gallery">
+             {/* <div className="text-xl text-white">View More </div> */}
+                <div className="hidden  absolute inset-0 group-hover:flex  flex-col justify-center items-center gap-4  text-white duration-700 bg-black bg-opacity-50 rounded-2xl">
+                {/* <div className="text-xl text-white">View More </div> */}
+                <div className="text-whtie bg-black border px-4 py-2">
+                 + View more
+                </div>
+              </div>
+       
+            </Link>
+          </div>
+          <div className="md:w-1/3 duration-500 hover:z-10 relative group overflow-hidden rounded-2xl">
+            
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/4.webp"
+                alt="Grand Launch of Suzuki Jimny at our Nexa Lumbini"
+                className="object-cover  overflow-hidden duration-500 bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none group-hover:scale-105"
+               
+                // data-aos="zoom-in"
+                // data-aos-delay="0"
+                // data-aos-duration="500"
+              /><Link to="/gallery">
+              <div className="hidden  absolute inset-0 group-hover:flex  flex-col justify-center items-center gap-4  text-white duration-700 bg-black bg-opacity-50 rounded-2xl">
+                {/* <div className="text-xl text-white">View More </div> */}
+                <div className="text-whtie bg-black border px-4 py-2">
+                 + View more
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
         {/* </div> */}
-        <div className="my-6">
+        {/* <div className="my-6">
           <div className="my-4 text-2xl border-b-2 border-gray-600 rounded w-min whitespace-nowrap">
             26 May 2023
           </div>
@@ -836,99 +1018,7 @@ const News = () => {
               </Link>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="flex flex-col gap-4 mt-12 lg:flex-row ">
-        <div
-          data-aos="zoom-in"
-          data-aos-delay="0"
-          data-aos-duration="500"
-          className=" lg:w-1/2"
-        >
-          <img
-            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/1-upload.webp"
-            alt=""
-            srcSet=""
-            className="overflow-hidden bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200"
-          />
-        </div>
-        <div className="flex flex-col justify-around gap-4 lg:w-1/2 ">
-          <div className="uppercase ">
-            <div className="pb-2 text-lg text-gray-600 lg:text-xl">
-              21 JUN 2023
-            </div>
-            <div className="pb-2 text-2xl font-medium lg:text-4xl">
-              Maruti Suzuki Jimny hits Hyderabad roads
-            </div>
-            <div className="text-xl text-gray-600">
-              The first batch of the iconic SUV from Maruti Suzuki, the Jimny
-              was delivered to customers in Hyderabad here at NEXA Lumbini, RKS
-              Motors on Wednesday.
-            </div>
-          </div>
-          <div>
-            {/* <a
-              href="https://www.autocarindia.com/car-news/maruti-suzuki-jimny-launch-on-june-7-428242"
-              className="relative inline-flex items-center justify-start px-4 py-3 overflow-hidden lg:px-6 group"
-              target="_blank"
-              rel="noreferrer"
-            > */}
-            <Link
-              to="/maruti-nexa-latest-news"
-              className="relative inline-flex items-center justify-start px-4 py-3 overflow-hidden lg:px-6 group"
-            >
-              <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-black opacity-[3%]"></span>
-              <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-black opacity-100 group-hover:-translate-x-8"></span>
-              <span className="relative w-full text-left duration-200 ease-in-out whitespace-nowrap text-gray-600transition-colors group-hover:text-white">
-                Read More
-              </span>
-              <span className="absolute inset-0 border border-gray-600"></span>
-            </Link>
-            {/* </a> */}
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col gap-4 mt-12 lg:flex-row ">
-        <div
-          data-aos="zoom-in"
-          data-aos-delay="0"
-          data-aos-duration="500"
-          className=" lg:w-1/2"
-        >
-          <img
-            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/2-upload+ama.webp"
-            alt=""
-            srcSet=""
-            className="overflow-hidden bg-black shadow-lg rounded-2xl shadow-gray-500 brightness-110 saturate-150"
-          />
-        </div>
-        <div className="flex flex-col justify-around gap-4 lg:w-1/2 ">
-          <div className="uppercase ">
-            <div className="pb-2 text-lg text-gray-600 lg:text-xl">
-              22 Jun 2023
-            </div>
-            <div className="pb-2 text-2xl font-medium lg:text-4xl">
-              Maruti Suzuki delivers Jimny to customers
-            </div>
-            <div className="text-xl text-gray-600">
-              Maruti Suzuki has delivered Jimny SUV to customers at Nexa
-              Lumbini, RKS Motor, Hyderabad on Wednesday.
-            </div>
-          </div>
-          <div>
-            <Link
-              to="/maruti-nexa-latest-news"
-              className="relative inline-flex items-center justify-start px-4 py-3 overflow-hidden lg:px-6 group"
-            >
-              <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-black opacity-[3%]"></span>
-              <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-black opacity-100 group-hover:-translate-x-8"></span>
-              <span className="relative w-full text-left duration-200 ease-in-out whitespace-nowrap text-gray-600transition-colors group-hover:text-white">
-                Read More
-              </span>
-              <span className="absolute inset-0 border border-gray-600"></span>
-            </Link>
-          </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

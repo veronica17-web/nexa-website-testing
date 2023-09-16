@@ -41,9 +41,13 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Invicto_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Invicto_back.webm",
-      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Invicto/Invicto_test_front_safari.mov",
-      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Invicto/Invicto_test_back_safari.mov",
+      safariVideo:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Invicto/Invicto_test_front_safari.mov",
+      safariVideoBack:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Invicto/Invicto_test_back_safari.mov",
       explore: "/maruti-invicto-price-in-hyderabad",
+      imgMobile:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/Invicto_final.png",
       videoRef: videoRef1,
     },
     {
@@ -57,9 +61,13 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/xl6_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/xl6_back.webm",
-      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/XL6/xl6_test_final_safari.mov",
-      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/XL6/xl6_test_back_safari.mov",
+      safariVideo:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/XL6/xl6_test_final_safari.mov",
+      safariVideoBack:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/XL6/xl6_test_back_safari.mov",
       explore: "/nexa-xl6-on-road-price-in-hyderabad",
+      imgMobile:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/xl6_final.png",
       videoRef: videoRef2,
     },
     {
@@ -73,9 +81,13 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Jimny_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Jimny_back.webm",
-      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Jimny/Jimny_test_front_safari.mov",
-      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Jimny/Jimny_test_back_safari.mov",
+      safariVideo:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Jimny/Jimny_test_front_safari.mov",
+      safariVideoBack:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Jimny/Jimny_test_back_safari.mov",
       explore: "/maruti-jimny-price-in-hyderabad",
+      imgMobile:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/Jimny_final.png",
       videoRef: videoRef3,
     },
     {
@@ -89,9 +101,13 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/GV_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/GV_back.webm",
-      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/GV/GV_test_front_safari.mov",
-      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/GV/GV_test_back_safari.mov",
+      safariVideo:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/GV/GV_test_front_safari.mov",
+      safariVideoBack:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/GV/GV_test_back_safari.mov",
       explore: "/grand-vitara-on-road-price-in-hyderabad",
+      imgMobile:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/GV_final.png",
       videoRef: videoRef4,
     },
     {
@@ -105,9 +121,13 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/fronx_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/fronx_back.webm",
-      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Fronx/fronx_test_front_safari.mov",
-      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Fronx/fronx_test_back_safari.mov",
+      safariVideo:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Fronx/fronx_test_front_safari.mov",
+      safariVideoBack:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Fronx/fronx_test_back_safari.mov",
       explore: "/maruti-fronx-price-in-hyderabad",
+      imgMobile:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/fronx_final.png",
       videoRef: videoRef5,
     },
     {
@@ -120,9 +140,13 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/ciaz_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/ciaz_back.webm",
-      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Ciaz/ciaz_test_front_safari.mov",
-      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Ciaz/ciaz_test_back_safari.mov",
+      safariVideo:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Ciaz/ciaz_test_front_safari.mov",
+      safariVideoBack:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Ciaz/ciaz_test_back_safari.mov",
       explore: "/nexa-ciaz-on-road-price-in-hyderabad",
+      imgMobile:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/ciaz.png",
       videoRef: videoRef6,
     },
     {
@@ -135,9 +159,13 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/baleno_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/baleno_back.webm",
-      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Baleno/baleno_test_front_safari.mov",
-      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Baleno/baleno_test_back_safari.mov",
+      safariVideo:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Baleno/baleno_test_front_safari.mov",
+      safariVideoBack:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Baleno/baleno_test_back_safari.mov",
       explore: "/new-maruti-baleno-price-in-hyderabad",
+      imgMobile:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/baleno_final.png",
       videoRef: videoRef7,
     },
     {
@@ -150,9 +178,13 @@ const Range = () => {
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/ignis_forward.webm",
       videoBack:
         "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/ignis_back.webm",
-      safariVideo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Ignis/ignis_test_front_safari.mov",
-      safariVideoBack: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Ignis/ignis_test_back_safari.mov",
+      safariVideo:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Ignis/ignis_test_front_safari.mov",
+      safariVideoBack:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/Ignis/ignis_test_back_safari.mov",
       explore: "/nexa-ignis-on-road-price-in-hyderabad",
+      imgMobile:
+        "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/ignis_final.png",
       videoRef: videoRef8,
     },
   ];
@@ -170,6 +202,7 @@ const Range = () => {
     const playAllVideos = () => {
       videoRefs.forEach((ref) => {
         if (ref.current) {
+          ref.current.setAttribute("playsinline", "true");
           ref.current.play();
         }
       });
@@ -205,8 +238,10 @@ const Range = () => {
   }, [but]);
   const handleSlideChange = (swiper) => {
     setActiveSlideIndex(swiper.realIndex);
+    const newIndex = swiper.activeIndex;
     // Check if the last slide is reached
-    if (swiper.realIndex === 7) {
+    if (newIndex === 7) {
+      swiper.autoplay.stop(); // Stop autoplay
     }
   };
   const handleContextMenu = (e) => {
@@ -281,13 +316,14 @@ const Range = () => {
           {NexaData.map((car) => (
             <SwiperSlide key={car.id} className="py-6">
               <Link to={car.explore} className="focus:outline-none">
-              <div className=" min-h-40  relative lg:ml-10 xl:ml-20">
+                <div className=" min-h-40  relative lg:ml-10 xl:ml-20 hidden lg:block">
                   {isSafari ? (
                     // Use the Safari video source
                     <video
                       src={car.safariVideo}
                       ref={car.videoRef}
                       muted
+                      playsInline
                       className={`slider_car bg-transparent ${
                         !but ? "opacity-100" : "opacity-0"
                       } `}
@@ -298,6 +334,7 @@ const Range = () => {
                       src={car.video}
                       ref={car.videoRef}
                       muted
+                      playsInline
                       className={`slider_car bg-transparent ${
                         !but ? "opacity-100" : "opacity-0"
                       } `}
@@ -327,6 +364,9 @@ const Range = () => {
                     ></video>
                   )}
                 </div>
+                <div className=" min-h-40  relative lg:ml-10 xl:ml-20 mb-4 lg:hidden">
+                  <img src={car.imgMobile} alt="" srcset="" />
+                </div>
               </Link>
             </SwiperSlide>
           ))}
@@ -334,16 +374,16 @@ const Range = () => {
             ref={navigationPrevRef}
             id="playButton"
             className={`absolute left-2 sm:left-10 lg:top-[100px]  md:top-[11.5rem] top-[5.8rem] z-10 duration-500 bg-gray-200 opacity-50 hover:opacity-100 rounded-full p-1.5 sm:p-3 cursor-pointer ${
-              pause || activeSlideIndex === 0 ? "hidden" : "block"
+              pause || activeSlideIndex === 0 ? "lg:hidden" : "block"
             } `}
             onClick={() => setBut(true)}
           >
             <GrFormPrevious className="lg:text-3xl " />
           </div>
           <div
-             ref={ navigationNextRef}
+            ref={navigationNextRef}
             className={`absolute right-2 sm:right-10 lg:top-[100px]  md:top-[11.5rem] top-[5.8rem]  z-10 duration-500 bg-gray-200 opacity-50 hover:opacity-100 rounded-full p-1.5 sm:p-3 cursor-pointer  ${
-              pause || activeSlideIndex === 7  ? "hidden" : "block"
+              pause || activeSlideIndex === 7 ? "lg:hidden" : "block"
             }`}
           >
             <GrFormNext className="lg:text-3xl" />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ImageViewer from '../../components/BALENO/ImageViewer';
-import OnRoadPrice from '../../components/utils/OnRoadPrice';
+// import OnRoadPrice from '../../components/utils/OnRoadPrice';
 import Features from '../../components/BALENO/Features';
 import { MdOutlineFileDownload } from 'react-icons/md';
 import Helmet from 'react-helmet';
@@ -9,11 +9,20 @@ import Header from '../../components/Header/Header';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
+import { CarEnq2 } from './Invicto';
 function Baleno() {
   useEffect(() => {
     // AOS.init();
     AOS.init({ once: true });
   }, []);
+
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+// Define the video source URL based on the browser
+const videoSource = isSafari
+  ? "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/header_video/Baleno_safari.mov"
+  : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/baleno/Baleno.webm";
+
 
   const [tabsColors, setTabsColors] = useState(1);
   return (
@@ -72,7 +81,7 @@ function Baleno() {
         />
       </Helmet>
       <Header />
-      <div className="relative">
+      <div className="relative bg-black">
         <div className="top-0 left-0 w-full h-screen ">
           <video
             className="object-cover w-full h-full "
@@ -84,9 +93,8 @@ function Baleno() {
             poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/new_baleno/1.webp"
           >
             <source
-              // class='w-30 h-30'
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/baleno/Baleno.webm"
-              type="video/mp4"
+              src={videoSource}
+              type={isSafari ? "video/quicktime" : "video/mp4"}
             />
           </video>
           <div className="absolute bottom-40 lg:bottom-24 left-[3%] lg:left-[5%] text-white ">
@@ -131,6 +139,8 @@ function Baleno() {
           </div>
         </div>
       </div>
+      <CarEnq2 title="BOOK YOUR Baleno" />
+      <Variant />
       <div className='bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/Baleno_Banner_Blue.webp)] bg-cover bg-no-repeat bg-center pt-20 overflow-hidden '>
         <div className='container mx-auto'>
           <div className='grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 py-16 lg:py-0'>
@@ -354,9 +364,9 @@ function Baleno() {
           </div>
         </div>
       </div>
-      <Variant />
+      {/* <Variant /> */}
       <ImageViewer />
-      <OnRoadPrice title={'Baleno'} />
+      {/* <OnRoadPrice title={'Baleno'} /> */}
       <Features />
       <ImageOptions />
     </>

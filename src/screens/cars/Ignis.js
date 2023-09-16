@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ImageViewer from "../../components/IGNIS/ImageViewer";
-import OnRoadPrice from "../../components/utils/OnRoadPrice";
+// import OnRoadPrice from "../../components/utils/OnRoadPrice";
 import Features from "../../components/IGNIS/Features";
 import { MdOutlineFileDownload } from "react-icons/md";
 import Helmet from "react-helmet";
@@ -10,8 +10,16 @@ import Header from "../../components/Header/Header";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { CarEnq2 } from "./Invicto";
 
 function Ignis() {
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+// Define the video source URL based on the browser
+const videoSource = isSafari
+  ? "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/header_video/Ignis_safari.mov"
+  : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/ignis/ignis_banner.webm";
+
   useEffect(() => {
     // AOS.init();
     AOS.init({ once: true });
@@ -69,8 +77,8 @@ function Ignis() {
           content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
         />
       </Helmet>
-      <Header />
-      <div className="relative">
+      <Header  />
+      <div className="relative bg-black">
         <div className="top-0 left-0 w-full h-screen ">
           <video
             className="object-cover w-full h-full "
@@ -81,10 +89,9 @@ function Ignis() {
             muted
             poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/360/5.jpg"
           >
-            <source
-              // class='w-30 h-30'
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/ignis/ignis_banner.webm"
-              type="video/mp4"
+             <source
+              src={videoSource}
+              type={isSafari ? "video/quicktime" : "video/mp4"}
             />
           </video>
           <div className="absolute bottom-40 lg:bottom-24 left-[3%] lg:left-[5%] text-white ">
@@ -129,6 +136,8 @@ function Ignis() {
           </div>
         </div>
       </div>
+      <CarEnq2 title="BOOK YOUR IGNIS" />
+      <Variant />
       <div className="bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-Background-Banners/Saboo-RKS-Nexa-Ignis-Car-Background.webp)] bg-center w-full bg-cover bg-no-repeat pt-20  lg:pt-36">
         <div className="container mx-auto">
           <div className="grid sm:grid-cols-2">
@@ -425,9 +434,9 @@ function Ignis() {
           </div>
         </div>
       </div>
-      <Variant />
+      {/* <Variant /> */}
       <ImageViewer />
-      <OnRoadPrice title={"Ignis"} />
+      {/* <OnRoadPrice title={"Ignis"} /> */}
       <Features />
       <ImageOptions />
     </>

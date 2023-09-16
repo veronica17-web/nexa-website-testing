@@ -1,7 +1,7 @@
 // import React from 'react'
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import OnRoadPrice from "../../components/utils/OnRoadPrice";
+// import OnRoadPrice from "../../components/utils/OnRoadPrice";
 import { MdOutlineFileDownload } from "react-icons/md";
 import Header from "../../components/Header/Header";
 // import ImageViewer from '../../components/Vitara/ImageViewer';
@@ -13,6 +13,7 @@ import MobileCarousel from "../../components/Vitara/Extras/MobileCarousel";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { CarEnq2 } from "./Invicto";
 
 // const width = window.innerWidth;
 
@@ -81,6 +82,8 @@ function GrandVitara() {
       </Helmet>
       <Header />
       <VariantPlayer />
+      <CarEnq2 title="BOOK YOUR GRAND VITARA" />
+      <Variant />
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/vitara-color-banner.webp')] bg-cover bg-no-repeat">
         <div className="max-w-6xl mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-2">
@@ -387,7 +390,7 @@ function GrandVitara() {
           </div>
         </div>
       </div>
-      <Variant />
+  
 
       {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
       <div className="hidden sm:block">
@@ -465,7 +468,7 @@ function GrandVitara() {
       </div>
 
       {/* <ImageViewer /> */}
-      <OnRoadPrice title={"Grand Vitara"} />
+      {/* <OnRoadPrice title={"Grand Vitara"} /> */}
       <Features />
       {/* <ImageOptions /> */}
     </>
@@ -473,21 +476,31 @@ function GrandVitara() {
 }
 
 const VariantPlayer = () => {
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+  // Define the video source URL based on the browser
+  const videoSource = isSafari
+    ? "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/header_video/Grand+Vitara_Safari.mov"
+    : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/Grand+vitara.webm";
+
   return (
     <div className="top-0 left-0 w-full h-screen relative bg-black ">
-      <video
-        className="w-full h-full object-cover "
-        autoplay="autoplay"
-        loop
-        muted
-        // poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimny_HeaderBanner_1500x634+webp.webp"
-      >
-        <source
-          class="w-30 h-30"
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/Grand+vitara.webm"
-          type="video/mp4"
-        />
-      </video>
+      
+       <video
+          className="object-cover w-full h-full "
+          preload="metadata"
+          // poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimny_HeaderBanner_1500x634+webp.webp"
+          loop
+          autoPlay
+          playsInline
+          muted
+        >
+          <source
+            src={videoSource}
+            type={isSafari ? "video/quicktime" : "video/mp4"}
+          />
+        </video>
+      
       <div className="absolute bottom-40 lg:bottom-24 left-[3%] lg:left-[5%] text-white ">
             <div
               data-aos="fade-right"
@@ -567,8 +580,8 @@ const Variant = () => {
           </div>
           <div className="text-center text-gray-200">
             <p className="text-2xl font-bold">₹ {price}*</p>
-            <p className="tracking-wide text-xl">Ex-Showroom Price</p>
-            <p className="uppercase text-gray-400 font-bold">Hyderabad</p>
+            <p className="tracking-wide text-xl pb-1">Ex-Showroom Price - Hyderabad</p>
+
             <div className="text-red-200 text-xs font-light">
               <sup>*</sup>Alpha+ & Zeta+ are applicable only for Intelligent
               Electric Hybrid Variants

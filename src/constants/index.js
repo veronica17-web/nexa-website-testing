@@ -284,7 +284,7 @@ export const products = [
     displacement: "1197 cc",
     power: "66 @ 6000",
     torque: "113 @ 4400",
-    fuelTank: "37",
+    fuelTank: "37 L",
     mileage: "22.35 (MT), 22.94 (AMT)",
     tranmission: "5MT/5AT",
     length: "3990",

@@ -185,7 +185,7 @@ function Footer() {
                 ))}
               </div>
               <p>Social Links</p>
-              <div className='flex items-center space-x-3'>
+              <div className='flex items-center space-x-2 xl:space-x-3'>
                 <a
                   href='https://www.facebook.com/saboorksnexa/'
                   target='_blank'

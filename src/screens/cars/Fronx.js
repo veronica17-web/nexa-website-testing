@@ -4,19 +4,33 @@ import Header from "../../components/Header/Header";
 import { Link } from "react-router-dom";
 
 // Import Swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper";
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/free-mode";
 import "swiper/css/navigation";
+import "swiper/css/thumbs";
 import Helmet from "react-helmet";
 // import { Autoplay, Navigation, Pagination } from 'swiper';
-import OnRoadPrice from "../../components/utils/OnRoadPrice";
-import { MdOutlineFileDownload } from "react-icons/md";
+// import OnRoadPrice from "../../components/utils/OnRoadPrice";
+import {
+  MdAirlineSeatReclineExtra,
+  MdOutlineFileDownload,
+} from "react-icons/md";
 // import Carousel from '../../components/Fronx/Extras/Carousel';
 import MobileCarousel from "../../components/Fronx/Extras/MobileCarousel";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { CarComp, CarEnq2, InvictoCarEnquiry2 } from "./Invicto";
+import { useRef } from "react";
+import { GiBeltBuckles, GiSpeedometer } from "react-icons/gi";
+import { products } from "../../constants";
 
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+const videoSource = isSafari
+  ? "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/header_video/Fronx_safari.mov"
+  : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/video/fronx_banner.webm";
 const Fronx = () => {
   useEffect(() => {
     // AOS.init();
@@ -75,17 +89,95 @@ const Fronx = () => {
         /> */}
       </Helmet>
       <Header />
-      <VariantPlayer />
 
+      <div className="relative bg-black">
+        <div className="top-0 left-0 w-full h-screen ">
+          <video
+            className="object-cover w-full h-full "
+            preload="metadata"
+            poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-banner.webp"
+            loop
+            autoPlay
+            playsInline
+            muted
+          >
+            <source
+              src={videoSource}
+              type={isSafari ? "video/quicktime" : "video/mp4"}
+            />
+          </video>
+          <div className="absolute bottom-40 lg:bottom-24 left-[3%] lg:left-[5%] text-white ">
+            <div
+              data-aos="fade-right"
+              data-aos-delay="200"
+              data-aos-duration="500"
+              className="text-2xl lg:text-4xl"
+            >
+              PRESENTING
+            </div>
+            <div
+              data-aos="fade-right"
+              data-aos-delay="400"
+              data-aos-duration="500"
+              className="text-5xl lg:text-8xl font-serif pb-1 uppercase"
+            >
+              fronx
+            </div>
+            <div
+              data-aos="fade-right"
+              data-aos-delay="600"
+              data-aos-duration="1000"
+              className="text-2xl lg:text-5xl mb-2 lg:mb-4 uppercase"
+            >
+              THE SHAPE OF NEW
+            </div>
+            {/* <Link to="/maruti-invicto-price-in-hyderabad">
+            <button
+              data-aos="fade-right"
+              data-aos-delay="800"
+              data-aos-duration="1000"
+              className="border border-white px-4 py-2 lg:px-8 text-white uppercase"
+              onClick={() => setOpen(true)}
+            >
+              Discover More
+            </button>
+          </Link> */}
+            <a
+              href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/FRONX+Brochure_Saboo+RKS.6b9c2f109c812f47efb9.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button
+                data-aos="fade-right"
+                data-aos-delay="800"
+                data-aos-duration="1000"
+                className="border border-white px-4 py-2 lg:px-8 text-white uppercase"
+              >
+                BROCHURE
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <CarEnq2 title="BOOK YOUR FRONX" />
+      <Variant />
+      <VariantPlayer2 />
+      <Technology />
       <FronxInteriorAndOther />
-      <OnRoadPrice title={"FRONX"} />
+      {/* <OnRoadPrice title={"FRONX"} /> */}
       {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
-      <div className="hidden sm:block">
-        <div className="flex h-[60vh] bg-white gap-1 px-4 pt-1">
-          <div className="w-1/5 duration-500 rounded-lg border hover:w-2/3  bg-no-repeat bg-cover bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-10C_Engine.webp')] ">
+      <div className="hidden sm:block bg-black text-white pt-2 pb-8">
+        <div className="  w-full pt-8 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl ">
+          PERFORMANCE
+        </div>
+        <div className="text-center text-md lg:text-lg pb-2">
+          Born To Outperform, In Style
+        </div>
+        <div className="flex h-[75vh]  gap-2 px-4 pt-1">
+          <div className="w-1/5 duration-500 rounded-lg border border-gray-500 hover:w-2/3  bg-no-repeat bg-cover bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-10C_Engine.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
               <img
-                src="https://nexaprod2.azureedge.net/-/media/feature/nexawebsitecarbrand/flash/performance/boosterjet-logo-png.png?modified=20230423101830"
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/Boosterjet+Logo+png.png"
                 alt=""
                 className=" w-40"
                 srcSet=""
@@ -99,7 +191,7 @@ const Fronx = () => {
               </span>
             </div>
           </div>
-          <div className="w-1/5 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-12k_Engine.webp')] ">
+          <div className="w-1/5 duration-500 rounded-lg border border-gray-500 hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-12k_Engine.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
               <span className="font-semibold text-lg">
                 ADVANCED 1.2L K-SERIES DUAL JET, DUAL VVT ENGINE
@@ -109,7 +201,7 @@ const Fronx = () => {
               </span>
             </div>
           </div>
-          <div className="w-1/5 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-Smart_Hybird.webp')] ">
+          <div className="w-1/5 duration-500 rounded-lg border border-gray-500 hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-Smart_Hybird.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
               <span className="font-semibold text-lg">
                 SMART HYBRID TECHNOLOGY
@@ -119,7 +211,7 @@ const Fronx = () => {
               </span>
             </div>
           </div>
-          <div className="w-1/5 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AGS.webp')] ">
+          <div className="w-1/5 duration-500 rounded-lg border border-gray-500 hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AGS.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
               <span className="font-semibold text-lg">
                 6-SPEED AUTOMATIC TRANSMISSION WITH PADDLE SHIFTERS
@@ -129,7 +221,7 @@ const Fronx = () => {
               </span>
             </div>
           </div>
-          <div className="w-1/5 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AMT.webp')] ">
+          <div className="w-1/5 duration-500 rounded-lg border border-gray-500 hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AMT.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
               <span className="font-semibold text-lg">AUTO GEAR SHIFT</span>
               <span className="font-thin tracking-wider">
@@ -142,6 +234,9 @@ const Fronx = () => {
       <div className=" sm:hidden">
         <MobileCarousel />
       </div>
+      <Safety />
+      <CarComp details={products[1]} />
+      <InvictoCarEnquiry2 title="BOOK YOUR FRONX NOW" carName="Fronx" />
     </>
   );
 };
@@ -149,8 +244,8 @@ const Fronx = () => {
 function FronxInteriorAndOther() {
   const [tabsColors, setTabsColors] = useState(1);
   return (
-    <div className=" mx-auto py-4 space-y-4">
-      <p className="font-bold text-4xl text-center">Maruti Suzuki FRONX</p>
+    <div className=" bg-black">
+      {/* <p className="font-bold text-4xl text-center">Maruti Suzuki FRONX</p>
       <p className=" text-center tracking-wider font-bold">
         A design philosphy sustained by three unwavering pillars
       </p>
@@ -161,8 +256,10 @@ function FronxInteriorAndOther() {
         convenience. Sharp details, intuitive tech, and premium finishes, FRONX
         is uniquely craftedto satisfy the modren sensibilities of NEXA
         customers.
-      </p>
-      <Variant />
+      </p> */}
+      <div className=" container mx-auto w-full pt-10 pb-4 text-3xl text-center uppercase  sm:text-4xl md:text-5xl bg-black text-white">
+        COLOURS
+      </div>
 
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/colors/flesh-color-bg.webp')] bg-cover bg-no-repeat">
         <div className="max-w-4xl mx-auto">
@@ -244,7 +341,7 @@ function FronxInteriorAndOther() {
                   <div onClick={() => setTabsColors(1)}>
                     <div className={tabsColors === 1 ? "relative" : "hidden"}>
                       <p className="w-6 h-6 bg-[#163472] mr-[10px] border-t border-x"></p>
-                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center "></span>
+                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-4 w-4 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center "></span>
                       <p className="arrow-dropdown-selected-car border-t-8 border-[#163472]"></p>
                     </div>
                     <p
@@ -259,7 +356,7 @@ function FronxInteriorAndOther() {
                   <div onClick={() => setTabsColors(2)}>
                     <div className={tabsColors === 2 ? "relative" : "hidden"}>
                       <p className="w-6 h-6 bg-[#f9f9f9] mr-[10px] border-t border-x"></p>
-                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
+                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-4 w-4 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
                       <p className="arrow-dropdown-selected-car border-t-8 border-[#f9f9f9]"></p>
                     </div>
                     <p
@@ -274,7 +371,7 @@ function FronxInteriorAndOther() {
                   <div onClick={() => setTabsColors(3)}>
                     <div className={tabsColors === 3 ? "relative" : "hidden"}>
                       <p className="w-6 h-6 bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/grand_vitara/arctic-white-black.webp')] mr-[10px] border-t border-x"></p>
-                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
+                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-4 w-4 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
                       <p className="arrow-dropdown-selected-car border-t-8"></p>
                     </div>
                     <p
@@ -289,7 +386,7 @@ function FronxInteriorAndOther() {
                   <div onClick={() => setTabsColors(4)}>
                     <div className={tabsColors === 4 ? "relative" : "hidden"}>
                       <p className="w-6 h-6 bg-[#282828] mr-[10px] border-t border-x"></p>
-                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
+                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-4 w-4 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
                       <p className="arrow-dropdown-selected-car border-t-8 border-[#282828]"></p>
                     </div>
                     <p
@@ -304,7 +401,7 @@ function FronxInteriorAndOther() {
                   <div onClick={() => setTabsColors(5)}>
                     <div className={tabsColors === 5 ? "relative" : "hidden"}>
                       <p className="w-6 h-6 bg-[#464848] mr-[10px] border-t border-x"></p>
-                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
+                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-4 w-4 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
                       <p className="arrow-dropdown-selected-car border-t-8 border-[#464848]"></p>
                     </div>
                     <p
@@ -319,7 +416,7 @@ function FronxInteriorAndOther() {
                   <div onClick={() => setTabsColors(6)}>
                     <div className={tabsColors === 6 ? "relative" : "hidden"}>
                       <p className="w-6 h-6 bg-[#AC0F0F] mr-[10px] border-t border-x"></p>
-                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
+                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-4 w-4 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
                       <p className="arrow-dropdown-selected-car border-t-8 border-[#AC0F0F]"></p>
                     </div>
                     <p
@@ -334,7 +431,7 @@ function FronxInteriorAndOther() {
                   <div onClick={() => setTabsColors(7)}>
                     <div className={tabsColors === 7 ? "relative" : "hidden"}>
                       <p className="w-6 h-6 mr-[10px] bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/grand_vitara/opulent-red-black.webp')] border-t border-x"></p>
-                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
+                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-4 w-4 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
                       <p className="arrow-dropdown-selected-car border-t-8 border-[#AC0F0F]"></p>
                     </div>
                     <p
@@ -349,7 +446,7 @@ function FronxInteriorAndOther() {
                   <div onClick={() => setTabsColors(8)}>
                     <div className={tabsColors === 8 ? "relative" : "hidden"}>
                       <p className="w-6 h-6 bg-[#B6BABD] mr-[10px] border-t border-x"></p>
-                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
+                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-4 w-4 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
                       <p className="arrow-dropdown-selected-car border-t-8 border-[#B6BABD]"></p>
                     </div>
                     <p
@@ -364,7 +461,7 @@ function FronxInteriorAndOther() {
                   <div onClick={() => setTabsColors(9)}>
                     <div className={tabsColors === 9 ? "relative" : "hidden"}>
                       <p className="w-6 h-6 bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/grand_vitara/splendid-silver-black.webp')] mr-[10px] border-t border-x"></p>
-                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute  top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
+                      <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-4 w-4 absolute  top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
                       <p className="arrow-dropdown-selected-car border-t-8 border-[#B6BABD]"></p>
                     </div>
                     <p
@@ -500,8 +597,9 @@ const Variant = () => {
           </div>
           <div className="text-center text-gray-200">
             <p className="text-2xl font-bold">₹ {price}*</p>
-            <p className="tracking-wide text-xl">Ex-Showroom Price</p>
-            <p className="uppercase text-gray-400 font-bold">Hyderabad</p>
+            <p className="tracking-wide text-xl">
+              Ex-Showroom Price - Hyderabad
+            </p>
             <div className="text-red-200 text-xs font-light">
               <sup>*</sup>Alpha+ & Zeta+ are applicable only for Direct
               Injection engine with Smart Hybrid
@@ -524,112 +622,686 @@ const Variant = () => {
   );
 };
 
-const VariantPlayer = () => {
+const VariantPlayer2 = () => {
+  const videoRef = useRef(null);
+  const [playingSegment, setPlayingSegment] = useState(0);
+  const handleContextMenu = (e) => {
+    e.preventDefault(); // Prevent the context menu from appearing
+  };
+
+  const jumpToTime = (timeInSeconds, segment) => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = timeInSeconds;
+      videoRef.current.play();
+      setPlayingSegment(segment);
+    }
+  };
+  useEffect(() => {
+    if (videoRef.current) {
+      const videoNode = videoRef.current; // Capture the current value of videoRef.current
+      const handleTimeUpdate = () => {
+        const currentTime = videoNode.currentTime;
+
+        if (currentTime >= 0 && currentTime < 1) {
+          setPlayingSegment(0);
+        } else if (currentTime >= 1 && currentTime < 2) {
+          setPlayingSegment(1);
+        } else if (currentTime >= 3 && currentTime < 5) {
+          setPlayingSegment(2);
+        } else if (currentTime >= 5 && currentTime < 7) {
+          setPlayingSegment(3);
+        } else if (currentTime >= 7 && currentTime < 9) {
+          setPlayingSegment(4);
+        } else if (currentTime >= 9) {
+          setPlayingSegment(5);
+        }
+      };
+
+      videoNode.addEventListener("timeupdate", handleTimeUpdate);
+
+      return () => {
+        videoNode.removeEventListener("timeupdate", handleTimeUpdate);
+      };
+    }
+  }, []);
+
   return (
-    <div className="top-0 left-0 w-full h-screen relative  ">
-      <video
-        className="w-full h-full object-cover  "
-        autoplay="autoplay"
-        loop
-        muted
-        poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-banner.webp"
+    <>
+      <div className="  w-full pt-10 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
+        DESIGN HIGHLIGHTS
+      </div>
+      <div
+        className="top-0 left-0 w-full h-[95vh] relative  "
+        onContextMenu={handleContextMenu}
       >
-        <source
-          class="w-30 h-30"
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/video/fronx_banner.webm"
-          type="video/mp4"
-        />
-      </video>
-      {/* <img
+        {/* <div className=" absolute top-2 w-full text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
+          DESIGN HIGHLIGHTS
+        </div> */}
+        <video
+          className="w-full h-full object-cover  "
+          autoplay="autoplay"
+          loop
+          muted
+          ref={videoRef}
+          poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-banner.webp"
+        >
+          <source
+            class="w-30 h-30"
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/video/fronx_specs.mp4"
+            type="video/mp4"
+          />
+        </video>
+        {/* <img
         src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner-without-book-now.webp"
         alt=""
         className="h-screen w-full sm:hidden"
       /> */}
-      <div className="absolute bottom-40 lg:bottom-24 left-[3%] lg:left-[5%] text-white ">
-        <div
-          data-aos="fade-right"
-          data-aos-delay="200"
-          data-aos-duration="500"
-          className="text-2xl lg:text-4xl"
-        >
-          PRESENTING
-        </div>
-        <div
-          data-aos="fade-right"
-          data-aos-delay="400"
-          data-aos-duration="500"
-          className="text-5xl lg:text-8xl font-serif pb-1 uppercase"
-        >
-          fronx
-        </div>
-        <div
-          data-aos="fade-right"
-          data-aos-delay="600"
-          data-aos-duration="1000"
-          className="text-2xl lg:text-5xl mb-2 lg:mb-4 uppercase"
-        >
-          THE SHAPE OF NEW
-        </div>
-        {/* <Link to="/maruti-invicto-price-in-hyderabad">
-            <button
-              data-aos="fade-right"
-              data-aos-delay="800"
-              data-aos-duration="1000"
-              className="border border-white px-4 py-2 lg:px-8 text-white uppercase"
-              onClick={() => setOpen(true)}
-            >
-              Discover More
-            </button>
-          </Link> */}
-        <a
-          href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/FRONX+Brochure_Saboo+RKS.6b9c2f109c812f47efb9.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button
-            data-aos="fade-right"
-            data-aos-delay="800"
-            data-aos-duration="1000"
-            className="border border-white px-4 py-2 lg:px-8 text-white uppercase"
-          >
-            BROCHURE
-          </button>
-        </a>
+        <div className="absolute bottom-20 lg:bottom-24   w-full ">
+          <div className="hidden md:block container mx-auto bg-[#0000001c] rounded-2xl ">
+            <div className="relative">
+              <div className="relative flex justify-between  ">
+                <div
+                  className={`h-4 w-4  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(0, 0)}
+                    className={`bg-[#163472] h-full w-full rounded-full `}
+                  ></div>
+                </div>
+                <div
+                  className={`h-4 w-4  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(1, 1)}
+                    className={`bg-[#163472] h-full w-full rounded-full`}
+                  ></div>
+                </div>
+                <div
+                  className={`h-4 w-4  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(4, 2)}
+                    className={`bg-[#163472] h-full w-full rounded-full`}
+                  ></div>
+                </div>
+                <div
+                  className={`h-4 w-4  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(6, 3)}
+                    className={`bg-[#163472] h-full w-full rounded-full`}
+                  ></div>
+                </div>
+                <div
+                  className={`h-4 w-4  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(8, 4)}
+                    className={`bg-[#163472] h-full w-full rounded-full`}
+                  ></div>
+                </div>
+                <div
+                  className={`h-4 w-4  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(10, 5)}
+                    className={`bg-[#163472] h-full w-full rounded-full`}
+                  ></div>
+                </div>
 
-        
-      </div>
-     
-      {/* <img
+                {/* <div
+                className={`h-4 w-4  p-1 z-10 cursor-pointer  border-2 border-gray-200 rounded-full absolute duration-500 transition-all  ${
+                  playingSegment === 3
+                    ? "ml-[132px]"
+                    : playingSegment === 2
+                    ? "ml-[44px]"
+                    : playingSegment === 1
+                    ? "mr-[44px]"
+                    : playingSegment === 0 && "mr-[132px]"
+                }`}
+              ></div> */}
+              </div>
+              <div
+                className={`${
+                  playingSegment === 0
+                    ? "w-[0%]"
+                    : playingSegment === 1
+                    ? "w-[20%]"
+                    : playingSegment === 2
+                    ? "w-[40%]"
+                    : playingSegment === 3
+                    ? "w-[60%]"
+                    : playingSegment === 4
+                    ? "w-[80%]"
+                    : "w-[100%]"
+                } h-1 bg-[#163472] duration-500 absolute top-1.5 `}
+              ></div>
+            </div>
+          </div>
+        </div>
+        {/* <img
         src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-banner.webp'
         alt=''
       /> */}
-      {/* <video class='w-screen' autoplay='autoplay' loop>
+        {/* <video class='w-screen' autoplay='autoplay' loop>
         <source
           class='w-30 h-30'
           src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/video/NEXA+FRONX++05SEC++110123+C2C+MUTE.mp4'
           type='video/mp4'
         />
       </video> */}
+      </div>
+    </>
+  );
+};
+
+const Technology = () => {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  return (
+    <div className="bg-black ">
+      <div className="text-center text-white  container mx-auto ">
+        <div className="  w-full pt-8 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl ">
+          TECHNOLOGY
+        </div>
+        <div className="text-center text-md lg:text-lg">
+          Feature Rich and Future Facing
+        </div>
+        <div className="     py-2 sm:py-5 ">
+          <div className="  pb-6 space-y-4 rounded">
+            {/* <Carousel /> */}
+
+            <Swiper
+              style={{
+                "--swiper-navigation-color": "#fff",
+                "--swiper-pagination-color": "#fff",
+              }}
+              loop={true}
+              speed={1000}
+              // spaceBetween={2}
+              slidesPerView={1}
+              centeredSlides={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              navigation={true}
+              thumbs={{ swiper: thumbsSwiper }}
+              modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+              className="mySwiper2 h-28"
+            >
+              <SwiperSlide className="">
+                <div className="w-full">
+                  <img
+                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-DASHBOARD.webp"
+                    alt="Dual-Tone Plush Interiors"
+                    className="  relative"
+                  />
+                  <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
+                    <div className="font-medium pb-2">
+                      Dual-Tone Plush Interiors
+                    </div>
+                    <span className="font-light">
+                      The lush and spacious dual tone interiors matched with
+                      horizontal linear embossed pattern makes you feel like
+                      you’re driving in the lap of comfort and grandeur.
+                    </span>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <div className="w-full">
+                  <img
+                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-360_screen.webp"
+                    alt="360 View Camera"
+                  />
+                  <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
+                    <div className="font-medium pb-2">360 View Camera</div>
+                    <span className="font-light">
+                      Get the best view whether you’re driving or parking with
+                      the 360 View Camera that guides you and shows your car
+                      from all angles. Giving you convenience and assurance, so
+                      that there’s never a second thought.
+                    </span>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <div className="w-full">
+                  <img
+                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-Head_Up_Display.webp"
+                    alt="Head Up Display"
+                    className=""
+                  />
+                  <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
+                    <div className="font-medium pb-2">Head Up Display</div>
+                    <span className="font-light">
+                      Focus on what matters and reduce driving fatigue and with
+                      the multiple functions and information like navigation,
+                      distance, fuel economy and more that are readily available
+                      right before your gaze.
+                    </span>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide className="relative">
+                <div className="w-full">
+                  <img
+                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-9inch_touch_screen.webp"
+                    alt='22.86 cm (9") SmartPlay Pro+ with Surround Sense Powered by ARKAMYS'
+                  />
+                  <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
+                    <div className="font-medium pb-2">
+                      22.86 cm (9") SmartPlay Pro+ with Surround Sense Powered
+                      by ARKAMYS
+                    </div>
+                    <span className="font-light">
+                      Experience superior sound quality powered by ARKAMYS with
+                      uninterrupted and intuitive connectivity courtesy Apple
+                      CarPlay & Android Auto.
+                    </span>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <div className="w-full">
+                  <img
+                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-PADDLE_SHIFTERS.webp"
+                    alt=" Paddle Shifters (in AT Only)"
+                  />
+                  <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
+                    <div className="font-medium pb-2">
+                      Paddle Shifters (in AT Only)
+                    </div>
+                    <span className="font-light">
+                      The steering mounted paddle shifters provide for
+                      controlled yet exciting drives, be it smooth acceleration
+                      on open roads or quick downshifts to tackle city
+                      overtakes. Every gear change is at your fingertips.
+                    </span>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="relative">
+                <div className="w-full">
+                  <img
+                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-wireless-changing.webp"
+                    alt="Wireless Charger"
+                  />
+                  <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
+                    <div className="font-medium pb-2">Wireless Charger</div>
+                    <span className="font-light">
+                      Stay connected 24x7 wherever you go with seamless,
+                      wireless charging, so both you and your phone are always
+                      powered up.
+                    </span>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              loop={true}
+              // spaceBetween={2}
+              slidesPerView={5}
+              // freeMode={true}
+              // watchSlidesProgress={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper-3  text-white hidden md:block"
+            >
+              <SwiperSlide classname="cursor-pointer">
+                <div>
+                  <img
+                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-DASHBOARD.webp"
+                    alt="Dual-Tone Plush Interiors"
+                    className="max-h-28"
+                  />
+                  <div className="font-medium py-2 ">
+                    Dual-Tone Plush Interiors
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide classname="cursor-pointer">
+                <div>
+                  <img
+                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-360_screen.webp"
+                    alt="360 View Camera"
+                    className="max-h-28"
+                  />
+                  <div className="font-medium py-2 ">360 View Camera</div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide classname="cursor-pointer">
+                <div>
+                  <img
+                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-Head_Up_Display.webp"
+                    alt="Head Up Display"
+                    className="max-h-28"
+                  />
+                  <div className="font-medium py-2 ">Head Up Display</div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide classname="cursor-pointer">
+                <div>
+                  <img
+                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-9inch_touch_screen.webp"
+                    alt='22.86 cm (9") SmartPlay Pro+ with Surround Sense Powered by ARKAMYS'
+                    className="max-h-28"
+                  />
+                  <div className="font-medium py-2 ">
+                    22.86 cm (9") SmartPlay Pro+
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide classname="cursor-pointer">
+                <div>
+                  <img
+                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-PADDLE_SHIFTERS.webp"
+                    alt=" Paddle Shifters (in AT Only)"
+                    className="max-h-28"
+                  />
+                  <div className="font-medium py-2 ">
+                    Paddle Shifters (in AT Only)
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide classname="cursor-pointer">
+                <div>
+                  <img
+                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-wireless-changing.webp"
+                    alt="Wireless Charger"
+                    className="max-h-28"
+                  />
+                  <div className="font-medium py-2 ">Wireless Charger</div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-// const MobileVariantPlayer = () => {
-//   return (
-//     <div className=''>
-//       <img
-//         src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner-without-book-now.webp'
-//         alt=''
-//       />
-//       {/* <video className='w-screen' autoplay='autoplay' loop>
-//         <source
-//           className='w-30 h-30'
-//           src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/video/NEXA+FRONX++05SEC++110123+C2C+MUTE.mp4'
-//           type='video/mp4'
-//         />
-//       </video> */}
-//     </div>
-//   );
-// };
+function Safety() {
+  const [index, setIndex] = useState(0);
+  return (
+    <>
+      <div className="container mx-auto mt-6 text-center ">
+        <div className="pb-4 text-3xl text-center uppercase sm:text-4xl md:text-5xl lg:pt-8 ">
+          SAFETY
+        </div>
+        <span className="text-md lg:text-lg">
+          Reassurance of Safety on Every Drive
+        </span>
+      </div>
+      <div className="py-4 text-2xl font-medium text-center lg:text-3xl "></div>
+      <div className="container relative flex flex-col items-center justify-center mx-auto -mt-10">
+        <img
+          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/safety_fronx.webp"
+          alt=" Reassurance of Safety on Every Drive"
+          srcSet=""
+          className="m-28"
+        />
+
+        <div className="absolute left-[62%] top-16  lg:flex group hidden  ">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  cursor-pointer">
+            {/* <GiBeltBuckles className="text-4xl group-hover:text-white " /> */}
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/safety-belt.svg"
+              alt=" Seat Belt Pre-Tensioners with force limiters"
+              className="scale-[0.6]"
+            />
+          </div>
+          <div className="mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+            <div className="pb-1 font-medium ">
+              Seat Belt Pre-Tensioners with force limiters
+            </div>
+            <div className=" font-light ">
+              Pre-tensioners restrain the passengers and Force Limiters prevent
+              seatbelt-inflicted injury.
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[4%] right-[62%] lg:flex group hidden  ">
+          <div className="mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+            <div className="pb-1 font-medium ">SUZUKI-TECT BODY</div>
+            <div className=" font-light ">
+              Suzuki’s Total Effective Control Technology (TECT) concept results
+              in effective absorption and dispersion of crash energy. The
+              effective use of high-tensile steel for major parts makes the body
+              light, strong and safe
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  cursor-pointer">
+            {/* <GiBeltBuckles className="text-4xl group-hover:text-white " /> */}
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/repair.svg"
+              alt=" Seat Belt Pre-Tensioners with force limiters"
+              className="scale-[0.8]"
+            />
+          </div>
+        </div>
+        <div className="absolute left-[19%] xl:left-[20%] top-[60%]  lg:flex lg:flex-col md:items-start group hidden  ">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black">
+            <GiSpeedometer className="text-4xl group-hover:text-white" />
+          </div>
+
+          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+            <div className="pb-1 font-medium ">ABS with EBD</div>
+
+            <div className="hidden text-sm font-light group-hover:block">
+              Anti-lock Braking System prevents the locking up of the wheels
+              when the brakes are applied under heavy loads while EBD ensures an
+              efficient and effective braking.
+            </div>
+          </div>
+        </div>
+        <div className="absolute left-[47%] bottom-24  lg:flex group hidden items-end  ">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 ">
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/airbag.svg"
+              className="scale-[0.6]"
+              alt=" 6 Air Bags to take the impact before it reaches you."
+            />
+          </div>
+          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+            <div className="pb-1 font-medium ">6 Air Bags</div>
+
+            <div className="hidden font-light group-hover:block">
+              6 Air Bags to take the impact before it reaches you.
+            </div>
+          </div>
+        </div>
+        <div className="absolute left-[10%]  bottom-[58%]    lg:flex-col md:items-start group hidden lg:flex ">
+          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+            <div className="pb-1 font-medium ">ISOFIX child fix anchorages</div>
+
+            <div className="hidden font-light group-hover:block">
+              Standardized international child seat fitting system, for that
+              perfect drive with your little ones.
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black ">
+            <MdAirlineSeatReclineExtra className="text-4xl group-hover:text-white" />
+          </div>
+        </div>
+        <div className="absolute left-[78%]  bottom-[58%] md:items-start group hidden lg:flex lg:flex-col ">
+          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm hidden group-hover:block ">
+            <div className="pb-1 font-medium ">
+              FULL FRONTAL IMPACT COMPLIANCE, FRONTAL OFFSET IMPACT COMPLIANCE,
+              SIDE IMPACT COMPLIANCE
+            </div>
+
+            <div className=" font-light ">
+              Successfully tested and in compliance with international safety
+              norms
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black mb-2 ">
+            <GiBeltBuckles className="text-4xl group-hover:text-white" />
+          </div>
+        </div>
+
+        <div className="absolute left-[77%]  top-[45%]  md:items-start group hidden lg:block ">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  mb-2 ">
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/road.svg"
+              className="scale-[0.6]"
+              alt="Ensuring safety, not only for the occupants, but pedestrians as
+              well"
+            />
+          </div>
+          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm hidden group-hover:block ">
+            <div className="pb-1 font-medium ">
+              PEDESTRIAN PROTECTION COMPLIANCE
+            </div>
+            <div className=" font-light ">
+              Ensuring safety, not only for the occupants, but pedestrians as
+              well
+            </div>
+          </div>
+        </div>
+
+        <div className="h-16 absolute border top-36 right-[34%] border-black hidden lg:block"></div>
+        <div className="w-48 absolute border top-52 right-[34%]  border-black hidden lg:block"></div>
+
+        <div className="h-48 absolute border bottom-44 right-[50%] border-black hidden lg:block"></div>
+        <div className="w-24 xl:w-32 absolute border  left-[22%] hidden lg:block  border-black"></div>
+        <div className="h-16 absolute border top-1/2 left-[22%] border-black hidden lg:block"></div>
+        <div className="h-16 absolute border top-[15%] left-[35%] border-black hidden lg:block"></div>
+        <div className="w-24 lg:w-[12%]  just  absolute border top-[16rem] left-[18%] hidden lg:block  border-black"></div>
+        <div className="w-10 lg:w-[10%]  just  absolute border top-[16rem] right-[23%] hidden lg:block  border-black"></div>
+        <div className="w-10 lg:w-[10%]  just  absolute border top-[22.5rem] right-[23%] hidden lg:block  border-black"></div>
+
+        <button
+          className={`absolute ${
+            index === 0 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center top-[45%] `}
+          onClick={() => setIndex(0)}
+        >
+          +
+        </button>
+        <button
+          className={`absolute ${
+            index === 1 ? "bg-black text-white" : "bg-white animate-pulse"
+          }  h-6 w-6 rounded-full flex justify-center lg:hidden items-center top-[38%] left-[44%] `}
+          onClick={() => setIndex(1)}
+        >
+          +
+        </button>
+        <button
+          className={`absolute ${
+            index === 2 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center bottom-[50%] left-[25%]  `}
+          onClick={() => setIndex(2)}
+        >
+          +
+        </button>
+        <button
+          className={`absolute ${
+            index === 3 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center top-[35%] left-[30%] `}
+          onClick={() => setIndex(3)}
+        >
+          +
+        </button>
+        <button
+          className={`absolute ${
+            index === 4 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center top-[25%] left-[30%] `}
+          onClick={() => setIndex(4)}
+        >
+          +
+        </button>
+        <button
+          className={`absolute ${
+            index === 5 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center top-[40%] right-[35%] `}
+          onClick={() => setIndex(5)}
+        >
+          +
+        </button>
+        <button
+          className={`absolute ${
+            index === 6 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center bottom-[48%] right-[20%] `}
+          onClick={() => setIndex(6)}
+        >
+          +
+        </button>
+        <div className="absolute lg:hidden bottom-[20%] px-2 backdrop-blur-sm">
+          {index === 0 ? (
+            <div>
+              <span className="font-medium text-md lg:text-lg">
+                Seat Belt Pre-Tensioners with force limiters
+              </span>
+              <br />
+              Pre-tensioners restrain the passengers and Force Limiters prevent
+              seatbelt-inflicted injury.
+            </div>
+          ) : index === 1 ? (
+            <div>
+              <span className="font-medium text-md lg:text-lg">6 Air Bags</span>
+              <br />6 Air Bags to take the impact before it reaches you.
+            </div>
+          ) : index === 2 ? (
+            <div>
+              <span className="font-medium text-md lg:text-lg">
+                ABS with EBD
+              </span>
+              <br />
+              Anti-lock Braking System prevents the locking up of the wheels
+              when the brakes are applied under heavy loads while EBD ensures an
+              efficient and effective braking.
+            </div>
+          ) : index === 3 ? (
+            <div>
+              <span className="font-medium text-md lg:text-lg">
+                ISOFIX child fix anchorages
+              </span>
+              <br />
+              Standardized international child seat fitting system, for that
+              perfect drive with your little ones.
+            </div>
+          ) : index === 4 ? (
+            <div>
+              <span className="font-medium text-md lg:text-lg">
+                SUZUKI-TECT BODY
+              </span>
+              <br />
+              Suzuki’s Total Effective Control Technology (TECT) concept results
+              in effective absorption and dispersion of crash energy. The
+              effective use of high-tensile steel for major parts makes the body
+              light, strong and safe
+            </div>
+          ) : index === 5 ? (
+            <div>
+              <span className="font-medium text-md lg:text-lg">
+              FULL FRONTAL IMPACT COMPLIANCE, FRONTAL OFFSET IMPACT COMPLIANCE,
+              SIDE IMPACT COMPLIANCE
+              </span>
+              <br />
+              Successfully tested and in compliance with international safety
+              norms
+            </div>
+          ) : (
+            index === 6 && (
+              <div>
+                <span className="font-medium text-md lg:text-lg">
+                  PEDESTRIAN PROTECTION COMPLIANCE
+                </span>
+                <br />
+                Ensuring safety, not only for the occupants, but pedestrians as
+                well
+              </div>
+            )
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
 
 export default Fronx;

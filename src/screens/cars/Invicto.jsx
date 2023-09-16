@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import Header from "../../components/Header/Header";
 // import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { GiBeltBuckles, GiSpeedometer } from "react-icons/gi";
+import { GiSpeedometer } from "react-icons/gi";
 
 import { Tab } from "@headlessui/react";
 
@@ -35,6 +35,7 @@ import { Autoplay, EffectCoverflow } from "swiper";
 import { useEffect } from "react";
 // import { CarEnq } from "../home/Home";
 import { Link } from "react-router-dom";
+import { products } from "../../constants";
 
 const Invicto = () => {
   useEffect(() => {
@@ -43,6 +44,12 @@ const Invicto = () => {
   }, []);
 
   const [exterior, setExterior] = useState(false);
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+  const videoSource = isSafari
+    ? "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/header_video/Invicto_safari.mov"
+    : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/videos/WEBSITE+mp4.webm";
+
   return (
     <div className="">
       <Helmet>
@@ -64,16 +71,15 @@ const Invicto = () => {
           <video
             className="object-cover w-full h-full "
             preload="metadata"
+            poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Header+Banner_Desktop_1500x605.webp"
             loop
             autoPlay
             playsInline
             muted
-            poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Header+Banner_Desktop_1500x605.webp"
           >
             <source
-              // class='w-30 h-30'
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/videos/WEBSITE+mp4.webm"
-              type="video/mp4"
+              src={videoSource}
+              type={isSafari ? "video/quicktime" : "video/mp4"}
             />
           </video>
           <div className="absolute bottom-40 lg:bottom-24 left-[3%] lg:left-[5%] text-white ">
@@ -174,219 +180,22 @@ const Invicto = () => {
       {/* <InvictoColor /> */}
 
       <Safety />
-      <CarComp />
-      <InvictoCarEnquiry2 />
+      <CarComp details={products[0]} />
+      <InvictoCarEnquiry2 title="BOOK YOUR INVICTO NOW" carName="Invicto" />
     </div>
   );
 };
 
-// function InvictoCarEnquiry() {
-//   const [name, setName] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [phone, setPhone] = useState("");
-//   const [model, setModel] = useState("");
-
-//   const [method, setMethod] = useState();
-//   const [loader, setLoader] = useState(false);
-
-//   function handleSubmit() {
-//     setLoader(true);
-
-//     // First API callledu
-//     axios
-//       .post("https://saboogroups.com/admin/api/enquiry", {
-//         name: name,
-//         email: email,
-//         phone: phone,
-//         model: model,
-//       })
-//       .then((res) => {
-//         setMethod("POST");
-//         toast.success("Enquiry sent successfully");
-//       })
-//       .catch((err) => {
-//         setLoader(false);
-//         toast.error("Something went wrong!");
-//         console.log(err);
-//       });
-
-//     // Second API call
-//     axios
-//       .get(
-//         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
-//       Our Sales consultant will contact you shortly.
-
-//       Regards
-//       RKS Motor Pvt. Ltd.
-//       98488 98488
-//       www.saboomaruti.in
-//       www.saboonexa.in&type=1&template_id=1407168967467983613`
-//       )
-//       .then((res) => {
-//         console.log("SMS API Response:", res.data);
-//         // Handle the response from the SMS API if needed
-//       })
-//       .catch((err) => {
-//         console.error("Error sending SMS:", err);
-//         // Handle errors from the SMS API if needed
-//       })
-//       .finally(() => {
-//         setLoader(false);
-//       });
-//   }
-
-//   const pattern = /^[6-9][0-9]{6,9}$/;
-//   if (phone !== "" && phone.length === 10) {
-//     if (!pattern.test(phone)) {
-//       toast.error("Enter valid phone number", {
-//         theme: "colored",
-//       });
-//     }
-//   }
-//   return (
-//     <>
-//       <div className="py-6 bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Saboo-RKS-Nexa-Price-Banner.webp)]">
-//         <div className="container px-5 mx-auto space-y-3 lg:px-0">
-//           <h3 className="text-xl font-semibold text-white">
-//             Register Now To Know More About Invicto
-//           </h3>
-//           <form
-//             action={
-//               pattern.test(phone) && phone.length === 10
-//                 ? "https://crm.zoho.in/crm/WebToLeadForm"
-//                 : "#"
-//             }
-//             name="WebToLeads54158000000752015"
-//             method={method}
-//             acceptCharset="UTF-8"
-//           >
-//             <input
-//               type="text"
-//               style={{ display: "none" }}
-//               name="xnQsjsdp"
-//               value="5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b"
-//             />
-//             <input type="hidden" name="zc_gad" id="zc_gad" value="" />
-//             <input
-//               type="text"
-//               style={{ display: "none" }}
-//               name="xmIwtLD"
-//               value="3e4c511e1bfac462fb9ac158b261b0d3cf3883ed222bfea597b99f9e00397c92"
-//             />
-//             <input
-//               type="text"
-//               style={{ display: "none" }}
-//               name="actionType"
-//               value="TGVhZHM="
-//             />
-//             <input
-//               type="text"
-//               style={{ display: "none" }}
-//               name="returnURL"
-//               value="https://www.saboonexa.in/thank-you?email=Email"
-//             />
-//             <input
-//               type="text"
-//               style={{ display: "none" }}
-//               id="ldeskuid"
-//               name="ldeskuid"
-//             />
-//             <input
-//               type="text"
-//               style={{ display: "none" }}
-//               id="LDTuvid"
-//               name="LDTuvid"
-//             />
-//             <div className="grid grid-cols-1 gap-4 lg:grid-cols-5 md:grid-cols-2">
-//               <div>
-//                 <input
-//                   className="w-full h-10 px-3 border rounded-md outline-none focus:ring-red-500 focus:border-red-500"
-//                   placeholder="Name"
-//                   id="Last_Name"
-//                   name="Last Name"
-//                   onChange={(e) => setName(e.target.value)}
-//                 />
-//               </div>
-//               <div>
-//                 <input
-//                   className="w-full h-10 px-3 border rounded-md outline-none focus:ring-red-500 focus:border-red-500"
-//                   placeholder="Email"
-//                   id="Email"
-//                   name="Email"
-//                   onChange={(e) => setEmail(e.target.value)}
-//                 />
-//               </div>
-//               <div>
-//                 <input
-//                   className="w-full h-10 px-3 border rounded-md outline-none focus:ring-red-500 focus:border-red-500"
-//                   placeholder="Mobile"
-//                   value={phone}
-//                   id="Phone"
-//                   name="Phone"
-//                   required
-//                   minLength="10"
-//                   maxLength="10"
-//                   onChange={(e) =>
-//                     setPhone(
-//                       e.target.value.replace(/[^1-9 ]/g, "") &&
-//                         e.target.value.replace(/ /g, "")
-//                     )
-//                   }
-//                 />
-//                 {!pattern.test(phone) && phone.length === 10 ? (
-//                   <small className="text-red-500">
-//                     phone number is invalid
-//                   </small>
-//                 ) : (
-//                   ""
-//                 )}
-//               </div>
-//               <>
-//                 <select
-//                   id="LEADCF6"
-//                   name="LEADCF6"
-//                   onChange={(e) => setModel(e.target.value)}
-//                   className="block w-full h-10 px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
-//                 >
-//                   <option>Select Model</option>
-//                   <option value="INVICTO">Invicto</option>
-//                 </select>
-//               </>
-//               <>
-//                 <button
-//                   type="submit"
-//                   disabled={
-//                     pattern.test(phone) && phone.length === 10 ? false : true
-//                   }
-//                   onClick={handleSubmit}
-//                   className="inline-flex justify-center w-full h-10 px-4 py-2 text-sm font-medium text-white bg-red-800 border border-transparent rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-//                 >
-//                   {loader ? (
-//                     <div className="flex items-center justify-center">
-//                       <CgSpinner className="w-5 h-5 mr-2 text-white animate-spin" />
-//                       Loading
-//                     </div>
-//                   ) : (
-//                     "Submit"
-//                   )}
-//                 </button>
-//               </>
-//             </div>
-//           </form>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
-function InvictoCarEnquiry2() {
+export const InvictoCarEnquiry2 = ({ title, carName }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [model, setModel] = useState("INVICTO");
+  const [model, setModel] = useState(carName);
 
   const [method, setMethod] = useState();
   const [loader, setLoader] = useState(false);
+
+  console.log(model);
 
   function handleSubmit() {
     setLoader(true);
@@ -449,7 +258,7 @@ function InvictoCarEnquiry2() {
       <div className="pt-8 pb-20 md:pb-28 ">
         <div className="container px-5 mx-auto space-y-3 lg:px-0">
           <div className="pt-2 pb-6 text-3xl text-center uppercase lg:pb-8 sm:text-4xl md:text-5xl">
-            Book Your Invicto Now
+            {title}
           </div>
           <form
             action={
@@ -555,12 +364,13 @@ function InvictoCarEnquiry2() {
                 <select
                   id="LEADCF6"
                   name="LEADCF6"
+                  value={model}
                   onChange={(e) => setModel(e.target.value)}
                   className="block w-full h-10 px-2 py-2 font-sans bg-white border-b border-black shadow-sm focus:outline-none sm:text-sm placeholder:text-lg placeholder:text-gray-600 "
                 >
                   {/* <option defaultChecked>Select Model</option> */}
-                  <option value="INVICTO" className="">
-                    Invicto
+                  <option value={carName} className="">
+                    {carName}
                   </option>
                 </select>
               </>
@@ -598,7 +408,7 @@ function InvictoCarEnquiry2() {
       </div>
     </>
   );
-}
+};
 
 const ExteriorSlider = () => {
   const [swiper, setSwiper] = useState(null);
@@ -651,7 +461,7 @@ const ExteriorSlider = () => {
   return (
     <>
       <style>{styles}</style>
-      <div className="  ">
+      <div className=" select-none ">
         <Swiper
           effect={"coverflow"}
           // loop={true}
@@ -659,7 +469,7 @@ const ExteriorSlider = () => {
           centeredSlides={true}
           slidesPerView={2}
           spaceBetween={-30}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          // autoplay={{ delay: 2500, disableOnInteraction: false }}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -673,39 +483,64 @@ const ExteriorSlider = () => {
           className="rounded-3xl"
         >
           <SwiperSlide className="overflow-hidden  rounded-2xl">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-4+webp.webp"
-              alt=""
-              onClick={() => handleClickSlide(0)}
-            />
+            <div className="relative">
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-4+webp.webp"
+                alt=""
+                onClick={() => handleClickSlide(0)}
+              />
+              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+                LEAGUE DEFINING LOOK
+              </div>
+            </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden  rounded-2xl">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-2+jpg.webp"
-              alt=""
-              onClick={() => handleClickSlide(1)}
-            />
+            <div>
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-2+jpg.webp"
+                alt=""
+                onClick={() => handleClickSlide(1)}
+              />
+              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+                THE ART OF TECH
+              </div>
+            </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden  rounded-2xl">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-3+jpg.webp"
-              alt=""
-              onClick={() => handleClickSlide(2)}
-            />
+            <div className="relative">
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-3+jpg.webp"
+                alt=""
+                onClick={() => handleClickSlide(2)}
+              />
+              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+                LEAGUE DEFINING LOOK
+              </div>
+            </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden  rounded-2xl">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-5+webp.webp"
-              alt=""
-              onClick={() => handleClickSlide(3)}
-            />
+            <div className="relative">
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-5+webp.webp"
+                alt=""
+                onClick={() => handleClickSlide(3)}
+              />
+              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+                THE ART OF TECH
+              </div>
+            </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden  rounded-2xl">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-5+webp.webp"
-              alt=""
-              onClick={() => handleClickSlide(4)}
-            />
+            <div className="relative">
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-5+webp.webp"
+                alt=""
+                onClick={() => handleClickSlide(4)}
+              />
+              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+                LEAGUE DEFINING LOOK
+              </div>
+            </div>
           </SwiperSlide>
         </Swiper>
       </div>
@@ -763,7 +598,7 @@ const InteriorSlider = () => {
   return (
     <>
       <style>{styles}</style>
-      <div>
+      <div className="select-none">
         <Swiper
           effect={"coverflow"}
           // loop={true}
@@ -771,7 +606,7 @@ const InteriorSlider = () => {
           centeredSlides={true}
           slidesPerView={2}
           spaceBetween={-30}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          // autoplay={{ delay: 2500, disableOnInteraction: false }}
           coverflowEffect={{
             rotate: 45,
             stretch: 0,
@@ -785,60 +620,95 @@ const InteriorSlider = () => {
           className="rounded-3xl"
         >
           <SwiperSlide className="overflow-hidden  rounded-2xl">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/intr-img-3+jpg.webp"
-              alt=""
-              onClick={() => handleClickSlide(0)}
-            />
+            <div className="relative">
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/intr-img-3+jpg.webp"
+                alt=""
+                onClick={() => handleClickSlide(0)}
+              />
+              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+                LUXURY IN MOTION
+              </div>
+            </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden  rounded-2xl">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/intr-img-2+jpg.webp"
-              alt=""
-              onClick={() => handleClickSlide(1)}
-            />
+            <div className="relative">
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/intr-img-2+jpg.webp"
+                alt=""
+                onClick={() => handleClickSlide(1)}
+              />
+              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+                SAFETY EXTRAORDINAIRE
+              </div>
+            </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden  rounded-2xl">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-8+webp.webp"
-              alt=""
-              onClick={() => handleClickSlide(2)}
-            />
+            <div className="relative">
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-8+webp.webp"
+                alt=""
+                onClick={() => handleClickSlide(2)}
+              />
+              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+                LUXURY IN MOTION
+              </div>
+            </div>
           </SwiperSlide>
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
+          {/* <SwiperSlide className="overflow-hidden  rounded-2xl">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-5+webp.webp"
               alt=""
               onClick={() => handleClickSlide(3)}
             />
+          </SwiperSlide> */}
+          <SwiperSlide className="overflow-hidden  rounded-2xl">
+            <div className="relative">
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-6+webp.webp"
+                alt=""
+                onClick={() => handleClickSlide(3)}
+              />
+              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+                COMFORTABLY OPULENT
+              </div>
+            </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden  rounded-2xl">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-6+webp.webp"
-              alt=""
-              onClick={() => handleClickSlide(4)}
-            />
+            <div className="relative">
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-4+webp.webp"
+                alt=""
+                onClick={() => handleClickSlide(4)}
+              />
+              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+                COMFORTABLY OPULENT
+              </div>
+            </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden  rounded-2xl">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-4+webp.webp"
-              alt=""
-              onClick={() => handleClickSlide(5)}
-            />
+            <div className="relative">
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/intr-img-1+jpg.webp"
+                alt=""
+                onClick={() => handleClickSlide(5)}
+              />
+              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+                SAFETY EXTRAORDINAIRE
+              </div>
+            </div>
           </SwiperSlide>
           <SwiperSlide className="overflow-hidden  rounded-2xl">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/intr-img-1+jpg.webp"
-              alt=""
-              onClick={() => handleClickSlide(6)}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-7+webp.webp"
-              alt=""
-              onClick={() => handleClickSlide(7)}
-            />
+            <div className="relative">
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-7+webp.webp"
+                alt=""
+                onClick={() => handleClickSlide(6)}
+              />
+              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+                SEAT SET AUTOMATION
+              </div>
+            </div>
           </SwiperSlide>
         </Swiper>
       </div>
@@ -1481,11 +1351,15 @@ function Safety() {
         />
 
         <div className="absolute left-[62%] top-16  lg:flex group hidden  ">
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black">
-            <GiBeltBuckles className="text-4xl group-hover:text-white" />
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 ">
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/safety-belt.svg"
+              alt=" Seat Belt Pre-Tensioners with force limiters"
+              className="scale-[0.5]"
+            />
           </div>
           <div className="mx-3 my-auto w-60 group-hover:backdrop-blur-md">
-            <div className="pb-1 font-semibold ">
+            <div className="pb-1 font-medium ">
               Seat Belt Pre-Tensioners with force limiters
             </div>
 
@@ -1501,7 +1375,7 @@ function Safety() {
           </div>
 
           <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md ">
-            <div className="pb-1 font-semibold ">ABS with EBD</div>
+            <div className="pb-1 font-medium ">ABS with EBD</div>
 
             <div className="hidden text-sm font-light group-hover:block">
               Anti-lock Braking System prevents the locking up of the wheels
@@ -1510,12 +1384,16 @@ function Safety() {
             </div>
           </div>
         </div>
-        <div className="absolute right-[26%] bottom-24  lg:flex group hidden items-end  ">
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black ">
-            <MdAirlineSeatReclineExtra className="text-4xl group-hover:text-white" />
+        <div className="absolute right-[30%] bottom-24  lg:flex group hidden items-end  ">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105">
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/airbag.svg"
+              className="scale-[0.6]"
+              alt=" 6 Air Bags to take the impact before it reaches you."
+            />
           </div>
           <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md ">
-            <div className="pb-1 font-semibold ">6 Air Bags</div>
+            <div className="pb-1 font-medium ">6 Air Bags</div>
 
             <div className="hidden font-light group-hover:block">
               6 Air Bags to take the impact before it reaches you.
@@ -1524,9 +1402,7 @@ function Safety() {
         </div>
         <div className="absolute left-[10%]  bottom-[58%]    lg:flex-col md:items-start group hidden lg:flex ">
           <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md ">
-            <div className="pb-1 font-semibold ">
-              ISOFIX child fix anchorages
-            </div>
+            <div className="pb-1 font-medium ">ISOFIX child fix anchorages</div>
 
             <div className="hidden font-light group-hover:block">
               Standardized international child seat fitting system, for that
@@ -1545,26 +1421,35 @@ function Safety() {
         <div className="w-24 xl:w-32 absolute border  left-[22%] hidden lg:block  border-black"></div>
         <div className="h-16 absolute border top-1/2 left-[22%] border-black hidden lg:block"></div>
         <div className="w-24 lg:w-[12%]  just  absolute border top-[16rem] left-[18%] hidden lg:block  border-black"></div>
+
         <button
-          className="absolute bg-white h-4 w-4 rounded-full flex justify-center lg:hidden items-center top-[45%] animate-pulse"
+          className={`absolute ${
+            index === 0 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center top-[45%] `}
           onClick={() => setIndex(0)}
         >
           +
         </button>
         <button
-          className="absolute bg-white h-4 w-4 rounded-full flex justify-center lg:hidden items-center top-[38%] left-[44%] animate-pulse"
+          className={`absolute ${
+            index === 1 ? "bg-black text-white" : "bg-white animate-pulse"
+          }  h-6 w-6 rounded-full flex justify-center lg:hidden items-center top-[38%] left-[44%] `}
           onClick={() => setIndex(1)}
         >
           +
         </button>
         <button
-          className="absolute bg-white h-4 w-4 rounded-full flex justify-center lg:hidden items-center bottom-[50%] left-[25%] animate-pulse "
+          className={`absolute ${
+            index === 2 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center bottom-[50%] left-[25%]  `}
           onClick={() => setIndex(2)}
         >
           +
         </button>
         <button
-          className="absolute bg-white h-4 w-4 rounded-full flex justify-center lg:hidden items-center top-[35%] left-[30%] animate-pulse "
+          className={`absolute ${
+            index === 3 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center top-[35%] left-[30%] `}
           onClick={() => setIndex(3)}
         >
           +
@@ -1572,7 +1457,7 @@ function Safety() {
         <div className="absolute lg:hidden bottom-[20%] px-2 backdrop-blur-sm">
           {index === 0 ? (
             <div>
-              <span className="font-semibold text-md lg:text-lg">
+              <span className="font-medium text-md lg:text-lg">
                 Seat Belt Pre-Tensioners with force limiters
               </span>
               <br />
@@ -1581,14 +1466,12 @@ function Safety() {
             </div>
           ) : index === 1 ? (
             <div>
-              <span className="font-semibold text-md lg:text-lg">
-                6 Air Bags
-              </span>
+              <span className="font-medium text-md lg:text-lg">6 Air Bags</span>
               <br />6 Air Bags to take the impact before it reaches you.
             </div>
           ) : index === 2 ? (
             <div>
-              <span className="font-semibold text-md lg:text-lg">
+              <span className="font-medium text-md lg:text-lg">
                 ABS with EBD
               </span>
               <br />
@@ -1599,7 +1482,7 @@ function Safety() {
           ) : (
             index === 3 && (
               <div>
-                <span className="font-semibold text-md lg:text-lg">
+                <span className="font-medium text-md lg:text-lg">
                   ISOFIX child fix anchorages
                 </span>
                 <br />
@@ -1614,42 +1497,13 @@ function Safety() {
   );
 }
 
-export const CarComp = () => {
-  const details = {
-    id: 1,
-    name: "Invicto",
-    price: "24,79,000",
-    logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/D23+logo+without+outline+Black_125x35.webp",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-main-thubmnail-no-bg.webp",
-    brouchure:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Saboo+RKS_Invicto.pdf",
-    explore: "/maruti-invicto-price-in-hyderabad",
-    engineType: "SMART HYBRID / ELECTRIC HYBRID",
-    fuelType: "PETROL",
-    displacement: "1987 cc",
-    power: "150.19bhp @ 6000rpm",
-    torque: "188Nm @ 4400-5200rpm",
-    fuelTank: "52 L",
-    mileage: "23.24",
-    tranmission: "Automatic",
-    length: "4755 mm",
-    width: "1850 mm",
-    height: "1790 mm",
-    wheelbase: "2850",
-    turningRadius: "5.65",
-    frontBrake: "Ventilated Disc",
-    rearBrake: "Solid Disc",
-    frontSuspension: "MacPherson Strut",
-    rearSuspension: "Torsion Beam",
-    seating: "7",
-  };
-
+export const CarComp = ({ details }) => {
   return (
     <div className="pt-10 pb-10 overflow-hidden bg-black lg:pt-24 lg:pb-16 ">
       <div className="container flex flex-col mx-auto lg:flex-row">
         <div className="flex flex-wrap w-full justify-center -mb-10 z-10  md:hidden text-white ">
           <div className="space-x-5 text-3xl md:text-4xl lg:text-5xl">
-            Invicto
+            {details.name}
           </div>
           <div className="ml-2 text-3xl font-thin md:text-4xl lg:text-5xl">
             Specs
@@ -1663,15 +1517,10 @@ export const CarComp = () => {
           />
         </div>
 
-        <div
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="300"
-          className="ml-2 text-gray-200 sm:ml-5 md:ml-0 lg:w-1/2"
-        >
+        <div className="ml-2 text-gray-200 sm:ml-5 md:ml-0 lg:w-1/2">
           <div className="hidden flex-wrap w-full mb-8  md:flex ">
             <div className="space-x-5 text-3xl md:text-4xl lg:text-5xl">
-              Invicto
+              {details.name}
             </div>
             <div className="ml-2 text-3xl font-thin md:text-4xl lg:text-5xl">
               Specs
