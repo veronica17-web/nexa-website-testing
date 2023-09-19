@@ -701,7 +701,7 @@ const VariantPlayer2 = () => {
             <div className="relative">
               <div className="relative flex justify-between  ">
                 <div
-                  className={`h-4 w-4  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                  className={`h-2.5 w-2.5  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
                 >
                   <div
                     onClick={() => jumpToTime(0, 0)}
@@ -709,7 +709,7 @@ const VariantPlayer2 = () => {
                   ></div>
                 </div>
                 <div
-                  className={`h-4 w-4  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                  className={`h-2.5 w-2.5  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
                 >
                   <div
                     onClick={() => jumpToTime(1, 1)}
@@ -717,7 +717,7 @@ const VariantPlayer2 = () => {
                   ></div>
                 </div>
                 <div
-                  className={`h-4 w-4  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                  className={`h-2.5 w-2.5  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
                 >
                   <div
                     onClick={() => jumpToTime(4, 2)}
@@ -725,7 +725,7 @@ const VariantPlayer2 = () => {
                   ></div>
                 </div>
                 <div
-                  className={`h-4 w-4  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                  className={`h-2.5 w-2.5  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
                 >
                   <div
                     onClick={() => jumpToTime(6, 3)}
@@ -733,7 +733,7 @@ const VariantPlayer2 = () => {
                   ></div>
                 </div>
                 <div
-                  className={`h-4 w-4  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                  className={`h-2.5 w-2.5  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
                 >
                   <div
                     onClick={() => jumpToTime(8, 4)}
@@ -741,7 +741,7 @@ const VariantPlayer2 = () => {
                   ></div>
                 </div>
                 <div
-                  className={`h-4 w-4  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                  className={`h-2.5 w-2.5  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
                 >
                   <div
                     onClick={() => jumpToTime(10, 5)}
@@ -774,7 +774,7 @@ const VariantPlayer2 = () => {
                     : playingSegment === 4
                     ? "w-[80%]"
                     : "w-[100%]"
-                } h-1 bg-[#163472] duration-500 absolute top-1.5 `}
+                }  h-0.5 bg-[#163472] duration-500 absolute top-1 `}
               ></div>
             </div>
           </div>
@@ -806,8 +806,8 @@ const Technology = () => {
         <div className="text-center text-md lg:text-lg">
           Feature Rich and Future Facing
         </div>
-        <div className="     py-2 sm:py-5 ">
-          <div className="  pb-6 space-y-4 rounded">
+        <div className=" py-2 sm:py-5 ">
+          <div className=" pb-6 space-y-4 rounded">
             {/* <Carousel /> */}
 
             <Swiper
@@ -830,7 +830,7 @@ const Technology = () => {
               className="mySwiper2 h-28"
             >
               <SwiperSlide className="">
-                <div className="w-full">
+                <div className="w-full lg:px-20">
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-DASHBOARD.webp"
                     alt="Dual-Tone Plush Interiors"
@@ -840,33 +840,33 @@ const Technology = () => {
                     <div className="font-medium pb-2">
                       Dual-Tone Plush Interiors
                     </div>
-                    <span className="font-light">
+                    <div className="font-light lg:pr-40">
                       The lush and spacious dual tone interiors matched with
                       horizontal linear embossed pattern makes you feel like
                       you’re driving in the lap of comfort and grandeur.
-                    </span>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide className="relative">
-                <div className="w-full">
+              <div className="w-full lg:px-20">
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-360_screen.webp"
                     alt="360 View Camera"
                   />
                   <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
                     <div className="font-medium pb-2">360 View Camera</div>
-                    <span className="font-light">
+                    <div className="font-light lg:pr-40">
                       Get the best view whether you’re driving or parking with
                       the 360 View Camera that guides you and shows your car
                       from all angles. Giving you convenience and assurance, so
                       that there’s never a second thought.
-                    </span>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide className="relative">
-                <div className="w-full">
+              <div className="w-full lg:px-20">
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-Head_Up_Display.webp"
                     alt="Head Up Display"
@@ -874,18 +874,18 @@ const Technology = () => {
                   />
                   <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
                     <div className="font-medium pb-2">Head Up Display</div>
-                    <span className="font-light">
+                    <div className="font-light lg:pr-40">
                       Focus on what matters and reduce driving fatigue and with
                       the multiple functions and information like navigation,
                       distance, fuel economy and more that are readily available
                       right before your gaze.
-                    </span>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
 
               <SwiperSlide className="relative">
-                <div className="w-full">
+              <div className="w-full lg:px-20">
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-9inch_touch_screen.webp"
                     alt='22.86 cm (9") SmartPlay Pro+ with Surround Sense Powered by ARKAMYS'
@@ -895,16 +895,16 @@ const Technology = () => {
                       22.86 cm (9") SmartPlay Pro+ with Surround Sense Powered
                       by ARKAMYS
                     </div>
-                    <span className="font-light">
+                    <div className="font-light lg:pr-40">
                       Experience superior sound quality powered by ARKAMYS with
                       uninterrupted and intuitive connectivity courtesy Apple
                       CarPlay & Android Auto.
-                    </span>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide className="relative">
-                <div className="w-full">
+              <div className="w-full lg:px-20">
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-PADDLE_SHIFTERS.webp"
                     alt=" Paddle Shifters (in AT Only)"
@@ -913,28 +913,28 @@ const Technology = () => {
                     <div className="font-medium pb-2">
                       Paddle Shifters (in AT Only)
                     </div>
-                    <span className="font-light">
+                    <div className="font-light lg:pr-40">
                       The steering mounted paddle shifters provide for
                       controlled yet exciting drives, be it smooth acceleration
                       on open roads or quick downshifts to tackle city
                       overtakes. Every gear change is at your fingertips.
-                    </span>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide className="relative">
-                <div className="w-full">
+              <div className="w-full lg:px-20">
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-wireless-changing.webp"
                     alt="Wireless Charger"
                   />
                   <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
                     <div className="font-medium pb-2">Wireless Charger</div>
-                    <span className="font-light">
+                    <div className="font-light lg:pr-40">
                       Stay connected 24x7 wherever you go with seamless,
                       wireless charging, so both you and your phone are always
                       powered up.
-                    </span>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
@@ -942,8 +942,9 @@ const Technology = () => {
             <Swiper
               onSwiper={setThumbsSwiper}
               loop={true}
-              // spaceBetween={2}
+              // spaceBetween={10}
               slidesPerView={5}
+             
               // freeMode={true}
               // watchSlidesProgress={true}
               modules={[FreeMode, Navigation, Thumbs]}
@@ -954,9 +955,9 @@ const Technology = () => {
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-DASHBOARD.webp"
                     alt="Dual-Tone Plush Interiors"
-                    className="max-h-28"
+                    className="max-h-24"
                   />
-                  <div className="font-medium py-2 ">
+                  <div className=" py-2 ">
                     Dual-Tone Plush Interiors
                   </div>
                 </div>
@@ -966,9 +967,9 @@ const Technology = () => {
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-360_screen.webp"
                     alt="360 View Camera"
-                    className="max-h-28"
+                    className="max-h-24"
                   />
-                  <div className="font-medium py-2 ">360 View Camera</div>
+                  <div className=" py-2 ">360 View Camera</div>
                 </div>
               </SwiperSlide>
               <SwiperSlide classname="cursor-pointer">
@@ -976,9 +977,9 @@ const Technology = () => {
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-Head_Up_Display.webp"
                     alt="Head Up Display"
-                    className="max-h-28"
+                    className="max-h-24"
                   />
-                  <div className="font-medium py-2 ">Head Up Display</div>
+                  <div className=" py-2 ">Head Up Display</div>
                 </div>
               </SwiperSlide>
 
@@ -987,9 +988,9 @@ const Technology = () => {
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-9inch_touch_screen.webp"
                     alt='22.86 cm (9") SmartPlay Pro+ with Surround Sense Powered by ARKAMYS'
-                    className="max-h-28"
+                    className="max-h-24"
                   />
-                  <div className="font-medium py-2 ">
+                  <div className=" py-2 ">
                     22.86 cm (9") SmartPlay Pro+
                   </div>
                 </div>
@@ -999,9 +1000,9 @@ const Technology = () => {
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-PADDLE_SHIFTERS.webp"
                     alt=" Paddle Shifters (in AT Only)"
-                    className="max-h-28"
+                    className="max-h-24"
                   />
-                  <div className="font-medium py-2 ">
+                  <div className="py-2 ">
                     Paddle Shifters (in AT Only)
                   </div>
                 </div>
@@ -1011,9 +1012,9 @@ const Technology = () => {
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-wireless-changing.webp"
                     alt="Wireless Charger"
-                    className="max-h-28"
+                    className="max-h-24"
                   />
-                  <div className="font-medium py-2 ">Wireless Charger</div>
+                  <div className=" py-2 ">Wireless Charger</div>
                 </div>
               </SwiperSlide>
             </Swiper>

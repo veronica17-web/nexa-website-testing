@@ -146,7 +146,7 @@ const Invicto = () => {
                     ? "border-white bg-white text-black "
                     : "border-gray-800 text-gray-500 hover:text-white hover:border-white"
                 }`}
-                onClick={() => setExterior(!exterior)}
+                onClick={() => setExterior(false)}
               >
                 Exterior
               </button>
@@ -158,13 +158,24 @@ const Invicto = () => {
                     ? "border-white bg-white text-black"
                     : "border-gray-800 text-gray-500 hover:text-white hover:border-white"
                 } `}
-                onClick={() => setExterior(!exterior)}
+                onClick={() => setExterior(true)}
               >
                 Interior
               </button>
             </div>
           </div>
-          {exterior ? <InteriorSlider /> : <ExteriorSlider />}
+          <div className=" relative">
+            <div className={`${exterior ? "opacity-0" : "opacity-100"}`}>
+              <ExteriorSlider />
+            </div>
+            <div
+              className={`absolute inset-0 ${
+                exterior ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <InteriorSlider />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -487,6 +498,7 @@ const ExteriorSlider = () => {
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-4+webp.webp"
                 alt=""
+                className="overflow-hidden  rounded-2xl"
                 onClick={() => handleClickSlide(0)}
               />
               <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
@@ -499,6 +511,7 @@ const ExteriorSlider = () => {
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-2+jpg.webp"
                 alt=""
+                className="overflow-hidden  rounded-2xl"
                 onClick={() => handleClickSlide(1)}
               />
               <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
@@ -511,6 +524,7 @@ const ExteriorSlider = () => {
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-3+jpg.webp"
                 alt=""
+                className="overflow-hidden  rounded-2xl"
                 onClick={() => handleClickSlide(2)}
               />
               <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
@@ -523,6 +537,7 @@ const ExteriorSlider = () => {
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-5+webp.webp"
                 alt=""
+                className="overflow-hidden  rounded-2xl"
                 onClick={() => handleClickSlide(3)}
               />
               <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
@@ -535,6 +550,7 @@ const ExteriorSlider = () => {
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-5+webp.webp"
                 alt=""
+                className="overflow-hidden  rounded-2xl"
                 onClick={() => handleClickSlide(4)}
               />
               <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
@@ -624,6 +640,7 @@ const InteriorSlider = () => {
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/intr-img-3+jpg.webp"
                 alt=""
+                    className="overflow-hidden  rounded-2xl"
                 onClick={() => handleClickSlide(0)}
               />
               <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
@@ -636,6 +653,7 @@ const InteriorSlider = () => {
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/intr-img-2+jpg.webp"
                 alt=""
+                    className="overflow-hidden  rounded-2xl"
                 onClick={() => handleClickSlide(1)}
               />
               <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
@@ -648,6 +666,7 @@ const InteriorSlider = () => {
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-8+webp.webp"
                 alt=""
+                    className="overflow-hidden  rounded-2xl"
                 onClick={() => handleClickSlide(2)}
               />
               <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
@@ -667,6 +686,7 @@ const InteriorSlider = () => {
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-6+webp.webp"
                 alt=""
+                    className="overflow-hidden  rounded-2xl"
                 onClick={() => handleClickSlide(3)}
               />
               <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
@@ -679,6 +699,7 @@ const InteriorSlider = () => {
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-4+webp.webp"
                 alt=""
+                    className="overflow-hidden  rounded-2xl"
                 onClick={() => handleClickSlide(4)}
               />
               <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
@@ -691,6 +712,7 @@ const InteriorSlider = () => {
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/intr-img-1+jpg.webp"
                 alt=""
+                    className="overflow-hidden  rounded-2xl"
                 onClick={() => handleClickSlide(5)}
               />
               <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
@@ -703,6 +725,7 @@ const InteriorSlider = () => {
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-7+webp.webp"
                 alt=""
+                    className="overflow-hidden  rounded-2xl"
                 onClick={() => handleClickSlide(6)}
               />
               <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">

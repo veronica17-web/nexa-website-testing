@@ -9,7 +9,8 @@ import Header from '../../components/Header/Header';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
-import { CarEnq2 } from './Invicto';
+import { CarComp, CarEnq2, InvictoCarEnquiry2 } from './Invicto';
+import { products } from '../../constants';
 function Baleno() {
   useEffect(() => {
     // AOS.init();
@@ -369,6 +370,8 @@ const videoSource = isSafari
       {/* <OnRoadPrice title={'Baleno'} /> */}
       <Features />
       <ImageOptions />
+      <CarComp details={products[5]} />
+      <InvictoCarEnquiry2 title="BOOK YOUR BALENO NOW" carName="Baleno" />
     </>
   );
 }

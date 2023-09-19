@@ -9,7 +9,8 @@ import Header from "../../components/Header/Header";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { CarEnq2 } from "./Invicto";
+import { CarComp, CarEnq2, InvictoCarEnquiry2 } from "./Invicto";
+import { products } from "../../constants";
 
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
@@ -464,6 +465,8 @@ function XL() {
       {/* <OnRoadPrice title={'XL6'} /> */}
       <Features />
       <ImageOptions />
+      <CarComp details={products[7]} />
+      <InvictoCarEnquiry2 title="BOOK YOUR XL6 NOW" carName="XL6" />
     </>
   );
 }
@@ -517,7 +520,7 @@ const Variant = () => {
 
 const ImageOptions = () => {
   return (
-    <div className="max-w-6xl mx-auto px-2 md:px-0">
+    <div className="max-w-6xl mx-auto px-2 md:px-0 py-2">
       <div className="grid sm:grid-cols-2">
         <div>
           <img

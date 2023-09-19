@@ -10,7 +10,8 @@ import Header from "../../components/Header/Header";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { CarEnq2 } from "./Invicto";
+import { CarComp, CarEnq2, InvictoCarEnquiry2 } from "./Invicto";
+import { products } from "../../constants";
 
 function Ignis() {
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -439,6 +440,8 @@ const videoSource = isSafari
       {/* <OnRoadPrice title={"Ignis"} /> */}
       <Features />
       <ImageOptions />
+      <CarComp details={products[4]} />
+      <InvictoCarEnquiry2 title="BOOK YOUR IGNIS NOW" carName="Ignis" />
     </>
   );
 }

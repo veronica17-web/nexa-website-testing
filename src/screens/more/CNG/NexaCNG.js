@@ -199,7 +199,7 @@ const NexaCNG = () => {
           srcSet=''
         />
       </div>
-      <div className='text-center  my-8 container mx-auto '>
+      <div className='text-center  my-8 container mx-auto  '>
         <div className='text-2xl font-semibold py-4 pt-8'>
           CREATE. INSPIRE. THE CONSCIOUS WAY.
         </div>
@@ -211,10 +211,10 @@ const NexaCNG = () => {
       <div className='text-center my-8 container mx-auto '>
         <div className='text-2xl font-semibold py-4 pt-8 '>NEXA CARS</div>
         <div className='container  px-6 md:px-12 lg:px-24 py-2 sm:py-5'>
-          <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto pb-5'>
+          <div className='flex flex-wrap justify-center gap-4 lg:gap-6 xl:gap-8 container mx-auto pb-5 w-full'>
             {cngProducts.map((item) => (
               <div
-                className='flex flex-col bg-[#eee] rounded shadow-lg border relative overflow-hidden'
+                className='flex flex-col bg-[#eee] rounded shadow-lg border relative overflow-hidden w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 '
                 key={item.id}
               >
                 {/* <div

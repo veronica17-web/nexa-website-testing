@@ -8,7 +8,8 @@ import Helmet from "react-helmet";
 import Header from "../../components/Header/Header";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { CarEnq2 } from "./Invicto";
+import { CarComp, CarEnq2, InvictoCarEnquiry2 } from "./Invicto";
+import { products } from "../../constants";
 
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
@@ -401,6 +402,8 @@ function Ciaz() {
       {/* <OnRoadPrice title={"ciaz"} /> */}
       <Features />
       <ImageOptions />
+      <CarComp details={products[6]} />
+      <InvictoCarEnquiry2 title="BOOK YOUR CIAZ NOW" carName="Ciaz" />
     </>
   );
 }

@@ -939,57 +939,55 @@ const News = () => {
         </div>
         <div className="flex gap-4 flex-col md:flex-row  ">
           <div className="md:w-1/3  duration-500 hover:z-10 relative group overflow-hidden rounded-2xl">
-              <img
-                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/1.webp"
-                alt="Grand Launch of Suzuki Jimny at our Nexa Lumbini"
-                className="object-cover  overflow-hidden duration-500 bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none group-hover:scale-105"
-               
-              />
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/1.webp"
+              alt="Grand Launch of Suzuki Jimny at our Nexa Lumbini"
+              className="object-cover  overflow-hidden duration-500 bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none group-hover:scale-105"
+            />
             <Link to="/gallery">
-            <div className="hidden  absolute inset-0 group-hover:flex  flex-col justify-center items-center gap-4  text-white duration-700 bg-black bg-opacity-50 rounded-2xl">
+              <div className="hidden  absolute inset-0 group-hover:flex  flex-col justify-center items-center gap-4  text-white duration-700 bg-black bg-opacity-50 rounded-2xl">
                 {/* <div className="text-xl text-white">View More </div> */}
                 <div className="text-whtie bg-black border px-4 py-2">
-                 + View more
+                  + View more
                 </div>
               </div>
             </Link>
           </div>
           <div className="md:w-1/3  duration-500 hover:z-10 relative group overflow-hidden rounded-2xl">
-          
-              <img
-                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/2.webp"
-                alt="Grand Launch of Suzuki Jimny at our Nexa Lumbini"
-                className="object-cover  overflow-hidden duration-500 bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none group-hover:scale-105"
-               
-                // data-aos="zoom-in"
-                // data-aos-delay="0"
-                // data-aos-duration="500"
-              />  <Link to="/gallery">
-             {/* <div className="text-xl text-white">View More </div> */}
-                <div className="hidden  absolute inset-0 group-hover:flex  flex-col justify-center items-center gap-4  text-white duration-700 bg-black bg-opacity-50 rounded-2xl">
-                {/* <div className="text-xl text-white">View More </div> */}
-                <div className="text-whtie bg-black border px-4 py-2">
-                 + View more
-                </div>
-              </div>
-       
-            </Link>
-          </div>
-          <div className="md:w-1/3 duration-500 hover:z-10 relative group overflow-hidden rounded-2xl">
-            
-              <img
-                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/4.webp"
-                alt="Grand Launch of Suzuki Jimny at our Nexa Lumbini"
-                className="object-cover  overflow-hidden duration-500 bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none group-hover:scale-105"
-               
-                // data-aos="zoom-in"
-                // data-aos-delay="0"
-                // data-aos-duration="500"
-              /><Link to="/gallery">
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/2.webp"
+              alt="Grand Launch of Suzuki Jimny at our Nexa Lumbini"
+              className="object-cover  overflow-hidden duration-500 bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none group-hover:scale-105"
+
+              // data-aos="zoom-in"
+              // data-aos-delay="0"
+              // data-aos-duration="500"
+            />{" "}
+            <Link to="/gallery">
+              {/* <div className="text-xl text-white">View More </div> */}
               <div className="hidden  absolute inset-0 group-hover:flex  flex-col justify-center items-center gap-4  text-white duration-700 bg-black bg-opacity-50 rounded-2xl">
                 {/* <div className="text-xl text-white">View More </div> */}
                 <div className="text-whtie bg-black border px-4 py-2">
-                 + View more
+                  + View more
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="md:w-1/3 duration-500 hover:z-10 relative group overflow-hidden rounded-2xl">
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/4.webp"
+              alt="Grand Launch of Suzuki Jimny at our Nexa Lumbini"
+              className="object-cover  overflow-hidden duration-500 bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none group-hover:scale-105"
+
+              // data-aos="zoom-in"
+              // data-aos-delay="0"
+              // data-aos-duration="500"
+            />
+            <Link to="/gallery">
+              <div className="hidden  absolute inset-0 group-hover:flex  flex-col justify-center items-center gap-4  text-white duration-700 bg-black bg-opacity-50 rounded-2xl">
+                {/* <div className="text-xl text-white">View More </div> */}
+                <div className="text-whtie bg-black border px-4 py-2">
+                  + View more
                 </div>
               </div>
             </Link>

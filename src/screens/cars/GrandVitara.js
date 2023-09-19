@@ -13,7 +13,9 @@ import MobileCarousel from "../../components/Vitara/Extras/MobileCarousel";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { CarEnq2 } from "./Invicto";
+import { CarComp, CarEnq2, InvictoCarEnquiry2 } from "./Invicto";
+import { products } from "../../constants";
+import { useRef } from "react";
 
 // const width = window.innerWidth;
 
@@ -84,6 +86,9 @@ function GrandVitara() {
       <VariantPlayer />
       <CarEnq2 title="BOOK YOUR GRAND VITARA" />
       <Variant />
+      <SecondVideo />
+      <KeyHigh />
+
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/vitara-color-banner.webp')] bg-cover bg-no-repeat">
         <div className="max-w-6xl mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-2">
@@ -390,7 +395,6 @@ function GrandVitara() {
           </div>
         </div>
       </div>
-  
 
       {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
       <div className="hidden sm:block">
@@ -471,6 +475,11 @@ function GrandVitara() {
       {/* <OnRoadPrice title={"Grand Vitara"} /> */}
       <Features />
       {/* <ImageOptions /> */}
+      <CarComp details={products[3]} />
+      <InvictoCarEnquiry2
+        title="BOOK YOUR GRAND VITARA NOW"
+        carName="Grand Vitara"
+      />
     </>
   );
 }
@@ -485,62 +494,61 @@ const VariantPlayer = () => {
 
   return (
     <div className="top-0 left-0 w-full h-screen relative bg-black ">
-      
-       <video
-          className="object-cover w-full h-full "
-          preload="metadata"
-          // poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimny_HeaderBanner_1500x634+webp.webp"
-          loop
-          autoPlay
-          playsInline
-          muted
-        >
-          <source
-            src={videoSource}
-            type={isSafari ? "video/quicktime" : "video/mp4"}
-          />
-        </video>
-      
+      <video
+        className="object-cover w-full h-full "
+        preload="metadata"
+        // poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimny_HeaderBanner_1500x634+webp.webp"
+        loop
+        autoPlay
+        playsInline
+        muted
+      >
+        <source
+          src={videoSource}
+          type={isSafari ? "video/quicktime" : "video/mp4"}
+        />
+      </video>
+
       <div className="absolute bottom-40 lg:bottom-24 left-[3%] lg:left-[5%] text-white ">
-            <div
-              data-aos="fade-right"
-              data-aos-delay="200"
-              data-aos-duration="500"
-              className="text-2xl lg:text-4xl"
-            >
-             THE ADVANCED
-            </div>
-            <div
-              data-aos="fade-right"
-              data-aos-delay="400"
-              data-aos-duration="500"
-              className="pb-1 font-serif text-5xl uppercase lg:text-8xl"
-            >
-           GRAND VITARA
-            </div>
-            <div
-              data-aos="fade-right"
-              data-aos-delay="600"
-              data-aos-duration="1000"
-              className="mb-2 text-2xl uppercase lg:text-5xl lg:mb-4"
-            >
-              THE LEAGUE OF EXTRAORDINARY
-            </div>
-            <a
-              href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/grand_vitara.pdff"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button
-                data-aos="fade-right"
-                data-aos-delay="800"
-                data-aos-duration="1000"
-                className="px-4 py-2 uppercase border hover:text-white hover:bg-black hover:border-black lg:px-8"
-              >
-                BROCHURE
-              </button>
-            </a>
-          </div>
+        <div
+          data-aos="fade-right"
+          data-aos-delay="200"
+          data-aos-duration="500"
+          className="text-2xl lg:text-4xl"
+        >
+          THE ADVANCED
+        </div>
+        <div
+          data-aos="fade-right"
+          data-aos-delay="400"
+          data-aos-duration="500"
+          className="pb-1 font-serif text-5xl uppercase lg:text-8xl"
+        >
+          GRAND VITARA
+        </div>
+        <div
+          data-aos="fade-right"
+          data-aos-delay="600"
+          data-aos-duration="1000"
+          className="mb-2 text-2xl uppercase lg:text-5xl lg:mb-4"
+        >
+          THE LEAGUE OF EXTRAORDINARY
+        </div>
+        <a
+          href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/grand_vitara.pdff"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button
+            data-aos="fade-right"
+            data-aos-delay="800"
+            data-aos-duration="1000"
+            className="px-4 py-2 uppercase border hover:text-white hover:bg-black hover:border-black lg:px-8"
+          >
+            BROCHURE
+          </button>
+        </a>
+      </div>
     </div>
   );
 };
@@ -580,7 +588,9 @@ const Variant = () => {
           </div>
           <div className="text-center text-gray-200">
             <p className="text-2xl font-bold">₹ {price}*</p>
-            <p className="tracking-wide text-xl pb-1">Ex-Showroom Price - Hyderabad</p>
+            <p className="tracking-wide text-xl pb-1">
+              Ex-Showroom Price - Hyderabad
+            </p>
 
             <div className="text-red-200 text-xs font-light">
               <sup>*</sup>Alpha+ & Zeta+ are applicable only for Intelligent
@@ -599,6 +609,294 @@ const Variant = () => {
             </Link>
           </div>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const SecondVideo = () => {
+  return (
+    <div className="relative max-h-screen bg-black flex flex-col  ">
+      <div className="  py-6 text-center lg:absolute  w-full lg:pt-10   lg:text-white">
+        <div className="text-2xl lg:text-3xl font-medium mb-2">
+          RULE EVERY ROAD
+        </div>
+        <div className="">
+          Every road is a new story, a new discovery and there is a new breed of
+          SUVs that can conquer them all. It is the Advanced Grand Vitara{" "}
+          <br className="hidden lg:block" /> and it’s here to Rule Every Road.
+        </div>
+      </div>
+      <video
+        className="max-h-screen w-full"
+        preload="none"
+        autoPlay={true}
+        playsInline={true}
+        muted={true}
+        loop={true}
+        poster="https://nexaprod3.azureedge.net/-/media/feature/nexawebsitecarbrand/grand-vitara/banner/poster-img.webp"
+      >
+        <source
+          type="video/mp4"
+          data-src="//nexaprod6.azureedge.net/-/media/feature/nexawebsitecarbrand/grand-vitara/brand-title-video/end-shot-grand-vitara.mp4"
+          src="//nexaprod6.azureedge.net/-/media/feature/nexawebsitecarbrand/grand-vitara/brand-title-video/end-shot-grand-vitara.mp4"
+        />
+        <track label="English" kind="captions" srclang="en" src="" default />
+      </video>
+    </div>
+  );
+};
+
+const KeyHigh = () => {
+  const videoRef = useRef(null);
+  const [playingSegment, setPlayingSegment] = useState(0);
+  const handleContextMenu = (e) => {
+    e.preventDefault(); // Prevent the context menu from appearing
+  };
+
+  const jumpToTime = (timeInSeconds, segment) => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = timeInSeconds;
+      videoRef.current.play();
+      setPlayingSegment(segment);
+    }
+  };
+  useEffect(() => {
+    if (videoRef.current) {
+      const videoNode = videoRef.current; // Capture the current value of videoRef.current
+      const handleTimeUpdate = () => {
+        const currentTime = videoNode.currentTime;
+
+        if (currentTime >= 0 && currentTime < 1) {
+          setPlayingSegment(0);
+        } else if (currentTime >= 1 && currentTime < 2) {
+          setPlayingSegment(1);
+        } else if (currentTime >= 2 && currentTime < 4) {
+          setPlayingSegment(2);
+        } else if (currentTime >= 5 && currentTime < 7) {
+          setPlayingSegment(3);
+        } else if (currentTime >= 8 && currentTime < 9) {
+          setPlayingSegment(4);
+        } else if (currentTime >= 10 && currentTime < 12) {
+          setPlayingSegment(5);
+        } else if (currentTime >= 12 && currentTime < 14) {
+          setPlayingSegment(6);
+        } else if (currentTime >= 14 && currentTime < 16) {
+          setPlayingSegment(7);
+        } else if (currentTime >= 16 && currentTime < 18) {
+          setPlayingSegment(8);
+        } else if (currentTime >= 18) {
+          setPlayingSegment(9);
+        }
+      };
+
+      videoNode.addEventListener("timeupdate", handleTimeUpdate);
+
+      return () => {
+        videoNode.removeEventListener("timeupdate", handleTimeUpdate);
+      };
+    }
+  }, []);
+
+  return (
+    <div className="bg-black text-white overflow-hidden">
+      <div className="  w-full pt-10 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
+        KEY HIGHLIGHTS
+      </div>
+    
+      <div
+        className="top-0 left-0 w-full  md:h-[76vh] relative px-1 "
+        onContextMenu={handleContextMenu}
+      >
+        <video
+          className=" md:h-[84%] mx-auto object-cover  rounded-xl overflow-hidden"
+          autoplay="autoplay"
+          loop
+          muted
+          ref={videoRef}
+          controls
+          poster="https://nexaprod3.azureedge.net/-/media/feature/nexawebsitecarbrand/grand-vitara/banner/poster-img.webp"
+        >
+          <source
+            class="w-30 h-30"
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/Desktop.mp4"
+            type="video/mp4"
+          />
+        </video>
+        {/* <video
+          className="h-[70%] px-1 sm:hidden mx-auto object-cover  rounded overflow-hidden"
+          autoplay="autoplay"
+          loop
+          muted
+          ref={videoRef}
+          poster="https://nexaprod3.azureedge.net/-/media/feature/nexawebsitecarbrand/grand-vitara/banner/poster-img.webp"
+        >
+          <source
+            class="w-30 h-30"
+            src="https://www.nexaexperience.com/slider_html_code/images/Mobile.mp4"
+            type="video/mp4"
+          />
+        </video> */}
+        {/* <img
+        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner-without-book-now.webp"
+        alt=""
+        className="h-screen w-full sm:hidden"
+      /> */}
+          <div className="text-white w-full text-center py-4 text-xl lg:text-2xl">
+          {playingSegment === 0
+            ? "Bold & Expressive Font Fascia"
+            : playingSegment === 1
+            ? '17" Precision Cut Alloy Wheels'
+            : playingSegment === 2
+            ? "Ventilated Front Seats"
+            : playingSegment === 3
+            ? "Digital Multi-Information Display"
+            : playingSegment === 4
+            ? "Head Up Display"
+            : playingSegment === 5
+            ? "Smartplay Pro+"
+            : playingSegment === 6
+            ? "Wireless Charger"
+            : playingSegment === 7
+            ? "All Black Interior With Champagne Gold Accents"
+            : playingSegment === 8
+            ? "Panoramic Sunroof"
+            : playingSegment === 9 && "LED Stop Lamp"}
+        </div>
+        <div className="absolute bottom-6   w-full ">
+          <div className="hidden md:block container mx-auto bg-[#ffffff39] rounded-2xl ">
+            <div className="relative">
+              <div className="relative flex justify-between  ">
+                <div
+                  className={`h-2.5 w-2.5 z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(0, 0)}
+                    className={`bg-white h-full w-full rounded-full `}
+                  ></div>
+                </div>
+                <div
+                  className={`h-2.5 w-2.5 z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(1, 1)}
+                    className={`bg-white h-full w-full rounded-full`}
+                  ></div>
+                </div>
+                <div
+                  className={`h-2.5 w-2.5 z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(2, 2)}
+                    className={`bg-white h-full w-full rounded-full`}
+                  ></div>
+                </div>
+                <div
+                  className={`h-2.5 w-2.5 z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(5, 3)}
+                    className={`bg-white h-full w-full rounded-full`}
+                  ></div>
+                </div>
+                <div
+                  className={`h-2.5 w-2.5 z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(8, 4)}
+                    className={`bg-white h-full w-full rounded-full`}
+                  ></div>
+                </div>
+                <div
+                  className={`h-2.5 w-2.5 z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(10, 5)}
+                    className={`bg-white h-full w-full rounded-full`}
+                  ></div>
+                </div>
+                <div
+                  className={`h-2.5 w-2.5 z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(12, 6)}
+                    className={`bg-white h-full w-full rounded-full`}
+                  ></div>
+                </div>
+                <div
+                  className={`h-2.5 w-2.5 z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(14, 7)}
+                    className={`bg-white h-full w-full rounded-full`}
+                  ></div>
+                </div>
+                <div
+                  className={`h-2.5 w-2.5 z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(16, 8)}
+                    className={`bg-white h-full w-full rounded-full`}
+                  ></div>
+                </div>
+                <div
+                  className={`h-2.5 w-2.5 z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
+                >
+                  <div
+                    onClick={() => jumpToTime(18, 9)}
+                    className={`bg-white h-full w-full rounded-full`}
+                  ></div>
+                </div>
+
+                {/* <div
+                className={`h-4 w-4  p-1 z-10 cursor-pointer  border-2 border-gray-200 rounded-full absolute duration-500 transition-all  ${
+                  playingSegment === 3
+                    ? "ml-[132px]"
+                    : playingSegment === 2
+                    ? "ml-[44px]"
+                    : playingSegment === 1
+                    ? "mr-[44px]"
+                    : playingSegment === 0 && "mr-[132px]"
+                }`}
+              ></div> */}
+              </div>
+              <div
+                className={`${
+                  playingSegment === 0
+                    ? "w-[0%]"
+                    : playingSegment === 1
+                    ? "w-[11.11%]"
+                    : playingSegment === 2
+                    ? "w-[22.22%]"
+                    : playingSegment === 3
+                    ? "w-[33.33%]"
+                    : playingSegment === 4
+                    ? "w-[44.44%]"
+                    : playingSegment === 5
+                    ? "w-[55.55%]"
+                    : playingSegment === 6
+                    ? "w-[66.66%]"
+                    : playingSegment === 7
+                    ? "w-[77.77%]"
+                    : playingSegment === 8
+                    ? "w-[88.88%]"
+                    : "w-[100%]"
+                } h-0.5 bg-white duration-500 absolute top-1 `}
+              ></div>
+            </div>
+          </div>
+        </div>
+        {/* <img
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-banner.webp'
+        alt=''
+      /> */}
+        {/* <video class='w-screen' autoplay='autoplay' loop>
+        <source
+          class='w-30 h-30'
+          src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/video/NEXA+FRONX++05SEC++110123+C2C+MUTE.mp4'
+          type='video/mp4'
+        />
+      </video> */}
       </div>
     </div>
   );
