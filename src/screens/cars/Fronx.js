@@ -161,12 +161,12 @@ const Fronx = () => {
       </div>
       <CarEnq2 title="BOOK YOUR FRONX" />
       <Variant />
-      <VariantPlayer2 />
       <Technology />
+      <VariantPlayer2 />
       <FronxInteriorAndOther />
       {/* <OnRoadPrice title={"FRONX"} /> */}
       {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
-      <div className="hidden sm:block bg-black text-white pt-2 pb-8">
+      <div className="hidden sm:block bg-black text-white pt-2 pb-10 lg:pb-16">
         <div className="  w-full pt-8 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl ">
           PERFORMANCE
         </div>
@@ -575,16 +575,16 @@ function FronxInteriorAndOther() {
 const Variant = () => {
   const [price, setPrice] = useState("7,46,500");
   return (
-    <div className="bg-black py-8">
-      <div className="container mx-auto">
+    <div className=" bg-opacity-25 text-white bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_bg_image/5.webp')] bg-fixed  bg-black">
+      <div className="container mx-auto bg-opacity-10 bg-black py-20">
         <div className="grid md:grid-cols-3 md:space-y-0 space-y-3">
           <div className="space-y-3 mx-auto md:mx-0">
-            <p className="uppercase text-gray-300">select car Variant</p>
+            <p className="uppercase ">select car Variant</p>
             <select
               name="model"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
-              className="block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+              className="block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white text-black rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
             >
               <option value="7,46,500">SIGMA</option>
               <option value="8,32,500">DELTA</option>
@@ -601,23 +601,23 @@ const Variant = () => {
               <option value="13,13,500">ALPHA(D) AT (SMART HYBRID)</option>
             </select>
           </div>
-          <div className="text-center text-gray-200">
+          <div className="text-center ">
             <p className="text-2xl font-bold">₹ {price}*</p>
             <p className="tracking-wide text-xl">
               Ex-Showroom Price - Hyderabad
             </p>
-            <div className="text-red-200 text-xs font-light">
+            <div className="text-red-500 text-xs font-light">
               <sup>*</sup>Alpha+ & Zeta+ are applicable only for Direct
               Injection engine with Smart Hybrid
             </div>
           </div>
-          <div className="mx-auto">
-            <p className="text-gray-100 mb-6 text-center">
+          <div className="text-center">
+            <p className=" mb-6 text-center">
               You might have pre-approved loan offers
             </p>
             <Link
               to="/maruti-car-finance"
-              className="py-2 px-4 bg-white rounded shadow uppercase tracking-wide"
+              className="py-2 px-4 bg-white rounded shadow uppercase border text-black border-black tracking-wide"
             >
               Check for loan offers
             </Link>
@@ -673,7 +673,7 @@ const VariantPlayer2 = () => {
 
   return (
     <>
-      <div className="  w-full pt-10 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
+      <div className="  w-full pt-10 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl ">
         DESIGN HIGHLIGHTS
       </div>
       <div
@@ -1029,7 +1029,7 @@ function Safety() {
   return (
     <>
       <div className="container mx-auto mt-6 text-center ">
-        <div className="pb-4 text-3xl text-center uppercase sm:text-4xl md:text-5xl lg:pt-8 ">
+        <div className="pb-4 text-3xl text-center uppercase sm:text-4xl md:text-5xl lg:pt-4 ">
           SAFETY
         </div>
         <span className="text-md lg:text-lg">

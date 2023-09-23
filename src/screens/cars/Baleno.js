@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import ImageViewer from '../../components/BALENO/ImageViewer';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import ImageViewer from "../../components/BALENO/ImageViewer";
 // import OnRoadPrice from '../../components/utils/OnRoadPrice';
-import Features from '../../components/BALENO/Features';
-import { MdOutlineFileDownload } from 'react-icons/md';
-import Helmet from 'react-helmet';
-import Header from '../../components/Header/Header';
+import Features from "../../components/BALENO/Features";
+import { MdOutlineFileDownload } from "react-icons/md";
+import Helmet from "react-helmet";
+import Header from "../../components/Header/Header";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from 'react';
-import { CarComp, CarEnq2, InvictoCarEnquiry2 } from './Invicto';
-import { products } from '../../constants';
+import { useEffect } from "react";
+import { CarComp, CarEnq2, InvictoCarEnquiry2 } from "./Invicto";
+import { products } from "../../constants";
 function Baleno() {
   useEffect(() => {
     // AOS.init();
@@ -19,11 +19,10 @@ function Baleno() {
 
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-// Define the video source URL based on the browser
-const videoSource = isSafari
-  ? "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/header_video/Baleno_safari.mov"
-  : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/baleno/Baleno.webm";
-
+  // Define the video source URL based on the browser
+  const videoSource = isSafari
+    ? "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/header_video/Baleno_safari.mov"
+    : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/baleno/Baleno.webm";
 
   const [tabsColors, setTabsColors] = useState(1);
   return (
@@ -34,51 +33,51 @@ const videoSource = isSafari
           & Discounts
         </title>
         <meta
-          name='title'
-          content='New Nexa Baleno Price in Hyderabad | Maruti Baleno 2022 Price, Offers & Discounts'
+          name="title"
+          content="New Nexa Baleno Price in Hyderabad | Maruti Baleno 2022 Price, Offers & Discounts"
         />
         <meta
-          name='description'
-          content='Nexa New Baleno On- Road Price in Hyderabad. Maruti Baleno 2022 On Road Price Starts from ₹ 6.49* Lakh. Maruti Baleno is Now Available with Head up Display, Equipped With 6 Airbags, Hill Hold Assist, Speed Alert System. Visit Your Nearest Saboo Nexa Showroom for Nexa Baleno Offers & Discounts. Call now.'
+          name="description"
+          content="Nexa New Baleno On- Road Price in Hyderabad. Maruti Baleno 2022 On Road Price Starts from ₹ 6.49* Lakh. Maruti Baleno is Now Available with Head up Display, Equipped With 6 Airbags, Hill Hold Assist, Speed Alert System. Visit Your Nearest Saboo Nexa Showroom for Nexa Baleno Offers & Discounts. Call now."
         />
         <meta
-          name='keywords'
-          content='Nexa Baleno Price, Baleno offers & disconts, Baleno mileage,Nexa baleno petrol price, Maruti baleno on road price, Maruti baleno variants, baleno images, baleno mileage, Nexa baleno price in hyderabad, Maruti baleno price in hyderabad, baleno price in hyderabad, baleno onroad price in hyderabad, offers on baleno, baleno offers 2022, new baleno price, new baleno price in hyderabad, new baleno 2022 price, new baleno 2022 onroad price, baleno petrol price in hyderabad, baleno 2022 petrol price in hyderabad, new age baleno, new baleno 2022, baleno 2022 price'
+          name="keywords"
+          content="Nexa Baleno Price, Baleno offers & disconts, Baleno mileage,Nexa baleno petrol price, Maruti baleno on road price, Maruti baleno variants, baleno images, baleno mileage, Nexa baleno price in hyderabad, Maruti baleno price in hyderabad, baleno price in hyderabad, baleno onroad price in hyderabad, offers on baleno, baleno offers 2022, new baleno price, new baleno price in hyderabad, new baleno 2022 price, new baleno 2022 onroad price, baleno petrol price in hyderabad, baleno 2022 petrol price in hyderabad, new age baleno, new baleno 2022, baleno 2022 price"
         />
-        <meta name='author' content='Broaddcast' />
-        <meta property='og:type' content='website' />
+        <meta name="author" content="Broaddcast" />
+        <meta property="og:type" content="website" />
         <meta
-          property='og:url'
-          content='https://www.saboonexa.in/the-new-maruti-baleno/'
-        />
-        <meta
-          property='og:title'
-          content='Nexa Baleno On Road Price in Hyderabad | Maruti Baleno Offers & Discounts'
+          property="og:url"
+          content="https://www.saboonexa.in/the-new-maruti-baleno/"
         />
         <meta
-          property='og:description'
-          content='New Nexa Baleno 2022 price in Hyderabad. Maruti Baleno on Road price starts from ₹ 6.35* Lakh. Maruti Baleno is now available with 1.2litre DualJet, Dual VVT, BS6 engine with Smart Hybrid tech. Visit your nearest Saboo Nexa showroom for Nexa Baleno offers & discounts. Call now.'
+          property="og:title"
+          content="Nexa Baleno On Road Price in Hyderabad | Maruti Baleno Offers & Discounts"
         />
         <meta
-          property='og:image'
-          content='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/Baleno.jpg'
-        />
-        <meta property='twitter:card' content='summary_large_image' />
-        <meta
-          property='twitter:url'
-          content='https://www.saboonexa.in/the-new-maruti-baleno/'
+          property="og:description"
+          content="New Nexa Baleno 2022 price in Hyderabad. Maruti Baleno on Road price starts from ₹ 6.35* Lakh. Maruti Baleno is now available with 1.2litre DualJet, Dual VVT, BS6 engine with Smart Hybrid tech. Visit your nearest Saboo Nexa showroom for Nexa Baleno offers & discounts. Call now."
         />
         <meta
-          property='twitter:title'
-          content='Nexa Baleno On Road Price in Hyderabad | Maruti Baleno Offers & Discounts'
+          property="og:image"
+          content="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/Baleno.jpg"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://www.saboonexa.in/the-new-maruti-baleno/"
         />
         <meta
-          property='twitter:description'
-          content='New Nexa Baleno 2022 price in Hyderabad. Maruti Baleno on Road price starts from ₹ 6.35* Lakh. Maruti Baleno is now available with 1.2litre DualJet, Dual VVT, BS6 engine with Smart Hybrid tech. Visit your nearest Saboo Nexa showroom for Nexa Baleno offers & discounts. Call now.'
+          property="twitter:title"
+          content="Nexa Baleno On Road Price in Hyderabad | Maruti Baleno Offers & Discounts"
         />
         <meta
-          property='twitter:image'
-          content='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/Baleno.jpg'
+          property="twitter:description"
+          content="New Nexa Baleno 2022 price in Hyderabad. Maruti Baleno on Road price starts from ₹ 6.35* Lakh. Maruti Baleno is now available with 1.2litre DualJet, Dual VVT, BS6 engine with Smart Hybrid tech. Visit your nearest Saboo Nexa showroom for Nexa Baleno offers & discounts. Call now."
+        />
+        <meta
+          property="twitter:image"
+          content="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/og-tags/Baleno.jpg"
         />
       </Helmet>
       <Header />
@@ -142,167 +141,167 @@ const videoSource = isSafari
       </div>
       <CarEnq2 title="BOOK YOUR Baleno" />
       <Variant />
-      <div className='bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/Baleno_Banner_Blue.webp)] bg-cover bg-no-repeat bg-center pt-20 overflow-hidden '>
-        <div className='container mx-auto'>
-          <div className='grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 py-16 lg:py-0'>
-            <div className='my-auto mx-auto space-y-5 px-8 sm:px-0'>
+      <div className="bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/Baleno_Banner_Blue.webp)] bg-cover bg-no-repeat bg-center pt-20 overflow-hidden ">
+        <div className="container mx-auto">
+          <div className="grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 py-16 lg:py-0">
+            <div className="my-auto mx-auto space-y-5 px-8 sm:px-0">
               <img
-                src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/logobaleno-white-new.webp'
-                className='mx-auto'
-                alt='title'
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/logobaleno-white-new.webp"
+                className="mx-auto"
+                alt="title"
               />
               <a
-                href='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/The_New_Age_Baleno_Brochure.pdf'
-                className='p-3 bg-black text-gray-200 flex items-center max-w-[200px] ml-3'
-                target='_blank'
-                rel='noreferrer'
+                href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/The_New_Age_Baleno_Brochure.pdf"
+                className="p-3 bg-black text-gray-200 flex items-center max-w-[200px] ml-3"
+                target="_blank"
+                rel="noreferrer"
               >
                 <MdOutlineFileDownload size={20} />
                 &nbsp;Download Brochure
               </a>
             </div>
-            <div className='col-span-2'>
-              <div className='mx-auto'>
+            <div className="col-span-2">
+              <div className="mx-auto">
                 {/* Granite-Grey */}
                 <img
-                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/colors/CelestialBlue.webp'
-                  alt='Saboo-Nexa-Baleno-Colours-CelestialBlue'
+                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/colors/CelestialBlue.webp"
+                  alt="Saboo-Nexa-Baleno-Colours-CelestialBlue"
                   className={
                     tabsColors === 1
-                      ? 'lg:h-[415px] lg:mt-32 ml-[14%] mr-auto'
-                      : 'hidden'
+                      ? "lg:h-[415px] lg:mt-32 ml-[14%] mr-auto"
+                      : "hidden"
                   }
                 />
 
                 {/* Nexa-Blue */}
                 <img
-                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/colors/ArticWhite.webp'
-                  alt='Saboo-Nexa-Baleno-Colours-NEXA-ArticWhite'
+                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/colors/ArticWhite.webp"
+                  alt="Saboo-Nexa-Baleno-Colours-NEXA-ArticWhite"
                   className={
                     tabsColors === 2
-                      ? 'lg:h-[415px] lg:mt-32 ml-[14%] mr-auto'
-                      : 'hidden'
+                      ? "lg:h-[415px] lg:mt-32 ml-[14%] mr-auto"
+                      : "hidden"
                   }
                 />
 
                 {/* Pearl-Arctic-White */}
                 <img
-                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/colors/SplendidSilver.webp'
-                  alt='Saboo-Nexa-Baleno-Colours-SplendidSilver'
+                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/colors/SplendidSilver.webp"
+                  alt="Saboo-Nexa-Baleno-Colours-SplendidSilver"
                   className={
                     tabsColors === 3
-                      ? 'lg:h-[415px] lg:mt-32 ml-[14%] mr-auto'
-                      : 'hidden'
+                      ? "lg:h-[415px] lg:mt-32 ml-[14%] mr-auto"
+                      : "hidden"
                   }
                 />
 
                 {/* Metallic-Auburn */}
                 <img
-                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/colors/GrandeurGrey.webp'
-                  alt='Saboo-Nexa-Baleno-Colours-GrandeurGrey'
+                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/colors/GrandeurGrey.webp"
+                  alt="Saboo-Nexa-Baleno-Colours-GrandeurGrey"
                   className={
                     tabsColors === 4
-                      ? 'lg:h-[415px] lg:mt-32 ml-[14%] mr-auto'
-                      : 'hidden'
+                      ? "lg:h-[415px] lg:mt-32 ml-[14%] mr-auto"
+                      : "hidden"
                   }
                 />
 
                 {/* Premium Silver */}
                 <img
-                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/colors/OpulantRed.webp'
-                  alt='Saboo-Nexa-Baleno-Colours-OpulantRed'
+                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/colors/OpulantRed.webp"
+                  alt="Saboo-Nexa-Baleno-Colours-OpulantRed"
                   className={
                     tabsColors === 5
-                      ? 'lg:h-[415px] lg:mt-32 ml-[14%] mr-auto'
-                      : 'hidden'
+                      ? "lg:h-[415px] lg:mt-32 ml-[14%] mr-auto"
+                      : "hidden"
                   }
                 />
 
                 {/* brave khaki */}
                 <img
-                  src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/colors/LuxeBeige.webp'
-                  alt='Saboo-Nexa-Baleno-Colours-LuxeBeige'
+                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/colors/LuxeBeige.webp"
+                  alt="Saboo-Nexa-Baleno-Colours-LuxeBeige"
                   className={
                     tabsColors === 6
-                      ? 'lg:h-[415px] lg:mt-32 ml-[14%] mr-auto'
-                      : 'hidden'
+                      ? "lg:h-[415px] lg:mt-32 ml-[14%] mr-auto"
+                      : "hidden"
                   }
                 />
               </div>
-              <div className='flex items-center justify-center mb-3'>
+              <div className="flex items-center justify-center mb-3">
                 <div onClick={() => setTabsColors(1)}>
-                  <div className={tabsColors === 1 ? 'relative' : 'hidden'}>
-                    <p className='w-6 h-6 bg-[#31416d] mr-[10px] border-t border-x'></p>
+                  <div className={tabsColors === 1 ? "relative" : "hidden"}>
+                    <p className="w-6 h-6 bg-[#31416d] mr-[10px] border-t border-x"></p>
                     <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center "></span>
-                    <p className='arrow-dropdown-selected-car border-t-8 border-[#31416d]'></p>
+                    <p className="arrow-dropdown-selected-car border-t-8 border-[#31416d]"></p>
                   </div>
                   <p
                     className={
-                      tabsColors !== 1 ? 'w-6 h-6 bg-[#31416d] mr-2' : 'hidden'
+                      tabsColors !== 1 ? "w-6 h-6 bg-[#31416d] mr-2" : "hidden"
                     }
                   ></p>
                 </div>
 
                 <div onClick={() => setTabsColors(2)}>
-                  <div className={tabsColors === 2 ? 'relative' : 'hidden'}>
-                    <p className='w-6 h-6 bg-[#ffffff] mr-[10px] border-t border-x'></p>
+                  <div className={tabsColors === 2 ? "relative" : "hidden"}>
+                    <p className="w-6 h-6 bg-[#ffffff] mr-[10px] border-t border-x"></p>
                     <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
-                    <p className='arrow-dropdown-selected-car border-t-8 border-[#ffffff]'></p>
+                    <p className="arrow-dropdown-selected-car border-t-8 border-[#ffffff]"></p>
                   </div>
                   <p
                     className={
-                      tabsColors !== 2 ? 'w-6 h-6 bg-[#ffffff] mr-2' : 'hidden'
+                      tabsColors !== 2 ? "w-6 h-6 bg-[#ffffff] mr-2" : "hidden"
                     }
                   ></p>
                 </div>
 
                 <div onClick={() => setTabsColors(3)}>
-                  <div className={tabsColors === 3 ? 'relative' : 'hidden'}>
-                    <p className='w-6 h-6 bg-[#afb3b8] mr-[10px] border-t border-x'></p>
+                  <div className={tabsColors === 3 ? "relative" : "hidden"}>
+                    <p className="w-6 h-6 bg-[#afb3b8] mr-[10px] border-t border-x"></p>
                     <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
                   </div>
                   <p
                     className={
-                      tabsColors !== 3 ? 'w-6 h-6 bg-[#afb3b8] mr-2' : 'hidden'
+                      tabsColors !== 3 ? "w-6 h-6 bg-[#afb3b8] mr-2" : "hidden"
                     }
                   ></p>
                 </div>
 
                 <div onClick={() => setTabsColors(4)}>
-                  <div className={tabsColors === 4 ? 'relative' : 'hidden'}>
-                    <p className='w-6 h-6 bg-[#545454] mr-[10px] border-t border-x'></p>
+                  <div className={tabsColors === 4 ? "relative" : "hidden"}>
+                    <p className="w-6 h-6 bg-[#545454] mr-[10px] border-t border-x"></p>
                     <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
-                    <p className='arrow-dropdown-selected-car border-t-8 border-[#545454]'></p>
+                    <p className="arrow-dropdown-selected-car border-t-8 border-[#545454]"></p>
                   </div>
                   <p
                     className={
-                      tabsColors !== 4 ? 'w-6 h-6 bg-[#545454] mr-2' : 'hidden'
+                      tabsColors !== 4 ? "w-6 h-6 bg-[#545454] mr-2" : "hidden"
                     }
                   ></p>
                 </div>
 
                 <div onClick={() => setTabsColors(5)}>
-                  <div className={tabsColors === 5 ? 'relative' : 'hidden'}>
-                    <p className='w-6 h-6 bg-[#a31326] mr-[10px] border-t border-x'></p>
+                  <div className={tabsColors === 5 ? "relative" : "hidden"}>
+                    <p className="w-6 h-6 bg-[#a31326] mr-[10px] border-t border-x"></p>
                     <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
-                    <p className='arrow-dropdown-selected-car border-t-8 border-[#a31326]'></p>
+                    <p className="arrow-dropdown-selected-car border-t-8 border-[#a31326]"></p>
                   </div>
                   <p
                     className={
-                      tabsColors !== 5 ? 'w-6 h-6 bg-[#a31326] mr-2' : 'hidden'
+                      tabsColors !== 5 ? "w-6 h-6 bg-[#a31326] mr-2" : "hidden"
                     }
                   ></p>
                 </div>
 
                 <div onClick={() => setTabsColors(6)}>
-                  <div className={tabsColors === 6 ? 'relative' : 'hidden'}>
-                    <p className='w-6 h-6 bg-[#704e40] mr-[10px] border-t border-x'></p>
+                  <div className={tabsColors === 6 ? "relative" : "hidden"}>
+                    <p className="w-6 h-6 bg-[#704e40] mr-[10px] border-t border-x"></p>
                     <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
-                    <p className='arrow-dropdown-selected-car border-t-8 border-[#704e40]'></p>
+                    <p className="arrow-dropdown-selected-car border-t-8 border-[#704e40]"></p>
                   </div>
                   <p
                     className={
-                      tabsColors !== 6 ? 'w-6 h-6 bg-[#704e40] mr-2' : 'hidden'
+                      tabsColors !== 6 ? "w-6 h-6 bg-[#704e40] mr-2" : "hidden"
                     }
                   ></p>
                 </div>
@@ -310,8 +309,8 @@ const videoSource = isSafari
               <p
                 className={
                   tabsColors === 1
-                    ? 'text-center font-semibold text-lg my-2'
-                    : 'hidden'
+                    ? "text-center font-semibold text-lg my-2"
+                    : "hidden"
                 }
               >
                 Nexa Blue
@@ -319,8 +318,8 @@ const videoSource = isSafari
               <p
                 className={
                   tabsColors === 2
-                    ? 'text-center font-semibold text-lg my-2'
-                    : 'hidden'
+                    ? "text-center font-semibold text-lg my-2"
+                    : "hidden"
                 }
               >
                 Pearl Arctic White
@@ -328,8 +327,8 @@ const videoSource = isSafari
               <p
                 className={
                   tabsColors === 3
-                    ? 'text-center font-semibold text-lg my-2'
-                    : 'hidden'
+                    ? "text-center font-semibold text-lg my-2"
+                    : "hidden"
                 }
               >
                 Splendid Silver
@@ -337,8 +336,8 @@ const videoSource = isSafari
               <p
                 className={
                   tabsColors === 4
-                    ? 'text-center font-semibold text-lg my-2'
-                    : 'hidden'
+                    ? "text-center font-semibold text-lg my-2"
+                    : "hidden"
                 }
               >
                 Grandeur Grey
@@ -346,8 +345,8 @@ const videoSource = isSafari
               <p
                 className={
                   tabsColors === 5
-                    ? 'text-center font-semibold text-lg my-2'
-                    : 'hidden'
+                    ? "text-center font-semibold text-lg my-2"
+                    : "hidden"
                 }
               >
                 Opulent Red
@@ -355,8 +354,8 @@ const videoSource = isSafari
               <p
                 className={
                   tabsColors === 6
-                    ? 'text-center font-semibold text-lg my-2'
-                    : 'hidden'
+                    ? "text-center font-semibold text-lg my-2"
+                    : "hidden"
                 }
               >
                 Luxie Beige
@@ -377,42 +376,42 @@ const videoSource = isSafari
 }
 
 const Variant = () => {
-  const [price, setPrice] = useState('6,61,000');
+  const [price, setPrice] = useState("6,61,000");
   return (
-    <div className='bg-black py-8'>
-      <div className='container mx-auto'>
-        <div className='grid md:grid-cols-3 md:space-y-0 space-y-3'>
-          <div className='space-y-3 mx-auto md:mx-0'>
-            <p className='uppercase text-gray-300'>select car Variant</p>
+    <div className="bg-black py-8">
+      <div className="container mx-auto">
+        <div className="grid md:grid-cols-3 md:space-y-0 space-y-3">
+          <div className="space-y-3 mx-auto md:mx-0">
+            <p className="uppercase text-gray-300">select car Variant</p>
             <select
-              name='model'
+              name="model"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
-              className='block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm'
+              className="block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
             >
-              <option value='6,61,000'>SIGMA </option>
-                          <option value='7,45,000'>DELTA</option>
-                          <option value='8,38,000'>ZETA</option>
-                          <option value='9,33,000'>ALPHA </option>
-                          <option value='8,35,000'>DELTA CNG</option>
-                          <option value='9,28,000'>ZETA CNG</option>
-                          <option value='8,00,000'>DELTA AT</option>
-                          <option value='8,90,000'>ZETA AT</option>
-                          <option value='9,88,000'> ALPHA AT</option>
+              <option value="6,61,000">SIGMA </option>
+              <option value="7,45,000">DELTA</option>
+              <option value="8,38,000">ZETA</option>
+              <option value="9,33,000">ALPHA </option>
+              <option value="8,35,000">DELTA CNG</option>
+              <option value="9,28,000">ZETA CNG</option>
+              <option value="8,00,000">DELTA AT</option>
+              <option value="8,90,000">ZETA AT</option>
+              <option value="9,88,000"> ALPHA AT</option>
             </select>
           </div>
-          <div className='text-center text-gray-200'>
-            <p className='text-2xl font-bold'>₹ {price}*</p>
-            <p className='tracking-wide text-xl'>Ex-Showroom Price</p>
-            <p className='uppercase text-gray-400 font-bold'>Hyderabad</p>
+          <div className="text-center text-gray-200">
+            <p className="text-2xl font-bold">₹ {price}*</p>
+            <p className="tracking-wide text-xl">Ex-Showroom Price</p>
+            <p className="uppercase text-gray-400 font-bold">Hyderabad</p>
           </div>
-          <div className='mx-auto'>
-            <p className='text-gray-100 mb-6 text-center'>
+          <div className="text-center">
+            <p className="text-gray-100 mb-6 text-center">
               You might have pre-approved loan offers
             </p>
             <Link
-              to='/maruti-car-finance'
-              className='py-2 px-4 bg-white rounded shadow uppercase tracking-wide'
+              to="/maruti-car-finance"
+              className="py-2 px-4 bg-white rounded shadow uppercase tracking-wide"
             >
               Check for loan offers
             </Link>
@@ -425,18 +424,18 @@ const Variant = () => {
 
 const ImageOptions = () => {
   return (
-    <div className='container mx-auto px-2 md:px-0'>
-       <div className='grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 '>
+    <div className="container mx-auto px-2 md:px-0">
+      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
         <div>
           <img
-            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-1177x751-exterior-liquid-flow.webp'
-            alt='Saboo-Nexa-Maruti-Suzuki-Baleno-Front-Lamp'
-            className='w-full'
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-1177x751-exterior-liquid-flow.webp"
+            alt="Saboo-Nexa-Maruti-Suzuki-Baleno-Front-Lamp"
+            className="w-full"
           />
         </div>
-        <div className='my-auto mx-auto space-y-3 py-2 md:p-8'>
-          <p className='text-3xl  font-medium '>Enhanced Liquid Flow Design</p>
-          <p className='h-1 w-20 bg-black rounded-full '></p>
+        <div className="my-auto mx-auto space-y-3 py-2 md:p-8">
+          <p className="text-3xl  font-medium ">Enhanced Liquid Flow Design</p>
+          <p className="h-1 w-20 bg-black rounded-full "></p>
           <p>
             The New Age Baleno is a sight to behold. Carrying forward the Liquid
             Flow Aesthetic, it exudes boldness from every curve. Its dynamic
@@ -447,10 +446,10 @@ const ImageOptions = () => {
         </div>
       </div>
 
-       <div className='grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 '>
-        <div className='my-auto mx-auto space-y-3 p-2'>
-          <p className='text-3xl  font-medium'>NEXWave Grille</p>
-          <p className='h-1 w-20 bg-black rounded-full '></p>
+      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
+        <div className="my-auto mx-auto space-y-3 p-2">
+          <p className="text-3xl  font-medium">NEXWave Grille</p>
+          <p className="h-1 w-20 bg-black rounded-full "></p>
           <p>
             The signature NEXWave Grille is the first thing you see when you
             look upon the New Age Baleno. And it gets harder to look anywhere
@@ -461,26 +460,26 @@ const ImageOptions = () => {
         </div>
         <div>
           <img
-            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-749x751-grille.webp'
-            alt='Saboo-Nexa-Maruti-Suzuki-Baleno-Front-Gril'
-            className='w-full'
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-749x751-grille.webp"
+            alt="Saboo-Nexa-Maruti-Suzuki-Baleno-Front-Gril"
+            className="w-full"
           />
         </div>
       </div>
 
-       <div className='grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 '>
+      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
         <div>
           <img
-            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-751x379-alloy-wheels.webp'
-            alt='Saboo-Nexa-Maruti-Suzuki-Baleno-Alloy-Wheel'
-            className='w-full'
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-751x379-alloy-wheels.webp"
+            alt="Saboo-Nexa-Maruti-Suzuki-Baleno-Alloy-Wheel"
+            className="w-full"
           />
         </div>
-        <div className='my-auto mx-auto space-y-3 p-2'>
-          <p className='text-3xl  font-medium'>
+        <div className="my-auto mx-auto space-y-3 p-2">
+          <p className="text-3xl  font-medium">
             16-Inch Precision Cut Alloy Wheels
           </p>
-          <p className='h-1 w-20 bg-black rounded-full '></p>
+          <p className="h-1 w-20 bg-black rounded-full "></p>
           <p>
             They are bold. They are sharp. And they drive the style quotient of
             the New Age Baleno to a whole new level. Even when parked. These new
@@ -490,10 +489,10 @@ const ImageOptions = () => {
         </div>
       </div>
 
-       <div className='grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 '>
-        <div className='my-auto mx-auto space-y-3 p-2'>
-          <p className='text-3xl  font-medium'>Interior Design</p>
-          <p className='h-1 w-20 bg-black rounded-full '></p>
+      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
+        <div className="my-auto mx-auto space-y-3 p-2">
+          <p className="text-3xl  font-medium">Interior Design</p>
+          <p className="h-1 w-20 bg-black rounded-full "></p>
           <p>
             The New Age Baleno is more than just good looks. It is comfort
             reimagined. So, immerse yourself in the state-of-the-art cabin
@@ -505,25 +504,25 @@ const ImageOptions = () => {
         </div>
         <div>
           <img
-            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-1177x751-interior.webp'
-            alt='Saboo-Nexa-Maruti-Suzuki-Baleno-Side-Lamp'
-            className='w-full'
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-1177x751-interior.webp"
+            alt="Saboo-Nexa-Maruti-Suzuki-Baleno-Side-Lamp"
+            className="w-full"
           />
         </div>
       </div>
-      <div className='grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 '>
+      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
         <div>
           <img
-            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-749x751-LED-DRLs.webp'
-            alt='Saboo-Nexa-Maruti-Suzuki-Baleno-Side-Lamp'
-            className='w-full'
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-749x751-LED-DRLs.webp"
+            alt="Saboo-Nexa-Maruti-Suzuki-Baleno-Side-Lamp"
+            className="w-full"
           />
         </div>
-        <div className='my-auto mx-auto space-y-3 p-2 md:p-8'>
-          <p className='text-3xl  font-medium'>
+        <div className="my-auto mx-auto space-y-3 p-2 md:p-8">
+          <p className="text-3xl  font-medium">
             NEXTre' LED Rear Combination Lights
           </p>
-          <p className='h-1 w-20 bg-black rounded-full '></p>
+          <p className="h-1 w-20 bg-black rounded-full "></p>
           <p>
             The New Age Baleno never ceases to bowl you over with its looks.
             Even when viewed from behind. The sharp and stylish NEXTre’ LED Rear
@@ -532,12 +531,12 @@ const ImageOptions = () => {
           </p>
         </div>
       </div>
-      <div className='grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 '>
-        <div className='my-auto mx-auto space-y-3 p-2'>
-          <p className='text-3xl  font-medium'>
+      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
+        <div className="my-auto mx-auto space-y-3 p-2">
+          <p className="text-3xl  font-medium">
             LED Projector Headlamps With NEXTre’ LED DRLs
           </p>
-          <p className='h-1 w-20 bg-black rounded-full '></p>
+          <p className="h-1 w-20 bg-black rounded-full "></p>
           <p>
             The night is when the New Age Baleno truly comes alive. Driving down
             the beautiful tarmac, the Projector Headlamps with signature NEXTre’
@@ -549,9 +548,9 @@ const ImageOptions = () => {
         </div>
         <div>
           <img
-            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-751x379-Rear-lamps.webp'
-            alt='Saboo-Nexa-Maruti-Suzuki-Baleno-Side-Lamp'
-            className='w-full'
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-751x379-Rear-lamps.webp"
+            alt="Saboo-Nexa-Maruti-Suzuki-Baleno-Side-Lamp"
+            className="w-full"
           />
         </div>
       </div>

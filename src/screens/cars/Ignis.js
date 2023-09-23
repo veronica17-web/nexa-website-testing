@@ -16,10 +16,10 @@ import { products } from "../../constants";
 function Ignis() {
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-// Define the video source URL based on the browser
-const videoSource = isSafari
-  ? "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/header_video/Ignis_safari.mov"
-  : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/ignis/ignis_banner.webm";
+  // Define the video source URL based on the browser
+  const videoSource = isSafari
+    ? "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/header_video/Ignis_safari.mov"
+    : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/ignis/ignis_banner.webm";
 
   useEffect(() => {
     // AOS.init();
@@ -78,7 +78,7 @@ const videoSource = isSafari
           content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
         />
       </Helmet>
-      <Header  />
+      <Header />
       <div className="relative bg-black">
         <div className="top-0 left-0 w-full h-screen ">
           <video
@@ -90,7 +90,7 @@ const videoSource = isSafari
             muted
             poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/360/5.jpg"
           >
-             <source
+            <source
               src={videoSource}
               type={isSafari ? "video/quicktime" : "video/mp4"}
             />
@@ -479,7 +479,7 @@ const Variant = () => {
             <p className="tracking-wide text-xl">Ex-Showroom Price</p>
             <p className="uppercase text-gray-400 font-bold">Hyderabad</p>
           </div>
-          <div className="mx-auto">
+          <div className="text-center">
             <p className="text-gray-100 mb-6 text-center">
               You might have pre-approved loan offers
             </p>

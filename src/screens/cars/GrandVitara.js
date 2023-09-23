@@ -617,7 +617,7 @@ const Variant = () => {
               Electric Hybrid Variants
             </div>
           </div>
-          <div className="mx-auto">
+          <div className="text-center">
             <p className="text-gray-100 mb-6 text-center">
               You might have pre-approved loan offers
             </p>

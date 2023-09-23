@@ -7,7 +7,6 @@ import Header from "../../components/Header/Header";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper";
 import "swiper/css";
-import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
@@ -449,7 +448,7 @@ const Variant = () => {
               Injection engine with Smart Hybrid
             </div>
           </div>
-          <div className="mx-auto">
+          <div className="text-center">
             <p className="mb-6 text-center text-gray-100">
               You might have pre-approved loan offers
             </p>

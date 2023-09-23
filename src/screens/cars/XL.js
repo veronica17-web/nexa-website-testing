@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // import Features from "../../components/XL/Features";
 import {
   MdAirlineSeatReclineExtra,
-  MdOutlineFileDownload,
+  // MdOutlineFileDownload,
 } from "react-icons/md";
 import Helmet from "react-helmet";
 import Header from "../../components/Header/Header";
@@ -156,19 +156,13 @@ function XL() {
           </div>
         </div>
       </div>
-
       <CarEnq2 title="BOOK YOUR XL6" />
       <Variant />
-
       <AllNewXL />
-
       <Vi360 />
       {/* <ImageViewer /> */}
-
       <Features />
-
       <Technology />
-
       <div className="pt-2 text-white bg-black ">
         <div className="w-full pt-10 pb-8 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           COLOURS
@@ -183,7 +177,7 @@ function XL() {
                 className="h-24 my-5"
                 alt="title"
               />
-              <a
+              {/* <a
                 href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/THE+ALL-NEW+XL6+Brochure.pdf"
                 className="p-3 bg-black text-gray-200 flex items-center max-w-[200px]"
                 target="_blank"
@@ -191,7 +185,7 @@ function XL() {
               >
                 <MdOutlineFileDownload size={20} />
                 &nbsp;Download Brochure
-              </a>
+              </a> */}
             </div>
             <div className="col-span-2">
               <>
@@ -488,10 +482,8 @@ function XL() {
           </div>
         </div>
       </div>
-
       <CNGXL6 />
       <Engine />
-      <Design />
       {/* <OnRoadPrice title={'XL6'} /> */}
       {/* <Features /> */}
       <Safety />
@@ -504,157 +496,130 @@ function XL() {
 const Variant = () => {
   const [price, setPrice] = useState("11,56,000");
   return (
-    <div className="py-8 bg-black">
-      <div className="container mx-auto">
-        <div className="grid space-y-3 md:grid-cols-3 md:space-y-0">
-          <div className="mx-auto space-y-3 md:mx-0">
-            <p className="text-gray-300 uppercase">select car Variant</p>
-            <select
-              name="model"
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
-              className="block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
-            >
-              <option value="11,56,000">ZETA</option>
-              <option value="12,56,000">ALPHA</option>
-              <option value="13,16,000">ALPHA+</option>
-              <option value="13,32,000">ALPHA+ (D)</option>
-              <option value="12,51,000">ZETA CNG</option>
-              <option value="13,06,000">ZETA AT</option>
-              <option value="14,06,000">ALPHA AT</option>
-              <option value="14,66,000">ALPHA+ AT</option>
-              <option value="14,82,000">ALPHA+ AT (D)</option>
-            </select>
-          </div>
-          <div className="text-center text-gray-200">
-            <p className="text-2xl font-bold">₹ {price}*</p>
-            <p className="text-xl tracking-wide">Ex-Showroom Price</p>
-            <p className="font-bold text-gray-400 uppercase">Hyderabad</p>
-          </div>
-          <div className="mx-auto">
-            <p className="mb-6 text-center text-gray-100">
-              You might have pre-approved loan offers
-            </p>
-            <Link
-              to="/maruti-car-finance"
-              className="px-4 py-2 tracking-wide uppercase bg-white rounded shadow"
-            >
-              Check for loan offers
-            </Link>
-          </div>
+    <div className=" bg-opacity-25 text-white bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_bg_image/5.webp')] bg-fixed  bg-black">
+    <div className="container mx-auto bg-opacity-10 bg-black py-20">
+      <div className="grid space-y-3 md:grid-cols-3 md:space-y-0 ">
+        <div className="mx-auto space-y-3 md:mx-0">
+          <p className=" uppercase">select car Variant</p>
+          <select
+            name="model"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            className="block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm text-black"
+          >
+            <option value="11,56,000">ZETA</option>
+            <option value="12,56,000">ALPHA</option>
+            <option value="13,16,000">ALPHA+</option>
+            <option value="13,32,000">ALPHA+ (D)</option>
+            <option value="12,51,000">ZETA CNG</option>
+            <option value="13,06,000">ZETA AT</option>
+            <option value="14,06,000">ALPHA AT</option>
+            <option value="14,66,000">ALPHA+ AT</option>
+            <option value="14,82,000">ALPHA+ AT (D)</option>
+          </select>
         </div>
+        <div className="text-center ">
+          <p className="text-2xl ">₹ {price}*</p>
+          <p className="text-xl tracking-wide">Ex-Showroom Price</p>
+          <p className="font-medium  uppercase mt-1 text-lg">Hyderabad</p>
+        </div>
+        <div className="text-center">
+          <p className="mb-6 text-center ">
+            You might have pre-approved loan offers
+          </p>
+          <Link
+            to="/maruti-car-finance"
+            className="px-4 py-2 tracking-wide uppercase  border border-white rounded shadow"
+          >
+            Check for loan offers
+          </Link>
+        </div>
+      </div>
       </div>
     </div>
   );
 };
 
 const AllNewXL = () => {
-  const [high, setHigh] = useState(true);
   return (
-    <div className="px-2 py-4 overflow-hidden bg-black">
-      <div className="container mx-auto text-center text-white ">
-        <div className="w-full pt-8 pb-4 text-3xl text-center text-white uppercase lg:pb-6 sm:text-4xl md:text-5xl">
+    <div className="px-2 py-4 overflow-hidden ">
+      <div className="container mx-auto text-center  ">
+        <div className="w-full pt-8 pb-4 text-3xl text-center  uppercase  sm:text-4xl md:text-5xl">
           THE ALL-NEW XL6
         </div>
-        <div className="flex justify-center gap-2 mb-4 text-center text-md lg:text-lg lg:mb-8 lg:gap-10">
-          <div
-            className={`relative cursor-pointer ${
-              high ? "text-white" : "text-gray-500"
-            }`}
-            onClick={() => setHigh(true)}
-          >
-            HIGHLIGHTS
-          </div>
-          <div className={`relative w-0.5 bg-white`}></div>
-          <div
-            className={`relative cursor-pointer ${
-              !high ? "text-white" : "text-gray-500"
-            }`}
-            onClick={() => setHigh(false)}
-          >
-            BRAND FILM
-          </div>
+
+        <div
+          className={`relative mb-4 text-center text-md lg:text-lg lg:mb-8 `}
+        >
+          HIGHLIGHTS
         </div>
       </div>
 
       <div className="mx-auto lg:container">
-        {high ? (
-          <Swiper
-            style={{
-              "--swiper-navigation-color": "#fff",
-              "--swiper-pagination-color": "#fff",
-            }}
-            loop={true}
-            speed={1000}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            spaceBetween={10}
-            slidesPerView={1}
-            centeredSlides={true}
-            navigation={true}
-            modules={[FreeMode, Navigation, Autoplay]}
-            className="mySwiper2 h-28 "
-          >
-            <SwiperSlide className="">
-              <div className="relative w-full text-white">
-                <img
-                  src="https://nexaprod1.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/brand-highlights/img4.webp"
-                  alt=" Ventilated Seats"
-                  className="relative "
-                />
-                <div className="bottom-0 w-full p-2 text-xl bg-black bg-opacity-50 md:absolute lg:py-4 lg:text-3xl">
-                  Ventilated Seats
-                </div>
+        <Swiper
+          style={{
+            "--swiper-navigation-color": "#fff",
+            "--swiper-pagination-color": "#fff",
+          }}
+          loop={true}
+          speed={1000}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          spaceBetween={10}
+          slidesPerView={1}
+          centeredSlides={true}
+          navigation={true}
+          modules={[FreeMode, Navigation, Autoplay]}
+          className="mySwiper2 h-28 "
+        >
+          <SwiperSlide className="">
+            <div className="relative w-full ">
+              <img
+                src="https://nexaprod1.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/brand-highlights/img4.webp"
+                alt=" Ventilated Seats"
+                className="relative "
+              />
+              <div className="bottom-0 w-full p-2 text-xl bg-white bg-opacity-50 md:absolute lg:py-4 lg:text-3xl">
+                Ventilated Seats
               </div>
-            </SwiperSlide>
-            <SwiperSlide className="relative">
-              <div className="relative w-full text-white ">
-                <img
-                  src="https://nexaprod2.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/brand-highlights/img1.webp"
-                  alt="360 View Camera"
-                />
-                <div className="bottom-0 w-full p-2 text-xl bg-black bg-opacity-50 md:absolute lg:py-4 lg:text-3xl">
-                  360 View Camera
-                </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="relative">
+            <div className="relative w-full  ">
+              <img
+                src="https://nexaprod2.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/brand-highlights/img1.webp"
+                alt="360 View Camera"
+              />
+              <div className="bottom-0 w-full p-2 text-xl bg-white bg-opacity-50 md:absolute lg:py-4 lg:text-3xl">
+                360 View Camera
               </div>
-            </SwiperSlide>
-            <SwiperSlide className="relative">
-              <div className="relative w-full text-white">
-                <img
-                  src="https://nexaprod3.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/brand-highlights/img2.webp"
-                  alt="6-Speed AT with Paddle Shifters"
-                />
-                <div className="bottom-0 w-full p-2 text-xl bg-black bg-opacity-50 md:absolute lg:py-4 lg:text-3xl">
-                  6-Speed AT with Paddle Shifters
-                </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="relative">
+            <div className="relative w-full ">
+              <img
+                src="https://nexaprod3.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/brand-highlights/img2.webp"
+                alt="6-Speed AT with Paddle Shifters"
+              />
+              <div className="bottom-0 w-full p-2 text-xl bg-white bg-opacity-50 md:absolute lg:py-4 lg:text-3xl">
+                6-Speed AT with Paddle Shifters
               </div>
-            </SwiperSlide>
-            <SwiperSlide className="relative">
-              <div className="relative w-full text-white">
-                <img
-                  src="https://nexaprod4.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/brand-highlights/img3.webp"
-                  alt="Tyre Pressure Monitoring System"
-                />
-                <div className="bottom-0 w-full p-2 text-xl bg-black bg-opacity-50 md:absolute lg:py-4 lg:text-3xl">
-                  Tyre Pressure Monitoring System
-                </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="relative">
+            <div className="relative w-full ">
+              <img
+                src="https://nexaprod4.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/brand-highlights/img3.webp"
+                alt="Tyre Pressure Monitoring System"
+              />
+              <div className="bottom-0 w-full p-2 text-xl bg-white bg-opacity-50 md:absolute lg:py-4 lg:text-3xl">
+                Tyre Pressure Monitoring System
               </div>
-            </SwiperSlide>
-          </Swiper>
-        ) : (
-          <div className="flex justify-center max-h-[90vh]">
-            <iframe
-              className="w-full aspect-video"
-              src="https://www.youtube.com/embed/QzIAKI3B6CA?rel=0"
-              title="Maruti Suzuki | Smart Hybrid Technology"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-        )}
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   );
@@ -663,7 +628,7 @@ const AllNewXL = () => {
 const Vi360 = () => {
   return (
     <>
-      <div className="pt-2 text-center text-white bg-black ">
+      <div className="pt-2 text-center  ">
         <div className="w-full pt-10 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl lg:hidden">
           360
           <sup>
@@ -1086,7 +1051,7 @@ const Features = () => {
 
 const Engine = () => {
   return (
-    <div className="text-white bg-black">
+    <div className=" py-10">
       <div className="container flex flex-col items-center py-3 mx-auto ">
         <div className="w-full pt-4 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           Engine
@@ -1103,7 +1068,7 @@ const Engine = () => {
               className="h-full"
             />
           </div>
-          <div className="container relative h-full mx-auto sm:w-2/3">
+          <div className="container relative h-full mx-auto sm:w-2/3 ">
             <div className="px-1 mb-4">
               It is time to indulge in the refined driving experience of the
               All-New XL6 by NEXA. A premium MPV from NEXA, the XL6 embodies an
@@ -1147,7 +1112,7 @@ const Engine = () => {
               className="hidden h-full sm:block"
             >
               <SwiperSlide className="swiper-slide">
-                <div className="w-full px-4 cursor-pointer bg-white text-black  h-[260px] ">
+                <div className="w-full px-4 cursor-pointer  h-[260px] ">
                   <div className="relative w-full px-10 py-4 text-left">
                     <div className="pb-2 font-medium">
                       Powerful Performance That Inspires
@@ -1163,7 +1128,7 @@ const Engine = () => {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
-                <div className="w-full px-4 cursor-pointer bg-white text-black  h-[260px] ">
+                <div className="w-full px-4 cursor-pointer   h-[260px]">
                   <div className="relative w-full px-10 py-4 text-left">
                     <div className="pb-2 font-medium">
                       Progressive Smart Hybrid Technology
@@ -1179,7 +1144,7 @@ const Engine = () => {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
-                <div className="w-full px-4 cursor-pointer bg-white text-black  h-[260px] ">
+                <div className="w-full px-4 cursor-pointer   h-[260px]">
                   <div className="relative w-full px-10 py-4 text-left">
                     <div className="pb-2 font-medium">Impressive Mileage</div>
                     <div className="text-sm">
@@ -1196,7 +1161,7 @@ const Engine = () => {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="swiper-slide">
-                <div className="w-full px-4 cursor-pointer bg-white text-black  h-[260px] ">
+                <div className="w-full px-4 cursor-pointer   h-[260px]">
                   <div className="relative w-full px-10 py-4 text-left">
                     <div className="pb-2 font-medium">
                       Driving Convenience That Indulges
@@ -1222,9 +1187,9 @@ const Engine = () => {
 
 const Technology = () => {
   return (
-    <div className="px-2 py-4 overflow-hidden bg-black">
-      <div className="container mx-auto text-center text-white ">
-        <div className="w-full pt-8 pb-2 text-3xl text-center text-white uppercase sm:text-4xl md:text-5xl">
+    <div className="px-2 py-4 overflow-hidden bg-white text-black">
+      <div className="container mx-auto text-center  ">
+        <div className="w-full pt-8 pb-2 text-3xl text-center  uppercase sm:text-4xl md:text-5xl">
           TECHNOLOGY
         </div>
         <div className="mb-6 text-center text-md lg:text-lg">
@@ -1255,7 +1220,7 @@ const Technology = () => {
                 alt="PROGRESSIVE NEXT GENERATION SMART HYBRID TECHNOLOGY"
                 className="relative "
               />
-              <div className="w-full pt-4 text-left text-white ">
+              <div className="w-full pt-4 text-left  ">
                 <div className="pb-2 font-medium">
                   PROGRESSIVE NEXT GENERATION SMART HYBRID TECHNOLOGY
                 </div>
@@ -1278,7 +1243,7 @@ const Technology = () => {
                 alt="6-SPEED AT WITH PADDLE SHIFTERS"
                 className="relative "
               />
-              <div className="w-full pt-4 text-left text-white ">
+              <div className="w-full pt-4 text-left ">
                 <div className="pb-2 font-medium">
                   6-SPEED AT WITH PADDLE SHIFTERS
                 </div>
@@ -1299,7 +1264,7 @@ const Technology = () => {
                 src="https://nexaprod5.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/technology/1080x420-smartplay.webp"
                 alt="SMARTPLAY PRO"
               />
-              <div className="w-full pt-4 text-left text-white ">
+              <div className="w-full pt-4 text-left ">
                 <div className="pb-2 font-medium"> SMARTPLAY PRO</div>
                 <div className="text-sm font-light lg:pr-40 md:text-base">
                   Indulge yourself in music, navigate easily and do more
@@ -1314,7 +1279,7 @@ const Technology = () => {
                 src="https://nexaprod2.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/technology/1080x420-360-view.webp"
                 alt="360 VIEW CAMERA"
               />
-              <div className="w-full pt-4 text-left text-white ">
+              <div className="w-full pt-4 text-left ">
                 <div className="pb-2 font-medium"> 360 VIEW CAMERA</div>
                 <div className="text-sm font-light lg:pr-40 md:text-base">
                   Experience the ease of driving and parking in tight spaces
@@ -1354,7 +1319,7 @@ const Technology = () => {
 
 const CNGXL6 = () => {
   return (
-    <div className="relative py-10 overflow-hidden text-white bg-black lg:pb-14">
+    <div className="relative pt-8 overflow-hidden  ">
       <div className="w-full pb-3 text-3xl text-center uppercase lg:pt-6 sm:text-4xl md:text-5xl ">
         S-CNG
       </div>
@@ -1362,24 +1327,8 @@ const CNGXL6 = () => {
         The All-New XL6 Is Equipped With Features That Make Your World An
         Indulgent Place.
       </div>
-      <div className="absolute z-10 w-full h-full text-black lg:pt-6">
-        <div className="container p-1 mx-auto lg:bg-gradient-to-r from-green-500 via-white">
-          <div className="py-4 text-justify lg:text-left lg:w-2/3 lg:px-4">
-            Take the first step towards a conscious lifestyle with NEXA S-CNG,
-            where innovation and intelligence meet to power the future. Designed
-            to go the extra mile, the All-New XL6 S-CNG is the premium MPV
-            offering superior features with a desire to improve the environment-
-            all culminating in an indulgent experience like no other. Now, let
-            your every drive be suave and sensible.
-          </div>
-          <Link to="/xl6-cng">
-            <div className="px-4 py-2 mb-4 text-black bg-white cursor-pointer select-none w-min whitespace-nowrap lg:mx-4">
-              Explore More
-            </div>
-          </Link>
-        </div>
-      </div>
-      <div className="mx-auto overflow-hidden 2xl:container">
+
+      <div className="mx-auto overflow-hidden relative w-full h-full group">
         <img
           src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/XL6-cng-banner-mobile.webp"
           alt="XL6 CNG Mobile Banner "
@@ -1388,265 +1337,286 @@ const CNGXL6 = () => {
         <img
           src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/XL6-cng-banner-desktop.webp"
           alt="XL6 CNG Desktop Banner"
-          className="hidden sm:block "
+          className="hidden sm:block w-full -z-10"
         />
+        {/* <div className=" z-20 w-full h-full text-black lg:pt-6 -pt-60 sm:-mt-0 xl:-pt-60 ">
+            <div className="container p-1 mx-auto ">
+              <div className="py-4 text-justify lg:text-left xl:w-2/3 lg:px-4">
+                Take the first step towards a conscious lifestyle with NEXA
+                S-CNG, where innovation and intelligence meet to power the
+                future. Designed to go the extra mile, the All-New XL6 S-CNG is
+                the premium MPV offering superior features with a desire to
+                improve the environment- all culminating in an indulgent
+                experience like no other. Now, let your every drive be suave and
+                sensible.
+              </div>
+              <div className="px-4 py-2 mb-4 text-white bg-black cursor-pointer select-none w-min whitespace-nowrap lg:mx-4">
+                <Link to="/xl6-cng">Explore More</Link>
+              </div>
+            </div>
+          </div> */}
+        <Link to="/xl6-cng">
+          <div className="absolute inset-0 bg-black bg-opacity-50 hidden group-hover:flex duration-500  justify-center items-center cursor-pointer">
+            <div className="text-white">Explore &#8599;</div>
+          </div>
+        </Link>
       </div>
     </div>
   );
 };
 
-const Design = () => {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="relative py-10 overflow-hidden text-white bg-black lg:pb-14">
-      <div className="w-full pb-3 text-3xl text-center uppercase lg:pt-6 sm:text-4xl md:text-5xl ">
-        <div className="w-full pt-10 pb-8 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
-          Design
-        </div>
-        <div className="container pt-2 pb-4 mx-auto text-xl text-center lg:text-2xl lg:pb-8">
-          It’s Time To Indulge In The World Of Comfort.
-        </div>
-      </div>
+// const Design = () => {
+//   const [open, setOpen] = useState(false);
+//   return (
+//     <div className="relative py-10 overflow-hidden text-white bg-black lg:pb-14">
+//       <div className="w-full pb-3 text-3xl text-center uppercase lg:pt-6 sm:text-4xl md:text-5xl ">
+//         <div className="w-full pt-10 pb-8 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
+//           Design
+//         </div>
+//         <div className="container pt-2 pb-4 mx-auto text-xl text-center lg:text-2xl lg:pb-8">
+//           It’s Time To Indulge In The World Of Comfort.
+//         </div>
+//       </div>
 
-      <div className="px-2 py-2 mx-auto md:px-0 select-none">
-        <div className="grid md:grid-cols-4">
-          <div className="overflow-hidden md:col-span-3">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/imageOptions/FRONT_GRILLE.webp"
-              alt="Bold Front Grille With Sweeping X-Bar Element"
-              className="w-full duration-700 hover:scale-110"
-            />
-          </div>
-          <div className="hidden px-2 mx-auto my-auto space-y-3 tracking-wide md:col-span-1 lg:px-8 md:block">
-            <p className="text-2xl font-medium">
-              Bold Front Grille With Sweeping X-Bar Element
-            </p>
-            <p className="w-full h-0.5 bg-white rounded-full"></p>
-            <p>
-              An imposing front fascia with a sweeping X-bar is designed for
-              those who like to arrive in style.
-            </p>
-          </div>
-        </div>
-        <div className="grid sm:grid-cols-2">
-          <div className="relative">
-            <div className="overflow-hidden">
-              <img
-                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/imageOptions/Quad-front-chamber.webp"
-                alt=" Quad Chamber LED Reflector Headlamps"
-                className="w-full h-full duration-500 hover:scale-110"
-              />
-            </div>
-            <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block">
-              <p className="text-3xl font-medium">
-                Quad Chamber LED Reflector Headlamps
-              </p>
-              <p className="w-full h-0.5 my-4 bg-white rounded-full "></p>
-              <p>
-                Reflect true indulgence with the stunning Quad Chamber LED
-                Reflector Headlamps that brighten up the darkest of nights.
-              </p>
-            </div>
-          </div>
+//       <div className="px-2 py-2 mx-auto md:px-0 select-none">
+//         <div className="grid md:grid-cols-4">
+//           <div className="overflow-hidden md:col-span-3">
+//             <img
+//               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/imageOptions/FRONT_GRILLE.webp"
+//               alt="Bold Front Grille With Sweeping X-Bar Element"
+//               className="w-full duration-700 hover:scale-110"
+//             />
+//           </div>
+//           <div className="hidden px-2 mx-auto my-auto space-y-3 tracking-wide md:col-span-1 lg:px-8 md:block">
+//             <p className="text-2xl font-medium">
+//               Bold Front Grille With Sweeping X-Bar Element
+//             </p>
+//             <p className="w-full h-0.5 bg-white rounded-full"></p>
+//             <p>
+//               An imposing front fascia with a sweeping X-bar is designed for
+//               those who like to arrive in style.
+//             </p>
+//           </div>
+//         </div>
+//         <div className="grid sm:grid-cols-2">
+//           <div className="relative">
+//             <div className="overflow-hidden">
+//               <img
+//                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/imageOptions/Quad-front-chamber.webp"
+//                 alt=" Quad Chamber LED Reflector Headlamps"
+//                 className="w-full h-full duration-500 hover:scale-110"
+//               />
+//             </div>
+//             <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block">
+//               <p className="text-3xl font-medium">
+//                 Quad Chamber LED Reflector Headlamps
+//               </p>
+//               <p className="w-full h-0.5 my-4 bg-white rounded-full "></p>
+//               <p>
+//                 Reflect true indulgence with the stunning Quad Chamber LED
+//                 Reflector Headlamps that brighten up the darkest of nights.
+//               </p>
+//             </div>
+//           </div>
 
-          <div className="relative">
-            <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block">
-              <p className="text-3xl font-medium">
-                Smoky Grey LED Tail Lamps With Light Guide
-              </p>
-              <p className="w-full h-0.5 my-4 bg-white rounded-full "></p>
-              <p>
-                The aesthetically designed 3D tail lamps (RCL) with LED lights
-                guide and smoke gray lens take the indulgent looks of the
-                All-New XL6 up a notch.
-              </p>
-            </div>
-            <div className="overflow-hidden">
-              <img
-                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/imageOptions/LED-tail-Lamps.webp"
-                alt="Smoky Grey LED Tail Lamps With Light Guide"
-                className="w-full duration-500 hover:scale-110"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="grid md:grid-cols-4">
-          <div className="overflow-hidden md:col-span-3">
-            <img
-              src="https://nexaprod4.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/design/1177x751_dashboard.webp?la=en&hash=4F15DCE11871BBFD37303F54B74DC852"
-              alt="Dashboard with Premium Stone Finish"
-              className="w-full duration-700 hover:scale-110"
-            />
-          </div>
-          <div className="hidden px-2 mx-auto my-auto space-y-3 tracking-wide md:col-span-1 lg:px-8 md:block">
-            <p className="text-2xl font-medium">
-              Dashboard with Premium Stone Finish
-            </p>
-            <p className="w-full h-0.5 bg-white rounded-full"></p>
-            <p>
-              Designed to leave you spellbound, the exquisitely sculpted
-              Dashboard with Premium Stone Finish and rich silver accents give
-              elegance a new name.
-            </p>
-          </div>
-        </div>
+//           <div className="relative">
+//             <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block">
+//               <p className="text-3xl font-medium">
+//                 Smoky Grey LED Tail Lamps With Light Guide
+//               </p>
+//               <p className="w-full h-0.5 my-4 bg-white rounded-full "></p>
+//               <p>
+//                 The aesthetically designed 3D tail lamps (RCL) with LED lights
+//                 guide and smoke gray lens take the indulgent looks of the
+//                 All-New XL6 up a notch.
+//               </p>
+//             </div>
+//             <div className="overflow-hidden">
+//               <img
+//                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/imageOptions/LED-tail-Lamps.webp"
+//                 alt="Smoky Grey LED Tail Lamps With Light Guide"
+//                 className="w-full duration-500 hover:scale-110"
+//               />
+//             </div>
+//           </div>
+//         </div>
+//         <div className="grid md:grid-cols-4">
+//           <div className="overflow-hidden md:col-span-3">
+//             <img
+//               src="https://nexaprod4.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/design/1177x751_dashboard.webp?la=en&hash=4F15DCE11871BBFD37303F54B74DC852"
+//               alt="Dashboard with Premium Stone Finish"
+//               className="w-full duration-700 hover:scale-110"
+//             />
+//           </div>
+//           <div className="hidden px-2 mx-auto my-auto space-y-3 tracking-wide md:col-span-1 lg:px-8 md:block">
+//             <p className="text-2xl font-medium">
+//               Dashboard with Premium Stone Finish
+//             </p>
+//             <p className="w-full h-0.5 bg-white rounded-full"></p>
+//             <p>
+//               Designed to leave you spellbound, the exquisitely sculpted
+//               Dashboard with Premium Stone Finish and rich silver accents give
+//               elegance a new name.
+//             </p>
+//           </div>
+//         </div>
 
-        {open && (
-          <>
-            <div className="grid sm:grid-cols-2">
-              <div className="relative">
-                <div className="overflow-hidden">
-                  <img
-                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/imageOptions/ALLOY.webp"
-                    alt="Dual-Tone Machined Finish R-16 Alloy Wheels"
-                    className="w-full h-full duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block ">
-                  <p className="text-3xl font-medium">
-                    Dual-Tone Machined Finish R-16 Alloy Wheels
-                  </p>
-                  <p className="w-full h-0.5 my-6 bg-white rounded-full "></p>
-                  <p>
-                    Crafted with precision and detail, the Dual-Tone Machined
-                    Finish R-16 Alloy Wheels ensure you make a statement
-                    wherever you go.
-                  </p>
-                </div>
-              </div>
+//         {open && (
+//           <>
+//             <div className="grid sm:grid-cols-2">
+//               <div className="relative">
+//                 <div className="overflow-hidden">
+//                   <img
+//                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/imageOptions/ALLOY.webp"
+//                     alt="Dual-Tone Machined Finish R-16 Alloy Wheels"
+//                     className="w-full h-full duration-500 hover:scale-110"
+//                   />
+//                 </div>
+//                 <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block ">
+//                   <p className="text-3xl font-medium">
+//                     Dual-Tone Machined Finish R-16 Alloy Wheels
+//                   </p>
+//                   <p className="w-full h-0.5 my-6 bg-white rounded-full "></p>
+//                   <p>
+//                     Crafted with precision and detail, the Dual-Tone Machined
+//                     Finish R-16 Alloy Wheels ensure you make a statement
+//                     wherever you go.
+//                   </p>
+//                 </div>
+//               </div>
 
-              <div className="relative">
-                <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block absolute top-0 z-10 text-black">
-                  <p className="text-3xl font-medium">Back Door Spoiler</p>
-                  <p className="w-full h-0.5 my-4 bg-black rounded-full "></p>
-                  <p>
-                    Leave a lasting impression with a wide and accentuated look.
-                  </p>
-                </div>
-                <div className="overflow-hidden">
-                  <img
-                    src="https://nexaprod1.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/design/749x751_roof_end_spoiler.webp?la=en&hash=4B4560031B7BDE81CC7DF39E6BF5D00D"
-                    alt="Back Door Spoiler"
-                    className="w-full duration-500 hover:scale-110 -z-20"
-                  />
-                </div>
-              </div>
-            </div>
+//               <div className="relative">
+//                 <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block absolute top-0 z-10 text-black">
+//                   <p className="text-3xl font-medium">Back Door Spoiler</p>
+//                   <p className="w-full h-0.5 my-4 bg-black rounded-full "></p>
+//                   <p>
+//                     Leave a lasting impression with a wide and accentuated look.
+//                   </p>
+//                 </div>
+//                 <div className="overflow-hidden">
+//                   <img
+//                     src="https://nexaprod1.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/design/749x751_roof_end_spoiler.webp?la=en&hash=4B4560031B7BDE81CC7DF39E6BF5D00D"
+//                     alt="Back Door Spoiler"
+//                     className="w-full duration-500 hover:scale-110 -z-20"
+//                   />
+//                 </div>
+//               </div>
+//             </div>
 
-            <div className="grid sm:grid-cols-2">
-              <div className="relative">
-                <div className="overflow-hidden">
-                  <img
-                    src="https://nexaprod3.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/design/751x379-side_cladding.webp?la=en&hash=E2B645386937C3E3A33F8393848EE24C"
-                    alt="Skid Plates"
-                    className="w-full h-full duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block ">
-                  <p className="text-3xl font-medium">Skid Plates</p>
-                  <p className="w-full h-0.5 my-6 bg-white rounded-full "></p>
-                  <p>
-                    Command a strong presence as you drive down the roads in
-                    style with the sturdy new front and rear Skid Plates.
-                  </p>
-                </div>
-              </div>
+//             <div className="grid sm:grid-cols-2">
+//               <div className="relative">
+//                 <div className="overflow-hidden">
+//                   <img
+//                     src="https://nexaprod3.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/design/751x379-side_cladding.webp?la=en&hash=E2B645386937C3E3A33F8393848EE24C"
+//                     alt="Skid Plates"
+//                     className="w-full h-full duration-500 hover:scale-110"
+//                   />
+//                 </div>
+//                 <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block ">
+//                   <p className="text-3xl font-medium">Skid Plates</p>
+//                   <p className="w-full h-0.5 my-6 bg-white rounded-full "></p>
+//                   <p>
+//                     Command a strong presence as you drive down the roads in
+//                     style with the sturdy new front and rear Skid Plates.
+//                   </p>
+//                 </div>
+//               </div>
 
-              <div className="relative">
-                <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block absolute top-0 z-10 text-black">
-                  <p className="text-3xl font-medium">Sporty Roof Rails</p>
-                  <p className="w-full h-0.5 my-4 bg-black rounded-full "></p>
-                  <p>
-                    Travel in style, with the Sporty Roof Rails that stand out
-                  </p>
-                </div>
-                <div className="overflow-hidden">
-                  <img
-                    src="https://nexaprod5.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/design/749x751_roofrails.webp?la=en&hash=ECF2218A92F609F78FF5F4663E275964"
-                    alt="Sporty Roof Rails
-                "
-                    className="w-full duration-500 hover:scale-110 -z-20"
-                  />
-                </div>
-              </div>
-            </div>
+//               <div className="relative">
+//                 <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block absolute top-0 z-10 text-black">
+//                   <p className="text-3xl font-medium">Sporty Roof Rails</p>
+//                   <p className="w-full h-0.5 my-4 bg-black rounded-full "></p>
+//                   <p>
+//                     Travel in style, with the Sporty Roof Rails that stand out
+//                   </p>
+//                 </div>
+//                 <div className="overflow-hidden">
+//                   <img
+//                     src="https://nexaprod5.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/design/749x751_roofrails.webp?la=en&hash=ECF2218A92F609F78FF5F4663E275964"
+//                     alt="Sporty Roof Rails
+//                 "
+//                     className="w-full duration-500 hover:scale-110 -z-20"
+//                   />
+//                 </div>
+//               </div>
+//             </div>
 
-            <div className="grid md:grid-cols-4">
-              <div className="overflow-hidden md:col-span-3">
-                <img
-                  src="https://nexaprod1.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/design/1177x751_interior.webp?la=en&hash=BD1F1BDDB99E9018103ABAF2B9CC90C4"
-                  alt="All-Black Interiors"
-                  className="w-full duration-700 hover:scale-110"
-                />
-              </div>
-              <div className="hidden px-2 mx-auto my-auto space-y-3 tracking-wide md:col-span-1 lg:px-8 md:block">
-                <p className="text-2xl font-medium">All-Black Interiors</p>
-                <p className="w-full h-0.5 bg-white rounded-full"></p>
-                <p>
-                  Here’s to comfort, that’s ever-evolving. Wrapped in All-Black
-                  Leatherette Upholstery and seats that make even the longest of
-                  journeys feel short, the All-New XL6 is the perfect space for
-                  pure indulgence.
-                </p>
-              </div>
-            </div>
+//             <div className="grid md:grid-cols-4">
+//               <div className="overflow-hidden md:col-span-3">
+//                 <img
+//                   src="https://nexaprod1.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/design/1177x751_interior.webp?la=en&hash=BD1F1BDDB99E9018103ABAF2B9CC90C4"
+//                   alt="All-Black Interiors"
+//                   className="w-full duration-700 hover:scale-110"
+//                 />
+//               </div>
+//               <div className="hidden px-2 mx-auto my-auto space-y-3 tracking-wide md:col-span-1 lg:px-8 md:block">
+//                 <p className="text-2xl font-medium">All-Black Interiors</p>
+//                 <p className="w-full h-0.5 bg-white rounded-full"></p>
+//                 <p>
+//                   Here’s to comfort, that’s ever-evolving. Wrapped in All-Black
+//                   Leatherette Upholstery and seats that make even the longest of
+//                   journeys feel short, the All-New XL6 is the perfect space for
+//                   pure indulgence.
+//                 </p>
+//               </div>
+//             </div>
 
-            <div className="grid sm:grid-cols-2">
-              <div className="relative">
-                <div className="overflow-hidden">
-                  <img
-                    src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/imageOptions/Quad-front-chamber.webp"
-                    alt="Integrated LED Daytime Running Lamps (DRLs)"
-                    className="w-full h-full duration-500 hover:scale-110"
-                  />
-                </div>
-                <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block ">
-                  <p className="text-3xl font-medium">
-                    Integrated LED Daytime Running Lamps (DRLs)
-                  </p>
-                  <p className="w-full h-0.5 my-6 bg-white rounded-full "></p>
-                  <p>
-                    The All-New XL6 never ceases to amaze, the Integrated LED
-                    Daytime Running Lamps make sure your presence doesn’t go
-                    unnoticed even on the busiest of roads.
-                  </p>
-                </div>
-              </div>
+//             <div className="grid sm:grid-cols-2">
+//               <div className="relative">
+//                 <div className="overflow-hidden">
+//                   <img
+//                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/imageOptions/Quad-front-chamber.webp"
+//                     alt="Integrated LED Daytime Running Lamps (DRLs)"
+//                     className="w-full h-full duration-500 hover:scale-110"
+//                   />
+//                 </div>
+//                 <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block ">
+//                   <p className="text-3xl font-medium">
+//                     Integrated LED Daytime Running Lamps (DRLs)
+//                   </p>
+//                   <p className="w-full h-0.5 my-6 bg-white rounded-full "></p>
+//                   <p>
+//                     The All-New XL6 never ceases to amaze, the Integrated LED
+//                     Daytime Running Lamps make sure your presence doesn’t go
+//                     unnoticed even on the busiest of roads.
+//                   </p>
+//                 </div>
+//               </div>
 
-              <div className="relative">
-                <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block absolute top-0 z-10 text-black">
-                  <p className="text-3xl font-medium">Shark Fin Antenna</p>
-                  <p className="w-full h-0.5 my-4 bg-black rounded-full "></p>
-                  <p>
-                    Let nothing come between you and your favourite radio
-                    broadcast as the Shark Fin Antenna is designed to withstand
-                    extreme weather conditions. Don’t be surprised if people
-                    notice you from afar, as the chrome accentuated roof rails
-                    are hard to miss.
-                  </p>
-                </div>
-                <div className="overflow-hidden">
-                  <img
-                    src="https://nexaprod5.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/design/749x751_antenna.webp?la=en&hash=04B09E0A21BFAC833543AAB2724D89EF"
-                    alt="Shark Fin Antenna"
-                    className="w-full duration-500 hover:scale-110 -z-20"
-                  />
-                </div>
-              </div>
-            </div>
-          </>
-        )}
+//               <div className="relative">
+//                 <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block absolute top-0 z-10 text-black">
+//                   <p className="text-3xl font-medium">Shark Fin Antenna</p>
+//                   <p className="w-full h-0.5 my-4 bg-black rounded-full "></p>
+//                   <p>
+//                     Let nothing come between you and your favourite radio
+//                     broadcast as the Shark Fin Antenna is designed to withstand
+//                     extreme weather conditions. Don’t be surprised if people
+//                     notice you from afar, as the chrome accentuated roof rails
+//                     are hard to miss.
+//                   </p>
+//                 </div>
+//                 <div className="overflow-hidden">
+//                   <img
+//                     src="https://nexaprod5.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/design/749x751_antenna.webp?la=en&hash=04B09E0A21BFAC833543AAB2724D89EF"
+//                     alt="Shark Fin Antenna"
+//                     className="w-full duration-500 hover:scale-110 -z-20"
+//                   />
+//                 </div>
+//               </div>
+//             </div>
+//           </>
+//         )}
 
-        <div
-          className="py-3 w-full text-center bg-black mt-8 text-white cursor-pointer border-white border-2 select-none"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? "SEE LESS" : "SEE MORE"}
-        </div>
-      </div>
-    </div>
-  );
-};
+//         <div
+//           className="py-3 w-full text-center bg-black mt-8 text-white cursor-pointer border-white border-2 select-none"
+//           onClick={() => setOpen(!open)}
+//         >
+//           {open ? "SEE LESS" : "SEE MORE"}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 function Safety() {
   const [index, setIndex] = useState(0);
@@ -1739,7 +1709,7 @@ function Safety() {
             </div>
           </div>
         </div>
-        <div className="absolute left-[10%]  bottom-[58%]    lg:flex-col md:items-start group hidden lg:flex ">
+        <div className="absolute left-[10%]  bottom-[62.5%]    lg:flex-col md:items-start group hidden lg:flex ">
           <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">ISOFIX child fix anchorages</div>
 
@@ -1752,7 +1722,7 @@ function Safety() {
             <MdAirlineSeatReclineExtra className="text-4xl group-hover:text-white" />
           </div>
         </div>
-        <div className="absolute left-[78%]  bottom-[58%] md:items-start group hidden lg:flex lg:flex-col ">
+        <div className="absolute left-[78%]  bottom-[62.5%] md:items-start group hidden lg:flex lg:flex-col ">
           <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm group-hover:block ">
             <div className="pb-1 font-medium ">
               FULL FRONTAL IMPACT COMPLIANCE, FRONTAL OFFSET IMPACT COMPLIANCE,
@@ -1769,7 +1739,7 @@ function Safety() {
           </div>
         </div>
 
-        <div className="absolute left-[77%]  top-[45%]  md:items-start group hidden lg:block ">
+        <div className="absolute left-[77%]  top-[40%]  md:items-start group hidden lg:block ">
           <div className="flex items-center justify-center w-20 h-20 mb-2 duration-500 border border-black rounded-full hover:scale-105 ">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/road.svg"

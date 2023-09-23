@@ -1904,8 +1904,8 @@ export const CarEnq2 = ({ title }) => {
     }
   }
   return (
-    <div className=" bg-black">
-      <div className="container px-5 pt-8 mx-auto space-y-3 lg:px-0 ">
+    <div className=" bg-black py-3">
+      <div className="container px-5 pt-5 mx-auto space-y-3 lg:px-0 ">
         <div className="pt-2 pb-6 text-3xl text-center uppercase lg:pb-8 sm:text-4xl md:text-5xl text-white">
           {title}
         </div>
@@ -2065,7 +2065,7 @@ export const CarEnq2 = ({ title }) => {
               )}
             </button>
           </div>
-          <div className="container mt-6 text-xs text-gray-600">
+          <div className="container mt-2 mb-6 text-xs text-gray-100">
             <span className="font-semibold">*Disclaimer:</span> By clicking
             'SUBMIT', you have agreed to our Terms and Conditions.
             {/* <span className='font-semibold'>*Disclaimer:</span> I agree that
