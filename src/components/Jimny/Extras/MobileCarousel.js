@@ -44,7 +44,7 @@ const MobileCarousel = () => {
           },
         }}
         modules={[Autoplay, Navigation, Pagination]}
-        className='mySwiper'
+        className='mySwiper '
       >
         <SwiperSlide>
           <figure className='relative cursor-pointer'>

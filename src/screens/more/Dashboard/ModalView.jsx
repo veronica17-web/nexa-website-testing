@@ -46,7 +46,7 @@ const ModalView = ({ visible, onClose, values }) => {
       >
         {/* <div className=" overflow-hidden m-1  lg:w-2/3 xl:h-2/3 bg-white p-5"> */}
         <div className="text-center font-mono w-full  mb-4 mt-4 flex relative">
-          <div className="text-3xl font-medium uppercase text-center w-full">
+          <div className="text-xl lg:text-3xl font-medium uppercase text-center w-full">
             {values.firstName} {values.lastName}{" "}
           </div>{" "}
           <div className="whitespace-nowrap absolute top-0 left-0">
@@ -59,179 +59,133 @@ const ModalView = ({ visible, onClose, values }) => {
 
         <div className="w-full h-0.5 bg-black my-4 mx-auto "></div>
         <section className="mb-6">
-          <div className="flex gap-4">
-            <div className="space-y-2">
-              <div className="text-gray-500">Salutation :</div>
-              <div className="text-gray-500">First Name : </div>
-              <div className="text-gray-500">Last Name : </div>
-              <div className="text-gray-500">Email : </div>
-              <div className="text-gray-500">Phone :</div>
-              <div className="text-gray-500">Alternate Phone : </div>
-              <div className="text-gray-500 ">Address : </div>
-              <div className="text-gray-500">Last Company : </div>
-              <div className="text-gray-500">Job Title : </div>
-              <div className="text-gray-500">Job Locatin : </div>
-              <div className="text-gray-500">Total Experince : </div>
-              <div className="text-gray-500">Profile Summary : </div>
-              <div className="text-gray-500">Last Dwarn Salary : </div>
-              <div className="text-gray-500">Skills : </div>
-              <div className="text-gray-500">Current CTC : </div>
-              <div className="text-gray-500">Expected CTC : </div>
-              <div className="text-gray-500">Highest Qualification : </div>
-              <div className="text-gray-500">Resume Link : </div>
-            </div>
-            <div className="space-y-2">
-              <div>{values.salutation} </div>
-              <div>{values.firstName} </div>
-              <div>{values.lastName} </div>
-              <div>{values.email} </div>
-              <div>{values.phone} </div>
-              <div>{values.alterPhone ? values.alterPhone : "-"} </div>
-              <div className=" ">{values.address ? values.address : "-"} </div>
-              <div className="">{values.lastCompany} </div>
-              <div className="">{values.jobTitle} </div>
-              <div className="">{values.jobLocation} </div>
-              <div className="">{values.totalExp} </div>
-              <div className="">{values.profileSum} </div>
-              <div className="">{values.lastDwarnSalary} </div>
-              <div className="">{values.skills} </div>
-              <div className="">{values.currentCTC} </div>
-              <div className="">{values.expectedCTC} </div>
-              <div className="">{values.qualification} </div>
-              <div className="">
-                <a
-                  href={values.resumeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black"
-                >
-                  {values.resumeLink}
-                </a>
-              </div>
-            </div>
-          </div>
+          <table className="table-auto w-full">
+            <tbody>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap ">
+                  Salutation:
+                </td>
+                <td className="py-1 px-1">{values.salutation}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">First Name:</td>
+                <td className="py-1 px-1">{values.firstName}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">Last Name:</td>
+                <td className="py-1 px-1">{values.lastName}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">Email:</td>
+                <td className="py-1 px-1">{values.email}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">Phone:</td>
+                <td className="py-1 px-1">{values.phone}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">
+                  Alternate Phone:
+                </td>
+                <td className="py-1 px-1">
+                  {values.alterPhone ? values.alterPhone : "-"}
+                </td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">Address:</td>
+                <td className="py-1 px-1">
+                  {values.address ? values.address : "-"}
+                </td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">
+                  Last Company:
+                </td>
+                <td className="py-1 px-1">{values.lastCompany}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">Job Title:</td>
+                <td className="py-1 px-1">{values.jobTitle}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">
+                  Job Location:
+                </td>
+                <td className="py-1 px-1">{values.jobLocation}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">
+                  Total Experience:
+                </td>
+                <td className="py-1 px-1">{values.totalExp}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">
+                  Profile Summary:
+                </td>
+                <td className="py-1 px-1">{values.profileSum}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">
+                  Last Drawn Salary:
+                </td>
+                <td className="py-1 px-1">{values.lastDwarnSalary}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">Skills:</td>
+                <td className="py-1 px-1">{values.skills}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">
+                  Current CTC:
+                </td>
+                <td className="py-1 px-1">{values.currentCTC}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">
+                  Expected CTC:
+                </td>
+                <td className="py-1 px-1">{values.expectedCTC}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">
+                  Highest Qualification:
+                </td>
+                <td className="py-1 px-1">{values.qualification}</td>
+              </tr>
+              <tr className="border-b">
+                <td className="text-gray-700 whitespace-nowrap">
+                  Resume Link:
+                </td>
+                <td>
+                  <a
+                    href={values.resumeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black py-2 px-1"
+                  >
+                    {values.resumeLink}
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </section>
-        {/* <section className="mb-6">
-        
-          <div className="flex gap-4">
-            <div className="space-y-2">
-              <div className="text-gray-500">flat :</div>
-              <div className="text-gray-500">street : </div>
-              <div className="text-gray-500">landmark : </div>
-              <div className="text-gray-500">pincode : </div>
-              <div className="text-gray-500">city :</div>
-              <div className="text-gray-500">state : </div>
-              <div className="text-gray-500">country : </div>
-            </div>
-            <div className="space-y-2">
-              <div>{values.flat}</div>
-              <div>{values.street} </div>
-              <div>{values.landmark} </div>
-              <div>{values.pincode}</div>
-              <div>{values.city}</div>
-              <div>{values.state}</div>
-              <div>{values.country} </div>
-            </div>
-          </div>
-        </section>
-        <section className="mb-6">
-          <div className="text-lg my-4 text-center w-full">Work Experince</div>
-          <div className="flex gap-4">
-            <div className="space-y-2">
-              <div className="text-gray-500">jobTitle : </div>
-              <div className="text-gray-500">company :</div>
-              <div className="text-gray-500">jobLocation : </div>
-              <div className="text-gray-500">fromDate : </div>
-              <div className="text-gray-500">jobSummary :</div>
-            </div>
-            <div className="space-y-2">
-              <div>{values.jobTitle} </div>
-              <div>{values.company}</div>
-              <div>{values.jobLocation} </div>
-              <div>{values.fromDate} </div>
-              <div>{values.jobSummary}</div>
-            </div>
-          </div>
-        </section>
-        <section className="mb-6">
-          <div className="text-lg my-4 text-center w-full">
-            Job Application Fields
-          </div>
-          <div className="flex gap-4">
-            <div className="space-y-2">
-              <div className="text-gray-500">
-                Do you have a higher education/master’s degree (like MBA, MTech,
-                MS, etc.)?{" "}
-              </div>
-              <div>{values.appField1} </div>
-              <div className="text-gray-500">
-                If you're employed, since how long (no. of months) have you been
-                working in your current organization? Mention zero ("0") if
-                you're a fresher.{" "}
-              </div>
-              <div>{values.appField2} </div>{" "}
-              <div className="text-gray-500">
-                What was your field of education/bachelor's/master's degree?{" "}
-              </div>
-              <div>{values.appField3} </div>{" "}
-              <div className="text-gray-500">
-                If given an offer, how soon can you join ?{" "}
-              </div>
-              <div>{values.appField4} </div>{" "}
-              <div className="text-gray-500">
-                If you have work experience (incl. internships) which of the
-                areas have you worked in? (eg. engineering, Finance, Market
-                Research, Sales and Marketing, other)
-              </div>
-              <div>{values.appField5} </div>{" "}
-              <div className="text-gray-500">
-                When did you complete your last education degree
-                (Bachelor's/Master's) or when do you expect to complete it if
-                you're still a student?{" "}
-              </div>
-              <div>{values.appField6} </div>{" "}
-            </div>
-          </div>
-        </section>
-        <section className="mb-6">
-          <div className="text-lg my-4 text-center w-full">Resume</div>
-          <div className="flex gap-4">
-            <div className="space-y-2">
-              <div className="text-gray-500">
-                Upload resume in your google drive and paste link below
-              </div>
-              <div className=" italic text-lg"><a href={values.resumeLink} target="_blank" rel="noopener noreferrer">{values.resumeLink}</a></div>
-            </div>
-          </div>
-        </section> */}
-        <div className="absolute top-10 right-20 flex gap-2">
+
+        <div className="absolute top-5 right-5 lg:top-10 lg:right-20 flex gap-2">
           <div
-            className="p-3 rounded-lg hover:bg-gray-200 hover:shadow-md cursor-pointer border w-min  select-none "
+            className="p-1 lg:p-3 rounded-lg bg-gray-200 hover:shadow-lg hover:shadow-black cursor-pointer border w-min  select-none  "
             onClick={downloadPDF}
           >
-            <AiOutlineDownload className="text-lg mx-auto " />
+            <AiOutlineDownload className="lg:text-lg mx-auto " />
           </div>
           <div
-            className="p-3 rounded-lg hover:border-red-400 cursor-pointer border w-min  select-none bg-gray-200"
+            className="p-1 lg:p-3 rounded-lg hover:border-red-400 cursor-pointer border w-min  select-none hover:bg-gray-200"
             onClick={onClose}
           >
             Close
           </div>
         </div>
-        {/* <div className="space-y-2">
-          <div className="text-lg ">Biographical Information</div>
-          <div className="text-gray-500">
-            Salutation :{" "}
-            <span className="text-black"></span>
-          </div>
-          <div className="text-gray-500">First Name :  <span className="text-black">{values.firstName} </span></div>
-          <div className="text-gray-500">Last Name :  <span className="text-black">{values.lastName} </span></div>
-          <div className="text-gray-500">Email :  <span className="text-black">{values.email} </span></div>
-          <div className="text-gray-500">
-            Country Code :  <span className="text-black">{values.countryCode} </span>
-          </div>
-          <div className="text-gray-500">Phone :  <span className="text-black">{values.phone} </span></div>
-        </div> */}
       </div>
     </div>
   );

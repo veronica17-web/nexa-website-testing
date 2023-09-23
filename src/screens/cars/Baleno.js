@@ -371,7 +371,7 @@ const videoSource = isSafari
       <Features />
       <ImageOptions />
       <CarComp details={products[5]} />
-      <InvictoCarEnquiry2 title="BOOK YOUR BALENO NOW" carName="Baleno" />
+      <InvictoCarEnquiry2 title="BOOK YOUR BALENO" carName="Baleno" />
     </>
   );
 }

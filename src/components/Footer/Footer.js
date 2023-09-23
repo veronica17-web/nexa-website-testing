@@ -94,14 +94,14 @@ function Footer() {
                 <div className='space-x-2'>
                   <a
                     href='mailto:info@saboomaruti.in'
-                    className=' bg-[#ed1c24] text-white px-3 py-1.5 rounded shadow-sm text-sm mt-3'
+                    className=' bg-[#ed1c24] text-white px-2 sm:px-3 py-1.5 rounded shadow-sm text-sm mt-3'
                   >
                     info@saboomaruti.in
                   </a>
 
                   <a
                     href='tel:9848898488'
-                    className=' bg-[#ed1c24] text-white px-3 py-1.5 rounded shadow-sm text-sm mt-3'
+                    className=' bg-[#ed1c24] text-white px-2 sm:px-3 py-1.5 rounded shadow-sm text-sm mt-3 whitespace-nowrap'
                   >
                     +91 98488 98488
                   </a>

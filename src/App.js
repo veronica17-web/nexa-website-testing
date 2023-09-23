@@ -163,7 +163,7 @@ function App() {
       <Transition.Root show={open} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed z-10 inset-0 overflow-y-auto"
+          className="fixed inset-0 z-10 overflow-y-auto"
           onClose={setOpen}
         >
           <div className="flex justify-center items-center h-[90vh] md:min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
@@ -176,7 +176,7 @@ function App() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity" />
+              <Dialog.Overlay className="fixed inset-0 transition-opacity bg-gray-900 bg-opacity-75" />
             </Transition.Child>
 
             <span
@@ -194,11 +194,11 @@ function App() {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <div className="relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-                <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+              <div className="relative inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div className="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
                   <div className="text-left">
                     <button
-                      className="outline-none absolute right-2 top-2"
+                      className="absolute outline-none right-2 top-2"
                       onClick={() => setOpen(false)}
                     >
                       <IoCloseCircle size={28} />
@@ -284,18 +284,19 @@ function App() {
                           alt="logo"
                           className="w-full h-16"
                         />
-                        <h4 className="text-center text-red-600 font-bold">
+                        <h4 className="font-bold text-center text-red-600">
                           Get A Quote/Offer
                         </h4>
 
-                        <div className="mt-2 py-8">
+                        <div className="py-8 mt-2">
                           <input
-                            className="border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500"
-                            type="text"
+                            className="w-full h-10 px-3 border rounded-md outline-none focus:ring-red-500 focus:border-red-500"
+                            type="tel"
                             id="Phone"
                             name="Phone"
                             minLength="10"
                             maxLength="10"
+                            required
                             value={number}
                             autoComplete="off"
                             onChange={(e) =>
@@ -304,12 +305,12 @@ function App() {
                                   e.target.value.replace(/ /g, "")
                               )
                             }
-                            required
+                            
                             placeholder="Enter mobile number"
                           />
                         </div>
 
-                        <div className="flex items-center justify-center space-x-5 mb-5">
+                        <div className="flex items-center justify-center mb-5 space-x-5">
                           <a
                             href="https://wa.me/919848898488"
                             target="_blank"
@@ -318,7 +319,7 @@ function App() {
                           >
                             <IoLogoWhatsapp
                               size={20}
-                              className="text-green-700 mr-1"
+                              className="mr-1 text-green-700"
                             />
                             WhatsApp
                           </a>
@@ -333,7 +334,7 @@ function App() {
                           </a>
                         </div>
 
-                        <div className="mt-6 container text-xs text-gray-600 mb-4">
+                        <div className="container mt-6 mb-4 text-xs text-gray-600">
                           <span className="font-semibold">*Disclaimer:</span> By
                           clicking 'Submit,' you acknowledge that you have
                           agreed to our{" "}
@@ -346,17 +347,17 @@ function App() {
                           .
                         </div>
 
-                        {/* <div className='flex items-center space-x-2 mb-5'>
+                        {/* <div className='flex items-center mb-5 space-x-2'>
                           <input
                             id='comments'
                             name='comments'
                             type='checkbox'
-                            className=' h-4 w-4 border-gray-300 rounded'
+                            className='w-4 h-4 border-gray-300 rounded '
                             required
                           />
                           <label
                             htmlFor='comments'
-                            className='text-gray-700 text-sm'
+                            className='text-sm text-gray-700'
                           >
                             I agree to the{' '}
                             <Link to='/terms-and-condition'>
@@ -374,12 +375,12 @@ function App() {
                               : true
                           }
                           onClick={handleSubmit}
-                          className="w-full rounded-md border shadow-sm py-2 mb-3 bg-black font-medium text-white hover:bg-red-700 text-sm"
+                          className="w-full py-2 mb-3 text-sm font-medium text-white bg-black border rounded-md shadow-sm cursor-pointer hover:bg-red-700"
                         >
                           {loading ? (
                             <div className="flex items-center justify-center">
-                              <CgSpinner className="animate-spin h-5 mr-2 text-white w-5" />
-                              Loading
+                              <CgSpinner className="w-5 h-5 mr-2 text-white animate-spin" />
+                              Submitting
                             </div>
                           ) : (
                             "SUBMIT"

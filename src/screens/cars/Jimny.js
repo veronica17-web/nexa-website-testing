@@ -93,17 +93,17 @@ const Jimny = () => {
       <Design />
       {/* <OnRoadPrice title={'Jimny'} /> */}
       {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
-      <div className="hidden sm:block bg-black text-white pt-2 pb-8">
-        <div className="  w-full pt-8 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl ">
+      <div className="hidden pt-2 pb-8 text-white bg-black sm:block">
+        <div className="w-full pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
           SAFETY
         </div>
-        <div className="text-center text-md lg:text-lg pb-2">
+        <div className="pb-2 text-center text-md lg:text-lg">
           Your Safety Harness For Every Terrain
         </div>
         <div className="flex h-[75vh]  gap-2 px-4 pt-1">
           <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3  bg-no-repeat bg-cover bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/1-811x629-AR_SN_JIMNY_HILL+DESCENT+CONTROL+SHOT_V1+copy.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">HILL HOLD ASSIST</span>
+              <span className="text-lg font-semibold">HILL HOLD ASSIST</span>
               <span className="font-thin tracking-wider">
                 Climb like a mountain goat on the steepest roads
               </span>
@@ -111,7 +111,7 @@ const Jimny = () => {
           </div>
           <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/2-811x629-AR_SN_JIMNY_HILL+DESCENT+CONTROL+SHOT_V1.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">
+              <span className="text-lg font-semibold">
                 HILL DESCENT CONTROL
               </span>
               <span className="font-thin tracking-wider">
@@ -121,7 +121,7 @@ const Jimny = () => {
           </div>
           <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/3-Jimmy-811x629-1.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">BRAKE LSD</span>
+              <span className="text-lg font-semibold">BRAKE LSD</span>
               <span className="font-thin tracking-wider">
                 Be the unstoppable force on the most stubborn terrain
               </span>
@@ -129,7 +129,7 @@ const Jimny = () => {
           </div>
           <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/+carousel/4-811x629-AR_AB_BP_JIMNY_6_AIRBAG_SHOT_03_04.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">6 AIRBAGS</span>
+              <span className="text-lg font-semibold">6 AIRBAGS</span>
               <span className="font-thin tracking-wider">
                 The thrill of the ride is only possible with safety on your side
               </span>
@@ -137,12 +137,18 @@ const Jimny = () => {
           </div>
         </div>
       </div>
-      <div className="sm:hidden">
+      <div className="text-white bg-black sm:hidden">
+        <div className="w-full pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
+          SAFETY
+        </div>
+        <div className="pb-2 text-center text-md lg:text-lg">
+          Your Safety Harness For Every Terrain
+        </div>
         <MobileCarousel />
       </div>
       <Performance />
       <CarComp details={products[2]} />
-      <InvictoCarEnquiry2 title="BOOK YOUR JIMNY NOW" carName="Jimny" />
+      <InvictoCarEnquiry2 title="BOOK YOUR JIMNY" carName="Jimny" />
       {/* <Carousel /> */}
     </>
   );
@@ -151,24 +157,24 @@ const Jimny = () => {
 function JimnyInteriorAndOther() {
   const [tabsColors, setTabsColors] = useState(1);
   return (
-    <div className=" mx-auto  space-y-4 bg-black">
-      {/* <p className="font-bold text-4xl text-center">Maruti Suzuki Jimny</p>
-      <p className=" text-center tracking-wider font-bold">
+    <div className="mx-auto space-y-4 bg-black ">
+      {/* <p className="text-4xl font-bold text-center">Maruti Suzuki Jimny</p>
+      <p className="font-bold tracking-wider text-center ">
         A Story passed down four generations
       </p>
-      <p className="bg-black h-1 w-60 mx-auto"></p>
+      <p className="h-1 mx-auto bg-black w-60"></p>
       <p className="max-w-[900px] text-gray-600 text-center mx-auto font-light text-xl">
         The Jimny has been on a long journey down the evolutionary road.
         Selected by the nature for the harshest conditions, it has seen and
         survived the worst. Only getting tougher with experience as it's
         teacher.
       </p> */}
-       <div className=" w-full pt-8 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl text-white">
-       COLOURS
+      <div className="w-full pt-8 pb-2 text-3xl text-center text-white uppercase  sm:text-4xl md:text-5xl">
+        COLOURS
       </div>
 
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/colors/jimmy-color-bg.webp')] bg-cover bg-no-repeat">
-        <div className="max-w-1xl mx-auto">
+        <div className="mx-auto max-w-1xl">
           <div className="grid sm:grid-cols-2 lg:grid-cols-2">
             <a
               href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimny+Brochure_Saboo+RKS.3fe320502cb6720e78de.pdf"
@@ -181,7 +187,7 @@ function JimnyInteriorAndOther() {
             </a>
             <div className="col-span-2">
               <>
-                <div className="ml-auto mr-1 mt-24">
+                <div className="mt-24 ml-auto mr-1">
                   {/* 1. yellow bluish black roof */}
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/colors/Jimmy-Color-1500x700-Kinetic_Yellow_Bluish_Black_Roof.webp"
@@ -413,11 +419,11 @@ function JimnyInteriorAndOther() {
 const Variant = () => {
   const [price, setPrice] = useState("12,74,000");
   return (
-    <div className="bg-black py-8">
+    <div className="py-8 bg-black">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-3 md:space-y-0 space-y-3">
-          <div className="space-y-3 mx-auto md:mx-0">
-            <p className="uppercase text-gray-300">select car Variant</p>
+        <div className="grid space-y-3 md:grid-cols-3 md:space-y-0">
+          <div className="mx-auto space-y-3 md:mx-0">
+            <p className="text-gray-300 uppercase">select car Variant</p>
             <select
               name="model"
               value={price}
@@ -434,22 +440,22 @@ const Variant = () => {
           </div>
           <div className="text-center text-gray-200">
             <p className="text-2xl font-medium">₹ {price}*</p>
-            <p className="tracking-wide text-xl pb-1">
+            <p className="pb-1 text-xl tracking-wide">
               Ex-Showroom Price - Hyderabad
             </p>
-            {/* <p className="uppercase text-gray-400 font-bold">Hyderabad</p> */}
-            <div className="text-red-200 text-xs font-light">
+            {/* <p className="font-bold text-gray-400 uppercase">Hyderabad</p> */}
+            <div className="text-xs font-light text-red-200">
               <sup>*</sup>Alpha+ & Zeta+ are applicable only for Direct
               Injection engine with Smart Hybrid
             </div>
           </div>
           <div className="mx-auto">
-            <p className="text-gray-100 mb-6 text-center">
+            <p className="mb-6 text-center text-gray-100">
               You might have pre-approved loan offers
             </p>
             <Link
               to="/maruti-car-finance"
-              className="py-2 px-4 bg-white rounded shadow uppercase tracking-wide"
+              className="px-4 py-2 tracking-wide uppercase bg-white rounded shadow"
             >
               Check for loan offers
             </Link>
@@ -469,7 +475,7 @@ const VariantPlayer = () => {
     : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/video/jimny_banner.webm";
 
   return (
-    <div className="top-0 left-0 w-full h-screen relative bg-black ">
+    <div className="relative top-0 left-0 w-full h-screen bg-black ">
       <video
         className="object-cover w-full h-full "
         preload="metadata"
@@ -497,7 +503,7 @@ const VariantPlayer = () => {
           data-aos="fade-right"
           data-aos-delay="400"
           data-aos-duration="500"
-          className="text-5xl lg:text-8xl font-serif pb-1 uppercase"
+          className="pb-1 font-serif text-5xl uppercase lg:text-8xl"
         >
           Jimny
         </div>
@@ -505,7 +511,7 @@ const VariantPlayer = () => {
           data-aos="fade-right"
           data-aos-delay="600"
           data-aos-duration="1000"
-          className="text-2xl lg:text-5xl mb-2 lg:mb-4 uppercase"
+          className="mb-2 text-2xl uppercase lg:text-5xl lg:mb-4"
         >
           Crafted for Purity of Function
         </div>
@@ -514,7 +520,7 @@ const VariantPlayer = () => {
               data-aos="fade-right"
               data-aos-delay="800"
               data-aos-duration="1000"
-              className="border border-white px-4 py-2 lg:px-8 text-white uppercase"
+              className="px-4 py-2 text-white uppercase border border-white lg:px-8"
               onClick={() => setOpen(true)}
             >
               Discover More
@@ -529,7 +535,7 @@ const VariantPlayer = () => {
             data-aos="fade-right"
             data-aos-delay="800"
             data-aos-duration="1000"
-            className="border border-white px-4 py-2 lg:px-8 text-white uppercase"
+            className="px-4 py-2 text-white uppercase border border-white lg:px-8"
           >
             BROCHURE
           </button>
@@ -545,9 +551,9 @@ const Design = () => {
   const [exterior, setExterior] = useState(false);
 
   return (
-    <div className="bg-black py-4 ">
-      <div className="text-center text-white  container mx-auto ">
-        <div className="  w-full pt-8 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl ">
+    <div className="py-4 bg-black ">
+      <div className="container mx-auto text-center text-white ">
+        <div className="w-full pt-8 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
           DESIGNED FOR PURITY OF FUNCTION
         </div>
         <div className="text-center text-md lg:text-lg">
@@ -557,7 +563,7 @@ const Design = () => {
           time.
         </div>
 
-        <div className="flex justify-center pb-2 text-xl gap-5 mt-4">
+        <div className="flex justify-center gap-5 pb-2 mt-4 text-xl">
           <div className="">
             <button
               className={`px-4 py-1  border tracking-widest rounded-lg duration-500  ${
@@ -584,10 +590,10 @@ const Design = () => {
           </div>
         </div>
 
-        <div className=" py-2 sm:py-5 ">
-          <div className=" relative">
+        <div className="py-2  sm:py-5">
+          <div className="relative ">
             <div className={`${exterior ? "opacity-100" : "opacity-0"}`}>
-              <div className=" pb-6 space-y-4 rounded">
+              <div className="pb-6 space-y-4 rounded ">
                 {/* <Carousel /> */}
 
                 <Swiper
@@ -614,10 +620,10 @@ const Design = () => {
                       <img
                         src="https://nexaprod6.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/featuretechnology/interior/1000x500aramjimnyywdperpendicular-designautomatic-gearshotv3.webp"
                         alt="    Design to Evoke a Sense of Balance"
-                        className="  relative"
+                        className="relative "
                       />
-                      <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                        <div className="font-medium pb-2">
+                      <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                        <div className="pb-2 font-medium">
                           Design to Evoke a Sense of Balance
                         </div>
                         <div className="font-light lg:pr-40">
@@ -636,8 +642,8 @@ const Design = () => {
                         alt="
                         Sporty Cabin with Scratch-Resistant Surfaces"
                       />
-                      <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                        <div className="font-medium pb-2">
+                      <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                        <div className="pb-2 font-medium">
                           Sporty Cabin with Scratch-Resistant Surfaces
                         </div>
                         <div className="font-light lg:pr-40">
@@ -656,8 +662,8 @@ const Design = () => {
                         alt=" Intuitively Designed Controls"
                         className=""
                       />
-                      <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                        <div className="font-medium pb-2">
+                      <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                        <div className="pb-2 font-medium">
                           Intuitively Designed Controls
                         </div>
                         <div className="font-light lg:pr-40">
@@ -675,8 +681,8 @@ const Design = () => {
                         src="https://nexaprod3.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/featuretechnology/interior/comfortable-seat-design.webp"
                         alt="Comfortable Seat Design"
                       />
-                      <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                        <div className="font-medium pb-2">
+                      <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                        <div className="pb-2 font-medium">
                           Comfortable Seat Design
                         </div>
                         <div className="font-light lg:pr-40">
@@ -694,8 +700,8 @@ const Design = () => {
                         src="https://nexaprod4.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/featuretechnology/interior/professional-utility-kit.webp"
                         alt="  Professional Utility Kit"
                       />
-                      <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                        <div className="font-medium pb-2">
+                      <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                        <div className="pb-2 font-medium">
                           Professional Utility Kit
                         </div>
                         <div className="font-light lg:pr-40">
@@ -713,8 +719,8 @@ const Design = () => {
                         src="https://nexaprod5.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/featuretechnology/interior/1000x500-ar-am-jimny-ywd-smart-play-pro-shot-v1-copy.webp"
                         alt="SmartPlay Pro+"
                       />
-                      <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                        <div className="font-medium pb-2">SmartPlay Pro+</div>
+                      <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                        <div className="pb-2 font-medium">SmartPlay Pro+</div>
                         <div className="font-light lg:pr-40">
                           Going off the grid was never more pleasant. With the
                           intuitively designed infrared 9-inch SmartPlay Pro+ or
@@ -733,7 +739,7 @@ const Design = () => {
                   // freeMode={true}
                   // watchSlidesProgress={true}
                   modules={[FreeMode, Navigation, Thumbs]}
-                  className="mySwiper-3  text-white hidden md:block"
+                  className="hidden text-white mySwiper-3 md:block"
                 >
                   <SwiperSlide classname="cursor-pointer">
                     <div>
@@ -742,7 +748,7 @@ const Design = () => {
                         alt="    Design to Evoke a Sense of Balance"
                         className="max-h-24"
                       />
-                      <div className=" py-2 ">
+                      <div className="py-2 ">
                         Design to Evoke a Sense of Balance
                       </div>
                     </div>
@@ -755,7 +761,7 @@ const Design = () => {
                         Sporty Cabin with Scratch-Resistant Surfaces"
                         className="max-h-24"
                       />
-                      <div className=" py-2 ">
+                      <div className="py-2 ">
                         Sporty Cabin with Scratch-Resistant Surfaces
                       </div>
                     </div>
@@ -767,7 +773,7 @@ const Design = () => {
                         alt=" Intuitively Designed Controls"
                         className="max-h-24"
                       />
-                      <div className=" py-2 ">
+                      <div className="py-2 ">
                         Intuitively Designed Controls
                       </div>
                     </div>
@@ -780,7 +786,7 @@ const Design = () => {
                         alt="Comfortable Seat Design"
                         className="max-h-24"
                       />
-                      <div className=" py-2 ">Comfortable Seat Design</div>
+                      <div className="py-2 ">Comfortable Seat Design</div>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide classname="cursor-pointer">
@@ -800,7 +806,7 @@ const Design = () => {
                         alt="SmartPlay Pro+"
                         className="max-h-24"
                       />
-                      <div className=" py-2 ">SmartPlay Pro+</div>
+                      <div className="py-2 ">SmartPlay Pro+</div>
                     </div>
                   </SwiperSlide>
                 </Swiper>
@@ -811,7 +817,7 @@ const Design = () => {
                 exterior ? "opacity-0" : "opacity-100"
               }`}
             >
-              <div className=" pb-6 space-y-4 rounded">
+              <div className="pb-6 space-y-4 rounded ">
                 {/* <Carousel /> */}
 
                 <Swiper
@@ -838,10 +844,10 @@ const Design = () => {
                       <img
                         src="https://nexaprod5.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/featuretechnology/exterior/clamshell-bonnet.webp"
                         alt="Clamshell Bonnet"
-                        className="  relative"
+                        className="relative "
                       />
-                      <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                        <div className="font-medium pb-2">Clamshell Bonnet</div>
+                      <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                        <div className="pb-2 font-medium">Clamshell Bonnet</div>
                         <div className="font-light lg:pr-40">
                           Be ready for every twist in the trail. Get a
                           wide-angle view of what lies ahead with the Jimny's
@@ -857,8 +863,8 @@ const Design = () => {
                         src="https://nexaprod6.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/featuretechnology/exterior/1000x500-ar_sn_nexa_jimny_optimized-bumper_v2.webp"
                         alt="Optimized Bumpers"
                       />
-                      <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                        <div className="font-medium pb-2">
+                      <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                        <div className="pb-2 font-medium">
                           Optimized Bumpers
                         </div>
                         <div className="font-light lg:pr-40">
@@ -876,8 +882,8 @@ const Design = () => {
                         alt=" Practical Drip Rail"
                         className=""
                       />
-                      <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                        <div className="font-medium pb-2">
+                      <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                        <div className="pb-2 font-medium">
                           {" "}
                           Practical Drip Rail
                         </div>
@@ -898,8 +904,8 @@ const Design = () => {
                         src="https://nexaprod2.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/featuretechnology/exterior/1000x500-ar_ab_jimny_led_headlamp_with_washer_02-copy.webp"
                         alt="LED Headlamps with Washer"
                       />
-                      <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                        <div className="font-medium pb-2">
+                      <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                        <div className="pb-2 font-medium">
                           LED Headlamps with Washer
                         </div>
                         <div className="font-light lg:pr-40">
@@ -917,8 +923,8 @@ const Design = () => {
                         src="https://nexaprod3.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/featuretechnology/exterior/alloy.webp"
                         alt="Alloy"
                       />
-                      <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                        <div className="font-medium pb-2">Alloy</div>
+                      <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                        <div className="pb-2 font-medium">Alloy</div>
                         <div className="font-light lg:pr-40">
                           While donning the hat of an off-roader, you want to
                           get in character. The Jimny's bold gun-metal alloys
@@ -934,8 +940,8 @@ const Design = () => {
                         src="https://nexaprod4.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/featuretechnology/exterior/5-slot-chrome-plated-grille.webp"
                         alt="Gunmetal Grey Grille with Chrome Plating"
                       />
-                      <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                        <div className="font-medium pb-2">
+                      <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                        <div className="pb-2 font-medium">
                           Gunmetal Grey Grille with Chrome Plating
                         </div>
                         <div className="font-light lg:pr-40">
@@ -956,7 +962,7 @@ const Design = () => {
                   // freeMode={true}
                   // watchSlidesProgress={true}
                   modules={[FreeMode, Navigation, Thumbs]}
-                  className="mySwiper-3  text-white hidden md:block"
+                  className="hidden text-white mySwiper-3 md:block"
                 >
                   <SwiperSlide classname="cursor-pointer">
                     <div>
@@ -965,7 +971,7 @@ const Design = () => {
                         alt="Clamshell Bonnet"
                         className="max-h-24"
                       />
-                      <div className=" py-2 ">Clamshell Bonnet</div>
+                      <div className="py-2 ">Clamshell Bonnet</div>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide classname="cursor-pointer">
@@ -975,7 +981,7 @@ const Design = () => {
                         alt="Optimized Bumpers"
                         className="max-h-24"
                       />
-                      <div className=" py-2 ">Optimized Bumpers</div>
+                      <div className="py-2 ">Optimized Bumpers</div>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide classname="cursor-pointer">
@@ -985,7 +991,7 @@ const Design = () => {
                         alt=" Practical Drip Rail"
                         className="max-h-24"
                       />
-                      <div className=" py-2 "> Practical Drip Rail</div>
+                      <div className="py-2 "> Practical Drip Rail</div>
                     </div>
                   </SwiperSlide>
 
@@ -996,7 +1002,7 @@ const Design = () => {
                         alt="LED Headlamps with Washer"
                         className="max-h-24"
                       />
-                      <div className=" py-2 ">LED Headlamps with Washer</div>
+                      <div className="py-2 ">LED Headlamps with Washer</div>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide classname="cursor-pointer">
@@ -1016,7 +1022,7 @@ const Design = () => {
                         alt="Gunmetal Grey Grille with Chrome Plating"
                         className="max-h-24"
                       />
-                      <div className=" py-2 ">
+                      <div className="py-2 ">
                         Gunmetal Grey Grille with Chrome Plating
                       </div>
                     </div>
@@ -1033,101 +1039,102 @@ const Design = () => {
 
 const Performance = () => {
   return (
-    <div className="bg-black py-4  overflow-hidden">
-      
-      <div className="text-center text-white  container mx-auto ">
-      <div className="  w-full pt-8 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl text-white">
-        PERFORMANCE
-      </div>
-        <div className="text-center text-md lg:text-lg mb-6">
-          Off-Road Performance, To Conquer Any Fear
+    <div className="px-2 py-4 overflow-hidden bg-black">
+      <div className="container mx-auto text-center text-white ">
+        <div className="w-full pt-8 pb-2 text-3xl text-center text-white uppercase  sm:text-4xl md:text-5xl">
+          PERFORMANCE
+        </div>
+        <div className="mb-6 text-center text-md lg:text-lg">
+          Off-Road Performance, To Conquer Any Fear.
         </div>
       </div>
-      <div className="flex flex-col gap-6 lg:gap-4 items-center text-white container mx-auto">
-        <div className="grid  md:grid-cols-3 px-1 gap-2">
-          <img
-            src="https://nexaprod2.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/brand-persona-variant/1080x420-ar_vk_nexa_jimny-all-grip-pro_v-2.webp"
-            alt=" ALL GRIP PRO"
-            className="col-span-2 rounded-2xl"
-            data-aos="fade-right"
-            data-aos-delay="200"
-            data-aos-duration="500"
-          />
-          <div className="col-span-1 px-1 flex flex-col justify-center ">
-            <div className="text-xl lg:text-2xl font-medium mb-2">
-              ALL GRIP PRO
-            </div>
 
-            <div className="xl:text-lg text-justify">
-              Chase every off-roading dream - no matter how far-fetched. The
-              Jimny’s proven 4x4 technology with low-range transfer gear gives
-              you max torque and traction to conquer the toughest terrain.
+      <div className="mx-auto lg:container">
+        <Swiper
+          style={{
+            "--swiper-navigation-color": "#fff",
+            "--swiper-pagination-color": "#fff",
+          }}
+          loop={true}
+          speed={1000}
+          spaceBetween={10}
+          slidesPerView={1}
+          centeredSlides={true}
+          navigation={true}
+          modules={[FreeMode, Navigation, Autoplay]}
+          className="mySwiper2 h-28 "
+        >
+          <SwiperSlide className="">
+            <div className="w-full ">
+              <img
+                src="https://nexaprod2.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/brand-persona-variant/1080x420-ar_vk_nexa_jimny-all-grip-pro_v-2.webp"
+                alt=" ALL GRIP PRO"
+                className="relative "
+              />
+              <div className="w-full pt-4 text-left text-white ">
+                <div className="pb-2 font-medium">ALL GRIP PRO</div>
+                <div className="font-light lg:pr-40">
+                  Chase every off-roading dream - no matter how far-fetched. The
+                  Jimny’s proven 4x4 technology with low-range transfer gear
+                  gives you max torque and traction to conquer the toughest
+                  terrain.
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="flex flex-col-reverse md:grid  md:grid-cols-3 px-1 gap-2">
-          <div className="col-span-1 px-1 flex flex-col justify-center ">
-            <div className="text-xl lg:text-2xl font-medium mb-2">
-              Ladder Frame Chassis
+          </SwiperSlide>
+          <SwiperSlide className="">
+            <div className="w-full ">
+              <img
+                src="https://nexaprod1.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/brand-persona-variant/1080x420-ar_bp_nexa_jimny_chassis_shot_02.webp"
+                alt=" Ladder Frame Chassis"
+                className="relative "
+              />
+              <div className="w-full pt-4 text-left text-white ">
+                <div className="pb-2 font-medium">Ladder Frame Chassis</div>
+                <div className="font-light lg:pr-40">
+                  The stories you seek are not for the fainthearted. The Jimny's
+                  ladder frame structure provides the torsional rigidity
+                  required to overcome and conquer the most difficult terrain.
+                </div>
+              </div>
             </div>
-            <div className="xl:text-lg text-justify">
-              The stories you seek are not for the fainthearted. The Jimny's
-              ladder frame structure provides the torsional rigidity required to
-              overcome and conquer the most difficult terrain.
+          </SwiperSlide>
+          <SwiperSlide className="relative">
+            <div className="w-full ">
+              <img
+                src="https://nexaprod4.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/brand-persona-variant/1080x420-ar_bp_nexa_jimny_3_link_suspension_02.webp"
+                alt="3-Link Rigid Axle Suspension with Coil Spring"
+              />
+              <div className="w-full pt-4 text-left text-white ">
+                <div className="pb-2 font-medium">
+                  3-Link Rigid Axle Suspension with Coil Spring
+                </div>
+                <div className="font-light lg:pr-40">
+                  Don't lose the plot even on the deceptively slippery terrain.
+                  The Jimny's 3-link rigid axle suspension ensures increased
+                  tyre contact with the surface. So you always stand your
+                  ground.
+                </div>
+              </div>
             </div>
-          </div>
-          <img
-            src="https://nexaprod3.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/brand-persona-variant/1080x420-ar_bp_nexa_jimny_chassis_shot_02.webp"
-            alt="Ladder Frame Chassis"
-            className="col-span-2 rounded-2xl"
-            data-aos="fade-left"
-            data-aos-delay="300"
-            data-aos-duration="500"
-          />
-        </div>
-
-        <div className="grid  md:grid-cols-3 px-1 gap-2">
-          <img
-            src="https://nexaprod4.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/brand-persona-variant/1080x420-ar_bp_nexa_jimny_3_link_suspension_02.webp"
-            alt="3-Link Rigid Axle Suspension with Coil Spring"
-            className="col-span-2 rounded-2xl"
-            data-aos="fade-right"
-            data-aos-delay="400"
-            data-aos-duration="500"
-          />
-          <div className="col-span-1 px-1 flex flex-col justify-center ">
-            <div className="text-xl lg:text-2xl font-medium mb-2">
-              3-Link Rigid Axle Suspension with Coil Spring
+          </SwiperSlide>
+          <SwiperSlide className="relative">
+            <div className="w-full">
+              <img
+                src="https://nexaprod5.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/brand-persona-variant/1080x420-ar_bp_nexa_jimny_engine_03.webp"
+                alt="Engine Performance"
+              />
+              <div className="w-full pt-4 text-left text-white ">
+                <div className="pb-2 font-medium"> Engine Performance</div>
+                <div className="font-light lg:pr-40">
+                  All set to unlock a new level of off-roading? The Jimny’s 1.5L
+                  K15B engine, with its wide RPM range, is designed for
+                  unstoppable performance.
+                </div>
+              </div>
             </div>
-
-            <div className="xl:text-lg text-justify">
-              Don't lose the plot even on the deceptively slippery terrain. The
-              Jimny's 3-link rigid axle suspension ensures increased tyre
-              contact with the surface. So you always stand your ground.
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col-reverse md:grid  md:grid-cols-3 px-1 gap-2">
-          <div className="col-span-1 px-1 flex flex-col justify-center ">
-            <div className="text-xl lg:text-2xl font-medium mb-2">
-              Engine Performance
-            </div>
-
-            <div className="xl:text-lg text-justify">
-              All set to unlock a new level of off-roading? The Jimny’s 1.5L
-              K15B engine, with its wide RPM range, is designed for unstoppable
-              performance.
-            </div>
-          </div>
-          <img
-            src="https://nexaprod5.azureedge.net/-/media/feature/nexawebsitecarbrand/rocky/brand-persona-variant/1080x420-ar_bp_nexa_jimny_engine_03.webp"
-            alt="Engine Performance"
-            className="col-span-2 rounded-2xl"
-            data-aos="fade-left"
-            data-aos-delay="500"
-            data-aos-duration="500"
-          />
-        </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </div>
   );

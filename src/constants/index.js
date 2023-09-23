@@ -13,12 +13,12 @@ export const sliders = [
   //   alt: 'fronx-banner',
   // },
   {
-    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Maruti_Suzuki_Nexa_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp",
-    alt:"Maruti Suzuki Nexa Ganesh Chaturthi Offers"
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Maruti_Suzuki_Nexa_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp",
+    alt: "Maruti Suzuki Nexa Ganesh Chaturthi Offers",
   },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-web-banner-nov-1.webp',
-    alt: 'new-nov-scng-banner offers',
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-web-banner-nov-1.webp",
+    alt: "new-nov-scng-banner offers",
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-new-banner.webp',
@@ -26,46 +26,46 @@ export const sliders = [
   // },
 
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/new-nexa-web-banner.webp',
-    alt: 'New Grand Vitara offers',
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/new-nexa-web-banner.webp",
+    alt: "New Grand Vitara offers",
   },
 
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/xl6_homeBanner.webp',
-    alt: 'New XL6 offers',
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/xl6_homeBanner.webp",
+    alt: "New XL6 offers",
   },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_224.webp',
-    alt: 'Baleno Offers',
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_224.webp",
+    alt: "Baleno Offers",
   },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/banners/ignis_slider+(1).webp',
-    alt: 'Ignis Offers',
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/banners/ignis_slider+(1).webp",
+    alt: "Ignis Offers",
   },
 ];
 
 //same for home screen and offers screen
 export const mobileSliders = [
   {
-    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Maruti_Suzuki_Nexa_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp",
-    alt:"Maruti Suzuki Nexa Ganesh Chaturthi Offers"
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Maruti_Suzuki_Nexa_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp",
+    alt: "Maruti Suzuki Nexa Ganesh Chaturthi Offers",
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Mobile+Maruti+Suzuki+Nexa+Teachers+Day+September+Saboo+RKS+Motor.webp',
   //   alt: 'sep-01 mobile banner',
   // },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-mobile-banner.webp',
-    alt: 'invicto mobile banner',
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-mobile-banner.webp",
+    alt: "invicto mobile banner",
   },
 
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner.webp',
-    alt: 'NEW fronx mobile banner',
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner.webp",
+    alt: "NEW fronx mobile banner",
   },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Nexa+Service+mobile+banner.webp',
-    alt: 'NEW BANNER april 2023',
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Nexa+Service+mobile+banner.webp",
+    alt: "NEW BANNER april 2023",
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-mobilr.webp',
@@ -106,28 +106,6 @@ export const mobileSliders = [
   // },
 ];
 
-export const bookAservice = [
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Maruti+Suzuki+Nexa+Summer+Service.webp',
-  //   alt: 'april 2023 service banner',
-  // },
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Freedom+Service+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
-  //   alt: 'NEW service august BANNER',
-  // },
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Nexa+Service+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
-  //   alt: 'NEW service BANNER',
-  // },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp',
-    alt: 'NEW HAFEEZPET BANNER',
-  },
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/jimny-banner.webp',
-  //   alt: 'banner-2',
-  // },
-];
 export const products = [
   {
     id: 1,
@@ -135,6 +113,8 @@ export const products = [
     price: "24,79,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/D23+logo+without+outline+Black_125x35.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-main-thubmnail-no-bg.webp",
+    specImage:
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Invicto+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Saboo+RKS_Invicto.pdf",
     explore: "/maruti-invicto-price-in-hyderabad",
@@ -163,6 +143,8 @@ export const products = [
     price: "7,46,500",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/Flash_header_Menu_logo.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/fronx-cng-thumbnail.webp",
+    specImage:
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Fronx+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/FRONX+Brochure.pdf",
     explore: "/maruti-fronx-price-in-hyderabad",
@@ -191,6 +173,7 @@ export const products = [
     price: "12,74,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/120x30+black.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/jimny.webp",
+    specImage: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Jimny+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimny+Brochure.pdf",
     explore: "/maruti-jimny-price-in-hyderabad",
@@ -219,6 +202,7 @@ export const products = [
     price: "10,45,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/thumbnails/gt-thumbnail-cng.webp",
+    specImage: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/GV+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/grand_vitara.pdf",
     explore: "/grand-vitara-on-road-price-in-hyderabad",
@@ -248,6 +232,7 @@ export const products = [
     price: "5,35,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp",
+    specImage: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Ignis+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/Maruti-Suzuki-Ignis-Broucher.pdf",
     explore: "/nexa-ignis-on-road-price-in-hyderabad",
@@ -276,6 +261,7 @@ export const products = [
     price: "6,49,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/cng/baleno-cng-thubnail.webp",
+    specImage: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Baleno+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/The_New_Age_Baleno_Brochure.pdf",
     explore: "/new-maruti-baleno-price-in-hyderabad",
@@ -304,6 +290,7 @@ export const products = [
     price: "8,99,500",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-ciaz.webp",
+    specImage: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Ciaz+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/Maruti-Suzuki-All_new_Ciaz-Brochure.pdf",
     explore: "/nexa-ciaz-on-road-price-in-hyderabad",
@@ -333,6 +320,7 @@ export const products = [
     price: "11,29,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Logo-XL6.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/cng/xl6-cng-thumbnail.webp",
+    specImage: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/XL6+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/THE+ALL-NEW+XL6+Brochure.pdf",
     explore: "/nexa-xl6-on-road-price-in-hyderabad",
@@ -893,7 +881,6 @@ export const accsliders = [
   //   alt: "banner-7",
   // },
   // {
- 
 ];
 
 export const accgal = [
@@ -918,7 +905,6 @@ export const accgal = [
     alt: "banner-5",
   },
 ];
-
 
 export const categoriess = [
   {
@@ -2908,37 +2894,37 @@ export const categoriess = [
   },
   {
     filedName: "Lifestyle",
-    data: [{
-      item: "ORVM Garnish (Grey) | New Baleno (Alpha Zeta & Delta Variant)",
-      img: "https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/partsimages/2022/05/25/990j0m55t13-090_1-jpg.jpg",
-      code: "990J0M55T13-090",
-      price: " 190",
-    },
-    {
-      item: "Emergency Wrap - Charcoal Black | Jimny",
-      img: "https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/partsimages/2023/09/990j0m80tlf-100_1.jpg",
-      code: "990J0M80TLF-100",
-      price: " 199",
-    },
-    {
-      item: "Luggage Hook  | Jimny",
-      img: "https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/partsimages/2023/09/990j0m80tpq-010_1.jpg",
-      code: "990J0M80TPQ-010",
-      price: " 200",
-    },
-    {
-      item: "Rear Reflector Garnish (Grey) | New Baleno",
-      img: "https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/partsimages/2022/02/990j0m55t13-170_1.jpg",
-      code: "990J0M55T13-170",
-      price: " 220",
-    },
-    {
-      item: "Fender Garnish (Black) | New Baleno",
-      img: "https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/partsimages/2022/05/25/990j0m55t13-150_1-jpg.jpg",
-      code: "990J0M55T13-150",
-      price: " 230",
-    },
-     
+    data: [
+      {
+        item: "ORVM Garnish (Grey) | New Baleno (Alpha Zeta & Delta Variant)",
+        img: "https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/partsimages/2022/05/25/990j0m55t13-090_1-jpg.jpg",
+        code: "990J0M55T13-090",
+        price: " 190",
+      },
+      {
+        item: "Emergency Wrap - Charcoal Black | Jimny",
+        img: "https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/partsimages/2023/09/990j0m80tlf-100_1.jpg",
+        code: "990J0M80TLF-100",
+        price: " 199",
+      },
+      {
+        item: "Luggage Hook  | Jimny",
+        img: "https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/partsimages/2023/09/990j0m80tpq-010_1.jpg",
+        code: "990J0M80TPQ-010",
+        price: " 200",
+      },
+      {
+        item: "Rear Reflector Garnish (Grey) | New Baleno",
+        img: "https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/partsimages/2022/02/990j0m55t13-170_1.jpg",
+        code: "990J0M55T13-170",
+        price: " 220",
+      },
+      {
+        item: "Fender Garnish (Black) | New Baleno",
+        img: "https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/partsimages/2022/05/25/990j0m55t13-150_1-jpg.jpg",
+        code: "990J0M55T13-150",
+        price: " 230",
+      },
     ],
   },
   {

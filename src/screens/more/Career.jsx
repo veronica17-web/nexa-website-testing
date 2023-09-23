@@ -12,6 +12,8 @@ import { Link } from "react-router-dom";
 const phoneRegex = /^(\+91-|\+91|0)?\d{10}$/;
 // const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,16}$/;
 const emailReg = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+const url =
+  /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)$/;
 
 const SignupSchema = Yup.object().shape({
   salutation: Yup.string().required("Information is required*"),
@@ -37,7 +39,9 @@ const SignupSchema = Yup.object().shape({
   currentCTC: Yup.string().required("Information is required*"),
   expectedCTC: Yup.string().required("Information is required*"),
   qualification: Yup.string().required("Information is required*"),
-  resumeLink: Yup.string().required("Information is required*"),
+  resumeLink: Yup.string()
+    .required("Information is required*")
+    .matches(url, "link is not valid"),
 });
 
 // let state = [
@@ -234,7 +238,7 @@ const Career = ({ formValue }) => {
                   <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-1 md:gap-x-6">
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Salutation </div>
+                        <div className="">Salutation </div>
 
                         <ErrorMessage
                           name="salutation"
@@ -261,7 +265,7 @@ const Career = ({ formValue }) => {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">First Name* </div>
+                        <div className="">First Name* </div>
                         <ErrorMessage
                           name="firstName"
                           component="div"
@@ -279,7 +283,7 @@ const Career = ({ formValue }) => {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Last Name* </div>
+                        <div className="">Last Name* </div>
                         <ErrorMessage
                           name="lastName"
                           component="div"
@@ -297,7 +301,7 @@ const Career = ({ formValue }) => {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Email* </div>
+                        <div className="">Email* </div>
                         <ErrorMessage
                           name="email"
                           component="div"
@@ -316,7 +320,7 @@ const Career = ({ formValue }) => {
 
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Phone* </div>
+                        <div className="">Phone* </div>
                         <ErrorMessage
                           name="phone"
                           component="div"
@@ -334,7 +338,7 @@ const Career = ({ formValue }) => {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Alternative Phone </div>
+                        <div className="">Alternative Phone </div>
                         <ErrorMessage
                           name="alterPhone"
                           component="div"
@@ -342,7 +346,6 @@ const Career = ({ formValue }) => {
                         />
                       </div>
                       <Field
-
                         className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                         type="text"
                         name="alterPhone"
@@ -353,9 +356,7 @@ const Career = ({ formValue }) => {
 
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">
-                          Address
-                        </div>
+                        <div className="">Address</div>
                         <ErrorMessage
                           name="address"
                           component="div"
@@ -371,15 +372,12 @@ const Career = ({ formValue }) => {
                         // placeholder="Company Name"
                       />
                     </div>
-                    </div>
+                  </div>
 
-                    <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-1 md:gap-x-6">
-                 
+                  <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-1 md:gap-x-6">
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">
-                        Last Company
-                        </div>
+                        <div className="">Last Company</div>
                         <ErrorMessage
                           name="lastCompany"
                           component="div"
@@ -397,7 +395,7 @@ const Career = ({ formValue }) => {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Job Title</div>
+                        <div className="">Job Title</div>
                         <ErrorMessage
                           name="jobTitle"
                           component="div"
@@ -415,7 +413,7 @@ const Career = ({ formValue }) => {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Job Location</div>
+                        <div className="">Job Location</div>
                         <ErrorMessage
                           name="jobLocation"
                           component="div"
@@ -433,7 +431,13 @@ const Career = ({ formValue }) => {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Total Experience  <span className="text-xs"> - (Mention zero (“0”) if you’re a fresher.)</span>  </div>
+                        <div className="">
+                          Total Experience{" "}
+                          <span className="text-xs">
+                            {" "}
+                            - (Mention zero (“0”) if you’re a fresher.)
+                          </span>{" "}
+                        </div>
                         <ErrorMessage
                           name="totalExp"
                           component="div"
@@ -451,7 +455,7 @@ const Career = ({ formValue }) => {
                     </div>
                     <div className="">
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Profile Summary</div>
+                        <div className="">Profile Summary</div>
                         <ErrorMessage
                           name="profileSum"
                           component="div"
@@ -470,7 +474,7 @@ const Career = ({ formValue }) => {
 
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Last Dwarn Salary </div>
+                        <div className="">Last Dwarn Salary </div>
                         <ErrorMessage
                           name="lastDwarnSalary"
                           component="div"
@@ -488,7 +492,7 @@ const Career = ({ formValue }) => {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Skills(Ex.Hr, Sales, Marketing)</div>
+                        <div className="">Skills(Ex.Hr, Sales, Marketing)</div>
                         <ErrorMessage
                           name="skills"
                           component="div"
@@ -506,7 +510,7 @@ const Career = ({ formValue }) => {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Current CTC </div>
+                        <div className="">Current CTC </div>
                         <ErrorMessage
                           name="currentCTC"
                           component="div"
@@ -524,7 +528,7 @@ const Career = ({ formValue }) => {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Expected CTC </div>
+                        <div className="">Expected CTC </div>
                         <ErrorMessage
                           name="expectedCTC"
                           component="div"
@@ -537,13 +541,12 @@ const Career = ({ formValue }) => {
                         type="text"
                         name="expectedCTC"
                         id="expectedCTC"
-                        
                       />
                     </div>
 
                     <div>
                       <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Highest Qualification</div>
+                        <div className="">Highest Qualification</div>
                         <ErrorMessage
                           name="qualification"
                           component="div"
@@ -559,17 +562,14 @@ const Career = ({ formValue }) => {
                         // placeholder="Company Name"
                       />
                     </div>
-                   
-                    <div>
-                      <div className="flex justify-between mb-1 items-center">
-                      <div className="text-gray-600 text-left">
-                          Upload resume in your google drive and paste link
-                          below <br />
-                          <span className="text-xs text-red-500">
-                            Note: Update pdf document share setting from
-                            Restricted to anyone with the link in google drive{" "}
-                          </span>
+
+                    <div className="md:col-span-2 mb-4">
+                      <div className="flex justify-between   mb-1 ">
+                        <div className=" text-left  md:hidden">Resume Link</div>
+                        <div className=" text-left hidden md:block">
+                        <span className="font-medium">Resume Link :</span> Upload your resume to Google Drive and paste the link below.
                         </div>
+
                         <ErrorMessage
                           name="resumeLink"
                           component="div"
@@ -578,262 +578,23 @@ const Career = ({ formValue }) => {
                       </div>
                       <Field
                         required
-                        className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
+                        className=" w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
                         type="text"
                         name="resumeLink"
                         id="resumeLink"
                         // placeholder="Company Name"
                       />
-                    </div>
-                    {/* <div className="md:col-span-2 xl:col-span-3">
-                      <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600">Job Summary</div>
-                        <ErrorMessage
-                          name="jobSummary"
-                          component="div"
-                          className=" text-right text-sm text-red-700"
-                        />
-                      </div>
-                      <Field
-                        required
-                        className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                        as="textarea"
-                        name="jobSummary"
-                        id="jobSummary"
-                        // placeholder="Company Name"
-                      />
-                    </div>
-
-                    <div>
-                      <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600 text-left">
-                          Do you have a higher education/master’s degree (like
-                          MBA, MTech, MS, etc.)?
-                        </div>
-                        <ErrorMessage
-                          name="appField1"
-                          component="div"
-                          className=" text-right text-sm text-red-700"
-                        />
-                      </div>
-                      <Field
-                        required
-                        as="select"
-                        className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                        name="appField1"
-                        id="appField1"
-                      >
-                        <option
-                          value=""
-                          className="text-sm text-gray-200"
-                          disabled
-                        >
-                          Please Select
-                        </option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                      </Field>
-                    </div>
-                    <div>
-                      <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600 text-left">
-                          If you're employed, since how long (no. of months)
-                          have you been working in your current organization?
-                          Mention zero ("0") if you're a fresher.
-                        </div>
-                        <ErrorMessage
-                          name="appField2"
-                          component="div"
-                          className=" text-right text-sm text-red-700"
-                        />
-                      </div>
-                      <Field
-                        required
-                        className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                        type="text"
-                        name="appField2"
-                        id="appField2"
-                        // placeholder="Company Name"
-                      />
-                    </div>
-                    <div>
-                      <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600 text-left">
-                          What was your field of education/bachelor's/master's
-                          degree?
-                        </div>
-                        <ErrorMessage
-                          name="appField3"
-                          component="div"
-                          className=" text-right text-sm text-red-700"
-                        />
-                      </div>
-                      <Field
-                        required
-                        as="select"
-                        className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                        name="appField3"
-                        id="appField3"
-                      >
-                        <option
-                          value=""
-                          className="text-sm text-gray-200"
-                          disabled
-                        >
-                          Please Select
-                        </option>
-                        <option value="Engineering/Science">
-                          Engineering/Science
-                        </option>
-                        <option value="Business/Commerce">
-                          Business/Commerce
-                        </option>
-                        <option value="Economics/Mathematics">
-                          Economics/Mathematics
-                        </option>
-                      </Field>
-                    </div>
-                    <div>
-                      <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600 text-left">
-                          If given an offer, how soon can you join ?
-                        </div>
-                        <ErrorMessage
-                          name="appField4"
-                          component="div"
-                          className=" text-right text-sm text-red-700"
-                        />
-                      </div>
-                      <Field
-                        required
-                        className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                        type="date"
-                        name="appField4"
-                        id="appField4"
-                        // placeholder="Company Name"
-                      />
-                    </div>
-                    <div>
-                      <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600 text-left">
-                          If you have work experience (incl. internships) which
-                          of the areas have you worked in? (eg. engineering,
-                          Finance, Market Research, Sales and Marketing, other)
-                        </div>
-                        <ErrorMessage
-                          name="appField5"
-                          component="div"
-                          className=" text-right text-sm text-red-700"
-                        />
-                      </div>
-                      {/* <Field
-          required
-          as="select"
-          className="mb-4 w-full rounded-lg border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-          name="appField5"
-          id="appField5"
-          isMulti={true} // Add the 'multiple' attribute here
-        >
-          <option
-            value=""
-            className="text-sm text-gray-500"
-            disabled
-          ></option>
-          <option value="Mr">Mr.</option>
-          <option value="Mrs.">Mrs.</option>
-          <option value="Ms.">Ms.</option>
-        </Field> 
-                      <Field
-                        required
-                        className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                        type="text"
-                        name="appField5"
-                        id="appField5"
-                        // placeholder="Company Name"
-                      />
-                    </div>
-                    <div>
-                      <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600 text-left">
-                          When did you complete your last education degree
-                          (Bachelor's/Master's) or when do you expect to
-                          complete it if you're still a student?
-                        </div>
-                        <ErrorMessage
-                          name="appField6"
-                          component="div"
-                          className=" text-right text-sm text-red-700"
-                        />
-                      </div>
-                      <Field
-                        required
-                        className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                        type="date"
-                        name="appField6"
-                        id="appField6"
-                        // placeholder="Company Name"
-                      />
-                    </div>
-
-                    <div className=" ">
-        <div className="flex justify-between mb-1 items-center">
-          <div className="text-gray-600 text-sm">
-            (PDF only, max 1MB)
-          </div>
-          <ErrorMessage
-            name="resume"
-            component="div"
-            className=" text-right text-sm text-red-700"
-          />
-        </div>
-        <Field
-          type="file"
-          className="mb-1 block w-full border rounded-lg px-2 py-1 text-lg leading-relaxed text-slate-500 file:mr-4 file:rounded-full  file:border-0  file:bg-violet-50 file:px-4 file:py-2 file:text-sm file:font-medium file:text-black hover:file:bg-violet-100 focus:border-black  "
-          name="resume" // Provide a valid name for the file input
-          id="resume" // Provide a valid ID for the file input
-          placeholder="Resume"
-          required
-          accept=".pdf" // Allow only PDF files
-          onChange={(event) => {
-            const selectedFile = event.target.files[0];
-            const fileSize = selectedFile.size / 1024; // Size in KB
-
-            if (selectedFile && fileSize <= 1024) {
-              // Valid file size (1MB or less)
-              // You can also handle the file here, e.g., store it in state or display a message.
-            } else {
-              // File size exceeds 1MB or invalid file type
-              event.target.value = ""; // Clear the file input
-              // Display an error message or take appropriate action.
-            }
-          }}
-        />
-      </div> 
-                    <div className="mb-6">
-                      <div className="flex justify-between mb-1 items-center">
-                        <div className="text-gray-600 text-left">
+                      <div>
+                        <div className="text-left mt-1 md:hidden">
                           Upload resume in your google drive and paste link
-                          below <br />
-                          <span className="text-xs text-red-500">
-                            Note: Update pdf document share setting from
-                            Restricted to anyone with the link in google drive{" "}
-                          </span>
+                          below
                         </div>
-                        <ErrorMessage
-                          name="resumeLink"
-                          component="div"
-                          className=" text-right text-sm text-red-700"
-                        />
+                        <div className="text-xs text-red-500 text-left mt-0.5">
+                          Note: Update pdf document share setting from
+                          Restricted to anyone with the link in google drive{" "}
+                        </div>
                       </div>
-                      <Field
-                        required
-                        className="mb-4 w-full rounded-lg  border border-gray-300 px-4 py-2 placeholder:text-black focus:outline-none"
-                        type="text"
-                        name="resumeLink"
-                        id="resumeLink"
-                        // placeholder="Company Name"
-                      />
-                    </div> */}
+                    </div>
                   </div>
                   <button
                     className="col-span-3 mb-6 mt-1 w-min rounded-md bg-black  px-6 py-2 font-sans text-lg font-semibold tracking-wide text-white whitespace-nowrap "
@@ -842,17 +603,6 @@ const Career = ({ formValue }) => {
                   >
                     {loading ? "SUBMITTING" : "SUBMIT APPLICATION"}
                   </button>
-
-                  {/* <Link to="/login">
-      Already have an account -{" "}
-      <span to="/signup" className="font-medium text-[#5c67f5]">
-        Sign in
-      </span>
-    </Link>
-
-    <div className="-mb-3 mt-4 text-[12px] ">
-      © 2023 ProcureN. All rights reserved{" "}
-    </div> */}
                 </Form>
               )}
             </Formik>

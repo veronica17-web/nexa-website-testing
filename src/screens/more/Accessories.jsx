@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 
-
 // import required modules
 import { Autoplay, Navigation } from "swiper";
 import { accsliders, categoriess } from "../../constants";
@@ -23,6 +22,13 @@ function Accessories() {
     console.log(open);
   }, [open]);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 450,
+      behavior: "smooth", // for smooth scrolling
+    });
+  };
+
   return (
     <>
       <Helmet>
@@ -39,7 +45,7 @@ function Accessories() {
         />
       </Helmet>
       <Header col={true} />
-      <div className="bg-white h-[4.1rem] md:h-[5.25rem] "></div>
+      <div className="bg-white h-16 lg:h-20 "></div>
       <Swiper
         // spaceBetween={30}
         autoplay={{
@@ -49,13 +55,13 @@ function Accessories() {
         loop={true}
         navigation={true}
         modules={[Autoplay, Navigation]}
-        className="mySwiper slider-home"
+        className="mySwiper -mt-1"
       >
         {accsliders.map((item, i) => (
           <SwiperSlide key={i}>
             <img
               src={item.img}
-              className="max-w-full w-full"
+              className="max-w-full w-full select-none"
               alt={item.alt}
               width="100px"
               height="100px"
@@ -75,7 +81,7 @@ function Accessories() {
         <div className="pt-4 text-xl md:text-2xl lg:text-3xl text-center  lg:pt-8 select-none pb-6">
           Categories
         </div>
-        <div className="flex flex-wrap justify-center  md:text-lg   border-b py-4 gap-2 sticky top-16 lg:top-[5.26rem] z-10 bg-gray-200  md:rounded-b-full border-gray-300 ">
+        <div className="flex flex-wrap justify-center border-b py-4 gap-2 sticky top-16 lg:top-[5.26rem] z-10 bg-gray-200  lg:text-lg border-gray-300 ">
           {categoriess.map((x, i) => (
             <div
               key={i}
@@ -84,7 +90,10 @@ function Accessories() {
                   ? "text-red-500 underline underline-offset-4 "
                   : "hover:text-red-600 hover:underline hover:underline-offset-4"
               } ${i < categoriess.length - 1 && "border-r"}`}
-              onClick={() => setSeleted(i)}
+              onClick={() => {
+                setSeleted(i);
+                scrollToTop(); // Call the scroll function when the element is clicked
+              }}
             >
               {x.filedName}
             </div>
@@ -109,13 +118,11 @@ function Accessories() {
                   className="w-full h-full rounded-lg "
                   alt={item.name}
                 />
-                 {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
+                {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-wrap justify-between items-center gap-2  m-4 ">
-                  <div className="text-xl">
-                    {item.item}
-                  </div>
+                  <div className="text-xl">{item.item}</div>
                   <div className="text-sm">{item.code}</div>
                 </div>
                 <div className="flex items-center justify-center gap-4 pb-5 mx-4">
@@ -153,13 +160,11 @@ function Accessories() {
                   className="w-full h-full rounded-lg "
                   alt={item.name}
                 />
-                 {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
+                {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-wrap justify-between items-center gap-2  m-4 ">
-                  <div className="text-xl">
-                    {item.item}
-                  </div>
+                  <div className="text-xl">{item.item}</div>
                   <div className="text-sm">{item.code}</div>
                 </div>
                 <div className="flex items-center justify-center gap-4 pb-5 mx-4">
@@ -197,13 +202,11 @@ function Accessories() {
                   className="w-full h-full rounded-lg "
                   alt={item.name}
                 />
-                 {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
+                {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-wrap justify-between items-center gap-2  m-4 ">
-                  <div className="text-xl">
-                    {item.item}
-                  </div>
+                  <div className="text-xl">{item.item}</div>
                   <div className="text-sm">{item.code}</div>
                 </div>
                 <div className="flex items-center justify-center gap-4 pb-5 mx-4">
@@ -241,13 +244,11 @@ function Accessories() {
                   className="w-full h-full rounded-lg "
                   alt={item.name}
                 />
-                 {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
+                {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-wrap justify-between items-center gap-2  m-4 ">
-                  <div className="text-xl">
-                    {item.item}
-                  </div>
+                  <div className="text-xl">{item.item}</div>
                   <div className="text-sm">{item.code}</div>
                 </div>
                 <div className="flex items-center justify-center gap-4 pb-5 mx-4">
@@ -279,19 +280,17 @@ function Accessories() {
               className="relative flex flex-col justify-between overflow-hidden border border-gray-200 shadow-lg shadow-gray-200 hover:shadow-gray-300 rounded-lg hover:scale-105 duration-200"
               key={i}
             >
-             <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
+              <div className="flex items-center justify-between m-4 rounded-lg overflow-hidden bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp)] min-h-[30vh] bg-center bg-cover ">
                 <img
                   src={item.img}
                   className="w-full h-full rounded-lg "
                   alt={item.name}
                 />
-                 {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
+                {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-wrap justify-between items-center gap-2  m-4 ">
-                  <div className="text-xl">
-                    {item.item}
-                  </div>
+                  <div className="text-xl">{item.item}</div>
                   <div className="text-sm">{item.code}</div>
                 </div>
                 <div className="flex items-center justify-center gap-4 pb-5 mx-4">
@@ -329,13 +328,11 @@ function Accessories() {
                   className="w-full h-full rounded-lg "
                   alt={item.name}
                 />
-                 {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
+                {/* <img src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Loading-Image.webp" alt="" srcset="" /> */}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-wrap justify-between items-center gap-2  m-4 ">
-                  <div className="text-xl">
-                    {item.item}
-                  </div>
+                  <div className="text-xl">{item.item}</div>
                   <div className="text-sm">{item.code}</div>
                 </div>
                 <div className="flex items-center justify-center gap-4 pb-5 mx-4">

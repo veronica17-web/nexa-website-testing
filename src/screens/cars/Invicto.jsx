@@ -192,7 +192,7 @@ const Invicto = () => {
 
       <Safety />
       <CarComp details={products[0]} />
-      <InvictoCarEnquiry2 title="BOOK YOUR INVICTO NOW" carName="Invicto" />
+      <InvictoCarEnquiry2 title="BOOK YOUR INVICTO" carName="Invicto" />
     </div>
   );
 };
@@ -1534,7 +1534,8 @@ export const CarComp = ({ details }) => {
         </div>
         <div className="flex items-center justify-center object-cover lg:w-1/2 overflow-hidden">
           <img
-            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Invicto-Balck.webp"
+            // src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Invicto-Balck.webp"
+            src={details.specImage}
             alt=""
             className="scale-125"
           />
@@ -1549,7 +1550,7 @@ export const CarComp = ({ details }) => {
               Specs
             </div>
           </div>
-          <div className="grid grid-cols-2 ">
+          <div className="grid grid-cols-2 px-1">
             <div className="mb-6">
               <div className="w-10 mb-2 border-b"></div>
               <div>

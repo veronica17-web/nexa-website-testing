@@ -564,7 +564,7 @@ function Header({ col }) {
                     Offers
                   </Link> */}
                 </div>
-                <div className="  lg:ml-0 ml-2">
+                <div className="  lg:ml-0 ml-2 select-none">
                   <Link to="/">
                     <img
                       className={`h-8 md:h-9 xl:h-10 ${

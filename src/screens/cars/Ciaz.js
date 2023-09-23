@@ -403,7 +403,7 @@ function Ciaz() {
       <Features />
       <ImageOptions />
       <CarComp details={products[6]} />
-      <InvictoCarEnquiry2 title="BOOK YOUR CIAZ NOW" carName="Ciaz" />
+      <InvictoCarEnquiry2 title="BOOK YOUR CIAZ" carName="Ciaz" />
     </>
   );
 }

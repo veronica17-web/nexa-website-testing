@@ -231,12 +231,18 @@ const Fronx = () => {
           </div>
         </div>
       </div>
-      <div className=" sm:hidden">
+      <div className=" sm:hidden bg-black text-white pt-2 pb-8">
+        <div className="  w-full pt-8 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl ">
+          PERFORMANCE
+        </div>
+        <div className="text-center text-md lg:text-lg pb-2">
+          Born To Outperform, In Style
+        </div>
         <MobileCarousel />
       </div>
       <Safety />
       <CarComp details={products[1]} />
-      <InvictoCarEnquiry2 title="BOOK YOUR FRONX NOW" carName="Fronx" />
+      <InvictoCarEnquiry2 title="BOOK YOUR FRONX" carName="Fronx" />
     </>
   );
 };
@@ -257,7 +263,7 @@ function FronxInteriorAndOther() {
         is uniquely craftedto satisfy the modren sensibilities of NEXA
         customers.
       </p> */}
-      <div className=" container mx-auto w-full pt-10 pb-4 text-3xl text-center uppercase  sm:text-4xl md:text-5xl bg-black text-white">
+      <div className=" container mx-auto w-full pt-2 md:pt-10 pb-4 text-3xl text-center uppercase  sm:text-4xl md:text-5xl bg-black text-white">
         COLOURS
       </div>
 
@@ -849,7 +855,7 @@ const Technology = () => {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="relative">
-              <div className="w-full lg:px-20">
+                <div className="w-full lg:px-20">
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-360_screen.webp"
                     alt="360 View Camera"
@@ -866,7 +872,7 @@ const Technology = () => {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="relative">
-              <div className="w-full lg:px-20">
+                <div className="w-full lg:px-20">
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-Head_Up_Display.webp"
                     alt="Head Up Display"
@@ -885,7 +891,7 @@ const Technology = () => {
               </SwiperSlide>
 
               <SwiperSlide className="relative">
-              <div className="w-full lg:px-20">
+                <div className="w-full lg:px-20">
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-9inch_touch_screen.webp"
                     alt='22.86 cm (9") SmartPlay Pro+ with Surround Sense Powered by ARKAMYS'
@@ -904,7 +910,7 @@ const Technology = () => {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="relative">
-              <div className="w-full lg:px-20">
+                <div className="w-full lg:px-20">
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-PADDLE_SHIFTERS.webp"
                     alt=" Paddle Shifters (in AT Only)"
@@ -923,7 +929,7 @@ const Technology = () => {
                 </div>
               </SwiperSlide>
               <SwiperSlide className="relative">
-              <div className="w-full lg:px-20">
+                <div className="w-full lg:px-20">
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-wireless-changing.webp"
                     alt="Wireless Charger"
@@ -944,7 +950,6 @@ const Technology = () => {
               loop={true}
               // spaceBetween={10}
               slidesPerView={5}
-             
               // freeMode={true}
               // watchSlidesProgress={true}
               modules={[FreeMode, Navigation, Thumbs]}
@@ -957,9 +962,7 @@ const Technology = () => {
                     alt="Dual-Tone Plush Interiors"
                     className="max-h-24"
                   />
-                  <div className=" py-2 ">
-                    Dual-Tone Plush Interiors
-                  </div>
+                  <div className=" py-2 ">Dual-Tone Plush Interiors</div>
                 </div>
               </SwiperSlide>
               <SwiperSlide classname="cursor-pointer">
@@ -990,9 +993,7 @@ const Technology = () => {
                     alt='22.86 cm (9") SmartPlay Pro+ with Surround Sense Powered by ARKAMYS'
                     className="max-h-24"
                   />
-                  <div className=" py-2 ">
-                    22.86 cm (9") SmartPlay Pro+
-                  </div>
+                  <div className=" py-2 ">22.86 cm (9") SmartPlay Pro+</div>
                 </div>
               </SwiperSlide>
               <SwiperSlide classname="cursor-pointer">
@@ -1002,9 +1003,7 @@ const Technology = () => {
                     alt=" Paddle Shifters (in AT Only)"
                     className="max-h-24"
                   />
-                  <div className="py-2 ">
-                    Paddle Shifters (in AT Only)
-                  </div>
+                  <div className="py-2 ">Paddle Shifters (in AT Only)</div>
                 </div>
               </SwiperSlide>
               <SwiperSlide classname="cursor-pointer">
@@ -1041,7 +1040,7 @@ function Safety() {
       <div className="container relative flex flex-col items-center justify-center mx-auto -mt-10">
         <img
           src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/safety_fronx.webp"
-          alt=" Reassurance of Safety on Every Drive"
+          alt=" Fronx Safety Features"
           srcSet=""
           className="m-28"
         />
@@ -1280,8 +1279,8 @@ function Safety() {
           ) : index === 5 ? (
             <div>
               <span className="font-medium text-md lg:text-lg">
-              FULL FRONTAL IMPACT COMPLIANCE, FRONTAL OFFSET IMPACT COMPLIANCE,
-              SIDE IMPACT COMPLIANCE
+                FULL FRONTAL IMPACT COMPLIANCE, FRONTAL OFFSET IMPACT
+                COMPLIANCE, SIDE IMPACT COMPLIANCE
               </span>
               <br />
               Successfully tested and in compliance with international safety

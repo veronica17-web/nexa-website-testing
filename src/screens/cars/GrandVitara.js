@@ -2,11 +2,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 // import OnRoadPrice from "../../components/utils/OnRoadPrice";
-import { MdOutlineFileDownload } from "react-icons/md";
+import {
+  MdAirlineSeatReclineExtra,
+  MdOutlineFileDownload,
+} from "react-icons/md";
 import Header from "../../components/Header/Header";
 // import ImageViewer from '../../components/Vitara/ImageViewer';
 import Helmet from "react-helmet";
-import Features from "../../components/Vitara/Features";
+// import Features from "../../components/Vitara/Features";
 // import Carousel from '../../components/Vitara/Extras/Carousel';
 import MobileCarousel from "../../components/Vitara/Extras/MobileCarousel";
 // import EnquiryPopup from "../../components/utils/EnquiryPopup";
@@ -16,6 +19,7 @@ import "aos/dist/aos.css";
 import { CarComp, CarEnq2, InvictoCarEnquiry2 } from "./Invicto";
 import { products } from "../../constants";
 import { useRef } from "react";
+import { GiBeltBuckles, GiSpeedometer } from "react-icons/gi";
 
 // const width = window.innerWidth;
 
@@ -88,7 +92,95 @@ function GrandVitara() {
       <Variant />
       <SecondVideo />
       <KeyHigh />
+      <DesignPhilosophy />
 
+      {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
+      <div className="hidden sm:block bg-black text-white pt-2 pb-8">
+        <div className="  w-full   text-3xl text-center uppercase  sm:text-4xl md:text-5xl pb-8 pt-10 ">
+          THE ADVANCED GRAND VITARA
+        </div>
+
+        <div className="flex h-[75vh]  gap-1 px-2 my-1">
+          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3  bg-no-repeat bg-cover bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-27-IEH.webp')] ">
+            <div className="flex flex-col justify-end h-full p-4 text-white ">
+              <span className="font-semibold text-lg">
+                INTELLIGENT ELECTRIC HYBRID
+              </span>
+              <span className="font-thin tracking-wider mb-2">
+                Rules with revolutionary technology
+              </span>
+              <div>
+                <Link to="/grand-vitara-features-intelligent-electric-hybrid">
+                  <button className="text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white">
+                    KNOW MORE
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-26-Allgrip.webp')] ">
+            <div className="flex flex-col justify-end h-full p-4 text-white ">
+              <span className="font-semibold text-lg">ALLGRIP</span>
+              <span className="font-thin tracking-wider mb-2">
+                Rules with a firm grip
+              </span>
+              <div>
+                <Link to="/grand-vitara-allgrip">
+                  <button className="text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white">
+                    KNOW MORE
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-32-AT.webp')] ">
+            <div className="flex flex-col justify-end h-full p-4 text-white ">
+              <span className="font-semibold text-lg">
+                6-SPEED AUTOMATIC TRANSMISSION
+              </span>
+              <span className="font-thin tracking-wider mb-2">
+                Rules with utmost comfort
+              </span>
+              <div>
+                <Link to="/grand-vitara-6-speed-automatic-transmission-price">
+                  <button className="text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white">
+                    KNOW MORE
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-33-MT.webp')] ">
+            <div className="flex flex-col justify-end h-full p-4 text-white ">
+              <span className="font-semibold text-lg">
+                5-SPEED MANUAL TRANSMISSION
+              </span>
+              <span className="font-thin tracking-wider mb-2">
+                Rules with a powerful persona
+              </span>
+              <div>
+                <Link to="/grand-vitara-5-speed-manual-transmission-price">
+                  <button className="text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white">
+                    KNOW MORE
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="sm:hidden bg-black text-white pt-2 pb-8">
+        <div className="  w-full  pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl py-10 ">
+          THE ADVANCED GRAND VITARA
+        </div>
+        <MobileCarousel />
+      </div>
+      <div className=" bg-black text-white pt-2 ">
+        <div className="  w-full   text-3xl text-center uppercase  sm:text-4xl md:text-5xl pb-8 pt-10 ">
+          COLOURS
+        </div>
+      </div>
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/vitara-color-banner.webp')] bg-cover bg-no-repeat">
         <div className="max-w-6xl mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-2">
@@ -396,88 +488,16 @@ function GrandVitara() {
         </div>
       </div>
 
-      {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
-      <div className="hidden sm:block">
-        <div className="flex h-[60vh] bg-white gap-1 px-2 my-1">
-          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3  bg-no-repeat bg-cover bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-27-IEH.webp')] ">
-            <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">
-                INTELLIGENT ELECTRIC HYBRID
-              </span>
-              <span className="font-thin tracking-wider mb-2">
-                Rules with revolutionary technology
-              </span>
-              <div>
-                <Link to="/grand-vitara-features-intelligent-electric-hybrid">
-                  <button className="text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white">
-                    KNOW MORE
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-26-Allgrip.webp')] ">
-            <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">ALLGRIP</span>
-              <span className="font-thin tracking-wider mb-2">
-                Rules with a firm grip
-              </span>
-              <div>
-                <Link to="/grand-vitara-allgrip">
-                  <button className="text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white">
-                    KNOW MORE
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-32-AT.webp')] ">
-            <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">
-                6-SPEED AUTOMATIC TRANSMISSION
-              </span>
-              <span className="font-thin tracking-wider mb-2">
-                Rules with utmost comfort
-              </span>
-              <div>
-                <Link to="/grand-vitara-6-speed-automatic-transmission-price">
-                  <button className="text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white">
-                    KNOW MORE
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-33-MT.webp')] ">
-            <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">
-                5-SPEED MANUAL TRANSMISSION
-              </span>
-              <span className="font-thin tracking-wider mb-2">
-                Rules with a powerful persona
-              </span>
-              <div>
-                <Link to="/grand-vitara-5-speed-manual-transmission-price">
-                  <button className="text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white">
-                    KNOW MORE
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="sm:hidden">
-        <MobileCarousel />
-      </div>
-
       {/* <ImageViewer /> */}
       {/* <OnRoadPrice title={"Grand Vitara"} /> */}
-      <Features />
+      {/* <Features /> */}
+
       {/* <ImageOptions /> */}
+
+      <Safety />
       <CarComp details={products[3]} />
       <InvictoCarEnquiry2
-        title="BOOK YOUR GRAND VITARA NOW"
+        title="BOOK YOUR GRAND VITARA"
         carName="Grand Vitara"
       />
     </>
@@ -616,8 +636,8 @@ const Variant = () => {
 
 const SecondVideo = () => {
   return (
-    <div className="relative max-h-screen bg-black flex flex-col  ">
-      <div className="  py-6 text-center lg:absolute  w-full lg:pt-10   lg:text-white">
+    <div className="relative  bg-black flex flex-col xl:max-h-[80vh] overflow-hidden">
+      <div className="  py-6 text-center lg:absolute  w-full lg:pt-10  text-white">
         <div className="text-2xl lg:text-3xl font-medium mb-2">
           RULE EVERY ROAD
         </div>
@@ -628,7 +648,7 @@ const SecondVideo = () => {
         </div>
       </div>
       <video
-        className="max-h-screen w-full"
+        className="w-full  2xl:-mt-52"
         preload="none"
         autoPlay={true}
         playsInline={true}
@@ -641,7 +661,6 @@ const SecondVideo = () => {
           data-src="//nexaprod6.azureedge.net/-/media/feature/nexawebsitecarbrand/grand-vitara/brand-title-video/end-shot-grand-vitara.mp4"
           src="//nexaprod6.azureedge.net/-/media/feature/nexawebsitecarbrand/grand-vitara/brand-title-video/end-shot-grand-vitara.mp4"
         />
-        <track label="English" kind="captions" srclang="en" src="" default />
       </video>
     </div>
   );
@@ -699,22 +718,23 @@ const KeyHigh = () => {
   }, []);
 
   return (
-    <div className="bg-black text-white overflow-hidden">
-      <div className="  w-full pt-10 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
+    <div className=" overflow-hidden bg-black text-white">
+      <div className="  w-full pt-10 pb-6 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
         KEY HIGHLIGHTS
       </div>
-    
+
       <div
-        className="top-0 left-0 w-full  md:h-[76vh] relative px-1 "
+        className="top-0 left-0 w-full  md:h-[85vh] relative  "
         onContextMenu={handleContextMenu}
       >
         <video
-          className=" md:h-[84%] mx-auto object-cover  rounded-xl overflow-hidden"
+          className=" h-full w-full mx-auto object-cover  overflow-hidden"
+          // className=" md:h-[84%] mx-auto object-cover  rounded-xl overflow-hidden"
           autoplay="autoplay"
           loop
           muted
+          playsInline
           ref={videoRef}
-          controls
           poster="https://nexaprod3.azureedge.net/-/media/feature/nexawebsitecarbrand/grand-vitara/banner/poster-img.webp"
         >
           <source
@@ -742,7 +762,7 @@ const KeyHigh = () => {
         alt=""
         className="h-screen w-full sm:hidden"
       /> */}
-          <div className="text-white w-full text-center py-4 text-xl lg:text-2xl">
+        <div className=" w-full text-center py-4 text-xl lg:text-2xl  md:hidden">
           {playingSegment === 0
             ? "Bold & Expressive Font Fascia"
             : playingSegment === 1
@@ -763,7 +783,28 @@ const KeyHigh = () => {
             ? "Panoramic Sunroof"
             : playingSegment === 9 && "LED Stop Lamp"}
         </div>
-        <div className="absolute bottom-6   w-full ">
+        <div className="absolute bottom-10   w-full ">
+          <div className="text-black bg-white w-min whitespace-nowrap  mx-auto text-center py-2 mb-4 bg-opacity-50 hover:bg-opacity-100 rounded-full px-4 hidden md:block cursor-default select-none duration-500 text-lg">
+            {playingSegment === 0
+              ? "Bold & Expressive Font Fascia"
+              : playingSegment === 1
+              ? '17" Precision Cut Alloy Wheels'
+              : playingSegment === 2
+              ? "Ventilated Front Seats"
+              : playingSegment === 3
+              ? "Digital Multi-Information Display"
+              : playingSegment === 4
+              ? "Head Up Display"
+              : playingSegment === 5
+              ? "Smartplay Pro+"
+              : playingSegment === 6
+              ? "Wireless Charger"
+              : playingSegment === 7
+              ? "All Black Interior With Champagne Gold Accents"
+              : playingSegment === 8
+              ? "Panoramic Sunroof"
+              : playingSegment === 9 && "LED Stop Lamp"}
+          </div>
           <div className="hidden md:block container mx-auto bg-[#ffffff39] rounded-2xl ">
             <div className="relative">
               <div className="relative flex justify-between  ">
@@ -772,7 +813,7 @@ const KeyHigh = () => {
                 >
                   <div
                     onClick={() => jumpToTime(0, 0)}
-                    className={`bg-white h-full w-full rounded-full `}
+                    className={`bg-black h-full w-full rounded-full `}
                   ></div>
                 </div>
                 <div
@@ -780,7 +821,7 @@ const KeyHigh = () => {
                 >
                   <div
                     onClick={() => jumpToTime(1, 1)}
-                    className={`bg-white h-full w-full rounded-full`}
+                    className={`bg-black h-full w-full rounded-full`}
                   ></div>
                 </div>
                 <div
@@ -788,7 +829,7 @@ const KeyHigh = () => {
                 >
                   <div
                     onClick={() => jumpToTime(2, 2)}
-                    className={`bg-white h-full w-full rounded-full`}
+                    className={`bg-black h-full w-full rounded-full`}
                   ></div>
                 </div>
                 <div
@@ -796,7 +837,7 @@ const KeyHigh = () => {
                 >
                   <div
                     onClick={() => jumpToTime(5, 3)}
-                    className={`bg-white h-full w-full rounded-full`}
+                    className={`bg-black h-full w-full rounded-full`}
                   ></div>
                 </div>
                 <div
@@ -804,7 +845,7 @@ const KeyHigh = () => {
                 >
                   <div
                     onClick={() => jumpToTime(8, 4)}
-                    className={`bg-white h-full w-full rounded-full`}
+                    className={`bg-black h-full w-full rounded-full`}
                   ></div>
                 </div>
                 <div
@@ -812,7 +853,7 @@ const KeyHigh = () => {
                 >
                   <div
                     onClick={() => jumpToTime(10, 5)}
-                    className={`bg-white h-full w-full rounded-full`}
+                    className={`bg-black h-full w-full rounded-full`}
                   ></div>
                 </div>
                 <div
@@ -820,7 +861,7 @@ const KeyHigh = () => {
                 >
                   <div
                     onClick={() => jumpToTime(12, 6)}
-                    className={`bg-white h-full w-full rounded-full`}
+                    className={`bg-black h-full w-full rounded-full`}
                   ></div>
                 </div>
                 <div
@@ -828,7 +869,7 @@ const KeyHigh = () => {
                 >
                   <div
                     onClick={() => jumpToTime(14, 7)}
-                    className={`bg-white h-full w-full rounded-full`}
+                    className={`bg-black h-full w-full rounded-full`}
                   ></div>
                 </div>
                 <div
@@ -836,7 +877,7 @@ const KeyHigh = () => {
                 >
                   <div
                     onClick={() => jumpToTime(16, 8)}
-                    className={`bg-white h-full w-full rounded-full`}
+                    className={`bg-black h-full w-full rounded-full`}
                   ></div>
                 </div>
                 <div
@@ -844,7 +885,7 @@ const KeyHigh = () => {
                 >
                   <div
                     onClick={() => jumpToTime(18, 9)}
-                    className={`bg-white h-full w-full rounded-full`}
+                    className={`bg-black h-full w-full rounded-full`}
                   ></div>
                 </div>
 
@@ -901,6 +942,331 @@ const KeyHigh = () => {
     </div>
   );
 };
+
+const DesignPhilosophy = () => {
+  return (
+    <div className=" bg-black text-white relative pt-10 lg:pt-16">
+      <div className="w-full lg:py-6 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
+        DESIGN PHILOSOPHY
+      </div>
+      <div className=" lg:absolute w-full h-full z-10 pt-6 lg:pt-12">
+        <div className=" container mx-auto flex px-1">
+          <div className="lg:w-1/3 xl:w-1/4">
+            <div className="font-medium uppercase text-xl lg:text-2xl italic pb-4 lg:pb-8">
+              THE GRAND VITARA IS BORN OUT OF THE PASSION OF SUZUKI DESIGN AND
+              ENGINEERING.
+            </div>
+            <div className="font-light pb-4 lg:pb-8 text-justify lg:text-left">
+              Featuring a distinct exterior design, sophisticated interiors,
+              segment leading features and industry redefining fuel efficiency,
+              The Grand Vitara is an expression of our commitment towards
+              excellence.
+            </div>
+            <div className="bg-white w-min whitespace-nowrap text-black px-4 py-2 mb-4 cursor-pointer select-none">
+              Know More
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="lg:h-[60vh] overflow-hidden">
+        <video
+          className="w-full  "
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="https://nexaprod6.azureedge.net/-/media/feature/nexawebsitecarbrand/grand-vitara/banner/poster-img.webp"
+        >
+          <source
+            className="w-30 h-30"
+            src="https://nexaprod1.azureedge.net/-/media/feature/nexawebsitecarbrand/grand-vitara/brand-philosophy/vid-11.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </div>
+  );
+};
+
+function Safety() {
+  const [index, setIndex] = useState(0);
+  return (
+    <>
+      <div className="container mx-auto mt-6 text-center ">
+        <div className="pb-4 text-3xl text-center uppercase sm:text-4xl md:text-5xl lg:pt-8 ">
+          SAFETY
+        </div>
+        <span className="text-md lg:text-lg">
+          Reassurance of Safety on Every Drive
+        </span>
+      </div>
+      <div className="py-4 text-2xl font-medium text-center lg:text-3xl "></div>
+      <div className="container relative flex flex-col items-center justify-center mx-auto -mt-10">
+        <img
+          src="https://nexaprod4.azureedge.net/-/media/feature/nexawebsitecarbrand/nexa-website-grandvitara/safety/car-image.webp?la=en&hash=5BDA0F35EFBEA7BE615A7E84098944EE"
+          alt="Grand Vitara Safety Features"
+          srcSet=""
+          className="m-28"
+        />
+
+        <div className="absolute left-[62%] top-16  lg:flex group hidden  ">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  cursor-pointer">
+            {/* <GiBeltBuckles className="text-4xl group-hover:text-white " /> */}
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/safety-belt.svg"
+              alt=" Seat Belt Pre-Tensioners with force limiters"
+              className="scale-[0.6]"
+            />
+          </div>
+          <div className="mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+            <div className="pb-1 font-medium ">
+              Seat Belt Pre-Tensioners with force limiters
+            </div>
+            <div className=" font-light ">
+              Pre-tensioners restrain the passengers and Force Limiters prevent
+              seatbelt-inflicted injury.
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[4%] right-[62%] lg:flex group hidden  ">
+          <div className="mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+            <div className="pb-1 font-medium ">SUZUKI-TECT BODY</div>
+            <div className=" font-light ">
+              Suzuki’s Total Effective Control Technology (TECT) concept results
+              in effective absorption and dispersion of crash energy. The
+              effective use of high-tensile steel for major parts makes the body
+              light, strong and safe
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  cursor-pointer">
+            {/* <GiBeltBuckles className="text-4xl group-hover:text-white " /> */}
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/repair.svg"
+              alt=" Seat Belt Pre-Tensioners with force limiters"
+              className="scale-[0.8]"
+            />
+          </div>
+        </div>
+        <div className="absolute left-[19%] xl:left-[20%] top-[60%]  lg:flex lg:flex-col md:items-start group hidden  ">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black">
+            <GiSpeedometer className="text-4xl group-hover:text-white" />
+          </div>
+
+          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+            <div className="pb-1 font-medium ">ABS with EBD</div>
+
+            <div className="hidden text-sm font-light group-hover:block">
+              Anti-lock Braking System prevents the locking up of the wheels
+              when the brakes are applied under heavy loads while EBD ensures an
+              efficient and effective braking.
+            </div>
+          </div>
+        </div>
+        <div className="absolute left-[47%] bottom-24  lg:flex group hidden items-end  ">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 ">
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/airbag.svg"
+              className="scale-[0.6]"
+              alt=" 6 Air Bags to take the impact before it reaches you."
+            />
+          </div>
+          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+            <div className="pb-1 font-medium ">6 Air Bags</div>
+
+            <div className="hidden font-light group-hover:block">
+              6 Air Bags to take the impact before it reaches you.
+            </div>
+          </div>
+        </div>
+        <div className="absolute left-[10%]  bottom-[58%]    lg:flex-col md:items-start group hidden lg:flex ">
+          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+            <div className="pb-1 font-medium ">ISOFIX child fix anchorages</div>
+
+            <div className="hidden font-light group-hover:block">
+              Standardized international child seat fitting system, for that
+              perfect drive with your little ones.
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black ">
+            <MdAirlineSeatReclineExtra className="text-4xl group-hover:text-white" />
+          </div>
+        </div>
+        <div className="absolute left-[78%]  bottom-[58%] md:items-start group hidden lg:flex lg:flex-col ">
+          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm hidden group-hover:block ">
+            <div className="pb-1 font-medium ">
+              FULL FRONTAL IMPACT COMPLIANCE, FRONTAL OFFSET IMPACT COMPLIANCE,
+              SIDE IMPACT COMPLIANCE
+            </div>
+
+            <div className=" font-light ">
+              Successfully tested and in compliance with international safety
+              norms
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black mb-2 ">
+            <GiBeltBuckles className="text-4xl group-hover:text-white" />
+          </div>
+        </div>
+
+        <div className="absolute left-[77%]  top-[45%]  md:items-start group hidden lg:block ">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  mb-2 ">
+            <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/road.svg"
+              className="scale-[0.6]"
+              alt="Ensuring safety, not only for the occupants, but pedestrians as
+              well"
+            />
+          </div>
+          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm hidden group-hover:block ">
+            <div className="pb-1 font-medium ">
+              PEDESTRIAN PROTECTION COMPLIANCE
+            </div>
+            <div className=" font-light ">
+              Ensuring safety, not only for the occupants, but pedestrians as
+              well
+            </div>
+          </div>
+        </div>
+
+        <div className="h-16 absolute border top-36 right-[34%] border-black hidden lg:block"></div>
+        <div className="w-48 absolute border top-52 right-[34%]  border-black hidden lg:block"></div>
+
+        <div className="h-48 absolute border bottom-44 right-[50%] border-black hidden lg:block"></div>
+        <div className="w-24 xl:w-32 absolute border  left-[22%] hidden lg:block  border-black"></div>
+        <div className="h-16 absolute border top-1/2 left-[22%] border-black hidden lg:block"></div>
+        <div className="h-16 absolute border top-[15%] left-[35%] border-black hidden lg:block"></div>
+        <div className="w-24 lg:w-[12%]  just  absolute border top-[16rem] left-[18%] hidden lg:block  border-black"></div>
+        <div className="w-10 lg:w-[10%]  just  absolute border top-[16rem] right-[23%] hidden lg:block  border-black"></div>
+        <div className="w-10 lg:w-[10%]  just  absolute border top-[22.5rem] right-[23%] hidden lg:block  border-black"></div>
+
+        <button
+          className={`absolute ${
+            index === 0 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center top-[45%] `}
+          onClick={() => setIndex(0)}
+        >
+          +
+        </button>
+        <button
+          className={`absolute ${
+            index === 1 ? "bg-black text-white" : "bg-white animate-pulse"
+          }  h-6 w-6 rounded-full flex justify-center lg:hidden items-center top-[38%] left-[44%] `}
+          onClick={() => setIndex(1)}
+        >
+          +
+        </button>
+        <button
+          className={`absolute ${
+            index === 2 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center bottom-[50%] left-[25%]  `}
+          onClick={() => setIndex(2)}
+        >
+          +
+        </button>
+        <button
+          className={`absolute ${
+            index === 3 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center top-[35%] left-[30%] `}
+          onClick={() => setIndex(3)}
+        >
+          +
+        </button>
+        <button
+          className={`absolute ${
+            index === 4 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center top-[25%] left-[30%] `}
+          onClick={() => setIndex(4)}
+        >
+          +
+        </button>
+        <button
+          className={`absolute ${
+            index === 5 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center top-[40%] right-[35%] `}
+          onClick={() => setIndex(5)}
+        >
+          +
+        </button>
+        <button
+          className={`absolute ${
+            index === 6 ? "bg-black text-white" : "bg-white animate-pulse"
+          } h-6 w-6 rounded-full flex justify-center lg:hidden items-center bottom-[48%] right-[20%] `}
+          onClick={() => setIndex(6)}
+        >
+          +
+        </button>
+        <div className="absolute lg:hidden bottom-[20%] px-2 backdrop-blur-sm">
+          {index === 0 ? (
+            <div>
+              <span className="font-medium text-md lg:text-lg">
+                Seat Belt Pre-Tensioners with force limiters
+              </span>
+              <br />
+              Pre-tensioners restrain the passengers and Force Limiters prevent
+              seatbelt-inflicted injury.
+            </div>
+          ) : index === 1 ? (
+            <div>
+              <span className="font-medium text-md lg:text-lg">6 Air Bags</span>
+              <br />6 Air Bags to take the impact before it reaches you.
+            </div>
+          ) : index === 2 ? (
+            <div>
+              <span className="font-medium text-md lg:text-lg">
+                ABS with EBD
+              </span>
+              <br />
+              Anti-lock Braking System prevents the locking up of the wheels
+              when the brakes are applied under heavy loads while EBD ensures an
+              efficient and effective braking.
+            </div>
+          ) : index === 3 ? (
+            <div>
+              <span className="font-medium text-md lg:text-lg">
+                ISOFIX child fix anchorages
+              </span>
+              <br />
+              Standardized international child seat fitting system, for that
+              perfect drive with your little ones.
+            </div>
+          ) : index === 4 ? (
+            <div>
+              <span className="font-medium text-md lg:text-lg">
+                SUZUKI-TECT BODY
+              </span>
+              <br />
+              Suzuki’s Total Effective Control Technology (TECT) concept results
+              in effective absorption and dispersion of crash energy. The
+              effective use of high-tensile steel for major parts makes the body
+              light, strong and safe
+            </div>
+          ) : index === 5 ? (
+            <div>
+              <span className="font-medium text-md lg:text-lg">
+                FULL FRONTAL IMPACT COMPLIANCE, FRONTAL OFFSET IMPACT
+                COMPLIANCE, SIDE IMPACT COMPLIANCE
+              </span>
+              <br />
+              Successfully tested and in compliance with international safety
+              norms
+            </div>
+          ) : (
+            index === 6 && (
+              <div>
+                <span className="font-medium text-md lg:text-lg">
+                  PEDESTRIAN PROTECTION COMPLIANCE
+                </span>
+                <br />
+                Ensuring safety, not only for the occupants, but pedestrians as
+                well
+              </div>
+            )
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
 
 // const ImageOptions = () => {
 //   return (
