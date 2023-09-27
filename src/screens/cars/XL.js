@@ -1050,138 +1050,151 @@ const Features = () => {
 };
 
 const Engine = () => {
-  return (
-    <div className="py-10 ">
-      <div className="container flex flex-col items-center py-3 mx-auto ">
-        <div className="w-full pt-4 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
-          Engine
-        </div>
-        <div className="pb-6 text-xl text-center lg:text-2xl">
-          Move Ahead In The World With Great Performance​
-        </div>
+  const styles = `
+    .engineSwiper .swiper-slide {
+     opacity: 0.2;
+     
+    }
 
-        <div className="flex flex-col flex-wrap mx-auto sm:flex-row lg:container">
-          <div className="relative flex justify-center sm:w-1/3">
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/Engine.webp"
-              alt="XL6 Engine"
-              className="h-full"
-            />
+    .engineSwiper .swiper-slide-active  {
+      opacity: 1;
+    }
+  `;
+  return (
+    <>
+      <style>{styles}</style>
+      <div className="py-10 ">
+        <div className="container flex flex-col items-center py-3 mx-auto ">
+          <div className="w-full pt-4 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
+            Engine
           </div>
-          <div className="container relative h-full mx-auto sm:w-2/3 ">
-            <div className="px-1 mb-4">
-              It is time to indulge in the refined driving experience of the
-              All-New XL6 by NEXA. A premium MPV from NEXA, the XL6 embodies an
-              imposing stance complemented by unbridled innovation and powerful
-              performance with a Next-Gen 1.5L K-Series Dual Jet Dual VVT
-              Engine. This petrol engine in the XL6 comes with Progressive Smart
-              Hybrid Technology which improves fuel efficiency while also
-              enhancing drivability.
+          <div className="pb-6 text-xl text-center lg:text-2xl">
+            Move Ahead In The World With Great Performance​
+          </div>
+
+          <div className="flex flex-col flex-wrap mx-auto sm:flex-row lg:container">
+            <div className="relative flex justify-center sm:w-1/3">
+              <img
+                src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/Engine.webp"
+                alt="XL6 Engine"
+                className="h-full"
+              />
             </div>
-            <Swiper
-              style={{
-                "--swiper-navigation-color": "#fff",
-                "--swiper-pagination-color": "#fff",
-              }}
-              loop={true}
-              speed={1000}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: false,
-              }}
-              centeredSlides={true}
-              navigation={true}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                768: {
-                  slidesPerView: 1,
-                },
-                1024: {
-                  slidesPerView: 1,
-                  spaceBetween: 10,
-                },
-                1280: {
-                  slidesPerView: 2,
-                  spaceBetween: 10,
-                },
-              }}
-              modules={[FreeMode, Navigation, Autoplay]}
-              className="hidden h-full sm:block"
-            >
-              <SwiperSlide className="swiper-slide">
-                <div className="w-full px-4 cursor-pointer  h-[260px] ">
-                  <div className="relative w-full px-10 py-4 text-left">
-                    <div className="pb-2 font-medium">
-                      Powerful Performance That Inspires
-                    </div>
-                    <div className="text-sm">
-                      The New XL6 by NEXA delivers a refined driving experience
-                      with the Next-Gen 1.5L K-Series Engine. This 1462 cc
-                      Engine in XL6 makes a maximum power of 75.8 kW @ 6000 rpm
-                      and peak torque of 136.8 Nm @ 4400 rpm, all the while
-                      delivering indulgent performance.
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <div className="w-full px-4 cursor-pointer   h-[260px]">
-                  <div className="relative w-full px-10 py-4 text-left">
-                    <div className="pb-2 font-medium">
-                      Progressive Smart Hybrid Technology
-                    </div>
-                    <div className="text-sm">
-                      The All-New NEXA XL6 takes innovation to another level
-                      with its Progressive Smart Hybrid Technology. It comes
-                      with features like Idle Start Stop to reduce fuel
-                      consumption and Torque Assist During Acceleration, thereby
-                      improving the overall drivability.
+            <div className="container relative h-full mx-auto sm:w-2/3 ">
+              <div className="px-1 mb-4">
+                It is time to indulge in the refined driving experience of the
+                All-New XL6 by NEXA. A premium MPV from NEXA, the XL6 embodies
+                an imposing stance complemented by unbridled innovation and
+                powerful performance with a Next-Gen 1.5L K-Series Dual Jet Dual
+                VVT Engine. This petrol engine in the XL6 comes with Progressive
+                Smart Hybrid Technology which improves fuel efficiency while
+                also enhancing drivability.
+              </div>
+              <Swiper
+                style={{
+                  "--swiper-navigation-color": "#fff",
+                  "--swiper-pagination-color": "#fff",
+                }}
+                loop={true}
+                speed={1000}
+                autoplay={{
+                  delay: 4000,
+                  disableOnInteraction: false,
+                }}
+                centeredSlides={true}
+                navigation={true}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 1,
+                  },
+                  1024: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  1280: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                  },
+                }}
+                modules={[FreeMode, Navigation, Autoplay]}
+                className="hidden h-full sm:block engineSwiper"
+              >
+                <SwiperSlide className="swiper-slide">
+                  <div className="w-full px-4 cursor-pointer  h-[260px] ">
+                    <div className="relative w-full px-10 py-4 text-left">
+                      <div className="pb-2 font-medium">
+                        Powerful Performance That Inspires
+                      </div>
+                      <div className="text-sm">
+                        The New XL6 by NEXA delivers a refined driving
+                        experience with the Next-Gen 1.5L K-Series Engine. This
+                        1462 cc Engine in XL6 makes a maximum power of 75.8 kW @
+                        6000 rpm and peak torque of 136.8 Nm @ 4400 rpm, all the
+                        while delivering indulgent performance.
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <div className="w-full px-4 cursor-pointer   h-[260px]">
-                  <div className="relative w-full px-10 py-4 text-left">
-                    <div className="pb-2 font-medium">Impressive Mileage</div>
-                    <div className="text-sm">
-                      The All-New NEXA XL6 is available with a choice of a
-                      5-speed manual and an All-New Advanced 6-Speed Automatic
-                      Transmission with Paddle Shifters. Both of these
-                      transmissions work seamlessly with The Next Gen 1.5L
-                      K-Series Engine in NEXA XL6 by Maruti Suzuki to provide
-                      great drivability along with strong mileage figures of
-                      20.97* Km/L(MT) and 20.27* Km/L(AT) so that indulgent
-                      driving never stops!.
+                </SwiperSlide>
+                <SwiperSlide className="swiper-slide">
+                  <div className="w-full px-4 cursor-pointer   h-[260px]">
+                    <div className="relative w-full px-10 py-4 text-left">
+                      <div className="pb-2 font-medium">
+                        Progressive Smart Hybrid Technology
+                      </div>
+                      <div className="text-sm">
+                        The All-New NEXA XL6 takes innovation to another level
+                        with its Progressive Smart Hybrid Technology. It comes
+                        with features like Idle Start Stop to reduce fuel
+                        consumption and Torque Assist During Acceleration,
+                        thereby improving the overall drivability.
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <div className="w-full px-4 cursor-pointer   h-[260px]">
-                  <div className="relative w-full px-10 py-4 text-left">
-                    <div className="pb-2 font-medium">
-                      Driving Convenience That Indulges
-                    </div>
-                    <div className="text-sm">
-                      The NEXA XL6 indulges you effortlessly with the new
-                      6-Speed Automatic Transmission trim that comes with
-                      Steering-Mounted Paddle Shifters for a more engaging
-                      driving experience. Indulgent in its stance, the All-New
-                      XL6 is for those who seek new experiences. It’s Time to
-                      Indulge in an engaging and refined driving experience.
+                </SwiperSlide>
+                <SwiperSlide className="swiper-slide">
+                  <div className="w-full px-4 cursor-pointer   h-[260px]">
+                    <div className="relative w-full px-10 py-4 text-left">
+                      <div className="pb-2 font-medium">Impressive Mileage</div>
+                      <div className="text-sm">
+                        The All-New NEXA XL6 is available with a choice of a
+                        5-speed manual and an All-New Advanced 6-Speed Automatic
+                        Transmission with Paddle Shifters. Both of these
+                        transmissions work seamlessly with The Next Gen 1.5L
+                        K-Series Engine in NEXA XL6 by Maruti Suzuki to provide
+                        great drivability along with strong mileage figures of
+                        20.97* Km/L(MT) and 20.27* Km/L(AT) so that indulgent
+                        driving never stops!.
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
+                </SwiperSlide>
+                <SwiperSlide className="swiper-slide">
+                  <div className="w-full px-4 cursor-pointer   h-[260px]">
+                    <div className="relative w-full px-10 py-4 text-left">
+                      <div className="pb-2 font-medium">
+                        Driving Convenience That Indulges
+                      </div>
+                      <div className="text-sm">
+                        The NEXA XL6 indulges you effortlessly with the new
+                        6-Speed Automatic Transmission trim that comes with
+                        Steering-Mounted Paddle Shifters for a more engaging
+                        driving experience. Indulgent in its stance, the All-New
+                        XL6 is for those who seek new experiences. It’s Time to
+                        Indulge in an engaging and refined driving experience.
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -1913,9 +1926,8 @@ function Safety() {
                     alt="Quad Airbags (Dual Front + Dual Front Seat Side)"
                     className=""
                   />
-                  <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                  <div className="w-full px-4 pt-4 text-left md:text-white md:absolute bottom-4">
                     <div className="pb-2 font-medium">
-                      {" "}
                       Quad Airbags (Dual Front + Dual Front Seat Side)
                     </div>
                     <div className="font-light lg:pr-40">
