@@ -25,7 +25,7 @@ const FronxCNG = () => {
     <>
       <Helmet>
         <title>
-        Maruti Suzuki Fronx On-Road Price in Hyderabad | Saboo NEXA
+          Maruti Suzuki Fronx On-Road Price in Hyderabad | Saboo NEXA
         </title>
         <meta
           name="title"
@@ -120,150 +120,7 @@ const FronxCNG = () => {
           unmatched power.
         </span>
       </div>
-      <div className="text-center mt-8 -mb-6 container mx-auto ">
-        <div className="text-2xl font-semibold pt-4 pb-2 ">FRONX</div>
-        <div className="font-medium text-lg">Performance Goes Green.</div>
-        <div className="container  px-6 md:px-12 lg:px-24 py-2 sm:py-5 ">
-          <div className="container mx-auto py-6 space-y-4 rounded">
-            {/* <Carousel /> */}
-          
-            <Swiper
-              style={{
-                "--swiper-navigation-color": "#fff",
-                "--swiper-pagination-color": "#fff",
-              }}
-              loop={true}
-              speed={1000}
-              spaceBetween={2}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
-              navigation={true}
-              thumbs={{ swiper: thumbsSwiper }}
-              modules={[FreeMode, Navigation, Thumbs, Autoplay]}
-              className="mySwiper2 h-60"
-            >
-              <SwiperSlide className="relative">
-                <img
-                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/VVT+Engine.webp"
-                  alt=""
-                />
-                <div className="absolute bottom-4 left-0 text-sm text-white">
-                  <span className="font-semibold">
-                    Advanced 1.2L K-Series Dual Jet, Dual VVT Engine
-                  </span>
-                  <br />
-                  For those who refuse to compromise, the 1.2L K-Series Dual Jet
-                  Dual VVT Engine with Idle Start-Stop technology (ISS) is
-                  engineered to offer excellent drive performance and superior
-                  fuel-efficiency.
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="relative">
-                <img
-                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/Reference.webp"
-                  alt=""
-                />
-                <div className="absolute bottom-4 left-0 text-sm text-white">
-                  <span className="font-semibold">
-                    NEXWave GRILLE & STRIKING FRONT FASCIA
-                  </span>
-                  <br />
-                  The stylish and sporty grille is bound to leave everyone in
-                  complete awe. It’s signature stye makes it stand out from the
-                  crowd.
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide className="relative">
-                <img
-                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/FRONX_CNG+Hill+Hold.webp"
-                  alt=""
-                />
-                <div className="absolute bottom-4 left-0 text-sm text-white">
-                  <span className="font-semibold">Hill Hold Assist</span>
-                  <br />
-                  Prevents your car from rolling backwards while ascending a
-                  slope, thereby ensuring that your car descends in a controlled
-                  manner.
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="relative">
-                <img
-                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/FRONX_CNG+Dashboard.webp"
-                  alt=""
-                />
-                <div className="absolute bottom-4 left-0 text-sm text-white">
-                  <span className="font-semibold">
-                    Dual-Tone Plush Interiors
-                  </span>
-                  <br />
-                  The lush and spacious dual tone interiors matched with
-                  horizontal linear embossed pattern makes you feel like you’re
-                  driving in the lap of comfort and grandeur.
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="relative">
-                <img
-                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/FRONX_CNG+Chassis.webp"
-                  alt=""
-                />
-                <div className="absolute bottom-4 left-0 text-sm text-white">
-                  <span className="font-semibold">Factory Fitted S-CNG</span>
-                  <br />
-                  Our CNG cylinder is fitted on to the new-generation chassis
-                  platform using Ultra and Advanced High Tensile Steels that
-                  aids the car to resist deformation. It also comes with a
-                  neatly placed fire extinguisher to ensure your safety.
-                </div>
-              </SwiperSlide>
-            </Swiper>
-            <Swiper
-              onSwiper={setThumbsSwiper}
-              loop={true}
-              spaceBetween={10}
-              slidesPerView={4}
-              freeMode={true}
-              watchSlidesProgress={true}
-              modules={[FreeMode, Navigation, Thumbs]}
-              className="mySwiper-3"
-            >
-              <SwiperSlide>
-                <img
-                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/VVT+Engine.webp"
-                  alt=""
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/Reference.webp"
-                  alt=""
-                  className=""
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/FRONX_CNG+Hill+Hold.webp"
-                  alt=""
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/FRONX_CNG+Dashboard.webp"
-                  alt=""
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/FRONX_CNG+Chassis.webp"
-                  alt=""
-                />
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        </div>
-      </div>
+     <FronxCNGSlider />
       {/* <div className='text-center my-6 container mx-auto pb-6'>
         <div className='text-2xl font-semibold '>REGISTER YOUR INTEREST</div>
         <div className='container  px-6 md:px-12 lg:px-24 py-2 sm:py-5'>
@@ -272,10 +129,10 @@ const FronxCNG = () => {
         </div>
         <hr className='w-1/5 mx-auto' />
       </div> */}
-      <div className="text-2xl text-center font-medium py-4 pt-10 ">
+      <div className="text-2xl text-center font-medium py-4   lg:pt-10 ">
         FRONX S-CNG SPECIFICATIONS
       </div>
-      <div className="max-w-7xl mx-auto py-6 lg:py-20 ">
+      <div className="max-w-7xl mx-auto py-6 pb-20 ">
         <div className="grid md:grid-cols-4 md:space-x-4 lg:space-x-1 gap-4">
           <Tab.Group>
             <div className="col-span-1">
@@ -663,6 +520,108 @@ const FronxCNG = () => {
         </div>
       </div>
     </>
+  );
+};
+
+const FronxCNGSlider = () => {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const data = [
+    {
+      img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/VVT+Engine.webp",
+      title: "Advanced 1.2L K-Series Dual Jet, Dual VVT Engine",
+      body: "For those who refuse to compromise, the 1.2L K-Series Dual Jet Dual VVT Engine with Idle Start-Stop technology (ISS) is engineered to offer excellent drive performance and superior fuel-efficiency.",
+    },
+    {
+      img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/Reference.webp",
+      title: "NEXWave GRILLE & STRIKING FRONT FASCIA",
+      body: "The stylish and sporty grille is bound to leave everyone in complete awe. It’s signature stye makes it stand out from the crowd.",
+    },
+    {
+      img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/FRONX_CNG+Hill+Hold.webp",
+      title: "Hill Hold Assist",
+      body: "Prevents your car from rolling backwards while ascending a slope, thereby ensuring that your car descends in a controlled manner.",
+    },
+    {
+      img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/FRONX_CNG+Dashboard.webp",
+      title: "Dual-Tone Plush Interiors",
+      body: " The lush and spacious dual tone interiors matched with horizontal linear embossed pattern makes you feel like you’re driving in the lap of comfort and grandeur.",
+    },
+    {
+      img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng/FRONX_CNG+Chassis.webp",
+      title: "Factory Fitted S-CNG",
+      body: "  Our CNG cylinder is fitted on to the new-generation chassis platform using Ultra and Advanced High Tensile Steels that aids the car to resist deformation. It also comes with a neatly placed fire extinguisher to ensure your safety.",
+    },
+  ];
+  return (
+    <div className="">
+      <div className="container mx-auto text-center ">
+        <div className="text-2xl font-medium py-4 pt-8 ">
+          THE ALL-NEW FRONX
+        </div>
+        <div className="">
+        Performance Goes Green.
+        </div>
+        {/* <div className="text-center text-md lg:text-lg">
+          Convenience Goes Bold
+        </div> */}
+        <div className="py-2 sm:pt-5">
+          <div className=" space-y-4 rounded ">
+            {/* <Carousel /> */}
+
+            <Swiper
+              style={{
+                "--swiper-navigation-color": "#fff",
+                "--swiper-pagination-color": "#fff",
+              }}
+              loop={true}
+              speed={1000}
+              // spaceBetween={2}
+              slidesPerView={1}
+              centeredSlides={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              navigation={true}
+              thumbs={{ swiper: thumbsSwiper }}
+              modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+              className="mySwiper2 h-28"
+            >
+              {data.map((x, index) => (
+                <SwiperSlide key={index} className="relative">
+                  <div className="w-full lg:px-20">
+                    <img src={x.img} alt={x.title} className="" />
+                    <div className="w-full px-4 pt-4 text-left md:text-white md:absolute bottom-4">
+                      <div className="pb-2 font-medium">{x.title}</div>
+                      <div className="font-light lg:pr-40">{x.body}</div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              // loop={true}
+              spaceBetween={10}
+              slidesPerView={5}
+              // freeMode={true}
+              // watchSlidesProgress={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="hidden  mySwiper-3 md:block"
+            >
+              {data.map((x, index) => (
+                <SwiperSlide key={index} classname="cursor-pointer">
+                  <div>
+                    <img src={x.img} alt={x.title} className="max-h-24" />
+                    <div className="py-2 ">{x.title}</div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

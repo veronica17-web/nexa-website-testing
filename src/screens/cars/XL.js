@@ -497,44 +497,44 @@ const Variant = () => {
   const [price, setPrice] = useState("11,56,000");
   return (
     <div className=" bg-opacity-25 text-white bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_bg_image/5.webp')] bg-fixed  bg-black">
-    <div className="container mx-auto bg-opacity-10 bg-black py-20">
-      <div className="grid space-y-3 md:grid-cols-3 md:space-y-0 ">
-        <div className="mx-auto space-y-3 md:mx-0">
-          <p className=" uppercase">select car Variant</p>
-          <select
-            name="model"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-            className="block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm text-black"
-          >
-            <option value="11,56,000">ZETA</option>
-            <option value="12,56,000">ALPHA</option>
-            <option value="13,16,000">ALPHA+</option>
-            <option value="13,32,000">ALPHA+ (D)</option>
-            <option value="12,51,000">ZETA CNG</option>
-            <option value="13,06,000">ZETA AT</option>
-            <option value="14,06,000">ALPHA AT</option>
-            <option value="14,66,000">ALPHA+ AT</option>
-            <option value="14,82,000">ALPHA+ AT (D)</option>
-          </select>
+      <div className="container py-20 mx-auto bg-black bg-opacity-10">
+        <div className="grid space-y-3 md:grid-cols-3 md:space-y-0 ">
+          <div className="mx-auto space-y-3 md:mx-0">
+            <p className="uppercase ">select car Variant</p>
+            <select
+              name="model"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              className="block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm text-black"
+            >
+              <option value="11,56,000">ZETA</option>
+              <option value="12,56,000">ALPHA</option>
+              <option value="13,16,000">ALPHA+</option>
+              <option value="13,32,000">ALPHA+ (D)</option>
+              <option value="12,51,000">ZETA CNG</option>
+              <option value="13,06,000">ZETA AT</option>
+              <option value="14,06,000">ALPHA AT</option>
+              <option value="14,66,000">ALPHA+ AT</option>
+              <option value="14,82,000">ALPHA+ AT (D)</option>
+            </select>
+          </div>
+          <div className="text-center ">
+            <p className="text-2xl font-semibold">₹ {price}*</p>
+            <p className="text-xl tracking-wide">Ex-Showroom Price</p>
+            <p className="mt-1 text-lg font-medium uppercase">Hyderabad</p>
+          </div>
+          <div className="text-center">
+            <p className="mb-6 text-center ">
+              You might have pre-approved loan offers
+            </p>
+            <Link
+              to="/maruti-car-finance"
+              className="px-4 py-2 tracking-wide uppercase border border-white rounded shadow"
+            >
+              Check for loan offers
+            </Link>
+          </div>
         </div>
-        <div className="text-center ">
-          <p className="text-2xl ">₹ {price}*</p>
-          <p className="text-xl tracking-wide">Ex-Showroom Price</p>
-          <p className="font-medium  uppercase mt-1 text-lg">Hyderabad</p>
-        </div>
-        <div className="text-center">
-          <p className="mb-6 text-center ">
-            You might have pre-approved loan offers
-          </p>
-          <Link
-            to="/maruti-car-finance"
-            className="px-4 py-2 tracking-wide uppercase  border border-white rounded shadow"
-          >
-            Check for loan offers
-          </Link>
-        </div>
-      </div>
       </div>
     </div>
   );
@@ -543,8 +543,8 @@ const Variant = () => {
 const AllNewXL = () => {
   return (
     <div className="px-2 py-4 overflow-hidden ">
-      <div className="container mx-auto text-center  ">
-        <div className="w-full pt-8 pb-4 text-3xl text-center  uppercase  sm:text-4xl md:text-5xl">
+      <div className="container mx-auto text-center ">
+        <div className="w-full pt-8 pb-4 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           THE ALL-NEW XL6
         </div>
 
@@ -587,7 +587,7 @@ const AllNewXL = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="relative">
-            <div className="relative w-full  ">
+            <div className="relative w-full ">
               <img
                 src="https://nexaprod2.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/brand-highlights/img1.webp"
                 alt="360 View Camera"
@@ -628,7 +628,7 @@ const AllNewXL = () => {
 const Vi360 = () => {
   return (
     <>
-      <div className="pt-2 text-center  ">
+      <div className="pt-2 text-center ">
         <div className="w-full pt-10 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl lg:hidden">
           360
           <sup>
@@ -1051,7 +1051,7 @@ const Features = () => {
 
 const Engine = () => {
   return (
-    <div className=" py-10">
+    <div className="py-10 ">
       <div className="container flex flex-col items-center py-3 mx-auto ">
         <div className="w-full pt-4 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           Engine
@@ -1187,9 +1187,9 @@ const Engine = () => {
 
 const Technology = () => {
   return (
-    <div className="px-2 py-4 overflow-hidden bg-white text-black">
-      <div className="container mx-auto text-center  ">
-        <div className="w-full pt-8 pb-2 text-3xl text-center  uppercase sm:text-4xl md:text-5xl">
+    <div className="px-2 py-4 overflow-hidden text-black bg-white">
+      <div className="container mx-auto text-center ">
+        <div className="w-full pt-8 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           TECHNOLOGY
         </div>
         <div className="mb-6 text-center text-md lg:text-lg">
@@ -1220,7 +1220,7 @@ const Technology = () => {
                 alt="PROGRESSIVE NEXT GENERATION SMART HYBRID TECHNOLOGY"
                 className="relative "
               />
-              <div className="w-full pt-4 text-left  ">
+              <div className="w-full pt-4 text-left ">
                 <div className="pb-2 font-medium">
                   PROGRESSIVE NEXT GENERATION SMART HYBRID TECHNOLOGY
                 </div>
@@ -1294,7 +1294,7 @@ const Technology = () => {
                 src="https://nexaprod3.azureedge.net/-/media/feature/nexawebsitecarbrand/xl6/technology/1080x420-suzuki-connect.webp"
                 alt="SUZUKI CONNECT"
               />
-              <div className="w-full pt-4 text-left text-white ">
+              <div className="w-full pt-4 text-left ">
                 <div className="pb-2 font-medium">SUZUKI CONNECT</div>
                 <div className="text-sm font-light lg:pr-40 md:text-base">
                   The All-New XL6 takes your connected car experience to a whole
@@ -1319,7 +1319,7 @@ const Technology = () => {
 
 const CNGXL6 = () => {
   return (
-    <div className="relative pt-8 overflow-hidden  ">
+    <div className="relative pt-8 overflow-hidden ">
       <div className="w-full pb-3 text-3xl text-center uppercase lg:pt-6 sm:text-4xl md:text-5xl ">
         S-CNG
       </div>
@@ -1328,7 +1328,7 @@ const CNGXL6 = () => {
         Indulgent Place.
       </div>
 
-      <div className="mx-auto overflow-hidden relative w-full h-full group">
+      <div className="relative w-full h-full mx-auto overflow-hidden ">
         <img
           src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/XL6-cng-banner-mobile.webp"
           alt="XL6 CNG Mobile Banner "
@@ -1337,27 +1337,11 @@ const CNGXL6 = () => {
         <img
           src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/XL6-cng-banner-desktop.webp"
           alt="XL6 CNG Desktop Banner"
-          className="hidden sm:block w-full -z-10"
+          className="hidden w-full sm:block -z-10"
         />
-        {/* <div className=" z-20 w-full h-full text-black lg:pt-6 -pt-60 sm:-mt-0 xl:-pt-60 ">
-            <div className="container p-1 mx-auto ">
-              <div className="py-4 text-justify lg:text-left xl:w-2/3 lg:px-4">
-                Take the first step towards a conscious lifestyle with NEXA
-                S-CNG, where innovation and intelligence meet to power the
-                future. Designed to go the extra mile, the All-New XL6 S-CNG is
-                the premium MPV offering superior features with a desire to
-                improve the environment- all culminating in an indulgent
-                experience like no other. Now, let your every drive be suave and
-                sensible.
-              </div>
-              <div className="px-4 py-2 mb-4 text-white bg-black cursor-pointer select-none w-min whitespace-nowrap lg:mx-4">
-                <Link to="/xl6-cng">Explore More</Link>
-              </div>
-            </div>
-          </div> */}
         <Link to="/xl6-cng">
-          <div className="absolute inset-0 bg-black bg-opacity-50 hidden group-hover:flex duration-500  justify-center items-center cursor-pointer">
-            <div className="text-white">Explore &#8599;</div>
+          <div className="px-10 md:px-16 xl:px-20 py-3 w-min hover:bg-gradient-to-br bg-black text-white rounded- absolute bottom-[15%] left-[12.5%] from-[#36a649] to-[#82b040] hover:border hover:border-gray-300">
+            EXPLORE
           </div>
         </Link>
       </div>
@@ -1378,7 +1362,7 @@ const CNGXL6 = () => {
 //         </div>
 //       </div>
 
-//       <div className="px-2 py-2 mx-auto md:px-0 select-none">
+//       <div className="px-2 py-2 mx-auto select-none md:px-0">
 //         <div className="grid md:grid-cols-4">
 //           <div className="overflow-hidden md:col-span-3">
 //             <img
@@ -1407,7 +1391,7 @@ const CNGXL6 = () => {
 //                 className="w-full h-full duration-500 hover:scale-110"
 //               />
 //             </div>
-//             <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block">
+//             <div className="hidden px-8 py-12 mx-auto my-auto xl:py-20 lg:block">
 //               <p className="text-3xl font-medium">
 //                 Quad Chamber LED Reflector Headlamps
 //               </p>
@@ -1420,7 +1404,7 @@ const CNGXL6 = () => {
 //           </div>
 
 //           <div className="relative">
-//             <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block">
+//             <div className="hidden px-8 py-12 mx-auto my-auto xl:py-20 lg:block">
 //               <p className="text-3xl font-medium">
 //                 Smoky Grey LED Tail Lamps With Light Guide
 //               </p>
@@ -1472,7 +1456,7 @@ const CNGXL6 = () => {
 //                     className="w-full h-full duration-500 hover:scale-110"
 //                   />
 //                 </div>
-//                 <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block ">
+//                 <div className="hidden px-8 py-12 mx-auto my-auto xl:py-20 lg:block ">
 //                   <p className="text-3xl font-medium">
 //                     Dual-Tone Machined Finish R-16 Alloy Wheels
 //                   </p>
@@ -1486,7 +1470,7 @@ const CNGXL6 = () => {
 //               </div>
 
 //               <div className="relative">
-//                 <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block absolute top-0 z-10 text-black">
+//                 <div className="absolute top-0 z-10 hidden px-8 py-12 mx-auto my-auto text-black xl:py-20 lg:block">
 //                   <p className="text-3xl font-medium">Back Door Spoiler</p>
 //                   <p className="w-full h-0.5 my-4 bg-black rounded-full "></p>
 //                   <p>
@@ -1512,7 +1496,7 @@ const CNGXL6 = () => {
 //                     className="w-full h-full duration-500 hover:scale-110"
 //                   />
 //                 </div>
-//                 <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block ">
+//                 <div className="hidden px-8 py-12 mx-auto my-auto xl:py-20 lg:block ">
 //                   <p className="text-3xl font-medium">Skid Plates</p>
 //                   <p className="w-full h-0.5 my-6 bg-white rounded-full "></p>
 //                   <p>
@@ -1523,7 +1507,7 @@ const CNGXL6 = () => {
 //               </div>
 
 //               <div className="relative">
-//                 <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block absolute top-0 z-10 text-black">
+//                 <div className="absolute top-0 z-10 hidden px-8 py-12 mx-auto my-auto text-black xl:py-20 lg:block">
 //                   <p className="text-3xl font-medium">Sporty Roof Rails</p>
 //                   <p className="w-full h-0.5 my-4 bg-black rounded-full "></p>
 //                   <p>
@@ -1570,7 +1554,7 @@ const CNGXL6 = () => {
 //                     className="w-full h-full duration-500 hover:scale-110"
 //                   />
 //                 </div>
-//                 <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block ">
+//                 <div className="hidden px-8 py-12 mx-auto my-auto xl:py-20 lg:block ">
 //                   <p className="text-3xl font-medium">
 //                     Integrated LED Daytime Running Lamps (DRLs)
 //                   </p>
@@ -1584,7 +1568,7 @@ const CNGXL6 = () => {
 //               </div>
 
 //               <div className="relative">
-//                 <div className="hidden px-8 py-12 xl:py-20 mx-auto my-auto lg:block absolute top-0 z-10 text-black">
+//                 <div className="absolute top-0 z-10 hidden px-8 py-12 mx-auto my-auto text-black xl:py-20 lg:block">
 //                   <p className="text-3xl font-medium">Shark Fin Antenna</p>
 //                   <p className="w-full h-0.5 my-4 bg-black rounded-full "></p>
 //                   <p>
@@ -1608,7 +1592,7 @@ const CNGXL6 = () => {
 //         )}
 
 //         <div
-//           className="py-3 w-full text-center bg-black mt-8 text-white cursor-pointer border-white border-2 select-none"
+//           className="w-full py-3 mt-8 text-center text-white bg-black border-2 border-white cursor-pointer select-none"
 //           onClick={() => setOpen(!open)}
 //         >
 //           {open ? "SEE LESS" : "SEE MORE"}
@@ -2045,7 +2029,6 @@ function Safety() {
                     className="max-h-28"
                   />
                   <div className="py-2 text-sm">
-                    {" "}
                     Electronic Stability Program
                   </div>
                 </div>
@@ -2058,7 +2041,6 @@ function Safety() {
                     className="max-h-28"
                   />
                   <div className="py-2 text-sm">
-                    {" "}
                     ISOFIX Child Seat Anchorages
                   </div>
                 </div>

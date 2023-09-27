@@ -576,8 +576,8 @@ const VariantPlayer = () => {
 const Variant = () => {
   const [price, setPrice] = useState("10,70,000");
   return (
-    <div className="bg-black py-8">
-      <div className="container mx-auto">
+    <div className=" bg-opacity-25  bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_bg_image/5.webp')] bg-fixed  bg-black">
+    <div className="container mx-auto bg-opacity-10 bg-black py-20 ">
         <div className="grid md:grid-cols-3 md:space-y-0 space-y-3">
           <div className="space-y-3 mx-auto md:mx-0">
             <p className="uppercase text-gray-300">select car Variant</p>

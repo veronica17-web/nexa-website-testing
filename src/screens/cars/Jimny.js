@@ -418,8 +418,8 @@ function JimnyInteriorAndOther() {
 const Variant = () => {
   const [price, setPrice] = useState("12,74,000");
   return (
-    <div className="py-8 bg-black">
-      <div className="container mx-auto">
+    <div className=" bg-opacity-25  bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_bg_image/5.webp')] bg-fixed  bg-black">
+      <div className="container mx-auto bg-opacity-10 bg-black py-20 ">
         <div className="grid space-y-3 md:grid-cols-3 md:space-y-0">
           <div className="mx-auto space-y-3 md:mx-0">
             <p className="text-gray-300 uppercase">select car Variant</p>

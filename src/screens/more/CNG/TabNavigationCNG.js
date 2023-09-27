@@ -1,14 +1,14 @@
-import { Tab } from '@headlessui/react';
-import React from 'react';
+import { Tab } from "@headlessui/react";
+import React from "react";
 // import { Link } from 'react-router-dom';
 // Import Swiper React components
 // import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
 // import required modules
 // import { FreeMode, Navigation, Thumbs } from 'swiper';
@@ -17,13 +17,13 @@ function TabNavigationCNG() {
   return (
     <>
       <Tab.Group>
-        <div className='flex items-center justify-center py-8'>
-          <Tab.List className='space-x-1'>
+        <div className="flex items-center justify-center pt-8">
+          <Tab.List className="space-x-1">
             <Tab
               className={({ selected }) =>
                 selected
-                  ? 'bg-black text-gray-200 px-4 py-2 mb-2  rounded shadow outline-none'
-                  : 'bg-gray-300 text-black hover:bg-black font-light  hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
+                  ? "bg-black text-gray-200 px-4 py-2 mb-2  rounded shadow outline-none"
+                  : "bg-gray-300 text-black hover:bg-black font-light  hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none"
               }
             >
               PERFORMANCE MEETS SUSTAINABILITY
@@ -31,8 +31,8 @@ function TabNavigationCNG() {
             <Tab
               className={({ selected }) =>
                 selected
-                  ? 'bg-black text-gray-200 px-4 py-2 rounded shadow outline-none'
-                  : 'bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
+                  ? "bg-black text-gray-200 px-4 py-2 rounded shadow outline-none"
+                  : "bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none"
               }
             >
               SAFER AND SENSIBLE
@@ -40,8 +40,8 @@ function TabNavigationCNG() {
             <Tab
               className={({ selected }) =>
                 selected
-                  ? 'bg-black text-gray-200 px-4 py-2 rounded shadow outline-none'
-                  : 'bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none'
+                  ? "bg-black text-gray-200 px-4 py-2 rounded shadow outline-none"
+                  : "bg-gray-300 text-black hover:bg-black font-light hover:text-gray-300 mb-3 px-4 py-2 rounded shadow outline-none"
               }
             >
               CONVENIENCE WITH CARE
@@ -77,16 +77,16 @@ const PrformanceMeetsSustainability = () => {
   // const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
-      <div className='container mx-auto'>
-        <div className='bg-white dark:bg-gray-900'>
-          <div className='gap-1  py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+      <div className="container mx-auto">
+        <div className="bg-white dark:bg-gray-900">
+          <div className="gap-1  py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid lg:grid-cols-2 sm:py-5 lg:px-4">
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/Technology_AllGrip+webp.webp'
-              alt=''
-              srcSet=''
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/Technology_AllGrip+webp.webp"
+              alt=""
+              className="rounded-xl"
             />
-            <div className='flex flex-col justify-between'>
-              <p className='p-2 sm:pb-14 text-black md:text-md 2xl:text-lg font-light dark:text-black tracking-wide text-left'>
+            <div className="flex flex-col justify-between">
+              <p className="p-2 sm:pb-14 text-black md:text-md 2xl:text-lg font-light dark:text-black tracking-wide text-left">
                 Enjoy a bold performance for every mile with our factory fitted
                 NEXA S-CNG lineups. Progressive and domineering, NEXA S-CNG
                 range of models are equipped with dual inter-dependent
@@ -97,8 +97,8 @@ const PrformanceMeetsSustainability = () => {
                 That’s how S-CNG continues to deliver safety along with
                 durability.
               </p>
-              <div className='text-sm text-left'>
-                <span className='font-semibold'>Disclaimer:</span> Image is only
+              <div className="text-sm text-left">
+                <span className="font-semibold">Disclaimer:</span> Image is only
                 for illustration purposes. The S-CNG Zeta variant has one fire
                 extinguisher below the co-driver seat for safety purposes. For
                 details on the functioning of air bag and other safety features
@@ -116,16 +116,16 @@ const SaferAndSensible = () => {
   // const [interiorSwiper, setInteriorSwiper] = useState(null);
   return (
     <>
-      <div className='container mx-auto'>
-        <div className='bg-white dark:bg-gray-900'>
-          <div className='gap-1  py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+      <div className="container mx-auto">
+        <div className="bg-white dark:bg-gray-900">
+          <div className="gap-1  py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid lg:grid-cols-2 sm:py-5 lg:px-4">
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/Technology_AllGrip+webp.webp'
-              alt=''
-              srcSet=''
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/Technology_AllGrip+webp.webp"
+              alt=""
+              className="rounded-xl"
             />
             <div>
-              <p className='p-2 sm:pb-14 text-black md:text-md 2xl:text-lg font-light dark:text-black tracking-wide text-left'>
+              <p className="p-2 sm:pb-14 text-black md:text-md 2xl:text-lg font-light dark:text-black tracking-wide text-left">
                 NEXA S-CNG cars set the seal on lasting peace of mind with the
                 entire CNG system. Our assertive designs put people first with
                 increased protection and safety. Engineered with progressive
@@ -137,8 +137,8 @@ const SaferAndSensible = () => {
                 a micro switch. It assures that a vehicle goes off during the
                 CNG fuel filling process.
               </p>
-              <div className='text-sm text-left'>
-                <span className='font-semibold'>Disclaimer:</span> Image is only
+              <div className="text-sm text-left">
+                <span className="font-semibold">Disclaimer:</span> Image is only
                 for illustration purposes. The S-CNG Zeta variant has one fire
                 extinguisher below the co-driver seat for safety purposes. For
                 details on the functioning of air bag and other safety features
@@ -156,16 +156,16 @@ const ConvenienceWithCare = () => {
   // const [tabsColors, setTabsColors] = useState(1);
   return (
     <>
-      <div className='container mx-auto'>
-        <div className='bg-white dark:bg-gray-900'>
-          <div className='gap-1 py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+      <div className="container mx-auto">
+        <div className="bg-white dark:bg-gray-900">
+          <div className="gap-1 py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid lg:grid-cols-2 sm:py-5 lg:px-4">
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/Technology_AllGrip+webp.webp'
-              alt=''
-              srcSet=''
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/Technology_AllGrip+webp.webp"
+              alt=""
+              className="rounded-xl"
             />
             <div>
-              <p className='p-2 sm:pb-14 text-black md:text-md 2xl:text-lg font-light dark:text-black tracking-wide text-left'>
+              <p className="p-2 sm:pb-14 text-black md:text-md 2xl:text-lg font-light dark:text-black tracking-wide text-left">
                 Experience ease of switching from CNG to Petrol and vice versa
                 with agile auto-mode featuring a change-over switch. Be woke &
                 stay in the know about CNG fuel level with an impressive
@@ -177,8 +177,8 @@ const ConvenienceWithCare = () => {
                 get your car serviced at 3500+ Maruti Suzuki authorized service
                 centers with skilled technicians.
               </p>
-              <div className='text-sm text-left'>
-                <span className='font-semibold'>Disclaimer:</span> Image is only
+              <div className="text-sm text-left">
+                <span className="font-semibold">Disclaimer:</span> Image is only
                 for illustration purposes. The S-CNG Zeta variant has one fire
                 extinguisher below the co-driver seat for safety purposes. For
                 details on the functioning of air bag and other safety features

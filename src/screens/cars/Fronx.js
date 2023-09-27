@@ -606,7 +606,7 @@ const Variant = () => {
             <p className="tracking-wide text-xl">
               Ex-Showroom Price - Hyderabad
             </p>
-            <div className="text-red-500 text-xs font-light">
+            <div className="text-red-200 text-xs font-light">
               <sup>*</sup>Alpha+ & Zeta+ are applicable only for Direct
               Injection engine with Smart Hybrid
             </div>

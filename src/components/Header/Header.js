@@ -445,7 +445,7 @@ function Header({ col }) {
       {/* Desktop, Tab Menu */}
 
       <div
-        className={`fixed scroll-smooth z-20 backdrop-blur-sm ${
+        className={`fixed scroll-smooth z-40 backdrop-blur-sm ${
           col && scrollTop < 7 ? "text-black" : "text-white"
         }  ${scrollTop > 7 && "bg-[#0c0c0ce8]  "} w-full `}
       >
