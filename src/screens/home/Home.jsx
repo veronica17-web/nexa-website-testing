@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import { CgSpinner } from "react-icons/cg";
 import axios from "axios";
 import { products } from "../../constants";
-import { RiStarFill } from "react-icons/ri";
+import {  RiStarFill } from "react-icons/ri";
 import { PiSteeringWheelThin } from "react-icons/pi";
 
 // import { RiStarFill, RiStarHalfFill } from "react-icons/ri";
@@ -86,12 +86,11 @@ function Home() {
       </Helmet>
       <HomeVideo />
       <CarEnq title="NEXA CAR ENQUIRY" />
-
       <Range />
       <Navigate />
       <VehicleProducts />
-
       <SerFinInsur />
+      {/* <WhyToChooseUs /> */}
       <News />
       <Outlets />
       <Testimonials />
@@ -102,32 +101,37 @@ function Home() {
 export const HomeVideo = () => {
   const [open, setOpen] = useState(false);
   const [phone, setPhone] = useState("");
-  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  // const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
   // Define the video source URL based on the browser
-  const videoSource = isSafari
-    ? "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/header_video/Invicto_safari.mov"
-    : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/videos/WEBSITE+mp4.webm";
+  // const videoSource = isSafari
+  //   ? "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Nexa+Website+Safari/header_video/Invicto_safari.mov"
+  //   : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/videos/WEBSITE+mp4.webm";
 
   return (
     <>
-      <div className="relative top-0 left-0 w-full h-screen bg-black ">
+      <div className="relative top-0 left-0 w-full h-[85vh] bg-black sm:h-screen">
         <video
-          className="object-cover w-full h-full "
+          className="hidden object-cover w-full h-full sm:block"
           preload="metadata"
-          poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Header+Banner_Desktop_1500x605.webp"
+          poster="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Facebook_Maruti_Suzuki_No1_SUV_Maker_Saboo_RKS_Motor_October_Still_Banner.webp"
           loop
           autoPlay
           playsInline
           muted
         >
           <source
-            src={videoSource}
-            type={isSafari ? "video/quicktime" : "video/mp4"}
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_video/Saboo_RKS_Motors_No_1_SUV+Maker.mp4"
+            type="video/mp4"
           />
         </video>
+        <img
+          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Website_Mobile_Maruti_Suzuki_No1_SUV_Maker_Saboo_RKS_Motor_October_Offers.webp"
+          alt="Maruti Suzuki No1 SUV Maker Saboo RKS Motor"
+          className="w-full h-full sm:hidden"
+        />
 
-        <div className="absolute bottom-40 lg:bottom-24 left-[3%] lg:left-[5%] text-white ">
+        {/* <div className="absolute bottom-40 lg:bottom-24 left-[3%] lg:left-[5%] text-white ">
           <div
             data-aos="fade-right"
             data-aos-delay="200"
@@ -162,6 +166,16 @@ export const HomeVideo = () => {
               Discover More
             </button>
           </Link>
+        </div> */}
+        <div className="absolute hidden -ml-4 bottom-10 left-1/2 md:block ">
+          <div className="flex items-end justify-center w-8 border rounded-full h-14 animate-pulse ">
+            <div>
+              <div className="w-1 h-4 mb-1 bg-white border-2 rounded-full animate-bounce "></div>
+            </div>
+          </div>
+          <div className="flex justify-center mt-1 animate-bounce ">
+            <div className="w-4 h-4 rotate-45 border-b-2 border-r-2"></div>
+          </div>
         </div>
       </div>
 
@@ -428,10 +442,10 @@ const Navigate = () => {
   const [open3, setOpen3] = useState(false);
   const [phone, setPhone] = useState("");
   return (
-    <div className="container px-5 mx-auto lg:pt-4 md:px-3 lg:px-0 uppercase border py-2 mb-10 mt-16 justify-between items-start text-center hidden md:flex cursor-pointer shadow-lg shadow-gray-400">
-      <div className=" border-r w-1/5  py-4 hover:font-medium group">
+    <div className="container items-start justify-between hidden px-5 py-2 mx-auto mt-16 mb-10 text-center uppercase border shadow-lg cursor-pointer lg:pt-4 md:px-3 lg:px-0 md:flex shadow-gray-400">
+      <div className="w-1/5 py-4 border-r hover:font-medium group">
         <Link to="/maruti-nexa-showroom-outlets-in-hyderabad">
-          <div className="flex flex-col gap-2 justify-center items-center px-1">
+          <div className="flex flex-col items-center justify-center gap-2 px-1">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/location.webp"
               alt=""
@@ -444,19 +458,19 @@ const Navigate = () => {
       </div>
 
       <div
-        className="border-r w-1/5  py-4 hover:font-medium group"
+        className="w-1/5 py-4 border-r hover:font-medium group"
         onClick={() => setOpen3(true)}
       >
-        <div className="flex flex-col gap-2 justify-center items-center px-1">
+        <div className="flex flex-col items-center justify-center gap-2 px-1">
           <PiSteeringWheelThin className="text-3xl lg:text-4xl " />
           <div>Book a test drive</div>
         </div>
       </div>
       <div
-        className="border-r w-1/5  py-4 hover:font-medium group"
+        className="w-1/5 py-4 border-r hover:font-medium group"
         onClick={() => setOpen2(true)}
       >
-        <div className="flex flex-col gap-2 justify-center items-center px-1">
+        <div className="flex flex-col items-center justify-center gap-2 px-1">
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/showroom.webp"
             alt=""
@@ -468,10 +482,10 @@ const Navigate = () => {
       </div>
 
       <div
-        className="border-r w-1/5  py-4 hover:font-medium group"
+        className="w-1/5 py-4 border-r hover:font-medium group"
         onClick={() => setOpen(true)}
       >
-        <div className="flex flex-col gap-2 justify-center items-center px-1">
+        <div className="flex flex-col items-center justify-center gap-2 px-1">
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/mechanical.webp"
             alt=""
@@ -481,9 +495,9 @@ const Navigate = () => {
           <div>Book a service</div>
         </div>
       </div>
-      <div className=" w-1/5  py-4 hover:font-medium group">
+      <div className="w-1/5 py-4 hover:font-medium group">
         <Link to="/maruti-car-insurance">
-          <div className="flex flex-col gap-2 justify-center items-center px-1">
+          <div className="flex flex-col items-center justify-center gap-2 px-1">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/gif/car-insurance.webp"
               alt=""
@@ -605,7 +619,7 @@ const VehicleProducts = () => {
 const SerFinInsur = () => {
   return (
     <div className="py-4 overflow-hidden text-white ">
-      <div className="container hidden px-2 mx-auto space-y-2 lg:px-0 md:block">
+      <div className="container px-2 mx-auto space-y-2 lg:px-0 ">
         <div className="duration-500 hover:scale-95">
           <Link to="/book-online-maruti-nexa-car-service">
             {/* <img
@@ -617,19 +631,19 @@ const SerFinInsur = () => {
               data-aos-duration="500"
             /> */}
             <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Maruti_Suzuki_Service_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp"
-              alt="Website_Maruti_Suzuki_Service_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor"
-              className="w-full hidden sm:block rounded-3xl shadow-lg"
+               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
+               alt="Navratri dussehra Saboo RKS Motor October Offers"
+              className="hidden w-full shadow-lg sm:block rounded-3xl"
             />
             <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Maruti_Suzuki_Service_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp"
-              alt="Website_Mobile_Maruti_Suzuki_Service_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp"
-              className="sm:hidden w-full"
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
+              alt="Navratri dussehra Saboo RKS Motor October Offers"
+              className="w-full sm:hidden rounded-3xl h-[80%]"
             />
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 gap-2">
+        <div className="md:grid grid-cols-2 gap-2 hidden ">
           <div
             data-aos="zoom-in"
             data-aos-delay="0"
@@ -811,7 +825,7 @@ const News = () => {
           SABOO NEXA WORLD
         </span> */}
         <div className="relative md:whitespace-nowrap ">
-          <div className="inline-flex pt-2 pb-2 overflow-x-hidden text-5xl font-medium uppercase group-hover:animate-type-reverse text-brand-accent md:h-20 md:animate-type-second md:text-6xl">
+          <div className="py-2 text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl inline-flex pt-2 pb-2 overflow-x-hidden group-hover:animate-type-reverse text-brand-accent md:h-20 md:animate-type-second ">
             SABOO NEXA WORLD
           </div>
           <div className="box-border hidden w-1 h-10 -mb-2 bg-black md:inline-block md:animate-cursor will-change-transform md:-mb-4 md:h-16"></div>
@@ -824,17 +838,17 @@ const News = () => {
             // data-aos="zoom-in"
             // data-aos-delay="0"
             // data-aos-duration="500"
-            className=" lg:w-1/3 relative "
+            className="relative lg:w-1/3"
           >
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/1-upload.webp"
               alt=" Maruti Suzuki Jimny hits Hyderabad roads"
               srcSet=""
-              className="overflow-hidden bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none"
+              className="overflow-hidden bg-black shadow-lg select-none rounded-2xl shadow-gray-500 saturate-200"
             />
-            <div className="   mt-4">
+            <div className="mt-4 ">
               <div className="uppercase ">
-                {/* <div className="pb-2 text-lg  lg:text-xl">21 JUN 2023</div> */}
+                {/* <div className="pb-2 text-lg lg:text-xl">21 JUN 2023</div> */}
                 <div className="pb-2 text-xl font-medium lg:text-2xl">
                   Maruti Suzuki Jimny hits Hyderabad roads
                 </div>
@@ -854,16 +868,16 @@ const News = () => {
               </div>
             </div>
           </div>
-          <div className=" lg:w-1/3 relative  ">
+          <div className="relative lg:w-1/3">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/2-upload+ama.webp"
               alt=" Maruti Suzuki delivers Jimny to customers"
               srcSet=""
               className="overflow-hidden bg-black shadow-lg rounded-2xl shadow-gray-500 brightness-110 saturate-150"
             />
-            <div className="  mt-4">
+            <div className="mt-4 ">
               <div className="uppercase ">
-                {/* <div className="pb-2 text-lg  lg:text-xl">21 JUN 2023</div> */}
+                {/* <div className="pb-2 text-lg lg:text-xl">21 JUN 2023</div> */}
                 <div className="pb-2 text-xl font-medium lg:text-2xl">
                   Maruti Suzuki delivers Jimny to customers
                 </div>
@@ -883,7 +897,7 @@ const News = () => {
               </div>
             </div>
           </div>
-          <div className=" lg:w-1/3 relative  ">
+          <div className="relative lg:w-1/3">
             <div>
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/blog/aug+2023/full-blog-section/Nexa_0003_v6velugu.webp"
@@ -892,9 +906,9 @@ const News = () => {
                 className="overflow-hidden bg-black shadow-lg rounded-2xl shadow-gray-500 brightness-110 saturate-150"
               />
             </div>
-            <div className=" gap-2  rounded-2xl mt-4 ">
-              {/* <div className="pb-2 text-lg  lg:text-xl">21 JUN 2023</div> */}
-              <div className="pb-2 text-xl font-medium lg:text-2xl uppercase">
+            <div className="gap-2 mt-4 rounded-2xl">
+              {/* <div className="pb-2 text-lg lg:text-xl">21 JUN 2023</div> */}
+              <div className="pb-2 text-xl font-medium uppercase lg:text-2xl">
                 హైదరాబాద్ కస్టమర్ల చేతికి జిమ్మీ
               </div>
 
@@ -912,30 +926,33 @@ const News = () => {
             </div>
           </div>
         </div>
-        <div className="text-5xl font-medium  uppercase md:text-6xl mb-4">
+        <div className="py-2 text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl mb-2">
           gallery
         </div>
-        <div className="flex gap-4 flex-col md:flex-row  ">
-          <div className="md:w-1/3  duration-500 hover:z-10 relative group overflow-hidden rounded-2xl">
+        {/* <div className="mb-4 text-5xl font-medium uppercase md:text-6xl">
+          gallery
+        </div> */}
+        <div className="flex flex-col gap-4 md:flex-row ">
+          <div className="relative overflow-hidden duration-500 md:w-1/3 hover:z-10 group rounded-2xl">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/1.webp"
               alt="Grand Launch of Suzuki Jimny at our Nexa Lumbini"
-              className="object-cover  overflow-hidden duration-500 bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none group-hover:scale-105"
+              className="object-cover overflow-hidden duration-500 bg-black shadow-lg select-none rounded-2xl shadow-gray-500 saturate-200 group-hover:scale-105"
             />
             <Link to="/gallery">
-              <div className="hidden  absolute inset-0 group-hover:flex  flex-col justify-center items-center gap-4  text-white duration-700 bg-black bg-opacity-50 rounded-2xl">
+              <div className="absolute inset-0 flex-col items-center justify-center hidden gap-4 text-white duration-700 bg-black bg-opacity-50 group-hover:flex rounded-2xl">
                 {/* <div className="text-xl text-white">View More </div> */}
-                <div className="text-whtie bg-black border px-4 py-2">
+                <div className="px-4 py-2 bg-black border text-whtie">
                   + View more
                 </div>
               </div>
             </Link>
           </div>
-          <div className="md:w-1/3  duration-500 hover:z-10 relative group overflow-hidden rounded-2xl">
+          <div className="relative overflow-hidden duration-500 md:w-1/3 hover:z-10 group rounded-2xl">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/2.webp"
               alt="Grand Launch of Suzuki Jimny at our Nexa Lumbini"
-              className="object-cover  overflow-hidden duration-500 bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none group-hover:scale-105"
+              className="object-cover overflow-hidden duration-500 bg-black shadow-lg select-none rounded-2xl shadow-gray-500 saturate-200 group-hover:scale-105"
 
               // data-aos="zoom-in"
               // data-aos-delay="0"
@@ -943,28 +960,28 @@ const News = () => {
             />{" "}
             <Link to="/gallery">
               {/* <div className="text-xl text-white">View More </div> */}
-              <div className="hidden  absolute inset-0 group-hover:flex  flex-col justify-center items-center gap-4  text-white duration-700 bg-black bg-opacity-50 rounded-2xl">
+              <div className="absolute inset-0 flex-col items-center justify-center hidden gap-4 text-white duration-700 bg-black bg-opacity-50 group-hover:flex rounded-2xl">
                 {/* <div className="text-xl text-white">View More </div> */}
-                <div className="text-whtie bg-black border px-4 py-2">
+                <div className="px-4 py-2 bg-black border text-whtie">
                   + View more
                 </div>
               </div>
             </Link>
           </div>
-          <div className="md:w-1/3 duration-500 hover:z-10 relative group overflow-hidden rounded-2xl">
+          <div className="relative overflow-hidden duration-500 md:w-1/3 hover:z-10 group rounded-2xl">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/jimny+opening/4.webp"
               alt="Grand Launch of Suzuki Jimny at our Nexa Lumbini"
-              className="object-cover  overflow-hidden duration-500 bg-black shadow-lg rounded-2xl shadow-gray-500 saturate-200 select-none group-hover:scale-105"
+              className="object-cover overflow-hidden duration-500 bg-black shadow-lg select-none rounded-2xl shadow-gray-500 saturate-200 group-hover:scale-105"
 
               // data-aos="zoom-in"
               // data-aos-delay="0"
               // data-aos-duration="500"
             />
             <Link to="/gallery">
-              <div className="hidden  absolute inset-0 group-hover:flex  flex-col justify-center items-center gap-4  text-white duration-700 bg-black bg-opacity-50 rounded-2xl">
+              <div className="absolute inset-0 flex-col items-center justify-center hidden gap-4 text-white duration-700 bg-black bg-opacity-50 group-hover:flex rounded-2xl">
                 {/* <div className="text-xl text-white">View More </div> */}
-                <div className="text-whtie bg-black border px-4 py-2">
+                <div className="px-4 py-2 bg-black border text-whtie">
                   + View more
                 </div>
               </div>
@@ -1018,7 +1035,7 @@ const Testimonials = () => {
           SABOO NEXA WORLD
         </span> */}
         <div className="relative md:whitespace-nowrap ">
-          <div className="inline-flex pt-2 pb-2 overflow-x-hidden text-4xl font-medium uppercase group-hover:animate-type-reverse text-brand-accent md:animate-type md:text-5xl lg:text-6xl">
+          <div className="py-2 text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl inline-flex pt-2 pb-2 overflow-x-hidden  group-hover:animate-type-reverse text-brand-accent md:animate-type ">
             Testimonials
           </div>
           <div className="-mb-2  box-border md:inline-block h-10 w-1 hidden md:animate-cursor bg-black will-change-transform md:-mb-2.5 md:h-16 "></div>
@@ -1148,11 +1165,10 @@ const Testimonials = () => {
 export const Outlets = () => {
   return (
     <div className="container px-2 py-10 mx-auto lg:px-0 ">
-      <div className="text-5xl font-medium text-right uppercase md:text-6xl">
+      <div className="py-2 text-3xl font-medium  uppercase sm:text-4xl md:text-5xl  text-right">
         OUTLETS
       </div>
 
-      <br />
       <div className="mb-6 text-right">
         To ensure that you receive the ultimate Nexa experience, we have
         strategically positioned ourselves in three prominent hotspots
@@ -1245,6 +1261,56 @@ export const Outlets = () => {
     </div>
   );
 };
+
+// const WhyToChooseUs = () => {
+//   const data = [
+//     {
+//       title: "Hassle-Free Transaction",
+//       body: "  All you’ll need to do is to choose your favourite car and leave the rest on us!",
+//       logo: [<RiCustomerService2Fill />],
+//     },
+//     {
+//       title: "Expansive Network",
+//       body: " Operating at around 543 touchpoints, we are one of the largest automobile dealerships in the country.",
+//       logo: [<RiCustomerService2Fill />],
+//     },
+//     {
+//       title: "Reliability",
+//       body: "Driven by years of conviction and experience, Varun Maruti is a brand you can trust on.",
+//       logo: [<RiCustomerService2Fill />],
+//     },
+//     {
+//       title: "Market Leader",
+//       body: " We are India’s No. 1 Maruti Suzuki dealer, an automobile dealer of  choice.",
+//       logo: [<RiCustomerService2Fill />],
+//     },
+//   ];
+//   return (
+//     <div className="container px-2 py-10 mx-auto lg:px-0 ">
+//       <div className="py-2 text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl">
+//         WHY TO CHOOSE US
+//       </div>
+//       <div
+//         className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 mt-6 duration-500  `}
+      
+//       >
+//         {data.map((item, index) => (
+//           <div
+//             className="hover:bg-black hover:text-white px-4 py-2 rounded-xl hover:-translate-y-6 shadow-lg shadow-gray-500 duration-500 cursor-pointer mt-4 text-center group select-none  bg-[#ffffff]"
+//             key={index}
+//           >
+//             <div className="mx-auto text-3xl w-full flex justify-center pt-4 group-hover:scale-110">
+//               {item.logo[0]}
+//             </div>
+//             <div className="text-xl mt-2 ">{item.title}</div>
+//             <div className="h-0.5 w-[30%] group-hover:w-[70%] bg-black mx-auto mt-2 mb-3 group-hover:bg-white duration-500"></div>
+//             <div className="mb-2">{item.body}</div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
 
 // Define default props for CarEnq
 CarEnq.defaultProps = {

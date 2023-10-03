@@ -20,7 +20,6 @@ import { Tab } from "@headlessui/react";
 import { fronx } from "../../../constants/cars";
 
 const FronxCNG = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
       <Helmet>
@@ -77,20 +76,20 @@ const FronxCNG = () => {
       {/* <div>
         <img
           src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/GV-cng-banner-desktop.webp'
-          className='w-full object-cover hidden md:block '
+          className='hidden object-cover w-full md:block '
           alt='SCNG Banner'
           srcSet=''
         />
         <img
           src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/GV-cng-banner-mobile.webp'
-          className='w-full md:hidden block '
+          className='block w-full md:hidden '
           alt='SCNG Banner'
           srcSet=''
         />
       </div> */}
       <div className="pt-20 pb-1 bg-black"></div>
       <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fornx-cng-mobwebp.webp')] sm:bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/fronx-cng.webp')]  bg-cover bg-no-repeat md:h-[40vh] lg:h-[60vh] h-[60vh] ">
-        <div className="max-w-6xl flex items-end h-full ">
+        <div className="flex items-end h-full max-w-6xl ">
           {/* <img
                 src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/NexaCNG/Logo-xl6.webp'
                 className='p-3 md:ml-20 lg:ml-36'
@@ -98,7 +97,7 @@ const FronxCNG = () => {
               /> */}
           <a
             href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/FRONX+Brochure_Saboo+RKS.6b9c2f109c812f47efb9.pdf"
-            className="p-3 h-min bg-white md:bg-black md:text-white flex items-center w-min mb-10 md:mb-20 ml-20 whitespace-nowrap rounded "
+            className="flex items-center p-3 mb-10 ml-20 bg-white rounded h-min md:bg-black md:text-white w-min md:mb-20 whitespace-nowrap "
             target="_blank"
             rel="noreferrer"
           >
@@ -108,8 +107,8 @@ const FronxCNG = () => {
         </div>
       </div>
       <OnRoadPrice title={"XL6 CNG"} />
-      <div className="text-center  my-8 container mx-auto ">
-        <div className="text-2xl py-4 pt-8 font-medium">
+      <div className="container mx-auto my-8 text-center ">
+        <div className="py-4 pt-8 text-2xl font-medium">
           Meet the green side to your new drive
         </div>
         <span className="">
@@ -121,22 +120,22 @@ const FronxCNG = () => {
         </span>
       </div>
      <FronxCNGSlider />
-      {/* <div className='text-center my-6 container mx-auto pb-6'>
+      {/* <div className='container pb-6 mx-auto my-6 text-center'>
         <div className='text-2xl font-semibold '>REGISTER YOUR INTEREST</div>
-        <div className='container  px-6 md:px-12 lg:px-24 py-2 sm:py-5'>
+        <div className='container px-6 py-2 md:px-12 lg:px-24 sm:py-5'>
           Register Now To Know All About The Advanced Features Of Grand Vitara
           CNG
         </div>
         <hr className='w-1/5 mx-auto' />
       </div> */}
-      <div className="text-2xl text-center font-medium py-4   lg:pt-10 ">
+      <div className="py-4 text-2xl font-medium text-center lg:pt-10 ">
         FRONX S-CNG SPECIFICATIONS
       </div>
-      <div className="max-w-7xl mx-auto py-6 pb-20 ">
-        <div className="grid md:grid-cols-4 md:space-x-4 lg:space-x-1 gap-4">
+      <div className="py-6 pb-20 mx-auto max-w-7xl ">
+        <div className="grid gap-4 md:grid-cols-4 md:space-x-4 lg:space-x-1">
           <Tab.Group>
             <div className="col-span-1">
-              <p className="p-4 bg-black w-full text-white ml-3 mb-1">
+              <p className="w-full p-4 mb-1 ml-3 text-white bg-black">
                 Features
               </p>
               <Tab.List className="space-x-3">
@@ -152,7 +151,7 @@ const FronxCNG = () => {
                     <img
                       src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/icons/engine.png"
                       alt="engine"
-                      className="h-5 w-5"
+                      className="w-5 h-5"
                     />
                     <p>Engine</p>
                   </div>
@@ -170,7 +169,7 @@ const FronxCNG = () => {
                     <img
                       src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/icons/transmission.png"
                       alt="transmission"
-                      className="h-5 w-5"
+                      className="w-5 h-5"
                     />
                     <p>Transmission</p>
                   </div>
@@ -188,7 +187,7 @@ const FronxCNG = () => {
                     <img
                       src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/icons/dimensions.png"
                       alt="dimensions"
-                      className="h-5 w-5"
+                      className="w-5 h-5"
                     />
                     <p>Dimensions</p>
                   </div>
@@ -206,7 +205,7 @@ const FronxCNG = () => {
                     <img
                       src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/icons/weight.png"
                       alt="Weight"
-                      className="h-5 w-5"
+                      className="w-5 h-5"
                     />
                     <p>Weight</p>
                   </div>
@@ -224,7 +223,7 @@ const FronxCNG = () => {
                     <img
                       src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/icons/brakes.png"
                       alt="Brakes"
-                      className="h-5 w-5"
+                      className="w-5 h-5"
                     />
                     <p>Brakes</p>
                   </div>
@@ -242,7 +241,7 @@ const FronxCNG = () => {
                     <img
                       src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/icons/suspension.png"
                       alt="Suspension"
-                      className="h-5 w-5"
+                      className="w-5 h-5"
                     />
                     <p>Suspension</p>
                   </div>
@@ -260,7 +259,7 @@ const FronxCNG = () => {
                     <img
                       src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/icons/tyre.png"
                       alt="Tyre Size"
-                      className="h-5 w-5"
+                      className="w-5 h-5"
                     />
                     <p>Tyre Size</p>
                   </div>
@@ -278,7 +277,7 @@ const FronxCNG = () => {
                     <img
                       src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/icons/fuel.png"
                       alt="Fuel Tank"
-                      className="h-5 w-5"
+                      className="w-5 h-5"
                     />
                     <p>Fuel Tank</p>
                   </div>
@@ -296,7 +295,7 @@ const FronxCNG = () => {
                     <img
                       src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/icons/seat.png"
                       alt="Seating Capacity"
-                      className="h-5 w-5"
+                      className="w-5 h-5"
                     />
                     <p>Seating Capacity</p>
                   </div>
@@ -308,18 +307,18 @@ const FronxCNG = () => {
                 {/* Engine */}
                 <Tab.Panel>
                   <div className="grid grid-cols-2">
-                    <div className="bg-black p-4 text-gray-300">
+                    <div className="p-4 text-gray-300 bg-black">
                       Specifications
                     </div>
-                    <div className="bg-black p-4 text-gray-300">
+                    <div className="p-4 text-gray-300 bg-black">
                       Petrol BS VI
                     </div>
                     {fronx.engine.map((item, index) => (
                       <>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.specs}
                         </div>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.data}
                         </div>
                       </>
@@ -334,16 +333,16 @@ const FronxCNG = () => {
                 {/* Transmission */}
                 <Tab.Panel>
                   <div className="grid grid-cols-2">
-                    <div className="bg-black p-4 text-gray-300">Body Type</div>
-                    <div className="bg-black p-4 text-gray-300">
+                    <div className="p-4 text-gray-300 bg-black">Body Type</div>
+                    <div className="p-4 text-gray-300 bg-black">
                       Petrol BS VI
                     </div>
                     {fronx.transmission.map((item, index) => (
                       <>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.body}
                         </div>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.data}
                         </div>
                       </>
@@ -357,16 +356,16 @@ const FronxCNG = () => {
                 {/* Dimensions */}
                 <Tab.Panel>
                   <div className="grid grid-cols-2">
-                    <div className="bg-black p-4 text-gray-300">Body Type</div>
-                    <div className="bg-black p-4 text-gray-300">
+                    <div className="p-4 text-gray-300 bg-black">Body Type</div>
+                    <div className="p-4 text-gray-300 bg-black">
                       Petrol BS VI
                     </div>
                     {fronx.dimensions.map((item, index) => (
                       <>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.body}
                         </div>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.data}
                         </div>
                       </>
@@ -380,16 +379,16 @@ const FronxCNG = () => {
                 {/* Weight */}
                 <Tab.Panel>
                   <div className="grid grid-cols-2">
-                    <div className="bg-black p-4 text-gray-300">Body Type</div>
-                    <div className="bg-black p-4 text-gray-300">
+                    <div className="p-4 text-gray-300 bg-black">Body Type</div>
+                    <div className="p-4 text-gray-300 bg-black">
                       Petrol BS VI
                     </div>
                     {fronx.weight.map((item, index) => (
                       <>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.body}
                         </div>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.data}
                         </div>
                       </>
@@ -403,16 +402,16 @@ const FronxCNG = () => {
                 {/* Brakes */}
                 <Tab.Panel>
                   <div className="grid grid-cols-2">
-                    <div className="bg-black p-4 text-gray-300">Body Type</div>
-                    <div className="bg-black p-4 text-gray-300">
+                    <div className="p-4 text-gray-300 bg-black">Body Type</div>
+                    <div className="p-4 text-gray-300 bg-black">
                       Petrol BS VI
                     </div>
                     {fronx.brakes.map((item, index) => (
                       <>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.body}
                         </div>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.data}
                         </div>
                       </>
@@ -426,16 +425,16 @@ const FronxCNG = () => {
                 {/* Suspension */}
                 <Tab.Panel>
                   <div className="grid grid-cols-2">
-                    <div className="bg-black p-4 text-gray-300">Body Type</div>
-                    <div className="bg-black p-4 text-gray-300">
+                    <div className="p-4 text-gray-300 bg-black">Body Type</div>
+                    <div className="p-4 text-gray-300 bg-black">
                       Petrol BS VI
                     </div>
                     {fronx.suspension.map((item, index) => (
                       <>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.body}
                         </div>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.data}
                         </div>
                       </>
@@ -449,16 +448,16 @@ const FronxCNG = () => {
                 {/* Tyre Size */}
                 <Tab.Panel>
                   <div className="grid grid-cols-2">
-                    <div className="bg-black p-4 text-gray-300">Body Type</div>
-                    <div className="bg-black p-4 text-gray-300">
+                    <div className="p-4 text-gray-300 bg-black">Body Type</div>
+                    <div className="p-4 text-gray-300 bg-black">
                       Petrol BS VI
                     </div>
                     {fronx.tyre.map((item, index) => (
                       <>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.body}
                         </div>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.data}
                         </div>
                       </>
@@ -472,16 +471,16 @@ const FronxCNG = () => {
                 {/* Fuel Tank */}
                 <Tab.Panel>
                   <div className="grid grid-cols-2">
-                    <div className="bg-black p-4 text-gray-300">Body Type</div>
-                    <div className="bg-black p-4 text-gray-300">
+                    <div className="p-4 text-gray-300 bg-black">Body Type</div>
+                    <div className="p-4 text-gray-300 bg-black">
                       Petrol BS VI
                     </div>
                     {fronx.fuel.map((item, index) => (
                       <>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.body}
                         </div>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.data}
                         </div>
                       </>
@@ -495,16 +494,16 @@ const FronxCNG = () => {
                 {/* Seating Capacity */}
                 <Tab.Panel>
                   <div className="grid grid-cols-2">
-                    <div className="bg-black p-4 text-gray-300">Body Type</div>
-                    <div className="bg-black p-4 text-gray-300">
+                    <div className="p-4 text-gray-300 bg-black">Body Type</div>
+                    <div className="p-4 text-gray-300 bg-black">
                       Petrol BS VI
                     </div>
                     {fronx.seating.map((item, index) => (
                       <>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.body}
                         </div>
-                        <div className="bg-gray-100 p-4 text-gray-700">
+                        <div className="p-4 text-gray-700 bg-gray-100">
                           {item.data}
                         </div>
                       </>
@@ -555,7 +554,7 @@ const FronxCNGSlider = () => {
   return (
     <div className="">
       <div className="container mx-auto text-center ">
-        <div className="text-2xl font-medium py-4 pt-8 ">
+        <div className="py-4 pt-8 text-2xl font-medium ">
           THE ALL-NEW FRONX
         </div>
         <div className="">
@@ -565,7 +564,7 @@ const FronxCNGSlider = () => {
           Convenience Goes Bold
         </div> */}
         <div className="py-2 sm:pt-5">
-          <div className=" space-y-4 rounded ">
+          <div className="space-y-4 rounded ">
             {/* <Carousel /> */}
 
             <Swiper
@@ -607,7 +606,7 @@ const FronxCNGSlider = () => {
               // freeMode={true}
               // watchSlidesProgress={true}
               modules={[FreeMode, Navigation, Thumbs]}
-              className="hidden  mySwiper-3 md:block"
+              className="hidden mySwiper-3 md:block"
             >
               {data.map((x, index) => (
                 <SwiperSlide key={index} classname="cursor-pointer">

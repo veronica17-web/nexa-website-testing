@@ -129,16 +129,20 @@ const Invicto = () => {
 
       {/* Design Philosophy */}
       <Philosphy />
-
+      <div className="pt-2 text-white bg-black ">
+        <div className="w-full pt-10 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
+          COLOURS
+        </div>
+      </div>
       <Col />
 
       {/* Int & Ext Sliders */}
-      <div className="bg-black pb-10 lg:pb-20 ">
-        <div className="xl:container  mx-auto">
-          <div className="pb-4 text-3xl text-center uppercase sm:text-4xl md:text-5xl lg:pt-8 text-white ">
+      <div className="pb-10 bg-black lg:pb-20 ">
+        <div className="mx-auto xl:container">
+          <div className="pb-4 text-3xl text-center text-white uppercase sm:text-4xl md:text-5xl lg:pt-8 ">
             Discover Opulence
           </div>
-          <div className="flex justify-center pb-2 text-xl gap-5 ">
+          <div className="flex justify-center gap-5 pb-2 text-xl ">
             <div className="">
               <button
                 className={`px-4 py-1  border tracking-widest rounded-lg duration-500  ${
@@ -164,7 +168,7 @@ const Invicto = () => {
               </button>
             </div>
           </div>
-          <div className=" relative">
+          <div className="relative ">
             <div className={`${exterior ? "opacity-0" : "opacity-100"}`}>
               <ExteriorSlider />
             </div>
@@ -472,7 +476,7 @@ const ExteriorSlider = () => {
   return (
     <>
       <style>{styles}</style>
-      <div className=" select-none ">
+      <div className="select-none ">
         <Swiper
           effect={"coverflow"}
           // loop={true}
@@ -493,69 +497,69 @@ const ExteriorSlider = () => {
           modules={[EffectCoverflow, Autoplay]}
           className="rounded-3xl"
         >
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
+          <SwiperSlide className="overflow-hidden rounded-2xl">
             <div className="relative">
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-4+webp.webp"
                 alt=""
-                className="overflow-hidden  rounded-2xl"
+                className="overflow-hidden rounded-2xl"
                 onClick={() => handleClickSlide(0)}
               />
-              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+              {/* <div className="pt-4 text-sm italic text-white md:text-base md:font-bold lg:text-2xl">
                 LEAGUE DEFINING LOOK
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
+          <SwiperSlide className="overflow-hidden rounded-2xl">
             <div>
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-2+jpg.webp"
                 alt=""
-                className="overflow-hidden  rounded-2xl"
+                className="overflow-hidden rounded-2xl"
                 onClick={() => handleClickSlide(1)}
               />
-              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+              {/* <div className="pt-4 text-sm italic text-white md:text-base md:font-bold lg:text-2xl">
                 THE ART OF TECH
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
+          <SwiperSlide className="overflow-hidden rounded-2xl">
             <div className="relative">
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-3+jpg.webp"
                 alt=""
-                className="overflow-hidden  rounded-2xl"
+                className="overflow-hidden rounded-2xl"
                 onClick={() => handleClickSlide(2)}
               />
-              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+              {/* <div className="pt-4 text-sm italic text-white md:text-base md:font-bold lg:text-2xl">
                 LEAGUE DEFINING LOOK
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
+          <SwiperSlide className="overflow-hidden rounded-2xl">
             <div className="relative">
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-5+webp.webp"
                 alt=""
-                className="overflow-hidden  rounded-2xl"
+                className="overflow-hidden rounded-2xl"
                 onClick={() => handleClickSlide(3)}
               />
-              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+              {/* <div className="pt-4 text-sm italic text-white md:text-base md:font-bold lg:text-2xl">
                 THE ART OF TECH
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
+          <SwiperSlide className="overflow-hidden rounded-2xl">
             <div className="relative">
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Extr-img-5+webp.webp"
                 alt=""
-                className="overflow-hidden  rounded-2xl"
+                className="overflow-hidden rounded-2xl"
                 onClick={() => handleClickSlide(4)}
               />
-              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+              {/* <div className="pt-4 text-sm italic text-white md:text-base md:font-bold lg:text-2xl">
                 LEAGUE DEFINING LOOK
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
         </Swiper>
@@ -635,102 +639,102 @@ const InteriorSlider = () => {
           modules={[EffectCoverflow, Autoplay]}
           className="rounded-3xl"
         >
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
+          <SwiperSlide className="overflow-hidden rounded-2xl">
             <div className="relative">
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/intr-img-3+jpg.webp"
                 alt=""
-                    className="overflow-hidden  rounded-2xl"
+                    className="overflow-hidden rounded-2xl"
                 onClick={() => handleClickSlide(0)}
               />
-              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+              {/* <div className="pt-4 text-sm italic text-white md:text-base md:font-bold lg:text-2xl">
                 LUXURY IN MOTION
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
+          <SwiperSlide className="overflow-hidden rounded-2xl">
             <div className="relative">
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/intr-img-2+jpg.webp"
                 alt=""
-                    className="overflow-hidden  rounded-2xl"
+                    className="overflow-hidden rounded-2xl"
                 onClick={() => handleClickSlide(1)}
               />
-              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+              {/* <div className="pt-4 text-sm italic text-white md:text-base md:font-bold lg:text-2xl">
                 SAFETY EXTRAORDINAIRE
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
+          <SwiperSlide className="overflow-hidden rounded-2xl">
             <div className="relative">
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-8+webp.webp"
                 alt=""
-                    className="overflow-hidden  rounded-2xl"
+                    className="overflow-hidden rounded-2xl"
                 onClick={() => handleClickSlide(2)}
               />
-              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+              {/* <div className="pt-4 text-sm italic text-white md:text-base md:font-bold lg:text-2xl">
                 LUXURY IN MOTION
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
-          {/* <SwiperSlide className="overflow-hidden  rounded-2xl">
+          {/* <SwiperSlide className="overflow-hidden rounded-2xl">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-5+webp.webp"
               alt=""
               onClick={() => handleClickSlide(3)}
             />
           </SwiperSlide> */}
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
+          <SwiperSlide className="overflow-hidden rounded-2xl">
             <div className="relative">
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-6+webp.webp"
                 alt=""
-                    className="overflow-hidden  rounded-2xl"
+                    className="overflow-hidden rounded-2xl"
                 onClick={() => handleClickSlide(3)}
               />
-              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+              {/* <div className="pt-4 text-sm italic text-white md:text-base md:font-bold lg:text-2xl">
                 COMFORTABLY OPULENT
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
+          <SwiperSlide className="overflow-hidden rounded-2xl">
             <div className="relative">
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-4+webp.webp"
                 alt=""
-                    className="overflow-hidden  rounded-2xl"
+                    className="overflow-hidden rounded-2xl"
                 onClick={() => handleClickSlide(4)}
               />
-              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+              {/* <div className="pt-4 text-sm italic text-white md:text-base md:font-bold lg:text-2xl">
                 COMFORTABLY OPULENT
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
+          <SwiperSlide className="overflow-hidden rounded-2xl">
             <div className="relative">
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/intr-img-1+jpg.webp"
                 alt=""
-                    className="overflow-hidden  rounded-2xl"
+                    className="overflow-hidden rounded-2xl"
                 onClick={() => handleClickSlide(5)}
               />
-              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+              {/* <div className="pt-4 text-sm italic text-white md:text-base md:font-bold lg:text-2xl">
                 SAFETY EXTRAORDINAIRE
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
-          <SwiperSlide className="overflow-hidden  rounded-2xl">
+          <SwiperSlide className="overflow-hidden rounded-2xl">
             <div className="relative">
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/int-img-7+webp.webp"
                 alt=""
-                    className="overflow-hidden  rounded-2xl"
+                    className="overflow-hidden rounded-2xl"
                 onClick={() => handleClickSlide(6)}
               />
-              <div className="text-white pt-4 text-sm md:text-base md:font-bold lg:text-2xl italic">
+              {/* <div className="pt-4 text-sm italic text-white md:text-base md:font-bold lg:text-2xl">
                 SEAT SET AUTOMATION
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
         </Swiper>
@@ -764,8 +768,8 @@ function Philosphy() {
 
   return (
     <div className="text-white bg-black">
-      <div className="container mx-auto px-1 xl:px-0">
-        <div className=" w-full pt-10 overflow-hidden ">
+      <div className="container px-1 mx-auto xl:px-0">
+        <div className="w-full pt-10 overflow-hidden ">
           {/* <div className="pb-5 text-2xl font-semibold text-center md:text-3xl"> */}
           <div className="pt-2 pb-6 text-3xl text-center uppercase lg:pb-8 sm:text-4xl md:text-5xl">
             Design Philosophy
@@ -836,7 +840,7 @@ function TabNavigationInvictio() {
   return (
     <>
       <div className="container mx-auto ">
-        <div className="pt-10 lg:pt-20 pb-4 text-3xl text-center uppercase sm:text-4xl md:text-5xl ">
+        <div className="pt-10 pb-4 text-3xl text-center uppercase lg:pt-20 sm:text-4xl md:text-5xl ">
           Intelligent Electric Hybrid System
         </div>
         <div className="text-center text-md lg:text-lg">
@@ -933,7 +937,7 @@ const ElectricDrive = () => {
               class="w-screen"
               autoplay="autoplay"
               loop
-              className=" rounded-xl overflow-hidden"
+              className="overflow-hidden rounded-xl"
             >
               <source
                 class="w-30 h-30"
@@ -964,7 +968,7 @@ const HybridDrive = () => {
               class="w-screen"
               autoplay="autoplay"
               loop
-              className=" rounded-xl overflow-hidden"
+              className="overflow-hidden rounded-xl"
             >
               <source
                 class="w-30 h-30"
@@ -995,7 +999,7 @@ const EngineDrive = () => {
               class="w-screen"
               autoplay="autoplay"
               loop
-              className=" rounded-xl overflow-hidden"
+              className="overflow-hidden rounded-xl"
             >
               <source
                 class="w-30 h-30"
@@ -1024,7 +1028,7 @@ const RegenerativeBraking = () => {
               class="w-screen"
               autoplay="autoplay"
               loop
-              className=" rounded-xl overflow-hidden"
+              className="overflow-hidden rounded-xl"
             >
               <source
                 class="w-30 h-30"
@@ -1150,10 +1154,10 @@ function Benefits() {
             </div>
             <div className="flex flex-col items-center justify-around my-3 md:items-start md:my-6 md:flex-row md:gap-4 ">
               <div className="pb-2 border-b md:text-center md:w-1/5 md:border-0">
-                <div className="py-3 lg:py-5 font-medium md:text-xl">
+                <div className="py-3 font-medium lg:py-5 md:text-xl">
                   Better Fuel <br className="hidden md:block" /> Efficiency
                 </div>
-                <div className="md:font-light tracking-wider text-center">
+                <div className="tracking-wider text-center md:font-light">
                   The Hybrid System consumes less fuel and maximizes fuel
                   efficiency. Engine uses less fuel when it is revolving slower,
                   at a lower RPM.
@@ -1161,40 +1165,40 @@ function Benefits() {
               </div>
 
               <div className="pb-2 border-b md:text-center md:w-1/5 md:border-0">
-                <div className="py-3 lg:py-5 font-medium md:text-xl">
+                <div className="py-3 font-medium lg:py-5 md:text-xl">
                   Lower CO2 <br className="hidden md:block" /> Emissions
                 </div>
-                <div className="md:font-light tracking-wider text-center">
+                <div className="tracking-wider text-center md:font-light">
                   When the electric motor kicks in, the overall load on the
                   petrol engine reduces, which leads to lower CO2 emissions and
                   a more environment-friendly drive.
                 </div>
               </div>
               <div className="pb-2 border-b md:text-center md:w-1/5 md:border-0">
-                <div className="py-3 lg:py-5 font-medium md:text-xl">
+                <div className="py-3 font-medium lg:py-5 md:text-xl">
                   No Range <br className="hidden md:block" /> Anxiety
                 </div>
-                <div className="md:font-light tracking-wider text-center">
+                <div className="tracking-wider text-center md:font-light">
                   The battery charges during cruising and regenerative braking.
                   This gives you an extended range as compared to an electric
                   vehicle that needs charging at regular intervals.
                 </div>
               </div>
               <div className="pb-2 border-b md:text-center md:w-1/5 md:border-0">
-                <div className="py-3 lg:py-5 font-medium md:text-xl">
+                <div className="py-3 font-medium lg:py-5 md:text-xl">
                   Enhanced <br className="hidden md:block" /> Performance
                 </div>
-                <div className="md:font-light tracking-wider text-center">
+                <div className="tracking-wider text-center md:font-light">
                   Enhanced power delivery from the combined output of the petrol
                   engine and electric motor delivers smooth and quick
                   acceleration.
                 </div>
               </div>
               <div className="md:text-center md:w-1/5">
-                <div className="py-3 lg:py-5 font-medium md:text-xl">
+                <div className="py-3 font-medium lg:py-5 md:text-xl">
                   Quieter <br className="hidden md:block" /> Driving
                 </div>
-                <div className="md:font-light tracking-wider text-center">
+                <div className="tracking-wider text-center md:font-light">
                   Minimal engine noise in the EV mode and a smooth switch over
                   between petrol and electric will give you a smooth and quiet
                   driving experience.
@@ -1524,7 +1528,7 @@ export const CarComp = ({ details }) => {
   return (
     <div className="pt-10 pb-10 overflow-hidden bg-black lg:pt-24 lg:pb-16 ">
       <div className="container flex flex-col mx-auto lg:flex-row">
-        <div className="flex flex-wrap w-full justify-center -mb-10 z-10  md:hidden text-white ">
+        <div className="z-10 flex flex-wrap justify-center w-full -mb-10 text-white md:hidden ">
           <div className="space-x-5 text-3xl md:text-4xl lg:text-5xl">
             {details.name}
           </div>
@@ -1532,7 +1536,7 @@ export const CarComp = ({ details }) => {
             Specs
           </div>
         </div>
-        <div className="flex items-center justify-center object-cover lg:w-1/2 overflow-hidden">
+        <div className="flex items-center justify-center object-cover overflow-hidden lg:w-1/2">
           <img
             // src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/Invicto-Balck.webp"
             src={details.specImage}
@@ -1542,7 +1546,7 @@ export const CarComp = ({ details }) => {
         </div>
 
         <div className="ml-2 text-gray-200 sm:ml-5 md:ml-0 lg:w-1/2">
-          <div className="hidden flex-wrap w-full mb-8  md:flex ">
+          <div className="flex-wrap hidden w-full mb-8 md:flex ">
             <div className="space-x-5 text-3xl md:text-4xl lg:text-5xl">
               {details.name}
             </div>
@@ -1763,7 +1767,7 @@ function Col() {
   ];
 
   return (
-    <div className="py-20 bg-black" onContextMenu={handleContextMenu}>
+    <div className="pt-8 pb-20 bg-black" onContextMenu={handleContextMenu}>
       <div className="">
         <video
           className="object-cover w-full h-full max-h-screen sm:pb-6"
@@ -1904,9 +1908,9 @@ export const CarEnq2 = ({ title }) => {
     }
   }
   return (
-    <div className=" bg-black py-3">
+    <div className="py-3 bg-black ">
       <div className="container px-5 pt-5 mx-auto space-y-3 lg:px-0 ">
-        <div className="pt-2 pb-6 text-3xl text-center uppercase lg:pb-8 sm:text-4xl md:text-5xl text-white">
+        <div className="pt-2 pb-6 text-3xl text-center text-white uppercase lg:pb-8 sm:text-4xl md:text-5xl">
           {title}
         </div>
         <form
@@ -2057,7 +2061,7 @@ export const CarEnq2 = ({ title }) => {
             >
               {loader ? (
                 <div className="flex items-center justify-center">
-                  <CgSpinner className="w-5 h-5 mr-2  animate-spin" />
+                  <CgSpinner className="w-5 h-5 mr-2 animate-spin" />
                   SUBMITTING
                 </div>
               ) : (

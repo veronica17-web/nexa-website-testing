@@ -251,7 +251,7 @@ const Range = () => {
   return (
     <>
       <div
-        className="mb-3 bg-black duration-1000  mt-4 select-none  "
+        className="mt-4 mb-3 duration-1000 bg-black select-none "
         style={{
           backgroundImage: `url(${NexaData[activeSlideIndex].backgroundImage})`,
           backgroundSize: "cover",
@@ -260,10 +260,10 @@ const Range = () => {
         onContextMenu={handleContextMenu}
       >
         <div className="duration-1000">
-          <div className=" container pt-6 md:pt-20 text-white mx-auto text-center  uppercase text-2xl sm:text-4xl md:text-5xl px-4 py-2">
+          <div className="container px-4 py-2 pt-6 mx-auto text-2xl text-center text-white uppercase md:pt-20 sm:text-4xl md:text-5xl">
             An extraordinary model range
           </div>
-          <div className="text-center  md:pt-10  flex justify-center -mb-8 md:-mb-2 h-12 md:h-24 ">
+          <div className="flex justify-center h-12 -mb-8 text-center md:pt-10 md:-mb-2 md:h-24 ">
             <img
               src={NexaData[activeSlideIndex].logo}
               alt=""
@@ -277,7 +277,7 @@ const Range = () => {
           slidesPerView={1}
           // loop={true}
           autoplay={{
-            delay: 4000,
+            delay: 20000,
             disableOnInteraction: false,
           }}
           centeredSlides={true}
@@ -311,12 +311,12 @@ const Range = () => {
           }}
           onSlideChange={handleSlideChange}
           modules={[Navigation, Autoplay]}
-          className="carSlider flex items-center  "
+          className="flex items-center carSlider "
         >
           {NexaData.map((car) => (
             <SwiperSlide key={car.id} className="py-6">
               <Link to={car.explore} className="focus:outline-none">
-                <div className=" min-h-40  relative lg:ml-10 xl:ml-20 hidden lg:block">
+                <div className="relative hidden min-h-40 lg:ml-10 xl:ml-20 lg:block">
                   {isSafari ? (
                     // Use the Safari video source
                     <video
@@ -364,7 +364,7 @@ const Range = () => {
                     ></video>
                   )}
                 </div>
-                <div className=" min-h-40  relative lg:ml-10 xl:ml-20 mb-4 lg:hidden">
+                <div className="relative mb-4 min-h-40 lg:ml-10 xl:ml-20 lg:hidden">
                   <img src={car.imgMobile} alt="" srcset="" />
                 </div>
               </Link>
@@ -389,7 +389,7 @@ const Range = () => {
             <GrFormNext className="lg:text-3xl" />
           </div>
         </Swiper>
-        <div className="mb-8 h-10 md:h-20 -mt-24 sm:-mt-32  bg-white flex duration-500"></div>
+        <div className="flex h-10 mb-8 -mt-24 duration-500 bg-white md:h-20 sm:-mt-32"></div>
       </div>
     </>
   );
