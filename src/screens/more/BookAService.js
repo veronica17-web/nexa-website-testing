@@ -103,21 +103,21 @@ function BookAService() {
       <div className="h-1 bg-black "></div>
       {/* <Slider /> */}
       <div className="">
-        {/* <img
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp"
-          alt="NEW HAFEEZPET BANNER"
-          className="w-full "
-        /> */}
         <img
+          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp"
+          alt="Maruti Suzuki Service "
+          className="w-full "
+        />
+        {/* <img
           src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
-          alt="Navratri dussehra Saboo RKS Motor October Offers"
+          alt="Maruti Suzuki Nexa Navratri dussehra Saboo RKS Motor October Offers"
           className="hidden w-full sm:block"
         />
         <img
           src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
-          alt="Navratri dussehra Saboo RKS Motor October Offers"
+          alt="Maruti Suzuki Nexa Navratri dussehra Saboo RKS Motor October Offers"
           className="w-full sm:hidden"
-        />
+        /> */}
       </div>
       {/* <img
         src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Saboo-Nexa-Service-banner1.png"

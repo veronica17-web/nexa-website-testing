@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import { CgSpinner } from "react-icons/cg";
 import axios from "axios";
 import { products } from "../../constants";
-import {  RiStarFill } from "react-icons/ri";
+import { RiCustomerService2Fill, RiStarFill } from "react-icons/ri";
 import { PiSteeringWheelThin } from "react-icons/pi";
 
 // import { RiStarFill, RiStarHalfFill } from "react-icons/ri";
@@ -88,6 +88,20 @@ function Home() {
       <CarEnq title="NEXA CAR ENQUIRY" />
       <Range />
       <Navigate />
+      <div className="container mx-auto pb-5">
+        <Link to="/nexa-car-offers-in-hyderabad">
+          <img
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
+            alt="Maruti Suzuki Nexa Navratri dussehra "
+            className="hidden w-full shadow-lg sm:block rounded-3xl shadow-gray-500 hover:scale-95 duration-500"
+          />
+          <img
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
+            alt="Maruti Suzuki Nexa Navratri dussehra "
+            className="w-full sm:hidden  h-[85vh]"
+          />
+        </Link>
+      </div>
       <VehicleProducts />
       <SerFinInsur />
       {/* <WhyToChooseUs /> */}
@@ -622,23 +636,13 @@ const SerFinInsur = () => {
       <div className="container px-2 mx-auto space-y-2 lg:px-0 ">
         <div className="duration-500 hover:scale-95">
           <Link to="/book-online-maruti-nexa-car-service">
-            {/* <img
+            <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp"
               alt="service center"
               className="w-full max-w-full overflow-hidden shadow-lg rounded-3xl shadow-gray-500"
               data-aos="zoom-in"
               data-aos-delay="0"
               data-aos-duration="500"
-            /> */}
-            <img
-               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
-               alt="Navratri dussehra Saboo RKS Motor October Offers"
-              className="hidden w-full shadow-lg sm:block rounded-3xl"
-            />
-            <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
-              alt="Navratri dussehra Saboo RKS Motor October Offers"
-              className="w-full sm:hidden rounded-3xl h-[80%]"
             />
           </Link>
         </div>
@@ -1262,55 +1266,54 @@ export const Outlets = () => {
   );
 };
 
-// const WhyToChooseUs = () => {
-//   const data = [
-//     {
-//       title: "Hassle-Free Transaction",
-//       body: "  All you’ll need to do is to choose your favourite car and leave the rest on us!",
-//       logo: [<RiCustomerService2Fill />],
-//     },
-//     {
-//       title: "Expansive Network",
-//       body: " Operating at around 543 touchpoints, we are one of the largest automobile dealerships in the country.",
-//       logo: [<RiCustomerService2Fill />],
-//     },
-//     {
-//       title: "Reliability",
-//       body: "Driven by years of conviction and experience, Varun Maruti is a brand you can trust on.",
-//       logo: [<RiCustomerService2Fill />],
-//     },
-//     {
-//       title: "Market Leader",
-//       body: " We are India’s No. 1 Maruti Suzuki dealer, an automobile dealer of  choice.",
-//       logo: [<RiCustomerService2Fill />],
-//     },
-//   ];
-//   return (
-//     <div className="container px-2 py-10 mx-auto lg:px-0 ">
-//       <div className="py-2 text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl">
-//         WHY TO CHOOSE US
-//       </div>
-//       <div
-//         className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 mt-6 duration-500  `}
-      
-//       >
-//         {data.map((item, index) => (
-//           <div
-//             className="hover:bg-black hover:text-white px-4 py-2 rounded-xl hover:-translate-y-6 shadow-lg shadow-gray-500 duration-500 cursor-pointer mt-4 text-center group select-none  bg-[#ffffff]"
-//             key={index}
-//           >
-//             <div className="mx-auto text-3xl w-full flex justify-center pt-4 group-hover:scale-110">
-//               {item.logo[0]}
-//             </div>
-//             <div className="text-xl mt-2 ">{item.title}</div>
-//             <div className="h-0.5 w-[30%] group-hover:w-[70%] bg-black mx-auto mt-2 mb-3 group-hover:bg-white duration-500"></div>
-//             <div className="mb-2">{item.body}</div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
+const WhyToChooseUs = () => {
+  const data = [
+    {
+      title: "Hassle-Free Transaction",
+      body: "  All you’ll need to do is to choose your favourite car and leave the rest on us!",
+      logo: [<RiCustomerService2Fill />],
+    },
+    {
+      title: "Expansive Network",
+      body: " Operating at around 543 touchpoints, we are one of the largest automobile dealerships in the country.",
+      logo: [<RiCustomerService2Fill />],
+    },
+    {
+      title: "Reliability",
+      body: "Driven by years of conviction and experience, Varun Maruti is a brand you can trust on.",
+      logo: [<RiCustomerService2Fill />],
+    },
+    {
+      title: "Market Leader",
+      body: " We are India’s No. 1 Maruti Suzuki dealer, an automobile dealer of  choice.",
+      logo: [<RiCustomerService2Fill />],
+    },
+  ];
+  return (
+    <div className="container px-2 py-10 mx-auto lg:px-0 ">
+      <div className="py-2 text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl">
+        WHY TO CHOOSE US
+      </div>
+      <div
+        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 mt-6 duration-500  `}
+      >
+        {data.map((item, index) => (
+          <div
+            className="hover:bg-black hover:text-white px-4 py-2 rounded-xl hover:translate-y-6 shadow-lg shadow-gray-500 duration-500 cursor-pointer mb-4 text-center group select-none  bg-[#ffffff]"
+            key={index}
+          >
+            <div className="mx-auto text-3xl w-full flex justify-center pt-4 group-hover:scale-110">
+              {item.logo[0]}
+            </div>
+            <div className="text-xl mt-2 ">{item.title}</div>
+            <div className="h-0.5 w-[30%] group-hover:w-[70%] bg-black mx-auto mt-2 mb-3 group-hover:bg-white duration-500"></div>
+            <div className="mb-2">{item.body}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 // Define default props for CarEnq
 CarEnq.defaultProps = {

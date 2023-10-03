@@ -13,8 +13,8 @@ export const sliders = [
   //   alt: 'fronx-banner',
   // },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Maruti_Suzuki_Nexa_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp",
-    alt: "Maruti Suzuki Nexa Ganesh Chaturthi Offers",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp",
+    alt: "Maruti Suzuki Nexa Navratri dussehra Saboo RKS Motor October Offers",
   },
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-web-banner-nov-1.webp",
@@ -47,8 +47,8 @@ export const sliders = [
 //same for home screen and offers screen
 export const mobileSliders = [
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Maruti_Suzuki_Nexa_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp",
-    alt: "Maruti Suzuki Nexa Ganesh Chaturthi Offers",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp",
+    alt:"Maruti Suzuki Nexa Navratri dussehra Saboo RKS Motor October Offers"
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Mobile+Maruti+Suzuki+Nexa+Teachers+Day+September+Saboo+RKS+Motor.webp',
@@ -58,7 +58,6 @@ export const mobileSliders = [
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-mobile-banner.webp",
     alt: "invicto mobile banner",
   },
-
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner.webp",
     alt: "NEW fronx mobile banner",
@@ -173,7 +172,8 @@ export const products = [
     price: "12,74,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/120x30+black.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/jimny.webp",
-    specImage: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Jimny+Spec.webp",
+    specImage:
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Jimny+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/Jimny+Brochure.pdf",
     explore: "/maruti-jimny-price-in-hyderabad",
@@ -202,7 +202,8 @@ export const products = [
     price: "10,45,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/thumbnails/gt-thumbnail-cng.webp",
-    specImage: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/GV+Spec.webp",
+    specImage:
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/GV+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/grand_vitara.pdf",
     explore: "/grand-vitara-on-road-price-in-hyderabad",
@@ -232,7 +233,8 @@ export const products = [
     price: "5,35,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp",
-    specImage: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Ignis+Spec.webp",
+    specImage:
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Ignis+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/Maruti-Suzuki-Ignis-Broucher.pdf",
     explore: "/nexa-ignis-on-road-price-in-hyderabad",
@@ -261,7 +263,8 @@ export const products = [
     price: "6,49,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/cng/baleno-cng-thubnail.webp",
-    specImage: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Baleno+Spec.webp",
+    specImage:
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Baleno+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/The_New_Age_Baleno_Brochure.pdf",
     explore: "/new-maruti-baleno-price-in-hyderabad",
@@ -290,7 +293,8 @@ export const products = [
     price: "8,99,500",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-ciaz.webp",
-    specImage: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Ciaz+Spec.webp",
+    specImage:
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/Ciaz+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/Maruti-Suzuki-All_new_Ciaz-Brochure.pdf",
     explore: "/nexa-ciaz-on-road-price-in-hyderabad",
@@ -320,7 +324,8 @@ export const products = [
     price: "11,29,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Logo-XL6.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/cng/xl6-cng-thumbnail.webp",
-    specImage: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/XL6+Spec.webp",
+    specImage:
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/specification/XL6+Spec.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/THE+ALL-NEW+XL6+Brochure.pdf",
     explore: "/nexa-xl6-on-road-price-in-hyderabad",
