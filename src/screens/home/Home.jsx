@@ -8,13 +8,13 @@ import { toast } from "react-toastify";
 import { CgSpinner } from "react-icons/cg";
 import axios from "axios";
 import { products } from "../../constants";
-import { RiCustomerService2Fill, RiStarFill } from "react-icons/ri";
+import { RiStarFill } from "react-icons/ri";
 import { PiSteeringWheelThin } from "react-icons/pi";
 
 // import { RiStarFill, RiStarHalfFill } from "react-icons/ri";
 // import { RiStarFill, RiStarHalfFill, RiPhoneFill } from "react-icons/ri";
 // import { FaEnvelope, FaArrowRight } from "react-icons/fa";
-import { BsQuote } from "react-icons/bs";
+import { BsQuote, BsTrophy } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper";
 
@@ -30,6 +30,9 @@ import "swiper/css/navigation";
 import Range from "./Range";
 import ShowRoom from "../../components/utils/ShowRoom";
 import TestDrive from "../../components/utils/TestDrive";
+import { IoCarSportOutline } from "react-icons/io5";
+import { LuNetwork } from "react-icons/lu";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
 
 function Home() {
   useEffect(() => {
@@ -88,23 +91,10 @@ function Home() {
       <CarEnq title="NEXA CAR ENQUIRY" />
       <Range />
       <Navigate />
-      <div className="container mx-auto pb-5">
-        <Link to="/nexa-car-offers-in-hyderabad">
-          <img
-            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
-            alt="Maruti Suzuki Nexa Navratri dussehra "
-            className="hidden w-full shadow-lg sm:block rounded-3xl shadow-gray-500 hover:scale-95 duration-500"
-          />
-          <img
-            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
-            alt="Maruti Suzuki Nexa Navratri dussehra "
-            className="w-full sm:hidden  h-[85vh]"
-          />
-        </Link>
-      </div>
+      <Offer />
       <VehicleProducts />
       <SerFinInsur />
-      {/* <WhyToChooseUs /> */}
+      <WhyToChooseUs />
       <News />
       <Outlets />
       <Testimonials />
@@ -631,23 +621,52 @@ const VehicleProducts = () => {
 };
 
 const SerFinInsur = () => {
+  const [isTrue, setIsTrue] = useState(true);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIsTrue((prevState) => !prevState); // Toggle the state from true to false and vice versa
+    }, 10000); // 10 seconds interval
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <div className="py-4 overflow-hidden text-white ">
       <div className="container px-2 mx-auto space-y-2 lg:px-0 ">
         <div className="duration-500 hover:scale-95">
           <Link to="/book-online-maruti-nexa-car-service">
+            {/* <img
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_02.webp"
+              alt="Maruti Suzuki Service Navratri dussehra Saboo RKS Motor"
+              // src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp"
+              // alt="service center"
+              className="hidden w-full max-w-full overflow-hidden shadow-lg rounded-3xl shadow-gray-500 sm:block"
+            /> */}
+            <div data-aos="zoom-in" data-aos-delay="0" data-aos-duration="500">
+              {isTrue ? (
+                <img
+                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_02.webp"
+                  alt="Saboo RKS Motor Navratri dussehra Service "
+                  className="hidden w-full shadow-lg select-none sm:block rounded-3xl shadow-gray-500"
+                />
+              ) : (
+                <img
+                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_04.webp"
+                  alt="Navratri | Maruti Suzuki Service | Maruti Suzuki | This Navratri, avail  Periodic Maintenance Service and celebrate your 9 day festivities with zero  worries. Visit https://saboonexa.in/ T&C apply.... | By Saboo RKS |  NEXA | Maruti Suzuki"
+                  className="hidden w-full shadow-lg select-none sm:block rounded-3xl shadow-gray-500"
+                />
+              )}
+            </div>
             <img
-              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp"
-              alt="service center"
-              className="w-full max-w-full overflow-hidden shadow-lg rounded-3xl shadow-gray-500"
-              data-aos="zoom-in"
-              data-aos-delay="0"
-              data-aos-duration="500"
+              src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_03.webp"
+              alt="Navratri dussehra Maruti Suzuki Service "
+              className="w-full rounded-2xl sm:hidden"
             />
           </Link>
         </div>
 
-        <div className="md:grid grid-cols-2 gap-2 hidden ">
+        <div className="hidden grid-cols-2 gap-2 md:grid ">
           <div
             data-aos="zoom-in"
             data-aos-delay="0"
@@ -829,7 +848,7 @@ const News = () => {
           SABOO NEXA WORLD
         </span> */}
         <div className="relative md:whitespace-nowrap ">
-          <div className="py-2 text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl inline-flex pt-2 pb-2 overflow-x-hidden group-hover:animate-type-reverse text-brand-accent md:h-20 md:animate-type-second ">
+          <div className="inline-flex py-2 pt-2 pb-2 overflow-x-hidden text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl group-hover:animate-type-reverse text-brand-accent md:h-20 md:animate-type-second ">
             SABOO NEXA WORLD
           </div>
           <div className="box-border hidden w-1 h-10 -mb-2 bg-black md:inline-block md:animate-cursor will-change-transform md:-mb-4 md:h-16"></div>
@@ -930,7 +949,7 @@ const News = () => {
             </div>
           </div>
         </div>
-        <div className="py-2 text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl mb-2">
+        <div className="py-2 mb-2 text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl">
           gallery
         </div>
         {/* <div className="mb-4 text-5xl font-medium uppercase md:text-6xl">
@@ -1039,7 +1058,7 @@ const Testimonials = () => {
           SABOO NEXA WORLD
         </span> */}
         <div className="relative md:whitespace-nowrap ">
-          <div className="py-2 text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl inline-flex pt-2 pb-2 overflow-x-hidden  group-hover:animate-type-reverse text-brand-accent md:animate-type ">
+          <div className="inline-flex py-2 pt-2 pb-2 overflow-x-hidden text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl group-hover:animate-type-reverse text-brand-accent md:animate-type ">
             Testimonials
           </div>
           <div className="-mb-2  box-border md:inline-block h-10 w-1 hidden md:animate-cursor bg-black will-change-transform md:-mb-2.5 md:h-16 "></div>
@@ -1169,7 +1188,7 @@ const Testimonials = () => {
 export const Outlets = () => {
   return (
     <div className="container px-2 py-10 mx-auto lg:px-0 ">
-      <div className="py-2 text-3xl font-medium  uppercase sm:text-4xl md:text-5xl  text-right">
+      <div className="py-2 text-3xl font-medium text-right uppercase sm:text-4xl md:text-5xl">
         OUTLETS
       </div>
 
@@ -1269,48 +1288,69 @@ export const Outlets = () => {
 const WhyToChooseUs = () => {
   const data = [
     {
-      title: "Hassle-Free Transaction",
-      body: "  All you’ll need to do is to choose your favourite car and leave the rest on us!",
-      logo: [<RiCustomerService2Fill />],
+      title: "Effortless Car Buying ",
+      body: "Enjoy a seamless car-buying experience with us. Simply choose your dream car, and we'll handle the rest!",
+      logo: [<IoCarSportOutline />],
     },
     {
-      title: "Expansive Network",
-      body: " Operating at around 543 touchpoints, we are one of the largest automobile dealerships in the country.",
-      logo: [<RiCustomerService2Fill />],
+      title: "Extensive Service Network",
+      body: " Operating at around 22 touchpoints, we are one of the largest automobile dealerships in Telangana.",
+      logo: [<LuNetwork />],
     },
     {
-      title: "Reliability",
-      body: "Driven by years of conviction and experience, Varun Maruti is a brand you can trust on.",
-      logo: [<RiCustomerService2Fill />],
+      title: "Unwavering Reliability",
+      body: "Backed by years of unwavering commitment and expertise, Saboo RKS Motors is a brand synonymous with trust and dependability.",
+      logo: [<VscWorkspaceTrusted />],
     },
     {
       title: "Market Leader",
-      body: " We are India’s No. 1 Maruti Suzuki dealer, an automobile dealer of  choice.",
-      logo: [<RiCustomerService2Fill />],
+      body: " We are Telangana’s No. 1 Maruti Suzuki dealer, an automobile dealer of choice.",
+      logo: [<BsTrophy />],
     },
   ];
+
   return (
     <div className="container px-2 py-10 mx-auto lg:px-0 ">
       <div className="py-2 text-3xl font-medium text-left uppercase sm:text-4xl md:text-5xl">
         WHY TO CHOOSE US
       </div>
       <div
-        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 mt-6 duration-500  `}
+        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4  mt-5 lg:mt-10 duration-500  `}
       >
         {data.map((item, index) => (
           <div
-            className="hover:bg-black hover:text-white px-4 py-2 rounded-xl hover:translate-y-6 shadow-lg shadow-gray-500 duration-500 cursor-pointer mb-4 text-center group select-none  bg-[#ffffff]"
+            className="hover:bg-black hover:text-white px-2 xl:px-4 py-6 rounded-3xl hover:-translate-y-2 lg:hover:-translate-y-6  shadow-lg shadow-gray-500 duration-500 cursor-pointer  text-center group select-none bg-[#ffffff] lg:py-12 delay-100  relative "
             key={index}
           >
-            <div className="mx-auto text-3xl w-full flex justify-center pt-4 group-hover:scale-110">
+            <div className="flex justify-center w-full pt-4 mx-auto text-3xl duration-100 md:text-4xl lg:text-5xl ">
               {item.logo[0]}
             </div>
-            <div className="text-xl mt-2 ">{item.title}</div>
-            <div className="h-0.5 w-[30%] group-hover:w-[70%] bg-black mx-auto mt-2 mb-3 group-hover:bg-white duration-500"></div>
+
+            <div className="mt-2 text-2xl ">{item.title}</div>
+            <div className="h-0.5 w-[30%] group-hover:w-[70%] delay-200 bg-black mx-auto mt-2 mb-3 group-hover:bg-white duration-500"></div>
             <div className="mb-2">{item.body}</div>
           </div>
         ))}
       </div>
+    </div>
+  );
+};
+
+const Offer = () => {
+  return (
+    <div className="container pb-5 mx-auto">
+      <Link to="/nexa-car-offers-in-hyderabad">
+        <img
+          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
+          alt="Maruti Suzuki Nexa Navratri dussehra "
+          className="hidden w-full duration-500 shadow-lg sm:block rounded-3xl hover:shadow-gray-500 shadow-gray-400 hover:scale-95"
+        />
+        <img
+          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
+          alt="Maruti Suzuki Nexa Navratri dussehra "
+          className="w-full sm:hidden "
+        />
+      </Link>
     </div>
   );
 };

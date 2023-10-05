@@ -3,31 +3,31 @@ import { Link } from 'react-router-dom';
 
 function ServiceFinanceInsu() {
   return (
-    <div className='mx-auto container space-y-5 px-5 lg:px-0'>
-      <Link to='/'>
+    <div className='container px-5 mx-auto space-y-5 lg:px-0'>
+      <Link to='/book-online-maruti-nexa-car-service'>
         <img
           src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp'
           alt='service center'
-          className='max-w-full w-full'
+          className='w-full max-w-full'
         />
       </Link>
 
       <div className='grid grid-cols-2 gap-4'>
         <div>
-          <Link to='/'>
+          <Link to='/maruti-car-insurance'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/home-page-banners/Insurance+Desktop.webp'
               alt='insurance'
-              className='max-w-full w-full'
+              className='w-full max-w-full'
             />
           </Link>
         </div>
         <div>
-          <Link to='/'>
+          <Link to='/maruti-car-finance'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/home-page-banners/Finance+Desktop.webp'
               alt='Finance'
-              className='max-w-full w-full'
+              className='w-full max-w-full'
             />
           </Link>
         </div>

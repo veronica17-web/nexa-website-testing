@@ -248,11 +248,7 @@ function Header({ col }) {
     <div className={"bg-[#0c0c0ce8]   duration-500 transition"}>
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
-        <Dialog
-          as="div"
-          className="fixed inset-0 flex z-40  "
-          onClose={setOpen}
-        >
+        <Dialog as="div" className="fixed inset-0 z-40 flex " onClose={setOpen}>
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
@@ -274,16 +270,16 @@ function Header({ col }) {
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <div className="relative max-w-xs w-full  lg:rounded-r-xl text-black bg-white shadow-xl pb-12 flex flex-col overflow-y-auto ">
-              <div className="px-4 pt-5 pb-2 lg:pb-4 flex justify-end">
+            <div className="relative flex flex-col w-full max-w-xs pb-12 overflow-y-auto text-black bg-white shadow-xl lg:rounded-r-xl ">
+              <div className="flex justify-end px-4 pt-5 pb-2 lg:pb-4">
                 <button
                   type="button"
-                  className="-m-2 p-2 rounded-md inline-flex items-center justify-center hover:text-gray-600"
+                  className="inline-flex items-center justify-center p-2 -m-2 rounded-md hover:text-gray-600"
                   onClick={() => setOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
                   Close
-                  <XIcon className="h-6 w-6" aria-hidden="true" />
+                  <XIcon className="w-6 h-6" aria-hidden="true" />
                 </button>
               </div>
               {/* Links */}
@@ -293,7 +289,7 @@ function Header({ col }) {
                 onClick={() => setOpen(false)}
               >
                 {/* <div className='border-b border-gray-200'>
-                  <Tab.List className='-mb-px flex px-4 space-x-8'>
+                  <Tab.List className='flex px-4 -mb-px space-x-8'>
                     {navigation.categories.map((category) => (
                       <Tab
                         key={category.name}
@@ -311,7 +307,7 @@ function Header({ col }) {
                     ))}
                   </Tab.List>
                 </div> */}
-                <div className="flex flex-wrap gap-1 justify-center ">
+                <div className="flex flex-wrap justify-center gap-1 ">
                   <Link to="/book-online-maruti-nexa-car-service/">
                     <button className=" bg-red-600 py-1.5 px-1.5  rounded-md text-white">
                       Book a Service
@@ -332,28 +328,28 @@ function Header({ col }) {
                   {navigation.categories.map((category) => (
                     <Tab.Panel
                       key={category.name}
-                      className=" py-6 px-4 space-y-10"
+                      className="px-4 py-6 space-y-10 "
                     >
                       <div className="grid grid-cols-2 gap-x-4">
                         {category.featured.map((item) => (
                           <div
                             key={item.name}
-                            className="group relative text-sm font-semibold"
+                            className="relative text-sm font-semibold group"
                           >
                             <Link to={item.href}>
                               <div className="flex justify-center pb-2">
                                 <img
                                   src={item.brand_logo}
                                   alt={item.imageAlt}
-                                  className="object-center object-cover"
+                                  className="object-cover object-center"
                                 />
                               </div>
 
-                              <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden group-hover:opacity-75 mb-2">
+                              <div className="mb-2 overflow-hidden rounded-lg aspect-w-1 aspect-h-1 group-hover:opacity-75">
                                 <img
                                   src={item.imageSrc}
                                   alt={item.imageAlt}
-                                  className="object-center object-cover"
+                                  className="object-cover object-center"
                                 />
                               </div>
                             </Link>
@@ -365,14 +361,14 @@ function Header({ col }) {
                 </Tab.Panels>
               </Tab.Group>
               {/* <div
-                className=" border-gray-200  "
+                className="border-gray-200 "
                 onClick={() => setOpen(false)}
               >
                 {navigation.pages.map((page) => (
                   <div key={page.name} className="flow-root px-2">
                     <Link
                       to={page.to}
-                      className="px-2 py-2 lg:py-3 block  hover:bg-black  hover:text-white rounded-md hover:px-4 duration-75 "
+                      className="block px-2 py-2 duration-75 rounded-md lg:py-3 hover:bg-black hover:text-white hover:px-4 "
                     >
                       {page.name}
                     </Link>
@@ -384,7 +380,7 @@ function Header({ col }) {
                   <div key={page.name} className="flow-root px-2">
                     <Link
                       to={page.to}
-                      className="px-2 py-2 lg:py-3 block  hover:bg-black  hover:text-white rounded-md hover:px-4 duration-75"
+                      className="block px-2 py-2 duration-75 rounded-md lg:py-3 hover:bg-black hover:text-white hover:px-4"
                     >
                       {page.name}
                     </Link>
@@ -396,26 +392,26 @@ function Header({ col }) {
                   <div key={page.name} className="flow-root px-2">
                     <Link
                       to={page.to}
-                      className="px-2 py-2 lg:py-3 block  hover:bg-black  hover:text-white rounded-md hover:px-4 duration-75"
+                      className="block px-2 py-2 duration-75 rounded-md lg:py-3 hover:bg-black hover:text-white hover:px-4"
                     >
                       {page.name}
                     </Link>
                   </div>
                 ))}
               </div>
-              <div className=" " onClick={() => setOpen(false)}>
+              <div className="" onClick={() => setOpen(false)}>
                 {navigation.more.map((page) => (
                   <div key={page.name} className="flow-root px-2">
                     <Link
                       to={page.to}
-                      className="px-2 py-2 lg:py-3 block  hover:bg-black  hover:text-white rounded-md hover:px-4 duration-75"
+                      className="block px-2 py-2 duration-75 rounded-md lg:py-3 hover:bg-black hover:text-white hover:px-4"
                     >
                       {page.name}
                     </Link>
                   </div>
                 ))}
               </div>*/}
-              <div className=" " onClick={() => setOpen(false)}>
+              <div className="" onClick={() => setOpen(false)}>
                 {navigation.all.map((page) => (
                   <div key={page.name} className="flow-root px-2">
                     <Link
@@ -430,7 +426,7 @@ function Header({ col }) {
               <div className="px-2">
                 <a
                   href="https://www.spatial.io/s/Saboo-RKS-N-E-X-A-6322f4f7955236000112849b?share=3965153526388753240"
-                  className="px-2 py-2 lg:py-3 block  hover:bg-black  hover:text-white rounded-md hover:px-4 duration-75"
+                  className="block px-2 py-2 duration-75 rounded-md lg:py-3 hover:bg-black hover:text-white hover:px-4"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -452,14 +448,14 @@ function Header({ col }) {
         {/* <div
         className={`fixed scroll-smooth  ${navbar?"top-0":"md:top-14 "}  z-20  bg-[#0c0c0ce8]  w-full  shadow-2xl drop-shadow-2xl`}
       > */}
-        <header className="relative container mx-auto ">
+        <header className="container relative mx-auto ">
           {/* <nav aria-label='Top' className='container mx-auto '> */}
           <nav className="">
             <div className="border-gray-200">
-              <div className="h-16 lg:h-20 px-3 flex justify-between items-center">
+              <div className="flex items-center justify-between h-16 px-3 lg:h-20">
                 {/* Logo */}
 
-                <div className="lg:flex items-center hidden ">
+                <div className="items-center hidden lg:flex ">
                   <button
                     className={` ${
                       scrollTop > 7
@@ -471,9 +467,9 @@ function Header({ col }) {
                     onClick={() => setOpen(!open)}
                   >
                     {/* Menu */}
-                    <MenuIcon className="h-8 w-8    " aria-hidden="true" />
+                    <MenuIcon className="w-8 h-8 " aria-hidden="true" />
                   </button>
-                  <div className=" relative group py-3 cursor-pointer">
+                  <div className="relative py-3 cursor-pointer group">
                     <div
                       className={`py-3 px-3 rounded-md  ${
                         scrollTop > 7
@@ -486,20 +482,20 @@ function Header({ col }) {
                       Services
                     </div>
                     <div className="absolute top-16  border-b-2  border-gray-200 rounded-lg bg-[#4d4d4d] hidden group-hover:block ">
-                      <div className=" pt-1 flex justify-center">
-                        <Link
-                          className=" hover:bg-[#0c0b0b] text-white p-3 w-full mx-1 rounded-md "
-                          to="/maruti-suzuki-24/7-service-in-hyderabad"
-                        >
-                          24/7 Services
-                        </Link>
-                      </div>
-                      <div className=" mx-1 whitespace-nowrap pb-1 flex justify-center">
+                      <div className="flex justify-center pt-1 mx-1 whitespace-nowrap">
                         <Link
                           className=" hover:bg-[#0c0b0b] text-white p-3 rounded-md "
                           to="/book-online-maruti-nexa-car-service"
                         >
                           Book a service
+                        </Link>
+                      </div>
+                      <div className="flex justify-center pb-1 ">
+                        <Link
+                          className=" hover:bg-[#0c0b0b] text-white p-3 w-full mx-1 rounded-md "
+                          to="/maruti-suzuki-24/7-service-in-hyderabad"
+                        >
+                          24/7 Services
                         </Link>
                       </div>
                     </div>
@@ -523,10 +519,10 @@ function Header({ col }) {
                   onClick={() => setOpen(true)}
                 >
                   <span className="sr-only">Open menu</span>
-                  <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                  <MenuIcon className="w-6 h-6" aria-hidden="true" />
                 </button>
 
-                <div className="transition-all hidden lg:flex ">
+                <div className="hidden transition-all lg:flex ">
                   {carLinks.map((car, index) => (
                     // <div
                     //   key={index}
@@ -564,7 +560,7 @@ function Header({ col }) {
                     Offers
                   </Link> */}
                 </div>
-                <div className="  lg:ml-0 ml-2 select-none">
+                <div className="ml-2 select-none lg:ml-0">
                   <Link to="/">
                     <img
                       className={`h-8 md:h-9 xl:h-10 ${

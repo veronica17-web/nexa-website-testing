@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Helmet from "react-helmet";
 import Header from "../../components/Header/Header";
 import { CgSpinner } from "react-icons/cg";
+import { BsArrowLeft } from "react-icons/bs";
 
 function BookAService() {
   const [name, setName] = useState();
@@ -14,6 +15,16 @@ function BookAService() {
   const [method, setMethod] = useState("");
 
   const [loader, setLoader] = useState(false);
+  const [isTrue, setIsTrue] = useState(true);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIsTrue((prevState) => !prevState); // Toggle the state from true to false and vice versa
+    }, 10000); // 10 seconds interval
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, [isTrue]); // Empty dependency array to run the effect only once on component mount
 
   // const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -101,36 +112,55 @@ function BookAService() {
       </Helmet>
       <div className="h-16 bg-black lg:h-20 "></div>
       <div className="h-1 bg-black "></div>
-      {/* <Slider /> */}
-      <div className="">
+
+      <div className="relative ">
+        {isTrue ? (
+          <img
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_02.webp"
+            alt="Saboo RKS Motor Navratri dussehra Service "
+            className="hidden w-full select-none sm:block"
+          />
+        ) : (
+          <img
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_04.webp"
+            alt="Navratri | Maruti Suzuki Service | Maruti Suzuki | This Navratri, avail  Periodic Maintenance Service and celebrate your 9 day festivities with zero  worries. Visit https://saboonexa.in/ T&C apply.... | By Saboo RKS |  NEXA | Maruti Suzuki"
+            className="hidden w-full select-none sm:block"
+          />
+        )}
         <img
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Nexa+Service+Hafeezpet.webp"
-          alt="Maruti Suzuki Service "
-          className="w-full "
+          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_03.webp"
+          alt="Maruti Suzuki Service Navratri dussehra "
+          className="w-full h-full sm:hidden"
         />
-        {/* <img
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
-          alt="Maruti Suzuki Nexa Navratri dussehra Saboo RKS Motor October Offers"
-          className="hidden w-full sm:block"
-        />
-        <img
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
-          alt="Maruti Suzuki Nexa Navratri dussehra Saboo RKS Motor October Offers"
-          className="w-full sm:hidden"
-        /> */}
+
+        <div className="absolute justify-between hidden w-full select-none md:flex top-1/2 ">
+          <div
+            className="flex items-center justify-center w-10 xl:w-12 h-10 xl:h-12 text-white bg-[#0000005e] rounded-full ml-2 cursor-pointer hover:bg-black group "
+            onClick={() => setIsTrue(!isTrue)}
+          >
+            <BsArrowLeft className="text-2xl duration-500 translate-x-4 group-hover:translate-x-0 xl:text-3xl" />
+          </div>
+          <div
+            className="flex items-center justify-center w-10 xl:w-12 h-10 xl:h-12 text-white bg-[#0000005e] rounded-full mr-2 cursor-pointer hover:bg-black group"
+            onClick={() => setIsTrue(!isTrue)}
+          >
+            <BsArrowLeft className="text-2xl duration-500 rotate-180 -translate-x-4 group-hover:translate-x-0 xl:text-3xl" />
+          </div>
+        </div>
       </div>
+
       {/* <img
         src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Saboo-Nexa-Service-banner1.png"
         className="w-full"
         alt="Service Banner"
-      /> */}
-      {/* <div className="px-4 shadow sm:px-0">
+      /> 
+      <div className="px-4 shadow sm:px-0">
         <p className="container py-4 mx-auto">
           <Link to="/">Home</Link> / Book Online Maruti Car Service
         </p>
       </div> */}
       <div className="container mx-auto">
-        <div className="container px-5 py-10 pb-2 text-3xl uppercase  lg:px-0 sm:text-4xl md:text-5xl">
+        <div className="container px-5 py-10 pb-2 text-3xl uppercase lg:px-0 sm:text-4xl md:text-5xl">
           BOOK A SERVICE
         </div>
       </div>

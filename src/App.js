@@ -70,7 +70,8 @@ function App() {
   const location = useLocation();
 
   const isAdminRoute =
-    (location.pathname === "/maruti-suzuki-24/7-service-in-hyderabad" || location.pathname === "/dashboard" )
+    location.pathname === "/maruti-suzuki-24/7-service-in-hyderabad" ||
+    location.pathname === "/dashboard";
 
   useEffect(() => {
     const getIp = async () => {
@@ -305,7 +306,6 @@ function App() {
                                   e.target.value.replace(/ /g, "")
                               )
                             }
-                            
                             placeholder="Enter mobile number"
                           />
                         </div>

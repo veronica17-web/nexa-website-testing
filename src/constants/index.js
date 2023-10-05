@@ -18,7 +18,7 @@ export const sliders = [
   },
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-web-banner-nov-1.webp",
-    alt: "new-nov-scng-banner offers",
+    alt: "Maruti Suzuki Nexa Discount Offers October 2023 - Saboo Nexa",
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-hafeezpet-new-banner.webp',
@@ -27,20 +27,20 @@ export const sliders = [
 
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/new-nexa-web-banner.webp",
-    alt: "New Grand Vitara offers",
+    alt: "Nexa Offers: October 2023 Discounts on Maruti Suzuki Cars",
   },
 
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/xl6_homeBanner.webp",
-    alt: "New XL6 offers",
+    alt: "Maruti Nexa Discount In September 2019- Baleno, Ciaz, Ignis, XL6, Invicto, Fronx, Jimny, Grand Vitara",
   },
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_224.webp",
-    alt: "Baleno Offers",
+    alt: "Nexa Offers: Want to buy a Nexa car this year?",
   },
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/banners/ignis_slider+(1).webp",
-    alt: "Ignis Offers",
+    alt: "Maruti NEXA Cars Offered With Discounts |  https://saboonexa.in/",
   },
 ];
 
@@ -411,7 +411,7 @@ export const offer_products = [
 export const blogs = [
   {
     title: "Lakme Fashion week 2020 digital fluid edition",
-    text: "Maruti opens its premium dealerships, Nexa in Hyderabad. Maruti Suzuki has entered the premium auto market with the launch of NEXA showrooms. The new edition to the brand’s latest philosophy was started by dealers Varun Motors and RKS Saboo at Banjara Hills and Jubilee Hills, respectively.",
+    text: "Maruti opens its premium dealerships, Nexa in Hyderabad. Maruti Suzuki has entered the premium auto market with the launch of NEXA showrooms. The new edition to the brand’s latest philosophy was started by dealers, Saboo RKS  at Banjara Hills and Jubilee Hills, respectively.",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/blog/Saboo-Nexa-SCross-Launch.webp",
     href: "https://www.thehansindia.com/posts/index/Auto-/2015-08-01/Maruti-opens-its-premium-dealerships-Nexa-in-Hyderabad/167139?infinitescroll=1",
   },
