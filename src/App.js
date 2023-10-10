@@ -21,8 +21,8 @@ import Ignis from "./screens/cars/Ignis";
 import Offers from "./screens/more/Offers";
 import BookAService from "./screens/more/BookAService";
 import PageNotFound from "./screens/more/PageNotFound";
-import { IoCloseCircle, IoLogoWhatsapp } from "react-icons/io5";
-import { BsTelephoneForward } from "react-icons/bs";
+import { IoLogoWhatsapp } from "react-icons/io5";
+import { SlCallOut } from "react-icons/sl";
 import { Transition, Dialog } from "@headlessui/react";
 import loginkey from "./assets/login_key.svg";
 
@@ -93,19 +93,19 @@ function App() {
     const platform_os = platform.os.family; // 'Windows 10 || OSX || Linux' etc
   }, []);
 
-  const ScrollTop = () => {
-    const { pathname } = useLocation();
-    useEffect(() => {
-      window.scrollTo(0, 0);
-      setTimeout(() => {
-        if (sessionStorage.getItem("popup") !== "true") {
-          setOpen(true);
-          sessionStorage.setItem("popup", "true");
-        }
-      }, 5000);
-    }, [pathname]);
-    return null;
-  };
+  useEffect(() => {
+    setTimeout(() => {
+      if (sessionStorage.getItem("popup") !== "true") {
+        setOpen(true);
+        sessionStorage.setItem("popup", "true");
+      }
+    }, 10000);
+  }, []);
+
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const Popup = () => {
     const [methodpopup, setMethodPopup] = useState();
@@ -164,8 +164,8 @@ function App() {
       <Transition.Root show={open} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed inset-0 z-10 overflow-y-auto"
-          onClose={setOpen}
+          className="fixed inset-0 z-50 overflow-y-auto select-none"
+          onClose={() => {}}
         >
           <div className="flex justify-center items-center h-[90vh] md:min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
             <Transition.Child
@@ -198,12 +198,14 @@ function App() {
               <div className="relative inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                 <div className="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
                   <div className="text-left">
-                    <button
-                      className="absolute outline-none right-2 top-2"
-                      onClick={() => setOpen(false)}
-                    >
-                      <IoCloseCircle size={28} />
-                    </button>
+                    <div className="absolute flex items-center justify-center rounded-full cursor-pointer hover:border right-4 top-2 hover:border-red-500 group">
+                      <div
+                        className="mx-2 text-3xl font-light group-hover:text-red-600 -mt-0.5 "
+                        onClick={() => setOpen(false)}
+                      >
+                        x
+                      </div>
+                    </div>
                     <div className="mt-2 space-y-3">
                       <form
                         action={
@@ -280,57 +282,63 @@ function App() {
                           </div>
                         </div>
 
+                        {/* <img
+                          src={popupLogo}
+                          alt="logo"
+                          className="h-8 select-none w-min "
+                        /> */}
                         <img
                           src={loginkey}
                           alt="logo"
                           className="w-full h-16"
                         />
-                        <h4 className="font-bold text-center text-red-600">
+                        <h4 className="mt-2 text-lg font-medium text-center text-red-500">
                           Get A Quote/Offer
                         </h4>
 
-                        <div className="py-8 mt-2">
+                        <div className="py-4 mt-2">
                           <input
-                            className="w-full h-10 px-3 border rounded-md outline-none focus:ring-red-500 focus:border-red-500"
+                            className="w-full h-10 px-3 border border-black rounded-md outline-none"
                             type="tel"
                             id="Phone"
+                            required
                             name="Phone"
                             minLength="10"
                             maxLength="10"
-                            required
                             value={number}
                             autoComplete="off"
                             onChange={(e) =>
                               setNumber(
-                                e.target.value.replace(/[^1-9 ]/g, "") &&
-                                  e.target.value.replace(/ /g, "")
+                                e.target.value.replace(/[^0-9]/g, "") // Use /[^0-9]/ to allow only digits
                               )
                             }
                             placeholder="Enter mobile number"
                           />
                         </div>
 
-                        <div className="flex items-center justify-center mb-5 space-x-5">
+                        <div className="flex items-center justify-center gap-2 mb-2 ">
                           <a
-                            href="https://wa.me/919848898488"
-                            target="_blank"
+                            href="tel:+919848898488"
                             rel="noopener noreferrer"
-                            className="flex items-center"
+                            className="flex items-center justify-center w-1/2 py-2 duration-200 bg-blue-500 rounded-lg group hover:text-white bg-opacity-5 hover:bg-opacity-100"
                           >
-                            <IoLogoWhatsapp
+                            <SlCallOut
                               size={20}
-                              className="mr-1 text-green-700"
+                              className="mr-2 text-blue-700 duration-200 group-hover:text-white"
                             />
-                            WhatsApp
+                            Call now
                           </a>
                           <a
                             href="https://wa.me/919848898488"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center"
+                            className="flex justify-center w-1/2 py-2 duration-200 bg-green-500 rounded-lg group hover:text-white bg-opacity-5 hover:bg-opacity-100"
                           >
-                            <BsTelephoneForward size={20} className="mr-1" />
-                            Call us
+                            <IoLogoWhatsapp
+                              size={20}
+                              className="mr-2 text-green-700 duration-200 group-hover:text-white "
+                            />
+                            WhatsApp
                           </a>
                         </div>
 
@@ -369,12 +377,8 @@ function App() {
 
                         <button
                           type="submit"
-                          disabled={
-                            pattern.test(number) && number.length === 10
-                              ? false
-                              : true
-                          }
-                          onClick={handleSubmit}
+                          disabled={!pattern.test(number)}
+                          onSubmit={handleSubmit}
                           className="w-full py-2 mb-3 text-sm font-medium text-white bg-black border rounded-md shadow-sm cursor-pointer hover:bg-red-700"
                         >
                           {loading ? (
@@ -400,7 +404,6 @@ function App() {
 
   return (
     <>
-      <ScrollTop />
       <Popup />
       <ToastContainer />
       <Routes>

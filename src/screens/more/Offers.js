@@ -47,18 +47,18 @@ function Offers() {
 
       <Header />
       {/* {width > 425 ? <Slider /> : <MobileSlider />} */}
-      <div className='bg-black h-16 lg:h-20'></div>
-      <div className='bg-black h-1 -mb-2'></div>
+      <div className='h-16 bg-black lg:h-20'></div>
+      <div className='h-1 -mb-2 bg-black'></div>
       <section className='select-none'>
         <div className='hidden sm:block'>
-          <Slider />{' '}
+          <Slider />
         </div>
         <div className='sm:hidden'>
           <MobileSlider />
         </div>
       </section>
 
-      <div className='text-center py-10 space-y-3'>
+      <div className='py-10 space-y-3 text-center'>
         <p className='font-bold lg:text-3xl sm:text-xl'>
           SAVE WITH SABOO NEXA OFFERS IN HYDERABAD INDIA
         </p>
@@ -76,43 +76,43 @@ function Offers() {
 
 const OfferProducts = () => {
   return (
-    <div className='grid sm:grid-cols-2 lg:grid-cols-3 px-5 sm:px-0 gap-4 container mx-auto pb-5'>
+    <div className='container grid gap-4 px-5 pb-5 mx-auto sm:grid-cols-2 lg:grid-cols-3 sm:px-0'>
       {offer_products.map((item) => (
         <div
-          className='flex flex-col bg-[#eee] rounded shadow-lg border relative overflow-hidden'
+          className='relative flex flex-col overflow-hidden border rounded shadow-lg'
           key={item.name}
         >
           <p className='absolute top-3 -right-7 uppercase text-sm text-center text-white rotate-45 bg-[#ec1b23] py-1 w-28'>
             Offer
           </p>
 
-          <div className=' flex-auto'>
-            {' '}
+          <div className='flex-auto '>
+        
             <img src={item.img} alt={item.name} className='mx-auto' />
           </div>
           <div className='flex-auto bg-white'>
             <div>
               <div className='flex items-center justify-between p-5 '>
                 <img src={item.logo} alt={item.name} />
-                <p className='uppercase font-bold'>
-                  Save up to <br />{' '}
-                  <span className='text-red-500'>
+                <div className='font-bold text-center uppercase'>
+                  Save up to <br />
+                  <span className='text-2xl text-red-500'>
                     {item.price}
                     {/* ₹ {Intl.NumberFormat('en-IN').format(item.price)}* */}
                   </span>
                   <div className='text-xs font-thin'>{item.emi}</div>
-                </p>
+                </div>
               </div>
               <div className='flex flex-col w-full px-5'>
                 <Link
                   to={item.explore}
-                  className='bg-black rounded text-white text-center font-bold uppercase py-2'
+                  className='py-2 font-bold text-center text-white uppercase bg-black rounded'
                 >
                   View More Details
                 </Link>
                 <Link
                   to='/terms-and-condition'
-                  className=' rounded text-black text-center font-bold uppercase py-2 text-xs'
+                  className='py-2 text-xs font-bold text-center text-black uppercase rounded '
                 >
                   *legal disclaimer
                 </Link>
