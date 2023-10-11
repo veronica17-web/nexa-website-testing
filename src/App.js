@@ -99,7 +99,7 @@ function App() {
         setOpen(true);
         sessionStorage.setItem("popup", "true");
       }
-    }, 10000);
+    }, 3000);
   }, []);
 
   const { pathname } = useLocation();
@@ -127,13 +127,13 @@ function App() {
       axios
         .get(
           `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${number}&msg=Thank you for showing interest in Maruti Suzuki.
-        Our Sales consultant will contact you shortly.
-        
-        Regards
-        RKS Motor Pvt. Ltd.
-        98488 98488
-        www.saboomaruti.in
-        www.saboonexa.in&type=1&template_id=1407168967467983613`
+          Our Sales consultant will contact you shortly.
+          
+          Regards
+          RKS Motor Pvt. Ltd.
+          98488 98488
+          www.saboomaruti.in
+          www.saboonexa.in&type=1&template_id=1407168967467983613`
         )
         .then((res) => {
           console.log("SMS API Response:", res.data);
@@ -377,8 +377,12 @@ function App() {
 
                         <button
                           type="submit"
-                          disabled={!pattern.test(number)}
-                          onSubmit={handleSubmit}
+                          disabled={
+                            pattern.test(number) && number.length === 10
+                              ? false
+                              : true
+                          }
+                          onClick={handleSubmit}
                           className="w-full py-2 mb-3 text-sm font-medium text-white bg-black border rounded-md shadow-sm cursor-pointer hover:bg-red-700"
                         >
                           {loading ? (

@@ -95,23 +95,23 @@ function GrandVitara() {
       <DesignPhilosophy />
 
       {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
-      <div className="hidden sm:block bg-black text-white pt-2 pb-8">
-        <div className="  w-full   text-3xl text-center uppercase  sm:text-4xl md:text-5xl pb-8 pt-10 ">
+      <div className="hidden pt-2 pb-8 text-white bg-black sm:block">
+        <div className="w-full pt-10 pb-8 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
           THE ADVANCED GRAND VITARA
         </div>
 
         <div className="flex h-[75vh]  gap-1 px-2 my-1">
           <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3  bg-no-repeat bg-cover bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-27-IEH.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">
+              <span className="text-lg font-semibold">
                 INTELLIGENT ELECTRIC HYBRID
               </span>
-              <span className="font-thin tracking-wider mb-2">
+              <span className="mb-2 font-thin tracking-wider">
                 Rules with revolutionary technology
               </span>
               <div>
                 <Link to="/grand-vitara-features-intelligent-electric-hybrid">
-                  <button className="text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white">
+                  <button className="py-2 text-black duration-300 bg-white rounded-lg text-normal md:px-2 lg:px-4 hover:bg-black hover:text-white">
                     KNOW MORE
                   </button>
                 </Link>
@@ -120,13 +120,13 @@ function GrandVitara() {
           </div>
           <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-26-Allgrip.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">ALLGRIP</span>
-              <span className="font-thin tracking-wider mb-2">
+              <span className="text-lg font-semibold">ALLGRIP</span>
+              <span className="mb-2 font-thin tracking-wider">
                 Rules with a firm grip
               </span>
               <div>
                 <Link to="/grand-vitara-allgrip">
-                  <button className="text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white">
+                  <button className="py-2 text-black duration-300 bg-white rounded-lg text-normal md:px-2 lg:px-4 hover:bg-black hover:text-white">
                     KNOW MORE
                   </button>
                 </Link>
@@ -135,15 +135,15 @@ function GrandVitara() {
           </div>
           <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-32-AT.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">
+              <span className="text-lg font-semibold">
                 6-SPEED AUTOMATIC TRANSMISSION
               </span>
-              <span className="font-thin tracking-wider mb-2">
+              <span className="mb-2 font-thin tracking-wider">
                 Rules with utmost comfort
               </span>
               <div>
                 <Link to="/grand-vitara-6-speed-automatic-transmission-price">
-                  <button className="text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white">
+                  <button className="py-2 text-black duration-300 bg-white rounded-lg text-normal md:px-2 lg:px-4 hover:bg-black hover:text-white">
                     KNOW MORE
                   </button>
                 </Link>
@@ -152,15 +152,15 @@ function GrandVitara() {
           </div>
           <div className="w-1/4 duration-500 rounded-lg border hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/test/GV_811x629-33-MT.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">
+              <span className="text-lg font-semibold">
                 5-SPEED MANUAL TRANSMISSION
               </span>
-              <span className="font-thin tracking-wider mb-2">
+              <span className="mb-2 font-thin tracking-wider">
                 Rules with a powerful persona
               </span>
               <div>
                 <Link to="/grand-vitara-5-speed-manual-transmission-price">
-                  <button className="text-normal bg-white text-black duration-300 md:px-2 lg:px-4 py-2 rounded-lg hover:bg-black hover:text-white">
+                  <button className="py-2 text-black duration-300 bg-white rounded-lg text-normal md:px-2 lg:px-4 hover:bg-black hover:text-white">
                     KNOW MORE
                   </button>
                 </Link>
@@ -170,14 +170,14 @@ function GrandVitara() {
         </div>
       </div>
 
-      <div className="sm:hidden bg-black text-white pt-2 pb-8">
-        <div className="  w-full  pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl py-10 ">
+      <div className="pt-2 pb-8 text-white bg-black sm:hidden">
+        <div className="w-full py-10 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
           THE ADVANCED GRAND VITARA
         </div>
         <MobileCarousel />
       </div>
-      <div className=" bg-black text-white pt-2 ">
-        <div className="  w-full   text-3xl text-center uppercase  sm:text-4xl md:text-5xl pb-8 pt-10 ">
+      <div className="pt-2 text-white bg-black ">
+        <div className="w-full pt-10 pb-8 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
           COLOURS
         </div>
       </div>
@@ -202,7 +202,7 @@ function GrandVitara() {
             </div>
             <div className="col-span-2">
               <>
-                <div className="ml-auto mr-1 mt-24">
+                <div className="mt-24 ml-auto mr-1">
                   {/* CELESTIAL BLUE */}
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/Celestial_blue.webp"
@@ -301,7 +301,7 @@ function GrandVitara() {
                     <div className={tabsColors === 3 ? "relative" : "hidden"}>
                       <p className="w-6 h-6 bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/grand_vitara/arctic-white-black.webp')] mr-[10px] border-t border-x"></p>
                       <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-6 w-6 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
-                      <p className="arrow-dropdown-selected-car border-t-8"></p>
+                      <p className="border-t-8 arrow-dropdown-selected-car"></p>
                     </div>
                     <p
                       className={
@@ -513,7 +513,7 @@ const VariantPlayer = () => {
     : "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/Grand+vitara.webm";
 
   return (
-    <div className="top-0 left-0 w-full h-screen relative bg-black ">
+    <div className="relative top-0 left-0 w-full h-screen bg-black ">
       <video
         className="object-cover w-full h-full "
         preload="metadata"
@@ -555,7 +555,7 @@ const VariantPlayer = () => {
           THE LEAGUE OF EXTRAORDINARY
         </div>
         <a
-          href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/grand_vitara.pdff"
+          href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Brochure/grand_vitara.pdf"
           target="_blank"
           rel="noreferrer"
         >
@@ -577,10 +577,10 @@ const Variant = () => {
   const [price, setPrice] = useState("10,70,000");
   return (
     <div className=" bg-opacity-25  bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_bg_image/5.webp')] bg-fixed  bg-black">
-    <div className="container mx-auto bg-opacity-10 bg-black py-20 ">
-        <div className="grid md:grid-cols-3 md:space-y-0 space-y-3">
-          <div className="space-y-3 mx-auto md:mx-0">
-            <p className="uppercase text-gray-300">select car Variant</p>
+    <div className="container py-20 mx-auto bg-black bg-opacity-10 ">
+        <div className="grid space-y-3 md:grid-cols-3 md:space-y-0">
+          <div className="mx-auto space-y-3 md:mx-0">
+            <p className="text-gray-300 uppercase">select car Variant</p>
             <select
               name="model"
               value={price}
@@ -608,22 +608,22 @@ const Variant = () => {
           </div>
           <div className="text-center text-gray-200">
             <p className="text-2xl font-bold">₹ {price}*</p>
-            <p className="tracking-wide text-xl pb-1">
+            <p className="pb-1 text-xl tracking-wide">
               Ex-Showroom Price - Hyderabad
             </p>
 
-            <div className="text-red-200 text-xs font-light">
+            <div className="text-xs font-light text-red-200">
               <sup>*</sup>Alpha+ & Zeta+ are applicable only for Intelligent
               Electric Hybrid Variants
             </div>
           </div>
           <div className="text-center">
-            <p className="text-gray-100 mb-6 text-center">
+            <p className="mb-6 text-center text-gray-100">
               You might have pre-approved loan offers
             </p>
             <Link
               to="/maruti-car-finance"
-              className="py-2 px-4 bg-white rounded shadow uppercase tracking-wide"
+              className="px-4 py-2 tracking-wide uppercase bg-white rounded shadow"
             >
               Check for loan offers
             </Link>
@@ -637,8 +637,8 @@ const Variant = () => {
 const SecondVideo = () => {
   return (
     <div className="relative  bg-black flex flex-col xl:max-h-[80vh] overflow-hidden">
-      <div className="  py-6 text-center lg:absolute  w-full lg:pt-10  text-white">
-        <div className="text-2xl lg:text-3xl font-medium mb-2">
+      <div className="w-full py-6 text-center text-white  lg:absolute lg:pt-10">
+        <div className="mb-2 text-2xl font-medium lg:text-3xl">
           RULE EVERY ROAD
         </div>
         <div className="">
@@ -648,7 +648,7 @@ const SecondVideo = () => {
         </div>
       </div>
       <video
-        className="w-full  2xl:-mt-52"
+        className="w-full 2xl:-mt-52"
         preload="none"
         autoPlay={true}
         playsInline={true}
@@ -718,8 +718,8 @@ const KeyHigh = () => {
   }, []);
 
   return (
-    <div className=" overflow-hidden bg-black text-white">
-      <div className="  w-full pt-10 pb-6 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
+    <div className="overflow-hidden text-white bg-black ">
+      <div className="w-full pt-10 pb-6 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
         KEY HIGHLIGHTS
       </div>
 
@@ -728,7 +728,7 @@ const KeyHigh = () => {
         onContextMenu={handleContextMenu}
       >
         <video
-          className=" h-full w-full mx-auto object-cover  overflow-hidden"
+          className="object-cover w-full h-full mx-auto overflow-hidden "
           // className=" md:h-[84%] mx-auto object-cover  rounded-xl overflow-hidden"
           autoplay="autoplay"
           loop
@@ -760,9 +760,9 @@ const KeyHigh = () => {
         {/* <img
         src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner-without-book-now.webp"
         alt=""
-        className="h-screen w-full sm:hidden"
+        className="w-full h-screen sm:hidden"
       /> */}
-        <div className=" w-full text-center py-4 text-xl lg:text-2xl  md:hidden">
+        <div className="w-full py-4 text-xl text-center  lg:text-2xl md:hidden">
           {playingSegment === 0
             ? "Bold & Expressive Font Fascia"
             : playingSegment === 1
@@ -783,8 +783,8 @@ const KeyHigh = () => {
             ? "Panoramic Sunroof"
             : playingSegment === 9 && "LED Stop Lamp"}
         </div>
-        <div className="absolute bottom-10   w-full ">
-          <div className="text-black bg-white w-min whitespace-nowrap  mx-auto text-center py-2 mb-4 bg-opacity-50 hover:bg-opacity-100 rounded-full px-4 hidden md:block cursor-default select-none duration-500 text-lg">
+        <div className="absolute w-full bottom-10 ">
+          <div className="hidden px-4 py-2 mx-auto mb-4 text-lg text-center text-black duration-500 bg-white bg-opacity-50 rounded-full cursor-default select-none w-min whitespace-nowrap hover:bg-opacity-100 md:block">
             {playingSegment === 0
               ? "Bold & Expressive Font Fascia"
               : playingSegment === 1
@@ -807,7 +807,7 @@ const KeyHigh = () => {
           </div>
           <div className="hidden md:block container mx-auto bg-[#ffffff39] rounded-2xl ">
             <div className="relative">
-              <div className="relative flex justify-between  ">
+              <div className="relative flex justify-between ">
                 <div
                   className={`h-2.5 w-2.5 z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
                 >
@@ -945,24 +945,24 @@ const KeyHigh = () => {
 
 const DesignPhilosophy = () => {
   return (
-    <div className=" bg-black text-white relative pt-10 lg:pt-16">
-      <div className="w-full lg:py-6 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
+    <div className="relative pt-10 text-white bg-black  lg:pt-16">
+      <div className="w-full text-3xl text-center uppercase lg:py-6 sm:text-4xl md:text-5xl">
         DESIGN PHILOSOPHY
       </div>
-      <div className=" lg:absolute w-full h-full z-10 pt-6 lg:pt-12">
-        <div className=" container mx-auto flex px-1">
+      <div className="z-10 w-full h-full pt-6  lg:absolute lg:pt-12">
+        <div className="container flex px-1 mx-auto ">
           <div className="lg:w-1/3 xl:w-1/4">
-            <div className="font-medium uppercase text-xl lg:text-2xl italic pb-4 lg:pb-8">
+            <div className="pb-4 text-xl italic font-medium uppercase lg:text-2xl lg:pb-8">
               THE GRAND VITARA IS BORN OUT OF THE PASSION OF SUZUKI DESIGN AND
               ENGINEERING.
             </div>
-            <div className="font-light pb-4 lg:pb-8 text-justify lg:text-left">
+            <div className="pb-4 font-light text-justify lg:pb-8 lg:text-left">
               Featuring a distinct exterior design, sophisticated interiors,
               segment leading features and industry redefining fuel efficiency,
               The Grand Vitara is an expression of our commitment towards
               excellence.
             </div>
-            <div className="bg-white w-min whitespace-nowrap text-black px-4 py-2 mb-4 cursor-pointer select-none">
+            <div className="px-4 py-2 mb-4 text-black bg-white cursor-pointer select-none w-min whitespace-nowrap">
               Know More
             </div>
           </div>
@@ -970,7 +970,7 @@ const DesignPhilosophy = () => {
       </div>
       <div className="lg:h-[60vh] overflow-hidden">
         <video
-          className="w-full  "
+          className="w-full "
           autoPlay
           loop
           muted
@@ -1010,7 +1010,7 @@ function Safety() {
         />
 
         <div className="absolute left-[62%] top-16  lg:flex group hidden  ">
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  cursor-pointer">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full cursor-pointer hover:scale-105">
             {/* <GiBeltBuckles className="text-4xl group-hover:text-white " /> */}
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/safety-belt.svg"
@@ -1018,27 +1018,27 @@ function Safety() {
               className="scale-[0.6]"
             />
           </div>
-          <div className="mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">
               Seat Belt Pre-Tensioners with force limiters
             </div>
-            <div className=" font-light ">
+            <div className="font-light ">
               Pre-tensioners restrain the passengers and Force Limiters prevent
               seatbelt-inflicted injury.
             </div>
           </div>
         </div>
         <div className="absolute top-[4%] right-[62%] lg:flex group hidden  ">
-          <div className="mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">SUZUKI-TECT BODY</div>
-            <div className=" font-light ">
+            <div className="font-light ">
               Suzuki’s Total Effective Control Technology (TECT) concept results
               in effective absorption and dispersion of crash energy. The
               effective use of high-tensile steel for major parts makes the body
               light, strong and safe
             </div>
           </div>
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  cursor-pointer">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full cursor-pointer hover:scale-105">
             {/* <GiBeltBuckles className="text-4xl group-hover:text-white " /> */}
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/repair.svg"
@@ -1052,7 +1052,7 @@ function Safety() {
             <GiSpeedometer className="text-4xl group-hover:text-white" />
           </div>
 
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">ABS with EBD</div>
 
             <div className="hidden text-sm font-light group-hover:block">
@@ -1070,7 +1070,7 @@ function Safety() {
               alt=" 6 Air Bags to take the impact before it reaches you."
             />
           </div>
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">6 Air Bags</div>
 
             <div className="hidden font-light group-hover:block">
@@ -1079,7 +1079,7 @@ function Safety() {
           </div>
         </div>
         <div className="absolute left-[10%]  bottom-[58%]    lg:flex-col md:items-start group hidden lg:flex ">
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">ISOFIX child fix anchorages</div>
 
             <div className="hidden font-light group-hover:block">
@@ -1092,24 +1092,24 @@ function Safety() {
           </div>
         </div>
         <div className="absolute left-[78%]  bottom-[58%] md:items-start group hidden lg:flex lg:flex-col ">
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm hidden group-hover:block ">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm group-hover:block ">
             <div className="pb-1 font-medium ">
               FULL FRONTAL IMPACT COMPLIANCE, FRONTAL OFFSET IMPACT COMPLIANCE,
               SIDE IMPACT COMPLIANCE
             </div>
 
-            <div className=" font-light ">
+            <div className="font-light ">
               Successfully tested and in compliance with international safety
               norms
             </div>
           </div>
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black mb-2 ">
+          <div className="flex items-center justify-center w-20 h-20 mb-2 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black ">
             <GiBeltBuckles className="text-4xl group-hover:text-white" />
           </div>
         </div>
 
         <div className="absolute left-[77%]  top-[45%]  md:items-start group hidden lg:block ">
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  mb-2 ">
+          <div className="flex items-center justify-center w-20 h-20 mb-2 duration-500 border border-black rounded-full hover:scale-105 ">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/road.svg"
               className="scale-[0.6]"
@@ -1117,11 +1117,11 @@ function Safety() {
               well"
             />
           </div>
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm hidden group-hover:block ">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm group-hover:block ">
             <div className="pb-1 font-medium ">
               PEDESTRIAN PROTECTION COMPLIANCE
             </div>
-            <div className=" font-light ">
+            <div className="font-light ">
               Ensuring safety, not only for the occupants, but pedestrians as
               well
             </div>
@@ -1270,8 +1270,8 @@ function Safety() {
 
 // const ImageOptions = () => {
 //   return (
-//     <div className='container mx-auto px-5 md:px-0'>
-//       <div className='grid shadow-lg sm:grid-cols-2 p-8 '>
+//     <div className='container px-5 mx-auto md:px-0'>
+//       <div className='grid p-8 shadow-lg sm:grid-cols-2 '>
 //         <div>
 //           <img
 //             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/exterior/vitara-exterior-1.webp'
@@ -1279,9 +1279,9 @@ function Safety() {
 //             className='w-full'
 //           />
 //         </div>
-//         <div className='my-auto mx-auto space-y-3 p-8'>
+//         <div className='p-8 mx-auto my-auto space-y-3'>
 //           <p className='text-3xl font-bold '>Sporty Rear</p>
-//           <p className='h-1 w-20 bg-black rounded-full '></p>
+//           <p className='w-20 h-1 bg-black rounded-full '></p>
 //           <p>
 //             The New Ignis is equipped with a Striking Rear Spoiler and Roof
 //             Rails, which enhances the Sporty Look.
@@ -1289,10 +1289,10 @@ function Safety() {
 //         </div>
 //       </div>
 
-//       <div className='grid shadow-lg sm:grid-cols-2 p-8'>
-//         <div className='my-auto mx-auto space-y-3 p-5'>
+//       <div className='grid p-8 shadow-lg sm:grid-cols-2'>
+//         <div className='p-5 mx-auto my-auto space-y-3'>
 //           <p className='text-3xl font-bold'>Imposing Chrome Grille</p>
-//           <p className='h-1 w-20 bg-black rounded-full '></p>
+//           <p className='w-20 h-1 bg-black rounded-full '></p>
 //           <p>
 //             Taking the tough look up a notch, the New Ignis is equipped with an
 //             Imposing Chrome Grille which leaves a lasting impression.
@@ -1307,7 +1307,7 @@ function Safety() {
 //         </div>
 //       </div>
 
-//       <div className='grid shadow-lg sm:grid-cols-2 p-8'>
+//       <div className='grid p-8 shadow-lg sm:grid-cols-2'>
 //         <div>
 //           <img
 //             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/exterior/saboo-nexa-ignis-exterior-side-shot.webp'
@@ -1315,9 +1315,9 @@ function Safety() {
 //             className='w-full'
 //           />
 //         </div>
-//         <div className='my-auto mx-auto space-y-3 p-8'>
+//         <div className='p-8 mx-auto my-auto space-y-3'>
 //           <p className='text-3xl font-bold'>High SUV-like Stance</p>
-//           <p className='h-1 w-20 bg-black rounded-full '></p>
+//           <p className='w-20 h-1 bg-black rounded-full '></p>
 //           <p>
 //             The New Ignis has a high SUV-like Stance which makes it easier to
 //             get in and off, coupled with a higher seating that allows a great
@@ -1326,10 +1326,10 @@ function Safety() {
 //         </div>
 //       </div>
 
-//       <div className='grid shadow-lg sm:grid-cols-2 p-8'>
-//         <div className='my-auto mx-auto space-y-3'>
+//       <div className='grid p-8 shadow-lg sm:grid-cols-2'>
+//         <div className='mx-auto my-auto space-y-3'>
 //           <p className='text-3xl font-bold'>Toughened Exterior</p>
-//           <p className='h-1 w-20 bg-black rounded-full '></p>
+//           <p className='w-20 h-1 bg-black rounded-full '></p>
 //           <p>
 //             Adding to the toughness, the New Ignis comes with stunning 15”
 //             All-Black Alloy Wheels, All-Around Cladding and Sturdy New Front &
