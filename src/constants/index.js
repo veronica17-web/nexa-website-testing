@@ -48,7 +48,7 @@ export const sliders = [
 export const mobileSliders = [
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp",
-    alt:"Maruti Suzuki Nexa Navratri dussehra Saboo RKS Motor October Offers"
+    alt: "Maruti Suzuki Nexa Navratri dussehra Saboo RKS Motor October Offers",
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Mobile+Maruti+Suzuki+Nexa+Teachers+Day+September+Saboo+RKS+Motor.webp',
@@ -360,7 +360,6 @@ export const products = [
 ];
 
 export const offer_products = [
-
   {
     name: "ignis",
     price: "₹ 60,000 /-",
@@ -382,7 +381,8 @@ export const offer_products = [
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-ciaz.webp",
     explore: "/nexa-ciaz-on-road-price-in-hyderabad",
-  },  {
+  },
+  {
     name: "Baleno (2023)",
     // emi: '10000*/L',
     price: "₹ 30,000 /-",
@@ -797,7 +797,7 @@ export const workshops = [
   },
 
   {
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.090945562908!2d78.47059131435347!3d17.407422606809995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb975f1b5a0757%3A0x6b4ce67c8463b551!2sShapoorji%20Towers!5e0!3m2!1sen!2sin!4v1607323191499!5m2!1sen!2sin",
+    map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15231.377182597602!2d78.5124464!3d17.3712238!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9851c0d1e2e7%3A0xd662e229fb9d2b63!2sSaboo%20RKS%20Motor-%20Maruti%20Suzuki%20Car%20Dealer%20(Service%20Center%2C%20Malakpet%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1697624702310!5m2!1sen!2sin",
     title: "RKS Motor - Malakpet",
     address:
       "16-11-19/S/C/2 Salem Nagar Colony, Malakpet ,Hyderabad, Telangana, 500036",
