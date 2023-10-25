@@ -88,12 +88,12 @@ const Corporate = () => {
         />
       </Helmet>
       <ToastContainer />
-      <div className="grid grid-cols-1 md:grid-cols-1 gap-4 container mx-auto mb-5">
-        <div className="bg-white   rounded pt-16 lg:pt-20 px-5 pb-5 mx-5">
-          <div className="text-center uppercase font-medium text-2xl sm:text-3xl md:text-4xl ">
+      <div className="container grid grid-cols-1 gap-4 mx-auto mb-5 md:grid-cols-1">
+        <div className="px-5 pt-16 pb-5 mx-5 bg-white rounded lg:pt-20">
+          <div className="text-2xl font-medium text-center uppercase sm:text-3xl md:text-4xl ">
             Corporate Form
           </div>
-          <div className="text-center mt-4 mb-5">
+          <div className="mt-4 mb-5 text-center">
             Please fill out the form and we'll get back to you right away !
           </div>
         <br></br>
@@ -140,7 +140,7 @@ const Corporate = () => {
               id='LDTuvid'
               name='LDTuvid'
             />
-            <div className='zcwf_row wfrm_fld_dpNn hidden'>
+            <div className='hidden zcwf_row wfrm_fld_dpNn'>
               <div className='zcwf_col_fld'>
                 <select
                   className='zcwf_col_fld_slt'
@@ -154,13 +154,13 @@ const Corporate = () => {
               </div>
             </div>
             <div className='space-y-4'>
-              <div className='grid md:grid-cols-2 gap-3'>
+              <div className='grid gap-3 md:grid-cols-2'>
                 <div>
-                  <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>
+                  <label className='block mb-2 text-sm font-medium text-gray-900 '>
                     Name
                   </label>
                   <input
-                    className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
+                    className='w-full h-10 px-3 border rounded-md outline-none focus:ring-red-500 focus:border-red-500'
                     type='text'
                     id='Last_Name'
                     name='Last Name'
@@ -168,11 +168,11 @@ const Corporate = () => {
                   />
                 </div>
                 <div>
-                  <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>
+                  <label className='block mb-2 text-sm font-medium text-gray-900 '>
                     Email
                   </label>
                   <input
-                    className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
+                    className='w-full h-10 px-3 border rounded-md outline-none focus:ring-red-500 focus:border-red-500'
                     placeholder='Email'
                     id='Email'
                     name='Email'
@@ -188,12 +188,12 @@ const Corporate = () => {
                 </div>
 
                 <div>
-                  <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>
+                  <label className='block mb-2 text-sm font-medium text-gray-900 '>
                     Phone
                   </label>
 
                   <input
-                    className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
+                    className='w-full h-10 px-3 border rounded-md outline-none focus:ring-red-500 focus:border-red-500'
                     placeholder='Mobile'
                     value={phone}
                     id='Phone'
@@ -223,7 +223,7 @@ const Corporate = () => {
                 <div>
                   <label
                     for='message'
-                    class='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
+                    class='block mb-2 text-sm font-medium text-gray-900 '
                   >
                     Comments
                   </label>
@@ -231,14 +231,14 @@ const Corporate = () => {
                     id='Description'
                     rows='1'
                     name='Description'
-                    class='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                    class='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500'
                     placeholder='Your message...'
                   ></textarea>
                 </div>
               </div>
 
               <p className='text-gray-700'>
-                <span className='text-black font-bold'>Disclaimer</span>: I
+                <span className='font-bold text-black'>Disclaimer</span>: I
                 agree that by clicking the ‘Submit’ button below, I am
                 explicitly soliciting a call / message from Saboo Maruti (RKS
                 Motor Pvt. Ltd) or its representatives on my ‘Mobile’
@@ -254,7 +254,7 @@ const Corporate = () => {
               >
                 {loader ? (
                   <div className='flex items-center justify-center'>
-                    <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
+                    <CgSpinner className='w-5 h-5 mr-2 text-white animate-spin' />
                     Loading
                   </div>
                 ) : (
@@ -279,7 +279,7 @@ const Corporate = () => {
             Email: <span className="font-bold">lumbini.corp@saboonexa.in</span>
           </p>
         </div> */}
-        <div className="flex flex-col pd-2 md:flex-row m-3 justify-center mb-2 space-2">
+        <div className="flex flex-col justify-center m-3 mb-2 pd-2 md:flex-row space-2">
           <a
             href="tel:9948152000"
             className="bg-black rounded flex items-center m-2 text-white px-4 py-1.5"

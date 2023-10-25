@@ -980,7 +980,7 @@ const News = () => {
               // data-aos="zoom-in"
               // data-aos-delay="0"
               // data-aos-duration="500"
-            />{" "}
+            />
             <Link to="/gallery">
               {/* <div className="text-xl text-white">View More </div> */}
               <div className="absolute inset-0 flex-col items-center justify-center hidden gap-4 text-white duration-700 bg-black bg-opacity-50 group-hover:flex rounded-2xl">

@@ -89,12 +89,11 @@ function TabNavigationIH() {
 }
 
 const ElectricDrive = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
       <div className='container mx-auto'>
-        <div className='bg-white dark:bg-gray-900'>
-          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+        <div className='bg-white '>
+          <div className='items-center max-w-screen-xl gap-1 px-2 py-2 mx-auto xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <video className='w-screen' autoplay='autoplay' loop>
               <source
                 className='w-30 h-30'
@@ -103,7 +102,7 @@ const ElectricDrive = () => {
               />
             </video>
 
-            <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-center'>
+            <p className='p-2 font-light tracking-wide text-center text-black sm:py-14 md:text-lg '>
               For low speed cruising, the energy stored in the battery pack is
               utilized to power the electric motor. A truly Electric Drive that
               provides you with immediate acceleration.
@@ -121,7 +120,7 @@ const HybridDrive = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='items-center max-w-screen-xl gap-1 px-2 py-2 mx-auto xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <video className='w-screen' autoplay='autoplay' loop>
               <source
                 className='w-30 h-30'
@@ -130,7 +129,7 @@ const HybridDrive = () => {
               />
             </video>
 
-            <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-center'>
+            <p className='p-2 font-light tracking-wide text-center text-black sm:py-14 md:text-lg dark:text-black'>
               A drive that gives you optimum performance and spontaneous
               acceleration using the power of both, the petrol engine and the
               battery pack. The combined power output provides for a powerful
@@ -149,7 +148,7 @@ const EngineDrive = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='items-center max-w-screen-xl gap-1 px-2 py-2 mx-auto xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <video className='w-screen' autoplay='autoplay' loop>
               <source
                 className='w-30 h-30'
@@ -158,7 +157,7 @@ const EngineDrive = () => {
               />
             </video>
 
-            <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-center'>
+            <p className='p-2 font-light tracking-wide text-center text-black sm:py-14 md:text-lg dark:text-black'>
               An engine drive leverages the IC engine to help you cruise through
               your journeys while also charging the battery at the same time.
             </p>
@@ -174,7 +173,7 @@ const RegenerativeBraking = () => {
     <>
       <div className='container mx-auto'>
         <div className='bg-white dark:bg-gray-900'>
-          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+          <div className='items-center max-w-screen-xl gap-1 px-2 py-2 mx-auto xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <video className='w-screen' autoplay='autoplay' loop>
               <source
                 className='w-30 h-30'
@@ -183,7 +182,7 @@ const RegenerativeBraking = () => {
               />
             </video>
 
-            <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-center'>
+            <p className='p-2 font-light tracking-wide text-center text-black sm:py-14 md:text-lg dark:text-black'>
               A smart solution that maximizes energy efficiency by leveraging
               regenerative braking to recharge the Li-ion battery.
             </p>

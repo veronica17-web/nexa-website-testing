@@ -94,15 +94,15 @@ const IdleStartStop = () => {
   return (
     <>
       <div className='container mx-auto'>
-        <div className='bg-white dark:bg-gray-900'>
-          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+        <div className='bg-white '>
+          <div className='items-center max-w-screen-xl gap-1 px-2 py-2 mx-auto xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
               className='w-full mb-8'
               alt='dashboard'
             />
 
-            <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-center'>
+            <p className='p-2 font-light tracking-wide text-center text-black sm:py-14 md:text-lg dark:text-black'>
               The Belt driven ISG ensures a quick and silent engine restart as
               soon as the clutch is pressed. It uses the energy stored from the
               Advanced Dual Battery System.
@@ -119,15 +119,15 @@ const TorqueAssist = () => {
   return (
     <>
       <div className='container mx-auto'>
-        <div className='bg-white dark:bg-gray-900'>
-          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+        <div className='bg-white '>
+          <div className='items-center max-w-screen-xl gap-1 px-2 py-2 mx-auto xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
               className='w-full mb-8'
               alt='dashboard'
             />
 
-            <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-center'>
+            <p className='p-2 font-light tracking-wide text-center text-black sm:py-14 md:text-lg dark:text-black'>
               It assists engine power during acceleration using the energy
               stored in the Advanced Dual Battery System.
             </p>
@@ -143,15 +143,15 @@ const BrakeEnergyRegeneration = () => {
   return (
     <>
       <div className='container mx-auto'>
-        <div className='bg-white dark:bg-gray-900'>
-          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+        <div className='bg-white '>
+          <div className='items-center max-w-screen-xl gap-1 px-2 py-2 mx-auto xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
               className='w-full mb-8'
               alt='dashboard'
             />
 
-            <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-center'>
+            <p className='p-2 font-light tracking-wide text-center text-black sm:py-14 md:text-lg dark:text-black'>
               The ISG converts the energy from braking and stores it in the
               Advanced Dual Battery System.
             </p>
@@ -166,15 +166,15 @@ const AdvancedDualBattery = () => {
   return (
     <>
       <div className='container mx-auto'>
-        <div className='bg-white dark:bg-gray-900'>
-          <div className='gap-1 items-center py-2 px-2 mx-auto max-w-screen-xl xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
+        <div className='bg-white '>
+          <div className='items-center max-w-screen-xl gap-1 px-2 py-2 mx-auto xl:gap-8 md:grid md:grid-cols-2 sm:py-5 lg:px-4'>
             <img
               src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/variants/manual-transmission/hybrid-02.webp'
               className='w-full mb-8'
               alt='dashboard'
             />
 
-            <p className='p-2 sm:py-14 text-black md:text-lg font-light dark:text-black tracking-wide text-center'>
+            <p className='p-2 font-light tracking-wide text-center text-black sm:py-14 md:text-lg dark:text-black'>
               The Advanced Dual Battery System (Li-ion and Lead Acid) stores the
               energy generated while braking and provides power to the ISG that
               assists during acceleration. It results in a powerful and fuel
