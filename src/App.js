@@ -198,11 +198,14 @@ function App() {
               <div className="relative inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
                 <div className="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
                   <div className="text-left">
-                    <div className="absolute flex items-center justify-center rounded-full cursor-pointer hover:border right-4 top-2 hover:border-red-500 group">
-                      <div
-                        className="mx-2 text-3xl font-light group-hover:text-red-600 -mt-0.5 "
-                        onClick={() => setOpen(false)}
-                      >
+                    <div
+                      onClick={() => setOpen(false)}
+                      className="absolute flex items-center justify-center rounded-full cursor-pointer hover:border right-4 top-4 hover:border-red-600 group hover:bg-red-500 hover:bg-opacity-20"
+                    >
+                      <div className="mx-2 text-3xl font-light group-hover:text-red-600 -mt-0.5 flex items-center gap-1 duration-500 ">
+                        <span className="hidden text-lg text-black group-hover:block">
+                          Close
+                        </span>{" "}
                         x
                       </div>
                     </div>
