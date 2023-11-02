@@ -163,7 +163,7 @@ function Ignis() {
       <div className="bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-Background-Banners/Saboo-RKS-Nexa-Ignis-Car-Background.webp)] bg-center w-full bg-cover bg-no-repeat pt-20  lg:pt-36">
         <div className="container mx-auto">
           <div className="grid sm:grid-cols-2">
-            <div className="my-auto mx-auto">
+            <div className="mx-auto my-auto">
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-RKS-Nexa-Ignis-Title.webp"
                 alt="title"
@@ -463,7 +463,7 @@ function Ignis() {
       {/* <Features /> */}
 
       <Ignis360 />
-      <div className="pt-2  ">
+      <div className="pt-2 ">
         <div className="w-full pt-12 pb-4 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           Design
         </div>
@@ -480,10 +480,10 @@ const Variant = () => {
   const [price, setPrice] = useState("5,84,000");
   return (
     <div className=" bg-opacity-25  bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_bg_image/5.webp')] bg-fixed  bg-black">
-      <div className="container mx-auto bg-opacity-10 bg-black py-20 ">
-        <div className="grid md:grid-cols-3 md:space-y-0 space-y-3">
-          <div className="space-y-3 mx-auto md:mx-0">
-            <p className="uppercase text-gray-300">select car Variant</p>
+      <div className="container py-20 mx-auto bg-black bg-opacity-10 ">
+        <div className="grid space-y-3 md:grid-cols-3 md:space-y-0">
+          <div className="mx-auto space-y-3 md:mx-0">
+            <p className="text-gray-300 uppercase">select car Variant</p>
             <select
               name="model"
               value={price}
@@ -500,26 +500,25 @@ const Variant = () => {
               <option value="7,51,000">ZETA AGS (M)</option>
               <option value="8,16,000">ALPHA AGS (M)</option>
               <option value="7,65,000">ZETA AGS (D)</option>
-
               <option value="8,30,000">ALPHA AGS (D)</option>
             </select>
           </div>
           <div className="text-center text-gray-200">
             <p className="text-2xl font-bold">₹ {price}*</p>
-            <p className="tracking-wide text-xl">
+            <p className="text-xl tracking-wide">
               Ex-Showroom Price
             </p>
-            <p className="tracking-wide text-xl">
+            <p className="text-xl tracking-wide">
               HYDERABAD
             </p>
           </div>
           <div className="text-center">
-            <p className="text-gray-100 mb-6 text-center">
+            <p className="mb-6 text-center text-gray-100">
               You might have pre-approved loan offers
             </p>
             <Link
               to="/maruti-car-finance"
-              className="py-2 px-4 bg-white rounded shadow uppercase tracking-wide"
+              className="px-4 py-2 tracking-wide uppercase bg-white rounded shadow"
             >
               Check for loan offers
             </Link>
@@ -533,17 +532,17 @@ const Variant = () => {
 const ImageOptions = () => {
   return (
     <div className="container mx-auto ">
-      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
+      <div className="grid px-2 py-4 shadow-lg sm:grid-cols-2 md:p-8 ">
       <div className="overflow-hidden cursor-pointer"> 
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/exterior/saboo-nexa-ignis-exterior-front-grill.webp"
             alt="saboo-nexa-ignis-exterior-front-grill"
-            className="w-full hover:scale-105 duration-500"
+            className="w-full duration-500 hover:scale-105"
           />
         </div>
-        <div className="my-auto mx-auto space-y-3 lg:px-8">
+        <div className="mx-auto my-auto space-y-3 lg:px-8">
           <p className="text-3xl font-medium ">Sporty Rear</p>
-          <p className="h-1 w-20 bg-black rounded-full "></p>
+          <p className="w-20 h-1 bg-black rounded-full "></p>
           <p>
             The New Ignis is equipped with a Striking Rear Spoiler and Roof
             Rails, which enhances the Sporty Look.
@@ -551,10 +550,10 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
-        <div className="my-auto mx-auto space-y-3 lg:px-8">
+      <div className="grid px-2 py-4 shadow-lg sm:grid-cols-2 md:p-8 ">
+        <div className="mx-auto my-auto space-y-3 lg:px-8">
           <p className="text-3xl font-medium">Imposing Chrome Grille</p>
-          <p className="h-1 w-20 bg-black rounded-full "></p>
+          <p className="w-20 h-1 bg-black rounded-full "></p>
           <p>
             Taking the tough look up a notch, the New Ignis is equipped with an
             Imposing Chrome Grille which leaves a lasting impression.
@@ -564,22 +563,22 @@ const ImageOptions = () => {
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/exterior/saboo-nexa-ignis-exterior-back.webp"
             alt="saboo-nexa-ignis-exterior-back"
-            className="w-full hover:scale-105 duration-500"
+            className="w-full duration-500 hover:scale-105"
           />
         </div>
       </div>
 
-      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
+      <div className="grid px-2 py-4 shadow-lg sm:grid-cols-2 md:p-8 ">
       <div className="overflow-hidden cursor-pointer"> 
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/exterior/saboo-nexa-ignis-exterior-side-shot.webp"
             alt="saboo-nexa-ignis-exterior-side-shot"
-            className="w-full hover:scale-105 duration-500"
+            className="w-full duration-500 hover:scale-105"
           />
         </div>
-        <div className="my-auto mx-auto space-y-3 lg:px-8">
+        <div className="mx-auto my-auto space-y-3 lg:px-8">
           <p className="text-3xl font-medium">High SUV-like Stance</p>
-          <p className="h-1 w-20 bg-black rounded-full "></p>
+          <p className="w-20 h-1 bg-black rounded-full "></p>
           <p>
             The New Ignis has a high SUV-like Stance which makes it easier to
             get in and off, coupled with a higher seating that allows a great
@@ -588,10 +587,10 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
-        <div className="my-auto mx-auto space-y-3 ">
+      <div className="grid px-2 py-4 shadow-lg sm:grid-cols-2 md:p-8 ">
+        <div className="mx-auto my-auto space-y-3 ">
           <p className="text-3xl font-medium">Toughened Exterior</p>
-          <p className="h-1 w-20 bg-black rounded-full "></p>
+          <p className="w-20 h-1 bg-black rounded-full "></p>
           <p>
             Adding to the toughness, the New Ignis comes with stunning 15”
             All-Black Alloy Wheels, All-Around Cladding and Sturdy New Front &
@@ -602,7 +601,7 @@ const ImageOptions = () => {
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Ignis/exterior/saboo-nexa-ignis-exterior-Toughened.webp"
             alt="saboo-nexa-ignis-exterior-Toughened"
-            className="w-full hover:scale-105 duration-500"
+            className="w-full duration-500 hover:scale-105"
           />
         </div>
       </div>
@@ -726,9 +725,9 @@ const IgnisFeature = () => {
 
 const IgnisTechnology = () => {
   return (
-    <div className="px-2 py-10 overflow-hidden bg-white text-black">
-      <div className="container mx-auto text-center  ">
-        <div className="w-full pt-8 pb-2 text-3xl text-center  uppercase sm:text-4xl md:text-5xl">
+    <div className="px-2 py-10 overflow-hidden text-black bg-white">
+      <div className="container mx-auto text-center ">
+        <div className="w-full pt-8 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           TECHNOLOGY
         </div>
         <div className="mb-6 text-center text-md lg:text-lg">
@@ -736,14 +735,14 @@ const IgnisTechnology = () => {
         </div>
       </div>
 
-      <div className="mx-auto container">
+      <div className="container mx-auto">
         <img
           src="https://nexaprod4.azureedge.net/-/media/feature/nexawebsitecarbrand/ignis/technology/tech.webp"
           alt="AGS Ignis"
           className="w-full "
         />
-        <div className="w-full pt-4 text-left  ">
-          <div className="pb-3 pt-1 font-medium text-lg">AGS</div>
+        <div className="w-full pt-4 text-left ">
+          <div className="pt-1 pb-3 text-lg font-medium">AGS</div>
           <div className="font-light lg:pr-40">
             The pace might be fast in the urban jungle but the traffic is slow.
             Worry not. Ignis with Auto Gear Shift makes every drive smoother and
@@ -758,7 +757,7 @@ const IgnisTechnology = () => {
 const Ignis360 = () => {
   return (
     <>
-      <div className=" text-center  ">
+      <div className="text-center ">
         <div className="w-full pt-10 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl lg:hidden">
           360
           <sup>
@@ -829,7 +828,7 @@ function IgnisSafety() {
         />
 
         <div className="absolute left-[62%] top-16  lg:flex group hidden  ">
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  cursor-pointer">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full cursor-pointer hover:scale-105">
             {/* <GiBeltBuckles className="text-4xl group-hover:text-white " /> */}
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/safety-belt.svg"
@@ -837,27 +836,27 @@ function IgnisSafety() {
               className="scale-[0.6]"
             />
           </div>
-          <div className="mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">
               Seat Belt Pre-Tensioners with force limiters
             </div>
-            <div className=" font-light ">
+            <div className="font-light ">
               Pre-tensioners restrain the passengers and Force Limiters prevent
               seatbelt-inflicted injury.
             </div>
           </div>
         </div>
         <div className="absolute top-[4%] right-[62%] lg:flex group hidden  ">
-          <div className="mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">SUZUKI-TECT BODY</div>
-            <div className=" font-light ">
+            <div className="font-light ">
               Suzuki’s Total Effective Control Technology (TECT) concept results
               in effective absorption and dispersion of crash energy. The
               effective use of high-tensile steel for major parts makes the body
               light, strong and safe
             </div>
           </div>
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  cursor-pointer">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full cursor-pointer hover:scale-105">
             {/* <GiBeltBuckles className="text-4xl group-hover:text-white " /> */}
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/repair.svg"
@@ -871,7 +870,7 @@ function IgnisSafety() {
             <GiSpeedometer className="text-4xl group-hover:text-white" />
           </div>
 
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">ABS with EBD</div>
 
             <div className="hidden text-sm font-light group-hover:block">
@@ -889,7 +888,7 @@ function IgnisSafety() {
               alt=" 6 Air Bags to take the impact before it reaches you."
             />
           </div>
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">6 Air Bags</div>
 
             <div className="hidden font-light group-hover:block">
@@ -898,7 +897,7 @@ function IgnisSafety() {
           </div>
         </div>
         <div className="absolute left-[10%]  bottom-[58%]    lg:flex-col md:items-start group hidden lg:flex ">
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">ISOFIX child fix anchorages</div>
 
             <div className="hidden font-light group-hover:block">
@@ -911,24 +910,24 @@ function IgnisSafety() {
           </div>
         </div>
         <div className="absolute left-[78%]  bottom-[58%] md:items-start group hidden lg:flex lg:flex-col ">
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm hidden group-hover:block ">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm group-hover:block ">
             <div className="pb-1 font-medium ">
               FULL FRONTAL IMPACT COMPLIANCE, FRONTAL OFFSET IMPACT COMPLIANCE,
               SIDE IMPACT COMPLIANCE
             </div>
 
-            <div className=" font-light ">
+            <div className="font-light ">
               Successfully tested and in compliance with international safety
               norms
             </div>
           </div>
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black mb-2 ">
+          <div className="flex items-center justify-center w-20 h-20 mb-2 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black ">
             <GiBeltBuckles className="text-4xl group-hover:text-white" />
           </div>
         </div>
 
         <div className="absolute left-[77%]  top-[45%]  md:items-start group hidden lg:block ">
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  mb-2 ">
+          <div className="flex items-center justify-center w-20 h-20 mb-2 duration-500 border border-black rounded-full hover:scale-105 ">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/road.svg"
               className="scale-[0.6]"
@@ -936,11 +935,11 @@ function IgnisSafety() {
               well"
             />
           </div>
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm hidden group-hover:block ">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm group-hover:block ">
             <div className="pb-1 font-medium ">
               PEDESTRIAN PROTECTION COMPLIANCE
             </div>
-            <div className=" font-light ">
+            <div className="font-light ">
               Ensuring safety, not only for the occupants, but pedestrians as
               well
             </div>

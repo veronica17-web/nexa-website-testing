@@ -126,6 +126,7 @@ const Invicto = () => {
       </div>
 
       <CarEnq2 title="BOOK YOUR INVICTO" />
+      <Variant />
 
       {/* Design Philosophy */}
       <Philosphy />
@@ -567,6 +568,8 @@ const ExteriorSlider = () => {
     </>
   );
 };
+
+
 const InteriorSlider = () => {
   const [swiper, setSwiper] = useState(null);
 
@@ -740,6 +743,55 @@ const InteriorSlider = () => {
         </Swiper>
       </div>
     </>
+  );
+};
+
+const Variant = () => {
+  const [price, setPrice] = useState("7,46,500");
+  return (
+    <div className=" bg-opacity-25 text-white bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_bg_image/5.webp')] bg-fixed  bg-black">
+      <div className="container py-20 mx-auto bg-black bg-opacity-10">
+        <div className="grid space-y-3 md:grid-cols-3 md:space-y-0">
+          <div className="mx-auto space-y-3 md:mx-0">
+            <p className="uppercase ">select car Variant</p>
+            <select
+              name="model"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              className="block w-full max-w-[375px] py-2 px-3 border border-gray-300 bg-white text-black rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            >
+              <option value="24,82,000">ZETA+ ECVT (7S)</option>
+              <option value="24,91,500">ZETA+ ECVT (7S - White)</option>
+              <option value="24,87,000">ZETA+ ECVT (8S)</option>
+              <option value="24,96,500">ZETA+ ECVT (8S - White)</option>
+              <option value="28,45,000">ALPHA+ ECVT (7S)</option>
+              <option value="28,54,500">ALPHA+ ECVT (7S - White)</option>
+            </select>
+          </div>
+          <div className="text-center ">
+            <p className="text-2xl font-bold">₹ {price}*</p>
+            <p className="text-xl tracking-wide">
+              Ex-Showroom Price - Hyderabad
+            </p>
+            <div className="text-xs font-light text-red-200">
+              <sup>*</sup>Alpha+ & Zeta+ are applicable only for Direct
+              Injection engine with Smart Hybrid
+            </div>
+          </div>
+          <div className="text-center">
+            <p className="mb-6 text-center ">
+              You might have pre-approved loan offers
+            </p>
+            <Link
+              to="/maruti-car-finance"
+              className="px-4 py-2 tracking-wide text-black uppercase bg-white border border-black rounded shadow"
+            >
+              Check for loan offers
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

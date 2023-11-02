@@ -96,7 +96,7 @@ function GrandVitara() {
 
       {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
       <div className="hidden pt-2 pb-8 text-white bg-black sm:block">
-        <div className="w-full pt-10 pb-8 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
+        <div className="w-full pt-10 pb-8 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           THE ADVANCED GRAND VITARA
         </div>
 
@@ -171,13 +171,13 @@ function GrandVitara() {
       </div>
 
       <div className="pt-2 pb-8 text-white bg-black sm:hidden">
-        <div className="w-full py-10 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
+        <div className="w-full py-10 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           THE ADVANCED GRAND VITARA
         </div>
         <MobileCarousel />
       </div>
       <div className="pt-2 text-white bg-black ">
-        <div className="w-full pt-10 pb-8 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
+        <div className="w-full pt-10 pb-8 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           COLOURS
         </div>
       </div>
@@ -598,10 +598,10 @@ const Variant = () => {
               <option value="17,07,000">ALPHA AT (DT)</option>
               <option value="16,91,000">ALPHA AWD AG</option>
               <option value="17,07,000">ALPHA AWD AG (DT)</option>
-              <option value="18,29,000">ZETA+ ECVT</option>
-              <option value="18,45,000">ZETA+ ECVT (DT)</option>
-              <option value="19,79,000">ALPHA+ ECVT</option>
-              <option value="19,95,000">ALPHA ECVT (DT)</option>
+              <option value="18,33,000">ZETA+ ECVT</option>
+              <option value="18,49,000">ZETA+ ECVT (DT)</option>
+              <option value="19,83,000">ALPHA+ ECVT</option>
+              <option value="19,99,000">ALPHA ECVT (DT)</option>
               <option value="13,05,000">DELTA CNG</option>
               <option value="14,86,000">ZETA CNG</option>
             </select>
@@ -637,7 +637,7 @@ const Variant = () => {
 const SecondVideo = () => {
   return (
     <div className="relative  bg-black flex flex-col xl:max-h-[80vh] overflow-hidden">
-      <div className="w-full py-6 text-center text-white  lg:absolute lg:pt-10">
+      <div className="w-full py-6 text-center text-white lg:absolute lg:pt-10">
         <div className="mb-2 text-2xl font-medium lg:text-3xl">
           RULE EVERY ROAD
         </div>
@@ -719,7 +719,7 @@ const KeyHigh = () => {
 
   return (
     <div className="overflow-hidden text-white bg-black ">
-      <div className="w-full pt-10 pb-6 text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
+      <div className="w-full pt-10 pb-6 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
         KEY HIGHLIGHTS
       </div>
 
@@ -762,7 +762,7 @@ const KeyHigh = () => {
         alt=""
         className="w-full h-screen sm:hidden"
       /> */}
-        <div className="w-full py-4 text-xl text-center  lg:text-2xl md:hidden">
+        <div className="w-full py-4 text-xl text-center lg:text-2xl md:hidden">
           {playingSegment === 0
             ? "Bold & Expressive Font Fascia"
             : playingSegment === 1
@@ -945,11 +945,11 @@ const KeyHigh = () => {
 
 const DesignPhilosophy = () => {
   return (
-    <div className="relative pt-10 text-white bg-black  lg:pt-16">
+    <div className="relative pt-10 text-white bg-black lg:pt-16">
       <div className="w-full text-3xl text-center uppercase lg:py-6 sm:text-4xl md:text-5xl">
         DESIGN PHILOSOPHY
       </div>
-      <div className="z-10 w-full h-full pt-6  lg:absolute lg:pt-12">
+      <div className="z-10 w-full h-full pt-6 lg:absolute lg:pt-12">
         <div className="container flex px-1 mx-auto ">
           <div className="lg:w-1/3 xl:w-1/4">
             <div className="pb-4 text-xl italic font-medium uppercase lg:text-2xl lg:pb-8">

@@ -109,7 +109,7 @@ export const products = [
   {
     id: 1,
     name: "Invicto",
-    price: "24,79,000",
+    price: "24,82,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/D23+logo+without+outline+Black_125x35.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-main-thubmnail-no-bg.webp",
     specImage:
@@ -199,7 +199,7 @@ export const products = [
   {
     id: 4,
     name: "Grand Vitara",
-    price: "10,45,000",
+    price: "10,70,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/GV-logo-204x37+webp.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/thumbnails/gt-thumbnail-cng.webp",
     specImage:
@@ -230,7 +230,7 @@ export const products = [
   {
     id: 5,
     name: "Ignis",
-    price: "5,35,000",
+    price: "5,84,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp",
     specImage:
@@ -260,7 +260,7 @@ export const products = [
   {
     id: 6,
     name: "Baleno",
-    price: "6,49,000",
+    price: "6,61,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/cng/baleno-cng-thubnail.webp",
     specImage:
@@ -290,7 +290,7 @@ export const products = [
   {
     id: 7,
     name: "Ciaz",
-    price: "8,99,500",
+    price: "9,30,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-ciaz.webp",
     specImage:
@@ -321,7 +321,7 @@ export const products = [
   {
     id: 8,
     name: "XL6",
-    price: "11,29,000",
+    price: "11,56,000",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Logo-XL6.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/cng/xl6-cng-thumbnail.webp",
     specImage:

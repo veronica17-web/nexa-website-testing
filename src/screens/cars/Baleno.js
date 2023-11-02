@@ -161,8 +161,8 @@ function Baleno() {
       </div>
       <div className="bg-[url(https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/Baleno_Banner_Blue.webp)] bg-cover bg-no-repeat bg-center pt-20 overflow-hidden ">
         <div className="container mx-auto">
-          <div className="grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 py-16 lg:py-0">
-            <div className="my-auto mx-auto space-y-5 px-8 sm:px-0">
+          <div className="grid grid-cols-1 py-16 sm:grid-cols-2 lg:grid-cols-3 lg:py-0">
+            <div className="px-8 mx-auto my-auto space-y-5 sm:px-0">
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/logobaleno-white-new.webp"
                 className="mx-auto"
@@ -388,7 +388,7 @@ function Baleno() {
       {/* <Features /> */}
       <Bi360 />
       <BalenoSafety />
-      <div className="pt-2  ">
+      <div className="pt-2 ">
         <div className="w-full pt-12 pb-4 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           Design
         </div>
@@ -404,10 +404,10 @@ const Variant = () => {
   const [price, setPrice] = useState("6,61,000");
   return (
     <div className=" bg-opacity-25  bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_bg_image/5.webp')] bg-fixed  bg-black">
-      <div className="container mx-auto bg-opacity-10 bg-black py-20 ">
-        <div className="grid md:grid-cols-3 md:space-y-0 space-y-3">
-          <div className="space-y-3 mx-auto md:mx-0">
-            <p className="uppercase text-gray-300">select car Variant</p>
+      <div className="container py-20 mx-auto bg-black bg-opacity-10 ">
+        <div className="grid space-y-3 md:grid-cols-3 md:space-y-0">
+          <div className="mx-auto space-y-3 md:mx-0">
+            <p className="text-gray-300 uppercase">select car Variant</p>
             <select
               name="model"
               value={price}
@@ -421,22 +421,22 @@ const Variant = () => {
               <option value="8,35,000">DELTA CNG</option>
               <option value="9,28,000">ZETA CNG</option>
               <option value="8,00,000">DELTA AT</option>
-              <option value="8,90,000">ZETA AT</option>
-              <option value="9,88,000"> ALPHA AT</option>
+              <option value="8,93,000">ZETA AT</option>
+              <option value="9,88,000">ALPHA AT</option>
             </select>
           </div>
           <div className="text-center text-gray-200">
             <p className="text-2xl font-bold">₹ {price}*</p>
-            <p className="tracking-wide text-xl">Ex-Showroom Price</p>
-            <p className="tracking-wide text-xl">HYDERABAD</p>
+            <p className="text-xl tracking-wide">Ex-Showroom Price</p>
+            <p className="text-xl tracking-wide">HYDERABAD</p>
           </div>
           <div className="text-center">
-            <p className="text-gray-100 mb-6 text-center">
+            <p className="mb-6 text-center text-gray-100">
               You might have pre-approved loan offers
             </p>
             <Link
               to="/maruti-car-finance"
-              className="py-2 px-4 bg-white rounded shadow uppercase tracking-wide"
+              className="px-4 py-2 tracking-wide uppercase bg-white rounded shadow"
             >
               Check for loan offers
             </Link>
@@ -449,18 +449,18 @@ const Variant = () => {
 
 const ImageOptions = () => {
   return (
-    <div className="container mx-auto px-2 md:px-0">
-      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
+    <div className="container px-2 mx-auto md:px-0">
+      <div className="grid px-2 py-4 shadow-lg sm:grid-cols-2 md:p-8 ">
         <div className="overflow-hidden cursor-pointer">
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-1177x751-exterior-liquid-flow.webp"
             alt="Saboo-Nexa-Maruti-Suzuki-Baleno-Front-Lamp"
-            className="w-full hover:scale-105 duration-500"
+            className="w-full duration-500 hover:scale-105"
           />
         </div>
-        <div className="my-auto mx-auto space-y-3 py-2 md:p-8">
-          <p className="text-3xl  font-medium ">Enhanced Liquid Flow Design</p>
-          <p className="h-1 w-20 bg-black rounded-full "></p>
+        <div className="py-2 mx-auto my-auto space-y-3 md:p-8">
+          <p className="text-3xl font-medium ">Enhanced Liquid Flow Design</p>
+          <p className="w-20 h-1 bg-black rounded-full "></p>
           <p>
             The New Age Baleno is a sight to behold. Carrying forward the Liquid
             Flow Aesthetic, it exudes boldness from every curve. Its dynamic
@@ -471,10 +471,10 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
-        <div className="my-auto mx-auto space-y-3 p-2">
-          <p className="text-3xl  font-medium">NEXWave Grille</p>
-          <p className="h-1 w-20 bg-black rounded-full "></p>
+      <div className="grid px-2 py-4 shadow-lg sm:grid-cols-2 md:p-8 ">
+        <div className="p-2 mx-auto my-auto space-y-3">
+          <p className="text-3xl font-medium">NEXWave Grille</p>
+          <p className="w-20 h-1 bg-black rounded-full "></p>
           <p>
             The signature NEXWave Grille is the first thing you see when you
             look upon the New Age Baleno. And it gets harder to look anywhere
@@ -487,24 +487,24 @@ const ImageOptions = () => {
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-749x751-grille.webp"
             alt="Saboo-Nexa-Maruti-Suzuki-Baleno-Front-Gril"
-            className="w-full hover:scale-105 duration-500"
+            className="w-full duration-500 hover:scale-105"
           />
         </div>
       </div>
 
-      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
+      <div className="grid px-2 py-4 shadow-lg sm:grid-cols-2 md:p-8 ">
         <div className="overflow-hidden cursor-pointer">
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-751x379-alloy-wheels.webp"
             alt="Saboo-Nexa-Maruti-Suzuki-Baleno-Alloy-Wheel"
-            className="w-full hover:scale-105 duration-500"
+            className="w-full duration-500 hover:scale-105"
           />
         </div>
-        <div className="my-auto mx-auto space-y-3 p-2">
-          <p className="text-3xl  font-medium">
+        <div className="p-2 mx-auto my-auto space-y-3">
+          <p className="text-3xl font-medium">
             16-Inch Precision Cut Alloy Wheels
           </p>
-          <p className="h-1 w-20 bg-black rounded-full "></p>
+          <p className="w-20 h-1 bg-black rounded-full "></p>
           <p>
             They are bold. They are sharp. And they drive the style quotient of
             the New Age Baleno to a whole new level. Even when parked. These new
@@ -514,10 +514,10 @@ const ImageOptions = () => {
         </div>
       </div>
 
-      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
-        <div className="my-auto mx-auto space-y-3 p-2">
-          <p className="text-3xl  font-medium">Interior Design</p>
-          <p className="h-1 w-20 bg-black rounded-full "></p>
+      <div className="grid px-2 py-4 shadow-lg sm:grid-cols-2 md:p-8 ">
+        <div className="p-2 mx-auto my-auto space-y-3">
+          <p className="text-3xl font-medium">Interior Design</p>
+          <p className="w-20 h-1 bg-black rounded-full "></p>
           <p>
             The New Age Baleno is more than just good looks. It is comfort
             reimagined. So, immerse yourself in the state-of-the-art cabin
@@ -531,23 +531,23 @@ const ImageOptions = () => {
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-1177x751-interior.webp"
             alt="Saboo-Nexa-Maruti-Suzuki-Baleno-Side-Lamp"
-            className="w-full hover:scale-105 duration-500"
+            className="w-full duration-500 hover:scale-105"
           />
         </div>
       </div>
-      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
+      <div className="grid px-2 py-4 shadow-lg sm:grid-cols-2 md:p-8 ">
         <div className="overflow-hidden cursor-pointer">
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-749x751-LED-DRLs.webp"
             alt="Saboo-Nexa-Maruti-Suzuki-Baleno-Side-Lamp"
-            className="w-full hover:scale-105 duration-500"
+            className="w-full duration-500 hover:scale-105"
           />
         </div>
-        <div className="my-auto mx-auto space-y-3 p-2 md:p-8">
-          <p className="text-3xl  font-medium">
+        <div className="p-2 mx-auto my-auto space-y-3 md:p-8">
+          <p className="text-3xl font-medium">
             NEXTre' LED Rear Combination Lights
           </p>
-          <p className="h-1 w-20 bg-black rounded-full "></p>
+          <p className="w-20 h-1 bg-black rounded-full "></p>
           <p>
             The New Age Baleno never ceases to bowl you over with its looks.
             Even when viewed from behind. The sharp and stylish NEXTre’ LED Rear
@@ -556,12 +556,12 @@ const ImageOptions = () => {
           </p>
         </div>
       </div>
-      <div className="grid shadow-lg sm:grid-cols-2 px-2 py-4 md:p-8 ">
-        <div className="my-auto mx-auto space-y-3 p-2">
-          <p className="text-3xl  font-medium">
+      <div className="grid px-2 py-4 shadow-lg sm:grid-cols-2 md:p-8 ">
+        <div className="p-2 mx-auto my-auto space-y-3">
+          <p className="text-3xl font-medium">
             LED Projector Headlamps With NEXTre’ LED DRLs
           </p>
-          <p className="h-1 w-20 bg-black rounded-full "></p>
+          <p className="w-20 h-1 bg-black rounded-full "></p>
           <p>
             The night is when the New Age Baleno truly comes alive. Driving down
             the beautiful tarmac, the Projector Headlamps with signature NEXTre’
@@ -575,7 +575,7 @@ const ImageOptions = () => {
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Baleno/exterior/submenu-design-751x379-Rear-lamps.webp"
             alt="Saboo-Nexa-Maruti-Suzuki-Baleno-Side-Lamp"
-            className="w-full hover:scale-105 duration-500"
+            className="w-full duration-500 hover:scale-105"
           />
         </div>
       </div>
@@ -811,9 +811,9 @@ const BalenoSafety = () => {
 
 const Technology = () => {
   return (
-    <div className="px-2 py-4 overflow-hidden bg-white text-black">
-      <div className="container mx-auto text-center  ">
-        <div className="w-full pt-8 pb-2 text-3xl text-center  uppercase sm:text-4xl md:text-5xl">
+    <div className="px-2 py-4 overflow-hidden text-black bg-white">
+      <div className="container mx-auto text-center ">
+        <div className="w-full pt-8 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           TECHNOLOGY
         </div>
         <div className="mb-6 text-center text-md lg:text-lg">
@@ -843,7 +843,7 @@ const Technology = () => {
                 alt="AGS Baleno"
                 className="relative "
               />
-              <div className="w-full pt-4 text-left  ">
+              <div className="w-full pt-4 text-left ">
                 <div className="pb-2 font-medium">AGS</div>
                 <div className="font-light lg:pr-40">
                   The New Age Baleno makes your driving experience smooth and
@@ -929,7 +929,7 @@ const Technology = () => {
                 src="https://nexaprod6.azureedge.net/-/media/feature/nexawebsitecarbrand/baleno/technology/technology-1080x420-suzuki-connect.webp"
                 alt="Next Generation Suzuki Connect"
               />
-              <div className="w-full pt-4 text-left  ">
+              <div className="w-full pt-4 text-left ">
                 <div className="pb-2 font-medium">
                   Next Generation Suzuki Connect
                 </div>
@@ -957,7 +957,7 @@ const Technology = () => {
 const Bi360 = () => {
   return (
     <>
-      <div className=" text-center  ">
+      <div className="text-center ">
         <div className="w-full pt-10 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl lg:hidden">
           360
           <sup>

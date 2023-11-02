@@ -119,7 +119,7 @@ const Fronx = () => {
               data-aos="fade-right"
               data-aos-delay="400"
               data-aos-duration="500"
-              className="text-5xl lg:text-8xl font-serif pb-1 uppercase"
+              className="pb-1 font-serif text-5xl uppercase lg:text-8xl"
             >
               fronx
             </div>
@@ -127,7 +127,7 @@ const Fronx = () => {
               data-aos="fade-right"
               data-aos-delay="600"
               data-aos-duration="1000"
-              className="text-2xl lg:text-5xl mb-2 lg:mb-4 uppercase"
+              className="mb-2 text-2xl uppercase lg:text-5xl lg:mb-4"
             >
               THE SHAPE OF NEW
             </div>
@@ -136,7 +136,7 @@ const Fronx = () => {
               data-aos="fade-right"
               data-aos-delay="800"
               data-aos-duration="1000"
-              className="border border-white px-4 py-2 lg:px-8 text-white uppercase"
+              className="px-4 py-2 text-white uppercase border border-white lg:px-8"
               onClick={() => setOpen(true)}
             >
               Discover More
@@ -151,7 +151,7 @@ const Fronx = () => {
                 data-aos="fade-right"
                 data-aos-delay="800"
                 data-aos-duration="1000"
-                className="border border-white px-4 py-2 lg:px-8 text-white uppercase"
+                className="px-4 py-2 text-white uppercase border border-white lg:px-8"
               >
                 BROCHURE
               </button>
@@ -166,11 +166,11 @@ const Fronx = () => {
       <FronxInteriorAndOther />
       {/* <OnRoadPrice title={"FRONX"} /> */}
       {/* {width > 425 ? <Carousel /> : <MobileCarousel />} */}
-      <div className="hidden sm:block bg-black text-white pt-2 pb-10 lg:pb-16">
-        <div className="  w-full pt-8 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl ">
+      <div className="hidden pt-2 pb-10 text-white bg-black sm:block lg:pb-16">
+        <div className="w-full pt-8 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           PERFORMANCE
         </div>
-        <div className="text-center text-md lg:text-lg pb-2">
+        <div className="pb-2 text-center text-md lg:text-lg">
           Born To Outperform, In Style
         </div>
         <div className="flex h-[75vh]  gap-2 px-4 pt-1">
@@ -179,10 +179,10 @@ const Fronx = () => {
               <img
                 src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/Boosterjet+Logo+png.png"
                 alt=""
-                className=" w-40"
+                className="w-40 "
                 srcSet=""
               />
-              <span className="font-semibold text-lg">
+              <span className="text-lg font-semibold">
                 1.0L TURBO BOOSTERJET ENGINE
               </span>
               <span className="font-thin tracking-wider">
@@ -193,7 +193,7 @@ const Fronx = () => {
           </div>
           <div className="w-1/5 duration-500 rounded-lg border border-gray-500 hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-12k_Engine.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">
+              <span className="text-lg font-semibold">
                 ADVANCED 1.2L K-SERIES DUAL JET, DUAL VVT ENGINE
               </span>
               <span className="font-thin tracking-wider">
@@ -203,7 +203,7 @@ const Fronx = () => {
           </div>
           <div className="w-1/5 duration-500 rounded-lg border border-gray-500 hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-Smart_Hybird.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">
+              <span className="text-lg font-semibold">
                 SMART HYBRID TECHNOLOGY
               </span>
               <span className="font-thin tracking-wider">
@@ -213,7 +213,7 @@ const Fronx = () => {
           </div>
           <div className="w-1/5 duration-500 rounded-lg border border-gray-500 hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AGS.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">
+              <span className="text-lg font-semibold">
                 6-SPEED AUTOMATIC TRANSMISSION WITH PADDLE SHIFTERS
               </span>
               <span className="font-thin tracking-wider">
@@ -223,7 +223,7 @@ const Fronx = () => {
           </div>
           <div className="w-1/5 duration-500 rounded-lg border border-gray-500 hover:w-2/3 bg-cover bg-no-repeat bg-center bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/accordian/PERFORMANCE-811x629-AMT.webp')] ">
             <div className="flex flex-col justify-end h-full p-4 text-white ">
-              <span className="font-semibold text-lg">AUTO GEAR SHIFT</span>
+              <span className="text-lg font-semibold">AUTO GEAR SHIFT</span>
               <span className="font-thin tracking-wider">
                 Shaped for comfort and convenience.
               </span>
@@ -231,11 +231,11 @@ const Fronx = () => {
           </div>
         </div>
       </div>
-      <div className=" sm:hidden bg-black text-white pt-2 pb-8">
-        <div className="  w-full pt-8 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl ">
+      <div className="pt-2 pb-8 text-white bg-black sm:hidden">
+        <div className="w-full pt-8 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           PERFORMANCE
         </div>
-        <div className="text-center text-md lg:text-lg pb-2">
+        <div className="pb-2 text-center text-md lg:text-lg">
           Born To Outperform, In Style
         </div>
         <MobileCarousel />
@@ -250,12 +250,12 @@ const Fronx = () => {
 function FronxInteriorAndOther() {
   const [tabsColors, setTabsColors] = useState(1);
   return (
-    <div className=" bg-black">
-      {/* <p className="font-bold text-4xl text-center">Maruti Suzuki FRONX</p>
-      <p className=" text-center tracking-wider font-bold">
+    <div className="bg-black ">
+      {/* <p className="text-4xl font-bold text-center">Maruti Suzuki FRONX</p>
+      <p className="font-bold tracking-wider text-center ">
         A design philosphy sustained by three unwavering pillars
       </p>
-      <p className="bg-black h-1 w-60 mx-auto"></p>
+      <p className="h-1 mx-auto bg-black w-60"></p>
       <p className="max-w-[900px] text-gray-600 text-center mx-auto font-light text-xl">
         Say hello to FRONX, the Shape of New. From a striking, sporty design
         language to technology that ensures your safety, comfort, and
@@ -263,7 +263,7 @@ function FronxInteriorAndOther() {
         is uniquely craftedto satisfy the modren sensibilities of NEXA
         customers.
       </p> */}
-      <div className=" container mx-auto w-full pt-2 md:pt-10 pb-4 text-3xl text-center uppercase  sm:text-4xl md:text-5xl bg-black text-white">
+      <div className="container w-full pt-2 pb-4 mx-auto text-3xl text-center text-white uppercase bg-black md:pt-10 sm:text-4xl md:text-5xl">
         COLOURS
       </div>
 
@@ -281,7 +281,7 @@ function FronxInteriorAndOther() {
             </a>
             <div className="col-span-2">
               <>
-                <div className="ml-auto mr-1 mt-24">
+                <div className="mt-24 ml-auto mr-1">
                   {/* 1. NEXA BLUE */}
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/colors/FRONX-Color-1500x700-NEXA_Blue.webp"
@@ -378,7 +378,7 @@ function FronxInteriorAndOther() {
                     <div className={tabsColors === 3 ? "relative" : "hidden"}>
                       <p className="w-6 h-6 bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/grand_vitara/arctic-white-black.webp')] mr-[10px] border-t border-x"></p>
                       <span className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/check-icon.png')] h-4 w-4 absolute top-0 -left-2 right-0 mx-auto bg-no-repeat bg-center"></span>
-                      <p className="arrow-dropdown-selected-car border-t-8"></p>
+                      <p className="border-t-8 arrow-dropdown-selected-car"></p>
                     </div>
                     <p
                       className={
@@ -576,9 +576,9 @@ const Variant = () => {
   const [price, setPrice] = useState("7,46,500");
   return (
     <div className=" bg-opacity-25 text-white bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_bg_image/5.webp')] bg-fixed  bg-black">
-      <div className="container mx-auto bg-opacity-10 bg-black py-20">
-        <div className="grid md:grid-cols-3 md:space-y-0 space-y-3">
-          <div className="space-y-3 mx-auto md:mx-0">
+      <div className="container py-20 mx-auto bg-black bg-opacity-10">
+        <div className="grid space-y-3 md:grid-cols-3 md:space-y-0">
+          <div className="mx-auto space-y-3 md:mx-0">
             <p className="uppercase ">select car Variant</p>
             <select
               name="model"
@@ -591,7 +591,6 @@ const Variant = () => {
               <option value="8,72,500">DELTA+</option>
               <option value="8,87,500">DELTA AGS</option>
               <option value="9,27,500">DELTA+ AGS</option>
-
               <option value="9,72,500">DELTA+ MT (SMART HYBRID)</option>
               <option value="10,55,500">ZETA MT (SMART HYBRID) </option>
               <option value="11,47,500">ALPHA(M) MT (SMART HYBRID)</option>
@@ -599,25 +598,27 @@ const Variant = () => {
               <option value="12,05,500">ZETA AT (SMART HYBRID)</option>
               <option value="12,97,500">ALPHA(M) (SMART HYBRID)</option>
               <option value="13,13,500">ALPHA(D) AT (SMART HYBRID)</option>
+              <option value="8,41,500">SIGMA CNG</option>
+              <option value="9,27,500">DELTA CNG</option>
             </select>
           </div>
           <div className="text-center ">
             <p className="text-2xl font-bold">₹ {price}*</p>
-            <p className="tracking-wide text-xl">
+            <p className="text-xl tracking-wide">
               Ex-Showroom Price - Hyderabad
             </p>
-            <div className="text-red-200 text-xs font-light">
+            <div className="text-xs font-light text-red-200">
               <sup>*</sup>Alpha+ & Zeta+ are applicable only for Direct
               Injection engine with Smart Hybrid
             </div>
           </div>
           <div className="text-center">
-            <p className=" mb-6 text-center">
+            <p className="mb-6 text-center ">
               You might have pre-approved loan offers
             </p>
             <Link
               to="/maruti-car-finance"
-              className="py-2 px-4 bg-white rounded shadow uppercase border text-black border-black tracking-wide"
+              className="px-4 py-2 tracking-wide text-black uppercase bg-white border border-black rounded shadow"
             >
               Check for loan offers
             </Link>
@@ -673,18 +674,18 @@ const VariantPlayer2 = () => {
 
   return (
     <>
-      <div className="  w-full pt-10 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl ">
+      <div className="w-full pt-10 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
         DESIGN HIGHLIGHTS
       </div>
       <div
         className="top-0 left-0 w-full h-[95vh] relative  "
         onContextMenu={handleContextMenu}
       >
-        {/* <div className=" absolute top-2 w-full text-3xl text-center uppercase  sm:text-4xl md:text-5xl">
+        {/* <div className="absolute w-full text-3xl text-center uppercase top-2 sm:text-4xl md:text-5xl">
           DESIGN HIGHLIGHTS
         </div> */}
         <video
-          className="w-full h-full object-cover  "
+          className="object-cover w-full h-full "
           autoplay="autoplay"
           loop
           muted
@@ -700,12 +701,12 @@ const VariantPlayer2 = () => {
         {/* <img
         src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/webpage-fronx-mobile-banner-without-book-now.webp"
         alt=""
-        className="h-screen w-full sm:hidden"
+        className="w-full h-screen sm:hidden"
       /> */}
-        <div className="absolute bottom-20 lg:bottom-24   w-full ">
+        <div className="absolute w-full bottom-20 lg:bottom-24 ">
           <div className="hidden md:block container mx-auto bg-[#0000001c] rounded-2xl ">
             <div className="relative">
-              <div className="relative flex justify-between  ">
+              <div className="relative flex justify-between ">
                 <div
                   className={`h-2.5 w-2.5  z-10 cursor-pointer hover:border border-gray-200 rounded-full`}
                 >
@@ -805,15 +806,15 @@ const Technology = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <div className="bg-black ">
-      <div className="text-center text-white  container mx-auto ">
-        <div className="  w-full pt-8 pb-2 text-3xl text-center uppercase  sm:text-4xl md:text-5xl ">
+      <div className="container mx-auto text-center text-white ">
+        <div className="w-full pt-8 pb-2 text-3xl text-center uppercase sm:text-4xl md:text-5xl">
           TECHNOLOGY
         </div>
         <div className="text-center text-md lg:text-lg">
           Feature Rich and Future Facing
         </div>
-        <div className=" py-2 sm:py-5 ">
-          <div className=" pb-6 space-y-4 rounded">
+        <div className="py-2 sm:py-5">
+          <div className="pb-6 space-y-4 rounded ">
             {/* <Carousel /> */}
 
             <Swiper
@@ -840,10 +841,10 @@ const Technology = () => {
                   <img
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-DASHBOARD.webp"
                     alt="Dual-Tone Plush Interiors"
-                    className="  relative"
+                    className="relative "
                   />
-                  <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                    <div className="font-medium pb-2">
+                  <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                    <div className="pb-2 font-medium">
                       Dual-Tone Plush Interiors
                     </div>
                     <div className="font-light lg:pr-40">
@@ -860,8 +861,8 @@ const Technology = () => {
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-360_screen.webp"
                     alt="360 View Camera"
                   />
-                  <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                    <div className="font-medium pb-2">360 View Camera</div>
+                  <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                    <div className="pb-2 font-medium">360 View Camera</div>
                     <div className="font-light lg:pr-40">
                       Get the best view whether you’re driving or parking with
                       the 360 View Camera that guides you and shows your car
@@ -878,8 +879,8 @@ const Technology = () => {
                     alt="Head Up Display"
                     className=""
                   />
-                  <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                    <div className="font-medium pb-2">Head Up Display</div>
+                  <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                    <div className="pb-2 font-medium">Head Up Display</div>
                     <div className="font-light lg:pr-40">
                       Focus on what matters and reduce driving fatigue and with
                       the multiple functions and information like navigation,
@@ -896,8 +897,8 @@ const Technology = () => {
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-9inch_touch_screen.webp"
                     alt='22.86 cm (9") SmartPlay Pro+ with Surround Sense Powered by ARKAMYS'
                   />
-                  <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                    <div className="font-medium pb-2">
+                  <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                    <div className="pb-2 font-medium">
                       22.86 cm (9") SmartPlay Pro+ with Surround Sense Powered
                       by ARKAMYS
                     </div>
@@ -915,8 +916,8 @@ const Technology = () => {
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-PADDLE_SHIFTERS.webp"
                     alt=" Paddle Shifters (in AT Only)"
                   />
-                  <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                    <div className="font-medium pb-2">
+                  <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                    <div className="pb-2 font-medium">
                       Paddle Shifters (in AT Only)
                     </div>
                     <div className="font-light lg:pr-40">
@@ -934,8 +935,8 @@ const Technology = () => {
                     src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/TECHNOLOGY-1000x500-wireless-changing.webp"
                     alt="Wireless Charger"
                   />
-                  <div className="md:absolute bottom-4 w-full  text-white text-left px-4 pt-4">
-                    <div className="font-medium pb-2">Wireless Charger</div>
+                  <div className="w-full px-4 pt-4 text-left text-white md:absolute bottom-4">
+                    <div className="pb-2 font-medium">Wireless Charger</div>
                     <div className="font-light lg:pr-40">
                       Stay connected 24x7 wherever you go with seamless,
                       wireless charging, so both you and your phone are always
@@ -953,7 +954,7 @@ const Technology = () => {
               // freeMode={true}
               // watchSlidesProgress={true}
               modules={[FreeMode, Navigation, Thumbs]}
-              className="mySwiper-3  text-white hidden md:block"
+              className="hidden text-white mySwiper-3 md:block"
             >
               <SwiperSlide classname="cursor-pointer">
                 <div>
@@ -962,7 +963,7 @@ const Technology = () => {
                     alt="Dual-Tone Plush Interiors"
                     className="max-h-24"
                   />
-                  <div className=" py-2 ">Dual-Tone Plush Interiors</div>
+                  <div className="py-2 ">Dual-Tone Plush Interiors</div>
                 </div>
               </SwiperSlide>
               <SwiperSlide classname="cursor-pointer">
@@ -972,7 +973,7 @@ const Technology = () => {
                     alt="360 View Camera"
                     className="max-h-24"
                   />
-                  <div className=" py-2 ">360 View Camera</div>
+                  <div className="py-2 ">360 View Camera</div>
                 </div>
               </SwiperSlide>
               <SwiperSlide classname="cursor-pointer">
@@ -982,7 +983,7 @@ const Technology = () => {
                     alt="Head Up Display"
                     className="max-h-24"
                   />
-                  <div className=" py-2 ">Head Up Display</div>
+                  <div className="py-2 ">Head Up Display</div>
                 </div>
               </SwiperSlide>
 
@@ -993,7 +994,7 @@ const Technology = () => {
                     alt='22.86 cm (9") SmartPlay Pro+ with Surround Sense Powered by ARKAMYS'
                     className="max-h-24"
                   />
-                  <div className=" py-2 ">22.86 cm (9") SmartPlay Pro+</div>
+                  <div className="py-2 ">22.86 cm (9") SmartPlay Pro+</div>
                 </div>
               </SwiperSlide>
               <SwiperSlide classname="cursor-pointer">
@@ -1013,7 +1014,7 @@ const Technology = () => {
                     alt="Wireless Charger"
                     className="max-h-24"
                   />
-                  <div className=" py-2 ">Wireless Charger</div>
+                  <div className="py-2 ">Wireless Charger</div>
                 </div>
               </SwiperSlide>
             </Swiper>
@@ -1046,7 +1047,7 @@ function Safety() {
         />
 
         <div className="absolute left-[62%] top-16  lg:flex group hidden  ">
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  cursor-pointer">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full cursor-pointer hover:scale-105">
             {/* <GiBeltBuckles className="text-4xl group-hover:text-white " /> */}
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/safety-belt.svg"
@@ -1054,27 +1055,27 @@ function Safety() {
               className="scale-[0.6]"
             />
           </div>
-          <div className="mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">
               Seat Belt Pre-Tensioners with force limiters
             </div>
-            <div className=" font-light ">
+            <div className="font-light ">
               Pre-tensioners restrain the passengers and Force Limiters prevent
               seatbelt-inflicted injury.
             </div>
           </div>
         </div>
         <div className="absolute top-[4%] right-[62%] lg:flex group hidden  ">
-          <div className="mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">SUZUKI-TECT BODY</div>
-            <div className=" font-light ">
+            <div className="font-light ">
               Suzuki’s Total Effective Control Technology (TECT) concept results
               in effective absorption and dispersion of crash energy. The
               effective use of high-tensile steel for major parts makes the body
               light, strong and safe
             </div>
           </div>
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  cursor-pointer">
+          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full cursor-pointer hover:scale-105">
             {/* <GiBeltBuckles className="text-4xl group-hover:text-white " /> */}
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/repair.svg"
@@ -1088,7 +1089,7 @@ function Safety() {
             <GiSpeedometer className="text-4xl group-hover:text-white" />
           </div>
 
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">ABS with EBD</div>
 
             <div className="hidden text-sm font-light group-hover:block">
@@ -1106,7 +1107,7 @@ function Safety() {
               alt=" 6 Air Bags to take the impact before it reaches you."
             />
           </div>
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">6 Air Bags</div>
 
             <div className="hidden font-light group-hover:block">
@@ -1115,7 +1116,7 @@ function Safety() {
           </div>
         </div>
         <div className="absolute left-[10%]  bottom-[58%]    lg:flex-col md:items-start group hidden lg:flex ">
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md hidden group-hover:block">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-md group-hover:block">
             <div className="pb-1 font-medium ">ISOFIX child fix anchorages</div>
 
             <div className="hidden font-light group-hover:block">
@@ -1128,24 +1129,24 @@ function Safety() {
           </div>
         </div>
         <div className="absolute left-[78%]  bottom-[58%] md:items-start group hidden lg:flex lg:flex-col ">
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm hidden group-hover:block ">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm group-hover:block ">
             <div className="pb-1 font-medium ">
               FULL FRONTAL IMPACT COMPLIANCE, FRONTAL OFFSET IMPACT COMPLIANCE,
               SIDE IMPACT COMPLIANCE
             </div>
 
-            <div className=" font-light ">
+            <div className="font-light ">
               Successfully tested and in compliance with international safety
               norms
             </div>
           </div>
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black mb-2 ">
+          <div className="flex items-center justify-center w-20 h-20 mb-2 duration-500 border border-black rounded-full hover:scale-105 group-hover:bg-black ">
             <GiBeltBuckles className="text-4xl group-hover:text-white" />
           </div>
         </div>
 
         <div className="absolute left-[77%]  top-[45%]  md:items-start group hidden lg:block ">
-          <div className="flex items-center justify-center w-20 h-20 duration-500 border border-black rounded-full hover:scale-105  mb-2 ">
+          <div className="flex items-center justify-center w-20 h-20 mb-2 duration-500 border border-black rounded-full hover:scale-105 ">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/fronx/slideshow/road.svg"
               className="scale-[0.6]"
@@ -1153,11 +1154,11 @@ function Safety() {
               well"
             />
           </div>
-          <div className="py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm hidden group-hover:block ">
+          <div className="hidden py-3 mx-3 my-auto w-60 group-hover:backdrop-blur-sm group-hover:block ">
             <div className="pb-1 font-medium ">
               PEDESTRIAN PROTECTION COMPLIANCE
             </div>
-            <div className=" font-light ">
+            <div className="font-light ">
               Ensuring safety, not only for the occupants, but pedestrians as
               well
             </div>

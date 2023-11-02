@@ -17,7 +17,7 @@ const navigation = {
           imageSrc:
             "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/invicto/invicto-thumbnail.webp",
           imageAlt: "Suzuki invicto",
-          price: "₹ 24,79,000*",
+          price: "₹ 24,82,000*",
         },
         {
           name: "Created to Inspire Style and Performance.",
@@ -46,8 +46,8 @@ const navigation = {
           href: "/grand-vitara-on-road-price-in-hyderabad",
           imageSrc:
             "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/grand-vitara/color-icons/new167x87.webp",
-          imageAlt: "GrandVitara",
-          price: " ₹ 10,45,000*",
+          imageAlt: "Grand Vitara",
+          price: " ₹ 10,70,000*",
         },
         {
           name: "Created to Inspire Indulgence.",
@@ -57,7 +57,7 @@ const navigation = {
           imageSrc:
             "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/XL6/Hover_menu_XL6.webp",
           imageAlt: "XL6",
-          price: "₹ 11,29,000*",
+          price: "₹ 11,56,000*",
         },
 
         {
@@ -68,7 +68,7 @@ const navigation = {
           imageSrc:
             "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-Car.webp",
           imageAlt: "Ciaz",
-          price: " ₹ 8,99,500*",
+          price: " ₹ 9,30,000*",
         },
         {
           name: "Created to Inspire The Bold and Intelligent.",
@@ -78,7 +78,7 @@ const navigation = {
           imageSrc:
             "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/new_agebaleno.png",
           imageAlt: "Baleno",
-          price: "₹ 6,49,000*",
+          price: "₹ 6,61,000*",
         },
         {
           name: "Created to Inspire The Toughness in You.",
@@ -88,7 +88,7 @@ const navigation = {
           imageSrc:
             "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ignis-Car.webp",
           imageAlt: "Ignis",
-          price: "₹ 5,35,000*",
+          price: "₹ 5,84,000*",
         },
       ],
     },
