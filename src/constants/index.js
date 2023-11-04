@@ -13,9 +13,13 @@ export const sliders = [
   //   alt: 'fronx-banner',
   // },
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp",
-    alt: "Maruti Suzuki Nexa Navratri dussehra Saboo RKS Motor October Offers",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Diwali_+Dhanteras_Saboo_RKS_Motor_Maruti_Suzuki_Nexa_Offers.webp",
+    alt: "Diwali Dhanteras Saboo RKS Motor Maruti Suzuki Nexa Offers",
   },
+  // {
+  //   img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp",
+  //   alt: "Maruti Suzuki Nexa Navratri dussehra Saboo RKS Motor October Offers",
+  // },
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/nexa-cng-web-banner-nov-1.webp",
     alt: "Maruti Suzuki Nexa Discount Offers October 2023 - Saboo Nexa",
@@ -47,8 +51,8 @@ export const sliders = [
 //same for home screen and offers screen
 export const mobileSliders = [
   {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp",
-    alt: "Maruti Suzuki Nexa Navratri dussehra Saboo RKS Motor October Offers",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Diwali_+Dhanteras_Saboo_RKS_Motor_Maruti_Suzuki_Nexa_Offers.webp",
+    alt: "Diwali Dhanteras Saboo RKS Motor Maruti Suzuki Nexa Offers",
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website+Mobile+Maruti+Suzuki+Nexa+Teachers+Day+September+Saboo+RKS+Motor.webp',

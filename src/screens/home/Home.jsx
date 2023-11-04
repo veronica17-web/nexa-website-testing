@@ -621,20 +621,12 @@ const VehicleProducts = () => {
 };
 
 const SerFinInsur = () => {
-  const [isTrue, setIsTrue] = useState(true);
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIsTrue((prevState) => !prevState); // Toggle the state from true to false and vice versa
-    }, 10000); // 10 seconds interval
 
-    // Clean up the interval when the component unmounts
-    return () => clearInterval(intervalId);
-  }, []);
 
   return (
     <div className="py-4 overflow-hidden text-white ">
       <div className="container px-2 mx-auto space-y-2 lg:px-0 ">
-        <div className="duration-500 hover:scale-95">
+        <div className="duration-500 lg:hover:scale-95">
           <Link to="/book-online-maruti-nexa-car-service">
             {/* <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_02.webp"
@@ -644,25 +636,21 @@ const SerFinInsur = () => {
               className="hidden w-full max-w-full overflow-hidden shadow-lg rounded-3xl shadow-gray-500 sm:block"
             /> */}
             <div data-aos="zoom-in" data-aos-delay="0" data-aos-duration="500">
-              {isTrue ? (
-                <img
-                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_02.webp"
-                  alt="Saboo RKS Motor Navratri dussehra Service "
-                  className="hidden w-full shadow-lg select-none sm:block rounded-3xl shadow-gray-500"
-                />
-              ) : (
+              
+              
+             
                 <img
                   src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_04.webp"
                   alt="Navratri | Maruti Suzuki Service | Maruti Suzuki | This Navratri, avail  Periodic Maintenance Service and celebrate your 9 day festivities with zero  worries. Visit https://saboonexa.in/ T&C apply.... | By Saboo RKS |  NEXA | Maruti Suzuki"
-                  className="hidden w-full shadow-lg select-none sm:block rounded-3xl shadow-gray-500"
+                  className="w-full shadow-lg select-none rounded-xl lg:rounded-3xl shadow-gray-500"
                 />
-              )}
+            
             </div>
-            <img
+            {/* <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_03.webp"
               alt="Navratri dussehra Maruti Suzuki Service "
               className="w-full rounded-2xl sm:hidden"
-            />
+            /> */}
           </Link>
         </div>
 
@@ -697,7 +685,7 @@ const SerFinInsur = () => {
           </div>
         </div>
       </div>
-      <div className="mx-2 mb-2 overflow-hidden md:hidden lg:mx-0 rounded-3xl">
+      <div className="mx-2 mb-2 overflow-hidden md:hidden lg:mx-0 rounded-xl lg:rounded-3xl">
         <Swiper
           slidesPerView={1}
           spaceBetween={1}
@@ -736,7 +724,7 @@ const SerFinInsur = () => {
                 <img
                   src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Nexa+Service+mobile+Hafeezpet.webp"
                   alt="Sevice Hafeezpet"
-                  className="rounded-3xl"
+                  className="rounded-xl"
                 />
               </Link>
               <figcaption className="absolute px-4 -mt-16 text-lg text-white">
@@ -755,7 +743,7 @@ const SerFinInsur = () => {
                 <img
                   src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/homepage-mobile-carousel/Insurance+Mobile+800x800.webp"
                   alt="Insurance"
-                  className="rounded-3xl"
+                  className="rounded-xl"
                 />
               </Link>
               <figcaption className="absolute px-4 -mt-16 text-lg text-white">
@@ -774,7 +762,7 @@ const SerFinInsur = () => {
                 <img
                   src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/homepage-mobile-carousel/Finance+Mobile+800x800.webp"
                   alt="Finance"
-                  className="rounded-3xl"
+                  className="rounded-xl"
                 />
               </Link>
               <figcaption className="absolute px-4 -mt-16 text-lg text-white">
@@ -793,7 +781,7 @@ const SerFinInsur = () => {
                 <img
                   src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/homepage-mobile-carousel/Accessories+Mobile+800x800.webp"
                   alt="Accessories"
-                  className="rounded-3xl"
+                  className="rounded-xl"
                 />
               </Link>
               <figcaption className="absolute px-4 -mt-16 text-lg text-white">
@@ -826,7 +814,7 @@ const SerFinInsur = () => {
           <div className="px-2 md:hidden">
             <img
               src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/nexa+service+banner+mobile.jpg"
-              className="w-full rounded-3xl"
+              className="w-full rounded-xl"
               alt="Service Banner"
             />
           </div>
@@ -1341,13 +1329,14 @@ const Offer = () => {
     <div className="container pb-5 mx-auto">
       <Link to="/nexa-car-offers-in-hyderabad">
         <img
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
-          alt="Maruti Suzuki Nexa Navratri dussehra "
+          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Diwali_+Dhanteras_Saboo_RKS_Motor_Maruti_Suzuki_Nexa_Offers.webp"
+          alt="Diwali Dhanteras Saboo RKS Motor Maruti Suzuki Nexa Offers"
           className="hidden w-full duration-500 shadow-lg sm:block rounded-3xl hover:shadow-gray-500 shadow-gray-400 hover:scale-95"
         />
         <img
-          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
-          alt="Maruti Suzuki Nexa Navratri dussehra "
+          src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Diwali_+Dhanteras_Saboo_RKS_Motor_Maruti_Suzuki_Nexa_Offers.webp"
+          // src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Website_Mobile_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers.webp"
+          alt="Diwali Dhanteras Saboo RKS Motor Maruti Suzuki Nexa Offers "
           className="w-full sm:hidden "
         />
       </Link>
