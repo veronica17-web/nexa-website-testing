@@ -361,8 +361,15 @@ export const products = [
 
 export const offer_products = [
   {
+    name: "Jimny",
+    price: "₹ 1,00,000 /-",
+    logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/120x30+black.webp",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/jimny.webp",
+    explore: "/maruti-jimny-price-in-hyderabad",
+  },
+  {
     name: "ignis",
-    price: "₹ 60,000 /-",
+    price: "₹ 59,100 /-",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Maruti-Suzuki-Ignis-logo.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-Ignis.webp",
     explore: "/nexa-ignis-on-road-price-in-hyderabad",
@@ -377,7 +384,7 @@ export const offer_products = [
   // },
   {
     name: "Ciaz",
-    price: "₹ 48,000 /-",
+    price: "₹ 50,100 /-",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/logos/Saboo-Nexa-Ciaz-logo.webp",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/Banner/Product-thumbnail/Saboo-Nexa-product-ciaz.webp",
     explore: "/nexa-ciaz-on-road-price-in-hyderabad",
@@ -385,17 +392,10 @@ export const offer_products = [
   {
     name: "Baleno (2023)",
     // emi: '10000*/L',
-    price: "₹ 30,000 /-",
+    price: "₹ 38,100 /-",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/newage_baleno_logo.png",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/cng/baleno-cng-thubnail.webp",
     explore: "/nexa-ciaz-on-road-price-in-hyderabad",
-  },
-  {
-    name: "Jimny",
-    price: "₹ 20,000 /-",
-    logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/jimny/120x30+black.webp",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/jimny.webp",
-    explore: "/maruti-jimny-price-in-hyderabad",
   },
 
   // {
