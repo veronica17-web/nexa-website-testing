@@ -747,7 +747,7 @@ const InteriorSlider = () => {
 };
 
 const Variant = () => {
-  const [price, setPrice] = useState("7,46,500");
+  const [price, setPrice] = useState("24,82,000");
   return (
     <div className=" bg-opacity-25 text-white bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/thumbnails/slider_bg_image/5.webp')] bg-fixed  bg-black">
       <div className="container py-20 mx-auto bg-black bg-opacity-10">
