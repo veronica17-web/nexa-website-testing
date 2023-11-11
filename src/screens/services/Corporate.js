@@ -17,7 +17,7 @@ const Corporate = () => {
   const [method, setMethod] = useState();
   const [loader, setLoader] = useState(false);
 
-  function handleSubmit() {
+  async function handleSubmit1() {
     setLoader(true);
   
     if (name.length > 0 && email.length > 0) {
@@ -68,7 +68,33 @@ const Corporate = () => {
     }
   }
   
+  async function handleSubmit2() {
+    setLoader(true);
+    // First API call
+    axios
+      .post('https://saboo-nexa.onrender.com/corporate', {
+        name: name,
+        email: email,
+        phone: phone,
+        // model: "Fronx",
+      })
+      .then((res) => {
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
 
+  const handleBothSubmit = () => {
+    handleSubmit1(); // No need to use await here
+    handleSubmit2(); // No need to use await here
+  };
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
@@ -163,7 +189,7 @@ const Corporate = () => {
               <div className="grid gap-3 md:grid-cols-2">
                 <div>
                   <label className="block mb-2 text-sm font-medium text-gray-900 ">
-                    Name
+                    Name333
                   </label>
                   <input
                     className="w-full h-10 px-3 border rounded-md outline-none focus:ring-red-500 focus:border-red-500"
@@ -255,7 +281,7 @@ const Corporate = () => {
                     disabled={
                       pattern.test(phone) && phone.length === 10 ? false : true
                     }
-                    onClick={handleSubmit}
+                    onClick={handleBothSubmit}
                     className="bg-black text-white rounded py-2.5 px-10 mt-6 "
                   >
                     {loader ? (

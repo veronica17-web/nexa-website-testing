@@ -37,7 +37,7 @@ function Service24x7() {
     }
   }
 
-  function handleSubmit() {
+  async  function handleSubmit1() {
     setLoader(true);
     // First API call
     axios
@@ -57,7 +57,6 @@ function Service24x7() {
         toast.error("Something went wrong!");
         console.log(err);
       });
-
     // Second API call
     axios
       .get(
@@ -82,6 +81,36 @@ function Service24x7() {
         setLoader(false);
       });
   }
+    
+  async function handleSubmit2() {
+    setLoader(true);
+    // First API call
+    axios
+      .post('https://saboo-nexa.onrender.com/service', {
+        name: name,
+        email: email,
+        phone: phone,
+        model: model,
+        message: message,
+      })
+      .then((res) => {
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
+
+  const handleBothSubmit = () => {
+    handleSubmit1(); 
+    handleSubmit2(); 
+  };
+
 
   const handleOnClose = () => setShowMyModal(false);
 
@@ -697,7 +726,7 @@ function Service24x7() {
                         htmlFor="Phone"
                         className="font-serif pr-2 md:text-xl whitespace-nowrap"
                       >
-                        Phone:
+                        Phone:wrwrw
                       </label>
 
                       <input
@@ -836,26 +865,7 @@ function Service24x7() {
                     </div>
                   </div>
 
-                  {/* <div className='flex items-start'>
-                    <input
-                      id='disclaimer'
-                      name='disclaimer'
-                      type='checkbox'
-                      className='h-4 w-4 rounded'
-                    />
-                    <div className='ml-2 text-sm'>
-                      <label
-                        htmlFor='disclaimer'
-                        className='font-medium text-gray-100'
-                      >
-                        * I accept the{' '}
-                        <Link to='/terms-and-condition'>
-                          {' '}
-                          terms & conditions.
-                        </Link>
-                      </label>
-                    </div>
-                  </div> */}
+                 
                   <p className="text-gray-300 text-xs">
                     <span className="text-gray-400 font-bold">Disclaimer</span>:
                     By clicking 'Submit,' you acknowledge that you have agreed
@@ -883,7 +893,7 @@ function Service24x7() {
                     disabled={
                       pattern.test(phone) && phone.length === 10 ? false : true
                     }
-                    onClick={handleSubmit}
+                    onClick={handleBothSubmit}
                     class="group relative md:col-span-2  w-min flex   whitespace-nowrap mx-auto shadow-lg overflow-hidden bg-black hover:bg-[#494949] text-md rounded-2xl font-semibold  mb-4  px-5 py-3 border border-gray-500 cursor-pointer text-xl"
                   >
                     {loader ? (

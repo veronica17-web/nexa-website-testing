@@ -24,7 +24,7 @@ function Finance() {
     }
   }
 
-  function handleSubmit() {
+  async function handleSubmit1() {
     setLoader(true);
 
     // First API call
@@ -69,6 +69,33 @@ function Finance() {
       });
   }
 
+   
+  async function handleSubmit2() {
+    setLoader(true);
+    // First API call
+    axios
+      .post('https://saboo-nexa.onrender.com/finance', {
+        name: name,
+        email: email,
+        phone: phone,
+      })
+      .then((res) => {
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
+
+  const handleBothSubmit = () => {
+    handleSubmit1(); 
+    handleSubmit2(); 
+  };
   // function handleSubmit() {
   //   setLoader(true);
   //   axios
@@ -301,7 +328,7 @@ function Finance() {
                 disabled={
                   pattern.test(phone) && phone.length === 10 ? false : true
                 }
-                onClick={handleSubmit}
+                onClick={handleBothSubmit}
               >
                 {loader ? (
                   <div className='flex items-center justify-center'>

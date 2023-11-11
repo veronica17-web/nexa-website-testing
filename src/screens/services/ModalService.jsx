@@ -27,7 +27,7 @@ const ModalService = ({ visible, onClose }) => {
       });
     }
   }
-  function handleSubmit() {
+  async  function handleSubmit1() {
     setLoader(true);
     // First API call
     axios
@@ -71,6 +71,37 @@ const ModalService = ({ visible, onClose }) => {
         setLoader(false);
       });
   }
+    
+  async function handleSubmit2() {
+    setLoader(true);
+    // First API call
+    axios
+      .post('https://saboo-nexa.onrender.com/service', {
+        name: name,
+        email: email,
+        phone: phone,
+        model: model,
+        message: message,
+      })
+      .then((res) => {
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
+
+  const handleBothSubmit = () => {
+    handleSubmit1(); 
+    handleSubmit2(); 
+  };
+
+
   if (!visible) return null;
   return (
     <div
@@ -262,7 +293,7 @@ const ModalService = ({ visible, onClose }) => {
                     disabled={
                       pattern.test(phone) && phone.length === 10 ? false : true
                     }
-                    onClick={handleSubmit}
+                    onClick={handleBothSubmit}
                     class="group relative md:col-span-2  w-full  whitespace-nowrap mx-auto shadow-lg overflow-hidden bg-black hover:bg-[#494949] text-md rounded-2xl font-semibold  mb-4 px-5 py-3 border border-gray-500 cursor-pointer  md:text-xl"
                   >
                     {loader ? (

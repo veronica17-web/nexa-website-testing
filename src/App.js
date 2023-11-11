@@ -111,7 +111,7 @@ function App() {
     const [methodpopup, setMethodPopup] = useState();
     const [number, setNumber] = useState("");
 
-    function handleSubmit() {
+  async  function handleSubmit1(event) {
       setLoading(true);
       axios
         .post("popup", {
@@ -149,6 +149,43 @@ function App() {
 
       setLoading(false);
     }
+    
+    async function handleSubmit2(event) {
+      setLoading(true);
+      // First API call
+      axios
+        .post('https://saboo-nexa.onrender.com/popup', {
+       
+        phone: number,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }
+  
+    async function handleBothSubmit(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+    
+      setLoading(true);
+    
+      try {
+        await handleSubmit1();
+        await handleSubmit2();
+      } catch (error) {
+        console.error("Error in handleBothSubmit:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+     
 
     const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
     if (number !== "" && number.length === 10) {
@@ -385,7 +422,7 @@ function App() {
                               ? false
                               : true
                           }
-                          onClick={handleSubmit}
+                          onClick={(event) => handleBothSubmit(event)} 
                           className="w-full py-2 mb-3 text-sm font-medium text-white bg-black border rounded-md shadow-sm cursor-pointer hover:bg-red-700"
                         >
                           {loading ? (

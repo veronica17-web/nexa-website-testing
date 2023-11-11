@@ -29,7 +29,7 @@ function BookAService() {
     }
   }
 
-  function handleSubmit() {
+  async function handleSubmit1(event) {
     setLoader(true);
     try {
       axios.post("https://saboogroups.com/admin/api/book-a-service", {
@@ -47,6 +47,36 @@ function BookAService() {
     }
   }
 
+  async function handleSubmit2(event) {
+    setLoader(true);
+  
+    // First API call
+    await axios
+      .post("https://saboo-nexa.onrender.com/service", {
+        name: name,
+        phone: phone,
+        email: email,
+        // model: model,
+        outlet: pickup,
+      })
+      .then((res) => {
+        setMethod("POST");
+        toast.success("Enquiry sent successfully");
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error("Something went wrong!");
+        console.log(err);
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
+
+  const handleBothSubmit = () => {
+    handleSubmit1(); // No need to use await here
+    handleSubmit2(); // No need to use await here
+  };
   return (
     <>
       <Header />
@@ -323,7 +353,7 @@ function BookAService() {
                 ? true
                 : false
             }
-            onClick={handleSubmit}
+            onClick={handleBothSubmit}
           >
             {loader ? (
               <div className="flex items-center justify-center">

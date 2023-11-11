@@ -213,7 +213,7 @@ export const InvictoCarEnquiry2 = ({ title, carName }) => {
 
   console.log(model);
 
-  function handleSubmit() {
+ async function handleSubmit1(event) {
     setLoader(true);
 
     // First API call
@@ -258,7 +258,36 @@ export const InvictoCarEnquiry2 = ({ title, carName }) => {
         setLoader(false);
       });
   }
+  async function handleSubmit2(event) {
+    setLoader(true);
+  
+    // First API call
+    await axios
+      .post("https://saboo-nexa.onrender.com/onRoadPrice", {
+        name: name,
+        email: email,
+        phone: phone,
+        model: model,
+        outlet: "",
+      })
+      .then((res) => {
+        setMethod("POST");
+        toast.success("Enquiry sent successfully");
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error("Something went wrong!");
+        console.log(err);
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
 
+  const handleBothSubmit = () => {
+    handleSubmit1(); // No need to use await here
+    handleSubmit2(); // No need to use await here
+  };
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
@@ -396,7 +425,7 @@ export const InvictoCarEnquiry2 = ({ title, carName }) => {
                 disabled={
                   pattern.test(phone) && phone.length === 10 ? false : true
                 }
-                onClick={handleSubmit}
+                onClick={handleBothSubmit}
                 class="group relative md:col-span-2 h-10 w-full shadow-lg overflow-hidden bg-black text-md rounded-lg border-white "
               >
                 <div class="absolute inset-0 w-[0.5px]  bg-white transition-all duration-[500ms]  ease-out group-hover:w-full group-hover:border-b-2 group-hover:border-b-black border border-white"></div>
@@ -1899,8 +1928,7 @@ export const CarEnq2 = ({ title }) => {
   const [method, setMethod] = useState();
   const [loader, setLoader] = useState(false);
 
-  function handleSubmit(event) {
-    // event.preventDefault();
+  async function handleSubmit1(event) {
     setLoader(true);
 
     // First API call
@@ -1920,21 +1948,18 @@ export const CarEnq2 = ({ title }) => {
         toast.error("Something went wrong!");
         console.log(err);
       });
-    // .finally(() => {
-    //   setLoader(false);
-    // });
 
     // Second API call
     axios
       .get(
         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
-    Our Sales consultant will contact you shortly.
-    
-    Regards
-    RKS Motor Pvt. Ltd.
-    98488 98488
-    www.saboomaruti.in
-    www.saboonexa.in&type=1&template_id=1407168967467983613`
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
       )
       .then((res) => {
         console.log("SMS API Response:", res.data);
@@ -1948,6 +1973,36 @@ export const CarEnq2 = ({ title }) => {
         setLoader(false);
       });
   }
+  async function handleSubmit2(event) {
+    setLoader(true);
+  
+    // First API call
+    await axios
+      .post("https://saboo-nexa.onrender.com/onRoadPrice", {
+        name: name,
+        email: email,
+        phone: phone,
+        model: model,
+        outlet: "",
+      })
+      .then((res) => {
+        setMethod("POST");
+        toast.success("Enquiry sent successfully");
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error("Something went wrong!");
+        console.log(err);
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
+
+  const handleBothSubmit = () => {
+    handleSubmit1(); // No need to use await here
+    handleSubmit2(); // No need to use await here
+  };
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -1966,7 +2021,7 @@ export const CarEnq2 = ({ title }) => {
           {title}
         </div>
         <form
-          onSubmit={handleSubmit}
+          onSubmit={handleBothSubmit}
           action={
             pattern.test(phone) && phone.length === 10
               ? "https://crm.zoho.in/crm/WebToLeadForm"

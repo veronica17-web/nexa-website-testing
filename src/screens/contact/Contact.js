@@ -14,7 +14,7 @@ function Contact() {
   const [method, setMethod] = useState();
   const [loader, setLoader] = useState(false);
 
-  function handleSubmit() {
+  async function handleSubmit1() {
     setLoader(true);
 
     // First API call
@@ -60,7 +60,34 @@ function Contact() {
         setLoader(false);
       });
   }
+  async function handleSubmit2() {
+    setLoader(true);
+    // First API call
+    axios
+      .post('https://saboo-nexa.onrender.com/contactForm', {
+        name: name,
+        email: email,
+        phone: phone,
+        model: model,
+        message: message,
+      })
+      .then((res) => {
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
 
+  const handleBothSubmit = () => {
+    handleSubmit1(); // No need to use await here
+    handleSubmit2(); // No need to use await here
+  };
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
@@ -182,7 +209,7 @@ function Contact() {
               <div className="grid md:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
-                    Name
+                    Name3333
                   </label>
                   <input
                     className="border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500"
@@ -359,7 +386,7 @@ function Contact() {
                 disabled={
                   pattern.test(phone) && phone.length === 10 ? false : true
                 }
-                onClick={handleSubmit}
+                onClick={handleBothSubmit}
               >
                 {loader ? (
                   <div className="flex items-center justify-center">

@@ -11,11 +11,11 @@ function EnquiryPopup({ open, setOpen, title }) {
   const [method, setMethod] = useState();
   const [loader, setLoader] = useState(false);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     setLoader(true);
 
     // First API call
-    axios
+    await axios
       .post("https://saboogroups.com/admin/api/enquiry", {
         name: name,
         email: email,
@@ -33,7 +33,7 @@ function EnquiryPopup({ open, setOpen, title }) {
         console.log(err);
       });
     // Second API call
-    axios
+    await axios
       .get(
         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
       Our Sales consultant will contact you shortly.
@@ -45,12 +45,37 @@ function EnquiryPopup({ open, setOpen, title }) {
       www.saboonexa.in&type=1&template_id=1407168967467983613`
       )
       .then((res) => {
-        console.log('SMS API Response:', res.data);
+        console.log("SMS API Response:", res.data);
         // Handle the response from the SMS API if needed
       })
       .catch((err) => {
-        console.error('Error sending SMS:', err);
+        console.error("Error sending SMS:", err);
         // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
+
+  async function handleSubmit2() {
+    setLoader(true);
+    // First API call
+    await axios
+      .post("https://saboo-nexa.onrender.com/service", {
+        name: name,
+        email: email,
+        phone: phone,
+        model: model,
+        // message: message,
+      })
+      .then((res) => {
+        setMethod("POST");
+        toast.success("Enquiry sent successfully");
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error("Something went wrong!");
+        console.log(err);
       })
       .finally(() => {
         setLoader(false);
@@ -60,6 +85,7 @@ function EnquiryPopup({ open, setOpen, title }) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog
@@ -106,13 +132,29 @@ function EnquiryPopup({ open, setOpen, title }) {
                   </Dialog.Title>
                   <div className="mt-4">
                     <form
-                      onSubmit={handleSubmit}
+                      onSubmit={async (event) => {
+                        event.preventDefault(); // Prevent default form submission
+
+                        try {
+                          await handleSubmit();
+                          await handleSubmit2();
+                        } catch (error) {
+                          // Handle errors from the API calls
+                          return;
+                        }
+
+                        // Set the action and submit the form
+                        if (pattern.test(phone) && phone.length === 10) {
+                          document.forms[0].action =
+                            "https://crm.zoho.in/crm/WebToLeadForm";
+                          document.forms[0].submit();
+                        }
+                      }}
                       action={
                         pattern.test(phone) && phone.length === 10
                           ? "https://crm.zoho.in/crm/WebToLeadForm"
                           : "#"
                       }
-                      // action="https://crm.zoho.in/crm/WebToLeadForm"
                       name="WebToLeads54158000007156717"
                       method={method}
                       className="space-y-3"
@@ -129,7 +171,6 @@ function EnquiryPopup({ open, setOpen, title }) {
                         type="text"
                         style={{ display: "none" }}
                         name="xmIwtLD"
-                        // value="3e4c511e1bfac462fb9ac158b261b0d3e54ddbaf41eb8a08b30b4fc061369283"
                         value="3e4c511e1bfac462fb9ac158b261b0d3cf3883ed222bfea597b99f9e00397c92"
                       />
                       <input
@@ -157,14 +198,11 @@ function EnquiryPopup({ open, setOpen, title }) {
                         name="LDTuvid"
                       />
                       <div className="pb-3">
-                        {/* <label className="block  font-medium ">
-                          Name:
-                        </label> */}
                         <input
                           className="border-b border-black outline-none px-3 py-2 w-full  focus:ring-red-500 focus:border-red-500  placeholder:text-gray-600"
                           type="text"
                           required
-                          placeholder="Name*"
+                          placeholder="Name"
                           id="Last_Name"
                           name="Last Name"
                           onChange={(e) => setName(e.target.value)}
@@ -172,9 +210,6 @@ function EnquiryPopup({ open, setOpen, title }) {
                       </div>
 
                       <div className="pb-3">
-                        {/* <label className="block font-medium ">
-                          Email:
-                        </label> */}
                         <input
                           className="border-b border-black py-2 outline-none px-3 w-full  focus:ring-red-500 focus:border-red-500  placeholder:text-gray-600"
                           type="email"
@@ -184,19 +219,16 @@ function EnquiryPopup({ open, setOpen, title }) {
                           required
                           onChange={(e) => setEmail(e.target.value)}
                         />
-                         {email.length > 0 && !emailPattern.test(email) ? (
-                          <small className='text-red-500'>
+                        {email.length > 0 && !emailPattern.test(email) ? (
+                          <small className="text-red-500">
                             Invalid email address
                           </small>
                         ) : (
-                          ''
+                          ""
                         )}
                       </div>
 
                       <div className="pb-3">
-                        {/* <label className="block  font-medium ">
-                          Phone:
-                        </label> */}
                         <input
                           className="border-b border-black py-2 placeholder:text-gray-600 outline-none px-3 w-full  focus:ring-red-500 focus:border-red-500 "
                           type="tel"
@@ -208,28 +240,25 @@ function EnquiryPopup({ open, setOpen, title }) {
                           value={phone}
                           onChange={(e) =>
                             setPhone(
-                              e.target.value.replace(/[^1-9 ]/g, '') &&
-                                e.target.value.replace(/ /g, '')
+                              e.target.value.replace(/[^1-9 ]/g, "") &&
+                                e.target.value.replace(/ /g, "")
                             )
                           }
                         />
                         {phone.length > 0 && phone.length < 10 ? (
-                          <small className='text-red-500'>
+                          <small className="text-red-500">
                             Phone number must be 10 digits
                           </small>
                         ) : !pattern.test(phone) && phone.length === 10 ? (
-                          <small className='text-red-500'>
+                          <small className="text-red-500">
                             Phone number is invalid
                           </small>
                         ) : (
-                          ''
+                          ""
                         )}
                       </div>
 
                       <div>
-                        {/* <label className="block text-sm font-medium text-gray-700">
-                          Model
-                        </label> */}
                         <select
                           id="LEADCF6"
                           name="LEADCF6"
@@ -251,20 +280,20 @@ function EnquiryPopup({ open, setOpen, title }) {
                         </select>
                       </div>
 
-                      <div className=" pt-4  flex gap-3">
+                      <div className="pt-4  flex gap-3">
                         <button
                           type="button"
-                          className="  inline-flex justify-center items-center border border-gray-300 shadow-sm py-2.5 bg-white text-base  text-gray-700 hover:border-gray-600 focus:outline-none   sm:text-sm rounded-md w-1/2 "
+                          className="inline-flex justify-center items-center border border-gray-300 shadow-sm py-2.5 bg-white text-base text-gray-700 hover:border-gray-600 focus:outline-none sm:text-sm rounded-md w-1/2"
                           onClick={() => setOpen(false)}
                         >
                           Cancel
                         </button>
                         <button
                           type="submit"
-                          className="w-1/2 inline-flex justify-center items-center border border-transparent shadow-sm  py-2.5 bg-black text-base  text-white hover:bg-white hover:border hover:border-black hover:text-black duration-300 sm:text-sm rounded-md "
+                          className="w-1/2 inline-flex justify-center items-center border border-transparent shadow-sm py-2.5 bg-black text-base text-white hover:bg-white hover:border hover:border-black hover:text-black duration-300 sm:text-sm rounded-md"
                         >
                           {loader ? (
-                            <div className={`flex items-center justify-center ${loader && "cursor-wait"} `}>
+                            <div className={`flex items-center justify-center ${loader && "cursor-wait"}`}>
                               SUBMITTING
                             </div>
                           ) : (

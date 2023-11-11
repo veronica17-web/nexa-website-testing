@@ -11,11 +11,11 @@ function ShowRoom({ open, setOpen, title }) {
   const [method, setMethod] = useState();
   const [loader, setLoader] = useState(false);
 
-  function handleSubmit(event) {
+  async function handleSubmit1(event) {
     setLoader(true);
 
     // First API call
-    axios
+   await axios
       .post("https://saboogroups.com/admin/api/enquiry", {
         name: name,
         email: email,
@@ -33,11 +33,11 @@ function ShowRoom({ open, setOpen, title }) {
         console.log(err);
       });
     // Second API call
-    axios
+    await axios
       .get(
         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
       Our Sales consultant will contact you shortly.
-      
+
       Regards
       RKS Motor Pvt. Ltd.
       98488 98488
@@ -57,6 +57,36 @@ function ShowRoom({ open, setOpen, title }) {
       });
   }
 
+  async function handleSubmit2(event) {
+    setLoader(true);
+  
+    // First API call
+    await axios
+      .post("https://saboo-nexa.onrender.com/accessories", {
+        name: name,
+        email: email,
+        phone: phone,
+        leadFrom: model,
+        outlet: "",
+      })
+      .then((res) => {
+        setMethod("POST");
+        toast.success("Enquiry sent successfully");
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error("Something went wrong!");
+        console.log(err);
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
+
+  const handleBothSubmit = () => {
+    handleSubmit1(); // No need to use await here
+    handleSubmit2(); // No need to use await here
+  };
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
@@ -106,7 +136,7 @@ function ShowRoom({ open, setOpen, title }) {
                   </Dialog.Title>
                   <div className="mt-4">
                     <form
-                      onSubmit={handleSubmit}
+                      onSubmit={handleBothSubmit}
                       action={
                         pattern.test(phone) && phone.length === 10
                           ? "https://crm.zoho.in/crm/WebToLeadForm"
@@ -164,7 +194,7 @@ function ShowRoom({ open, setOpen, title }) {
                           className="border-b border-black outline-none px-3 py-2 w-full  focus:ring-red-500 focus:border-red-500  placeholder:text-gray-600"
                           type="text"
                           required
-                          placeholder="Name*"
+                          placeholder="Name*333"
                           id="Last_Name"
                           name="Last Name"
                           onChange={(e) => setName(e.target.value)}

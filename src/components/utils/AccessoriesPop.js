@@ -11,11 +11,11 @@ function AccessoriesPop({ open, setOpen, item }) {
   const [method, setMethod] = useState();
   const [loader, setLoader] = useState(false);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     setLoader(true);
 
     // First API call
-    axios
+   await axios
       .post("https://saboogroups.com/admin/api/enquiry", {
         name: name,
         email: email,
@@ -33,7 +33,7 @@ function AccessoriesPop({ open, setOpen, item }) {
         console.log(err);
       });
     // Second API call
-    axios
+    await axios
       .get(
         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
       Our Sales consultant will contact you shortly.
@@ -51,6 +51,32 @@ function AccessoriesPop({ open, setOpen, item }) {
       .catch((err) => {
         console.error("Error sending SMS:", err);
         // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
+
+  async function handleSubmit2(event) {
+    setLoader(true);
+
+    // First API call
+    axios
+      .post("https://saboo-nexa.onrender.com/accessories", {
+        name: name,
+        email: email,
+        phone: phone,
+        model: model,
+        outlet: "",
+      })
+      .then((res) => {
+        setMethod("POST");
+        toast.success("Enquiry sent successfully");
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error("Something went wrong!");
+        console.log(err);
       })
       .finally(() => {
         setLoader(false);
@@ -113,17 +139,33 @@ function AccessoriesPop({ open, setOpen, item }) {
                   </div>
                   <div className="mt-4">
                     <form
-                      onSubmit={handleSubmit}
+                      onSubmit={async (event) => {
+                        event.preventDefault(); // Prevent default form submission
+
+                        try {
+                          await handleSubmit();
+                          await handleSubmit2();
+                        } catch (error) {
+                          // Handle errors from the API calls
+                          return;
+                        }
+
+                        // Set the action and submit the form
+                        if (pattern.test(phone) && phone.length === 10) {
+                          document.forms[0].action =
+                            "https://crm.zoho.in/crm/WebToLeadForm";
+                          document.forms[0].submit();
+                        }
+                      }}
                       action={
                         pattern.test(phone) && phone.length === 10
                           ? "https://crm.zoho.in/crm/WebToLeadForm"
                           : "#"
                       }
-                      // action="https://crm.zoho.in/crm/WebToLeadForm"
                       name="WebToLeads54158000007156717"
                       method={method}
                       className="space-y-3"
-                      accept-charset="UTF-8"
+                      acceptCharset="UTF-8"
                     >
                       <input
                         type="text"
@@ -136,7 +178,6 @@ function AccessoriesPop({ open, setOpen, item }) {
                         type="text"
                         style={{ display: "none" }}
                         name="xmIwtLD"
-                        // value="3e4c511e1bfac462fb9ac158b261b0d3e54ddbaf41eb8a08b30b4fc061369283"
                         value="3e4c511e1bfac462fb9ac158b261b0d3cf3883ed222bfea597b99f9e00397c92"
                       />
                       <input
@@ -164,11 +205,8 @@ function AccessoriesPop({ open, setOpen, item }) {
                         name="LDTuvid"
                       />
                       <div className="pb-3">
-                        {/* <label className="block  font-medium ">
-                          Name:
-                        </label> */}
                         <input
-                          className="border-b border-black outline-none px-3 py-2 w-full  focus:ring-red-500 focus:border-red-500  placeholder:text-gray-600"
+                          className="border-b border-black outline-none px-3 py-2 w-full focus:ring-red-500 focus:border-red-500 placeholder:text-gray-600"
                           type="text"
                           required
                           placeholder="Name*"
@@ -177,13 +215,9 @@ function AccessoriesPop({ open, setOpen, item }) {
                           onChange={(e) => setName(e.target.value)}
                         />
                       </div>
-
                       <div className="pb-3">
-                        {/* <label className="block font-medium ">
-                          Email:
-                        </label> */}
                         <input
-                          className="border-b border-black py-2 outline-none px-3 w-full  focus:ring-red-500 focus:border-red-500  placeholder:text-gray-600"
+                          className="border-b border-black py-2 outline-none px-3 w-full focus:ring-red-500 focus:border-red-500 placeholder:text-gray-600"
                           type="email"
                           name="Email"
                           id="Email"
@@ -199,13 +233,9 @@ function AccessoriesPop({ open, setOpen, item }) {
                           ""
                         )}
                       </div>
-
                       <div className="pb-3">
-                        {/* <label className="block  font-medium ">
-                          Phone:
-                        </label> */}
                         <input
-                          className="border-b border-black py-2 placeholder:text-gray-600 outline-none px-3 w-full  focus:ring-red-500 focus:border-red-500 "
+                          className="border-b border-black py-2 placeholder:text-gray-600 outline-none px-3 w-full focus:ring-red-500 focus:border-red-500"
                           type="tel"
                           id="Phone"
                           name="Phone"
@@ -232,47 +262,37 @@ function AccessoriesPop({ open, setOpen, item }) {
                           ""
                         )}
                       </div>
-
                       <div>
-                        {/* <label className="block text-sm font-medium text-gray-700">
-                          Model
-                        </label> */}
                         <select
                           id="LEADCF6"
                           name="LEADCF6"
                           required
                           onChange={(e) => setModel(e.target.value)}
-                          className="block w-full text-sm py-3 px-3 border-b border-black   shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 text-gray-600"
+                          className="block w-full text-sm py-3 px-3 border-b border-black shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 text-gray-600"
                         >
                           <option value="" disabled selected>
-                           Category
+                            Category
                           </option>
-                          {/* <option value={item.value} >
-                            {item.item}
-                          </option> */}
-                          <option value="Accessories" >
-                           Accessories
-                          </option>
+                          <option value="Accessories">Accessories</option>
                         </select>
                       </div>
-
-                      <div className=" pt-4  flex gap-3">
+                      <div className="pt-4 flex gap-3">
                         <button
                           type="button"
-                          className="  inline-flex justify-center items-center border border-gray-300 shadow-sm py-2.5 bg-white text-base  text-gray-700 hover:border-gray-600 focus:outline-none   sm:text-sm rounded-md w-1/2 "
+                          className="inline-flex justify-center items-center border border-gray-300 shadow-sm py-2.5 bg-white text-base text-gray-700 hover:border-gray-600 focus:outline-none sm:text-sm rounded-md w-1/2"
                           onClick={() => setOpen(false)}
                         >
                           Cancel
                         </button>
                         <button
                           type="submit"
-                          className="w-1/2 inline-flex justify-center items-center border border-transparent shadow-sm  py-2.5 bg-black text-base  text-white hover:bg-white hover:border hover:border-black hover:text-black duration-300 sm:text-sm rounded-md "
+                          className="w-1/2 inline-flex justify-center items-center border border-transparent shadow-sm py-2.5 bg-black text-base text-white hover:bg-white hover:border hover:border-black hover:text-black duration-300 sm:text-sm rounded-md"
                         >
                           {loader ? (
                             <div
                               className={`flex items-center justify-center ${
                                 loader && "cursor-wait"
-                              } `}
+                              }`}
                             >
                               SUBMITTING
                             </div>
