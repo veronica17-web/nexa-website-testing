@@ -202,7 +202,7 @@ export const CarEnq = ({ title }) => {
   const [method, setMethod] = useState("");
   const [loader, setLoader] = useState(false);
 
-  function handleSubmit(event) {
+ async function handleSubmit1(event) {
     // event.preventDefault();
     setLoader(true);
 
@@ -252,6 +252,36 @@ export const CarEnq = ({ title }) => {
         setLoader(false);
       });
   }
+  async function handleSubmit2(event) {
+    setLoader(true);
+  
+    // First API call
+    await axios
+      .post("https://saboo-nexa.onrender.com/onRoadPrice", {
+        name: name,
+        email: email,
+        phone: phone,
+        model: model,
+        outlet: "",
+      })
+      .then((res) => {
+        setMethod("POST");
+        toast.success("Enquiry sent successfully");
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error("Something went wrong!");
+        console.log(err);
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
+
+  // const handleBothSubmit = () => {
+  //   handleSubmit1(); // No need to use await here
+  //   handleSubmit2(); // No need to use await here
+  // };
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -270,7 +300,24 @@ export const CarEnq = ({ title }) => {
           {title}
         </div>
         <form
-          onSubmit={handleSubmit}
+          onSubmit={async (event) => {
+            event.preventDefault(); // Prevent default form submission
+
+            try {
+              await handleSubmit1();
+              await handleSubmit2();
+            } catch (error) {
+              // Handle errors from the API calls
+              return;
+            }
+
+            // Set the action and submit the form
+            if (pattern.test(phone) && phone.length === 10) {
+              document.forms[0].action =
+                "https://crm.zoho.in/crm/WebToLeadForm";
+              document.forms[0].submit();
+            }
+          }}
           action={
             pattern.test(phone) && phone.length === 10
               ? "https://crm.zoho.in/crm/WebToLeadForm"
@@ -280,7 +327,7 @@ export const CarEnq = ({ title }) => {
           method={method}
           acceptCharset="UTF-8"
         >
-          <div></div>
+          
           <input
             type="text"
             style={{ display: "none" }}
