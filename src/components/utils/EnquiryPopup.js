@@ -11,11 +11,11 @@ function EnquiryPopup({ open, setOpen, title }) {
   const [method, setMethod] = useState();
   const [loader, setLoader] = useState(false);
 
-  async function handleSubmit(event) {
+  async function handleSubmit1(event) {
     setLoader(true);
 
     // First API call
-    await axios
+   await axios
       .post("https://saboogroups.com/admin/api/enquiry", {
         name: name,
         email: email,
@@ -37,7 +37,7 @@ function EnquiryPopup({ open, setOpen, title }) {
       .get(
         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
       Our Sales consultant will contact you shortly.
-      
+
       Regards
       RKS Motor Pvt. Ltd.
       98488 98488
@@ -57,16 +57,17 @@ function EnquiryPopup({ open, setOpen, title }) {
       });
   }
 
-  async function handleSubmit2() {
+  async function handleSubmit2(event) {
     setLoader(true);
+  
     // First API call
     await axios
       .post("https://saboo-nexa.onrender.com/service", {
         name: name,
         email: email,
         phone: phone,
-        model: model,
-        // message: message,
+        leadFrom: model,
+        outlet: "",
       })
       .then((res) => {
         setMethod("POST");
@@ -81,6 +82,11 @@ function EnquiryPopup({ open, setOpen, title }) {
         setLoader(false);
       });
   }
+
+  const handleBothSubmit = () => {
+    handleSubmit1(); // No need to use await here
+    handleSubmit2(); // No need to use await here
+  };;
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -132,24 +138,7 @@ function EnquiryPopup({ open, setOpen, title }) {
                   </Dialog.Title>
                   <div className="mt-4">
                     <form
-                      onSubmit={async (event) => {
-                        event.preventDefault(); // Prevent default form submission
-
-                        try {
-                          await handleSubmit();
-                          await handleSubmit2();
-                        } catch (error) {
-                          // Handle errors from the API calls
-                          return;
-                        }
-
-                        // Set the action and submit the form
-                        if (pattern.test(phone) && phone.length === 10) {
-                          document.forms[0].action =
-                            "https://crm.zoho.in/crm/WebToLeadForm";
-                          document.forms[0].submit();
-                        }
-                      }}
+                      onSubmit={handleBothSubmit}
                       action={
                         pattern.test(phone) && phone.length === 10
                           ? "https://crm.zoho.in/crm/WebToLeadForm"

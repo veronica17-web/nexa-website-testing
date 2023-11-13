@@ -194,7 +194,7 @@ function ShowRoom({ open, setOpen, title }) {
                           className="border-b border-black outline-none px-3 py-2 w-full  focus:ring-red-500 focus:border-red-500  placeholder:text-gray-600"
                           type="text"
                           required
-                          placeholder="Name*333"
+                          placeholder="Name*"
                           id="Last_Name"
                           name="Last Name"
                           onChange={(e) => setName(e.target.value)}
