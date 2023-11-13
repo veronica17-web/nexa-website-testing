@@ -362,6 +362,8 @@ export const InvictoCarEnquiry2 = ({ title, carName }) => {
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
+
+              
               <div>
                 <input
                   className="w-full h-10 px-3 font-sans border-b border-black outline-none placeholder:text-lg placeholder:text-gray-400 "
