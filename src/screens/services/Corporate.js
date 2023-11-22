@@ -189,7 +189,7 @@ const Corporate = () => {
               <div className="grid gap-3 md:grid-cols-2">
                 <div>
                   <label className="block mb-2 text-sm font-medium text-gray-900 ">
-                    Name333
+                    Name
                   </label>
                   <input
                     className="w-full h-10 px-3 border rounded-md outline-none focus:ring-red-500 focus:border-red-500"

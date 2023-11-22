@@ -209,7 +209,7 @@ function Contact() {
               <div className="grid md:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
-                    Name3333
+                    Name
                   </label>
                   <input
                     className="border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500"
